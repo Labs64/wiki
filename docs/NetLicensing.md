@@ -1,7 +1,7 @@
 ---
 layout: default
-title: NetLicensing
-nav_order: 1
+title: "NetLicensing Overview"
+nav_order: 2
 ---
 
-# Welcome to the NetLicensing Wiki
+# NetLicensing Overview
