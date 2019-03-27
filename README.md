@@ -2,4 +2,4 @@
 nav_exclude: true
 ---
 
-## NetLicensing documentation
+https://kkorotkov.github.io/NetLicensing-doc/
