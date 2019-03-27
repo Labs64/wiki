@@ -1,3 +1,11 @@
+---
+layout: default
+title: NetLicensing Wiki
+nav_order: 1
+description: "NetLicensing Wiki"
+permalink: /
+---
+
 1.  [NetLicensing Wiki](index.html)
 
 <img src="assets/images/icons/contenttypes/home_page_16.png" alt="Home Page" width="16" height="16" /> <span id="title-text"> NetLicensing Wiki : Home </span>
