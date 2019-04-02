@@ -2,11 +2,11 @@
 2.  [Home](Home_11010214.html)
 3.  [Details on Usage](Details-on-Usage_16416838.html)
 
-<span id="title-text"> NetLicensing Wiki : Transferring licenses between licensees </span>
-==========================================================================================
+<span id="title-text"> Transferring licenses between licensees </span>
+======================================================================
 
 Created by <span class="author"> Konstantin Korotkov</span>, last
-modified on 28-06-2017
+modified on 04-11-2019
 
 Motivation
 ==========
@@ -19,8 +19,8 @@ possible to pass existing *licensee number* to a shopping session, so
 that newly purchased licenses are bound to already existing licensee.
 This makes it difficult to use external eCommerce together with
 [licensing models](Licensing-Models_11010230.html) requiring licenses
-renewal or extension, such as [Subscription](11010234.html) or
-[Pay-per-Use](Pay-per-Use_11010233.html). To overcome this problem,
+renewal or extension, such as [Subscription](Subscription_11010234.html)
+or [Pay-per-Use](Pay-per-Use_11010233.html). To overcome this problem,
 NetLicensing allows to bind renewal / extension licenses to a temporary
 licensee, and transfer these licenses to the target licensee later on.
 
@@ -62,8 +62,144 @@ Above workflow assumes that own *licensee number* already exists,
 naturally, *license key* received from eCommerce for the first time can
 as well be assigned as own *licensee number*.
 
+API Example
+===========
+
+Following example calls assume the product and target licensee already
+configured with the following numbers:
+
+``` theme:
+        productNumber: PQVJQ5F7H
+target licenseeNumber: I542PBSID
+```
+
+  
+The purchase fulfillment script will execute the following calls:
+
+1.  Create new (temporary) licensee and receive its *licensee number*
+    (`I762LBSSX` in this example)
+
+    <span
+    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+    class="expand-control-text">Example</span>
+
+    **Request**
+
+    ``` theme:
+    POST https://go.netlicensing.io/core/v2/rest/licensee
+    productNumber=PQVJQ5F7H&active=true
+    Accept: application/xml
+    Content-Type: application/x-www-form-urlencoded
+    ```
+
+    **Response**
+
+    ``` theme:
+    <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
+        <items>
+            <item type="Licensee">
+                <property name="number">I762LBSSX</property>
+                <property name="active">true</property>
+                <property name="productNumber">PQVJQ5F7H</property>
+            </item>
+        </items>
+    </netlicensing>
+    ```
+
+2.  Add licenses to the new licensee according to the shopping cart
+    content
+
+    <span
+    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+    class="expand-control-text">Example</span>
+
+    **Request**
+
+    ``` theme:
+    POST https://go.netlicensing.io/core/v2/rest/license
+    licenseeNumber=I762LBSSX&licenseTemplateNumber=EUJOJ74GS&active=true
+    Accept: application/xml
+    Content-Type: application/x-www-form-urlencoded
+    ```
+
+    **Response**
+
+    ``` theme:
+    <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
+        <items>
+            <item type="License">
+                <property name="number">IKPQGUUJ4</property>
+                <property name="active">true</property>
+            </item>
+        </items>
+    </netlicensing>
+    ```
+
+3.  Mark the new licensee for transfer
+
+    <span
+    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+    class="expand-control-text">Example</span>
+
+    **Request**
+
+    ``` theme:
+    POST https://go.netlicensing.io/core/v2/rest/licensee/I762LBSSX
+    markedForTransfer=true
+    Accept: application/xml
+    Content-Type: application/x-www-form-urlencoded
+    ```
+
+    **Response**
+
+    ``` theme:
+    <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
+        <items>
+            <item type="Licensee">
+                <property name="number">I762LBSSX</property>
+                <property name="active">true</property>
+                <property name="productNumber">PQVJQ5F7H</property>
+                <property name="markedForTransfer">true</property>
+            </item>
+        </items>
+    </netlicensing>
+    ```
+
+Now the new licensee number `I762LBSSX` to be communicated to the
+software at the end user, e.g. via the purchase confirmation page /
+email and entered manually by the user, notification URL, or by any
+other means. The permanent licensee number `I542PBSID` is already
+assigned to the end user and is known to the software. When the software
+receives the new (temporary) licensee number, it will execute the
+following:
+
+1.  Call [transfer](https://www.labs64.de/confluence/display/NLICPUB/Licensee+Services) method
+    for permanent licensee number `I542PBSID`, passing the new licensee
+    number `I762LBSSX` as `sourceLicenseeNumber` parameter
+
+     
+
+    <span
+    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+    class="expand-control-text">Example</span>
+
+    **Request**
+
+    ``` theme:
+    POST https://go.netlicensing.io/core/v2/rest/licensee/I542PBSID/transfer
+    sourceLicenseeNumber=I762LBSSX
+    Accept: application/xml
+    Content-Type: application/x-www-form-urlencoded
+    ```
+
+    **Response**
+
+    ``` theme:
+    HTTP/1.1 204 No Content
+    ```
+
  
 
-Document generated by Confluence on 17-03-2019 17:44
+Document generated by Confluence on 04-11-2019 19:49
 
 [Atlassian](http://www.atlassian.com/)

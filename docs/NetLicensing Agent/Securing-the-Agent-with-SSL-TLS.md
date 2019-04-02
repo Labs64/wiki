@@ -2,11 +2,11 @@
 2.  [Home](Home_11010214.html)
 3.  [NetLicensing Agent](NetLicensing-Agent_17432579.html)
 
-<span id="title-text"> NetLicensing Wiki : Securing the Agent with SSL/TLS </span>
-==================================================================================
+<span id="title-text"> Securing the Agent with SSL/TLS </span>
+==============================================================
 
 Created by <span class="author"> Andrew Yushkevich</span>, last modified
-by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018
+by <span class="editor"> Konstantin Korotkov</span> on 02-11-2019
 
 -   [Motivation](#SecuringtheAgentwithSSL/TLS-Motivation)
 -   [Apache HTTP](#SecuringtheAgentwithSSL/TLS-ApacheHTTP)
@@ -18,6 +18,9 @@ by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018
     -   [nginx.conf](#SecuringtheAgentwithSSL/TLS-nginx.conf)
     -   [Running Agent and
         Nginx](#SecuringtheAgentwithSSL/TLS-RunningAgentandNginx)
+-   [Microsoft IIS](#SecuringtheAgentwithSSL/TLS-MicrosoftIIS)
+    -   [Running Agent and
+        IIS](#SecuringtheAgentwithSSL/TLS-RunningAgentandIIS)
 -   [Managing of SSL certificates for the hosts in local
     network](#SecuringtheAgentwithSSL/TLS-ManagingofSSLcertificatesforthehostsinlocalnetwork)
     -   [Certificates signed by a Certificate Authority
@@ -215,7 +218,88 @@ Running Agent and Nginx
 3.  NetLicensing Agent will respond to the validation requests sent over
     HTTPS to `yourhost.com:443`
 
-     
+<span style="font-family: monospace;">  
+</span>
+
+Microsoft IIS
+=============
+
+You can find the latest <span style="color: rgb(34,34,34);">Internet
+Information Services</span>(IIS)
+at <a href="https://www.iis.net/downloads" class="external-link">https://www.iis.net/downloads</a>.
+For this example we are using IIS 7.
+
+ 
+
+-   <span style="color: rgb(0,0,0);">Forward insecure connection to
+    secure URL:</span>
+
+    **C:\\inetpub\\wwwroot\\\<your site folder\>\\web.config**
+
+    ``` theme:
+    <?xml version="1.0" encoding="UTF-8"?>
+    <configuration>
+        <system.webServer>
+            <rewrite>
+                <rules>
+                    <clear />
+                    <rule name="Forward to https" stopProcessing="true">
+                        <match url="(.*)" />
+                        <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+                            <add input="{HTTPS}" pattern="^OFF$" />
+                        </conditions>
+                        <action type="Redirect" url="https://{HTTP_HOST}{REQUEST_URI}" />
+                    </rule>
+                </rules>
+            </rewrite>
+        </system.webServer>
+    </configuration>
+    ```
+
+-   <span style="color: rgb(0,0,0);">Proxy the requests over the secure
+    connection to NetLicensing Agent:</span>  
+    <span style="color: rgb(0,0,0);"> </span>
+
+    **C:\\inetpub\\wwwroot\\\<your site folder\>\\web.config**
+
+    ``` theme:
+    <?xml version="1.0" encoding="UTF-8"?>
+    <configuration>
+        <system.webServer>
+            <rewrite>
+                <rules>
+                    <clear />
+                    <rule name="ReverseProxyInboundRule1" stopProcessing="true">
+                        <match url="(.*)" />
+                        <conditions logicalGrouping="MatchAll" trackAllCaptures="false" />
+                        <action type="Rewrite" url="http://localhost:8080/{R:1}" />
+                    </rule>
+                </rules>
+            </rewrite>
+        </system.webServer>
+    </configuration>
+    ```
+
+-   Replace port `8080` with the actual port Agent is listening on
+
+Running Agent and IIS
+---------------------
+
+1.  Start Agent with '`run-agent-offline`' or '`run-agent`' action. Pay
+    attention to the port specified in C:\\inetpub\\wwwroot\\\<your site
+    folder\>\\web.config
+
+    ``` theme:
+    java -jar netlicensing-agent.jar --action=run-agent-offline --port=8080
+    ```
+
+2.  Start Site from IIS Manager
+
+3.  NetLicensing Agent will respond to the validation requests sent over
+    HTTPS
+    to <a href="http://yourhost.com" class="external-link">yourhost.com</a>:443
+
+ 
 
 Managing of SSL certificates for the hosts in local network
 ===========================================================
@@ -319,6 +403,10 @@ $ sudo update-ca-certificates
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">PHP</span>
 
+<span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-text">Standalone</span>
+
 Specify path to self-signed certificate:
 
 **PHP**
@@ -329,11 +417,74 @@ curl_setopt($ch, CURLOPT_CAINFO, <path-to-certificate>);
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-text">Apache httpd</span>
+
+-   Download
+    the <a href="https://curl.haxx.se/docs/caextract.html" class="external-link">certificate bundle</a>.
+-   Add your certificate to the dowloaded file.
+-   Set up <span class="pln"
+    style="color: rgb(48,51,54);">curl</span><span class="pun"
+    style="color: rgb(48,51,54);">.</span><span class="pln"
+    style="color: rgb(48,51,54);">cainfo and </span><span class="pln"
+    style="color: rgb(48,51,54);">openssl</span><span class="pun"
+    style="color: rgb(48,51,54);">.</span><span class="pln"
+    style="color: rgb(48,51,54);">cafile in </span>`php.ini` files:  
+    ` curl.cainfo="<path to the certificate bundle>" `  
+    ` openssl.cafile="<path to the certificate bundle>"`
+-   Restart httpd server.
+-   Verify the correct certificate bundle is used by calling:
+
+    **PHP**
+
+    ``` theme:
+    openssl_get_cert_locations();
+    ```
+
+<span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">JavaScript</span>
 
-Self-signed certificates handled by the host environment. In browser
-host environments additionally origin security policy may apply, see
-"Known Issues" below.
+<span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-text">Node.js</span>
+
+Specify path to self-signed certificate:
+
+**Node.js**
+
+``` theme:
+const axios = require('axios');
+const fs = require('fs');
+const https = require('https');
+const netLicensing = require('netlicensing-client');
+
+const instance = axios.create({
+    httpsAgent: new https.Agent({
+        ca: fs.readFileSync('<path-to-certificate>')
+    })
+});
+
+netLicensing.Service.setAxiosInstance(instance);
+```
+
+<span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-text">Browser</span>
+
+Add Security Exception for specified host of NetLicensing Agent server.
+
+-   <a href="https://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate" class="external-link">Chrome</a>
+-   FireFox: <span style="color: rgb(72,72,72);">Go to
+    </span>**Preferences**<span style="color: rgb(72,72,72);"> \>\>
+    **Privacy**</span><span style="color: rgb(72,72,72);"> \>\>
+    </span>**Certificates**<span style="color: rgb(72,72,72);"> \>\>
+    </span>**View Certificates <span
+    style="color: rgb(72,72,72);">\></span><span
+    style="color: rgb(72,72,72);">\> Import</span>**
+-   <a href="https://stackoverflow.com/questions/681695/what-do-i-need-to-do-to-get-internet-explorer-8-to-accept-a-self-signed-certific" class="external-link">IE</a>
+
+In browser host environments, origin security policy may apply in
+addition, see "Known Issues" below.
 
  
 
@@ -376,7 +527,7 @@ Known Issues
         #CORS Headers
         Header always set Access-Control-Allow-Origin "*"
         Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
-        Header always set Access-Control-Allow-Headers "Content-Type, Accept, Authorization"
+        Header always set Access-Control-Allow-Headers "Content-Type, Accept, Authorization, NetLicensing-Origin"
         Header always set Access-Control-Max-Age: "3600"
         RewriteEngine On
         RewriteCond %{REQUEST_METHOD} OPTIONS
@@ -404,7 +555,7 @@ Known Issues
         #CORS Headers
         add_header Access-Control-Allow-Origin *;
         add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
-        add_header Access-Control-Allow-Headers "Content-Type, Accept, Authorization";
+        add_header Access-Control-Allow-Headers "Content-Type, Accept, Authorization, NetLicensing-Origin";
         add_header Access-Control-Max-Age: "3600";
         location / {
             proxy_pass       http://localhost:8080;
@@ -415,7 +566,28 @@ Known Issues
         }
     ```
 
- 
+2.  If you get a warning about the contents of
+    a self-signed certificate, make sure you have specified CN (The
+    Common Name) when creating the certificate.
+
+3.  Windows servers (IIS) use .pfx files to contain the public key files
+    and the associated private key file. There are openssl examples how
+    to convert certificate to .pfx format bellow.
+
+    <span
+    class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span
+    class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span
+    class="crayon-pre crayon-code" style="color: rgb(0,0,0);"><span
+    class="crayon-e" style="color: teal;"> </span></span></span></span>
+    **nginx.conf**
+
+    ``` theme:
+    #PEM (.pem, .crt, .cer) to PFX
+    openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt
+     
+    #PKCS#7/P7B (.p7b, .p7c) to PFX
+    openssl pkcs7 -print_certs -in certificate.p7b -out certificate.crt
+    ```
 
 Useful links
 ============
@@ -425,13 +597,10 @@ Useful links
 -   <a href="https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html" class="external-link">https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html</a>
 -   <a href="https://nginx.org/en/docs/" class="external-link">https://nginx.org/en/docs/</a>
 -   <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" class="external-link">https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</a>
+-   <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https" class="external-link">https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https</a>
+-   <a href="https://developers.coveo.com/display/public/SearchREST/Configuring+HTTPS+Reverse+Proxy+in+IIS" class="external-link">https://developers.coveo.com/display/public/SearchREST/Configuring+HTTPS+Reverse+Proxy+in+IIS</a>
+-   <a href="https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/" class="external-link">https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/</a>
 
-**  
-**
-
-<span style="font-family: monospace;white-space: pre;">  
-</span>
-
-Document generated by Confluence on 17-03-2019 17:44
+Document generated by Confluence on 04-11-2019 19:49
 
 [Atlassian](http://www.atlassian.com/)

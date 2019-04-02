@@ -1,11 +1,11 @@
 1.  [NetLicensing Wiki](index.html)
 2.  [Home](Home_11010214.html)
 
-<span id="title-text"> NetLicensing Wiki : Licensing Models </span>
-===================================================================
+<span id="title-text"> Licensing Models </span>
+===============================================
 
 Created by <span class="author"> Konstantin Korotkov</span>, last
-modified on 11-03-2018
+modified on 03-09-2019
 
 Labs64 NetLicensing is sophisticated enough to cover even the most
 outlandish licensing models: from single-user to network overflow
@@ -51,30 +51,28 @@ NetLicensing.
 <li>Time Limited Evaluation</li>
 </ul></td>
 <td><p>This licensing model is useful in case you want to distribute secure trial or demo version of your product.</p>
-<p>Trial licenses are granted for a short time and allow customers to try the product before buying it. Usually, production-level work is not allowed and some features may be limited or disabled in demo mode. The product is completely disabled aftertriallicense hasexpired,unlessfull-featuredlicense is granted.</p></td>
+<p>Trial licenses are granted for a short time and allow customers to try the product before buying it. Usually, production-level work is not allowed and some features may be limited or disabled in demo mode. The product is completely disabled after trial license has expired, unless full-featured license is granted.</p></td>
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="even">
-<td><p><a href="11010234.html">Subscription</a></p></td>
+<td><p><a href="Subscription_11010234.html">Subscription</a></p></td>
 <td><ul>
 <li>ABO</li>
 <li>Time-limited</li>
 <li>Time-Based</li>
 <li>TimeVolume</li>
 </ul></td>
-<td><p>Subscription licensing model allowsuserto enable product for a specific period of time, with the possibility of the subscription renewal. Different subscription periods can be offered each with its own price.</p>
+<td><p>Subscription licensing model allows user to enable product for a specific period of time, with the possibility of the subscription renewal. Different subscription periods can be offered each with its own price.</p>
 <p>Support for auto-renewal with recurring payment is <em>available</em>.</p></td>
-<td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p>
-<p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
-<p><em>PLANNED</em></p></td>
+<td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="11010232.html">Rental</a></p></td>
+<td><p><a href="Rental_11010232.html">Rental</a></p></td>
 <td><ul>
 <li>Leasing</li>
 <li>Feature with TimeVolume</li>
 </ul></td>
-<td>This is a complex licensing model, useful in the case you want to license multiple instances of some entity, each instance for a certain period of time. In otherwordsit can be described as a bunch of independent subscriptions, wherecustomerdecides in additionforhow many instances he wants to subscribe.</td>
+<td>This is a complex licensing model, useful in the case you want to license multiple instances of some entity, each instance for a certain period of time. In other words it can be described as a bunch of independent subscriptions, where customer decides in addition for how many instances he wants to subscribe.</td>
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="even">
@@ -112,30 +110,21 @@ NetLicensing.
 <p>The usage may be defined by various metrics such as CPU load, network bandwidth utilization, or something related to the nature of your application.</p>
 <p><span>The billing is tied to the usage model, which can be:</span></p>
 <ul>
-<li><em>Time based:</em> billingon the duration of use</li>
+<li><em>Time based:</em> billing on the duration of use</li>
 <li><em>Count based:</em> billing on the number of uses</li>
 <li><em>Volume based:</em> billing on the amount of resource use</li>
 </ul></td>
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="odd">
-<td><span><a href="Licensee-Secret_15794284.html">Node-Locked</a></span></td>
+<td><span><a href="Node-Locked_18677762.html">Node-Locked</a></span></td>
 <td><ul>
 <li>Local</li>
 <li>Named host</li>
 </ul></td>
-<td><p>Software is licensed for use only on one or more named computer systems. Usually, CPU serial number verification is used to enforce this type of license.</p>
-<div class="aui-message hint shadowed information-macro">
-<span class="aui-icon icon-hint">Icon</span>
-<div class="message-content">
-<p><span><a href="Licensee-Secret_15794284.html">Licensee Secret</a></span><span> adds globally a node-locking capability, and may be used in combination with any supported licensing models.</span></p>
-</div>
-</div></td>
-<td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p>
-<br />
-
-<p><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /></p>
-<p><em>See "How to configure"</em></p></td>
+<td><p>Software is licensed for use only on one or more named computer systems. Usually, hardware-bound identification like CPU serial number is used to enforce this type of license.</p>
+<p> </p></td>
+<td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="even">
 <td><a href="Quota_17432807.html">Quota</a></td>
@@ -174,8 +163,8 @@ NetLicensing.
 <div class="aui-message hint shadowed information-macro has-no-icon">
 <p>How to configure</p>
 <div class="message-content">
-<p>NetLicensing currently is not supporting explicitly prevention of a concurrent license use by the same ID from several locations,howeverit is possible to associate user IDs with the licenses.</p>
-<p>Option 1) Addcustomproperty to the license identifying specific named user and verify ID matching on validation.</p>
+<p>NetLicensing currently is not supporting explicitly prevention of a concurrent license use by the same ID from several locations, however it is possible to associate user IDs with the licenses.</p>
+<p>Option 1) Add custom property to the license identifying specific named user and verify ID matching on validation.</p>
 <p>Option 2) Derive licensee number from the user ID</p>
 </div>
 </div></td>
@@ -189,7 +178,7 @@ NetLicensing.
 <tr class="odd">
 <td>Duplicate grouping (license sharing) by user, host or display</td>
 <td> </td>
-<td>Grouping license defines rules for counting usage when a single user concurrently runs the same application on several computers. This instance may count as a single use or a multipleuse, depending on the license terms.</td>
+<td>Grouping license defines rules for counting usage when a single user concurrently runs the same application on several computers. This instance may count as a single use or a multiple use, depending on the license terms.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
@@ -203,7 +192,7 @@ NetLicensing.
 <tr class="odd">
 <td>Group License</td>
 <td> </td>
-<td><p>This type of license can be used to develop a consortium. It grants rights only to members of a specific group such as named entities, or those that adhere to a particularstandard,or have received a particular certification. Group licenses may require licensees to grant special rights to all members of the group such as mandatory no-fee cross-licensing.</p></td>
+<td><p>This type of license can be used to develop a consortium. It grants rights only to members of a specific group such as named entities, or those that adhere to a particular standard, or have received a particular certification. Group licenses may require licensees to grant special rights to all members of the group such as mandatory no-fee cross-licensing.</p></td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
@@ -224,21 +213,21 @@ NetLicensing.
 <tr class="even">
 <td>Node-locked counted</td>
 <td> </td>
-<td>Softwareis licensed for a limited numberifconcurrent users on a single computer system.</td>
+<td>Software is licensed for a limited number if concurrent users on a single computer system.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="odd">
 <td>Overdraft</td>
 <td> </td>
-<td>Such licenses grant N more licensesthanwere purchased, giving customers a way to manage peak use without violating the license. The licensor can charge a fee for overdrafts protection (insurance) as well as separate fees for each overdraft license. Advantages to licensors are flexibility, simplicity, and price locks that give predictable costs.</td>
+<td>Such licenses grant N more licenses than were purchased, giving customers a way to manage peak use without violating the license. The licensor can charge a fee for overdrafts protection (insurance) as well as separate fees for each overdraft license. Advantages to licensors are flexibility, simplicity, and price locks that give predictable costs.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="even">
 <td>Packages or bundling</td>
 <td> </td>
-<td>Packages licenses grant rights to use a set of functionally dependent or independentproducts,or bundle. Vendors define the components of the packages or bundles in the license agreement. Such licenses allow vendors to easily customize solutions on a marketing, not engineering, level.</td>
+<td>Packages licenses grant rights to use a set of functionally dependent or independent products, or bundle. Vendors define the components of the packages or bundles in the license agreement. Such licenses allow vendors to easily customize solutions on a marketing, not engineering, level.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
@@ -259,7 +248,7 @@ NetLicensing.
 <tr class="odd">
 <td>Upgrade dates and/or version numbers</td>
 <td> </td>
-<td>Upgrade terms grant rights to use upgraded versions of the software. The customer may upgrade only X number of times or the customer can only use specific upgradeversions,or must upgrade within a certain time period following the release of Version X. These terms encourage the installed base to use certain versions so that the licensor may withdraw, or offer special pricing for support of other versions.</td>
+<td>Upgrade terms grant rights to use upgraded versions of the software. The customer may upgrade only X number of times or the customer can only use specific upgrade versions, or must upgrade within a certain time period following the release of Version X. These terms encourage the installed base to use certain versions so that the licensor may withdraw, or offer special pricing for support of other versions.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
@@ -268,7 +257,7 @@ NetLicensing.
 <td><ul>
 <li>Pendler</li>
 </ul></td>
-<td><p>A license that can be temporarily detached from a network poolcenterto enableoff-lineuse of your protected software.</p></td>
+<td><p>A license that can be temporarily detached from a network pool center to enable off-line use of your protected software.</p></td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
@@ -289,6 +278,6 @@ NetLicensing.
 </tbody>
 </table>
 
-Document generated by Confluence on 17-03-2019 17:44
+Document generated by Confluence on 04-11-2019 19:49
 
 [Atlassian](http://www.atlassian.com/)
