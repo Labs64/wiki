@@ -1,6 +1,6 @@
 ---
 layout: default
-title: NetLicensing Wiki
+title: Home
 nav_order: 1
 description: "NetLicensing Wiki"
 permalink: /
@@ -22,7 +22,7 @@ On the left you'll find the quick navigation tree (desktop version), and
 below are some links you can begin with.
 
 -   **[NetLicensing Overview](netlicensing-overview)**
--   **[Getting Started](Getting-Started_11010226.html)**
+-   **[Getting Started](docs/Getting Started/Getting-Started.html)**
 -   **[NetLicensing Object Model](netlicensing-object-model)**
--   **[Licensing Models](Licensing-Models_11010230.html)**
--   **[NetLicensing API (RESTful)](11010215.html)**
+-   **[Licensing Models](docs/Licensing Models/Licensing-Models.html)**
+-   **[NetLicensing API (RESTful)](docs/NetLicensing RESTful API/NetLicensing-RESTful-API.html)**
