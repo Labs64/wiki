@@ -28,4 +28,3 @@ below are some links you can begin with.
 -   **[NetLicensing Object Model](netlicensing-object-model)**
 -   **[Licensing Models](Licensing-Models_11010230.html)**
 -   **[NetLicensing API (RESTful)](11010215.html)**
--   **<a href="https://netlicensing.io" class="external-link">NetLicensing Website</a>**

@@ -1,4 +1,4 @@
-include: 
+include:
  - docs
 
 plugins:
@@ -6,7 +6,7 @@ plugins:
 
 remote_theme: Labs64/NetLicensing-Wiki-template
 
-logo: "/assets/images/LogoLabs64_2D_S.png"
+logo: "/assets/images/NLIC-Logo-transparent.png"
 
 # Enable or disable the site search
 search_enabled: true

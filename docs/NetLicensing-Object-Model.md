@@ -1,5 +1,4 @@
 ---
-parent: NetLicensing Wiki
 layout: default
 title: NetLicensing Object Model
 nav_order: 3
@@ -107,12 +106,3 @@ NetLicensing Shop, licenses can be given to a licensee by a vendor, or
 assigned implicitly by NetLicensing if it is defined so by some license
 model (e.g. evaluation license may be given automatically). All these
 events are reflected in transactions.
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Object-Relation.png](attachments/11010225/10977323.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[NetLicensing-DomainObjects.png](attachments/11010225/10977322.png)
-(image/png)  
