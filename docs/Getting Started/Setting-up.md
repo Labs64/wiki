@@ -85,13 +85,3 @@ volume/price combinations)
 **[\<\<\< Step 1: Planning](Planning_11010227.html)** 
 
 **[Step 3: Integration \>\>\>](Integration_11010229.html)**
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Cogwheel-orange.png](attachments/11010228/10977325.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Cogwheel-white.png](attachments/11010228/10977324.png) (image/png)  
-
-

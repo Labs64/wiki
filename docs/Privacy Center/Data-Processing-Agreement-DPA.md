@@ -37,15 +37,3 @@ To sign your DPA, please check the instructions below on how to do it:
 -   **Upon NetLicensing’s receipt of the validly completed and digitally
     signed Agreement, this Agreement shall be in full force and
     effect.**
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Labs64-NetLicensing-GDPR-DPA-V1.0\_sample.pdf](attachments/17433057/17629249.pdf)
-(application/pdf)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Labs64-NetLicensing-GDPR-DPA-V1.0\_sample.pdf](attachments/17433057/17629247.pdf)
-(application/pdf)  
-
-

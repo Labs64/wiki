@@ -73,7 +73,7 @@ Configure permissions for NetLicensing:
     If modifying permissions (`"Manage API permission"` option at the
     previous bullet) - click "Edit Third Party" next to the
     corresponding username  
-      
+
     <img src="assets/images/11010239/17629241.png" class="confluence-embedded-image" />
 
 <!-- -->
@@ -82,12 +82,12 @@ Configure permissions for NetLicensing:
     at the previous bullet) - select permissions as shown below and
     press `"Add"`  
     <img src="assets/images/11010239/17629243.png" class="confluence-embedded-image" />  
-      
+
     If modifying permissions (`"Manage API permission"` option at the
     previous bullet) - add `"Create and manage Recurring Payments"`
     permission (verify also `"Granted Permissions"` match) and press
     `"Save"`  
-      
+
     <img src="assets/images/11010239/17629244.png" class="confluence-embedded-image" />
 
 <!-- -->
@@ -142,59 +142,3 @@ class="expand-control-text">Step3: Configure NetLicensing</span>
 
 <span style="white-space: pre-wrap;">  
 </span>
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot1.png](attachments/11010239/10977346.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot4.png](attachments/11010239/10977345.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot5.png](attachments/11010239/10977344.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot6.png](attachments/11010239/10977343.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot11.png](attachments/11010239/17629220.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot9.png](attachments/11010239/10977340.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot12.png](attachments/11010239/10977342.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot2.png](attachments/11010239/15171611.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot3.png](attachments/11010239/15171612.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[screenshot11.png](attachments/11010239/10977341.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [01 IPN
-PayPal URL s.png](attachments/11010239/17629222.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [02 IPN
-Choose IPN settings s.png](attachments/11010239/17629223.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [03 IPN
-Set URL s.png](attachments/11010239/17629235.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [04 IPN
-Review URL s.png](attachments/11010239/17629236.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [04 IPN
-Review URL s.png](attachments/11010239/17629221.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [03 IPN
-Set URL s.png](attachments/11010239/17629224.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [API\_01
-Account Settings.png](attachments/11010239/17629238.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [API\_02
-API Access.png](attachments/11010239/17629239.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [API\_03
-Grant or Manage.png](attachments/11010239/17629240.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [API\_05
-Edit Third Party.png](attachments/11010239/17629241.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [API\_04
-Add Third Party.png](attachments/11010239/17629242.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [API\_06
-Set permissions.png](attachments/11010239/17629243.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [API\_07
-Add recurring payments
-permission.png](attachments/11010239/17629244.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [API\_08
-Granted permission.png](attachments/11010239/17629245.png) (image/png)  
-
-

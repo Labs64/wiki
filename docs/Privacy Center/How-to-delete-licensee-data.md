@@ -68,12 +68,3 @@ Tips
 
 Please note: deleted data cannot be restored anymore, so your customers
 might be not validated in your products and services!
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[NetLicensing-Licensees-delete.png](attachments/17433029/17629257.png)
-(image/png)  
-
-

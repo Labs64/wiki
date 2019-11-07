@@ -20,12 +20,3 @@ by providing up-to-date and correct *Legal Information*, *Address* and
 
 This information will be used in the NetLicensing Shop checkout and
 order confirmation/invoice.
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[NetLicensing-Vendor-Profile.png](attachments/17433043/17629259.png)
-(image/png)  
-
-

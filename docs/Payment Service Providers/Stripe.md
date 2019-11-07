@@ -25,7 +25,7 @@ account.
     Only one of Stripe or Stripe(Testing) can be enabled at the same
     time.
 
-      
+
     <img src="assets/images/15564816/17629252.png" class="confluence-embedded-image" width="900" />
 
 2.  Edit the enabled payment method:  
@@ -39,23 +39,3 @@ account.
 5.  Once returned to NetLicensing, you must see "Authorized" checkbox
     checked. Close edit page using "Save" button.  
     <img src="assets/images/15564816/17629256.png" class="confluence-embedded-image" width="900" />
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [Enable
-Stripe.png](attachments/15564816/17629251.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Enable\_Stripe.png](attachments/15564816/17629252.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Edit\_Stripe.png](attachments/15564816/17629253.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Connect\_to\_Stripe.png](attachments/15564816/17629254.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Fill\_in\_the\_Stripe\_form.png](attachments/15564816/17629255.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Connected\_Stripe.png](attachments/15564816/17629256.png) (image/png)  
-
-

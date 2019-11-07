@@ -16,7 +16,7 @@ the entities relationship)</span>.
 You can always access the data stored in those entities using following
 options:
 
-  
+
 
 NetLicensing Management Console
 -------------------------------
@@ -37,7 +37,7 @@ entry details to view or <span class="complexword">modify</span>.
 
 <a href="https://go.netlicensing.io/console/v2/content/vendor/licensee.xhtml" class="external-link"><img src="assets/images/17433027/17629250.png?effects=drop-shadow" title="Operate - Licensee" alt="Operate - Licensee" class="confluence-embedded-image" width="800" /></a>  
 
-  
+
 
 NetLicensing RESTful API
 ------------------------
@@ -75,12 +75,3 @@ Tips
     account regularly and
     [delete](How-to-delete-licensee-data_17433029.html) this data
     whenever this is not needed for your business anymore.
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[NetLicensing-Licensees.png](attachments/17433027/17629250.png)
-(image/png)  
-
-

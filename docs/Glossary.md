@@ -1,7 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title: Glossary
+nav_order: 7
+description: "Glossary"
+permalink: /glossary
+---
 
-<span id="title-text"> Glossary </span>
+Glossary
 =======================================
 
 modified on 12-04-2016
@@ -91,5 +96,3 @@ modified on 12-04-2016
 </tr>
 </tbody>
 </table>
-
-

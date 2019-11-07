@@ -126,12 +126,3 @@ Online portal offering following services:
  
 
 **[Step 2: Setting up \>\>\>](Setting-up_11010228.html)**
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[NetLicensing-Product\_Module\_ER.png](attachments/11010227/15171597.png)
-(image/png)  
-
-

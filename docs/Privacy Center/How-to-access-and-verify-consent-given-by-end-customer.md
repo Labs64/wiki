@@ -48,12 +48,3 @@ cart!
 
 Please contact the support team of those systems to get more info on the
 Proof of Consent process.
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[NetLicensing-Transactions-Consent.png](attachments/17433045/17629258.png)
-(image/png)  
-
-

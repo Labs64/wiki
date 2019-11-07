@@ -334,29 +334,3 @@ The logic is simple:
     "`expirationWarningLevel`" == "`yellow`"
 -   When the amount of days remaining until expiration is less then or
     equal to the "`redThreshold`", "`expirationWarningLevel`" == "`red`"
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[FeatureWithTimeVolumeCase.png](attachments/11010232/10977332.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[FeatureWithTimeVolume\_classes1.png](attachments/11010232/10977330.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[FeatureWithTimeVolume\_licenses.png](attachments/11010232/10977331.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[FeatureWithTimeVolume\_licensee.png](attachments/11010232/10977329.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[credit-card-terminal.png](attachments/11010232/10977328.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[timer.png](attachments/11010232/10977327.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[FeatureWithTimeVolume\_licenses2.png](attachments/11010232/10977326.png)
-(image/png)  
-
-

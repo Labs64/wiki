@@ -1,5 +1,4 @@
 ---
-parent: NetLicensing Wiki
 layout: default
 title: NetLicensing Overview
 nav_order: 1
@@ -107,27 +106,3 @@ Go try it out today – for FREE! ( register at
 <a href="https://go.netlicensing.io/app/v2/content/register.xhtml" class="external-link">https://go.netlicensing.io/app/v2/content/register.xhtml</a>
 ) or simply contact us to let us know about your licensing requirements,
 and we'll get back to you with a tailor made solution for your business.
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[NetLicensing-Overview.png](attachments/11010237/13238630.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[bullet\_B.png](attachments/11010237/10977334.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[bullet\_A.png](attachments/11010237/10977335.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[bullet\_1.png](attachments/11010237/10977336.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[bullet\_2.png](attachments/11010237/10977337.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[bullet\_3.png](attachments/11010237/10977338.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[bullet\_C.png](attachments/11010237/10977333.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[NetLicensing-Overview.png](attachments/11010237/10977339.png)
-(image/png)  
-
-

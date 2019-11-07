@@ -223,12 +223,3 @@ licenseeSecret=WRONG_SECRET
     </items>
 </netlicensing>
 ```
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[licensee-secret-flow-v1.png](attachments/15794284/16351236.png)
-(image/png)  
-
-

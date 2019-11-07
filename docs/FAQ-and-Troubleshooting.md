@@ -80,18 +80,3 @@ and select *„Yes, accept and convert them* to *U.S. Dollars.”*
 See also the screenshots below for your reference (click to enlarge):
 
 <img src="assets/images/11010235/17268748.png" class="confluence-embedded-image confluence-thumbnail" width="300" /><img src="assets/images/11010235/17268749.png" class="confluence-embedded-image confluence-thumbnail" width="300" /><img src="assets/images/11010235/17268750.png" class="confluence-embedded-image confluence-thumbnail" width="300" />
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[PayPal-01-block-payments.png](attachments/11010235/17268748.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[PayPal-02-payment-preferences.png](attachments/11010235/17268749.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[PayPal-03-currency-conversion.png](attachments/11010235/17268750.png)
-(image/png)  
-
-

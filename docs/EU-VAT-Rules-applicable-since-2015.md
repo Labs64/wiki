@@ -234,7 +234,7 @@ Shop and VAT Calculation Mode
     <img src="assets/images/17432840/17629211.png" class="confluence-embedded-image" width="900" />  
     <span
     style="color: rgb(0,0,0);"><img src="assets/images/17432840/17629216.png" class="confluence-embedded-image" width="900" /></span>  
-      
+
 2.  <span style="color: rgb(0,0,0);">**Net** calculation mode implies
     that the VAT is not included in the specified price and must be
     added on top of it, if necessary. Accordingly, NetLicensing Shop
@@ -255,30 +255,3 @@ calculation:
 -   Company
 -   Tax/VAT ID  
     <img src="assets/images/17432840/17629213.png" class="confluence-embedded-image" width="900" />
-
- 
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Shopping cart GROSS.png](attachments/17432840/17629211.png)
-(image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[Shopping cart NET.png](attachments/17432840/17629212.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [Shop
-new fields.png](attachments/17432840/17629213.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [Order
-Confirmation NET.png](attachments/17432840/17629214.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [Shop
-licenses NET.png](attachments/17432840/17629215.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [Order
-Confirmation GROSS.png](attachments/17432840/17629216.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [Shop
-licenses GROSS.png](attachments/17432840/17629217.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [Product
-VAT mode.png](attachments/17432840/17629218.png) (image/png)  
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" /> [Vendor
-type.png](attachments/17432840/17629219.png) (image/png)  
-
-

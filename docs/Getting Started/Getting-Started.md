@@ -13,12 +13,3 @@ Get started in three steps:
 ![NetLicensing Getting Started](attachments/11010226/15171599.png)
 
 Click on each step for details.
-
-Attachments:
-------------
-
-<img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
-[NetLicensing-GettingStarted.png](attachments/11010226/15171599.png)
-(image/png)  
-
-
