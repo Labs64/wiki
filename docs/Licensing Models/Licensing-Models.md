@@ -1,6 +1,7 @@
 ---
 layout: default
-title:
+title: Licensing Models
+has_children: true
 nav_order: 99
 description: ""
 permalink:
@@ -8,8 +9,6 @@ permalink:
 
 Licensing Models
 ===============================================
-
-
 
 Labs64 NetLicensing is sophisticated enough to cover even the most
 outlandish licensing models: from single-user to network overflow

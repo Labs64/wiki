@@ -2,6 +2,7 @@
 layout: default
 title:
 nav_order: 99
+parent: Licensing Models
 description: ""
 permalink:
 ---
