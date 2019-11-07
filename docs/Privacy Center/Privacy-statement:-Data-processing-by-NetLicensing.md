@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Privacy Center](Privacy-Center_17433021.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Privacy statement: Data processing by NetLicensing </span>
+Privacy statement: Data processing by NetLicensing </span>
 =================================================================================
 
 
@@ -32,5 +36,3 @@ account in order to allow keep licensing assets of your customers).
     The data subject has the possibility to revoke consent for the handling of personal data at any time from Labs64 NetLicensing. A revocation shall not have any effect on personal data which must be processed, used or transmitted in accordance with (contractual) payment processing.
 
     The applicable data protection provisions of Labs64 NetLicensing may be retrieved under https://www.labs64.com/legal/privacy-policy/.
-
-

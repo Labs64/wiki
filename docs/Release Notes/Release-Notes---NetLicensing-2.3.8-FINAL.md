@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.3.8-FINAL </span>
+Release Notes - NetLicensing 2.3.8-FINAL </span>
 =======================================================================
 
 
@@ -28,5 +32,3 @@
         * [NLIC-1398] - Licenses transfer may cause inconsistency in licenses
         * [NLIC-1401] - New licensee gets automatic licenses even if marked for transfer
         * [NLIC-1409] - NPE in Shop on demo product
-
-

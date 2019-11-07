@@ -1,7 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Payment Service Providers </span>
+Payment Service Providers </span>
 ========================================================
 
 modified on 02-11-2019
@@ -20,5 +25,3 @@ Click on the PSP to see the configuration details.
 
 -   [PayPal](PayPal_11010239.html)
 -   [Stripe](Stripe_15564816.html)
-
-

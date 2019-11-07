@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.2.0-FINAL </span>
+Release Notes - NetLicensing 2.2.0-FINAL </span>
 =======================================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 30-03-2015
@@ -23,14 +27,14 @@ by <span class="editor"> Konstantin Korotkov</span> on 30-03-2015
         * [LMB-868] - Revisited Licensing Models description
         * [LMB-812] - Documented how to delete custom properties
         * [LMB-657] - Comply PayPal-System-Updates
-     
+
     ** Bug
         * [LMB-635] - Registration view is broken if user is already logged in
         * [LMB-784] - Token is listed by LIST, but then can't be retrieved by GET -> expired
         * [LMB-785] - Misconfiguration in one of the product modules prevents entire product validation
         * [LMB-809] - Incorrect content type for schema 2.1
         * [LMB-911] - Try&Buy: Multiple try licenses can be added
-        * [LMB-844] - Problems with symbols in Number "?? !#$%&'()*+,-./:;<" 
+        * [LMB-844] - Problems with symbols in Number "?? !#$%&'()*+,-./:;<"
         * [LMB-817] - Do not trigger PSP for the "zero"-amounts
         * [LMB-651] - When new license template is created from the product module context menu, license type drop-down selection is not updated
         * [LMB-846] - xmldsig included in JavaDoc
@@ -38,5 +42,3 @@ by <span class="editor"> Konstantin Korotkov</span> on 30-03-2015
         * [LMB-830] - NetLicensing Agent: „No active modules“ error is not passed through
         * [LMB-891] - Pending licenses activation through null payment
         * [LMB-892] - Product module LM can be changed via REST API even when PM is in use
-
-

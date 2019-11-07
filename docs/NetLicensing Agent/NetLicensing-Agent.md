@@ -1,7 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> NetLicensing Agent </span>
+NetLicensing Agent </span>
 =================================================
 
 modified on 03-11-2019
@@ -506,5 +511,3 @@ Licensee Auto-Create
 --------------------
 
 NetLicensing Agent does not support licensee auto-create.
-
-

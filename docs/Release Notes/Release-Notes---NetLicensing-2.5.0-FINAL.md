@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.5.0-FINAL </span>
+Release Notes - NetLicensing 2.5.0-FINAL </span>
 =======================================================================
 
 
@@ -11,7 +15,7 @@
         * New NetLicensing Kotlin Client ( https://github.com/Labs64/NetLicensingClient-kotlin )
         * [NLIC-1769] - Console: Publish public-alpha for the new NetLicensing Management Console ( https://ui.netlicensing.io )
         * [NLIC-1638] - Licensing Model: Extend Node-Locked licensing model (1:n pairing)
-        * [NLIC-1793] - Licensing Model: Introduce Subscription / TimeVolume grace period 
+        * [NLIC-1793] - Licensing Model: Introduce Subscription / TimeVolume grace period
 
     ** Improvement
         * [NLIC-1563] - Shop: Transaction improvements for recurring payments
@@ -34,5 +38,3 @@
         * [NLIC-1848] - Fix NetLicensing Gateway] security vulnerabilities
         * [NLIC-1855] - Agent: Fix proxy mode
         * [NLIC-1867] - Client Libraries: Eliminate dependency on public NetLicensingService constructor from java client
-
-

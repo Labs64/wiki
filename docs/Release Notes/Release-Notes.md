@@ -1,7 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes </span>
+Release Notes </span>
 ============================================
 
 
@@ -57,5 +62,3 @@ Select your version from the list below to see the release notes for it.
     2.4.1-FINAL](Release-Notes---NetLicensing-2.4.1-FINAL_18219153.html)
 -   [Release Notes - NetLicensing
     2.5.0-FINAL](Release-Notes---NetLicensing-2.5.0-FINAL_18677836.html)
-
-

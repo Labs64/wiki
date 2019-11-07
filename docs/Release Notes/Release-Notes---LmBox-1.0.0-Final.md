@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - LmBox 1.0.0-Final </span>
+Release Notes - LmBox 1.0.0-Final </span>
 ================================================================
 
 
@@ -26,12 +30,10 @@
         * [LMB-127] - Introduce endpoint that provide the list of available licensing models
         * [LMB-129] - Fix examples in https://www.labs64.de/confluence/x/s4GJ according to new XSD
         * [LMB-134] - Implement licensee auto creation at validate
-        
+
     ** Bug
         * [LMB-97] - Logout-success view has no content
         * [LMB-367] - Licenses created via shop have "vendorNumber" as custom property
         * [LMB-339] - In case paypal is not properly configured, "Proceed to checkout" silently not working.
         * [LMB-340] - Shop calls validate(), actions possible on validation, e.g. evaluation start, should not be related to shop
         * [LMB-389] - Licensee create fails for product module with automatic TimeVolume license template (Feature With Time Volume, Time Volume licensing models)
-
-

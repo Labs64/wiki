@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [NetLicensing API (RESTful)](11010215.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Custom Properties </span>
+Custom Properties </span>
 ================================================
 
 by <span class="editor"> Alexey Averikhin</span> on 05-01-2016
@@ -30,8 +34,8 @@ Content-Type: application/x-www-form-urlencoded
 
 ``` theme:
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<netlicensing 
-    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+<netlicensing
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
     xmlns="http://netlicensing.labs64.com/schema/context">
     <infos/>
     <items>
@@ -63,8 +67,8 @@ Content-Type: application/x-www-form-urlencoded
 
 ``` theme:
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<netlicensing 
-    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+<netlicensing
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
     xmlns="http://netlicensing.labs64.com/schema/context">
     <infos/>
     <items>
@@ -77,5 +81,3 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-
-

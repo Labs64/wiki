@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.0.0-RC2 </span>
+Release Notes - NetLicensing 2.0.0-RC2 </span>
 =====================================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 28-11-2013
@@ -23,5 +27,3 @@ by <span class="editor"> Konstantin Korotkov</span> on 28-11-2013
         * [LMB-572] - LM FeatureWithTimeVolume: it is possible to delete feature license when associated timevolume licenses exists
         * [LMB-586] - Password reset email is not delivered
         * [LMB-589] - NullPointerException at PriceFormatter
-
-

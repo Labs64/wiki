@@ -1,9 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [NetLicensing API (RESTful)](11010215.html)
-4.  [Services](Services_14942714.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Transaction Services </span>
+Transaction Services </span>
 ===================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018
@@ -327,5 +330,3 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-
-

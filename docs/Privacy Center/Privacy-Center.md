@@ -1,7 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Privacy Center </span>
+Privacy Center </span>
 =============================================
 
 
@@ -172,7 +177,7 @@ security principles that it emphasizes, many of which NetLicensing
 instituted long before the GDPR was enacted. At NetLicensing, we believe
 that the GDPR is an important milestone in the data privacy landscape,
 and we are committed to be compliant with the GDPR.  
-  
+
 We are constantly reviewing (and updating where necessary) all of our
 internal processes, procedures, data systems, and documentation to
 ensure that we are compliant with the GDPR. While much of our
@@ -336,5 +341,3 @@ GDPR efforts mentioned above.
 If you have specific questions about the GDPR and your use of
 NetLicensing, you can email us at
 <a href="mailto:netlicensing@labs64.com" class="external-link">netlicensing@labs64.com</a>.
-
-

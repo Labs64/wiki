@@ -1,9 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [NetLicensing API (RESTful)](11010215.html)
-4.  [Services](Services_14942714.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Payment Method Services </span>
+Payment Method Services </span>
 ======================================================
 
 modified on 02-11-2019
@@ -250,5 +253,3 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-
-

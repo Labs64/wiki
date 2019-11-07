@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Payment Service Providers](Payment-Service-Providers_11010238.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> PayPal </span>
+PayPal </span>
 =====================================
 
 modified on 18-11-2018

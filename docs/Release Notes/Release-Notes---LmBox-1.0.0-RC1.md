@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - LmBox 1.0.0-RC1 </span>
+Release Notes - LmBox 1.0.0-RC1 </span>
 ==============================================================
 
 
@@ -25,5 +29,3 @@
         * [LMB-73] - New entities can not be created with auto-generated number: number set as required field in the form.
         * [LMB-69] - Create new entity fails for all entities except product.
         * [LMB-92] - Validation error produces duplicate breadcrumbs
-
-

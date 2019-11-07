@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [NetLicensing API (RESTful)](11010215.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Services </span>
+Services </span>
 =======================================
 
 
@@ -76,5 +80,3 @@ If you do not have one already, signup
 </tr>
 </tbody>
 </table>
-
-

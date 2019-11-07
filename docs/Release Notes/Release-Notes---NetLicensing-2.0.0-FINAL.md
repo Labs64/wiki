@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.0.0-FINAL </span>
+Release Notes - NetLicensing 2.0.0-FINAL </span>
 =======================================================================
 
 
@@ -30,5 +34,3 @@
         * [LMB-617] - Tax/VAT ID cannot be saved
         * [LMB-653] - Regular confirmation page is shown on unsuccessful shopping cart checkout
         * [LMB-654] - Shop checkout for 'FeatureWithTimeVolume' Licensing Model may activate licenses in wrong order that cause failing checkout
-
-

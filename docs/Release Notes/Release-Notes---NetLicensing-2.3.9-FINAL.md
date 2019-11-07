@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.3.9-FINAL </span>
+Release Notes - NetLicensing 2.3.9-FINAL </span>
 =======================================================================
 
 
@@ -51,5 +55,3 @@
         * [NLIC-1428] - IE11 hangs when opening NetLicensing Shop from the Management Console
         * [NLIC-1433] - PayPal / NetLicensing Shop inconsistences
         * [NLIC-1456] - Shopping cart differs for private and business vendor types
-
-

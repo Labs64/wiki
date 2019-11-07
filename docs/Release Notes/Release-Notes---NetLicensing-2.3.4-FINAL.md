@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.3.4-FINAL </span>
+Release Notes - NetLicensing 2.3.4-FINAL </span>
 =======================================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 27-11-2016
@@ -19,5 +23,3 @@ by <span class="editor"> Konstantin Korotkov</span> on 27-11-2016
     ** Bug
         * [LMB-1195] - Can`t modify custom property key
         * [LMB-1214] - Transaction view page doesn't display
-
-

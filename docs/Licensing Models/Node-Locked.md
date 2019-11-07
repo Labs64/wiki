@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Licensing Models](Licensing-Models_11010230.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Node-Locked </span>
+Node-Locked </span>
 ==========================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 03-09-2019
@@ -85,7 +89,7 @@ parameters](https://www.labs64.de/confluence/display/NLICPUB/Licensee+Services):
     class="error">productModuleNumber\> - product module using the
     Node-Locked licensing model</span>
 -   **nodeSecret**=\<String\> - specifies unique secret.  
-      
+
 
 Validation returns value:
 
@@ -148,5 +152,3 @@ productModuleNumber0=MTEST-DEMO&nodeSecret0=HardwareOrGeneratedSecret
     </ns2:items>
 </ns2:netlicensing>
 ```
-
-

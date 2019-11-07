@@ -1,7 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Licensing Models </span>
+Licensing Models </span>
 ===============================================
 
 modified on 03-09-2019
@@ -276,5 +281,3 @@ NetLicensing.
 </tr>
 </tbody>
 </table>
-
-

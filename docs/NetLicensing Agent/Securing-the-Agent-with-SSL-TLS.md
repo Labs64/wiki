@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [NetLicensing Agent](NetLicensing-Agent_17432579.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Securing the Agent with SSL/TLS </span>
+Securing the Agent with SSL/TLS </span>
 ==============================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 02-11-2019
@@ -92,7 +96,7 @@ httpd-vhosts.conf:
     ``` theme:
     <VirtualHost *:80>
         ServerName "yourhost.com"
-        Redirect permanent / https://yourhost.com/ 
+        Redirect permanent / https://yourhost.com/
     </VirtualHost>
     ```
 
@@ -179,7 +183,7 @@ nginx.conf
     server {
         listen       443 ssl;
         server_name  yourhost.com  alias  yourhost.com.alias;
-     
+
         #path to you local sectificate
         ssl_certificate      /usr/local/etc/httpd/server.crt;
         ssl_certificate_key  /usr/local/etc/httpd/server.key;
@@ -542,7 +546,7 @@ Known Issues
     server {
         listen       443 ssl;
         server_name  yourhost.com  alias  yourhost.com.alias;
-     
+
         #path to you local sectificate
         ssl_certificate      /usr/local/etc/httpd/server.crt;
         ssl_certificate_key  /usr/local/etc/httpd/server.key;
@@ -599,5 +603,3 @@ Useful links
 -   <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https" class="external-link">https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https</a>
 -   <a href="https://developers.coveo.com/display/public/SearchREST/Configuring+HTTPS+Reverse+Proxy+in+IIS" class="external-link">https://developers.coveo.com/display/public/SearchREST/Configuring+HTTPS+Reverse+Proxy+in+IIS</a>
 -   <a href="https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/" class="external-link">https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/</a>
-
-

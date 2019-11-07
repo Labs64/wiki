@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.3.0-FINAL </span>
+Release Notes - NetLicensing 2.3.0-FINAL </span>
 =======================================================================
 
 
@@ -23,7 +27,7 @@
         * [LMB-929] - Payment Methods action icons missing
         * [LMB-995] - Shop product modules statuses (traffic light)
         * [LMB-996] - NetLicensing Shop: add license popup parameters validation
-        * [LMB-997] - Shopping cart checkout validation 
+        * [LMB-997] - Shopping cart checkout validation
         * [LMB-998] - Enable "Try & Buy" Licensing Model in NetLicensing Shop
         * [LMB-1015] - Disable "checkout ->" link (licenses view) if shopping cart is empty
         * [LMB-1016] - Enable JS/AJAX for "Proceed to checkout" button
@@ -55,5 +59,3 @@
         * [LMB-1043] - Inactive license templates shown in NetLicensing Shop
         * [LMB-1045] - i18n: Product Module with Rental Licensing Model validation
         * [LMB-959] - Uploaded File Info -> an image is not displayed
-
-

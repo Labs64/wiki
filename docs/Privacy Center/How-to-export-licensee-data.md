@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Privacy Center](Privacy-Center_17433021.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> How to export licensee data </span>
+How to export licensee data </span>
 ==========================================================
 
 
@@ -30,5 +34,3 @@ corresponding service:
     Services](https://www.labs64.de/confluence/display/NLICPUB/Transaction+Services) -
     to retrieve *Transaction* data, which can be filtered post-export by
     `"`licenseNumber`"` property within single *Transaction* entity
-
-

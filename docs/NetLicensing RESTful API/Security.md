@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [NetLicensing API (RESTful)](11010215.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Security </span>
+Security </span>
 =======================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018
@@ -66,9 +70,7 @@ subset:
 | Maintenance        | ROLE\_APIKEY\_MAINTENANCE | "Operation" + CRUD for product / product module / license template | Full product maintenance, does not allow modification to profile and any global configurations                      |
 | Admin              | ROLE\_APIKEY\_ADMIN       | Full access, same as login/password (with few exceptions)          | Can be used to grant (temporary) access, while keeping login/password undiscovered                                  |
 
-  
+
 Check the [services documentation](Services_14942714.html) to determine
 which security mechanisms and roles are allowed for particular
 NetLicensing service.
-
-

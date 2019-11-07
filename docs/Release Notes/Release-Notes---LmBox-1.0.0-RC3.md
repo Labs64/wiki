@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - LmBox 1.0.0-RC3 </span>
+Release Notes - LmBox 1.0.0-RC3 </span>
 ==============================================================
 
 
@@ -39,5 +43,3 @@
         * [LMB-280] - Transaction close date sometimes not set
         * [LMB-248] - Token service generates shop token for non-existing licensee
         * [LMB-283] - Related licenses link not shown in auto-transaction view form
-
-

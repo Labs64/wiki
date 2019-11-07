@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - LmBox 1.0.0-RC2 </span>
+Release Notes - LmBox 1.0.0-RC2 </span>
 ==============================================================
 
 
@@ -35,5 +39,3 @@
         * [LMB-136] - Frontend: In case of exception, the view is broken
         * [LMB-237] - Fix error 500 if shop is opened without token or with expired token
         * [LMB-249] - TimeEvaluation Licensing Model should only allow to purchase the feature once
-
-

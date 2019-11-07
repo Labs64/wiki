@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [NetLicensing Agent](NetLicensing-Agent_17432579.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Preparing to work with smart card </span>
+Preparing to work with smart card </span>
 ================================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 22-10-2018
@@ -121,12 +125,10 @@ Known issues
 </tbody>
 </table>
 
-  
-  
+
+
 
  
 
 <span style="white-space: pre-wrap;">  
 </span>
-
-

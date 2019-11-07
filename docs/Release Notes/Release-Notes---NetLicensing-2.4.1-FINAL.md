@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.4.1-FINAL </span>
+Release Notes - NetLicensing 2.4.1-FINAL </span>
 =======================================================================
 
 
@@ -20,5 +24,3 @@
         * [NLIC-1725] - Quota Licensing Model: fix quota calculation
         * [NLIC-1726] - Improve "Not permitted" message for LicenseeSecret
         * [NLIC-1750] - Plan prolongation doesn't work for recurring payments
-
-

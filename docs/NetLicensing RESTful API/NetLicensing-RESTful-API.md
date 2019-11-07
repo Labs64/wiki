@@ -1,7 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> NetLicensing API (RESTful) </span>
+NetLicensing API (RESTful) </span>
 =========================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 03-10-2017
@@ -226,5 +231,3 @@ Links
 
 -   List of HTTP status codes -
     <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes" class="external-link">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>
-
-

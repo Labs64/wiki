@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.3.3-FINAL </span>
+Release Notes - NetLicensing 2.3.3-FINAL </span>
 =======================================================================
 
 
@@ -34,5 +38,3 @@
         * [LMB-1165] - Order confirmation: empty fields rendering error
         * [LMB-1166] - Shop error in case of product tree invalid configuration
         * [LMB-1168] - "No shop token provided" handling error - empty page shown
-
-

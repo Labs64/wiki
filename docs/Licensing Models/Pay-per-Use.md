@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Licensing Models](Licensing-Models_11010230.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Pay-per-Use </span>
+Pay-per-Use </span>
 ==========================================
 
 modified on 22-05-2018
@@ -335,5 +339,3 @@ productModuleNumber0=MTEST-DEMO&reserveQuantity0=20
     </items>
 </netlicensing> 
 ```
-
-

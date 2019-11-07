@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Release Notes](Release-Notes_11010240.html)
+---
+layout: default
+title:
+nav_order: 99
+description: ""
+permalink:
+---
 
-<span id="title-text"> Release Notes - NetLicensing 2.0.0-RC1 </span>
+Release Notes - NetLicensing 2.0.0-RC1 </span>
 =====================================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 09-10-2013
@@ -27,7 +31,7 @@ by <span class="editor"> Konstantin Korotkov</span> on 09-10-2013
         * [LMB-355] - Add a hint for the "number" field in entity edits, saying that number is generated if left empty.
         * [LMB-388] - Licensing model description refers to the documentation with link
         * [LMB-482] - Price format in shop is set to EUR X.XX
-        
+
     ** Bug
         * [LMB-143] - Attempt to create a license template with empty 'name' causes JPA exception (non-null DB constraint)
         * [LMB-300] - Access to non-existing endpoint should result in 404, currently 500
@@ -50,5 +54,3 @@ by <span class="editor"> Konstantin Korotkov</span> on 09-10-2013
         * [LMB-528] - NPE in shop in case one of the fetch operations fails in backend during shop preparation
         * [LMB-535] - Custom property can't be removed from NetLicensing Manage
         * [LMB-558] - It is possible to set yellowThreshold=1 and redThreshold=0, which causes validation error and, as a result, shop error (NPE)
-
-
