@@ -6,8 +6,8 @@ description: ""
 permalink:
 ---
 
-How to access and update licensee data </span>
-=====================================================================
+How to access and update licensee data
+======================================
 
 
 <span class="veryhardreadability">In NetLicensing the personal data of
