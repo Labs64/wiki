@@ -1,15 +1,16 @@
 ---
 layout: default
 title:
-nav_order: 99
+parent: Getting Started
+nav_order: 2
 description: ""
 permalink:
 ---
 
 Setting up
-=========================================
+==========
 
-modified on 12-04-2016
+
 
 **[\<\<\< Step 1: Planning](Planning_11010227.html)**
 

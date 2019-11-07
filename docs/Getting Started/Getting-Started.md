@@ -1,13 +1,14 @@
 ---
 layout: default
-title:
-nav_order: 99
-description: ""
+title: Getting Started
+nav_order: 3
+has_children: true
+description: "Getting Started"
 permalink:
 ---
 
 Getting Started
-==============================================
+===============
 
 
 Getting started guide provides step-by-step instructions for the vendor

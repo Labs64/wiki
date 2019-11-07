@@ -29,21 +29,3 @@ Release Notes - NetLicensing 2.3.1-FINAL
         * [LMB-1107] - TryAndBuy Licensing Model doesn't allow to buy a full-featured license for the second licensee
         * [LMB-1110] - Order confirmation email isn't received
         * [LMB-1112] - Licenses bound to inactive license templates are not considered for validation
-
-Comments:
----------
-
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><span id="comment-14942681"></span>
-<p>Please Note: New URL for <em>NetLicensing Management Console</em> - <a href="https://go.netlicensing.io/console/v2/" class="external-link">https://go.netlicensing.io/console/v2/</a></p>
-<div class="smallfont" data-align="left" style="color: #666666; width: 98%; margin-bottom: 10px;">
-<img src="assets/images/icons/contenttypes/comment_16.png" width="16" height="16" /> Posted by averikhin at 07-04-2016 08:35
-</div></td>
-</tr>
-</tbody>
-</table>

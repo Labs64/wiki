@@ -9,7 +9,7 @@ permalink:
 NetLicensing API (RESTful)
 =========================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 03-10-2017
+
 
 This is the reference documentation for the RESTful API provided by
 NetLicensing. The NetLicensing API (RESTful) is for developers

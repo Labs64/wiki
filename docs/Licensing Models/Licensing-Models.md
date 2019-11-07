@@ -9,7 +9,7 @@ permalink:
 Licensing Models
 ===============================================
 
-modified on 03-09-2019
+
 
 Labs64 NetLicensing is sophisticated enough to cover even the most
 outlandish licensing models: from single-user to network overflow

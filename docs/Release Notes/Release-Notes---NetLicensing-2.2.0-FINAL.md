@@ -9,7 +9,7 @@ permalink:
 Release Notes - NetLicensing 2.2.0-FINAL
 =======================================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 30-03-2015
+
 
     ** Feature
         * [LMB-659] - Floating Licensing Model

@@ -9,7 +9,7 @@ permalink:
 PayPal
 =====================================
 
-modified on 18-11-2018
+
 
 <span class="aui-icon icon-success">Icon</span>
 

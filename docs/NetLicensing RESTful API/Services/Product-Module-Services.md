@@ -9,8 +9,6 @@ permalink:
 Product Module Services
 ======================================================
 
-by <span class="editor"> Andrew Yushkevich</span> on 19-11-2018
-
 -   [Product modules list](#ProductModuleServices-Productmoduleslist)
 -   [Get product module](#ProductModuleServices-Getproductmodule)
 -   [Create product module](#ProductModuleServices-Createproductmodule)

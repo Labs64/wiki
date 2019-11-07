@@ -9,7 +9,7 @@ permalink:
 License Services
 ===============================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018
+
 
 -   [Licenses list](#LicenseServices-Licenseslist)
 -   [Get license](#LicenseServices-Getlicense)

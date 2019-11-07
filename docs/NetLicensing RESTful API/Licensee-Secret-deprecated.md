@@ -9,7 +9,7 @@ permalink:
 Licensee Secret (deprecated)
 ===========================================================
 
-modified on 04-11-2019
+
 
 -   [Introduction](#LicenseeSecret(deprecated)-Introduction)
 -   [Validation flow](#LicenseeSecret(deprecated)-Validationflow)

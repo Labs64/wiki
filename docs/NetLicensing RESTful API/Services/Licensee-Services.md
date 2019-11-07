@@ -9,7 +9,7 @@ permalink:
 Licensee Services
 ================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 02-11-2019
+
 
 -   [Licensees list](#LicenseeServices-Licenseeslist)
 -   [Get licensee](#LicenseeServices-Getlicensee)

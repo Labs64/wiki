@@ -9,7 +9,7 @@ permalink:
 Payment Method Services
 ======================================================
 
-modified on 02-11-2019
+
 
 -   [Payment methods list](#PaymentMethodServices-Paymentmethodslist)
 -   [Get payment method](#PaymentMethodServices-Getpaymentmethod)

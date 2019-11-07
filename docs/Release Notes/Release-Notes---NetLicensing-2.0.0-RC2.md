@@ -9,7 +9,7 @@ permalink:
 Release Notes - NetLicensing 2.0.0-RC2
 =====================================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 28-11-2013
+
 
     ** Feature
         * [LMB-490] - Send activation and registration confirmation email during vendor registration

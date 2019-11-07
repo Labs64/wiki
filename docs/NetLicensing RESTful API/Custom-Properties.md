@@ -9,7 +9,7 @@ permalink:
 Custom Properties
 ================================================
 
-by <span class="editor"> Alexey Averikhin</span> on 05-01-2016
+
 
 Custom properties allow you to add arbitrary additional information
 to NetLicensing entities. This can be useful to link with other

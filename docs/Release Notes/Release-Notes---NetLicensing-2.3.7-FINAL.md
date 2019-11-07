@@ -9,7 +9,7 @@ permalink:
 Release Notes - NetLicensing 2.3.7-FINAL
 =======================================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 24-04-2017
+
 
     ** Feature
         * [LMB-898] - Preparing for EU VAT changes for digital products and services since 2015

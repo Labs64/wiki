@@ -9,7 +9,7 @@ permalink: /faq-troubleshooting
 FAQ & Troubleshooting
 =====================
 
-modified on 10-01-2018
+
 
 -   [FAQ](#FAQ&Troubleshooting-FAQ)
     -   [What is the amount upper limit on a single PayPal

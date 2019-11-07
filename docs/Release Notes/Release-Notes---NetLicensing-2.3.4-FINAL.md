@@ -9,7 +9,7 @@ permalink:
 Release Notes - NetLicensing 2.3.4-FINAL
 =======================================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 27-11-2016
+
 
     ** Feature
         * [LMB-1175] - Enable licenseeSecret to prevent licensee number misuse

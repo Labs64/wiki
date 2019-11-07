@@ -9,7 +9,7 @@ permalink:
 Transaction Services
 ===================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018
+
 
 -   [Transactions list](#TransactionServices-Transactionslist)
 -   [Get transaction](#TransactionServices-Gettransaction)

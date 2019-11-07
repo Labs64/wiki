@@ -1,15 +1,14 @@
 ---
 layout: default
 title:
-nav_order: 99
+parent: Getting Started
+nav_order: 3
 description: ""
 permalink:
 ---
 
 Integration
-==========================================
-
-modified on 08-02-2016
+===========
 
 **[\<\<\< Step 2: Setting up](Setting-up_11010228.html)**
 

@@ -9,7 +9,7 @@ permalink:
 Node-Locked
 ==========================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 03-09-2019
+
 
 -   [Overview](#Node-Locked-Overview)
 -   [License Templates](#Node-Locked-LicenseTemplates)

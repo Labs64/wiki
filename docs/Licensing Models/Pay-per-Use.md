@@ -9,7 +9,7 @@ permalink:
 Pay-per-Use
 ==========================================
 
-modified on 22-05-2018
+
 
 -   [Overview](#Pay-per-Use-Overview)
 -   [License Templates](#Pay-per-Use-LicenseTemplates)

@@ -9,7 +9,7 @@ permalink:
 Securing the Agent with SSL/TLS
 ==============================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 02-11-2019
+
 
 -   [Motivation](#SecuringtheAgentwithSSL/TLS-Motivation)
 -   [Apache HTTP](#SecuringtheAgentwithSSL/TLS-ApacheHTTP)

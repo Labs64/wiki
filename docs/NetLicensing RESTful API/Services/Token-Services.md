@@ -9,7 +9,7 @@ permalink:
 Token Services
 =============================================
 
-modified on 18-11-2018
+
 
 -   [Tokens list](#TokenServices-Tokenslist)
 -   [Get token](#TokenServices-Gettoken)

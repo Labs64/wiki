@@ -9,7 +9,7 @@ permalink:
 License Template Services
 ========================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018
+
 
 -   [License templates
     list](#LicenseTemplateServices-Licensetemplateslist)

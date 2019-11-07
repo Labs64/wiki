@@ -9,7 +9,7 @@ permalink:
 Details on Usage
 ===============================================
 
-modified on 03-04-2018
+
 
 Here you will find instructions for specific procedures supported by
 NetLicensing

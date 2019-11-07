@@ -9,7 +9,7 @@ permalink:
 Preparing to work with smart card
 ================================================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 22-10-2018
+
 
 -   [General
     information](#Preparingtoworkwithsmartcard-Generalinformation)

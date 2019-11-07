@@ -9,7 +9,7 @@ permalink:
 Payment Service Providers
 ========================================================
 
-modified on 02-11-2019
+
 
 You can choose which of the following Payment Service Providers (PSP)
 will be offered to your customers in NetLicensing Shop as a payment

@@ -9,7 +9,7 @@ permalink:
 NetLicensing Agent
 =================================================
 
-modified on 03-11-2019
+
 
 -   [Motivation](#NetLicensingAgent-Motivation)
 -   [Legal Information](#NetLicensingAgent-LegalInformation)

@@ -9,7 +9,7 @@ permalink:
 Floating
 =======================================
 
-modified on 30-01-2018
+
 
 -   [Overview](#Floating-Overview)
 -   [License templates](#Floating-Licensetemplates)

@@ -9,7 +9,7 @@ permalink:
 Stripe
 =====================================
 
-by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018
+
 
 <span class="aui-icon icon-success">Icon</span>
 
