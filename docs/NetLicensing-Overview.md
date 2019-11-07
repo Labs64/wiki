@@ -1,7 +1,7 @@
 ---
 layout: default
 title: NetLicensing Overview
-nav_order: 1
+nav_order: 2
 description: "NetLicensing Overview"
 permalink: /netlicensing-overview
 ---

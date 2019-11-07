@@ -9,8 +9,6 @@ permalink: /netlicensing-object-model
 NetLicensing Object Model
 =========================
 
-modified on 24-09-2016
-
 -   [Vendor](#NetLicensingObjectModel-Vendor)
 -   [Product](#NetLicensingObjectModel-Product)
 -   [Product Module](#NetLicensingObjectModel-ProductModule)

@@ -1,15 +1,13 @@
 ---
 layout: default
 title: Glossary
-nav_order: 7
+nav_order: 9
 description: "Glossary"
 permalink: /glossary
 ---
 
 Glossary
 =======================================
-
-modified on 12-04-2016
 
 <table>
 <colgroup>
