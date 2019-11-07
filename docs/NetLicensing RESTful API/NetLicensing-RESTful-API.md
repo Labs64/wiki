@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-NetLicensing API (RESTful) </span>
+NetLicensing API (RESTful)
 =========================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 03-10-2017

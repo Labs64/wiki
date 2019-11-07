@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Transferring licenses between licensees </span>
+Transferring licenses between licensees
 ======================================================================
 
 modified on 04-11-2019

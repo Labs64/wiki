@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Licensing Models </span>
+Licensing Models
 ===============================================
 
 modified on 03-09-2019

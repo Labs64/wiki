@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Payment Method Services </span>
+Payment Method Services
 ======================================================
 
 modified on 02-11-2019

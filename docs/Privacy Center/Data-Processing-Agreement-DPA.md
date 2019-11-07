@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Data Processing Agreement (DPA) </span>
+Data Processing Agreement (DPA)
 ==============================================================
 
 

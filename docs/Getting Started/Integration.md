@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Integration </span>
+Integration
 ==========================================
 
 modified on 08-02-2016

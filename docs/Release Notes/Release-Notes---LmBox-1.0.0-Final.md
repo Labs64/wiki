@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Release Notes - LmBox 1.0.0-Final </span>
+Release Notes - LmBox 1.0.0-Final
 ================================================================
 
 

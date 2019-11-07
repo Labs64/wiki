@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Release Notes - NetLicensing 2.0.2-FINAL </span>
+Release Notes - NetLicensing 2.0.2-FINAL
 =======================================================================
 
 

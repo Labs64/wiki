@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Getting Started </span>
+Getting Started
 ==============================================
 
 

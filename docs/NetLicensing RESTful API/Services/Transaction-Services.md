@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Transaction Services </span>
+Transaction Services
 ===================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018

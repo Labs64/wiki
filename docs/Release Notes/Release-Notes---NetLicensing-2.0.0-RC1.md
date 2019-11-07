@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Release Notes - NetLicensing 2.0.0-RC1 </span>
+Release Notes - NetLicensing 2.0.0-RC1
 =====================================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 09-10-2013

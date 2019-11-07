@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Preparing to work with smart card </span>
+Preparing to work with smart card
 ================================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 22-10-2018

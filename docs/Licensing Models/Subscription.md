@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Subscription </span>
+Subscription
 ===========================================
 
 

@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-How to delete licensee data </span>
+How to delete licensee data
 ==========================================================
 
 

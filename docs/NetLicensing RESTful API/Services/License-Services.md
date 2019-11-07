@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-License Services </span>
+License Services
 ===============================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018

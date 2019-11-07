@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Release Notes </span>
+Release Notes
 ============================================
 
 

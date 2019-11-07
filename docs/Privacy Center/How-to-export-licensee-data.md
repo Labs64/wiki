@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-How to export licensee data </span>
+How to export licensee data
 ==========================================================
 
 

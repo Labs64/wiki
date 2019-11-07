@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-How to maintain vendor account data </span>
+How to maintain vendor account data
 ==================================================================
 
 

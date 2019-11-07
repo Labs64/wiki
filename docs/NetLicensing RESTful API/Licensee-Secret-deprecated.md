@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Licensee Secret (deprecated) </span>
+Licensee Secret (deprecated)
 ===========================================================
 
 modified on 04-11-2019

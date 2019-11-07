@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Payment Service Providers </span>
+Payment Service Providers
 ========================================================
 
 modified on 02-11-2019

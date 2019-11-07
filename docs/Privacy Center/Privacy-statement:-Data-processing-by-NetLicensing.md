@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Privacy statement: Data processing by NetLicensing </span>
+Privacy statement: Data processing by NetLicensing
 =================================================================================
 
 

@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-PayPal </span>
+PayPal
 =====================================
 
 modified on 18-11-2018

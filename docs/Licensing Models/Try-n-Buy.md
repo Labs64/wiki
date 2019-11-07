@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Try & Buy </span>
+Try & Buy
 ========================================
 
 

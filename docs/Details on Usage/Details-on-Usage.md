@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Details on Usage </span>
+Details on Usage
 ===============================================
 
 modified on 03-04-2018

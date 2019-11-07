@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-License Template Services </span>
+License Template Services
 ========================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 18-11-2018

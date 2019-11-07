@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Product Module Services </span>
+Product Module Services
 ======================================================
 
 by <span class="editor"> Andrew Yushkevich</span> on 19-11-2018

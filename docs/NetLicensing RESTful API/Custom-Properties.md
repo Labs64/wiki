@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Custom Properties </span>
+Custom Properties
 ================================================
 
 by <span class="editor"> Alexey Averikhin</span> on 05-01-2016

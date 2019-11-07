@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Multi-Feature </span>
+Multi-Feature
 ============================================
 
 

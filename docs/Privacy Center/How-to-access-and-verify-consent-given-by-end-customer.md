@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-How to access and verify consent given by end-customer </span>
+How to access and verify consent given by end-customer
 =====================================================================================
 
 

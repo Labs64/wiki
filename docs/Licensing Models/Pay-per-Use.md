@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Pay-per-Use </span>
+Pay-per-Use
 ==========================================
 
 modified on 22-05-2018

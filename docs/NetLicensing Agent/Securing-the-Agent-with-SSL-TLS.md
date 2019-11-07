@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Securing the Agent with SSL/TLS </span>
+Securing the Agent with SSL/TLS
 ==============================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 02-11-2019

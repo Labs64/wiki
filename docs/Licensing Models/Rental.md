@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Rental </span>
+Rental
 =====================================
 
 

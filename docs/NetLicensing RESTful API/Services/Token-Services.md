@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Token Services </span>
+Token Services
 =============================================
 
 modified on 18-11-2018

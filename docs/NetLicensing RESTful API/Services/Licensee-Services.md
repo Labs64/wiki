@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Licensee Services </span>
+Licensee Services
 ================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 02-11-2019

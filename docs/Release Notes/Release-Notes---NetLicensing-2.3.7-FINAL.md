@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Release Notes - NetLicensing 2.3.7-FINAL </span>
+Release Notes - NetLicensing 2.3.7-FINAL
 =======================================================================
 
 by <span class="editor"> Konstantin Korotkov</span> on 24-04-2017

@@ -6,7 +6,7 @@ description: ""
 permalink:
 ---
 
-Floating </span>
+Floating
 =======================================
 
 modified on 30-01-2018
