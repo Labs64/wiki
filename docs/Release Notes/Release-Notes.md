@@ -1,6 +1,6 @@
 ---
 layout: default
-title:
+title: Release Notes
 nav_order: 99
 description: ""
 permalink:
@@ -8,7 +8,6 @@ permalink:
 
 Release Notes
 ============================================
-
 
 NetLicensing release notes are specific to each version.
 

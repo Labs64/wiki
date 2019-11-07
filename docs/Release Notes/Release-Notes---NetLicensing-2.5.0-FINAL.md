@@ -1,6 +1,7 @@
 ---
 layout: default
 title:
+parent: Release Notes
 nav_order: 99
 description: ""
 permalink:
