@@ -2,7 +2,7 @@ include:
  - docs
 plugins:
  - jekyll-remote-theme
-remote_theme: pmarsceill/just-the-docs
+remote_theme: Labs64/NetLicensing-Wiki-template
 
 aux_links:
   "NetLicensing WebSite":
