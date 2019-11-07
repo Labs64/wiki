@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Details on Usage](Details-on-Usage_16416838.html)
+---
+layout: default
+title:
+nav_order:
+description: ""
+permalink:
+---
 
-<span id="title-text"> Transferring licenses between licensees </span>
+Transferring licenses between licensees </span>
 ======================================================================
 
 modified on 04-11-2019
@@ -72,7 +76,7 @@ configured with the following numbers:
 target licenseeNumber: I542PBSID
 ```
 
-  
+
 The purchase fulfillment script will execute the following calls:
 
 1.  Create new (temporary) licensee and receive its *licensee number*
@@ -198,5 +202,3 @@ following:
     ```
 
  
-
-

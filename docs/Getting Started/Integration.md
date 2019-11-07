@@ -1,8 +1,12 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
-3.  [Getting Started](Getting-Started_11010226.html)
+---
+layout: default
+title:
+nav_order:
+description: ""
+permalink:
+---
 
-<span id="title-text"> Integration </span>
+Integration </span>
 ==========================================
 
 modified on 08-02-2016
@@ -45,5 +49,3 @@ convenience.</span>
 **[\<\<\< Step 2: Setting up](Setting-up_11010228.html)**
 
  
-
-
