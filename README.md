@@ -6,8 +6,6 @@ nav_exclude: true
 
 # [Labs64 NetLicensing Wiki](https://io.labs64.com/NetLicensing-Wiki/) - Innovative License Management Solution
 
-[![Build Status](https://travis-ci.org/Labs64/NetLicensing-Wiki.svg?branch=master)](https://travis-ci.org/Labs64/NetLicensing-Wiki)
-
 Visit Labs64 NetLicensing at https://netlicensing.io
 
 ## License and Copyright
