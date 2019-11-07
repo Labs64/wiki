@@ -1,1 +1,10 @@
+include: 
+ - docs
+plugins:
+ - jekyll-remote-theme
 remote_theme: pmarsceill/just-the-docs
+
+aux_links:
+  "NetLicensing WebSite":
+    - "//netlicensing.io"
+footer_content: "Copyright &copy; 2013 <a href=\"https://www.labs64.com\">Labs64 GmbH</a>"
