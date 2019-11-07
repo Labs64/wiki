@@ -1,7 +1,6 @@
 ---
 layout: default
 title: NetLicensing Wiki
-has_toc: false
 nav_order: 1
 description: "NetLicensing Wiki"
 permalink: /

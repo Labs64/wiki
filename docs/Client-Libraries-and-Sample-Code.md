@@ -1,8 +1,13 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title: Client Libraries and Sample Code
+nav_order: 5
+description: "Client Libraries and Sample Code"
+permalink: /client-libraries
+---
 
-<span id="title-text"> Client Libraries and Sample Code </span>
-===============================================================
+Client Libraries and Sample Code
+================================
 
 
 The projects listed below are open source projects. Releases for these
@@ -188,5 +193,3 @@ We've already scheduled <a href="https://github.com/Labs64/NetLicensingClient-cp
 </tr>
 </tbody>
 </table>
-
-

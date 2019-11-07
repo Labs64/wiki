@@ -1,10 +1,13 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title: EU VAT Rules applicable since 2015
+nav_order: 4
+description: "EU VAT Rules applicable since 2015"
+permalink: /eu-vat-2015
+---
 
-<span id="title-text"> EU VAT Rules applicable since 2015 </span>
-=================================================================
-
-modified on 02-11-2019
+EU VAT Rules applicable since 2015
+==================================
 
 -   [General Info](#EUVATRulesapplicablesince2015-GeneralInfo)
 -   [Implementation

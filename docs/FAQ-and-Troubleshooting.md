@@ -1,8 +1,13 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+layout: default
+title: FAQ & Troubleshooting
+nav_order: 6
+description: "FAQ & Troubleshooting"
+permalink: /faq-troubleshooting
+---
 
-<span id="title-text"> FAQ & Troubleshooting </span>
-====================================================
+FAQ & Troubleshooting
+=====================
 
 modified on 10-01-2018
 
