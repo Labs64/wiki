@@ -25,9 +25,7 @@ below are some links you can begin with.
 
 -   **[NetLicensing Overview](netlicensing-overview)**
 -   **[Getting Started](Getting-Started_11010226.html)**
--   **[NetLicensing Object Model](NetLicensing-Object-Model_11010225.html)**
+-   **[NetLicensing Object Model](netlicensing-object-model)**
 -   **[Licensing Models](Licensing-Models_11010230.html)**
 -   **[NetLicensing API (RESTful)](11010215.html)**
 -   **<a href="https://netlicensing.io" class="external-link">NetLicensing Website</a>**
-
-

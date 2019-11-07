@@ -1,8 +1,14 @@
-1.  [NetLicensing Wiki](index.html)
-2.  [Home](Home_11010214.html)
+---
+parent: NetLicensing Wiki
+layout: default
+title: NetLicensing Object Model
+nav_order: 3
+description: "NetLicensing Object Model"
+permalink: /netlicensing-object-model
+---
 
-<span id="title-text"> NetLicensing Object Model </span>
-========================================================
+NetLicensing Object Model
+=========================
 
 modified on 24-09-2016
 
@@ -110,5 +116,3 @@ Attachments:
 <img src="assets/images/icons/bullet_blue.gif" width="8" height="8" />
 [NetLicensing-DomainObjects.png](attachments/11010225/10977322.png)
 (image/png)  
-
-
