@@ -1,23 +1,17 @@
 ---
 layout: default
-title:
+title: Setting up
 parent: Getting Started
 nav_order: 2
 description: ""
-permalink:
+permalink: setting-up
+image: /assets/images/11010226/NetLicensing-GettingStarted.png
 ---
+
+[Step 1: Planning](planning) &nbsp;&nbsp; **Step 2: Setting up** &nbsp;&nbsp; [Step 3: Integration](integration)
 
 Setting up
 ==========
-
-
-
-**[\<\<\< Step 1: Planning](Planning_11010227.html)**
-
-**[Step 3: Integration \>\>\>](Integration_11010229.html)**
-
-Step 2: Setting up
-------------------
 
 ### Configure the product in NetLicensing via NetLicensing Management Console
 
@@ -87,6 +81,4 @@ volume/price combinations)
     -   Do not check `"Hide Licenses"`, as you want licensee to see what
         time volume he has already purchased.
 
-**[\<\<\< Step 1: Planning](Planning_11010227.html)** 
-
-**[Step 3: Integration \>\>\>](Integration_11010229.html)**
+[Step 1: Planning](planning) &nbsp;&nbsp; **Step 2: Setting up** &nbsp;&nbsp; [Step 3: Integration](integration)

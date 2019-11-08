@@ -1,21 +1,17 @@
 ---
 layout: default
-title:
+title: Interation
 parent: Getting Started
 nav_order: 3
 description: ""
-permalink:
+permalink: integration
+image: /assets/images/11010226/NetLicensing-GettingStarted.png
 ---
+
+[Step 1: Planning](planning) &nbsp;&nbsp; [Step 2: Setting up](setting-up) &nbsp;&nbsp; **Step 3: Integration**
 
 Integration
 ===========
-
-**[\<\<\< Step 2: Setting up](Setting-up_11010228.html)**
-
- 
-
-Step 3: Integration
--------------------
 
 Integration of NetLicensing into your product has two aspects:
 
@@ -45,6 +41,5 @@ style="line-height: 1.4285715;"> service with
 Generate token service returns also the complete shop URL for
 convenience.</span>
 
-**[\<\<\< Step 2: Setting up](Setting-up_11010228.html)**
-
  
+[Step 1: Planning](planning) &nbsp;&nbsp; [Step 2: Setting up](setting-up) &nbsp;&nbsp; **Step 3: Integration**
