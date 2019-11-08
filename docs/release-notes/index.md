@@ -3,7 +3,7 @@ layout: default
 title: Release Notes
 nav_order: 140
 has_children: true
-has_toc: false
+has_toc: true
 description: "NetLicensing release notes"
 permalink: release-notes
 ---
