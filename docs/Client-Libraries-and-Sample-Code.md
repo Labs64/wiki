@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Client Libraries and Sample Code
+title: Client Libraries
 nav_order: 100
-description: "Client Libraries and Sample Code"
+description: "Labs64 NetLicensing client libraries and sample code"
 permalink: /client-libraries
 ---
 
@@ -17,7 +17,7 @@ requests, and the project's wiki to share your tips and tricks.
 
 Contributions to these projects are welcome: if you are interested in
 contributing, don't hesitate to contact us:
-<a href="http://netlicensing.io/contact" class="external-link">http://netlicensing.io/contact</a>.
+<a href="https://netlicensing.io/contact" class="external-link">https://netlicensing.io/contact</a>.
 
  
 
