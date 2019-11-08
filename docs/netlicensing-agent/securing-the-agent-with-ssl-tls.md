@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Securing the Agent with SSL/TLS
 parent: NetLicensing Agent
 nav_order: 99
-description: ""
-permalink:
+description: "Securing the Agent with SSL/TLS"
+permalink: securing-the-agent-with-ssl-tls
 ---
 
 Securing the Agent with SSL/TLS
-==============================================================
-
-
+===============================
 
 -   [Motivation](#SecuringtheAgentwithSSL/TLS-Motivation)
 -   [Apache HTTP](#SecuringtheAgentwithSSL/TLS-ApacheHTTP)

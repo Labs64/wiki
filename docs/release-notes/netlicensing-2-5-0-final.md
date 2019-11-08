@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.5.0-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 24
+description: "NetLicensing 2.5.0-FINAL"
+permalink: netlicensing-2-5-0-final
 ---
 
 Release Notes - NetLicensing 2.5.0-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * Early Access to NetLicensing / Zapier integration ( https://zapier.com/apps/netlicensing/integrations )

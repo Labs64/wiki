@@ -1,16 +1,15 @@
 ---
 layout: default
-title:
+title: Utility Services
 parent: Services
+grand_parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "Utility Services"
+permalink: utility-services
 ---
 
 Utility Services
-===============================================
-
-
+================
 
 -   [Licensing Models list](#UtilityServices-LicensingModelslist)
 -   [License Types list](#UtilityServices-LicenseTypeslist)

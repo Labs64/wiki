@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: PayPal
 parent: Payment Service Providers
 nav_order: 99
-description: ""
-permalink:
+description: "PayPal"
+permalink: paypal
 ---
 
 PayPal
-=====================================
-
-
+======
 
 <span class="aui-icon icon-success">Icon</span>
 

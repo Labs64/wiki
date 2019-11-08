@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Stripe
 parent: Payment Service Providers
 nav_order: 99
-description: ""
-permalink:
+description: "Stripe"
+permalink: stripe
 ---
 
 Stripe
-=====================================
-
-
+======
 
 <span class="aui-icon icon-success">Icon</span>
 

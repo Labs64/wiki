@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: Data Processing Agreement (DPA)
 parent: Privacy Center
 nav_order: 99
-description: ""
-permalink:
+description: "Data Processing Agreement (DPA)"
+permalink: data-processing-agreement-dpa
 ---
 
 Data Processing Agreement (DPA)
-==============================================================
-
+===============================
 
 NetLicensing offers a GDPR-compliant Data Processing Agreement (DPA),
 enabling you to comply with GDPR contractual obligations. This document

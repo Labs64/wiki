@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: Rental
 parent: Licensing Models
 nav_order: 99
-description: ""
-permalink:
+description: "Rental"
+permalink: rental
 ---
 
 Rental
-=====================================
-
+======
 
 This is a complex licensing model, useful in the case you want to
 license multiple instances of some feature, each instance for a certain

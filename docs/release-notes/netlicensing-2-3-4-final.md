@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.3.4-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 16
+description: "NetLicensing 2.3.4-FINAL"
+permalink: netlicensing-2-3-4-final
 ---
 
 Release Notes - NetLicensing 2.3.4-FINAL
-=======================================================================
-
-
+========================================
 
     ** Feature
         * [LMB-1175] - Enable licenseeSecret to prevent licensee number misuse

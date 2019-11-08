@@ -13,4 +13,4 @@ Details on Usage
 
 Here you will find instructions for specific procedures supported by NetLicensing
 
--   [Transferring licenses between licensees](Transferring-licenses-between-licensees_16416827.html)
+-   [Transferring licenses between licensees](transferring-licenses-between-licensees)

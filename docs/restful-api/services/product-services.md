@@ -1,16 +1,15 @@
 ---
 layout: default
-title:
+title: Product Services
 parent: Services
+grand_parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "Product Services"
+permalink: product-services
 ---
 
 Product Services
-===============================================
-
-
+================
 
 -   [Products list](#ProductServices-Productslist)
 -   [Get product](#ProductServices-Getproduct)

@@ -1,16 +1,15 @@
 ---
 layout: default
-title:
+title: Token Services
 parent: Services
+grand_parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "Token Services"
+permalink: token-services
 ---
 
 Token Services
-=============================================
-
-
+==============
 
 -   [Tokens list](#TokenServices-Tokenslist)
 -   [Get token](#TokenServices-Gettoken)

@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Floating
 nav_order: 99
 parent: Licensing Models
-description: ""
-permalink:
+description: "Floating"
+permalink: floating
 ---
 
 Floating
-=======================================
-
-
+========
 
 -   [Overview](#Floating-Overview)
 -   [License templates](#Floating-Licensetemplates)

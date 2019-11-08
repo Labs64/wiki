@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Preparing to work with smart card
 parent: NetLicensing Agent
 nav_order: 99
-description: ""
-permalink:
+description: "Preparing to work with smart card"
+permalink: preparing-to-work-with-smart-card
 ---
 
 Preparing to work with smart card
-================================================================
-
-
+=================================
 
 -   [General
     information](#Preparingtoworkwithsmartcard-Generalinformation)

@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: How to export licensee data
 parent: Privacy Center
 nav_order: 99
-description: ""
-permalink:
+description: "How to export licensee data"
+permalink: how-to-export-licensee-data
 ---
 
 How to export licensee data
-==========================================================
-
+===========================
 
 GDPR requires to offer your customers the ability to ask for a copy of
 their data for portability reasons. The data export should be in a

@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Custom Properties
 parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "Custom Properties"
+permalink: custom-properties
 ---
 
 Custom Properties
-================================================
-
-
+=================
 
 Custom properties allow you to add arbitrary additional information
 to NetLicensing entities. This can be useful to link with other

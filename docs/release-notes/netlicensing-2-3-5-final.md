@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.3.5-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 17
+description: "NetLicensing 2.3.5-FINAL"
+permalink: netlicensing-2-3-5-final
 ---
 
 Release Notes - NetLicensing 2.3.5-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * [LMB-1042] - Enable Licensing Model: "Pay-per-Use"

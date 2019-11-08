@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.0.0-RC2
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 7
+description: "NetLicensing 2.0.0-RC2"
+permalink: netlicensing-2-0-0-rc2
 ---
 
 Release Notes - NetLicensing 2.0.0-RC2
-=====================================================================
-
-
+======================================
 
     ** Feature
         * [LMB-490] - Send activation and registration confirmation email during vendor registration

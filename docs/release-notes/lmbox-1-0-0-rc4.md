@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: LmBox 1.0.0-RC4
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 4
+description: "LmBox 1.0.0-RC4"
+permalink: lmbox-1-0-0-rc4
 ---
 
 Release Notes - LmBox 1.0.0-RC4
-==============================================================
-
+===============================
 
     ** Feature
         * [LMB-77] - Propose sample data creation after user registration

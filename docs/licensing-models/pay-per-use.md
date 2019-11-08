@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Pay-per-Use
 parent: Licensing Models
 nav_order: 99
-description: ""
-permalink:
+description: "Pay-per-Use"
+permalink: pay-per-use
 ---
 
 Pay-per-Use
-==========================================
-
-
+===========
 
 -   [Overview](#Pay-per-Use-Overview)
 -   [License Templates](#Pay-per-Use-LicenseTemplates)

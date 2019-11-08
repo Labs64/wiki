@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Security
 parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "Security"
+permalink: security
 ---
 
 Security
-=======================================
-
-
+========
 
 Basic Authentication
 --------------------

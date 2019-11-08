@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.3.0-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 12
+description: "NetLicensing 2.3.0-FINAL"
+permalink: netlicensing-2-3-0-final
 ---
 
 Release Notes - NetLicensing 2.3.0-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * [LMB-624] - New Licensing Model: "Multi-Feature"

@@ -3,7 +3,7 @@ layout: default
 title: Object Model
 nav_order: 30
 description: "NetLicensing Object Model"
-permalink: /object-model
+permalink: object-model
 ---
 
 NetLicensing Object Model

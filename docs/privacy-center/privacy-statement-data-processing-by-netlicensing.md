@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: "Privacy statement: Data processing by NetLicensing"
 parent: Privacy Center
 nav_order: 99
-description: ""
-permalink:
+description: "Privacy statement: Data processing by NetLicensing"
+permalink: privacy-statement-data-processing-by-netlicensing
 ---
 
 Privacy statement: Data processing by NetLicensing
-=================================================================================
-
+==================================================
 
 We encourage you to consider updating your privacy policy to include
 statement that specifically identifies NetLicensing as one of your

@@ -1,14 +1,14 @@
 ---
 layout: default
-title:
+title: Subscription
 parent: Licensing Models
 nav_order: 99
-description: ""
-permalink:
+description: "Subscription"
+permalink: subscription
 ---
 
 Subscription
-===========================================
+============
 
 
 **Subscription** licensing model reflects a typical subscription
@@ -16,7 +16,7 @@ scenario, where the use is permitted for a certain period of calendar
 time and can be extended on demand. Optional free license may be
 configured that will be automatically provided to all new licensees for
 evaluation purposes. Validation shows if the use is permitted for a
-[licensee](NetLicensing-Object-Model_11010225.html) at the time of
+[licensee](object-model) at the time of
 validation, and the date when the cumulative licensed period for all
 purchased licenses expires.
 
@@ -44,7 +44,7 @@ templates](NetLicensing-Object-Model_11010225.html):
 -   Integer **timeVolume** - specifies the licensed time period in days.
 
 Required additional properties specific to the TIMEVOLUME
-[licenses](NetLicensing-Object-Model_11010225.html):
+[licenses](object-model):
 
 -   Integer **timeVolume** - specifies the licensed time period in days.
     Normally it is copied from the corresponding license template, but

@@ -1,35 +1,34 @@
 ---
 layout: default
-title:
+title: Transferring licenses between licensees
 parent: Details on Usage
 nav_order: 99
-description: ""
-permalink:
+description: "Transferring licenses between licensees"
+permalink: transferring-licenses-between-licensees
 ---
 
 Transferring licenses between licensees
-======================================================================
-
+=======================================
 
 
 Motivation
-==========
+----------
 
-In NetLicensing, [licenses](NetLicensing-Object-Model_11010225.html) are
-bound to the [licensee](NetLicensing-Object-Model_11010225.html) via
+In NetLicensing, [licenses](object-model) are
+bound to the [licensee](object-model) via
 *licensee number* - unique identifier for the licensee. When
 NetLicensing used with external eCommerce system, it is often not
 possible to pass existing *licensee number* to a shopping session, so
 that newly purchased licenses are bound to already existing licensee.
 This makes it difficult to use external eCommerce together with
-[licensing models](Licensing-Models_11010230.html) requiring licenses
-renewal or extension, such as [Subscription](Subscription_11010234.html)
-or [Pay-per-Use](Pay-per-Use_11010233.html). To overcome this problem,
+[licensing models](licensing-models) requiring licenses
+renewal or extension, such as [Subscription](subscription)
+or [Pay-per-Use](pay-per-use). To overcome this problem,
 NetLicensing allows to bind renewal / extension licenses to a temporary
 licensee, and transfer these licenses to the target licensee later on.
 
 Workflow
-========
+--------
 
 In the following workflow we will use the term *licensee number* when
 referring to NetLicensing and *license key* when referring to an
@@ -56,10 +55,10 @@ And here's how the software will use the *license key* that customer
 received from eCommerce:
 
 1.  Obtain the *license key* from the user
-2.  Call [transfer](Licensee-Services_11010217.html) method for own
+2.  Call [transfer](licensee-services) method for own
     *licensee number*, passing the received *license key* as source
     *licensee number*
-3.  [Validate](Licensee-Services_11010217.html) as usual for own
+3.  [Validate](licensee-services) as usual for own
     *licensee number*
 
 Above workflow assumes that own *licensee number* already exists,
@@ -67,7 +66,7 @@ naturally, *license key* received from eCommerce for the first time can
 as well be assigned as own *licensee number*.
 
 API Example
-===========
+-----------
 
 Following example calls assume the product and target licensee already
 configured with the following numbers:

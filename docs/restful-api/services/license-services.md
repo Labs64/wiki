@@ -1,16 +1,15 @@
 ---
 layout: default
-title:
+title: License Services
 parent: Services
+grand_parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "License Services"
+permalink: license-services
 ---
 
 License Services
-===============================================
-
-
+================
 
 -   [Licenses list](#LicenseServices-Licenseslist)
 -   [Get license](#LicenseServices-Getlicense)

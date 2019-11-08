@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: LmBox 1.0.0-RC2
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 2
+description: "LmBox 1.0.0-RC2"
+permalink: lmbox-1-0-0-rc2
 ---
 
 Release Notes - LmBox 1.0.0-RC2
-==============================================================
-
+===============================
 
     ** Feature
         * [LMB-161] - Implement volume discount system

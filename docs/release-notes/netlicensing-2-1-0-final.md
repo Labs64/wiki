@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.1.0-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 10
+description: "NetLicensing 2.1.0-FINAL"
+permalink: netlicensing-2-1-0-final
 ---
 
 Release Notes - NetLicensing 2.1.0-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * [LMB-626] - Rename NetLicensing Licensing Models (Try & Buy, Subscription, Rental)

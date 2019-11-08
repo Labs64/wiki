@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.0.0-RC1
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 6
+description: "NetLicensing 2.0.0-RC1"
+permalink: netlicensing-2-0-0-rc1
 ---
 
 Release Notes - NetLicensing 2.0.0-RC1
-=====================================================================
-
-
+======================================
 
     ** Feature
         * [LMB-258] - Send order confirmation after successful shop transaction

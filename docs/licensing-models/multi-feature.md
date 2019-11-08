@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: Multi-Feature
 parent: Licensing Models
 nav_order: 99
-description: ""
-permalink:
+description: "Multi-Feature"
+permalink: multi-feature
 ---
 
 Multi-Feature
-============================================
-
+=============
 
 **Multi-Feature** licensing model is designed to make the product
 adjustable to the specific needs of different individual users. Certain

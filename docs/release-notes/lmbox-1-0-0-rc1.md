@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: LmBox 1.0.0-RC1
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 1
+description: "LmBox 1.0.0-RC1"
+permalink: lmbox-1-0-0-rc1
 ---
 
 Release Notes - LmBox 1.0.0-RC1
-==============================================================
-
+===============================
 
     ** Feature
         * [LMB-26] - Refactor Object Model

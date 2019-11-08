@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Node-Locked
 parent: Licensing Models
 nav_order: 99
-description: ""
-permalink:
+description: "Node-Locked"
+permalink: node-locked
 ---
 
 Node-Locked
-==========================================
-
-
+===========
 
 -   [Overview](#Node-Locked-Overview)
 -   [License Templates](#Node-Locked-LicenseTemplates)

@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: How to maintain vendor account data
 parent: Privacy Center
 nav_order: 99
-description: ""
-permalink:
+description: "How to maintain vendor account data"
+permalink: how-to-maintain-vendor-account-data
 ---
 
 How to maintain vendor account data
-==================================================================
-
+===================================
 
 You must inform your customers about the terms and privacy policy
 applicable to your products and services before they proceed with the

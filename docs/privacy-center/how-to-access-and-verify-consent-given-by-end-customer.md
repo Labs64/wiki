@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: How to access and verify consent given by end-customer
 parent: Privacy Center
 nav_order: 99
-description: ""
-permalink:
+description: "How to access and verify consent given by end-customer"
+permalink: how-to-access-and-verify-consent-given-by-end-customer
 ---
 
 How to access and verify consent given by end-customer
-=====================================================================================
-
+=============================================================
 
 To keep proof of customers' consent is mandatory with the new GDPR
 rules.

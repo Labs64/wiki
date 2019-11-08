@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.4.0-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 22
+description: "NetLicensing 2.4.0-FINAL"
+permalink: netlicensing-2-4-0-final
 ---
 
 Release Notes - NetLicensing 2.4.0-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * [NLIC-623] - Support multiple APIKeys with different roles

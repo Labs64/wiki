@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.3.8-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 20
+description: "NetLicensing 2.3.8-FINAL"
+permalink: netlicensing-2-3-8-final
 ---
 
 Release Notes - NetLicensing 2.3.8-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * [NLIC-1173] - Permanent NetLicensing Shop token

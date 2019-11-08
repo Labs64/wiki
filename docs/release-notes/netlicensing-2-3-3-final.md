@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.3.3-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 15
+description: "NetLicensing 2.3.3-FINAL"
+permalink: netlicensing-2-3-3-final
 ---
 
 Release Notes - NetLicensing 2.3.3-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * [LMB-906] - NetLicensing / Fastspring integration

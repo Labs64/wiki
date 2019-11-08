@@ -1,16 +1,15 @@
 ---
 layout: default
-title:
+title: License Template Services
 parent: Services
+grand_parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "License Template Services"
+permalink: license-template-services
 ---
 
 License Template Services
-========================================================
-
-
+=========================
 
 -   [License templates
     list](#LicenseTemplateServices-Licensetemplateslist)

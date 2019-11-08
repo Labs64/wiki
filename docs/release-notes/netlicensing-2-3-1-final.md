@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.3.1-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 13
+description: "NetLicensing 2.3.1-FINAL"
+permalink: netlicensing-2-3-1-final
 ---
 
 Release Notes - NetLicensing 2.3.1-FINAL
-=======================================================================
-
+========================================
 
     ** Improvement
         * [LMB-1084] - "Generate new key" overrides old APIKey

@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.0.2-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 9
+description: "NetLicensing 2.0.2-FINAL"
+permalink: netlicensing-2-0-2-final
 ---
 
 Release Notes - NetLicensing 2.0.2-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * [LMB-592] - Allow navigation to shop from licensee column of licenses list

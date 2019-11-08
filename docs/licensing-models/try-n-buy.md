@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: Try & Buy
 parent: Licensing Models
 nav_order: 99
-description: ""
-permalink:
+description: "Try & Buy"
+permalink: try-n-buy
 ---
 
 Try & Buy
-========================================
-
+=========
 
 **Try & Buy** licensing model reflects a very common scenario when a
 product is first provided free of charge in demo or evaluation mode for

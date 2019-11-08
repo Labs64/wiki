@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: LmBox 1.0.0-Final
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 5
+description: "LmBox 1.0.0-Final"
+permalink: lmbox-1-0-0-final
 ---
 
 Release Notes - LmBox 1.0.0-Final
-================================================================
-
+=================================
 
     ** Feature
         * [LMB-35] - LmBoxManage: Enable deletion for entities

@@ -1,16 +1,15 @@
 ---
 layout: default
-title:
+title: Transaction Services
 parent: Services
+grand_parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "Transaction Services"
+permalink: transaction-services
 ---
 
 Transaction Services
-===================================================
-
-
+====================
 
 -   [Transactions list](#TransactionServices-Transactionslist)
 -   [Get transaction](#TransactionServices-Gettransaction)

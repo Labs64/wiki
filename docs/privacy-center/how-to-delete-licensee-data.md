@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: How to delete licensee data
 parent: Privacy Center
 nav_order: 99
-description: ""
-permalink:
+description: "How to delete licensee data"
+permalink: how-to-delete-licensee-data
 ---
 
 How to delete licensee data
-==========================================================
-
+===========================
 
 GDPR requires you to delete customers' data on their request.
 

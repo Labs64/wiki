@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: LmBox 1.0.0-RC3
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 3
+description: "LmBox 1.0.0-RC3"
+permalink: lmbox-1-0-0-rc3
 ---
 
 Release Notes - LmBox 1.0.0-RC3
-==============================================================
-
+===============================
 
     ** Feature
         * [LMB-212] - Add filter controls to UI

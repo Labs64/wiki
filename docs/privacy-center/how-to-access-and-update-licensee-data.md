@@ -1,10 +1,10 @@
 ---
 layout: default
-title:
+title: How to access and update licensee data
 parent: Privacy Center
 nav_order: 99
-description: ""
-permalink:
+description: "How to access and update licensee data"
+permalink: how-to-access-and-update-licensee-data
 ---
 
 How to access and update licensee data

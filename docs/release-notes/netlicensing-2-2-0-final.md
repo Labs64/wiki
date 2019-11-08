@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.2.0-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 11
+description: "NetLicensing 2.2.0-FINAL"
+permalink: netlicensing-2-2-0-final
 ---
 
 Release Notes - NetLicensing 2.2.0-FINAL
-=======================================================================
-
-
+========================================
 
     ** Feature
         * [LMB-659] - Floating Licensing Model

@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.4.1-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 23
+description: "NetLicensing 2.4.1-FINAL"
+permalink: netlicensing-2-4-1-final
 ---
 
 Release Notes - NetLicensing 2.4.1-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * [NLIC-1734] - Vendor usage limits notification & improved account settings

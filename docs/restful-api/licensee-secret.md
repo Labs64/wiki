@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Licensee Secret (deprecated)
 parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "Licensee Secret (deprecated)"
+permalink: licensee-secret
 ---
 
 Licensee Secret (deprecated)
-===========================================================
-
-
+============================
 
 -   [Introduction](#LicenseeSecret(deprecated)-Introduction)
 -   [Validation flow](#LicenseeSecret(deprecated)-Validationflow)

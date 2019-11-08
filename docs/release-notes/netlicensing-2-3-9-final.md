@@ -1,15 +1,14 @@
 ---
 layout: default
-title:
+title: NetLicensing 2.3.9-FINAL
 parent: Release Notes
-nav_order: 99
-description: ""
-permalink:
+nav_order: 21
+description: "NetLicensing 2.3.9-FINAL"
+permalink: netlicensing-2-3-9-final
 ---
 
 Release Notes - NetLicensing 2.3.9-FINAL
-=======================================================================
-
+========================================
 
     ** Feature
         * [NLIC-240] - NetLicensing Guided Tour (In-App features)

@@ -1,16 +1,14 @@
 ---
 layout: default
-title:
+title: Quota
 parent: Licensing Models
 nav_order: 99
-description: ""
-permalink:
+description: "Quota"
+permalink: quota
 ---
 
 Quota
-====================================
-
-
+=====
 
 -   [Overview](#Quota-Overview)
 -   [License templates](#Quota-Licensetemplates)

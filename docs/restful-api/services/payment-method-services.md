@@ -1,16 +1,15 @@
 ---
 layout: default
-title:
+title: Payment Method Services
 parent: Services
+grand_parent: NetLicensing API (RESTful)
 nav_order: 99
-description: ""
-permalink:
+description: "Payment Method Services"
+permalink: payment-method-services
 ---
 
 Payment Method Services
-======================================================
-
-
+=======================
 
 -   [Payment methods list](#PaymentMethodServices-Paymentmethodslist)
 -   [Get payment method](#PaymentMethodServices-Getpaymentmethod)
