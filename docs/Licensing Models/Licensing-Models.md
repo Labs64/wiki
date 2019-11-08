@@ -3,7 +3,7 @@ layout: default
 title: Licensing Models
 has_children: true
 nav_order: 40
-description: ""
+description: "Licensing Models supported by NetLicensing as well as the combinations that can be adopted by NetLicensing"
 permalink:
 ---
 
@@ -276,7 +276,7 @@ NetLicensing.
 <td> </td>
 <td><p>With NetLicensing, you can create complex licensing models that fit your business needs.</p></td>
 <td><p><img src="assets/images/icons/emoticons/help_16.png" alt="(question)" class="emoticon emoticon-question" /></p>
-<p><a href="http://netlicensing.io/contact/" class="external-link">CONTACT US!</a></p></td>
+<p><a href="https://netlicensing.io/contact/" class="external-link">CONTACT US!</a></p></td>
 </tr>
 </tbody>
 </table>
