@@ -9,8 +9,6 @@ permalink: /faq
 FAQ & Troubleshooting
 =====================
 
-
-
 -   [FAQ](#FAQ&Troubleshooting-FAQ)
     -   [What is the amount upper limit on a single PayPal
         transaction?](#FAQ&Troubleshooting-WhatistheamountupperlimitonasinglePayPaltransaction?)
