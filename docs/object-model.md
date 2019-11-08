@@ -1,9 +1,9 @@
 ---
 layout: default
-title: NetLicensing Object Model
+title: Object Model
 nav_order: 30
 description: "NetLicensing Object Model"
-permalink: /netlicensing-object-model
+permalink: /object-model
 ---
 
 NetLicensing Object Model
