@@ -3,13 +3,12 @@ layout: default
 title: Privacy Center
 nav_order: 130
 has_children: true
-description: ""
-permalink:
+description: "NetLicensing is excited about the GDPR and the strong data privacy and security principles that it emphasizes"
+permalink: privacy-center
 ---
 
 Privacy Center
 ==============
-
 
 -   [What is the GDPR?](#PrivacyCenter-WhatistheGDPR?)
     -   [Who does it affect?](#PrivacyCenter-Whodoesitaffect?)
@@ -331,11 +330,7 @@ GDPR efforts mentioned above.
 -   [How to maintain vendor account
     data](How-to-maintain-vendor-account-data_17433043.html)
 
- 
-
 ------------------------------------------------------------------------
-
- 
 
 <span class="aui-icon icon-hint">Icon</span>
 
