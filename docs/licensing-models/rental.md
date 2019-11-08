@@ -45,7 +45,7 @@ template
 \[<img src="assets/images/11010232/10977327.png" class="confluence-embedded-image" width="18" height="25" />\].
 More TIMEVOLUME license templates can be created as necessary for
 different time periods. TIMEVOLUME [license
-templates](NetLicensing-Object-Model_11010225.html) need additional
+templates](object-model) need additional
 property:
 
 -   **timeVolume** - amount of days licensed.
@@ -55,7 +55,7 @@ least one license from the FEATURE license template already exists,
 because every TIMEVOLUME license must be linked to a feature
 (represented by the FEATURE license).
 
-Every [license](NetLicensing-Object-Model_11010225.html) that is created
+Every [license](object-model) that is created
 from a TIMEVOLUME license template gets automatically a copy of the
 timeVolume property from the license template. In addition to the
 timeVolume property and the standard license properties it must have the
@@ -150,7 +150,7 @@ Let's assume now a customer with the [id number](Glossary_11010236.html)
 "DEV-341", "DEV-342" and "DEV-343".
 
 First of all, if this is a new customer, corresponding
-[Licensee](NetLicensing-Object-Model_11010225.html) object must be
+[Licensee](object-model) object must be
 created within NetLicensing, holding the above customer number -
 "CUST-4567".  
 This can be done either manually via

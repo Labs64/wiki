@@ -16,14 +16,14 @@ Planning
 ### Elaborate the licensing scheme for your product
 
 1.  Determine the layout of your
-    [product](NetLicensing-Object-Model_11010225.html):
-    -   how many [modules](NetLicensing-Object-Model_11010225.html) are
+    [product](object-model):
+    -   how many [modules](object-model) are
         in your product that should be licensed independently?
     -   choose the [licensing
-        model](NetLicensing-Object-Model_11010225.html) for each module.
+        model](object-model) for each module.
 2.  Determine the possible licenses and their parameters for each
     product module. This must correspond to the chosen licensing model -
-    see the [Licensing Models](Licensing-Models_11010230.html) for
+    see the [Licensing Models](licensing-models) for
     details.
 
 #### Product and Product Module
@@ -31,7 +31,7 @@ Planning
 NetLicensing uses a generalized representation for any product. In order
 to integrate your product with NetLicensing, you'll need to find out how
 to map your product on [NetLicensing Object
-Model](NetLicensing-Object-Model_11010225.html).  
+Model](object-model).  
 Fortunately, the product in the NetLicensing object model is very
 simple: every product consists of one or more product modules, each
 product module is licensed according to its licensing model.

@@ -70,7 +70,7 @@ NetLicensing.
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="Rental_11010232.html">Rental</a></p></td>
+<td><p><a href="rental">Rental</a></p></td>
 <td><ul>
 <li>Leasing</li>
 <li>Feature with TimeVolume</li>

@@ -29,7 +29,7 @@ If you do not have one already, signup
 <tr class="header">
 <th>Endpoint</th>
 <th>Allowed operations</th>
-<th>Supported authentication method <a href="Security_14942718.html">(?)</a></th>
+<th>Supported authentication method <a href="security">(?)</a></th>
 </tr>
 </thead>
 <tbody>

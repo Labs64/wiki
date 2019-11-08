@@ -453,7 +453,7 @@ productModuleNumber&lt;N&gt; (string)</em> - product module N number<br />
 <ul>
 <li>&lt;N&gt; is 0-based decimal number incremented for every product module that receives parameters.</li>
 <li>Order of product modules is not important.</li>
-<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="Licensing-Models_11010230.html">licensing model</a>.</li>
+<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="licensing-models">licensing model</a>.</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -613,7 +613,7 @@ productModuleNumber&lt;N&gt; (string)</em> - product module N number<br />
 <ul>
 <li>&lt;N&gt; is 0-based decimal number incremented for every product module that receives parameters.</li>
 <li>Order of product modules is not important.</li>
-<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="Licensing-Models_11010230.html">licensing model</a>.</li>
+<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="licensing-models">licensing model</a>.</li>
 </ul></td>
 </tr>
 <tr class="odd">

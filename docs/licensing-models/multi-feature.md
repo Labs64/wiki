@@ -18,13 +18,13 @@ delivery its core purpose, but all of the other features are paid for
 individually. Using this licensing model it is possible to create an
 upgrade path from a “lite” version to “standard,” “pro,” “enterprise”
 etc. NetLicensing Validation shows what features are valid (permitted)
-for the [licensee](NetLicensing-Object-Model_11010225.html) at the time
+for the [licensee](object-model) at the time
 of validation.
 
 To enable certain product feature, licensee acquires an appropriate
-[license](NetLicensing-Object-Model_11010225.html). Accordingly,
+[license](object-model). Accordingly,
 Multi-Feature licensing model must be configured with one or more
-[license templates](NetLicensing-Object-Model_11010225.html) of type
+[license templates](object-model) of type
 FEATURE. The entity **number** of each license template serves also as
 an identifier of the corresponding feature and is made available for
 processing in the validation result. License template **name** field

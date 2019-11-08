@@ -46,7 +46,7 @@ independent of each other in terms of license management.
 
 Product may comprise of multiple modules, but must have at least one.
 Each module is licensed using one of the [Licensing
-Models](Licensing-Models_11010230.html) offered by NetLicensing service.
+Models](licensing-models) offered by NetLicensing service.
 Licensing within a module is independent of other modules, however all
 modules belonging to a product are visible to every licensee of the
 product.
@@ -60,13 +60,13 @@ licensee, specifying what is an item, its price, amount (if applicable),
 etc. Actual licenses created off these templates are then given to
 licensees.
 
-[Licensing Model](Licensing-Models_11010230.html)
+[Licensing Model](licensing-models)
 -------------------------------------------------
 
 Licensing model is a set of rules and algorithms that define how to
 process the licenses obtained by a licensee. A number of licensing
 models is supported by NetLicensing service, refer to the [licensing
-models documentation](Licensing-Models_11010230.html) for details.
+models documentation](licensing-models) for details.
 
 <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/domain/entity/License.html" class="external-link">License</a>
 ------------------------------------------------------------------------------------------------------------------------------------

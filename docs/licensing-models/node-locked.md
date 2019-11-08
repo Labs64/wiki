@@ -48,7 +48,7 @@ License Templates
 =================
 
 This licensing model requires one or more [license
-templates](NetLicensing-Object-Model_11010225.html) of type QUANTITY,
+templates](object-model) of type QUANTITY,
 each specifying the quantity of allowed node
 secrets (via **quota** property) and a purchase price. Multiple license
 templates allow to configure discounts, e.g.:

@@ -15,7 +15,7 @@ How to access and update licensee data
 the data subjects is usually </span><span class="passivevoice">being
 stored</span><span class="veryhardreadability"> in the *Licensee*,
 *License* and *Transaction* entities (please refer to the [NetLicensing
-Object Model](NetLicensing-Object-Model_11010225.html) for more info on
+Object Model](object-model) for more info on
 the entities relationship)</span>.
 
 You can always access the data stored in those entities using following

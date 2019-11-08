@@ -39,7 +39,7 @@ extends the total time volume after expiration date, regardless of exact
 purchase date.
 
 Required additional properties specific to the TIMEVOLUME [license
-templates](NetLicensing-Object-Model_11010225.html):
+templates](object-model):
 
 -   Integer **timeVolume** - specifies the licensed time period in days.
 

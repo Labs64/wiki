@@ -228,7 +228,7 @@ licenseeNumber (string) - Only for tokenType=SHOP; identifies licensee that will
 <p>successURLTitle (string) - Shop link title for successful checkout process.</p>
 <p>cancelURL (URI) - Take customers to this URL when they cancel their checkout.</p>
 <p>cancelURLTitle (string) - Shop link title for cancel checkout process.</p>
-<p>apiKeyRole (string) - RoleID (see <a href="Security_14942718.html">Security</a>). Only for tokenType=APIKEY.</p></td>
+<p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>

@@ -25,7 +25,7 @@ Setting up
 ### Configuration example
 
 *Licensing model:
-["](Rental_11010232.html)[Rental](Rental_11010232.html)["](Rental_11010232.html)*
+["](rental)[Rental](rental)["](rental)*
 
 1\. Create an account with NetLicensing
 

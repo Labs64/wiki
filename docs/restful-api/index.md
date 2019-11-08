@@ -30,7 +30,7 @@ Getting started
 
 Since NetLicensing API (RESTful) is based on open standards, you can use
 any web development language to access the API; there are also lots of
-pre-built [libraries](Client-Libraries-and-Sample-Code_11010246.html)
+pre-built [libraries](client-libraries)
 for interacting with NetLicensing.
 
 Services
