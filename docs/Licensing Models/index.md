@@ -4,7 +4,7 @@ title: Licensing Models
 has_children: true
 nav_order: 40
 description: "Licensing Models supported by NetLicensing as well as the combinations that can be adopted by NetLicensing"
-permalink:
+permalink: licensing-models
 ---
 
 Licensing Models
