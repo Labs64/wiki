@@ -3,14 +3,12 @@ layout: default
 title: NetLicensing API (RESTful)
 nav_order: 50
 has_children: true
-description: ""
-permalink:
+description: "NetLicensing RESTful API is for developers integrating NetLicensing with applications and administrators who want to script interactions with the NetLicensing server"
+permalink: restful-api
 ---
 
 NetLicensing API (RESTful)
 ==========================
-
-
 
 This is the reference documentation for the RESTful API provided by
 NetLicensing. The NetLicensing API (RESTful) is for developers
