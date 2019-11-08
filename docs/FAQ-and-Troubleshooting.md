@@ -1,7 +1,7 @@
 ---
 layout: default
 title: FAQ & Troubleshooting
-nav_order: 6
+nav_order: 110
 description: "FAQ & Troubleshooting"
 permalink: /faq-troubleshooting
 ---

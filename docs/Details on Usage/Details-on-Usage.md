@@ -2,7 +2,7 @@
 layout: default
 title: Details on Usage
 has_children: true
-nav_order: 99
+nav_order: 80
 description: ""
 permalink:
 ---

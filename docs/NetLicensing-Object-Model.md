@@ -1,7 +1,7 @@
 ---
 layout: default
 title: NetLicensing Object Model
-nav_order: 3
+nav_order: 30
 description: "NetLicensing Object Model"
 permalink: /netlicensing-object-model
 ---

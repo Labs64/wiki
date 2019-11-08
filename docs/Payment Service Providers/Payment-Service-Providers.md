@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Payment Service Providers
-nav_order: 99
+nav_order: 60
 has_children: true
 description: ""
 permalink:

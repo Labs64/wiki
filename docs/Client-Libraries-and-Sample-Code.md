@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Client Libraries and Sample Code
-nav_order: 5
+nav_order: 100
 description: "Client Libraries and Sample Code"
 permalink: /client-libraries
 ---

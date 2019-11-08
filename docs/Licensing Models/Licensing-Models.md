@@ -2,7 +2,7 @@
 layout: default
 title: Licensing Models
 has_children: true
-nav_order: 99
+nav_order: 40
 description: ""
 permalink:
 ---
