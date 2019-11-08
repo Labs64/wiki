@@ -3,8 +3,8 @@ layout: default
 title: Release Notes
 nav_order: 140
 has_children: true
-description: ""
-permalink:
+description: "NetLicensing release notes"
+permalink: release-notes
 ---
 
 Release Notes
