@@ -27,7 +27,7 @@ NetLicensing Object Model
     <area target="" alt="Licensee" title="Licensee" href="#licensee" coords="337,430,425,498" shape="rect">
     <area target="" alt="License" title="License" href="#license" coords="633,430,721,498" shape="rect">
     <area target="" alt="Transaction" title="Transaction" href="#transaction" coords="26,282,115,350" shape="rect">
-    <area target="" alt="Licensing Model" title="Licensing Model" href="licensing-model" coords="337,36,425,103" shape="rect">
+    <area target="" alt="Licensing Model" title="Licensing Model" href="#licensing-model" coords="337,36,425,103" shape="rect">
 </map>
 
 Vendor
