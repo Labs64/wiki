@@ -1,6 +1,7 @@
 ---
 layout: default
 title:
+parent: NetLicensing API (RESTful)
 nav_order: 99
 description: ""
 permalink:

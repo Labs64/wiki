@@ -1,6 +1,6 @@
 ---
 layout: default
-title:
+title: Privacy Center
 nav_order: 99
 has_children: true
 description: ""
@@ -8,7 +8,7 @@ permalink:
 ---
 
 Privacy Center
-=============================================
+==============
 
 
 -   [What is the GDPR?](#PrivacyCenter-WhatistheGDPR?)

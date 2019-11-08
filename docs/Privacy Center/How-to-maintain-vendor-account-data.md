@@ -1,6 +1,7 @@
 ---
 layout: default
 title:
+parent: Privacy Center
 nav_order: 99
 description: ""
 permalink:
