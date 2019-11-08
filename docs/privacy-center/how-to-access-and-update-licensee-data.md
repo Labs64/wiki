@@ -54,18 +54,18 @@ systems, such as CRM, ERP.
 Please refer to the documentation for the LIST, GET and UPDATE
 operations of the corresponding service:
 
--   [Licensee Services](Licensee-Services_11010217.html) - to access and
+-   [Licensee Services](licensee-services) - to access and
     modify the *Licensee* entities
--   [License Services](License-Services_11010220.html) - to access and
+-   [License Services](license-services) - to access and
     modify the *License* entities
--   [Transaction Services](Transaction-Services_11010218.html) - to
+-   [Transaction Services](transaction-services) - to
     access and modify the *Transaction* entities
 
 Tips
 ----
 
 -   NetLicensing entities model support [Custom
-    Properties](Custom-Properties_14058002.html), which can be used to
+    Properties](custom-properties), which can be used to
     store any licensing relevant information. We encourage you to design
     the data model with the data privacy in mind and also following
     separation of concern principles. So, for instance, you might store
@@ -78,5 +78,5 @@ Tips
     needed in the context of the NetLicesning license management.
 -   Assess the customers' data stored in your NetLicensing vendor
     account regularly and
-    [delete](How-to-delete-licensee-data_17433029.html) this data
+    [delete](how-to-delete-licensee-data) this data
     whenever this is not needed for your business anymore.

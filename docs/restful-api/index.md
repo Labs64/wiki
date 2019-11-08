@@ -141,7 +141,7 @@ host name - `netlicensing.labs64.com.`
 standard https port 443.
 
 `<resource>` - represents named resource (e.g. product, license etc.),
-you'll find the resource name on the [wiki page](Services_14942714.html)
+you'll find the resource name on the [wiki page](services)
 describing corresponding resource
 
 `<query>` - parameters passed with the request (see below)
@@ -223,7 +223,7 @@ Custom properties
 Besides standard properties defined for each entity type (see
 <a href="https://go.netlicensing.io/javadoc/v2/index.html" class="external-link">JavaDoc</a>),
 arbitrary custom properties can be added to entities. See [Custom
-Properties](Custom-Properties_14058002.html) for details.
+Properties](custom-properties) for details.
 
 Links
 -----

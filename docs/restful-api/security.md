@@ -70,6 +70,6 @@ subset:
 | Admin              | ROLE\_APIKEY\_ADMIN       | Full access, same as login/password (with few exceptions)          | Can be used to grant (temporary) access, while keeping login/password undiscovered                                  |
 
 
-Check the [services documentation](Services_14942714.html) to determine
+Check the [services documentation](services) to determine
 which security mechanisms and roles are allowed for particular
 NetLicensing service.

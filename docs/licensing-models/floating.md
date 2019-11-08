@@ -81,13 +81,13 @@ Validation
 ==========
 
 On validation, this licensing model requires [validate
-parameters](Licensee-Services_11010217.html):
+parameters](licensee-services):
 
 -   **productModuleNumberN**=\<<span
     class="error">productModuleNumber\></span>
 -   **sessionIdN**=\<sessionId\>  
     \<sessionId\> is any string that identifies the session uniquely. It
-    is similar to the [licenseeNumber](Glossary_11010236.html)
+    is similar to the [licenseeNumber](glossary)
 -   **actionN**=\<action\>  
     \<action\> is one of:
     -   **checkOut** - check out a session and assign it an identifier

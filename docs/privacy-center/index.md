@@ -237,7 +237,7 @@ end-customers pursuant to their expanded individual rights under the
 GDPR.
 
 -   *Right to be forgotten*: You may [delete individual end-customers
-    data](How-to-delete-licensee-data_17433029.html) upon their request
+    data](how-to-delete-licensee-data) upon their request
     at any time. In addition, individual end-customers may contact
     NetLicensing directly to request deletion of their data from
     NetLicensing systems.
@@ -245,7 +245,7 @@ GDPR.
     end-customers’ data in our data science projects simply by
     contacting us via email below.
 -   *Right to rectification*: You may [access and update your licensees'
-    data](How-to-access-and-update-licensee-data_17433027.html) within
+    data](how-to-access-and-update-licensee-data) within
     your NetLicensing account to correct or complete stored information
     upon their request at any time. In addition, any data subject
     (including your end-customers) may contact NetLicensing directly to
@@ -259,7 +259,7 @@ GDPR.
     about them.
 -   *Right of portability*: You may [export any of stored licensees /
     licenses / transactional
-    data](How-to-export-licensee-data_17433031.html) as a list or
+    data](how-to-export-licensee-data) as a list or
     selected information within any list, at any time by accessing your
     NetLicensing account.
 
@@ -292,7 +292,7 @@ data from your end-customers.
     address, and timestamp associated with every end-customer who
     completes and submits the shopping cart, providing you with
     easy-to-access [proof of
-    consent](How-to-access-and-verify-consent-given-by-end-customer_17433045.html).
+    consent](how-to-access-and-verify-consent-given-by-end-customer).
 -   Keep in mind that any consent you obtain from your end-customers
     must comply with the GDPR requirements, irrespective of when that
     consent was obtained.
@@ -319,16 +319,11 @@ GDPR efforts mentioned above.
 
 -   [Privacy statement: Data processing by NetLicensing](17433024.html)
 -   [Data Processing Agreement (DPA)](17433057.html)
--   [How to access and update licensee
-    data](How-to-access-and-update-licensee-data_17433027.html)
--   [How to export licensee
-    data](How-to-export-licensee-data_17433031.html)
--   [How to delete licensee
-    data](How-to-delete-licensee-data_17433029.html)
--   [How to access and verify consent given by
-    end-customer](How-to-access-and-verify-consent-given-by-end-customer_17433045.html)
--   [How to maintain vendor account
-    data](How-to-maintain-vendor-account-data_17433043.html)
+-   [How to access and update licensee data](how-to-access-and-update-licensee-data)
+-   [How to export licensee data](how-to-export-licensee-data)
+-   [How to delete licensee data](How-to-delete-licensee-data)
+-   [How to access and verify consent given by end-customer](how-to-access-and-verify-consent-given-by-end-customer)
+-   [How to maintain vendor account data](how-to-maintain-vendor-account-data)
 
 ------------------------------------------------------------------------
 

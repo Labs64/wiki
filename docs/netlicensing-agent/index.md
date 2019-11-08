@@ -354,7 +354,7 @@ Requires smart card
 <span style="color: rgb(0,0,0);">If using smart card, be
 sure</span><span style="color: rgb(0,0,0);"> it</span><span
 style="color: rgb(0,0,0);"> is attached, see also [Preparing to work
-with smart card](Preparing-to-work-with-smart-card_17433126.html).
+with smart card](preparing-to-work-with-smart-card).
 I<span style="color: rgb(0,0,0);">f working without smart card,</span>
 use **`--without-card`** option.</span>
 
@@ -382,7 +382,7 @@ http://yourhost:8080/rest/...
 
 NetLicensing Agent will respond to the validation requests. Parameters
 have the same format as described in the [NetLicensing
-API](Licensee-Services_11010217.html).
+API](licensee-services).
 
 Security
 ========

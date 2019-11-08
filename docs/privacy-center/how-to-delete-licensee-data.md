@@ -63,9 +63,7 @@ Tips
 ----
 
 -   We recommend you to execute data deletion using two-step approach:
-    1.  Collect and verify all relevant (to be deleted) entities
-        identifiers as it is described
-        [here](How-to-export-licensee-data_17433031.html)
+    1.  Collect and verify all relevant (to be deleted) entities identifiers as it is described [here](how-to-export-licensee-data)
     2.  Delete data after careful verification of to be deleted entities
 
 <span class="aui-icon icon-problem">Icon</span>

@@ -145,7 +145,7 @@ configured for our example:
 
 Once license templates are configured, licensing model is ready for use.
 
-Let's assume now a customer with the [id number](Glossary_11010236.html)
+Let's assume now a customer with the [id number](glossary)
 "CUST-4567" orders 3 terminal devices identified by the numbers
 "DEV-341", "DEV-342" and "DEV-343".
 

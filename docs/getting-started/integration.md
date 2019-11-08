@@ -21,7 +21,7 @@ Implement calls to the NetLicensing API in your code. [NetLicensing API
 reference](11010215.html) and
 [examples](client-libraries) will help
 you. At minimum you need a call to the
-[validate](Licensee-Services_11010217.html#LicenseeServices-Validatelicensee)
+[validate](licensee-services#LicenseeServices-Validatelicensee)
 method of the licensee services.
 
 ### NetLicensing Shop

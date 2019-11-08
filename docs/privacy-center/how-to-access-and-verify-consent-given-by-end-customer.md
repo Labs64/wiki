@@ -21,9 +21,7 @@ service.
 NetLicensing provides a logging feature which records every consent
 given within corresponding *Transaction* entity.
 
-You can access this data either using [NetLicensing RESTful
-API](Transaction-Services_11010218.html) or via *NetLicensing Management
-Console*.
+You can access this data either using [NetLicensing RESTful API](transaction-services) or via *NetLicensing Management Console*.
 
 <img src="assets/images/17433045/17629258.png?effects=drop-shadow" title="Transaction - Proof of Concent" alt="Transaction - Proof of Concent" class="confluence-embedded-image" />
 
@@ -35,10 +33,10 @@ properties:
     this to your or customer's time zone in order to get exact consent
     timestamp
 -   *Consent Privacy Policy* - link to the Privacy Policy
-    [defined](How-to-maintain-vendor-account-data_17433043.html) in your
+    [defined](how-to-maintain-vendor-account-data) in your
     vendor profile
 -   *Consent Terms Of Service* - link to the Terms Of Service
-    [defined](How-to-maintain-vendor-account-data_17433043.html) in your
+    [defined](how-to-maintain-vendor-account-data) in your
     vendor profile
 
 Please Note

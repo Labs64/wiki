@@ -723,7 +723,7 @@ Transfer licenses between licensees.
     be assigned to the same product</span>
 -   <span class="s1">Source </span>licensee must be marked for transfer
     (licensee [custom
-    property](Custom-Properties_14058002.html) *markedForTransfer *must
+    property](custom-properties) *markedForTransfer *must
     be set to '*true*')
 
 <span class="s1">  
