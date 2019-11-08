@@ -3,6 +3,7 @@ layout: default
 title: Privacy Center
 nav_order: 130
 has_children: true
+has_toc: false
 description: "NetLicensing is excited about the GDPR and the strong data privacy and security principles that it emphasizes"
 permalink: privacy-center
 ---
@@ -317,17 +318,15 @@ Detailed Instructions
 Please refer to the detailed instructions, which will help you address
 GDPR efforts mentioned above.
 
--   [Privacy statement: Data processing by NetLicensing](17433024.html)
--   [Data Processing Agreement (DPA)](17433057.html)
+-   [Privacy statement: Data processing by NetLicensing](privacy-statement-data-processing-by-netlicensing)
+-   [Data Processing Agreement (DPA)](data-processing-agreement-dpa)
 -   [How to access and update licensee data](how-to-access-and-update-licensee-data)
 -   [How to export licensee data](how-to-export-licensee-data)
--   [How to delete licensee data](How-to-delete-licensee-data)
+-   [How to delete licensee data](how-to-delete-licensee-data)
 -   [How to access and verify consent given by end-customer](how-to-access-and-verify-consent-given-by-end-customer)
 -   [How to maintain vendor account data](how-to-maintain-vendor-account-data)
 
 ------------------------------------------------------------------------
-
-<span class="aui-icon icon-hint">Icon</span>
 
 If you have specific questions about the GDPR and your use of
 NetLicensing, you can email us at
