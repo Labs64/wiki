@@ -4,7 +4,7 @@ title: NetLicensing Overview
 nav_order: 10
 description: "NetLicensing Overview"
 permalink: /netlicensing-overview
-image: /assets/images/NLIC-Logo-transparent.png
+image: /assets/images/11010237/10977339.png
 ---
 
 NetLicensing Overview
