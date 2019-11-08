@@ -2,7 +2,7 @@
 layout: default
 title: Glossary
 nav_order: 120
-description: "Glossary"
+description: "NetLicensing Glossary"
 permalink: /glossary
 ---
 
