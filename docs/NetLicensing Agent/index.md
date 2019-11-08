@@ -3,14 +3,12 @@ layout: default
 title: NetLicensing Agent
 has_children: true
 nav_order: 90
-description: ""
-permalink:
+description: "NetLicensing allowing operation in isolated networks without connection to the Internet and the NetLicensing cloud service"
+permalink: netlicensing-agent
 ---
 
 NetLicensing Agent
 ==================
-
-
 
 -   [Motivation](#NetLicensingAgent-Motivation)
 -   [Legal Information](#NetLicensingAgent-LegalInformation)
