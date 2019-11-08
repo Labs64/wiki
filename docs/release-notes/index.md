@@ -8,7 +8,7 @@ permalink: release-notes
 ---
 
 Release Notes
-============================================
+=============
 
 NetLicensing release notes are specific to each version.
 
