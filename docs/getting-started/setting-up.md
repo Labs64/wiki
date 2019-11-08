@@ -5,7 +5,7 @@ parent: Getting Started
 nav_order: 2
 description: ""
 permalink: setting-up
-image: /assets/images/11010226/NetLicensing-GettingStarted.png
+image: assets/images/11010226/NetLicensing-GettingStarted.png
 ---
 
 [Step 1: Planning](planning) &nbsp;&nbsp; **Step 2: Setting up** &nbsp;&nbsp; [Step 3: Integration](integration)
