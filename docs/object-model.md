@@ -9,16 +9,26 @@ permalink: object-model
 NetLicensing Object Model
 =========================
 
--   [Vendor](#NetLicensingObjectModel-Vendor)
--   [Product](#NetLicensingObjectModel-Product)
--   [Product Module](#NetLicensingObjectModel-ProductModule)
--   [License Template](#NetLicensingObjectModel-LicenseTemplate)
--   [Licensing Model](#NetLicensingObjectModel-LicensingModel)
--   [License](#NetLicensingObjectModel-License)
--   [Licensee](#NetLicensingObjectModel-Licensee)
--   [Transaction](#NetLicensingObjectModel-Transaction)
+-   [Vendor](#vendor)
+-   [Product](#product)
+-   [Product Module](#product-module)
+-   [License Template](#license-template)
+-   [Licensing Model](#licensing-model)
+-   [License](#license)
+-   [Licensee](#licensee)
+-   [Transaction](#transaction)
 
-<img src="assets/images/11010225/10977322.png" class="confluence-embedded-image" />
+<img src="assets/images/11010225/10977322.png" usemap="#object-model-map"/>
+<map name="object-model-map">
+    <area target="" alt="Vendor" title="Vendor" href="#vendor" coords="25,35,115,105" shape="rect">
+    <area target="" alt="Product" title="Product" href="#product" coords="172,140,261,207" shape="rect">
+    <area target="" alt="Product Module" title="Product Module" href="#product-module" coords="337,239,425,306" shape="rect">
+    <area target="" alt="License Template" title="License Template" href="#license-template" coords="502,328,590,396" shape="rect">
+    <area target="" alt="Licensee" title="Licensee" href="#licensee" coords="337,430,425,498" shape="rect">
+    <area target="" alt="License" title="License" href="#license" coords="633,430,721,498" shape="rect">
+    <area target="" alt="Transaction" title="Transaction" href="#transaction" coords="26,282,115,350" shape="rect">
+    <area target="" alt="Licensing Model" title="Licensing Model" href="licensing-model" coords="337,36,425,103" shape="rect">
+</map>
 
 Vendor
 ------
