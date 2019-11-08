@@ -2,8 +2,8 @@
 layout: default
 title: NetLicensing Overview
 nav_order: 10
-description: "NetLicensing Overview"
-permalink: /netlicensing-overview
+description: "NetLicensing - Licensing-as-a-Service solution overview"
+permalink: /overview
 image: /assets/images/11010237/10977339.png
 ---
 
