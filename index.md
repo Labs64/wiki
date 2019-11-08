@@ -23,6 +23,6 @@ below are some links you can begin with.
 
 -   **[NetLicensing Overview](overview)**
 -   **[Getting Started](getting-started)**
--   **[NetLicensing Object Model](netlicensing-object-model)**
--   **[Licensing Models](docs/Licensing Models/Licensing-Models.html)**
--   **[NetLicensing API (RESTful)](docs/NetLicensing RESTful API/NetLicensing-RESTful-API.html)**
+-   **[NetLicensing Object Model](object-model)**
+-   **[Licensing Models](licensing-models)**
+-   **[NetLicensing API (RESTful)](restful-api)**
