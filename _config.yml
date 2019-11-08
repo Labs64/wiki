@@ -6,8 +6,6 @@ plugins:
 
 remote_theme: Labs64/NetLicensing-Wiki-template
 
-logo: "/assets/images/NLIC-Logo-transparent.png"
-
 # Enable or disable the site search
 search_enabled: true
 
@@ -28,3 +26,21 @@ footer_content: "Copyright &copy; 2010 <a href=\"https://www.labs64.com\">Labs64
 
 # Google Analytics Tracking
 ga_tracking: UA-32654174-2
+
+# SEO
+title: NetLicensing Wiki
+description: Resources that will help you learn about Labs64 NetLicensing
+logo: "/assets/images/NLIC-Logo-transparent.png"
+author:
+  twitter: netlicensing
+twitter:
+  username: netlicensing
+  card: summary
+social:
+  name: Ben Balter
+  links:
+    - https://www.linkedin.com/showcase/netlicensing/
+    - https://www.xing.com/companies/labs64gmbh
+    - https://github.com/Labs64/
+    - https://www.facebook.com/netlicensing
+    - https://twitter.com/netlicensing
