@@ -26,3 +26,5 @@ Get started in three steps:
 </map>
 
 Click on each step for details.
+
+<script type="text/javascript"> imageMapResize(); </script>

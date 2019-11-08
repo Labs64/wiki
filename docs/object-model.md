@@ -114,3 +114,5 @@ NetLicensing Shop, licenses can be given to a licensee by a vendor, or
 assigned implicitly by NetLicensing if it is defined so by some license
 model (e.g. evaluation license may be given automatically). All these
 events are reflected in transactions.
+
+<script type="text/javascript"> imageMapResize(); </script>
