@@ -1,7 +1,3 @@
----
-nav_exclude: true
----
-
 <a href="https://netlicensing.io"><img src="https://netlicensing.io/img/netlicensing-stage-twitter.jpg" alt="Innovative License Management Solution"></a>
 
 # [Labs64 NetLicensing Wiki](https://io.labs64.com/NetLicensing-Wiki/) - Innovative License Management Solution
