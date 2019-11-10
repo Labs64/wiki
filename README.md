@@ -8,6 +8,6 @@ Visit Labs64 NetLicensing at https://netlicensing.io
 
 Following files, directories and their contents are copyright Labs64. You may not reuse anything therein without permission:
 
-* docs/ including all subdirectories
+* `docs/` including all subdirectories
 
 All other files and directories are licensed under the [MIT License](https://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
