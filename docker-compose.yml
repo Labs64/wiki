@@ -1,0 +1,11 @@
+version: '3'
+services:
+  netlicensing-wiki:
+    image: jekyll/jekyll:pages
+    container_name: NetLicensing-Wiki
+    volumes:
+      - "./docs:/srv/jekyll"
+    working_dir: /srv/jekyll
+    command: jekyll serve --watch --incremental --verbose --drafts --future --config _config.yml
+    ports:
+      - "4000:4000"
