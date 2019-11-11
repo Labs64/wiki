@@ -32,6 +32,10 @@ Now you can browse the site at [http://localhost:4000](http://localhost:4000)
 $ docker-compose down
 ```
 
+## Credits
+
+- [Just the Docs](https://github.com/pmarsceill/just-the-docs) - A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.
+
 ## License and Copyright
 
 Following files, directories and their contents are copyright Labs64. You may not reuse anything therein without permission:
