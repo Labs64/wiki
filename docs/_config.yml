@@ -35,6 +35,7 @@ footer_links:
 
 # Google Analytics Tracking
 ga_tracking: UA-32654174-2
+ga_tracking_anonymize_ip: true
 
 # SEO
 title: NetLicensing Wiki
