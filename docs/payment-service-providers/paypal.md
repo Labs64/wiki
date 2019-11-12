@@ -47,8 +47,10 @@ Configure permissions for NetLicensing:
 <!-- -->
 
 -   Choose "`My Selling Tools`", then click `"Update"` next to
-    "`API Access`"  
-    <img src="assets/images/11010239/17629239.png" class="confluence-embedded-image" />
+    "`API Access`"
+    <a href="assets/images/11010239/17629239.png" data-lightbox="paypal" data-title="My Selling Tools" data-alt="My Selling Tools">
+      <img src="assets/images/11010239/17629239.png" class="confluence-embedded-image" />
+    </a>
 
 <!-- -->
 
@@ -56,8 +58,10 @@ Configure permissions for NetLicensing:
     `"Grant API permission"` if adding permissions for the first time,
     or "Manage API permission" in case you already configured
     permissions for NetLicensing previously and now adding permission
-    for recurring payments.  
-    <img src="assets/images/11010239/17629240.png" class="confluence-embedded-image" />
+    for recurring payments.
+    <a href="assets/images/11010239/17629240.png" data-lightbox="paypal" data-title="Pre-built payment solution" data-alt="Pre-built payment solution">
+      <img src="assets/images/11010239/17629240.png" class="confluence-embedded-image" />
+    </a>
 
 <!-- -->
 
@@ -72,32 +76,42 @@ Configure permissions for NetLicensing:
         (<a href="https://www.sandbox.paypal.com/" class="external-link">https://www.sandbox.paypal.com</a>):
         *"*`paypal-sandbox_api1.labs64.de`*"*
 
-    <img src="assets/images/11010239/17629242.png" class="confluence-embedded-image" />  
+    <a href="assets/images/11010239/17629242.png" data-lightbox="paypal" data-title="Grant API permission" data-alt="Grant API permission">
+      <img src="assets/images/11010239/17629242.png" class="confluence-embedded-image" />
+    </a>
     If modifying permissions (`"Manage API permission"` option at the
     previous bullet) - click "Edit Third Party" next to the
-    corresponding username  
+    corresponding username
 
-    <img src="assets/images/11010239/17629241.png" class="confluence-embedded-image" />
+    <a href="assets/images/11010239/17629241.png" data-lightbox="paypal" data-title="Manage API permission" data-alt="Manage API permission">
+      <img src="assets/images/11010239/17629241.png" class="confluence-embedded-image" />
+    </a>
 
 <!-- -->
 
 -   If configuring for the first time (`"Grant API permission"` option
     at the previous bullet) - select permissions as shown below and
-    press `"Add"`  
-    <img src="assets/images/11010239/17629243.png" class="confluence-embedded-image" />  
+    press `"Add"`
+    <a href="assets/images/11010239/17629243.png" data-lightbox="paypal" data-title="Grant API permission" data-alt="Grant API permission">
+      <img src="assets/images/11010239/17629243.png" class="confluence-embedded-image" />
+    </a>
 
     If modifying permissions (`"Manage API permission"` option at the
     previous bullet) - add `"Create and manage Recurring Payments"`
     permission (verify also `"Granted Permissions"` match) and press
-    `"Save"`  
+    `"Save"`
 
-    <img src="assets/images/11010239/17629244.png" class="confluence-embedded-image" />
+    <a href="assets/images/11010239/17629244.png" data-lightbox="paypal" data-title="Granted Permissions" data-alt="Granted Permissions">
+      <img src="assets/images/11010239/17629244.png" class="confluence-embedded-image" />
+    </a>
 
 <!-- -->
 
 -   You have now enabled NetLicensing to call PayPal API on your behalf
-    to receive one-time and recurring payments  
-    <img src="assets/images/11010239/17629245.png" class="confluence-embedded-image" />
+    to receive one-time and recurring payments
+    <a href="assets/images/11010239/17629245.png" data-lightbox="paypal" data-title="PayPal API" data-alt="PayPal API">
+      <img src="assets/images/11010239/17629245.png" class="confluence-embedded-image" />
+    </a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
@@ -121,16 +135,24 @@ with NetLicensing.
 Follow steps below to set up IPN:
 
 -   Choose first "`My Selling Tools`", then
-    "`Instant Payment Notification`"  
-    <img src="assets/images/11010239/17629222.png" class="confluence-embedded-image" />
--   Press "`Choose IPN Settings`"  
-    <img src="assets/images/11010239/17629223.png" class="confluence-embedded-image" />
+    "`Instant Payment Notification`"
+    <a href="assets/images/11010239/17629222.png" data-lightbox="paypal" data-title="Instant Payment Notification" data-alt="Instant Payment Notification">
+      <img src="assets/images/11010239/17629222.png" class="confluence-embedded-image" />
+    </a>
+-   Press "`Choose IPN Settings`"
+    <a href="assets/images/11010239/17629223.png" data-lightbox="paypal" data-title="Choose IPN Settings" data-alt="Choose IPN Settings">
+      <img src="assets/images/11010239/17629223.png" class="confluence-embedded-image" />
+    </a>
 -   Set up Notification URL
     "*`https://go.netlicensing.io/core/v2/external/paypal/ipn/`*" and
-    press Save button  
-    <img src="assets/images/11010239/17629224.png" class="confluence-embedded-image" />
--   Instant Payment Notification for NetLicensing is now enabled  
-    <img src="assets/images/11010239/17629221.png" class="confluence-embedded-image" />
+    press Save button
+    <a href="assets/images/11010239/17629224.png" data-lightbox="paypal" data-title="Set up Notification URL" data-alt="Set up Notification URL">
+      <img src="assets/images/11010239/17629224.png" class="confluence-embedded-image" />
+    </a>
+-   Instant Payment Notification for NetLicensing is now enabled
+    <a href="assets/images/11010239/17629221.png" data-lightbox="paypal" data-title="Instant Payment Notification" data-alt="Instant Payment Notification">
+      <img src="assets/images/11010239/17629221.png" class="confluence-embedded-image" />
+    </a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
@@ -143,5 +165,5 @@ class="expand-control-text">Step3: Configure NetLicensing</span>
 
  
 
-<span style="white-space: pre-wrap;">  
+<span style="white-space: pre-wrap;">
 </span>
