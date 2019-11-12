@@ -29,10 +29,10 @@ NetLicensing.
 
 <table>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
-<col style="width: 25%" />
+<col />
+<col />
+<col />
+<col />
 </colgroup>
 <thead>
 <tr class="header">
@@ -45,7 +45,7 @@ NetLicensing.
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><a href="11010231.html">Try &amp; Buy</a></p></td>
+<td><span markdown="1">[Try & Buy](try-n-buy)</span></td>
 <td><ul>
 <li>Evaluation</li>
 <li>Demo</li>
@@ -58,7 +58,7 @@ NetLicensing.
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="even">
-<td><p><a href="Subscription_11010234.html">Subscription</a></p></td>
+<td><span markdown="1">[Subscription](subscription)</span></td>
 <td><ul>
 <li>ABO</li>
 <li>Time-limited</li>
@@ -70,7 +70,7 @@ NetLicensing.
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="odd">
-<td><p><a href="rental">Rental</a></p></td>
+<td><span markdown="1">[Rental](rental)</span></td>
 <td><ul>
 <li>Leasing</li>
 <li>Feature with TimeVolume</li>
@@ -79,7 +79,7 @@ NetLicensing.
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="even">
-<td><a href="Floating_14057949.html">Floating</a></td>
+<td><span markdown="1">[Floating](floating)</span></td>
 <td><ul>
 <li>Concurrent</li>
 <li>Network</li>
@@ -91,7 +91,7 @@ NetLicensing.
 </em></p></td>
 </tr>
 <tr class="odd">
-<td><a href="Multi-Feature_15564833.html">Multi-Feature</a></td>
+<td><span markdown="1">[Multi-Feature](multi-feature)</span></td>
 <td><ul>
 <li>Pay-per-feature</li>
 <li>Feature-based</li>
@@ -103,7 +103,7 @@ NetLicensing.
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="even">
-<td><a href="Pay-per-Use_11010233.html">Pay-per-Use</a></td>
+<td><span markdown="1">[Pay-per-Use](pay-per-use)</span></td>
 <td><ul>
 <li>Pre-paid</li>
 <li>Post-paid</li>
@@ -120,7 +120,7 @@ NetLicensing.
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="odd">
-<td><span><a href="Node-Locked_18677762.html">Node-Locked</a></span></td>
+<td><span markdown="1">[Node-Locked](node-locked)</span></td>
 <td><ul>
 <li>Local</li>
 <li>Named host</li>
@@ -130,7 +130,7 @@ NetLicensing.
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="even">
-<td><a href="Quota_17432807.html">Quota</a></td>
+<td><span markdown="1">[Quota](quota)</span></td>
 <td><ul>
 <li>Limit</li>
 <li>Capacity</li>
@@ -151,7 +151,7 @@ NetLicensing.
 <div class="aui-message hint shadowed information-macro has-no-icon">
 <p>How to configure</p>
 <div class="message-content">
-<p>Use <a href="11010231.html">Try &amp; Buy</a> Licensing model with try/evaluation period set to a minimum value of 1 day</p>
+<p>Use <span markdown="1">[Try & Buy](try-n-buy)</span> Licensing model with try/evaluation period set to a minimum value of 1 day</p>
 </div>
 </div></td>
 <td><p><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /></p>
