@@ -49,9 +49,9 @@ NetLicensing API (RESTful) provide access to resources (data entities)
 via URI paths. To use a RESTful API, your application will make an
 HTTP(S) request and parse the response. The NetLicensing API
 (RESTful) uses
-<a href="http://en.wikipedia.org/wiki/JSON" class="external-link">JSON</a>
+<a href="https://en.wikipedia.org/wiki/JSON" class="external-link">JSON</a>
 or
-<a href="http://en.wikipedia.org/wiki/XML" class="external-link">XML</a>
+<a href="https://en.wikipedia.org/wiki/XML" class="external-link">XML</a>
 as its response format
 
     Use following request headers:
@@ -84,7 +84,7 @@ describing corresponding resource
 <span class="aui-icon icon-warning">Icon</span>
 
 In case the requested resource does not exist, HTTP response with status
-code <a href="http://en.wikipedia.org/wiki/HTTP_403" class="external-link">404</a> will
+code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link">404</a> will
 be returned.
 
 <span class="aui-icon icon-warning">Icon</span>
@@ -109,7 +109,7 @@ as a message body (payload) for POST and PUT.
 
 Parameters are passed in '`key=value`' form, separated by '`&`' symbol.
 When passed in a message body (for POST and PUT), it corresponds to
-the <a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1" class="external-link">Form Encoded Data</a> format.
+the <a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1" class="external-link">Form Encoded Data</a> format.
 Use the following request header in this case:
 
     Content-Type: application/x-www-form-urlencoded 
@@ -143,11 +143,11 @@ summarizes the text representation of non-trivial data types:
 <tbody>
 <tr class="odd">
 <td><p>Timestamp</p></td>
-<td><p>Timestamps follow <a href="http://www.w3.org/TR/xmlschema-2/#isoformats" class="external-link">XML Schema Part 2: Datatypes Second Edition / D ISO 8601 Date and Time Formats</a>. On input it may be specified as date only (corresponds to <a href="https://www.w3.org/TR/xmlschema-2/#date" class="external-link">xsd:date</a>) or date + time (corresponds to <a href="https://www.w3.org/TR/xmlschema-2/#dateTime" class="external-link">xsd:dateTime</a>). On a java backend, <a href="http://docs.oracle.com/javase/7/docs/api/javax/xml/bind/DatatypeConverter.html" class="external-link">javax.xml.bind.DatatypeConverter</a> is used for conversion.</p></td>
+<td><p>Timestamps follow <a href="https://www.w3.org/TR/xmlschema-2/#isoformats" class="external-link">XML Schema Part 2: Datatypes Second Edition / D ISO 8601 Date and Time Formats</a>. On input it may be specified as date only (corresponds to <a href="https://www.w3.org/TR/xmlschema-2/#date" class="external-link">xsd:date</a>) or date + time (corresponds to <a href="https://www.w3.org/TR/xmlschema-2/#dateTime" class="external-link">xsd:dateTime</a>). On a java backend, <a href="https://docs.oracle.com/javase/7/docs/api/javax/xml/bind/DatatypeConverter.html" class="external-link">javax.xml.bind.DatatypeConverter</a> is used for conversion.</p></td>
 </tr>
 <tr class="even">
 <td><p>Monetary</p></td>
-<td><p>Always represented by two fields: decimal "price" and "currency" - 3-character code according to <a href="http://en.wikipedia.org/wiki/ISO_4217" class="external-link">ISO 4217</a>. Currently only "EUR" is supported.</p></td>
+<td><p>Always represented by two fields: decimal "price" and "currency" - 3-character code according to <a href="https://en.wikipedia.org/wiki/ISO_4217" class="external-link">ISO 4217</a>. Currently only "EUR" is supported.</p></td>
 </tr>
 </tbody>
 </table>
@@ -164,4 +164,4 @@ Links
 -----
 
 -   List of HTTP status codes -
-    <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes" class="external-link">http://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>
+    <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" class="external-link">https://en.wikipedia.org/wiki/List_of_HTTP_status_codes</a>

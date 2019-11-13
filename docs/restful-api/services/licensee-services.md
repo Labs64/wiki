@@ -476,7 +476,7 @@ it for a certain period for repeated validation requests. To determine
 the maximum validity duration of the validation response, NetLicensing
 returns an additional value with the validation response that is called
 „ttl“: it is the expiration timestamp of this validation response
-in <a href="http://en.wikipedia.org/wiki/ISO_8601" class="external-link"><span class="s2">ISO 8601</span></a> format.</span>
+in <a href="https://en.wikipedia.org/wiki/ISO_8601" class="external-link"><span class="s2">ISO 8601</span></a> format.</span>
 
 See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#validate-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.vo.ValidationParameters-com.labs64.netlicensing.domain.vo.MetaInfo...-" class="external-link">LicenseeService.validate</a>

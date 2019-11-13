@@ -24,7 +24,7 @@ encoded with the same charset.
 <span class="aui-icon icon-warning">Icon</span>
 
 In case of unauthorized access, HTTP response with status
-code <a href="http://en.wikipedia.org/wiki/HTTP_403" class="external-link">403</a> will
+code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link">403</a> will
 be returned.
 
 API Key Identification
