@@ -3,7 +3,7 @@ layout: default
 title: Glossary
 nav_order: 120
 description: "NetLicensing Glossary"
-permalink: wiki/glossary
+permalink: glossary
 ---
 
 Glossary
