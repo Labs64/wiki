@@ -19,14 +19,14 @@ Overview
 --------
 
 **Floating** licensing model authorizes the use of an application with the given
- number of sessions (users, hosts, etc.). The number of concurrent sessions is
- tracked, and the total number of running sessions of the licensed application
- at any time is limited by the maximum allowed sessions in the floating licenses
- purchased by the licensee.
+number of sessions (users, hosts, etc.). The number of concurrent sessions is
+tracked, and the total number of running sessions of the licensed application
+at any time is limited by the maximum allowed sessions in the floating licenses
+purchased by the licensee.
 
 Session is acquired by checkout operation and returned back to the pool by
- subsequent checkin. Maximum checkout validity time is limited by the product
- module parameter:
+subsequent checkin. Maximum checkout validity time is limited by the product
+module parameter:
 
 -   `Integer` **`maxCheckoutValidity`** - floating license maximum checkout
     validity, in seconds ("Maximum checkout validity" in
@@ -34,21 +34,21 @@ Session is acquired by checkout operation and returned back to the pool by
     NetLicensing Management Console</a> / product module edit form)
 
 Validity can be extended as long as needed by subsequent checkouts before the
- expiration time.
+expiration time.
 
 License templates
 -----------------
 
 This licensing model requires one or more license templates of type FLOATING,
- each specifying a number of sessions and a purchase price. By configuring
- multiple license templates, one can build volume discounts, e.g.:
+each specifying a number of sessions and a purchase price. By configuring
+multiple license templates, one can build volume discounts, e.g.:
 
 -   10 sessions for 5 EUR
 -   100 sessions for 45 EUR
 -   1000 sessions for 400 EUR
 
 Required additional properties specific to the FLOATING
- [license templates](object-model#license-template):
+[license templates](object-model#license-template):
 
 -   `Integer` **`maxSessions`** - specifies the maximum number of sessions
     allowed concurrently per license.
@@ -57,7 +57,7 @@ Licenses
 --------
 
 Required additional properties specific to the FLOATING
- [licenses](object-model#license):
+[licenses](object-model#license):
 
 -   `Integer` **`maxSessions`** - specifies the maximum number of sessions
     allowed concurrently per license. Normally it is copied from the
@@ -68,7 +68,7 @@ Required additional properties specific to the FLOATING
 
 Besides, every session that is checked out is listed as
 
--   `Timestamp` **`sessionId_<sessionId>`**
+-   [`Timestamp`](restful-api#data-types) **`sessionId_<sessionId>`**
 
 custom property. Session can be forcibly checked in on demand by
 removing the corresponding **`sessionId_<sessionId>`** property.
@@ -76,8 +76,10 @@ removing the corresponding **`sessionId_<sessionId>`** property.
 Validation
 ----------
 
+### Validation parameters:
+
 On validation, this licensing model requires the following
- [validate parameters](licensee-services#validate-licensee):
+[validate parameters](licensee-services#validate-licensee):
 
 -   **`productModuleNumberN=<productModuleNumber>`**
 -   **`sessionIdN=<sessionId>`**  
