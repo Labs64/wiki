@@ -7,6 +7,10 @@ plugins:
 
 remote_theme: Labs64/NetLicensing-Wiki-template
 
+url: "https://netlicensing.io"
+# subpath of the site, e.g. /blog/
+baseurl: "/wiki/"
+
 # Enable or disable the site search
 search_enabled: true
 
