@@ -9,19 +9,13 @@ permalink: eu-vat-2015
 EU VAT Rules applicable since 2015
 ==================================
 
--   [General Info](#EUVATRulesapplicablesince2015-GeneralInfo)
--   [Implementation
-    details](#EUVATRulesapplicablesince2015-Implementationdetails)
-    -   [VAT
-        Applicability](#EUVATRulesapplicablesince2015-VATApplicability)
-    -   [VAT Calculation and Vendor
-        Type](#EUVATRulesapplicablesince2015-VATCalculationandVendorType)
-    -   [VAT Calculation and
-        Product.](#EUVATRulesapplicablesince2015-VATCalculationandProduct.)
-    -   [Shop and VAT Calculation
-        Mode](#EUVATRulesapplicablesince2015-ShopandVATCalculationMode)
-    -   [Changes to the Checkout
-        Flow](#EUVATRulesapplicablesince2015-ChangestotheCheckoutFlow)
+-   [General Info](#general-info)
+-   [Implementation details](#implementation-details)
+    -   [VAT Applicability](#vat-applicability)
+    -   [VAT Calculation and Vendor Type](#vat-calculation-and-vendor-type)
+    -   [VAT Calculation and Product](#vat-calculation-and-product)
+    -   [Shop and VAT Calculation Mode](#shop-and-vat-calculation-mode)
+    -   [Changes to the Checkout Flow](#changes-to-the-checkout-flow)
 
 General Info
 ============
@@ -50,131 +44,7 @@ VAT Applicability
 Below table summarizes how we apply VAT, depending on transaction
 participants and their location
 
-Transaction participants
-
-Seller country
-
-Buyer country
-
-VAT
-
-Notes
-
-C2C  
-*Consumer to Consumer*
-
-EU
-
-EU
-
-No VAT mention
-
- 
-
-EU
-
-non-EU
-
-No VAT mention
-
- 
-
-non-EU
-
-EU
-
-No VAT mention
-
- 
-
-non-EU
-
-non-EU
-
-No VAT mention
-
- 
-
-B2B  
-**Business to *Business***
-
-EU (country A)
-
-EU (country B)
-
-No VAT (RC)
-
-customer must account for the tax (reverse-charge mechanism)
-
-EU (country A)
-
-EU (country A)
-
-VAT
-
-same country
-
-EU
-
-non-EU
-
-No VAT
-
- 
-
-non-EU
-
-EU
-
-No VAT (RC)
-
-customer must account for the tax (reverse-charge mechanism)
-
-non-EU
-
-non-EU
-
-No VAT
-
- 
-
-B2C  
-**Business to *Consumer***
-
-EU
-
-EU
-
-VAT
-
- 
-
-EU
-
-non-EU
-
-No VAT
-
- 
-
-non-EU
-
-EU
-
-VAT
-
- 
-
-non-EU
-
-non-EU
-
-No VAT
-
- 
-
-\*  
-*
+<table class="confluenceTable"><colgroup><col><col><col><col><col></colgroup><tbody><tr><td class="confluenceTd">Transaction participants</td><td style="text-align: center;" class="confluenceTd">Seller country</td><td style="text-align: center;" class="confluenceTd">Buyer country</td><td style="text-align: center;" class="confluenceTd">VAT</td><td style="text-align: center;" class="confluenceTd">Notes</td></tr><tr><td rowspan="4" class="confluenceTd">C2C<br><em>Consumer to Consumer</em></td><td class="confluenceTd">EU</td><td class="confluenceTd">EU</td><td class="confluenceTd">No VAT mention</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd">EU</td><td class="confluenceTd">non-EU</td><td class="confluenceTd">No VAT mention</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd">non-EU</td><td class="confluenceTd">EU</td><td class="confluenceTd">No VAT mention</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd">non-EU</td><td class="confluenceTd">non-EU</td><td class="confluenceTd">No VAT mention</td><td class="confluenceTd">&nbsp;</td></tr><tr><td rowspan="5" class="confluenceTd">B2B<br><em><em>Business to&nbsp;<em>Business</em></em></em></td><td class="confluenceTd">EU (country A)</td><td class="confluenceTd">EU (country B)</td><td class="confluenceTd">No VAT (RC)</td><td class="confluenceTd">customer must account for the tax (reverse-charge mechanism)</td></tr><tr><td class="confluenceTd">EU (country A)</td><td class="confluenceTd">EU (country A)</td><td class="confluenceTd">VAT</td><td class="confluenceTd">same country</td></tr><tr><td class="confluenceTd">EU</td><td class="confluenceTd">non-EU</td><td class="confluenceTd">No VAT</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd">non-EU</td><td class="confluenceTd">EU</td><td class="confluenceTd">No VAT (RC)</td><td class="confluenceTd">customer must account for the tax (reverse-charge mechanism)</td></tr><tr><td class="confluenceTd">non-EU</td><td class="confluenceTd">non-EU</td><td class="confluenceTd">No VAT</td><td class="confluenceTd">&nbsp;</td></tr><tr><td rowspan="4" class="confluenceTd">B2C<br><em><em>Business to&nbsp;<em>Consumer</em></em></em></td><td class="confluenceTd">EU</td><td class="confluenceTd">EU</td><td class="confluenceTd">VAT</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd">EU</td><td class="confluenceTd">non-EU</td><td class="confluenceTd">No VAT</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd">non-EU</td><td class="confluenceTd">EU</td><td class="confluenceTd">VAT</td><td class="confluenceTd">&nbsp;</td></tr><tr><td class="confluenceTd">non-EU</td><td class="confluenceTd">non-EU</td><td class="confluenceTd">No VAT</td><td class="confluenceTd">&nbsp;</td></tr></tbody></table>
 
 VAT Calculation and Vendor Type
 -------------------------------
@@ -195,8 +65,8 @@ section of the NetLicensing Console:</span>
 
 <img src="assets/images/17432840/17629219.png" width="700" height="366" />
 
-VAT Calculation and Product.
-----------------------------
+VAT Calculation and Product
+---------------------------
 
 For each product you can choose one of the two **Vat Calculation
 Modes**:
