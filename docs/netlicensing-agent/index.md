@@ -10,23 +10,22 @@ permalink: netlicensing-agent
 NetLicensing Agent
 ==================
 
--   [Motivation](#NetLicensingAgent-Motivation)
--   [Legal Information](#NetLicensingAgent-LegalInformation)
--   [NetLicensing Agent](#NetLicensingAgent-NetLicensingAgent)
-    -   [Files](#NetLicensingAgent-Files)
-    -   [Command Line](#NetLicensingAgent-CommandLine)
-    -   [Modes of Operation](#NetLicensingAgent-ModesofOperation)
-    -   [Setting Up for the Offline
-        Mode](#NetLicensingAgent-SettingUpfortheOfflineMode)
--   [Client Configuration](#NetLicensingAgent-ClientConfiguration)
--   [Security](#NetLicensingAgent-Security)
-    -   [Execution Environment](#NetLicensingAgent-ExecutionEnvironment)
-    -   [Smart Card](#NetLicensingAgent-SmartCard)
-    -   [Networking](#NetLicensingAgent-Networking)
--   [Known Limitations](#NetLicensingAgent-KnownLimitations)
-    -   [Licensing Models](#NetLicensingAgent-LicensingModels)
-    -   [Entity Numbers](#NetLicensingAgent-EntityNumbers)
-    -   [Licensee Auto-Create](#NetLicensingAgent-LicenseeAuto-Create)
+-   [Motivation](#motivation)
+-   [Legal Information](#legal-information)
+-   [NetLicensing Agent](#netlicensing-agent)
+    -   [Files](#files)
+    -   [Command Line](#command-line)
+    -   [Modes of Operation](#modes-of-operation)
+    -   [Setting Up for the Offline Mode](#setting-up-for-the-offline-mode)
+-   [Client Configuration](#client-configuration)
+-   [Security](#security)
+    -   [Execution Environment](#execution-environment)
+    -   [Smart Card](#smart-card)
+    -   [Networking](#networking)
+-   [Known Limitations](#known-limitations)
+    -   [Licensing Models](#licensing-models)
+    -   [Entity Numbers](#entity-numbers)
+    -   [Licensee Auto-Create](#licensee-auto-create)
 
 <span class="aui-icon icon-warning">Icon</span>
 
@@ -340,8 +339,8 @@ Setting Up for the Offline Mode
 
     With this action the agent will keep running and listening on the
     specified port until stopped by SIGINT (Ctrl-C). Make sure firewall,
-    if any, allows this connection. Also read the article [Securing the
-    Agent with SSL/TLS](17432748.html).
+    if any, allows this connection. Also read the article
+    [Securing the Agent with SSL/TLS](securing-the-agent-with-ssl-tls).
 
  
 
@@ -424,7 +423,7 @@ controlled installation of the agent on a secured host and/or using
 smart card security we recommend to setup agent behind HTTPS reverse
 proxy. Reverse proxy and SSL support is available as a standard
 functionality in most popular HTTP frontends Apache, NGINX and IIS.
-Please refer to [Securing the Agent with SSL/TLS](17432748.html) for
+Please refer to [Securing the Agent with SSL/TLS](securing-the-agent-with-ssl-tls) for
 details.
 
 Known Limitations

@@ -226,8 +226,9 @@ practices, and there are several ways in which NetLicensing can help.
 
 In order to outline specifics of how we will process personal data and
 what our obligations are as well as the obligations of our
-vendors/customers, we’ve developed a [Data Processing Agreement
-(DPA)](17433057.html) that we enter into free of charge with anyone who
+vendors/customers, we’ve developed a
+[Data Processing Agreement (DPA)](data-processing-agreement-dpa)
+that we enter into free of charge with anyone who
 uses our service and requests it.
 
 Expansion of Individual Rights
@@ -309,8 +310,8 @@ data from your end-customers.
     end-customers.
 -   You should review the privacy statement and practices applicable to
     your organization and ensure that they provide proper notice that
-    the personal data of your end-customers will be [transferred to
-    NetLicensing and processed by NetLicensing](17433024.html).
+    the personal data of your end-customers will be
+    [transferred to NetLicensing and processed by NetLicensing](privacy-statement-data-processing-by-netlicensing).
 
 Detailed Instructions
 ---------------------

@@ -63,7 +63,7 @@ Clients
 
 ### Command-line
 
--   [cURL code snippets](11010215.html) - please refer to the *"Try it
+-   [cURL code snippets](restful-api) - please refer to the *"Try it
     now"* sections at NetLicensing API (RESTful) endpoints description
 
 Integrations

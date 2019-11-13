@@ -10,27 +10,21 @@ permalink: securing-the-agent-with-ssl-tls
 Securing the Agent with SSL/TLS
 ===============================
 
--   [Motivation](#SecuringtheAgentwithSSL/TLS-Motivation)
--   [Apache HTTP](#SecuringtheAgentwithSSL/TLS-ApacheHTTP)
-    -   [httpd.conf](#SecuringtheAgentwithSSL/TLS-httpd.conf)
-    -   [httpd-vhosts.conf:](#SecuringtheAgentwithSSL/TLS-httpd-vhosts.conf:)
-    -   [Running Agent and
-        Apache](#SecuringtheAgentwithSSL/TLS-RunningAgentandApache)
--   [Nginx](#SecuringtheAgentwithSSL/TLS-Nginx)
-    -   [nginx.conf](#SecuringtheAgentwithSSL/TLS-nginx.conf)
-    -   [Running Agent and
-        Nginx](#SecuringtheAgentwithSSL/TLS-RunningAgentandNginx)
--   [Microsoft IIS](#SecuringtheAgentwithSSL/TLS-MicrosoftIIS)
-    -   [Running Agent and
-        IIS](#SecuringtheAgentwithSSL/TLS-RunningAgentandIIS)
--   [Managing of SSL certificates for the hosts in local
-    network](#SecuringtheAgentwithSSL/TLS-ManagingofSSLcertificatesforthehostsinlocalnetwork)
-    -   [Certificates signed by a Certificate Authority
-        (CA)](#SecuringtheAgentwithSSL/TLS-CertificatessignedbyaCertificateAuthority(CA))
-    -   [Self-signed
-        certificates](#SecuringtheAgentwithSSL/TLS-Self-signedcertificates)
--   [Known Issues](#SecuringtheAgentwithSSL/TLS-KnownIssues)
--   [Useful links](#SecuringtheAgentwithSSL/TLS-Usefullinks)
+-   [Motivation](#motivation)
+-   [Apache HTTP](#apache-http)
+    -   [httpd.conf](#httpdconf)
+    -   [httpd-vhosts.conf](#httpd-vhostsconf)
+    -   [Running Agent and Apache](#running-agent-and-apache)
+-   [Nginx](#nginx)
+    -   [nginx.conf](#nginxconf)
+    -   [Running Agent and Nginx](#running-agent-and-nginx)
+-   [Microsoft IIS](#microsoft-iis)
+    -   [Running Agent and IIS](#running-agent-and-iis)
+-   [Managing of SSL certificates for the hosts in local network](#managing-of-ssl-certificates-for-the-hosts-in-local-network)
+    -   [Certificates signed by a Certificate Authority (CA)](#certificates-signed-by-a-certificate-authority-ca)
+    -   [Self-signed certificates](#self-signed-certificates)
+-   [Known Issues](#known-issues)
+-   [Useful links](#useful-links)
 
 Motivation
 ==========
@@ -85,8 +79,8 @@ httpd.conf
      Include conf/extra/httpd-ssl.conf
     ```
 
-httpd-vhosts.conf:
-------------------
+httpd-vhosts.conf
+-----------------
 
 -   Forward insecure connection to secure URL:
 

@@ -17,8 +17,7 @@ Integration of NetLicensing into your product has two aspects:
 
 ### NetLicensing API
 
-Implement calls to the NetLicensing API in your code. [NetLicensing API
-reference](11010215.html) and
+Implement calls to the NetLicensing API in your code. [NetLicensing API reference](restful-api) and
 [examples](client-libraries) will help
 you. At minimum you need a call to the
 [validate](licensee-services#LicenseeServices-Validatelicensee)

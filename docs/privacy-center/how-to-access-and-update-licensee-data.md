@@ -47,7 +47,7 @@ entry details to view or <span class="complexword">modify</span>.
 NetLicensing RESTful API
 ------------------------
 
-[NetLicensing RESTful API](11010215.html) offers you an automated way to
+[NetLicensing RESTful API](restful-api) offers you an automated way to
 access subject's data from your products, services and/or internal
 systems, such as CRM, ERP.
 

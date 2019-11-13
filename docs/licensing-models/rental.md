@@ -164,7 +164,7 @@ created within NetLicensing, holding the above customer number -
 This can be done either manually via
 <a href="https://go.netlicensing.io/console/v2/" class="external-link">NetLicensing Management Console</a> or
 the application on the payment processing server can do it via
-[NetLicensing API](11010215.html), if it has an automated customer
+[NetLicensing API](restful-api), if it has an automated customer
 registration procedure.
 
 <img src="assets/images/11010232/10977329.png" />
