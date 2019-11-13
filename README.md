@@ -1,6 +1,6 @@
 <a href="https://netlicensing.io"><img src="https://netlicensing.io/img/netlicensing-stage-twitter.jpg" alt="Innovative License Management Solution"></a>
 
-# [Labs64 NetLicensing Wiki](https://io.labs64.com/NetLicensing-Wiki/) - Innovative License Management Solution
+# [Labs64 NetLicensing Wiki](https://netlicensing.io/wiki/) - Innovative License Management Solution
 
 Visit Labs64 NetLicensing at https://netlicensing.io
 
