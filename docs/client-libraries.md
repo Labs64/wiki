@@ -3,7 +3,7 @@ layout: default
 title: Client Libraries
 nav_order: 100
 description: "Labs64 NetLicensing client libraries and sample code"
-permalink: /client-libraries
+permalink: client-libraries
 ---
 
 Client Libraries and Sample Code

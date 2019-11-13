@@ -3,7 +3,7 @@ layout: default
 title: FAQ & Troubleshooting
 nav_order: 110
 description: "NetLicensing FAQ & Troubleshooting"
-permalink: /faq
+permalink: faq
 ---
 
 FAQ & Troubleshooting

@@ -3,7 +3,7 @@ layout: default
 title: EU VAT
 nav_order: 70
 description: "EU VAT Rules applicable since 2015"
-permalink: /eu-vat-2015
+permalink: eu-vat-2015
 ---
 
 EU VAT Rules applicable since 2015
