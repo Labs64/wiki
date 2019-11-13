@@ -2,7 +2,7 @@
 layout: default
 title: Subscription
 parent: Licensing Models
-nav_order: 99
+nav_order: 20
 description: "Subscription"
 permalink: subscription
 ---
@@ -10,15 +10,25 @@ permalink: subscription
 Subscription
 ============
 
+-   [Overview](#overview)
+-   [License templates](#license-templates)
+-   [Licenses](#licenses)
+-   [Validation](#validation)
+
+Overview
+--------
 
 **Subscription** licensing model reflects a typical subscription
 scenario, where the use is permitted for a certain period of calendar
 time and can be extended on demand. Optional free license may be
 configured that will be automatically provided to all new licensees for
 evaluation purposes. Validation shows if the use is permitted for a
-[licensee](object-model) at the time of
+[licensee](object-model#licensee) at the time of
 validation, and the date when the cumulative licensed period for all
 purchased licenses expires.
+
+License templates
+-----------------
 
 This licensing model requires one or more license templates of type
 TIMEVOLUME, each specifying a licensed period of time (in days) and a
@@ -38,31 +48,49 @@ date of already available licenses, the time volume of the new license
 extends the total time volume after expiration date, regardless of exact
 purchase date.
 
-Required additional properties specific to the TIMEVOLUME [license
-templates](object-model):
+Required additional properties specific to the TIMEVOLUME
+[license templates](object-model#license-template):
 
--   Integer **timeVolume** - specifies the licensed time period in days.
+-   `Integer` **`timeVolume`** - specifies the licensed time period in days.
+
+Licenses
+--------
 
 Required additional properties specific to the TIMEVOLUME
-[licenses](object-model):
+[licenses](object-model#license):
 
--   Integer **timeVolume** - specifies the licensed time period in days.
+-   `Integer` **`timeVolume`** - specifies the licensed time period in days.
     Normally it is copied from the corresponding license template, but
     can be changed later for each license individually.
--   [Timestamp](11010215.html#NetLicensingAPI(RESTful)-DataTypes)
-    **startDate** - specifies a date at which the validity period of the
-    license begins.
+-   [`Timestamp`](restful-api#data-types) **`startDate`** - specifies a date
+    at which the validity period of the license begins.
 
-On validation, this licensing model returns two values:
+Validation
+----------
 
--   Boolean **valid** - **true** if use is allowed
--   [Timestamp](11010215.html#NetLicensingAPI(RESTful)-DataTypes)
-    **expires** - in case **valid=true**, provides the cumulative
-    expiration date for all purchased licenses.
+### Validation parameters:
 
-Validation response example:
+On validation, this licensing model requires no parameters.
 
-``` theme:
+### Validation returns values:
+
+-   `Boolean` **`valid`** - **`true`** if use is allowed
+-   [`Timestamp`](restful-api#data-types) **`expires`** - in case
+    **`valid=true`**, provides the cumulative expiration date for all purchased
+    licenses.
+
+### Validation response examples:
+
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
+POST https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
+Accept: application/xml
+```
+{: .ml-5 }
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <netlicensing 
     xmlns="http://netlicensing.labs64.com/schema/context">
@@ -78,3 +106,4 @@ Validation response example:
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
