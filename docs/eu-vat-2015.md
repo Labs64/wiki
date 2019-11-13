@@ -193,7 +193,7 @@ style="color: rgb(0,0,0);">:</span>
 <a href="https://go.netlicensing.io/console/v2/content/vendor/vendor.xhtml" class="external-link">Vendor Profile</a>
 section of the NetLicensing Console:</span>
 
-<img src="assets/images/17432840/17629219.png" class="confluence-embedded-image" width="700" height="366" />
+<img src="assets/images/17432840/17629219.png" width="700" height="366" />
 
 VAT Calculation and Product.
 ----------------------------
@@ -221,7 +221,7 @@ style="color: rgb(0,0,0);">is managed via</span> the Product Edit
 in <span style="color: rgb(0,0,0);">the NetLicensing
 Console</span>:</span>
 
-<img src="assets/images/17432840/17629218.png" class="confluence-embedded-image" width="700" />
+<img src="assets/images/17432840/17629218.png" width="700" />
 
 Shop and VAT Calculation Mode
 -----------------------------
@@ -231,22 +231,22 @@ Shop and VAT Calculation Mode
     in the specified price, which is reflected in the NetLicensing Shop
     as a corresponding note below the shown prices:</span></span>  
     <span
-    style="color: rgb(0,0,0);"><img src="assets/images/17432840/17629217.png" class="confluence-embedded-image" width="900" />  
+    style="color: rgb(0,0,0);"><img src="assets/images/17432840/17629217.png" width="900" />  
     </span>And VAT percentage and actual calculated amount shown on the
     checkout page as well as order confirmation:   
-    <img src="assets/images/17432840/17629211.png" class="confluence-embedded-image" width="900" />  
+    <img src="assets/images/17432840/17629211.png" width="900" />  
     <span
-    style="color: rgb(0,0,0);"><img src="assets/images/17432840/17629216.png" class="confluence-embedded-image" width="900" /></span>  
+    style="color: rgb(0,0,0);"><img src="assets/images/17432840/17629216.png" width="900" /></span>  
 
 2.  <span style="color: rgb(0,0,0);">**Net** calculation mode implies
     that the VAT is not included in the specified price and must be
     added on top of it, if necessary. Accordingly, NetLicensing Shop
     adds a note below the shown prices:</span>  
-    <img src="assets/images/17432840/17629215.png" class="confluence-embedded-image" width="900" />  
+    <img src="assets/images/17432840/17629215.png" width="900" />  
     Shopping cart view and confirmation page shows calculated VAT as a
     separate field:   
-    <img src="assets/images/17432840/17629212.png" class="confluence-embedded-image" width="900" />  
-    <img src="assets/images/17432840/17629214.png" class="confluence-embedded-image" width="900" />
+    <img src="assets/images/17432840/17629212.png" width="900" />  
+    <img src="assets/images/17432840/17629214.png" width="900" />
 
 Changes to the Checkout Flow
 ----------------------------
@@ -257,4 +257,4 @@ calculation:
 -   Country
 -   Company
 -   Tax/VAT ID  
-    <img src="assets/images/17432840/17629213.png" class="confluence-embedded-image" width="900" />
+    <img src="assets/images/17432840/17629213.png" width="900" />

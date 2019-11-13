@@ -49,7 +49,7 @@ Configure permissions for NetLicensing:
 -   Choose "`My Selling Tools`", then click `"Update"` next to
     "`API Access`"
     <a href="assets/images/11010239/17629239.png" data-lightbox="paypal" data-title="My Selling Tools" data-alt="My Selling Tools">
-      <img src="assets/images/11010239/17629239.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629239.png" />
     </a>
 
 <!-- -->
@@ -60,7 +60,7 @@ Configure permissions for NetLicensing:
     permissions for NetLicensing previously and now adding permission
     for recurring payments.
     <a href="assets/images/11010239/17629240.png" data-lightbox="paypal" data-title="Pre-built payment solution" data-alt="Pre-built payment solution">
-      <img src="assets/images/11010239/17629240.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629240.png" />
     </a>
 
 <!-- -->
@@ -77,14 +77,14 @@ Configure permissions for NetLicensing:
         *"*`paypal-sandbox_api1.labs64.de`*"*
 
     <a href="assets/images/11010239/17629242.png" data-lightbox="paypal" data-title="Grant API permission" data-alt="Grant API permission">
-      <img src="assets/images/11010239/17629242.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629242.png" />
     </a>
     If modifying permissions (`"Manage API permission"` option at the
     previous bullet) - click "Edit Third Party" next to the
     corresponding username
 
     <a href="assets/images/11010239/17629241.png" data-lightbox="paypal" data-title="Manage API permission" data-alt="Manage API permission">
-      <img src="assets/images/11010239/17629241.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629241.png" />
     </a>
 
 <!-- -->
@@ -93,7 +93,7 @@ Configure permissions for NetLicensing:
     at the previous bullet) - select permissions as shown below and
     press `"Add"`
     <a href="assets/images/11010239/17629243.png" data-lightbox="paypal" data-title="Grant API permission" data-alt="Grant API permission">
-      <img src="assets/images/11010239/17629243.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629243.png" />
     </a>
 
     If modifying permissions (`"Manage API permission"` option at the
@@ -102,7 +102,7 @@ Configure permissions for NetLicensing:
     `"Save"`
 
     <a href="assets/images/11010239/17629244.png" data-lightbox="paypal" data-title="Granted Permissions" data-alt="Granted Permissions">
-      <img src="assets/images/11010239/17629244.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629244.png" />
     </a>
 
 <!-- -->
@@ -110,7 +110,7 @@ Configure permissions for NetLicensing:
 -   You have now enabled NetLicensing to call PayPal API on your behalf
     to receive one-time and recurring payments
     <a href="assets/images/11010239/17629245.png" data-lightbox="paypal" data-title="PayPal API" data-alt="PayPal API">
-      <img src="assets/images/11010239/17629245.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629245.png" />
     </a>
 
 <span
@@ -137,21 +137,21 @@ Follow steps below to set up IPN:
 -   Choose first "`My Selling Tools`", then
     "`Instant Payment Notification`"
     <a href="assets/images/11010239/17629222.png" data-lightbox="paypal" data-title="Instant Payment Notification" data-alt="Instant Payment Notification">
-      <img src="assets/images/11010239/17629222.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629222.png" />
     </a>
 -   Press "`Choose IPN Settings`"
     <a href="assets/images/11010239/17629223.png" data-lightbox="paypal" data-title="Choose IPN Settings" data-alt="Choose IPN Settings">
-      <img src="assets/images/11010239/17629223.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629223.png" />
     </a>
 -   Set up Notification URL
     "*`https://go.netlicensing.io/core/v2/external/paypal/ipn/`*" and
     press Save button
     <a href="assets/images/11010239/17629224.png" data-lightbox="paypal" data-title="Set up Notification URL" data-alt="Set up Notification URL">
-      <img src="assets/images/11010239/17629224.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629224.png" />
     </a>
 -   Instant Payment Notification for NetLicensing is now enabled
     <a href="assets/images/11010239/17629221.png" data-lightbox="paypal" data-title="Instant Payment Notification" data-alt="Instant Payment Notification">
-      <img src="assets/images/11010239/17629221.png" class="confluence-embedded-image" />
+      <img src="assets/images/11010239/17629221.png" />
     </a>
 
 <span

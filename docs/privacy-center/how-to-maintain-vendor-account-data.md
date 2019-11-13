@@ -20,7 +20,7 @@ encourage you to maintain your
 by providing up-to-date and correct *Legal Information*, *Address* and
 *Contact Cnformation*.
 
-<a href="https://go.netlicensing.io/console/v2/content/vendor/vendor.xhtml" class="external-link"><img src="assets/images/17433043/17629259.png?effects=drop-shadow" title="Vendor Profile" alt="Vendor Profile" class="confluence-embedded-image" width="600" /></a>
+<a href="https://go.netlicensing.io/console/v2/content/vendor/vendor.xhtml" class="external-link"><img src="assets/images/17433043/17629259.png?effects=drop-shadow" title="Vendor Profile" alt="Vendor Profile" width="600" /></a>
 
 This information will be used in the NetLicensing Shop checkout and
 order confirmation/invoice.

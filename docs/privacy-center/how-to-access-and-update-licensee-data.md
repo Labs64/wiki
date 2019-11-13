@@ -40,7 +40,7 @@ you can list all existing entities</span>.
 By clicking on a single list entry and selecting `"Edit"` you can open
 entry details to view or <span class="complexword">modify</span>.
 
-<a href="https://go.netlicensing.io/console/v2/content/vendor/licensee.xhtml" class="external-link"><img src="assets/images/17433027/17629250.png?effects=drop-shadow" title="Operate - Licensee" alt="Operate - Licensee" class="confluence-embedded-image" width="800" /></a>  
+<a href="https://go.netlicensing.io/console/v2/content/vendor/licensee.xhtml" class="external-link"><img src="assets/images/17433027/17629250.png?effects=drop-shadow" title="Operate - Licensee" alt="Operate - Licensee" width="800" /></a>  
 
 
 

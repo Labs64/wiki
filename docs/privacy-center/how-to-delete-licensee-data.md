@@ -29,7 +29,7 @@ you can list all existing entities</span>.
 By clicking on a single list entry and selecting `"Delete"` you can
 delete entity and all descendants (*License, Transaction*).
 
-<a href="https://go.netlicensing.io/console/v2/content/vendor/licensee.xhtml" class="external-link"><img src="assets/images/17433029/17629257.png?effects=drop-shadow" title="Operate - Delete Licensee" alt="Operate - Delete Licensee" class="confluence-embedded-image" width="800" /></a>  
+<a href="https://go.netlicensing.io/console/v2/content/vendor/licensee.xhtml" class="external-link"><img src="assets/images/17433029/17629257.png?effects=drop-shadow" title="Operate - Delete Licensee" alt="Operate - Delete Licensee" width="800" /></a>  
 
 NetLicensing RESTful API
 ------------------------

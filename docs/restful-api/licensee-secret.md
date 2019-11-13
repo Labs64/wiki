@@ -52,7 +52,7 @@ Validation flow
 
 Here is the licensee secret workflow diagram for the "**Client**" mode:
 
-<img src="assets/images/15794284/16351236.png" class="confluence-embedded-image" />
+<img src="assets/images/15794284/16351236.png" />
 
 Examples
 ========

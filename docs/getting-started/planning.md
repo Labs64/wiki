@@ -38,7 +38,7 @@ product module is licensed according to its licensing model.
 
 This can be represented schematically:
 
-<img src="assets/images/11010227/15171597.png" class="confluence-embedded-image" />
+<img src="assets/images/11010227/15171597.png" />
 
 Each product module is licensed independently, which means there is no
 logic within the NetLicensing that connects licenses of one product
