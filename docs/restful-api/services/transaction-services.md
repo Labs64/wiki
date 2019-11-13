@@ -3,7 +3,7 @@ layout: default
 title: Transaction Services
 parent: Services
 grand_parent: NetLicensing API (RESTful)
-nav_order: 99
+nav_order: 60
 description: "Transaction Services"
 permalink: transaction-services
 ---
@@ -11,10 +11,10 @@ permalink: transaction-services
 Transaction Services
 ====================
 
--   [Transactions list](#TransactionServices-Transactionslist)
--   [Get transaction](#TransactionServices-Gettransaction)
--   [Create transaction](#TransactionServices-Createtransaction)
--   [Update transaction](#TransactionServices-Updatetransaction)
+-   [Transactions list](#transactions-list)
+-   [Get transaction](#get-transaction)
+-   [Create transaction](#create-transaction)
+-   [Update transaction](#update-transaction)
 
 ### Transactions list
 
@@ -34,7 +34,7 @@ Return a list of all transactions for the current vendor.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -109,7 +109,7 @@ Return a transaction by transactionNumber.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -184,7 +184,7 @@ Creates a new transaction.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 </ul></li>
@@ -267,7 +267,7 @@ transaction.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 </ul></li>

@@ -3,7 +3,7 @@ layout: default
 title: Licensee Services
 parent: Services
 grand_parent: NetLicensing API (RESTful)
-nav_order: 99
+nav_order: 40
 description: "Licensee Services"
 permalink: licensee-services
 ---
@@ -11,13 +11,13 @@ permalink: licensee-services
 Licensee Services
 =================
 
--   [Licensees list](#LicenseeServices-Licenseeslist)
--   [Get licensee](#LicenseeServices-Getlicensee)
--   [Create licensee](#LicenseeServices-Createlicensee)
--   [Update licensee](#LicenseeServices-Updatelicensee)
--   [Delete licensee](#LicenseeServices-Deletelicensee)
--   [Validate licensee](#LicenseeServices-Validatelicensee)
--   [Transfer licenses](#LicenseeServices-Transferlicenses)
+-   [Licensees list](#licensees-list)
+-   [Get licensee](#get-licensee)
+-   [Create licensee](#create-licensee)
+-   [Update licensee](#update-licensee)
+-   [Delete licensee](#delete-licensee)
+-   [Validate licensee](#validate-licensee)
+-   [Transfer licenses](#transfer-licenses)
 
 ### Licensees list
 
@@ -37,7 +37,7 @@ Return a list of all licensees for the current vendor.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -111,7 +111,7 @@ Return a licensee by licenseeNumber.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -185,7 +185,7 @@ Creates a new licensee.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -267,7 +267,7 @@ Sets the provided properties to a licensee. Return an updated licensee.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -351,7 +351,7 @@ Delete a licensee by number.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -417,7 +417,7 @@ Validates active licenses of the licensee.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -578,7 +578,7 @@ POST instead (see above)!
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -684,7 +684,7 @@ Transfer licenses between licensees.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>

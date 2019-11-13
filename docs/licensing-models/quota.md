@@ -58,8 +58,8 @@ users, you can offer:
 -   100 users for 45 EUR
 -   1000 users for 400 EUR
 
-Required additional properties specific to the QUANTITY [license
-templates](https://www.labs64.de/confluence/display/NLICPUB/NetLicensing+Object+Model):
+Required additional properties specific to the QUANTITY
+[license templates](object-model#license-template):
 
 -   Integer **quantity** - specifies the quota allowed by the licenses
     created off this template. Positive integer, or '-1' for unlimited
@@ -72,7 +72,7 @@ According to the license templates, QUANTITY licenses define a quota via
 its 'quantity' property.
 
 Required additional properties specific to
-the QUANTITY [licenses](https://www.labs64.de/confluence/display/NLICPUB/NetLicensing+Object+Model):
+the QUANTITY [licenses](object-model#license):
 
 -   Integer **quantity** - specifies the quota allowed by the license.
     Positive integer, or '-1' for unlimited quota. Normally it is copied
@@ -84,8 +84,8 @@ the QUANTITY [licenses](https://www.labs64.de/confluence/display/NLICPUB/NetLi
 Validation
 ==========
 
-On validation, this licensing model does not require any [validate
-parameters](https://www.labs64.de/confluence/display/NLICPUB/Licensee+Services).
+On validation, this licensing model does not require any
+[validate parameters](licensee-services#validate-licensee).
 
 Validation returns following values, specific to **Quota** licensing
 model:

@@ -3,7 +3,7 @@ layout: default
 title: Utility Services
 parent: Services
 grand_parent: NetLicensing API (RESTful)
-nav_order: 99
+nav_order: 90
 description: "Utility Services"
 permalink: utility-services
 ---
@@ -11,8 +11,8 @@ permalink: utility-services
 Utility Services
 ================
 
--   [Licensing Models list](#UtilityServices-LicensingModelslist)
--   [License Types list](#UtilityServices-LicenseTypeslist)
+-   [Licensing Models list](#licensing-models-list)
+-   [License Types list](#license-types-list)
 
 ### Licensing Models list
 
@@ -32,7 +32,7 @@ Return a list of all licensing models supported by the service.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -111,7 +111,7 @@ Return a list of all license types supported by the service.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>

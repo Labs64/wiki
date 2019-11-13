@@ -57,8 +57,8 @@ allow to configure discounts, e.g.:
 -   100 credits for 45 EUR
 -   1000 credits for 400 EUR
 
-Additional properties specific to the QUANTITY [license
-templates](https://www.labs64.de/confluence/display/NLICPUB/NetLicensing+Object+Model):
+Additional properties specific to the QUANTITY
+[license templates](object-model#license-template):
 
 -   Integer **quantity** (required) - specifies credits amount, which is
     assigned by default to the licenses created off this template.
@@ -67,7 +67,7 @@ Licenses
 ========
 
 Additional properties specific to the
-QUANTITY [licenses](https://www.labs64.de/confluence/display/NLICPUB/NetLicensing+Object+Model):
+QUANTITY [licenses](object-model#license):
 
 -   Integer **quantity** (required) - specifies the credits amount,
     provided by this license. Normally it is copied from the
@@ -84,8 +84,8 @@ QUANTITY [licenses](https://www.labs64.de/confluence/display/NLICPUB/NetLicensi
 Validation
 ==========
 
-On validation, this licensing model uses the following [validate
-parameters](https://www.labs64.de/confluence/display/NLICPUB/Licensee+Services):
+On validation, this licensing model uses the following
+[validate parameters](licensee-services#validate-licensee):
 
 -   **productModuleNumber**=\<<span
     class="error">productModuleNumber\> - specifies the product module,

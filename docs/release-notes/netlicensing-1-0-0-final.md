@@ -71,7 +71,7 @@ Release Notes - LmBox 1.0.0-Final
         * [LMB-116] - Enable editing of additional License fixed properties in LmBoxManage
         * [LMB-118] - Change DateTime format to ISO 8601 (using javax.xml.bind.DatatypeConverter)
         * [LMB-127] - Introduce endpoint that provide the list of available licensing models
-        * [LMB-129] - Fix examples in https://www.labs64.de/confluence/x/s4GJ according to new XSD
+        * [LMB-129] - Fix examples in wiki according to new XSD
         * [LMB-134] - Implement licensee auto creation at validate
 
     ** Task

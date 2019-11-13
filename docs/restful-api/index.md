@@ -15,15 +15,14 @@ NetLicensing. The NetLicensing API (RESTful) is for developers
 integrating NetLicensing with applications and administrators who want
 to script interactions with the NetLicensing server.
 
--   [Getting started](#NetLicensingAPI(RESTful)-Gettingstarted)
--   [Services](#NetLicensingAPI(RESTful)-Services)
--   [Structure of the RESTful
-    URIs](#NetLicensingAPI(RESTful)-StructureoftheRESTfulURIs)
--   [Parameters](#NetLicensingAPI(RESTful)-Parameters)
--   [Response](#NetLicensingAPI(RESTful)-Response)
--   [Data Types](#NetLicensingAPI(RESTful)-DataTypes)
--   [Custom properties](#NetLicensingAPI(RESTful)-Customproperties)
--   [Links](#NetLicensingAPI(RESTful)-Links)
+-   [Getting started](#getting-started)
+-   [Services](#services)
+-   [Structure of the RESTful URIs](#structure-of-the-restful-uris)
+-   [Parameters](#parameters)
+-   [Response](#response)
+-   [Data Types](#data-types)
+-   [Custom properties](#custom-properties)
+-   [Links](#links)
 
 Getting started
 ---------------
@@ -53,54 +52,54 @@ If you do not have one already, signup
 <tr class="header">
 <th>Endpoint</th>
 <th>Allowed operations</th>
-<th>Supported authentication method <a href="https://www.labs64.de/confluence/display/NLICPUB/Security">(?)</a></th>
+<th>Supported authentication method <a href="security">(?)</a></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><p><a href="https://www.labs64.de/confluence/display/NLICPUB/Product+Services">Product Services</a></p></td>
+<td><p><a href="product-services">Product Services</a></p></td>
 <td><span class="status-macro aui-lozenge aui-lozenge-success aui-lozenge-subtle">LIST</span><span class="status-macro aui-lozenge aui-lozenge-subtle">GET</span><span class="status-macro aui-lozenge aui-lozenge-complete aui-lozenge-subtle">CREATE</span><span class="status-macro aui-lozenge aui-lozenge-current aui-lozenge-subtle">UPDATE</span><span class="status-macro aui-lozenge aui-lozenge-error aui-lozenge-subtle">DELETE</span></td>
 <td><p><span><span class="status-macro aui-lozenge aui-lozenge-subtle">BASIC AUTH</span><span class="status-macro aui-lozenge aui-lozenge-subtle">APIKEY</span></span></p></td>
 </tr>
 <tr class="even">
-<td><a href="https://www.labs64.de/confluence/display/NLICPUB/Product+Module+Services">Product Module Services</a></td>
+<td><a href="product-module-services">Product Module Services</a></td>
 <td><span class="status-macro aui-lozenge aui-lozenge-success aui-lozenge-subtle">LIST</span><span class="status-macro aui-lozenge aui-lozenge-subtle">GET</span><span class="status-macro aui-lozenge aui-lozenge-complete aui-lozenge-subtle">CREATE</span><span class="status-macro aui-lozenge aui-lozenge-current aui-lozenge-subtle">UPDATE</span><span class="status-macro aui-lozenge aui-lozenge-error aui-lozenge-subtle">DELETE</span></td>
 <td><p><span class="status-macro aui-lozenge aui-lozenge-subtle">BASIC AUTH</span><span class="status-macro aui-lozenge aui-lozenge-subtle">APIKEY</span></p></td>
 </tr>
 <tr class="odd">
-<td><a href="https://www.labs64.de/confluence/display/NLICPUB/License+Template+Services">License Template Services</a></td>
+<td><a href="license-template-services">License Template Services</a></td>
 <td><span class="status-macro aui-lozenge aui-lozenge-success aui-lozenge-subtle">LIST</span><span class="status-macro aui-lozenge aui-lozenge-subtle">GET</span><span class="status-macro aui-lozenge aui-lozenge-complete aui-lozenge-subtle">CREATE</span><span class="status-macro aui-lozenge aui-lozenge-current aui-lozenge-subtle">UPDATE</span><span class="status-macro aui-lozenge aui-lozenge-error aui-lozenge-subtle">DELETE</span></td>
 <td><p><span class="status-macro aui-lozenge aui-lozenge-subtle">BASIC AUTH</span><span class="status-macro aui-lozenge aui-lozenge-subtle">APIKEY</span></p></td>
 </tr>
 <tr class="even">
-<td><a href="https://www.labs64.de/confluence/display/NLICPUB/Licensee+Services">Licensee Services</a></td>
+<td><a href="licensee-services">Licensee Services</a></td>
 <td><span class="status-macro aui-lozenge aui-lozenge-success aui-lozenge-subtle">LIST</span><span class="status-macro aui-lozenge aui-lozenge-subtle">GET</span><span class="status-macro aui-lozenge aui-lozenge-complete aui-lozenge-subtle">CREATE</span><span class="status-macro aui-lozenge aui-lozenge-current aui-lozenge-subtle">UPDATE</span><span class="status-macro aui-lozenge aui-lozenge-error aui-lozenge-subtle">DELETE</span><span class="status-macro aui-lozenge aui-lozenge-subtle">VALIDATE</span><span class="status-macro aui-lozenge aui-lozenge-subtle">TRANSFER</span></td>
 <td><p><span class="status-macro aui-lozenge aui-lozenge-subtle">BASIC AUTH</span><span class="status-macro aui-lozenge aui-lozenge-subtle">APIKEY</span></p></td>
 </tr>
 <tr class="odd">
-<td><a href="https://www.labs64.de/confluence/display/NLICPUB/License+Services">License Services</a></td>
+<td><a href="license-services">License Services</a></td>
 <td><span class="status-macro aui-lozenge aui-lozenge-success aui-lozenge-subtle">LIST</span><span class="status-macro aui-lozenge aui-lozenge-subtle">GET</span><span class="status-macro aui-lozenge aui-lozenge-complete aui-lozenge-subtle">CREATE</span><span class="status-macro aui-lozenge aui-lozenge-current aui-lozenge-subtle">UPDATE</span><span class="status-macro aui-lozenge aui-lozenge-error aui-lozenge-subtle">DELETE</span></td>
 <td><p><span><span class="status-macro aui-lozenge aui-lozenge-subtle">BASIC AUTH</span><span class="status-macro aui-lozenge aui-lozenge-subtle">APIKEY</span><br />
 </span></p></td>
 </tr>
 <tr class="even">
-<td><a href="https://www.labs64.de/confluence/display/NLICPUB/Transaction+Services">Transaction Services</a></td>
+<td><a href="transaction-services">Transaction Services</a></td>
 <td><span class="status-macro aui-lozenge aui-lozenge-success aui-lozenge-subtle">LIST</span><span class="status-macro aui-lozenge aui-lozenge-subtle">GET</span><span class="status-macro aui-lozenge aui-lozenge-complete aui-lozenge-subtle">CREATE</span><span class="status-macro aui-lozenge aui-lozenge-current aui-lozenge-subtle">UPDATE</span></td>
 <td><p><span><span class="status-macro aui-lozenge aui-lozenge-subtle">BASIC AUTH</span><span class="status-macro aui-lozenge aui-lozenge-subtle">APIKEY</span><br />
 </span></p></td>
 </tr>
 <tr class="odd">
-<td><a href="https://www.labs64.de/confluence/display/NLICPUB/Token+Services">Token Services</a></td>
+<td><a href="token-services">Token Services</a></td>
 <td><span class="status-macro aui-lozenge aui-lozenge-success aui-lozenge-subtle">LIST</span><span class="status-macro aui-lozenge aui-lozenge-subtle">GET</span><span class="status-macro aui-lozenge aui-lozenge-complete aui-lozenge-subtle">CREATE</span><span class="status-macro aui-lozenge aui-lozenge-error aui-lozenge-subtle">DELETE</span></td>
 <td><p><span class="status-macro aui-lozenge aui-lozenge-subtle">BASIC AUTH</span><span class="status-macro aui-lozenge aui-lozenge-subtle">APIKEY</span></p></td>
 </tr>
 <tr class="even">
-<td><a href="https://www.labs64.de/confluence/display/NLICPUB/Payment+Method+Services">Payment Method Services</a></td>
+<td><a href="payment-method-services">Payment Method Services</a></td>
 <td><span class="status-macro aui-lozenge aui-lozenge-success aui-lozenge-subtle">LIST</span><span class="status-macro aui-lozenge aui-lozenge-subtle">GET</span><span class="status-macro aui-lozenge aui-lozenge-current aui-lozenge-subtle">UPDATE</span></td>
 <td><p><span class="status-macro aui-lozenge aui-lozenge-subtle">BASIC AUTH</span><span class="status-macro aui-lozenge aui-lozenge-subtle">APIKEY</span></p></td>
 </tr>
 <tr class="odd">
-<td><a href="https://www.labs64.de/confluence/display/NLICPUB/Utility+Services">Utility Services</a></td>
+<td><a href="utility-services">Utility Services</a></td>
 <td><span class="status-macro aui-lozenge aui-lozenge-success aui-lozenge-subtle">LIST</span></td>
 <td><p><span class="status-macro aui-lozenge aui-lozenge-subtle">BASIC AUTH</span><span class="status-macro aui-lozenge aui-lozenge-subtle">APIKEY</span></p></td>
 </tr>

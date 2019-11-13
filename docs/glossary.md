@@ -21,7 +21,7 @@ Glossary
 </tr>
 <tr class="even">
 <td><p><strong>Entity</strong></p></td>
-<td><p>Instance of an object within <a href="/confluence/display/NLICPUB/NetLicensing+Object+Model" title="NetLicensing Object Model">NetLicensing Object Model</a></p></td>
+<td><p markdown="1">Instance of an object within [NetLicensing Object Model](object-model)</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>NetLicensing</strong></p></td>

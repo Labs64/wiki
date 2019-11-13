@@ -3,7 +3,7 @@ layout: default
 title: Product Services
 parent: Services
 grand_parent: NetLicensing API (RESTful)
-nav_order: 99
+nav_order: 10
 description: "Product Services"
 permalink: product-services
 ---
@@ -11,11 +11,11 @@ permalink: product-services
 Product Services
 ================
 
--   [Products list](#ProductServices-Productslist)
--   [Get product](#ProductServices-Getproduct)
--   [Create product](#ProductServices-Createproduct)
--   [Update product](#ProductServices-Updateproduct)
--   [Delete product](#ProductServices-Deleteproduct)
+-   [Products list](#products-list)
+-   [Get product](#get-product)
+-   [Create product](#create-product)
+-   [Update product](#update-product)
+-   [Delete product](#delete-product)
 
 ### Products list
 
@@ -35,7 +35,7 @@ Return a list of all configured products for the current vendor.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -117,7 +117,7 @@ Return a product by productNumber.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -201,7 +201,7 @@ Creates a new product.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -306,7 +306,7 @@ Sets the provided properties to a product. Return an updated product.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -415,7 +415,7 @@ Delete a product by number.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>

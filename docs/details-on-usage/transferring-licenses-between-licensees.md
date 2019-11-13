@@ -55,10 +55,10 @@ And here's how the software will use the *license key* that customer
 received from eCommerce:
 
 1.  Obtain the *license key* from the user
-2.  Call [transfer](licensee-services) method for own
+2.  Call [transfer](licensee-services#transfer-licenses) method for own
     *licensee number*, passing the received *license key* as source
     *licensee number*
-3.  [Validate](licensee-services) as usual for own
+3.  [Validate](licensee-services#validate-licensee) as usual for own
     *licensee number*
 
 Above workflow assumes that own *licensee number* already exists,
@@ -176,7 +176,7 @@ assigned to the end user and is known to the software. When the software
 receives the new (temporary) licensee number, it will execute the
 following:
 
-1.  Call [transfer](https://www.labs64.de/confluence/display/NLICPUB/Licensee+Services) method
+1.  Call [transfer](licensee-services#transfer-licenses) method
     for permanent licensee number `I542PBSID`, passing the new licensee
     number `I762LBSSX` as `sourceLicenseeNumber` parameter
 

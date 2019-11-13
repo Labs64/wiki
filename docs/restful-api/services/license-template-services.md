@@ -3,7 +3,7 @@ layout: default
 title: License Template Services
 parent: Services
 grand_parent: NetLicensing API (RESTful)
-nav_order: 99
+nav_order: 30
 description: "License Template Services"
 permalink: license-template-services
 ---
@@ -11,15 +11,11 @@ permalink: license-template-services
 License Template Services
 =========================
 
--   [License templates
-    list](#LicenseTemplateServices-Licensetemplateslist)
--   [Get license template](#LicenseTemplateServices-Getlicensetemplate)
--   [Create license
-    template](#LicenseTemplateServices-Createlicensetemplate)
--   [Update license
-    template](#LicenseTemplateServices-Updatelicensetemplate)
--   [Delete license
-    template](#LicenseTemplateServices-Deletelicensetemplate)
+-   [License templates list](#license-templates-list)
+-   [Get license template](#get-license-template)
+-   [Create license template](#create-license-template)
+-   [Update license template](#update-license-template)
+-   [Delete license template](#delete-license-template)
 
 ### License templates list
 
@@ -39,7 +35,7 @@ Return a list of all license templates for the current vendor.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -114,7 +110,7 @@ Return a license template by licenseTemplateNumber.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -189,7 +185,7 @@ Creates a new license template.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -279,7 +275,7 @@ license template.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -368,7 +364,7 @@ Delete a license template by number.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>

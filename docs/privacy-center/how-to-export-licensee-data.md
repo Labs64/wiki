@@ -17,20 +17,17 @@ machine-readable format (not human readable).
 NetLicensing RESTful API
 ------------------------
 
-With the help of [NetLicensing RESTful API](11010215.html), you can
+With the help of [NetLicensing RESTful API](restful-api), you can
 easily export customer's data in `XML` or `JSON` format.
 
 Please refer to the documentation for the GET operations of the
 corresponding service:
 
--   [Licensee
-    Services](https://www.labs64.de/confluence/display/NLICPUB/Licensee+Services) -
+-   [Licensee Services](licensee-services) -
     to retrieve *Licensee* data using its *LicenseeNumber*
--   [License
-    Services](https://www.labs64.de/confluence/display/NLICPUB/License+Services) -
+-   [License Services](license-services) -
     to retrieve *License* data, which can be filtered post-export by
     `"`licenseeNumber`"` property within single *License* entity
--   [Transaction
-    Services](https://www.labs64.de/confluence/display/NLICPUB/Transaction+Services) -
+-   [Transaction Services](transaction-services) -
     to retrieve *Transaction* data, which can be filtered post-export by
     `"`licenseNumber`"` property within single *Transaction* entity

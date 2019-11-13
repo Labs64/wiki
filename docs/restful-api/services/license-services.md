@@ -3,7 +3,7 @@ layout: default
 title: License Services
 parent: Services
 grand_parent: NetLicensing API (RESTful)
-nav_order: 99
+nav_order: 50
 description: "License Services"
 permalink: license-services
 ---
@@ -11,11 +11,11 @@ permalink: license-services
 License Services
 ================
 
--   [Licenses list](#LicenseServices-Licenseslist)
--   [Get license](#LicenseServices-Getlicense)
--   [Create license](#LicenseServices-Createlicense)
--   [Update license](#LicenseServices-Updatelicense)
--   [Delete license](#LicenseServices-Deletelicense)
+-   [Licenses list](#licenses-list)
+-   [Get license](#get-license)
+-   [Create license](#create-license)
+-   [Update license](#update-license)
+-   [Delete license](#delete-license)
 
 ### Licenses list
 
@@ -35,7 +35,7 @@ Return a list of all licenses for the current vendor.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -109,7 +109,7 @@ Return a license by licenseNumber.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -183,7 +183,7 @@ Creates a new license.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -268,7 +268,7 @@ Sets the provided properties to a license. Return an updated license.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -356,7 +356,7 @@ Delete a license by number.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>

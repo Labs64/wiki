@@ -34,15 +34,13 @@ delete entity and all descendants (*License, Transaction*).
 NetLicensing RESTful API
 ------------------------
 
-With the help of [NetLicensing RESTful
-API](https://www.labs64.de/confluence/pages/viewpage.action?pageId=11010215),
+With the help of [NetLicensing RESTful API](restful-api),
 you can easily delete customer's data.
 
 Please refer to the documentation for the DELETE operations of the
 corresponding service:
 
--   [Licensee
-    Services](https://www.labs64.de/confluence/display/NLICPUB/Licensee+Services) -
+-   [Licensee Services](licensee-services#delete-licensee) -
     to delete *Licensee* data using its *LicenseeNumber*
 
 Did you know?
@@ -52,11 +50,9 @@ Did you know?
 `"forceCascade"` query param, forces *Licensee* entity deletion and
 all descendants (*License, Transaction*)
 
--   [License
-    Services](https://www.labs64.de/confluence/display/NLICPUB/License+Services) -
+-   [License Services](license-services#delete-license) -
     to *delete License* data using its *LicenseNumber*
--   [Transaction
-    Services](https://www.labs64.de/confluence/display/NLICPUB/Transaction+Services) -
+-   [Transaction Services](transaction-services) -
     to *delete Transaction* data using its **Transaction*Number*
 
 Tips

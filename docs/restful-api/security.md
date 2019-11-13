@@ -55,8 +55,7 @@ $ curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --head
 
 API key can be obtained via
 the <a href="https://go.netlicensing.io/console/v2/" class="external-link">NetLicensing Management Console</a> or
-using the API [token
-service](https://www.labs64.de/confluence/display/NLICPUB/Token+Services).
+using the API [token service](token-services).
 
 Each API key has associated role, that grants access to a specific API
 subset:

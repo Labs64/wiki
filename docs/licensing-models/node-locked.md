@@ -81,8 +81,8 @@ Specific properties:
 Validation
 ==========
 
-On validation, this licensing model uses the following [validate
-parameters](https://www.labs64.de/confluence/display/NLICPUB/Licensee+Services):
+On validation, this licensing model uses the following
+[validate parameters](licensee-services#validate-licensee):
 
 -   **productModuleNumber**=\<<span
     class="error">productModuleNumber\> - product module using the

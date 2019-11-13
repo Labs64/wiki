@@ -3,7 +3,7 @@ layout: default
 title: Payment Method Services
 parent: Services
 grand_parent: NetLicensing API (RESTful)
-nav_order: 99
+nav_order: 80
 description: "Payment Method Services"
 permalink: payment-method-services
 ---
@@ -11,9 +11,9 @@ permalink: payment-method-services
 Payment Method Services
 =======================
 
--   [Payment methods list](#PaymentMethodServices-Paymentmethodslist)
--   [Get payment method](#PaymentMethodServices-Getpaymentmethod)
--   [Update payment method](#PaymentMethodServices-Updatepaymentmethod)
+-   [Payment methods list](#payment-methods-list)
+-   [Get payment method](#get-payment-method)
+-   [Update payment method](#update-payment-method)
 
 ### Payment methods list
 
@@ -33,7 +33,7 @@ Return a list of all payment methods for the current vendor.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 </ul></li>
@@ -115,7 +115,7 @@ Return a payment method info by paymentMethodNumber.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 </ul></li>
@@ -194,7 +194,7 @@ payment method.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 </ul></li>

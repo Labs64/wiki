@@ -3,7 +3,7 @@ layout: default
 title: Token Services
 parent: Services
 grand_parent: NetLicensing API (RESTful)
-nav_order: 99
+nav_order: 70
 description: "Token Services"
 permalink: token-services
 ---
@@ -11,10 +11,10 @@ permalink: token-services
 Token Services
 ==============
 
--   [Tokens list](#TokenServices-Tokenslist)
--   [Get token](#TokenServices-Gettoken)
--   [Create token](#TokenServices-Createtoken)
--   [Delete token](#TokenServices-Deletetoken)
+-   [Tokens list](#tokens-list)
+-   [Get token](#get-token)
+-   [Create token](#create-token)
+-   [Delete token](#delete-token)
 
 ### Tokens list
 
@@ -200,7 +200,7 @@ Create token by tokenType and additional token parameters.
 <td>Security</td>
 <td><ul>
 <li>Basic Authentication</li>
-<li><a href="https://www.labs64.de/confluence/display/NLICPUB/Security">API Key Identification</a> (<span>Only for tokenType=SHOP)</span>
+<li><a href="security">API Key Identification</a> (<span>Only for tokenType=SHOP)</span>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
