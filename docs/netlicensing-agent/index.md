@@ -31,7 +31,7 @@ NetLicensing Agent
 
 This document assumes you're familiar with the Labs64 NetLicensing
 service. If you need more info about NetLicensing, please
-visit <a href="https://netlicening.io" class="external-link">https://netlicening.io</a>.
+visit <a href="https://netlicensing.io" class="external-link">https://netlicensing.io</a>.
 
 Motivation
 ==========
