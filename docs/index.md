@@ -3,7 +3,7 @@ layout: default
 title: Home
 nav_order: 1
 description: "NetLicensing Wiki"
-permalink: /wiki
+permalink: /
 ---
 
 **Welcome to the NetLicensing Wiki**
