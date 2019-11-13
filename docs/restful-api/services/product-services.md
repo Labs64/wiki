@@ -222,7 +222,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>licenseeAutoCreate (boolean) - If set to 'true', non-existing licensees will be created at first validation attempt.</p>
 <p>description (string) - Product description. Optional.</p>
 <p>licensingInfo (string) - Licensing information. Optional.</p>
-<p>licenseeSecretMode (enum) - Licensee secret mode for product (<img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /> available in selected pricing plans). Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> <em>Deprecated, use <a href="Node-Locked_18677762.html">Node-Locked Licensing Model</a> instead.</em></p>
+<p>licenseeSecretMode (enum) - Licensee secret mode for product (<img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /> available in selected pricing plans). Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> <em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></p>
 <p><span style="color: rgb(0,0,0);"> - DISABLED - licensee secret ignored.</span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"> - <span>PREDEFINED - licensee secret must be set in NetLicensing (can't be used with Auto-create Licensee).</span></span></span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"><span> - <span>CLIENT - client sets the licensee secret on first validate.</span></span></span></span></p>
@@ -328,7 +328,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>licenseeAutoCreate (boolean) - If set to 'true', non-existing licensees will be created at first validation attempt.</p>
 <p>description (string) - Product description. Optional.</p>
 <p>licensingInfo (string) - Licensing information. Optional.</p>
-<p>licenseeSecretMode (enum) - <span>Licensee secret mode for product (</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> </span><span>available in selected pricing plans</span><span>). Optional. </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="Node-Locked_18677762.html">Node-Locked Licensing Model</a> instead.</em></p>
+<p>licenseeSecretMode (enum) - <span>Licensee secret mode for product (</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> </span><span>available in selected pricing plans</span><span>). Optional. </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></p>
 <p><span style="color: rgb(0,0,0);"> - DISABLED - licensee secret ignored.</span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"> - PREDEFINED - licensee secret must be set in NetLicensing (can't be used with Auto-create Licensee).</span></span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"> - CLIENT - client sets the licensee secret on first validate.</span></span></p>

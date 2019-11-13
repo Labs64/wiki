@@ -181,7 +181,7 @@ Use the following request header in this case:
 Response
 --------
 
-Depending on the value passed in the [`Accept:`](11010215.html) field of
+Depending on the value passed in the [`Accept:`](#structure-of-the-restful-uris) field of
 the request header, NetLicensing will reply in *XML* or *JSON* format.
 The structure of the response is documented in XML Schema Definition
 that can be downloaded at

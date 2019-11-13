@@ -204,7 +204,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>number (string) - Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee. Optional.</p>
 <p>active (boolean) - If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled (tbd).</p>
 <p>name (string) - Licensee name. Optional.</p>
-<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L<span>icensee Secret for this licensee <span>(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> available in selected pricing plans)</span>. </span>Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="Node-Locked_18677762.html">Node-Locked Licensing Model</a> instead.</em></span></p>
+<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L<span>icensee Secret for this licensee <span>(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> available in selected pricing plans)</span>. </span>Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(34,34,34);">markedForTransfer (boolean) - Mark licensee for transfer. <span style="color: rgb(80,80,80);">Optional.</span></span></span></p></td>
 </tr>
 <tr class="odd">
@@ -286,7 +286,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>number (string) - Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee. Optional.</p>
 <p>active (boolean) - If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled (tbd). Optional.</p>
 <p>name (string) - Licensee name. Optional.</p>
-<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L</span><span style="color: rgb(80,80,80);">icensee Secret for licensee <span style="color: rgb(80,80,80);">(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span style="color: rgb(80,80,80);"> available in selected pricing plans)</span>. </span><span style="color: rgb(80,80,80);">Optional.<span style="color: rgb(80,80,80);"> </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span style="color: rgb(80,80,80);"> </span><em>Deprecated, use <a href="Node-Locked_18677762.html">Node-Locked Licensing Model</a> instead.</em></span></p>
+<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L</span><span style="color: rgb(80,80,80);">icensee Secret for licensee <span style="color: rgb(80,80,80);">(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span style="color: rgb(80,80,80);"> available in selected pricing plans)</span>. </span><span style="color: rgb(80,80,80);">Optional.<span style="color: rgb(80,80,80);"> </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span style="color: rgb(80,80,80);"> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(34,34,34);">markedForTransfer (boolean) - Mark licensee for transfer. </span><span>Optional.</span></span></p></td>
 </tr>
 <tr class="odd">
@@ -437,7 +437,7 @@ Validates active licenses of the licensee.
 <td><p><em>licenseeNumber (string)</em> - licensee number with a maximum length of 1000 characters<br />
 <em>productNumber (string) (optional)</em> - product number, must be provided when "licensee auto-create" is enabled (see also <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/domain/entity/Product.html" class="external-link">Product</a> JavaDoc). Identifies the product to which new licensee should be added.<br />
 <em>licenseeName (string) (optional)</em> - human-readable name for the auto-created licensee (will be set as custom Licensee property)<br />
-<em>licenseeSecret (string) (optional)</em> - when provided and licensee secret enabled, will enable the licensee secret logic as described in <a href="15794284.html">Licensee Secret (deprecated)</a></p>
+<em>licenseeSecret (string) (optional)</em> - when provided and licensee secret enabled, will enable the licensee secret logic as described in <a href="licensee-secret">Licensee Secret (deprecated)</a></p>
 <p>Some product modules (depending on the licensing model) may require parameters passed on validate. Parameters to the product modules are passed using the following format:</p>
 <p><em>productModuleNumber0 (string)</em> - product module 0 number<em><br />
 &lt;pmParam1&gt;0</em> <em>(any)</em> - product module 0 parameter "&lt;pmParam1&gt;"<em><br />
@@ -597,7 +597,7 @@ POST instead (see above)!
 <td><p><em>licenseeNumber (string)</em> - licensee number with a maximum length of 1000 characters<br />
 <em>productNumber (string) (optional)</em> - product number, must be provided when "licensee auto-create" is enabled (see also <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/domain/entity/Product.html" class="external-link">Product</a> JavaDoc). Identifies the product to which new licensee should be added.<br />
 <em>licenseeName (string) (optional)</em> - human-readable name for the auto-created licensee (will be set as custom Licensee property)<br />
-<em>licenseeSecret (string) (optional)</em> - when provided and licensee secret enabled, will enable the licensee secret logic as described in <a href="15794284.html">Licensee Secret (deprecated)</a></p>
+<em>licenseeSecret (string) (optional)</em> - when provided and licensee secret enabled, will enable the licensee secret logic as described in <a href="licensee-secret">Licensee Secret (deprecated)</a></p>
 <p>Some product modules (depending on the licensing model) may require parameters passed on validate. Parameters to the product modules are passed using the following format:</p>
 <p><em>productModuleNumber0 (string)</em> - product module 0 number<em><br />
 &lt;pmParam1&gt;0</em> <em>(any)</em> - product module 0 parameter "&lt;pmParam1&gt;"<em><br />
