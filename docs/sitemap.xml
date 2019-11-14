@@ -1,48 +1,14 @@
 ---
-layout: default
-sitemap:
-  exclude: true
+layout: vendor/compress
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- generated-on="{{ site.time | date_to_rfc822 }}" -->
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
-  {% for post in site.posts %}
-    {% unless post.published == false %}
-    <url>
-      <loc>{{ site.url }}{{ post.url | remove: "index.html" }}</loc>
-      {% if post.sitemap.lastmod %}
-        <lastmod>{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif post.date %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      {% if post.sitemap.changefreq %}
-        <changefreq>{{ post.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>weekly</changefreq>
-      {% endif %}
-      {% if post.sitemap.priority %}
-        <priority>{{ post.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.4</priority>
-      {% endif %}
-      {% if post.image.url %}
-        {% include image4sitemap.html image=post.image.url %}
-      {% endif %}
-      {% if post.sitemap.images %}
-        {% for post_image in post.sitemap.images %}
-          {% include image4sitemap.html image=post_image %}
-        {% endfor %}
-      {% endif %}
-    </url>
-    {% endunless %}
-  {% endfor %}
   {% for page in site.pages %}
     {% unless page.sitemap.exclude %}
     <url>
-      <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
+      <loc>{{ page.url | remove_first:'/' | remove: "index.html" | prepend: site.baseurl | prepend: site.url }}</loc>
       {% if page.sitemap.lastmod %}
         <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
       {% elsif page.date %}
@@ -59,11 +25,6 @@ sitemap:
         <priority>{{ page.sitemap.priority }}</priority>
       {% else %}
         <priority>0.5</priority>
-      {% endif %}
-      {% if page.sitemap.images %}
-        {% for page_image in page.sitemap.images %}
-          {% include image4sitemap.html image=page_image %}
-        {% endfor %}
       {% endif %}
     </url>
     {% endunless %}
