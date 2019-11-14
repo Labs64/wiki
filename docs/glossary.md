@@ -4,7 +4,7 @@ title: Glossary
 nav_order: 120
 description: "NetLicensing Glossary"
 permalink: glossary
-canonical: glossary
+canonical: /glossary
 ---
 
 Glossary
