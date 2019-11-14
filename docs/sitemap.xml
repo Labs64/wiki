@@ -5,7 +5,7 @@ layout: vendor/compress
 <!-- generated-on="{{ site.time | date_to_rfc822 }}" -->
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
-  {% for page in site.pages %}
+  {% for page in site.html_pages %}
     {% unless page.sitemap.exclude %}
     <url>
       <loc>{{ page.url | remove_first:'/' | remove: "index.html" | prepend: site.baseurl | prepend: site.url }}</loc>
