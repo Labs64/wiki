@@ -3,7 +3,7 @@ layout: default
 title: NetLicensing 2.5.0-FINAL
 parent: Release Notes
 nav_order: 24
-description: "NetLicensing 2.5.0-FINAL"
+description: "NetLicensing 2.5.0 - Indian Summer edition: Kotlin client, Zapier integration, new Management Console, extended Node-Locked"
 permalink: netlicensing-2-5-0-final
 ---
 
