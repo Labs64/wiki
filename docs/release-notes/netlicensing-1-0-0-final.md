@@ -3,12 +3,12 @@ layout: default
 title: NetLicensing (LmBox) 1.0.0-FINAL
 parent: Release Notes
 nav_order: 5
-description: "NetLicensing (prev. LmBox) 1.0.0-FINAL"
+description: "The first Labs64 NetLicensing (former project name LmBox) release made available for ISV in late 2014."
 permalink: netlicensing-1-0-0-final
 ---
 
-Release Notes - LmBox 1.0.0-Final
-=================================
+Release Notes - NetLicensing (LmBox) 1.0.0-FINAL
+================================================
 
     ** Feature
         * [LMB-26] - Refactor Object Model
