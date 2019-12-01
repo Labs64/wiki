@@ -147,8 +147,7 @@ either **Private** or **Company**:
 -   **Company** - VAT is applied to all prices.
 
 **Vendor type** is managed in the
-<a href="https://go.netlicensing.io/console/v2/content/vendor/vendor.xhtml" class="external-link">Vendor Profile</a>
-section of the NetLicensing Console:
+<a href="https://ui.netlicensing.io/#/profile" class="external-link">Vendor Profile</a> section of the NetLicensing Console:
 
 <a href="assets/images/17432840/17629219.png" data-lightbox="eu-vat-2015" data-title="Vendor type" data-alt="Vendor type">
   <img src="assets/images/17432840/17629219.png" />

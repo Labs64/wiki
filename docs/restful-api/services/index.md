@@ -17,7 +17,7 @@ Application Programming Interface (API).
 
 To access the API methods you will need a NetLicensing vendor account.
 If you do not have one already, signup
-<a href="https://go.netlicensing.io/console/v2/content/register.xhtml" class="external-link">here</a>.
+<a href="https://ui.netlicensing.io/#/register" class="external-link">here</a>.
 
 <table>
 <colgroup>

@@ -37,7 +37,7 @@ Vendor is a licensor that uses NetLicensing service for managing the
 licenses for his products. Vendor registers with NetLicensing by opening
 an account. Vendor configures his products and desired licenses within
 the NetLicensing service via
-<a href="https://go.netlicensing.io/console/v2/" class="external-link">NetLicensing Management Console</a>.
+<a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a>.
 Besides, vendor has to integrate NetLicensing service into his products
 by means of NetLicensing API.
 

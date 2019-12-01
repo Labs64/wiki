@@ -29,7 +29,7 @@ Glossary
 </tr>
 <tr class="even">
 <td><p><strong>NetLicensing Management Console</strong></p></td>
-<td><p><a href="https://go.netlicensing.io/console/v2/" class="external-link">Web-based user interface</a> of NetLicensing, accessible by vendor.</p></td>
+<td><p><a href="https://ui.netlicensing.io" class="external-link">Web-based user interface</a> of NetLicensing, accessible by vendor.</p></td>
 </tr>
 <tr class="odd">
 <td><p><strong>NetLicensing Shop</strong></p></td>

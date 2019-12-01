@@ -15,21 +15,13 @@ GDPR requires you to delete customers' data on their request.
 NetLicensing Management Console
 -------------------------------
 
-<span class="hardreadability">Log in to the NetLicensing Management
-Console using your vendor account and expand the section
-`"Operate"`</span>.
+<span class="hardreadability">Log in to the NetLicensing Management Console using your vendor account and expand the section `"Operate"`</span>.
 
-<span class="hardreadability">By choosing corresponding menu item for
-<a href="https://go.netlicensing.io/console/v2/content/vendor/licensee.xhtml" class="external-link l64-extlink">Licensee</a>,
-<a href="https://go.netlicensing.io/console/v2/content/vendor/license.xhtml" class="external-link l64-extlink">License</a>
-or
-<a href="https://go.netlicensing.io/console/v2/content/vendor/transaction.xhtml" class="external-link l64-extlink">Transaction</a>
-you can list all existing entities</span>.
+<span class="hardreadability">You can access customer's data such as profile details, licenses and transaction, by choosing menu item <a href="https://ui.netlicensing.io/#/customers" class="external-link">Customers</a></span>.
 
-By clicking on a single list entry and selecting `"Delete"` you can
-delete entity and all descendants (*License, Transaction*).
+By clicking on a single list entry and selecting `"Delete"` you can delete entity and all descendants (*License, Transaction*).
 
-<a href="https://go.netlicensing.io/console/v2/content/vendor/licensee.xhtml" class="external-link"><img src="assets/images/17433029/17629257.png?effects=drop-shadow" title="Operate - Delete Licensee" alt="Operate - Delete Licensee" width="800" /></a>  
+<a href="https://ui.netlicensing.io/#/customers" class="external-link"><img src="assets/images/17433029/17629257.png?effects=drop-shadow" title="Operate - Delete Licensee" alt="Operate - Delete Licensee" width="800" /></a>  
 
 NetLicensing RESTful API
 ------------------------

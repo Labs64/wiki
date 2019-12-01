@@ -26,21 +26,13 @@ options:
 NetLicensing Management Console
 -------------------------------
 
-<span class="hardreadability">Log in to the NetLicensing Management
-Console using your vendor account and expand the section
-`"Operate"`</span>.
+<span class="hardreadability">Log in to the NetLicensing Management Console using your vendor account and expand the section `"Operate"`</span>.
 
-<span class="hardreadability">By choosing corresponding menu item for
-<a href="https://go.netlicensing.io/console/v2/content/vendor/licensee.xhtml" class="external-link">Licensee</a>,
-<a href="https://go.netlicensing.io/console/v2/content/vendor/license.xhtml" class="external-link">License</a>
-or
-<a href="https://go.netlicensing.io/console/v2/content/vendor/transaction.xhtml" class="external-link">Transaction</a>
-you can list all existing entities</span>.
+<span class="hardreadability">You can access customer's data such as profile details, licenses and transaction, by choosing menu item <a href="https://ui.netlicensing.io/#/customers" class="external-link">Customers</a></span>.
 
-By clicking on a single list entry and selecting `"Edit"` you can open
-entry details to view or <span class="complexword">modify</span>.
+By clicking on a single list entry and selecting `"Edit"` you can open entry details to view or <span class="complexword">modify</span>.
 
-<a href="https://go.netlicensing.io/console/v2/content/vendor/licensee.xhtml" class="external-link"><img src="assets/images/17433027/17629250.png?effects=drop-shadow" title="Operate - Licensee" alt="Operate - Licensee" width="800" /></a>  
+<a href="https://ui.netlicensing.io/#/customers" class="external-link"><img src="assets/images/17433027/17629250.png?effects=drop-shadow" title="Operate - Licensee" alt="Operate - Licensee" width="800" /></a>  
 
 
 

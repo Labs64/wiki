@@ -162,7 +162,7 @@ First of all, if this is a new customer, corresponding
 created within NetLicensing, holding the above customer number -
 "CUST-4567".  
 This can be done either manually via
-<a href="https://go.netlicensing.io/console/v2/" class="external-link">NetLicensing Management Console</a> or
+<a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a> or
 the application on the payment processing server can do it via
 [NetLicensing API](restful-api), if it has an automated customer
 registration procedure.

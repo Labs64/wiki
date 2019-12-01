@@ -16,7 +16,7 @@ Setting up
 ### Configure the product in NetLicensing via NetLicensing Management Console
 
 1.  Create a NetLicensing account by registering
-    at <a href="https://go.netlicensing.io/console/v2/" class="external-link">NetLicensing Management Console</a>
+    at <a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a>
 2.  Setup the layout using NetLicensing Management Console:
     -   create a product
     -   create product modules
@@ -30,7 +30,7 @@ Setting up
 1\. Create an account with NetLicensing
 
 2\. Login to NetLicensing Management Console at
-<a href="https://go.netlicensing.io/console/v2/" class="external-link">https://go.netlicensing.io/console/v2/</a>
+<a href="https://ui.netlicensing.io" class="external-link">ui.netlicensing.io</a>
 
 2.1. Create a product
 
