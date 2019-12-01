@@ -149,8 +149,8 @@ either **Private** or **Company**:
 **Vendor type** is managed in the
 <a href="https://ui.netlicensing.io/#/profile" class="external-link">Vendor Profile</a> section of the NetLicensing Console:
 
-<a href="assets/images/17432840/17629219.png" data-lightbox="eu-vat-2015" data-title="Vendor type" data-alt="Vendor type">
-  <img src="assets/images/17432840/17629219.png" />
+<a href="assets/images/eu-vat-09.png" data-lightbox="eu-vat-2015" data-title="Vendor type" data-alt="Vendor type">
+  <img src="assets/images/eu-vat-09.png" />
 </a>
 
 
@@ -171,8 +171,8 @@ prior to introduction of VAT handling.*
 
 **Vat Calculation Mode** is managed via the Product Edit in the NetLicensing Console:
 
-<a href="assets/images/17432840/17629218.png" data-lightbox="eu-vat-2015" data-title="Vat Calculation Mode" data-alt="Vat Calculation Mode">
-  <img src="assets/images/17432840/17629218.png" />
+<a href="assets/images/eu-vat-08.png" data-lightbox="eu-vat-2015" data-title="Vat Calculation Mode" data-alt="Vat Calculation Mode">
+  <img src="assets/images/eu-vat-08.png" />
 </a>
 
 
@@ -182,18 +182,18 @@ prior to introduction of VAT handling.*
     in the specified price, which is reflected in the NetLicensing Shop
     as a corresponding note below the shown prices:
 
-    <a href="assets/images/17432840/17629217.png" data-lightbox="eu-vat-2015" data-title="Gross shopping" data-alt="Gross shopping">
-      <img src="assets/images/17432840/17629217.png" />
+    <a href="assets/images/eu-vat-07.png" data-lightbox="eu-vat-2015" data-title="Gross shopping" data-alt="Gross shopping">
+      <img src="assets/images/eu-vat-07.png" />
     </a>
 
     And VAT percentage and actual calculated amount shown on the
     checkout page as well as order confirmation:
 
-    <a href="assets/images/17432840/17629211.png" data-lightbox="eu-vat-2015" data-title="Gross checkout" data-alt="Gross checkout">
-      <img src="assets/images/17432840/17629211.png" />
+    <a href="assets/images/eu-vat-01.png" data-lightbox="eu-vat-2015" data-title="Gross checkout" data-alt="Gross checkout">
+      <img src="assets/images/eu-vat-01.png" />
     </a>
-    <a href="assets/images/17432840/17629216.png" data-lightbox="eu-vat-2015" data-title="Gross confirmation" data-alt="Gross confirmation">
-      <img src="assets/images/17432840/17629216.png" />
+    <a href="assets/images/eu-vat-06.png" data-lightbox="eu-vat-2015" data-title="Gross confirmation" data-alt="Gross confirmation">
+      <img src="assets/images/eu-vat-06.png" />
     </a>
 
 2.  **Net** calculation mode implies
@@ -201,18 +201,18 @@ prior to introduction of VAT handling.*
     added on top of it, if necessary. Accordingly, NetLicensing Shop
     adds a note below the shown prices:
 
-    <a href="assets/images/17432840/17629215.png" data-lightbox="eu-vat-2015" data-title="Net shopping" data-alt="Net shopping">
-      <img src="assets/images/17432840/17629215.png" />
+    <a href="assets/images/eu-vat-05.png" data-lightbox="eu-vat-2015" data-title="Net shopping" data-alt="Net shopping">
+      <img src="assets/images/eu-vat-05.png" />
     </a>
 
     Shopping cart view and confirmation page shows calculated VAT as a
     separate field:
 
-    <a href="assets/images/17432840/17629212.png" data-lightbox="eu-vat-2015" data-title="Net checkout" data-alt="Net checkout">
-      <img src="assets/images/17432840/17629212.png" />
+    <a href="assets/images/eu-vat-02.png" data-lightbox="eu-vat-2015" data-title="Net checkout" data-alt="Net checkout">
+      <img src="assets/images/eu-vat-02.png" />
     </a>
-    <a href="assets/images/17432840/17629214.png" data-lightbox="eu-vat-2015" data-title="Net confirmation" data-alt="Net confirmation">
-      <img src="assets/images/17432840/17629214.png" />
+    <a href="assets/images/eu-vat-04.png" data-lightbox="eu-vat-2015" data-title="Net confirmation" data-alt="Net confirmation">
+      <img src="assets/images/eu-vat-04.png" />
     </a>
 
 
@@ -225,6 +225,6 @@ calculation:
 -   Company
 -   Tax/VAT ID
 
-<a href="assets/images/17432840/17629213.png" data-lightbox="eu-vat-2015" data-title="Checkout" data-alt="Checkout">
-  <img src="assets/images/17432840/17629213.png" />
+<a href="assets/images/eu-vat-03.png" data-lightbox="eu-vat-2015" data-title="Checkout" data-alt="Checkout">
+  <img src="assets/images/eu-vat-03.png" />
 </a>
