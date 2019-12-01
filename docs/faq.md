@@ -82,4 +82,6 @@ and select *„Yes, accept and convert them* to *U.S. Dollars.”*
 
 See also the screenshots below for your reference (click to enlarge):
 
-<img src="assets/images/11010235/17268748.png" width="300" /><img src="assets/images/11010235/17268749.png" width="300" /><img src="assets/images/11010235/17268750.png" width="300" />
+<img src="assets/images/paypal-selling-tools.png" width="300" />
+<img src="assets/images/paypal-profile.png" width="300" />
+<img src="assets/images/paypal-multicurrency.png" width="300" />

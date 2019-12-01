@@ -23,7 +23,7 @@ given within corresponding *Transaction* entity.
 
 You can access this data either using [NetLicensing RESTful API](transaction-services) or via *NetLicensing Management Console*.
 
-<img src="assets/images/17433045/17629258.png?effects=drop-shadow" title="Transaction - Proof of Concent" alt="Transaction - Proof of Concent" />
+<img src="assets/images/gdpr-verify-consent.png" title="Transaction - Proof of Concent" alt="Transaction - Proof of Concent" />
 
 Customer's consent will be stored in the following *Transaction*
 properties:

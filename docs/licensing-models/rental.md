@@ -29,7 +29,7 @@ devices that communicate credit card data to the server. You want to
 license every terminal device individually for a specific time period.
 Your customers may order multiple terminal devices.
 
-<img src="assets/images/11010232/10977332.png" />
+<img src="assets/images/rental-overview.png" />
 
 For our example assume that each device is initially licensed for 3
 months; before this period ends a renewal license must be purchased in
@@ -43,14 +43,14 @@ periods with quantity discounts:
 To implement the above scenario, the **Rental** licensing model requires
 exactly one FEATURE license template, which corresponds to a terminal device
 being licensed in our example
-\[<img src="assets/images/11010232/10977328.png" width="18" height="25" />\].
+\[<img src="assets/images/icons/phone.png" width="18" height="25" />\].
 For every specific device one license from the FEATURE license template
 will be created, holding the number that identifies that specific
 device.
 
 **Rental** licensing model requires also at least one TIMEVOLUME license
 template
-\[<img src="assets/images/11010232/10977327.png" width="18" height="25" />\].
+\[<img src="assets/images/icons/clock.png" width="18" height="25" />\].
 More TIMEVOLUME license templates can be created as necessary for
 different time periods. TIMEVOLUME [license
 templates](object-model) need additional
@@ -79,7 +79,7 @@ templates, one for each renewal period / price combination.
 
 Below is the summary of all the license templates that need to be
 configured for our example:  
-<img src="assets/images/11010232/10977330.png" />
+<img src="assets/images/rental-overview-04.png" />
 
 <table style="width:100%;">
 <colgroup>
@@ -167,7 +167,7 @@ the application on the payment processing server can do it via
 [NetLicensing API](restful-api), if it has an automated customer
 registration procedure.
 
-<img src="assets/images/11010232/10977329.png" />
+<img src="assets/images/rental-overview-02.png" />
 
 Once required licensee object is in place, for each of the ordered
 terminal devices create the following licenses, binding them to the
@@ -184,7 +184,7 @@ NetLicensing API can be used at your choice):
 -   from license template "LT-EVAL": parentFeature=DEV-343,
     startDate=now
 
-<img src="assets/images/11010232/10977331.png" />
+<img src="assets/images/rental-overview-01.png" />
 
 Now when the application on the payment processing server calls
 validate() for the customer "CUST-4567", it will get the state for the
@@ -284,7 +284,7 @@ from the application.
 Assuming for our example that the customer selected 6 months license for
 devices "DEV-341" and "DEV-342", the licenses after his purchase will
 look like:  
-<img src="assets/images/11010232/10977326.png" />
+<img src="assets/images/rental-overview-03.png" />
 
 And the validation result for the validation performed on Aug 21, 2012
 will look like:

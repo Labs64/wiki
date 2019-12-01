@@ -44,7 +44,7 @@ ga_tracking_anonymize_ip: true
 # SEO
 title: NetLicensing Wiki
 description: Resources that will help you learn about Labs64 NetLicensing
-logo: "assets/images/NLIC-Logo-transparent.png"
+logo: "assets/images/netlicensing-logo-transparent.png"
 author:
   twitter: netlicensing
 twitter:

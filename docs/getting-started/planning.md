@@ -5,7 +5,7 @@ parent: Getting Started
 nav_order: 1
 description: ""
 permalink: planning
-image: assets/images/11010226/NetLicensing-GettingStarted.png
+image: assets/images/NetLicensing-GettingStarted.png
 ---
 
 **Step 1: Planning** &nbsp;&nbsp; [Step 2: Setting up](setting-up) &nbsp;&nbsp; [Step 3: Integration](integration)
@@ -38,7 +38,7 @@ product module is licensed according to its licensing model.
 
 This can be represented schematically:
 
-<img src="assets/images/11010227/15171597.png" />
+<img src="assets/images/netlicensing-planning.png" />
 
 Each product module is licensed independently, which means there is no
 logic within the NetLicensing that connects licenses of one product

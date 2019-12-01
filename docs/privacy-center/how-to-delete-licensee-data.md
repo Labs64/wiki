@@ -21,7 +21,7 @@ NetLicensing Management Console
 
 By clicking on a single list entry and selecting `"Delete"` you can delete entity and all descendants (*License, Transaction*).
 
-<a href="https://ui.netlicensing.io/#/customers" class="external-link"><img src="assets/images/17433029/17629257.png?effects=drop-shadow" title="Operate - Delete Licensee" alt="Operate - Delete Licensee" width="800" /></a>  
+<a href="https://ui.netlicensing.io/#/customers" class="external-link"><img src="assets/images/gdpr-delete-licensee.png" title="Operate - Delete Licensee" alt="Operate - Delete Licensee" width="800" /></a>  
 
 NetLicensing RESTful API
 ------------------------

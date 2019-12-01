@@ -18,7 +18,7 @@ The DPA reflects the parties’ agreement with regard to the processing of
 personal data performed using our service.
 
 You can find sample DPA document
-[here](assets/images/Labs64-NetLicensing-GDPR-DPA-V1.0_sample.pdf).
+[here](assets/docs/Labs64-NetLicensing-GDPR-DPA-V1.0_sample.pdf).
 
 To sign your DPA, please check the instructions below on how to do it:
 

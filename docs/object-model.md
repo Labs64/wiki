@@ -18,7 +18,7 @@ NetLicensing Object Model
 -   [Licensee](#licensee)
 -   [Transaction](#transaction)
 
-<img src="assets/images/11010225/10977322.png" usemap="#object-model-map"/>
+<img src="assets/images/netlicensing-object-model.png" usemap="#object-model-map"/>
 <map name="object-model-map">
     <area target="" alt="Vendor" title="Vendor" href="#vendor" coords="25,35,115,105" shape="rect">
     <area target="" alt="Product" title="Product" href="#product" coords="172,140,261,207" shape="rect">
