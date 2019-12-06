@@ -7,7 +7,7 @@ description: "How to offer multiple VM licenses to one customer?"
 permalink: faq-multiple-vm-licenses
 ---
 
-Multi-Feature
+How to offer multiple VM licenses to one customer?
 =============
 
 ## Question
