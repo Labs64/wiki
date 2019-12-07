@@ -10,44 +10,6 @@ permalink: faq
 FAQ & Troubleshooting
 =====================
 
--   [FAQ](#FAQ&Troubleshooting-FAQ)
-    -   [What is the amount upper limit on a single PayPal
-        transaction?](#FAQ&Troubleshooting-WhatistheamountupperlimitonasinglePayPaltransaction?)
-    -   [Is there a limit on a number of PayPal
-        transactions?](#FAQ&Troubleshooting-IstherealimitonanumberofPayPaltransactions?)
-    -   [Is there a limit on the total receipts via
-        PayPal?](#FAQ&Troubleshooting-IstherealimitonthetotalreceiptsviaPayPal?)
-    -   [What browsers are supported by NetLicensing
-        Console?](#FAQ&Troubleshooting-WhatbrowsersaresupportedbyNetLicensingConsole?)
--   [Troubleshooting](#FAQ&Troubleshooting-Troubleshooting)
-    -   [Payment cannot be processed due to the PayPal currency
-        conversion handling
-        error](#FAQ&Troubleshooting-PaymentcannotbeprocessedduetothePayPalcurrencyconversionhandlingerror)
-
-FAQ
-===
-
-### What is the amount upper limit on a single PayPal transaction?
-
-As of 2013 - in European Union EUR 8'000, in United States USD 10'000,
-in other countries in the same range, clarify exact amount with local
-PayPal.
-
-There may be though other limits on the buyer's side, for instance there
-is an additional limit for not verified PayPal account in EU, or credit
-card / bank account limits. Check with local PayPal and/or corresponding
-financial institution.
-
-### Is there a limit on a number of PayPal transactions?
-
-There is no limit.
-
-### Is there a limit on the total receipts via PayPal?
-
-After a certain amount of annual receipts via PayPal (EUR 2500 in EU as
-of 2013), one-time extended account verification may be required by
-PayPal. Please get in contact with local PayPal for details.
-
 ### What browsers are supported by NetLicensing Console?
 
 All popular modern browsers (Chrome, Safari, FireFox, IE/Edge, Opera)
