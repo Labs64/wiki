@@ -3,7 +3,7 @@ layout: default
 title: How to offer multiple VM licenses to one customer?
 parent: FAQ & Troubleshooting
 nav_order: 10
-description: "How to offer multiple VM licenses to one customer?"
+description: "Offer multiple virtual machine licenses to one customer with the subscription package"
 permalink: faq-multiple-vm-licenses
 ---
 
@@ -11,7 +11,7 @@ How to offer multiple VM licenses to one customer?
 =============
 
 ## Question
->We need a module that will allow us to provide XY number of VM Based licenses valid for the specified time (1y, 3y, 5y, or some specific date in future) to one single customer.
+We need a module that will allow us to provide XY number of VM Based licenses valid for the specified time (1y, 3y, 5y, or some specific date in future) to one single customer.
 
 ## Answer
 
