@@ -2,7 +2,6 @@
 layout: default
 title: What is the amount upper limit on a single PayPal transaction?
 parent: FAQ & Troubleshooting
-nav_order: 10
 description: "PayPal transaction upper limit for one single transaction"
 permalink: faq-paypal-transaction-limit
 ---
