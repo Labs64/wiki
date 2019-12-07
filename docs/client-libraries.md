@@ -72,19 +72,14 @@ Integrations
 NetLicensing can be easily integrated with common *e-Commerce, billing
 and subscription management* platforms, such as:
 
--   <a href="https://github.com/Labs64/NetLicensing-Gateway" class="external-link">NetLicensing-Gateway</a> -
-    NetLicensing / eCommerce gateway
+-   <a href="https://github.com/Labs64/NetLicensing-Gateway" class="external-link">NetLicensing-Gateway</a> - NetLicensing / eCommerce gateway
 -   <a href="https://zapier.com/apps/netlicensing/integrations" class="external-link">NetLicensing-Zapier</a>
-    -<span class="flex-auto mb-2"><span class="text-gray-dark mr-2">
-    NetLicensing / Zapier Integration</span></span>
--   <a href="https://github.com/Labs64/NetLicensing-Gateway" class="external-link">NetLicensing-MyCommerce</a> - NetLicensing
-    / MyCommerce integration
--   <a href="https://github.com/Labs64/NetLicensing-FastSpring" class="external-link">NetLicensing-FastSpring</a> - NetLicensing
-    / FastSpring integration
--   <a href="https://github.com/Labs64/NetLicensing-PrestaShop" class="external-link">NetLicensing-PrestaShop</a> - NetLicensing
-    Connector for PrestaShop
--   WordPress -
-    <a href="https://wordpress.org/plugins/pluginpass-pro-plugintheme-licensing/" class="external-link">PluginPass: WordPress PRO Plugin/Theme Licensing</a>
+ -<span class="flex-auto mb-2"><span class="text-gray-dark mr-2"> NetLicensing / Zapier Integration</span></span>
+-   <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki/MyCommerce" class="external-link">NetLicensing-MyCommerce</a> - NetLicensing / MyCommerce integration
+-   <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki/FastSpring" class="external-link">NetLicensing-FastSpring</a> - NetLicensing / FastSpring (Contextual Commerce) integration
+-   <a href="https://github.com/Labs64/NetLicensing-FastSpring" class="external-link">NetLicensing-FastSpring</a> - NetLicensing / FastSpring (Classic Commerce) integration
+-   <a href="https://github.com/Labs64/NetLicensing-PrestaShop" class="external-link">NetLicensing-PrestaShop</a> - NetLicensing Connector for PrestaShop
+-   WordPress - <a href="https://wordpress.org/plugins/pluginpass-pro-plugintheme-licensing/" class="external-link">PluginPass: WordPress PRO Plugin/Theme Licensing</a>
 -   WooCommerce
 
 -   Magento
@@ -97,15 +92,11 @@ and subscription management* platforms, such as:
 
 -   Braintree
 -   Cleverbridge
--   2Checkout -
-    <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/6" class="external-link">#6</a>
--   Zuora -
-    <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/4" class="external-link">#4</a>
--   SendOwl -
-    <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/5" class="external-link">#5</a>
+-   2Checkout - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/6" class="external-link">#6</a>
+-   Zuora - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/4" class="external-link">#4</a>
+-   SendOwl - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/5" class="external-link">#5</a>
 -   Shopware
--   Recurly -
-    <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/3" class="external-link">#3</a>
+-   Recurly - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/3" class="external-link">#3</a>
 -   billwerk
 -   Fusebill
 -   Paddle
