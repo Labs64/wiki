@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Payment cannot be processed due to the PayPal currency conversion handling error
+title: Payment cannot be processed due to the PayPal currency conversion handling error.
 parent: FAQ & Troubleshooting
 description: "Payment cannot be processed due to the PayPal currency conversion handling error"
 permalink: faq-paypal-currency-conversion-error
@@ -23,14 +23,14 @@ Go to *“Block payments (Business) -\> Payment receiving preferences”* and se
 
 See also the screenshots below for your reference (click to enlarge):
 
-<a href="assets/images/paypal-selling-tools.png" data-lightbox="faq-paypal-currency-conversion-error" data-title="Manage API permission" data-alt="Manage API permission">
+<a href="assets/images/paypal-selling-tools.png" data-lightbox="faq-paypal-currency-conversion-error" data-title="PayPal - My Selling Tools" data-alt="PayPal - My Selling Tools">
   <img src="assets/images/paypal-selling-tools.png" />
 </a>
 
-<a href="assets/images/paypal-profile.png" data-lightbox="faq-paypal-currency-conversion-error" data-title="Manage API permission" data-alt="Manage API permission">
+<a href="assets/images/paypal-profile.png" data-lightbox="faq-paypal-currency-conversion-error" data-title="PayPal - My Account Profile" data-alt="PayPal - My Account Profile">
   <img src="assets/images/paypal-profile.png" />
 </a>
 
-<a href="assets/images/paypal-multicurrency.png" data-lightbox="faq-paypal-currency-conversion-error" data-title="Manage API permission" data-alt="Manage API permission">
+<a href="assets/images/paypal-multicurrency.png" data-lightbox="faq-paypal-currency-conversion-error" data-title="PayPal - Allow multicurrency" data-alt="PayPal - Allow multicurrency">
   <img src="assets/images/paypal-multicurrency.png" />
 </a>
