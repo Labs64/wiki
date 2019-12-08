@@ -10,4 +10,4 @@ permalink: faq
 FAQ & Troubleshooting
 =====================
 
-Find real-life Frequently Asked Questions about NetLicensing services as well as NetLicensing Troubleshooting.
+Find real-life Frequently Asked Questions about NetLicensing services as well as NetLicensing Troubleshooting answered by our support team.
