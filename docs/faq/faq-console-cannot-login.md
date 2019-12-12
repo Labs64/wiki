@@ -2,7 +2,7 @@
 layout: default
 title: Cannot login on the new NetLicensing Management Console
 parent: FAQ & Troubleshooting
-description: "NetLicensing Management Console login error"
+description: "NetLicensing Management Console - Bad Credentials error message during the login"
 permalink: faq-console-cannot-login
 ---
 
@@ -16,7 +16,7 @@ We are having problems login into the NetLicensing Management Console.
 I'm using my EMail ID to login on the NetLicensing Management Console.
 It works on the old Console (https://go.netlicensing.io/console/v2/), but on the new Console (https://ui.netlicensing.io) I'm getting `The Username field format is invalid` or `Bad Credentials` error; therefore, I cannot login anymore.
 
-<a href="assets/images/faq-console-cannot-login.png" data-lightbox="paypal" data-title="The Username field format is invalid" data-alt="The Username field format is invalid">
+<a href="assets/images/faq-console-cannot-login.png" data-lightbox="paypal" data-title="Bad Credentials" data-alt="Bad Credentials">
   <img src="assets/images/faq-console-cannot-login.png" />
 </a>
 
