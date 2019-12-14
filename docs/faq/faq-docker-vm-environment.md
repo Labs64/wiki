@@ -2,6 +2,7 @@
 layout: default
 title: How to license dockerized applications or virtual machine environments
 parent: FAQ & Troubleshooting
+nav_order: 10
 description: "Licensing options available for the dockerized and VM applications"
 permalink: faq-docker-vm-environment
 ---
@@ -20,17 +21,12 @@ Following options can be recommended here:
 
 #### Option 1: Node-Locked
 
-You can add 2 modules to your product:
-
-    Subscription: with the configured packages for 1, 3, 5 years
-    Node-Locked: configured to be used with 50 nodes. The VMs will be identified by the UUID and paired with the issues Node-Locked license max. 50 times.
+Use [Node-Locked]( node-locked) licensing model configured to be used with N nodes.
+The VMs will be identified by the UUID and paired with the issues Node-Locked license max. N times.
 
 #### Option 2: Floating
 
-You can add 2 modules to your product:
-
-    Subscription: with the configured packages for 1, 3, 5 years
-    Floating: seats = 50 In this scenario, you’d need to compare available quota (e.g. 50) with the number of started VMs.
+Use [Floating](floating) licensing model configured to be used with N seats.
 
 *TBD*
 
