@@ -1,6 +1,6 @@
 ---
 layout: default
-title: What browsers are supported by NetLicensing Console?
+title: What browsers are supported by NetLicensing Console
 parent: FAQ & Troubleshooting
 description: "What browsers are supported by NetLicensing Console?"
 permalink: faq-supported-browsers
