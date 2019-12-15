@@ -2,11 +2,12 @@
 layout: default
 title: Payment cannot be processed due to the PayPal currency conversion handling error
 parent: FAQ & Troubleshooting
+nav_order: 100
 description: "Payment cannot be processed due to the PayPal currency conversion handling error"
 permalink: faq-paypal-currency-conversion-error
 ---
 
-Payment cannot be processed due to the PayPal currency conversion handling error
+{{ page.title }}
 =============
 
 ## Problem

@@ -2,11 +2,12 @@
 layout: default
 title: Cannot login on the new NetLicensing Management Console
 parent: FAQ & Troubleshooting
+nav_order: 100
 description: "NetLicensing Management Console - Bad Credentials error message during the login"
 permalink: faq-console-cannot-login
 ---
 
-Cannot login on the new NetLicensing Management Console
+{{ page.title }}
 =============
 
 ## Question

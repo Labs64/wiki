@@ -2,11 +2,12 @@
 layout: default
 title: What browsers are supported by NetLicensing Console
 parent: FAQ & Troubleshooting
+nav_order: 100
 description: "What browsers are supported by NetLicensing Console?"
 permalink: faq-supported-browsers
 ---
 
-What browsers are supported by NetLicensing Console?
+{{ page.title }}
 =============
 
 ## Question

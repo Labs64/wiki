@@ -2,11 +2,12 @@
 layout: default
 title: How to offer multiple VM licenses to one customer
 parent: FAQ & Troubleshooting
+nav_order: 100
 description: "Offer multiple virtual machine licenses to one customer with the subscription package"
 permalink: faq-multiple-vm-licenses
 ---
 
-How to offer multiple VM licenses to one customer?
+{{ page.title }}
 =============
 
 ## Question
