@@ -29,9 +29,12 @@ Use [Node-Locked]( node-locked) licensing model configured to be used with N nod
 The VMs will be identified by the UUID and paired with the issues Node-Locked license max. N times.
 Every N+1 pairing won't be possible and will result in negative validation result.
 
-*Advantages:*
-- TBD
-- TBD
+**Advantages:**
+- This option guarantees, that only entitled number of the VM instances  (1..N) can be used by the customer.
+
+**Use Cases:**
+- Long-living instances identified by permanent UUID; e.g. Hardware USB Dongle.
+
 
 #### Option 2: Floating
 
@@ -42,9 +45,13 @@ Every N+1 pairing won't be possible and will result in negative validation resul
 Use [Floating](floating) licensing model configured to be used with N seats.
 The VMs will be identified by the UUID and will check-out a free seat to be able to run. Max. N VMs can be used simultaneously.
 
-*Advantages:*
-- TBD
-- TBD
+**Advantages:**
+- The borrowed seat can be checked in, so the free seats can be checked out by other VMs. This option is useful if the new VMs are being created frequently, so the new UUIDs will be generated every time.
+
+**Use Cases:**
+- Start of the new AWS EC2 instances from the prepared AMI.
+- Short-living instances; e.g. AWS Lambda.
+- Autoscaling instances being created/destroyed based on the system load and capacity.
 
 ---
 
