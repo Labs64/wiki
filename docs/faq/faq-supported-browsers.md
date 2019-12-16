@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: What browsers are supported by NetLicensing Console
 parent: FAQ & Troubleshooting
 nav_order: 100
