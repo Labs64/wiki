@@ -7,6 +7,9 @@ description: "What browsers are supported by NetLicensing Console?"
 permalink: faq-supported-browsers
 ---
 
+{{ page.title }}
+=============
+
 ## Question
 
 What browsers are supported by NetLicensing Console?
