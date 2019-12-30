@@ -2,7 +2,7 @@
 layout: default
 title: Custom Properties
 parent: NetLicensing API (RESTful)
-nav_order: 99
+nav_order: 30
 description: "Custom Properties"
 permalink: custom-properties
 ---
