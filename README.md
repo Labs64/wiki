@@ -23,7 +23,7 @@ $ git clone https://github.com/Labs64/NetLicensing-Wiki.git
 $ docker-compose up -d
 ```
 
-Now you can browse the site at [http://localhost:4000](http://localhost:4000)
+Now you can browse the site at [http://localhost:4000/wiki/](http://localhost:4000/wiki/)
 
 ---
 

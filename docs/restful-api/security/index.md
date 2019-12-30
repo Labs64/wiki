@@ -2,8 +2,9 @@
 layout: default
 title: Security
 parent: NetLicensing API (RESTful)
-nav_order: 99
-description: "Security"
+nav_order: 10
+has_children: true
+description: ""
 permalink: security
 ---
 
@@ -78,4 +79,4 @@ NetLicensing service.
 Signing The Response
 --------------------
 
-NetLicensing response spoofing by man-in-the-middle (MITM) is prevented by using SSL for encryption between NetLicensing server and the client. This however does not guarantee against response spoofing by the malicious user directly at the client, for example by substituting the NetLicensing server with a host in the local network.
+NetLicensing response spoofing by man-in-the-middle (MITM) is prevented by using SSL for encryption between NetLicensing server and the client. This however does not guarantee against response spoofing by the malicious user directly at the client, for example by substituting the NetLicensing server with a host in the local network. Therefore NetLicensing adds an additional security layer, namely signing the response of a call to licensee validate method. Have a look at the [Signing The Response](signing-the-response) page for details how to enable the response signature.
