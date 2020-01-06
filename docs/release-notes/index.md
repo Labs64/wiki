@@ -16,8 +16,27 @@ NetLicensing release notes are specific to each version.
 Select your version from the list below to see the release notes for it.
 
 {% for release in site.data.releases %}
+
+---
+
 ### {{ release.date }} - {{ release.title }}
 {{ release.description }}
+
+{% if release.image %}
 <img src="{{ release.image }}" />
-<a href="{{ release.url }}">See more</a>
+{% endif %}
+
+{% if release.features %}
+**Features:**
+{% for feature in release.features %}
+{% for item in feature %}
+- [{{ item[0] }}] {{ item[1] }}
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+{% if release.url %}
+[Learn more]({{ release.url }}){: .btn }
+{% endif %}
+
 {% endfor %}
