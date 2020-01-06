@@ -1,20 +1,22 @@
 - title: "NetLicensing 2.5.7-FINAL"
   description: "Sign validation response and other minor improvements."
   date: 2019-12-27
+  component: Core
   features:
-   - add: Sign validation response
-   - update: Allow login using vendor number, email and username
-   - update: improve validate performance for floating and pay-per-use models
-   - fix: NetLicensing Shop checkout page doesn't work for floating model
+   - added: Sign validation response
+   - updated: Allow login using vendor number, email and username
+   - updated: Improve validate performance for floating and pay-per-use models
+   - fixed: NetLicensing Shop checkout page doesn't work for floating model
   url: https://netlicensing.io/wiki/signing-the-response
 
 - title: "Pricing Table licensing model"
   description: "Stability and UX release."
   date: 2019-12-25
+  component: UI
   features:
-   - add: Enable Pricing Table model (beta)
-   - add: Render "customerData" as an additional customer's tab
-   - update: Use the same order of module/package columns
-   - update: Restrict usernames character set
+   - added: Enable Pricing Table model (beta)
+   - added: Render "customerData" as an additional customer's tab
+   - updated: Use the same order of module/package columns
+   - updated: Restrict username character set
   image: assets/images/releases/netlicensing-pricing-table.gif
-  url: https://ui.netlicensing.io
+  url: https://netlicensing.io/licensing-models/
