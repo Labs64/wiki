@@ -1,14 +1,19 @@
-- title: "Feature 2"
-  date: 2020-01-06
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  url: https://www.labs64.com
-  image: assets/images/feature2.png
-
-- title: "Feature 1"
-  date: 2019-12-31
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+- title: "Release 2.5.7"
+  description: "Sign validation response and other minor improvements"
+  date: 2019-12-27
   features:
-   - added: Lorem ipsum dolor sit amet
-   - fixed: Ut enim ad minim veniam
-  url: https://www.labs64.com
-  image: assets/images/feature1.png
+   - added: Sign validation response
+   - updated: Allow login using vendor number, email and username
+   - updated: improve validate performance for floating and pay-per-use models
+   - fixed: NetLicensing Shop checkout page doesn't work for floating model
+  image: assets/images/sign-validation-response.png
+
+- title: "UI improvements"
+  description: "Stability and UX release"
+  date: 2019-12-25
+  features:
+   - added: Enable new Pricing Table model
+   - added: Render "customerData" as an additional customer's tab
+   - updated: Use the same order of module/package columns
+   - updated: Restrict usernames character set
+  url: https://ui.netlicensing.io
