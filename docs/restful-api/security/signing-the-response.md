@@ -58,7 +58,21 @@ Create a token with the type `APIKEY`, setting the property `privateKey` to the 
 will only be used for the licensee validate call, also limit its access by assigning the 'ROLE_APIKEY_LICENSEE' role, although it is
 not required for the signature.
 
-<div>Create API Key</div>
+<div>Create API Key (curl)</div>
+{: .code-example .ml-5 .code-header }
+```sh
+$ curl -X POST \
+  https://go.netlicensing.io/core/v2/rest/token \
+  -H 'Accept: application/xml' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -u <username>:<password> \
+  -d 'tokenType=APIKEY&apiKeyRole=ROLE_APIKEY_LICENSEE' \
+  --data-urlencode privateKey@rsa_private.pem \
+  | xmllint --format -
+```
+{: .ml-5 }
+
+<div>Create API Key (Java)</div>
 {: .code-example .ml-5 .code-header }
 ```java
 final Context context = new Context();
@@ -93,7 +107,20 @@ replace it with his own - this is very sensitive aspect of this security mechani
 method in the validation parameters. This will enable the signature verification logic in the client library. The public key is
 only used locally for the verification, it is not sent anywhere.
 
-<div>Validate licensee</div>
+<div>Validate licensee (curl)</div>
+{: .code-example .ml-5 .code-header }
+```sh
+$ curl -X POST \
+  https://go.netlicensing.io/core/v2/rest/licensee/<licensee>/validate \
+  -H 'Accept: application/xml' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -u apiKey:<tokenNumber> \
+  -d 'productNumber=<productNumber>' \
+  | xmllint --format -
+```
+{: .ml-5 }
+
+<div>Validate licensee (Java)</div>
 {: .code-example .ml-5 .code-header }
 ```java
 final Context context = new Context();
