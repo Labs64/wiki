@@ -12,7 +12,7 @@ Signing The Response
 ====================
 
 NetLicensing response spoofing by man-in-the-middle (MITM) is prevented by using SSL for encryption between NetLicensing server and the client.
-This however does not guarantee against response spoofing by the malicious user directly at the client, for example by substituting the
+This, however, does not guarantee against response spoofing by the malicious user directly at the client, for example by substituting the
 NetLicensing server with a host in the local network. Therefore NetLicensing adds an additional security layer, namely signing the response
 of a call to licensee validate method.
 
@@ -23,9 +23,9 @@ of a call to licensee validate method.
 Signature
 ---------
 
-Response signature is implemented according to [XML Signature](https://www.w3.org/TR/xmldsig-core/) spec (also known as XMLDSIG), and is currently
+Response signature is implemented according to [XML Signature](https://www.w3.org/TR/xmldsig-core/) spec (also known as XMLDSIG) and is currently
 only implemented in the [Java NetLicensing Client library](client-libraries). Your contribution for adding the response signature verification
-functionality to other NetLicensing clients is highly welcomed!
+functionality to other NetLicensing client libraries is highly welcomed!
 
 Preconditions
 -------------
@@ -37,8 +37,8 @@ Response signature only works when the following preconditions are fulfilled:
 
 Setting-up
 ----------
-Currently response signing setup is only possible via direct call to the NetLicensing API. The following description uses
-[Java NetLicensing Client library](client-libraries) in code examples and [OpenSSL](https://www.openssl.org/) for the key manipulation.
+Currently, response signing setup is only possible via direct call to the NetLicensing API. The following description uses
+[Java NetLicensing Client library](client-libraries) and cURL in code examples and [OpenSSL](https://www.openssl.org/) for the key manipulation.
 
 ### 1. Create public/private RSA key pair
 NetLicensing currently only supports RSA algorithm for the keys, we recommend to use at least 2048 bits key length.
@@ -58,7 +58,7 @@ Create a token with the type `APIKEY`, setting the property `privateKey` to the 
 will only be used for the licensee validate call, also limit its access by assigning the 'ROLE_APIKEY_LICENSEE' role, although it is
 not required for the signature.
 
-<div>Create API Key (curl)</div>
+<div>Create API Key (cURL)</div>
 {: .code-example .ml-5 .code-header }
 ```sh
 $ curl -X POST \
@@ -72,7 +72,7 @@ $ curl -X POST \
 ```
 {: .ml-5 }
 
-<div>Create API Key (Java)</div>
+<div>Create API Key (<a href="https://github.com/Labs64/NetLicensingClient-java" target="_blank">NetLicensing Java Client</a>)</div>
 {: .code-example .ml-5 .code-header }
 ```java
 final Context context = new Context();
@@ -100,14 +100,14 @@ key within the client environment!
 
 ### 3. Execute licensee validation
 
-Once the API Key is setup, use it in your software on the client side along with the public part of the generated key pair to
+Once the API Key is set up, use it in your software on the client-side along with the public part of the generated key pair to
 call the `validate` method (see [Integration](integration) step of [Getting Started](getting-started) guide). Store public key
 securely in your software along with the API Key, make sure malicious user has no easy access to the stored public key and can't
-replace it with his own - this is very sensitive aspect of this security mechanism. Provide the public key using the `setPublicKey`
+replace it with his own - this is a very sensitive aspect of this security mechanism. Provide the public key using the `setPublicKey`
 method in the validation parameters. This will enable the signature verification logic in the client library. The public key is
 only used locally for the verification, it is not sent anywhere.
 
-<div>Validate licensee (curl)</div>
+<div>Validate licensee (cURL)</div>
 {: .code-example .ml-5 .code-header }
 ```sh
 $ curl -X POST \
@@ -120,7 +120,7 @@ $ curl -X POST \
 ```
 {: .ml-5 }
 
-<div>Validate licensee (Java)</div>
+<div>Validate licensee and verify signature (<a href="https://github.com/Labs64/NetLicensingClient-java" target="_blank">NetLicensing Java Client</a>)</div>
 {: .code-example .ml-5 .code-header }
 ```java
 final Context context = new Context();
@@ -134,7 +134,7 @@ ValidationResult validationResult = LicenseeService.validate(context, licenseeNu
 ```
 {: .ml-5 }
 
-If signature verification fails, `WrongResponseFormatException` exception is thrown with the message providing details.
+If the signature verification fails, `WrongResponseFormatException` exception is thrown with the message providing details.
 
 <div>Exception on signature verification failure</div>
 {: .code-example .ml-5 .code-header }
