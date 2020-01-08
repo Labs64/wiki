@@ -21,7 +21,8 @@ Here's an account of what's recently happened. This is our #changelog.
 
 ---
 
-### {{ change.date }} - {% if change.component %}[{{ change.component }}] {% endif %}{{ change.title }}
+### {{ change.title }}
+<p style="font-size: smaller; font-style: italic;">{% if change.component %}In {{ change.component }} on {% endif %}{{ change.date | date: '%B %d, %Y' }}</p>
 {{ change.description }}
 
 {% if change.image %}
