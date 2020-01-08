@@ -1,3 +1,14 @@
+# - title: "<TITLE>"
+#   description: "<EYE-CATCHER-DESCRIPTION>"
+#   date: yyyy-mm-dd
+#   component: Core|UI|Client Library|etc.
+#   features:
+#    - added: Lorem ipsum dolor sit amet
+#    - updated: Ut enim ad minim veniam
+#    - fixed: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+#   image: <IMAGE-PATH>; e.g. assets/images/releases/netlicensing-pricing-table.gif
+#   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
+
 - title: "NetLicensing 2.5.7-FINAL"
   description: "Sign validation response and other minor improvements."
   date: 2019-12-27
