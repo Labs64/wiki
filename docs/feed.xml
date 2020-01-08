@@ -2,11 +2,12 @@
 layout: vendor/compress
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Labs64 NetLicensing Changelog</title>
     <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}/</link>
+    <link>{{ site.baseurl | prepend: site.url }}</link>
+    <atom:link href="{{ 'feed.xml' | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
     <language>en</language>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
@@ -26,9 +27,9 @@ layout: vendor/compress
         {% if change.url %}
         <link>{{ change.url }}</link>
         {% else %}
-        <link>{{ site.baseurl  | prepend: site.url }}</link>
+        <link>{{ site.baseurl | prepend: site.url }}</link>
         {% endif %}
-        <guid>{{ change.title | slugify }}</guid>
+        <guid isPermaLink="false">{{ change.title | prepend: '-' | prepend: change.date | slugify }}</guid>
         {% if change.component %}
         <category>{{ change.component | xml_escape }}</category>
         {% endif %}
