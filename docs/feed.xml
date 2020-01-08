@@ -17,7 +17,7 @@ layout: vendor/compress
     <image>
         <url>{{ site.logo | prepend: site.baseurl | prepend: site.url }}</url>
         <title>Labs64 NetLicensing Changelog</title>
-        <link>{{ site.url }}</link>
+        <link>{{ site.baseurl | prepend: site.url }}</link>
     </image>
     {% for change in site.data.changelog limit:100 %}
       <item>
