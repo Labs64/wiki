@@ -6,6 +6,9 @@ has_children: false
 has_toc: false
 description: "NetLicensing Changelog"
 permalink: changelog
+sitemap:
+  changefreq: daily
+  priority: 0.8
 ---
 
 {{ page.title }}

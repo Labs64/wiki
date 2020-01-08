@@ -1,0 +1,42 @@
+---
+layout: vendor/compress
+sitemap:
+  exclude: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
+  <channel>
+    <title>NetLicensing Changelog</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}/</link>
+    <language>en</language>
+    <atom:link href="{{ 'feed.xml' | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <ttl>60</ttl>
+    <generator>{{ site.title | xml_escape }} / Jekyll v{{ jekyll.version }}</generator>
+    <copyright>Labs64 NetLicensing</copyright>
+    <managingEditor>{{ site.email }}</managingEditor>
+    <image>
+        <url>{{ site.logo | prepend: site.baseurl | prepend: site.url }}</url>
+        <title>Labs64 NetLicensing logo</title>
+        <link>{{ site.url }}</link>
+    </image>
+    {% for change in site.data.changelog:10 %}
+      <item>
+        <title>{{ change.title | xml_escape }}</title>
+        <description>{{ change.description | xml_escape }}</description>
+        <pubDate>{{ change.date | date_to_rfc822 }}</pubDate>
+        {% if change.url %}
+        <link>{{ change.url }}</link>
+        {% else %}
+        <link>{{ site.baseurl  | prepend: site.url }}</link>
+        {% endif %}
+        <guid>{{ change.title | slugify }}</guid>
+        {% if change.component %}
+        <category>{{ change.component | xml_escape }}</category>
+        {% endif %}
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
