@@ -32,6 +32,14 @@
   image: assets/images/releases/netlicensing-pricing-table.gif
   url: https://netlicensing.io/licensing-models/
 
+- title: "NetLicensing 2.5.6-FINAL"
+  description: "Maintenance release: New "HTTP 409" status code added to indicate that the request could not be processed because of conflict in the multiple simultaneous updates."
+  date: 2019-11-26
+  component: Core
+  features:
+   - updated: New "HTTP 409" status code added
+  url: https://netlicensing.io/wiki/restful-api#links
+
 - title: "NetLicensing 2.5.1-FINAL"
   description: "Maintenance release fixing wrong usage notifications."
   date: 2019-08-28
