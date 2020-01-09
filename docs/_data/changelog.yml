@@ -55,7 +55,7 @@
   date: 2019-08-28
   component: Core
   features:
-   - fixed: Urong usage notifications
+   - fixed: Wrong usage notifications
   url: https://ui.netlicensing.io/#/usage
 
 - title: "NetLicensing 2.5.0-FINAL"
