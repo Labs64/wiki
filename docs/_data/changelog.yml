@@ -33,12 +33,22 @@
   url: https://netlicensing.io/licensing-models/
 
 - title: "NetLicensing 2.5.6-FINAL"
-  description: "Maintenance release: New "HTTP 409" status code added to indicate that the request could not be processed because of conflict in the multiple simultaneous updates."
+  description: "New HTTP 409 status code added to indicate that the request could not be processed because of conflict in the multiple simultaneous updates."
   date: 2019-11-26
   component: Core
   features:
    - updated: New "HTTP 409" status code added
   url: https://netlicensing.io/wiki/restful-api#links
+
+- title: "NetLicensing 2.5.5-FINAL"
+  description: "Easily export Pricing Table configuration as HTML to use this on our website."
+  date: 2019-11-03
+  component: Core, UI
+  features:
+   - updated: NetLicensing RESTful API Test Center updated with the latest API changes
+   - added: Endpoint for PricingTable license model allows you to retrieve pricing table configuration in HTML format
+   - fixed: New Node-Locked licensing model cannot be selected
+  url: https://netlicensing.io/NetLicensing-API/
 
 - title: "NetLicensing 2.5.1-FINAL"
   description: "Maintenance release fixing wrong usage notifications."
