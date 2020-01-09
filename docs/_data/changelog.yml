@@ -31,3 +31,16 @@
    - updated: Restrict username character set
   image: assets/images/releases/netlicensing-pricing-table.gif
   url: https://netlicensing.io/licensing-models/
+
+- title: "NetLicensing 2.5.0-FINAL"
+  description: "Allow customers to use your products on multiple devices using new Node-Locked licensing model which is now supporting multiple nodes."
+  date: 2019-08-11
+  component: Core
+  features:
+   - added: NetLicensing Agent works with the smart card / hardware dongle now
+   - added: Extend Node-Locked licensing model (1:n pairing)
+   - updated: Deprecate "Licensee Secret" mode; a new Node-Locked licensing model replacing and extending this functionality
+   - updated: Update all NetLicensing client libraries
+   - updated: Subscription license model now supports Grace Period
+   - updated: NetLicensing Shop / Transaction improvements for recurring payments
+  url: https://netlicensing.io/wiki/node-locked
