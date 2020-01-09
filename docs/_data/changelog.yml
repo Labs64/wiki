@@ -1,7 +1,7 @@
 # - title: "<TITLE>"
 #   description: "<EYE-CATCHER-DESCRIPTION>"
 #   date: yyyy-mm-dd
-#   component: Core|UI|Client Library|etc.
+#   component: API|Agent|UI|Gateway|Shop|Docu|Client Libraries|Integrations
 #   features:
 #    - added: Lorem ipsum dolor sit amet
 #    - updated: Ut enim ad minim veniam
@@ -9,10 +9,10 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/releases/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
-- title: "NetLicensing 2.5.7-FINAL"
+- title: "NetLicensing 2.5.7"
   description: "Sign validation response and other minor improvements."
   date: 2019-12-27
-  component: Core
+  component: API
   features:
    - added: Sign validation response
    - updated: Allow login using vendor number, email and username
@@ -32,36 +32,36 @@
   image: assets/images/releases/netlicensing-pricing-table.gif
   url: https://netlicensing.io/licensing-models/
 
-- title: "NetLicensing 2.5.6-FINAL"
+- title: "NetLicensing 2.5.6"
   description: "New HTTP 409 status code added to indicate that the request could not be processed because of conflict in the multiple simultaneous updates."
   date: 2019-11-26
-  component: Core
+  component: API
   features:
    - updated: New "HTTP 409" status code added
   url: https://netlicensing.io/wiki/restful-api#links
 
-- title: "NetLicensing 2.5.5-FINAL"
+- title: "NetLicensing 2.5.5"
   description: "Easily export Pricing Table configuration as HTML to use this on our website."
   date: 2019-11-03
-  component: Core, UI
+  component: API, UI
   features:
    - updated: NetLicensing RESTful API Test Center updated with the latest API changes
    - added: Endpoint for PricingTable license model allows you to retrieve pricing table configuration in HTML format
    - fixed: New Node-Locked licensing model cannot be selected
   url: https://netlicensing.io/NetLicensing-API/
 
-- title: "NetLicensing 2.5.1-FINAL"
+- title: "NetLicensing 2.5.1"
   description: "Maintenance release fixing wrong usage notifications."
   date: 2019-08-28
-  component: Core
+  component: API
   features:
    - fixed: Wrong usage notifications
   url: https://ui.netlicensing.io/#/usage
 
-- title: "NetLicensing 2.5.0-FINAL"
+- title: "NetLicensing 2.5.0"
   description: "Allow customers to use your products on multiple devices using new Node-Locked licensing model which is now supporting multiple nodes."
   date: 2019-08-11
-  component: Core
+  component: API
   features:
    - added: NetLicensing Agent works with the smart card / hardware dongle now
    - added: Extend Node-Locked licensing model (1:n pairing)
