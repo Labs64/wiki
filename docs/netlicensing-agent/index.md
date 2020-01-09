@@ -27,11 +27,7 @@ NetLicensing Agent
     -   [Entity Numbers](#entity-numbers)
     -   [Licensee Auto-Create](#licensee-auto-create)
 
-<span class="aui-icon icon-warning">Icon</span>
-
-This document assumes you're familiar with the Labs64 NetLicensing
-service. If you need more info about NetLicensing, please
-visit <a href="https://netlicensing.io" class="external-link">https://netlicensing.io</a>.
+This document assumes you're familiar with the Labs64 NetLicensing service. If you need more info about NetLicensing, please visit <a href="https://netlicensing.io" class="external-link">https://netlicensing.io</a>.
 
 Motivation
 ==========
@@ -83,7 +79,7 @@ plan does not include NetLicensing Agent, you'll get the message:
 Payment required. Feature "NetLicensing Agent" is not allowed. Please upgrade your plan.
 ```
 
- Files
+Files
 -----
 
 <table>
@@ -271,7 +267,7 @@ Agent runs in different modes depending on the requested 'action':
 <td><pre><code>run-agent</code></pre></td>
 <td><p>Runs as a caching proxy, connecting to the main NetLicensing service if available, and responding with the last known state when connectivity is not available. This mode is meant for the environments that may have only occasional or unstable connection to the internet.</p>
 <div class="aui-message warning shadowed information-macro">
-<span class="aui-icon icon-warning">Icon</span>
+<span class="aui-icon icon-warning">Note:</span>
 <div class="message-content">
 Currently this mode has limited support and should not be used in production environment.
 </div>
@@ -279,8 +275,6 @@ Currently this mode has limited support and should not be used in production env
 </tr>
 </tbody>
 </table>
-
-     
 
 Setting Up for the Offline Mode
 -------------------------------
@@ -342,13 +336,8 @@ Setting Up for the Offline Mode
     if any, allows this connection. Also read the article
     [Securing the Agent with SSL/TLS](securing-the-agent-with-ssl-tls).
 
- 
 
- 
-
-Requires smart card
-
-<span class="aui-icon icon-warning">Icon</span>
+### Requires smart card
 
 <span style="color: rgb(0,0,0);">If using smart card, be
 sure</span><span style="color: rgb(0,0,0);"> it</span><span
@@ -356,8 +345,6 @@ style="color: rgb(0,0,0);"> is attached, see also [Preparing to work
 with smart card](preparing-to-work-with-smart-card).
 I<span style="color: rgb(0,0,0);">f working without smart card,</span>
 use **`--without-card`** option.</span>
-
- 
 
 Steps 3-5 can be repeated to update licensing assets after changes have
 been made on the NetLicensing Cloud.
