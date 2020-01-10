@@ -16,6 +16,10 @@ Is it possible to add some additional data to the Customer profile in NetLicensi
 
 ## Answer
 
+Additional information can be added to any [NetLicensing entity](object-model) (including Customer/Licensee) using Custom Properties.
+See [this FAQ](faq-add-licensee-customproperty) on how to use this.
+
+Additionally, you can group customer information in the NetLicensing UI by adding JSON structure to the reserved Tag (Custom Property):
 
 <div>customerData</div>
 {: .code-example .ml-5 .code-header }
@@ -36,8 +40,10 @@ Is it possible to add some additional data to the Customer profile in NetLicensi
 ```
 {: .ml-5 }
 
+JSON content will be made accessible on the Customer profile as the separate tabs.
+
 <a href="assets/images/faq-add-customer-data.png" class="imagelink" data-lightbox="customerData" data-title="customerData" data-alt="customerData">
-  <img src="assets/images/faq-add-customer-data.png" width="60%" />
+  <img src="assets/images/faq-add-customer-data.png" width="100%" />
 </a>
 
 ## See also

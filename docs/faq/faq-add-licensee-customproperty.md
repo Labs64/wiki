@@ -16,7 +16,7 @@ How the additional tags/custom properties can be added to the Customer (Licensee
 
 ## Answer
 
-Any NetLicensing entity attribute, such as reserved attributes (name, number, etc.) and optional tags can be added same way.
+Any [NetLicensing entity](object-model) attribute, such as reserved attributes (name, number, etc.) and optional tags can be added same way.
 Use `application/x-www-form-urlencoded` key/value parameters in the POST request body.
 
 Following sample CURL request (*demo:demo*) showcase this.
