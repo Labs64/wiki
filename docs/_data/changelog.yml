@@ -71,6 +71,15 @@
    - fixed: New Node-Locked licensing model cannot be selected
   url: https://netlicensing.io/NetLicensing-API/
 
+- title: "NetLicensing / Zapier Integration"
+  description: "Connect your NetLicensing vendor account with more than 1500 supported Zapier integrations right away and with almost no effort!"
+  date: 2019-10-15
+  component: Integrations
+  features:
+   - added: Enable NetLicensing / Zapier Integration
+  image: https://miro.medium.com/max/1215/1*ZV3wKT4EKOH7_zsCmrLZQg.png
+  url: https://zapier.com/apps/netlicensing/integrations
+
 - title: "Node-Locked Licensing Model"
   description: "Prevent sharing of the license identities and unauthorized usage of your products by binding the customer identity to the device (node) with the Node-Locked licensing model."
   date: 2019-09-14
