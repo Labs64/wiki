@@ -48,6 +48,14 @@
    - updated: New "HTTP 409" status code added
   url: https://netlicensing.io/wiki/restful-api#links
 
+- title: "NetLicensing Attribution upon using FREE plans"
+  description: "Free plan users are requested to provide NetLicensing attribution in their products."
+  date: 2019-11-18
+  component: UI
+  features:
+   - added: Inform vendor if Attribution Required flag set to true
+  url: https://www.labs64.com/legal/terms-of-service/netlicensing/2-5/#tos-attribution
+
 - title: "Labs64 NetLicensing for GitHub Students"
   description: "Great news for all students - Labs64 NetLicensing partnered with GitHub and offers you NetLicensing Student (Basic) Plan for FREE while you are a student."
   date: 2019-11-12
