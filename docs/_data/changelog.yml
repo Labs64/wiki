@@ -48,6 +48,19 @@
    - updated: New "HTTP 409" status code added
   url: https://netlicensing.io/wiki/restful-api#links
 
+- title: "Labs64 NetLicensing for GitHub Students"
+  description: "Great news for all students - Labs64 NetLicensing partnered with GitHub and offers you NetLicensing Student (Basic) Plan for FREE while you are a student."
+  date: 2019-11-12
+  component: Integrations, UI
+  features:
+   - added: Authorize via GitHub Education program
+   - adedd: Add affiliate link to the vendor profile
+   - added: Filters for customers page
+   - updated: Show Plan "valid to" on the usage page
+   - fixed: Products breadcrumb on module edit page
+  image: https://netlicensing.io/img/partners/netlicensing-github.png
+  url: https://netlicensing.io/github-students/
+
 - title: "NetLicensing 2.5.5"
   description: "Easily export Pricing Table configuration as HTML to use this on our website."
   date: 2019-11-03
@@ -64,6 +77,7 @@
   component: API, UI
   features:
    - added: Enable new Node-Locked licensing model
+   - updated: Registration - validate user profile attributes
   url: https://netlicensing.io/wiki/node-locked
   
 - title: "NetLicensing 2.5.1"
