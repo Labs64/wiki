@@ -28,14 +28,22 @@
    - fixed: NetLicensing Shop checkout page doesn't work for floating model
   url: https://netlicensing.io/wiki/signing-the-response
 
-- title: "Pricing Table licensing model"
-  description: "Stability and UX release."
+- title: "Extended Customer Data"
+  description: "Improve customer profiles by adding and grouping customer information using Custom Properties in the UI."
+  date: 2019-12-26
+  component: UI
+  features:
+   - added: Render "customerData" as an additional customer's tab
+   - updated: Use the same order of module/package columns
+  image: https://netlicensing.io/wiki/assets/images/faq-add-customer-data.png
+  url: https://netlicensing.io/wiki/faq-add-customer-data
+
+- title: "Pricing Table Licensing Model"
+  description: "Easily maintain Pricing Table & Membership Plans for your SaaS products in the NetLicensing UI."
   date: 2019-12-25
   component: UI
   features:
    - added: Enable Pricing Table model (beta)
-   - added: Render "customerData" as an additional customer's tab
-   - updated: Use the same order of module/package columns
    - updated: Restrict username character set
   image: assets/images/releases/netlicensing-pricing-table.gif
   url: https://netlicensing.io/licensing-models/
