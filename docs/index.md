@@ -22,4 +22,6 @@ On the left you'll find the quick navigation tree (desktop version), and below a
 - [Getting Started](getting-started)
 - [NetLicensing Object Model](object-model)
 - [Licensing Models](licensing-models)
-- [NetLicensing API (RESTful)](restful-api)
+- [NetLicensing RESTful API](restful-api)
+- [Changelog](changelog)
+- [FAQ](faq)
