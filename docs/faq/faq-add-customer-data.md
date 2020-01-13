@@ -42,8 +42,16 @@ Additionally, you can group customer information in the NetLicensing UI by addin
 
 JSON content will be made accessible on the Customer profile as the separate tabs.
 
-<a href="assets/images/faq-add-customer-data.png" class="imagelink" data-lightbox="customerData" data-title="customerData" data-alt="customerData">
-  <img src="assets/images/faq-add-customer-data.png" width="100%" />
+<a href="assets/images/changelog/netlicensing-customer-data-01.png" class="imagelink" data-lightbox="customerData" data-title="customerData definition" data-alt="customerData definition">
+  <img src="assets/images/changelog/netlicensing-customer-data-01.png" width="100%" />
+</a>
+
+<a href="assets/images/changelog/netlicensing-customer-data-02.png" class="imagelink" data-lightbox="customerData" data-title="customerData" data-alt="customerData rendered - Address">
+  <img src="assets/images/changelog/netlicensing-customer-data-02.png" width="100%" />
+</a>
+
+<a href="assets/images/changelog/netlicensing-customer-data-03.png" class="imagelink" data-lightbox="customerData" data-title="customerData" data-alt="customerData rendered - Business Info">
+  <img src="assets/images/changelog/netlicensing-customer-data-03.png" width="100%" />
 </a>
 
 ## See also
