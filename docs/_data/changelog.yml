@@ -54,7 +54,7 @@
   component: Integrations, UI
   features:
    - added: Authorize via GitHub Education program
-   - adedd: Add affiliate link to the vendor profile
+   - added: Add affiliate link to the vendor profile
    - added: Filters for customers page
    - updated: Show Plan "valid to" on the usage page
    - fixed: Products breadcrumb on module edit page
@@ -109,3 +109,10 @@
    - added: Vendor usage page
   url: https://ui.netlicensing.io/#/usage
   
+- title: "NetLicensing C++ Client Library"
+  description: "Add a full set of NetLicensing services to the C++ client library."
+  date: 2019-04-25
+  component: UI
+  features:
+   - updated: Update C++ client library
+  url: https://github.com/Labs64/NetLicensingClient-cpp
