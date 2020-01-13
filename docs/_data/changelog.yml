@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/releases/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing Changelog RSS Feed"
+  description: "Track NetLicensing changelog using your favorite RSS reader."
+  date: 2020-01-07
+  component: Docu
+  features:
+   - added: NetLicensing changelog RSS feed for individual features. We introduced the ability to track the new addition, updated and fixes published on the NetLicensing changelog using your favorite RSS reader.
+  url: https://netlicensing.io/wiki/feed.xml
+
 - title: "NetLicensing 2.5.7"
   description: "Sign validation response and other minor improvements."
   date: 2019-12-27
