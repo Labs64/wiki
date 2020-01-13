@@ -4,7 +4,7 @@ title: Changelog
 nav_order: 140
 has_children: false
 has_toc: false
-description: "NetLicensing Changelog"
+description: "Track NetLicensing additions, updates and fixes using NetLicensing changelog"
 permalink: changelog
 sitemap:
   changefreq: daily
