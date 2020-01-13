@@ -10,11 +10,11 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "NetLicensing Changelog RSS Feed"
-  description: "Track NetLicensing changelog using your favorite RSS reader."
+  description: "Track NetLicensing additions, updates and fixes on the NetLicensing changelog RSS feed using your favorite RSS reader, such as Inoreader, Feedly, Flipboard."
   date: 2020-01-07
   component: Docu
   features:
-   - added: NetLicensing changelog RSS feed for individual features. We introduced the ability to track the new addition, updated and fixes published on the NetLicensing changelog using your favorite RSS reader.
+   - added: NetLicensing changelog RSS feed for individual features
   url: https://netlicensing.io/wiki/feed.xml
 
 - title: "NetLicensing 2.5.7"
