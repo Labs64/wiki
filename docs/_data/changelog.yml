@@ -78,3 +78,12 @@
    - updated: Subscription license model now supports Grace Period
    - updated: NetLicensing Shop / Transaction improvements for recurring payments
   url: https://netlicensing.io/wiki/node-locked
+
+- title: "Vendor usage page"
+  description: "Easily verify the limits (active products, customers) and available features and licensing models within your NetLicensing vendor account."
+  date: 2019-08-10
+  component: UI
+  features:
+   - added: Vendor usage page
+  url: https://ui.netlicensing.io/#/usage
+  
