@@ -18,13 +18,13 @@
   url: https://netlicensing.io/wiki/feed.xml
 
 - title: "NetLicensing 2.5.7"
-  description: "Sign validation response and other minor improvements."
+  description: "Prevent Man-in-the-Middle attack by signing NetLicensing validation response and other minor improvements."
   date: 2019-12-27
   component: API
   features:
    - added: Sign validation response
    - updated: Allow login using vendor number, email and username
-   - updated: Improve validate performance for floating and pay-per-use models
+   - updated: Improve validate performance for [Floating](floating) and [Pay-per-Use](pay-per-use) licensing models
    - fixed: NetLicensing Shop checkout page doesn't work for floating model
   url: https://netlicensing.io/wiki/signing-the-response
 
@@ -132,6 +132,7 @@
   component: UI
   features:
    - added: Vendor usage page
+  image: assets/images/changelog/netlicensing-usage.png
   url: https://ui.netlicensing.io/#/usage
 
 - title: "NetLicensing C++ Client Library"
