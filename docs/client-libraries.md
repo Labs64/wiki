@@ -52,8 +52,8 @@ Integrations
 NetLicensing can be easily integrated with common *e-Commerce, billing and subscription management* platforms, such as:
 
 -   <a href="https://github.com/Labs64/NetLicensing-Gateway" class="external-link">NetLicensing-Gateway</a> - NetLicensing / eCommerce gateway
--   [PayPal](paypal)
--   [Stripe](stripe)
+-   [PayPal](paypal) - NetLicensing / PayPal Integration
+-   [Stripe](stripe) - NetLicensing / Stripe Integration
 -   <a href="https://zapier.com/apps/netlicensing/integrations" class="external-link">NetLicensing-Zapier</a>
  -<span class="flex-auto mb-2"><span class="text-gray-dark mr-2"> NetLicensing / Zapier Integration</span></span>
 -   <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki/MyCommerce" class="external-link">NetLicensing-MyCommerce</a> - NetLicensing / MyCommerce integration
