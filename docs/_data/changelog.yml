@@ -6,7 +6,7 @@
 #    - added: Lorem ipsum dolor sit amet
 #    - updated: Ut enim ad minim veniam
 #    - fixed: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-#   image: <IMAGE-PATH>; e.g. assets/images/releases/netlicensing-pricing-table.gif
+#   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "NetLicensing Changelog RSS Feed"
@@ -35,7 +35,7 @@
   features:
    - added: Render "customerData" as an additional customer's tab
    - updated: Use the same order of module/package columns
-  image: https://netlicensing.io/wiki/assets/images/faq-add-customer-data.png
+  image: assets/images/changelog/netlicensing-customer-data.gif
   url: https://netlicensing.io/wiki/faq-add-customer-data
 
 - title: "Pricing Table Licensing Model"
@@ -45,7 +45,7 @@
   features:
    - added: Enable Pricing Table model (beta)
    - updated: Restrict username character set
-  image: assets/images/releases/netlicensing-pricing-table.gif
+  image: assets/images/changelog/netlicensing-pricing-table.gif
   url: https://netlicensing.io/licensing-models/
 
 - title: "NetLicensing 2.5.6"
@@ -104,7 +104,7 @@
    - added: Enable new Node-Locked licensing model
    - updated: Registration - validate user profile attributes
   url: https://netlicensing.io/wiki/node-locked
-  
+
 - title: "NetLicensing 2.5.1"
   description: "Maintenance release fixing wrong usage notifications."
   date: 2019-08-28
@@ -133,7 +133,7 @@
   features:
    - added: Vendor usage page
   url: https://ui.netlicensing.io/#/usage
-  
+
 - title: "NetLicensing C++ Client Library"
   description: "Add a full set of NetLicensing services to the C++ client library."
   date: 2019-04-25
