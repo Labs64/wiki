@@ -58,6 +58,14 @@
    - fixed: New Node-Locked licensing model cannot be selected
   url: https://netlicensing.io/NetLicensing-API/
 
+- title: "Node-Locked Licensing Model"
+  description: "Prevent sharing of the license identities and unauthorized usage of your products by binding the customer identity to the device (node) with the Node-Locked licensing model."
+  date: 2019-09-14
+  component: API, UI
+  features:
+   - added: Enable new Node-Locked licensing model
+  url: https://netlicensing.io/wiki/node-locked
+  
 - title: "NetLicensing 2.5.1"
   description: "Maintenance release fixing wrong usage notifications."
   date: 2019-08-28
