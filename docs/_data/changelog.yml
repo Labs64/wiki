@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Demo Data for the Licensing Models"
+  description: "Easily create a new product configuration that is pre-configured with the demo data for the chosen licensing model."
+  date: 2020-01-17
+  component: UI
+  features:
+   - added: NetLicensing licensing models demo data
+  url: https://ui.netlicensing.io/#/demo-data
+
 - title: "NetLicensing Changelog RSS Feed"
   description: "Track NetLicensing additions, updates and fixes on the NetLicensing changelog RSS feed using your favorite RSS reader, such as Inoreader, Feedly, Flipboard."
   date: 2020-01-07
