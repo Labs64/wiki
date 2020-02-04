@@ -30,7 +30,7 @@ module parameter:
 
 -   `Integer` **`maxCheckoutValidity`** - floating license maximum checkout
     validity, in seconds ("Maximum checkout validity" in
-    <a href="http://nlic.io/nlUI" class="external-link">
+    <a href="http://l64.cc/nlUI" class="external-link">
     NetLicensing Management Console</a> / product module edit form)
 
 Validity can be extended as long as needed by subsequent checkouts before the
