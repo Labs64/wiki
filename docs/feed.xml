@@ -19,7 +19,7 @@ layout: vendor/compress
         <title>Labs64 NetLicensing Changelog</title>
         <link>{{ site.baseurl | prepend: site.url }}</link>
     </image>
-    {% for change in site.data.changelog limit:100 %}
+    {% for change in site.data.changelog limit:15 %}
       <item>
         <title>{{ change.title | xml_escape }}</title>
         <description>{{ change.description | xml_escape }}</description>
