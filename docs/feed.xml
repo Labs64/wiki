@@ -35,7 +35,29 @@ layout: vendor/compress
         {% endif %}
         {% if change.image %}
         {% assign ext = change.image | split: "." | last %}
-        <enclosure url="{{ change.image }}" length="1" type="{{ ext }}" />
+        {% case ext %}
+        {% when 'bmp' %}
+        {% assign mimetype = 'image/bmp' %}
+        {% when 'gif' %}
+        {% assign mimetype = 'image/gif' %}
+        {% when 'jpeg' %}
+        {% assign mimetype = 'image/jpeg' %}
+        {% when 'jpg' %}
+        {% assign mimetype = 'image/jpeg' %}
+        {% when 'svg' %}
+        {% assign mimetype = 'image/svg+xml' %}
+        {% when 'tif' %}
+        {% assign mimetype = 'image/tiff' %}
+        {% when 'tiff' %}
+        {% assign mimetype = 'image/tiff' %}
+        {% when 'ico' %}
+        {% assign mimetype = 'image/x-icon' %}
+        {% when 'png' %}
+        {% assign mimetype = 'image/png' %}
+        {% else %}
+        {% assign mimetype = 'image/png' %}
+        {% endcase %}
+        <enclosure url="{{ change.image | prepend: site.baseurl | prepend: site.url }}" length="0" type="{{ mimetype }}" />
         {% endif %}
       </item>
     {% endfor %}
