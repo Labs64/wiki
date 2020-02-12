@@ -33,7 +33,10 @@ layout: vendor/compress
         {% if change.component %}
         <category>{{ change.component | xml_escape }}</category>
         {% endif %}
-        <enclosure url="https://netlicensing.io/wiki/assets/images/changelog/netlicensing-pricing-table.gif" length="10" type="image/png" />
+        {% if change.image %}
+        {% assign ext = change.image | split: "." | last %}
+        <enclosure url="{{ change.image }}" length="1" type="{{ ext }}" />
+        {% endif %}
       </item>
     {% endfor %}
   </channel>
