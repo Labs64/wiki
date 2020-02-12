@@ -57,7 +57,12 @@ layout: vendor/compress
         {% else %}
         {% assign mimetype = 'image/png' %}
         {% endcase %}
-        <enclosure url="{{ change.image | prepend: site.baseurl | prepend: site.url }}" length="0" type="{{ mimetype }}" />
+        {% if change.image contains '://' %}
+            {% assign imageurl = change.image %}
+        {% else %}
+            {% assign imageurl = change.image | prepend: site.baseurl | prepend: site.url %}
+        {% endif %}
+        <enclosure url="{{ imageurl }}" length="0" type="{{ mimetype }}" />
         {% endif %}
       </item>
     {% endfor %}
