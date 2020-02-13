@@ -14,7 +14,7 @@
   date: 2020-02-10
   component: UI
   features:
-   - added: "What's new" information panel
+   - added: _What's new_ information panel
   image: assets/images/changelog/netlicensing-changelog.png
   url: https://ui.netlicensing.io
 
