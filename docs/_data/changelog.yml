@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Stay up-to-date with NetLicensing platform news"
+  description: "Stay informed about the latest changes to NetLicensing platform directly in the management console."
+  date: 2020-02-10
+  component: UI
+  features:
+   - added: "What's new" information panel
+  image: assets/images/changelog/netlicensing-changelog.png
+  url: https://ui.netlicensing.io
+
 - title: "Demo Data for the Licensing Models"
   description: "Easily create a new product configuration that is pre-configured with the demo data for the chosen licensing model."
   date: 2020-01-17
