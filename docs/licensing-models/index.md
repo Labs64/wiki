@@ -159,7 +159,7 @@ NetLicensing.
 </ul></td>
 <td><p>This license is a non-transferable license allowing product use on a single computer and/or by a single user. Once purchased, the product can be used without limitations.</p>
 <div class="aui-message hint shadowed information-macro has-no-icon">
-<p>How to configure</p>
+<p><strong>How to configure</strong></p>
 <div class="message-content">
 <p>Use <span markdown="1">[Try & Buy](try-n-buy)</span> Licensing model with try/evaluation period set to a minimum value of 1 day</p>
 </div>
@@ -168,13 +168,13 @@ NetLicensing.
 <p><em>See "How to configure"</em></p></td>
 </tr>
 <tr class="even">
-<td><p>Named-user</p></td>
+<td><p>Named User</p></td>
 <td><ul>
 <li><span>Personal licenses</span></li>
 </ul></td>
 <td><p>License rights are granted to specific user IDs. The software may be used on any computer by a user ID that is on a list of licensed users.</p>
 <div class="aui-message hint shadowed information-macro has-no-icon">
-<p>How to configure</p>
+<p><strong>How to configure</strong></p>
 <div class="message-content">
 <p>NetLicensing currently is not supporting explicitly prevention of a concurrent license use by the same ID from several locations, however it is possible to associate user IDs with the licenses.</p>
 <p>Option 1) Add custom property to the license identifying specific named user and verify ID matching on validation.</p>
@@ -183,10 +183,7 @@ NetLicensing.
 </div></td>
 <td><p><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /></p>
 <p><em>See "How to configure"</em></p>
-<p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
-<p><em>PLANNED</em></p>
-<p><em><br />
-</em></p></td>
+</td>
 </tr>
 <tr class="odd">
 <td>Duplicate grouping (license sharing) by user, host or display</td>
