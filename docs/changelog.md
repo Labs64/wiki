@@ -25,7 +25,8 @@ This is our *#changelog*.
 
 ---
 
-<section id="{{ change.title | slugify }}" title="{{ change.title }}">
+<section markdown="1" id="{{ change.title | slugify }}" title="{{ change.title }}">
+
 ### {{ change.title }}
 <p style="font-size: smaller; font-style: italic;">{% if change.component %}In {{ change.component }} on {% endif %}{{ change.date | date: '%B %d, %Y' }}</p>
 {{ change.description }}
@@ -56,6 +57,7 @@ This is our *#changelog*.
 {% if change.url %}
 [Learn more]({{ change.url }}){: .btn }
 {% endif %}
+
 </section>
 
 {% endfor %}

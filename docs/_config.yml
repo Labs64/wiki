@@ -6,7 +6,6 @@ plugins:
  - jekyll-seo-tag
 
 remote_theme: Labs64/NetLicensing-Wiki-template
-markdown: kramdown
 
 url: "https://netlicensing.io"
 # subpath of the site, e.g. /blog/
