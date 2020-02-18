@@ -17,6 +17,9 @@ sitemap:
 We improve the NetLicensing services every day by releasing new features, squashing bugs, and delivering fresh documentation.
 Here's an account of what's recently happened. This is our #changelog.
 
+<button class="btn js-toggle-dark-mode" id="startTour">Start Tour</button>
+<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
+
 {% for change in site.data.changelog %}
 
 ---
