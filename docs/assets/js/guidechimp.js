@@ -1,31 +1,13 @@
 var tour = [
     {
-        element: '.navigation-list',
-        title: 'Try & Buy',
-        description: 'This licensing model is useful in case you want to distribute secure trial or demo version of your product. Trial licenses are granted for a short time and allow customers to try the product before buying it.',
-        buttons: [
-            {
-                title: 'See more',
-                class: 'tour-button',
-                onClick: function () {
-                    alert("Step button click");
-                }
-            }
-        ]
+        element: 'stay-up-to-date-with-netlicensing-platform-news',
+        title: 'NetLicensing Platform News',
+        description: 'Stay informed about the latest changes to NetLicensing platform directly in the management console.',
     },
     {
-        element: '#main-content',
-        title: 'Subscription',
-        description: 'Subscription licensing model allows user to enable product for a specific period of time, with the possibility of the subscription renewal.',
-        buttons: [
-            {
-                title: 'See more',
-                class: 'tour-button',
-                onClick: function () {
-                    alert("Step button click");
-                }
-            }
-        ]
+        element: 'extended-customer-data',
+        title: 'Extended Customer Data ',
+        description: 'Improve customer profiles by adding and grouping customer information using Custom Properties in the UI.',
     },
 ];
 
