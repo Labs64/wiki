@@ -15,16 +15,17 @@ sitemap:
 =============
 
 We improve the NetLicensing services every day by releasing new features, squashing bugs, and delivering fresh documentation.
-Here's an account of what's recently happened. This is our *#changelog*.
+Here's an account of what's recently happened.
+This is our *#changelog*.
 
-<button class="btn" id="startTour">Start Features Tour</button>
+<button class="btn" id="startTour">Tour: Notable Features</button>
 <script type="text/javascript" src="{{ "/assets/js/guidechimp.js" | absolute_url }}"></script>
 
 {% for change in site.data.changelog %}
 
 ---
 
-<span id="{{ change.title | slugify }}" title="{{ change.title }}">
+<section id="{{ change.title | slugify }}" title="{{ change.title }}">
 ### {{ change.title }}
 <p style="font-size: smaller; font-style: italic;">{% if change.component %}In {{ change.component }} on {% endif %}{{ change.date | date: '%B %d, %Y' }}</p>
 {{ change.description }}
@@ -55,7 +56,7 @@ Here's an account of what's recently happened. This is our *#changelog*.
 {% if change.url %}
 [Learn more]({{ change.url }}){: .btn }
 {% endif %}
-</span>
+</section>
 
 {% endfor %}
 
