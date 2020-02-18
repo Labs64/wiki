@@ -14,12 +14,12 @@ To be able to run netlicensing.io website locally you have to meet the following
 ### Docker
 
 1. Clone repository
-```
+```bash
 $ git clone https://github.com/Labs64/NetLicensing-Wiki.git
 ```
 
 2. Start environment
-```
+```bash
 $ docker-compose up -d
 ```
 
@@ -28,7 +28,7 @@ Now you can browse the site at [http://localhost:4000/wiki/](http://localhost:40
 ---
 
 3. Stop environment
-```
+```bash
 $ docker-compose down
 ```
 
