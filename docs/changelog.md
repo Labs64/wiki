@@ -24,7 +24,7 @@ Here's an account of what's recently happened. This is our *#changelog*.
 
 ---
 
-<p id="{{ change.title | slugify }}" title="{{ change.title }}">
+<span id="{{ change.title | slugify }}" title="{{ change.title }}">
 ### {{ change.title }}
 <p style="font-size: smaller; font-style: italic;">{% if change.component %}In {{ change.component }} on {% endif %}{{ change.date | date: '%B %d, %Y' }}</p>
 {{ change.description }}
@@ -55,7 +55,7 @@ Here's an account of what's recently happened. This is our *#changelog*.
 {% if change.url %}
 [Learn more]({{ change.url }}){: .btn }
 {% endif %}
-</p>
+</span>
 
 {% endfor %}
 
