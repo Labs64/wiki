@@ -32,7 +32,6 @@ var tourChangelog = [
 ];
 
 var guideChimp = new GuideChimp(tourChangelog);
-
 document.getElementById('startTour').onclick = function () {
     guideChimp.start();
 };
