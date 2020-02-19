@@ -29,7 +29,7 @@ This is our *#changelog*.
 
 ### {{ change.title }}
 <p style="font-size: smaller; font-style: italic;">{% if change.component %}In {{ change.component }} on {% endif %}{{ change.date | date: '%B %d, %Y' }}</p>
-{{ change.description }}
+<p class="change-description">{{ change.description }}</p>
 
 {% if change.image %}
 <img src="{{ change.image }}" />
