@@ -1,4 +1,4 @@
-var tour = [
+var tourChangelog = [
     {
         element: 'section#stay-up-to-date-with-netlicensing-platform-news',
         title: 'NetLicensing Platform News',
@@ -31,7 +31,7 @@ var tour = [
     },
 ];
 
-var guideChimp = new GuideChimp(tour);
+var guideChimp = new GuideChimp(tourChangelog);
 
 document.getElementById('startTour').onclick = function () {
     guideChimp.start();
