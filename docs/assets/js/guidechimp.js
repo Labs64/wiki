@@ -1,6 +1,6 @@
 var tourChangelog = [
     {
-        element: 'section#stay-up-to-date-with-netlicensing-platform-news',
+        element: 'section#stay-up-to-date-with-netlicensing-platform-news p.change-description',
         title: 'NetLicensing Platform News',
         description: 'Stay informed about the latest changes to NetLicensing platform directly in the management console.',
         position: 'left',
