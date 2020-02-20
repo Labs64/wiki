@@ -37,17 +37,15 @@ var tourChangelog = [{
   },
 ];
 
-var guideChimp = new GuideChimp(tourChangelog, {
-  position: top,
-});
-guideChimp.on('onAfterChange', (tour, fromStep, toStep)=>{
-        ga('send', {
-          hitType: 'event',
-          eventCategory: 'Changelog Tour',
-          eventAction: 'step',
-          eventLabel: toStep
-        });
+var guideChimp = new GuideChimp(tourChangelog, { position: top });
+guideChimp.on('onAfterChange', function (fromStep, toStep) {
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'Changelog Tour',
+        eventAction: 'step',
+        eventLabel: 'Step ' + toStep.number,
+    });
 })
-document.getElementById('startTour').onclick = function() {
-  guideChimp.start();
+document.getElementById('startTour').onclick = function () {
+    guideChimp.start();
 };
