@@ -30,8 +30,8 @@ var guideChimp = new GuideChimp(tourChangelog, {
   scrollPadding: 50
 });
 guideChimp.on('onAfterChange', function(toStep, fromStep) {
-  gtag('event', 'step', {
-    'event_category': 'Changelog Tour',
+  gtag('event', 'Changelog Tour', {
+    'event_category': 'Guided Tour (GuideChimp)',
     'event_label': 'Step (' + toStep.step + '): ' + toStep.title,
     'value': toStep.step
   });
