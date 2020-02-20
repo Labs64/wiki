@@ -22,30 +22,20 @@ var tourChangelog = [{
     element: 'h3#vendor-usage-page ~ p.change-description',
     title: 'Vendor Usage Page',
     description: 'Easily verify the limits (active products, customers) and available features and licensing models within your NetLicensing vendor account.',
-    buttons: [{
-      title: 'GA event',
-      class: 'tour-button',
-      onClick: function() {
-        ga('send', {
-          hitType: 'event',
-          eventCategory: 'Changelog Tour',
-          eventAction: 'step',
-          eventLabel: 'Step 5'
-        });
-      }
-    }]
   },
 ];
 
-var guideChimp = new GuideChimp(tourChangelog, { position: top });
-guideChimp.on('onAfterChange', function (fromStep, toStep) {
-    ga('send', {
-        hitType: 'event',
-        eventCategory: 'Changelog Tour',
-        eventAction: 'step',
-        eventLabel: 'Step ' + toStep.number,
-    });
+var guideChimp = new GuideChimp(tourChangelog, {
+  position: top
+});
+guideChimp.on('onAfterChange', function(fromStep, toStep) {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Changelog Tour',
+    eventAction: 'step',
+    eventLabel: 'Step ' + toStep.number,
+  });
 })
-document.getElementById('startTour').onclick = function () {
-    guideChimp.start();
+document.getElementById('startTour').onclick = function() {
+  guideChimp.start();
 };
