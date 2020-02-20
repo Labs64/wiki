@@ -26,15 +26,15 @@ var tourChangelog = [{
 ];
 
 var guideChimp = new GuideChimp(tourChangelog, {
-  position: top,
+  position: left,
   scrollPadding: 50
 });
-guideChimp.on('onAfterChange', function(fromStep, toStep) {
+guideChimp.on('onAfterChange', function(toStep, fromStep) {
   ga('send', {
     hitType: 'event',
     eventCategory: 'Changelog Tour',
     eventAction: 'step',
-    eventLabel: 'Step ' + toStep.number,
+    eventLabel: 'Step ' + toStep.title,
   });
 })
 document.getElementById('startTour').onclick = function() {
