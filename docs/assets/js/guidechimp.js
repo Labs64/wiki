@@ -26,7 +26,12 @@ var tourChangelog = [{
       title: 'GA event',
       class: 'tour-button',
       onClick: function() {
-        ga('send', 'event', 'GuideChimp', 'Tour', 'Changelog', 'Step 5');
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Changelog Tour',
+          eventAction: 'step',
+          eventLabel: 'Step 5'
+        });
       }
     }]
   },
