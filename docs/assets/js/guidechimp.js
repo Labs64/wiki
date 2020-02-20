@@ -26,7 +26,8 @@ var tourChangelog = [{
 ];
 
 var guideChimp = new GuideChimp(tourChangelog, {
-  position: top
+  position: top,
+  scrollPadding: 50
 });
 guideChimp.on('onAfterChange', function(fromStep, toStep) {
   ga('send', {
