@@ -34,7 +34,7 @@ guideChimp.on('onAfterChange', function(toStep, fromStep) {
     hitType: 'event',
     eventCategory: 'Changelog Tour',
     eventAction: 'step',
-    eventLabel: 'Step (' + toStep.number + ('): ') + toStep.title,
+    eventLabel: 'Step (' + toStep.number + '): ' + toStep.title,
   });
 })
 document.getElementById('startTour').onclick = function() {
