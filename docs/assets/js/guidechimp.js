@@ -32,8 +32,8 @@ var guideChimp = new GuideChimp(tourChangelog, {
 guideChimp.on('onAfterChange', function(toStep, fromStep) {
   gtag('event', 'step', {
     'event_category': 'Changelog Tour',
-    'event_label': 'Step (' + toStep.number + '): ' + toStep.title,
-    'value': toStep.number
+    'event_label': 'Step (' + toStep.step + '): ' + toStep.title,
+    'value': toStep.step
   });
 })
 document.getElementById('startTour').onclick = function() {
