@@ -40,12 +40,12 @@ var tourChangelog = [{
 var guideChimp = new GuideChimp(tourChangelog, {
   position: top,
 });
-guideChimp.on('onAfterChange', ()=>{
+guideChimp.on('onAfterChange', (tour, fromStep, toStep)=>{
         ga('send', {
           hitType: 'event',
           eventCategory: 'Changelog Tour',
           eventAction: 'step',
-          eventLabel: 'Step 5'
+          eventLabel: toStep
         });
 })
 document.getElementById('startTour').onclick = function() {
