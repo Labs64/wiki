@@ -3,7 +3,7 @@ layout: default
 title: How to use NetLicensing in reseller mode
 parent: FAQ & Troubleshooting
 nav_order: 100
-description: "How to use NetLicensing in reseller mode"
+description: "Setup NetLicensing reseller mode via Predefined Licensee or Auto-Created Licensee"
 permalink: faq-reseller
 ---
 
