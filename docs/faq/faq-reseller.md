@@ -12,14 +12,13 @@ permalink: faq-reseller
 
 ## Question
 
-We sell to distributors who sell to partners who sell to end-users. 
-Distributors buy our software in advance, install it on their devices, then resell them. Between the time distributors buy the license to us, and the time users start using the software, there might be some months. Maintenance starts when users use the software for the first time.
+Our products are being distributed via partners and resellers network.
+The time between distributors receive the license, and users start using the products, there might be some days or even months. Maintenance starts when users start using our products.
+How this reseller scenario can be achieved with NetLicensing?
 
 ## Answer
 
-Yes, reseller mode can be established as well.
- 
-There will be two options:
+You can setup NetLicensing reseller mode with the two options outlined below:
 
 **Option 1: Predefined Licensee**
 
@@ -31,4 +30,4 @@ With this option, you'd need to create Licensees via NetLicensing Management Con
 
 This option is suitable for resellers with a high number of customers, where pre-creation of hight number of the Licensees isn't feasible.
 
-With this option, you'd need to create an APIKey with Role "ROLE_APIKEY_OPERATION" ( see also https://www.labs64.de/confluence/display/NLICPUB/Security ) and let your resellers create Licensees whenever they need a new one.
+With this option, you'd need to create an APIKey with Role "ROLE_APIKEY_OPERATION" ( see also [Security](security) ) and let your resellers create Licensees whenever they need a new one.
