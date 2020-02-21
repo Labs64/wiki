@@ -19,7 +19,7 @@ Here's an account of what's recently happened.
 This is our *#changelog*.
 
 <button class="btn" id="startTour">Tour: Notable Features</button>
-<script type="text/javascript" src="{{ "/assets/js/guidechimp.js" | absolute_url }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/guidechimp-tours.js" | absolute_url }}"></script>
 
 {% for change in site.data.changelog %}
 
