@@ -24,10 +24,11 @@ You can setup NetLicensing reseller mode with the two options outlined below:
 
 _This option is suitable for resellers with a low number of customers._
 
-With this option, you'd need to create Licensees via NetLicensing Management Console and share Licensee Numbers numbers with your resellers.
+With this option, you'd need to create needed [Licensees](object-model) via [NetLicensing Management Console](https://ui.netlicensing.io) and share _Licensee Numbers_ numbers with your resellers.
+
 
 **Option 2: Auto-Created Licensee**
 
 _This option is suitable for resellers with a high number of customers, where pre-creation of hight number of the Licensees isn't feasible._
 
-With this option, you'd need to create an APIKey with Role `"ROLE_APIKEY_OPERATION"` ( see also [Security](security) ) and let your resellers create Licensees whenever they need a new one.
+With this option, you need to create an APIKey with Role `"ROLE_APIKEY_OPERATION"` ( see also [Security](security) ) and allow your resellers to create Licensees whenever they need a new one.
