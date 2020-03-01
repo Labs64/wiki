@@ -14,7 +14,7 @@
   date: 2020-02-18
   component: Client Libraries
   features:
-   - fixed: NetLicensing JavaScript Library / Node.js fix
+   - fixed: Use correct header _Accept application/json_
   url: https://github.com/Labs64/NetLicensingClient-javascript/releases/tag/1.2.21
 
 - title: "Stay up-to-date with NetLicensing platform news"
