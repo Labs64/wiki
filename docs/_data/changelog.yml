@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing JavaScript Library / Node.js fix"
+  description: "Latest NetLicensing JavaScript Library fix allows you to integrate License Management in your Node.js powered web applications."
+  date: 2020-02-18
+  component: Client Libraries
+  features:
+   - fixed: NetLicensing JavaScript Library / Node.js fix
+  url: https://github.com/Labs64/NetLicensingClient-javascript/releases/tag/1.2.21
+
 - title: "Stay up-to-date with NetLicensing platform news"
   description: "Stay informed about the latest changes to NetLicensing platform directly in the management console."
   date: 2020-02-10
