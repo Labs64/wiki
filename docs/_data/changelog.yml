@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing Console Maintenance Release"
+  description: "Maintenance release fixing annoying NetLicensing Management Console defects."
+  date: 2020-03-05
+  component: UI
+  features:
+   - fixed: Microsoft Edge compatibility issue
+   - fixed: Service error while working with modules
+   - fixed: Error saving Multi-Feature license model packages
+  url: https://ui.netlicensing.io
+  
 - title: "NetLicensing JavaScript Library / Node.js fix"
   description: "Latest NetLicensing JavaScript Library fix allows you to integrate License Management in your Node.js powered web applications."
   date: 2020-02-18
