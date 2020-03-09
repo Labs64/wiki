@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Notable NetLicensing Features"
+  description: "TL:DR - Bored to read newer-ending changelog? We prepared a condensed list of notable NetLicensing features, changes and fixes."
+  date: 2020-03-09
+  component: Docu
+  features:
+   - added: Enable GuideChimp Tour "Notable Features" for NetLicensing changelog
+  url: https://github.com/Labs64/GuideChimp
+
 - title: "NetLicensing Console Maintenance Release"
   description: "Maintenance release fixing annoying NetLicensing Management Console defects."
   date: 2020-03-05
