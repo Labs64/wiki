@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Labs64 NetLicensing for GitHub Teacher Toolbox"
+  description: "Great news for all teachers - Labs64 NetLicensing partnered with GitHub and offers NetLicensing Teacher (Basic) Plan for FREE all GitHub Teacher Toolbox users."
+  date: 2020-03-13
+  component: Integrations, UI
+  features:
+   - added: Authorize via GitHub Teacher Toolbox program
+   - added: New pricing plan "Teacher (Basic)"
+  image: https://netlicensing.io/img/partners/netlicensing-github-teacher-toolbox.png
+  url: https://netlicensing.io/github-teachers/
+
 - title: "Notable NetLicensing Features"
   description: "TL:DR - Bored to read newer-ending changelog? We prepared a condensed list of notable NetLicensing features, changes and fixes."
   date: 2020-03-09
