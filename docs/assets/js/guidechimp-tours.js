@@ -1,4 +1,10 @@
-var tourChangelog = [{
+var tourChangelog = [
+  {
+    element: 'h3#labs64-netlicensing-for-github-teacher-toolbox ~ p.change-description',
+    title: 'Labs64 NetLicensing for GitHub Teacher Toolbox',
+    description: 'Great news for all teachers - Labs64 NetLicensing partnered with GitHub and offers NetLicensing Teacher (Basic) Plan for FREE all GitHub Teacher Toolbox users.',
+  },
+  {
     element: 'h3#stay-up-to-date-with-netlicensing-platform-news ~ p.change-description',
     title: 'NetLicensing Platform News',
     description: 'Stay informed about the latest changes to NetLicensing platform directly in the management console.',
@@ -25,17 +31,21 @@ var tourChangelog = [{
   },
 ];
 
+GuideChimp.extend(guideChimpPluginGoogleAnalytics);
+
 var guideChimp = new GuideChimp(tourChangelog, {
   position: 'left',
   scrollPadding: 50
 });
-guideChimp.on('onAfterChange', function(toStep, fromStep) {
-  gtag('event', 'Changelog Tour', {
-    'event_category': 'Guided Tour (GuideChimp)',
-    'event_label': 'Step (' + toStep.step + '): ' + toStep.title,
-    'value': toStep.step
-  });
-})
+// GuideChimp->GoogleAnalytics plugin - https://github.com/Labs64/GuideChimp/tree/master/plugins/googleAnalytics
+guideChimp.gaOn('onAfterChange', 'Changelog Tour', (to, from) => {
+  return {
+    event_category: 'Guided Tour (GuideChimp)',
+    event_label: 'Step (' + to.step + '): ' + to.title,
+    value: to.step
+  };
+});
+
 document.getElementById('startTour').onclick = function() {
   guideChimp.start();
 };
