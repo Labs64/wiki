@@ -161,7 +161,7 @@ NetLicensing.
 <div class="aui-message hint shadowed information-macro has-no-icon">
 <p><strong>How to configure</strong></p>
 <div class="message-content">
-<p>Use <span markdown="1">[Try & Buy](try-n-buy)</span> Licensing model with try/evaluation period set to a minimum value of 1 day</p>
+<p>Use <span markdown="1">[Try & Buy](try-n-buy)</span> Licensing model with try/evaluation period set to a minimum value of 1 day.</p>
 </div>
 </div></td>
 <td><p><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /></p>
@@ -178,7 +178,8 @@ NetLicensing.
 <div class="message-content">
 <p>NetLicensing currently is not supporting explicitly prevention of a concurrent license use by the same ID from several locations, however it is possible to associate user IDs with the licenses.</p>
 <p>Option 1) Add custom property to the license identifying specific named user and verify ID matching on validation.</p>
-<p>Option 2) Derive licensee number from the user ID</p>
+<p>Option 2) Derive licensee number from the user ID.</p>
+<p>Option 3) Use Node-Locked licensing model with *nodeSecret* assigned from the user ID.</p>
 </div>
 </div></td>
 <td><p><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /></p>
