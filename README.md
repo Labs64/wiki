@@ -15,7 +15,7 @@ To be able to run netlicensing.io website locally you have to meet the following
 
 1. Clone repository
 ```bash
-$ git clone https://github.com/Labs64/NetLicensing-Wiki.git
+$ git clone https://github.com/Labs64/wiki.git
 ```
 
 2. Start environment
