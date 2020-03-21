@@ -96,7 +96,9 @@ model:
 
 Validation response example:
 
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context" ttl="2018-03-12T19:56:47.297Z">
   <ns2:infos/>
   <ns2:items>
@@ -109,9 +111,6 @@ Validation response example:
     </ns2:item>
   </ns2:items>
 </ns2:netlicensing>
- 
 ```
+{: .ml-5 }
 
- 
-
- 
