@@ -98,17 +98,19 @@ Validation returns value:
 
 **Predefined** mode example:
 
-**Request Predefined mode**
-
-``` theme:
+<div>Request Predefined mode</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 productModuleNumber0=MTEST-DEMO&nodeSecret0=SecretGivenByVendor
 ```
-
-``` theme:
+{: .ml-5 }
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context" ttl="2016-09-07T21:43:22.638Z">
     <ns2:infos/>
@@ -122,22 +124,24 @@ productModuleNumber0=MTEST-DEMO&nodeSecret0=SecretGivenByVendor
     </ns2:items>
 </ns2:netlicensing>
 ```
-
+{: .ml-5 }
  
 
 **Client** mode example:
 
-**Request Client mode**
-
-``` theme:
+<div>Request Client mode</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 productModuleNumber0=MTEST-DEMO&nodeSecret0=HardwareOrGeneratedSecret
 ```
-
-``` theme:
+{: .ml-5 }
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context" ttl="2016-09-07T21:43:22.638Z">
     <ns2:infos/>
@@ -151,3 +155,4 @@ productModuleNumber0=MTEST-DEMO&nodeSecret0=HardwareOrGeneratedSecret
     </ns2:items>
 </ns2:netlicensing>
 ```
+{: .ml-5 }
