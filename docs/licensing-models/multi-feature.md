@@ -59,8 +59,9 @@ feature:
     template.
 
 Validation response example:
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context" ttl="2016-09-07T21:43:22.638Z">
     <ns2:infos/>
@@ -81,3 +82,4 @@ Validation response example:
     </ns2:items>
 </ns2:netlicensing>
 ```
+{: .ml-5 }
