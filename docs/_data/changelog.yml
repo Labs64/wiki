@@ -17,7 +17,9 @@
    - added: Add refresh button to all lists
    - added: Generate permanent shop token for Pricing Table plans
    - fixed: Fix Pricing Table demo data creation
-   - updated: Open a demo product right after creation
+   - updated: Open product details right after demo data creation
+   - updated: Checkboxes style changed and made more intuitive
+   - added: Add deactivate module toggle in the product module view
   url: https://ui.netlicensing.io
 
 - title: "Labs64 NetLicensing for GitHub Teacher Toolbox"
