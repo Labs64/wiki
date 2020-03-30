@@ -36,5 +36,5 @@ Alternatively, you can use the old console for time being: <a href="https://go.n
 ---
 
 ### Links
-- NetLicensing Management Console (old): <a href="https://go.netlicensing.io/console/v2/" class="external-link">https://go.netlicensing.io/console/v2/</a>
 - NetLicensing Management Console (new): <a href="https://ui.netlicensing.io" class="external-link">https://ui.netlicensing.io</a>
+- NetLicensing Management Console (old): <a href="https://go.netlicensing.io/console/v2/" class="external-link">https://go.netlicensing.io/console/v2/</a>
