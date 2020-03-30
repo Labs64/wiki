@@ -331,4 +331,4 @@ GDPR efforts mentioned above.
 
 If you have specific questions about the GDPR and your use of
 NetLicensing, you can email us at
-<a href="mailto:netlicensing@labs64.com" class="external-link">netlicensing@labs64.com</a>.
+<a href="mailto:info@netlicensing.io" class="external-link">info@netlicensing.io</a>.

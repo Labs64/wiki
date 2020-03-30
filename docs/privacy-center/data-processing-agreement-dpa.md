@@ -29,7 +29,7 @@ To sign your DPA, please check the instructions below on how to do it:
     Services* and *Privacy Policies*
     `(version: >= 2.5; acceptance date: >= 25.05.2018)`
 -   Contact us via email
-    <a href="mailto:netlicensing@labs64.com" class="external-link">netlicensing@labs64.com</a>
+    <a href="mailto:info@netlicensing.io" class="external-link">info@netlicensing.io</a>
     and provide your Vendor Number as well as Data Protection Officer
     contact
 -   We'll send you your individual Data Processing Agreement

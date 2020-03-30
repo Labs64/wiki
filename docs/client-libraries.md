@@ -94,7 +94,7 @@ NetLicensing can be easily integrated with common *e-Commerce, billing and subsc
 
 Please refer to the <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki" class="external-link">typical integration scenario</a>, which is showing how NetLicensing extending standard e-commerce flow (using digital fulfilment) by enabling license management for the digital products and services.
 
-Depending on your business processes and distribution channels there might be many different integration options. Please contact us via <a href="mailto:netlicensing@labs64.com" class="external-link">netlicensing@labs64.com</a> and we'll be happy to assist you defining best-fit integration scenario.
+Depending on your business processes and distribution channels there might be many different integration options. Please contact us via <a href="mailto:info@netlicensing.io" class="external-link">info@netlicensing.io</a> and we'll be happy to assist you defining best-fit integration scenario.
 
 Online test application
 -----------------------
