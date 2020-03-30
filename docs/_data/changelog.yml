@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Onboarding of new NetLicensing vendors"
+  description: "Welcome new NetLicensing vendors and suggest the next step to kick-off their license management."
+  date: 2020-03-30
+  component: UI
+  features:
+   - added: Vendor onboarding guided tour
+   - added: Copy Pricing Table HTML snippet button
+  url: https://ui.netlicensing.io
+
 - title: "Console UI/UX improvements"
   description: "Small UI/UX improvements that make a big difference in the NetLicemsing experience."
   date: 2020-03-23
