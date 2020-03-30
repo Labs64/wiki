@@ -18,6 +18,18 @@
    - added: Copy Pricing Table HTML snippet button
   url: https://ui.netlicensing.io
 
+- title: "NetLicensing 2.5.8"
+  description: "New simplified NetLicensing registration flow and other useful fixes & improvements."
+  date: 2020-03-27
+  component: API
+  features:
+   - updated: New NetLicensing registration flow
+   - updated: Rename Pricing Table HTML generation endpoint to "/getHTML" to "/render"
+   - fixed: Deactivated model feature affects other models validation
+   - fixed: Validation issue if deprecated Licensee Secret feature was used previously
+   - fixed: Customers search delivers wrong results
+  url: https://netlicensing.io
+
 - title: "Console UI/UX improvements"
   description: "Small UI/UX improvements that make a big difference in the NetLicemsing experience."
   date: 2020-03-23
