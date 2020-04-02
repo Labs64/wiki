@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Console UI/UX improvements"
+  description: "Create your first product configuration with just a few clicks."
+  date: 2020-04-02
+  component: UI
+  features:
+   - added: Help new vendors to start right away with the product configuration
+   - updated: Get rid of “Advanced” in the configurations and show additional configuration attributes
+   - updated: Improve UX & visibility of the checkboxes across UI
+   - updated: Prefill “Start Date” field in the new license form for time-volume licenses
+  url: https://ui.netlicensing.io
+
 - title: "Onboarding of new NetLicensing vendors"
   description: "Welcome new NetLicensing vendors and suggest the next step to kick-off their license management."
   date: 2020-03-30
