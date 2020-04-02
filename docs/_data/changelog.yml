@@ -14,10 +14,10 @@
   date: 2020-04-02
   component: UI
   features:
-   - added: Help new vendors to start right away with the product configuration
-   - updated: Get rid of “Advanced” in the configurations and show additional configuration attributes
-   - updated: Improve UX & visibility of the checkboxes across UI
-   - updated: Prefill “Start Date” field in the new license form for time-volume licenses
+   - added: Help new vendors to start right away with own product configuration
+   - updated: Get rid of “Advanced” collapsible sections in the entities configurations and show additional configuration attributes
+   - updated: Improve overall UX & visibility of the checkboxes across UI
+   - updated: Prefill “Start Date” field in the edit form for the new time-volume licenses
   url: https://ui.netlicensing.io
 
 - title: "Onboarding of new NetLicensing vendors"
