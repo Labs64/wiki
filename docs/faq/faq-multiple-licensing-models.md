@@ -1,9 +1,9 @@
 ---
 layout: default
-title: How to license product using different licensing models
+title: How to license product using multiple licensing models
 parent: FAQ & Troubleshooting
 nav_order: 100
-description: "How to license product using different licensing models"
+description: "How to license product using multiple licensing models"
 permalink: faq-multiple-licensing-models
 ---
 
@@ -20,18 +20,18 @@ Ability to use multiple licensing models in one product configuration is one of 
 
 Follow this guide to configure the product using Subscription and Multi-Feature licensing models.
 
-- Add a new product or use demo data view to speed-up product creation.
-- Add the first module and choose [Subscription](subscription) model. Add some packages (e.g. 1-week default and 1-month).
-- Add the second module and choose [Multi-Feature](multi-feature) model. Add some feature packages (e.g. "Feature BI" default and "Backup").
+- Add a new product or use <a href="https://ui.netlicensing.io/#/demo-data" target="_blank" class="external-link">demo data</a> view to speed-up product creation.
+- Add the first module and choose [Subscription](subscription) model. Add some packages (e.g. *1-week* default and *1-month*).
+- Add the second module and choose [Multi-Feature](multi-feature) model. Add some feature packages (e.g. *"Feature BI"* default and *"Backup"*).
 
-Your final product configuration should similar to this one.
+Your final product configuration should be similar to this one.
 
 <a href="assets/images/faq-multiple-licensing-models.png" class="imagelink" data-lightbox="multiple-licensing-models" data-title="Configure product using different licensing models" data-alt="Configure product using different licensing models">
   <img src="assets/images/faq-multiple-licensing-models.png" />
 </a>
 
 
-The validation response will return the customer status per module.
+The validation response will return the customer status per module:
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }
@@ -53,7 +53,7 @@ $ curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --head
       <ns2:property name="licensingModel">MultiFeature</ns2:property>
       <ns2:list name="FEATURE-BI">
         <ns2:property name="valid">true</ns2:property>
-        <ns2:property name="featureName">BI &amp; Reporting </ns2:property>
+        <ns2:property name="featureName">BI &amp; Reporting</ns2:property>
       </ns2:list>
       <ns2:list name="FEATURE-BCK">
         <ns2:property name="valid">false</ns2:property>
