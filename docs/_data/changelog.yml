@@ -10,7 +10,7 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "Instant RESTful API access"
-  description: "_API Examples_ tab provides a context-based reference to the NetLicensing RESTful API methods."
+  description: "API Examples tab provides context-based reference to the NetLicensing RESTful API methods."
   date: 2020-04-08
   component: UI
   features:
