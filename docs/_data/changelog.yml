@@ -10,11 +10,11 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "Instant RESTful API access"
-  description: ""API Examples" tab provides a context-based reference to the NetLicensing RESTful API methods."
+  description: "_API Examples_ tab provides a context-based reference to the NetLicensing RESTful API methods."
   date: 2020-04-08
   component: UI
   features:
-   - added: Create Shop Token reference to the "API Examples" tab
+   - added: Create Shop Token reference to the _"API Examples"_ tab
    - fixed: Customer breadcrumb is empty in the license view
   image: assets/images/changelog/netlicensing-api-examples.png
   url: https://ui.netlicensing.io/#/customers
