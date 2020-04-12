@@ -60,14 +60,12 @@ allow to configure discounts, e.g.:
 Additional properties specific to the QUANTITY
 [license templates](object-model#license-template):
 
--   Integer **quantity** (required) - specifies credits amount, which is
-    assigned by default to the licenses created off this template.
+-   Integer **quantity** (required) - specifies credits amount, which is assigned by default to the licenses created off this template.
 
 Licenses
 ========
 
-Additional properties specific to the
-QUANTITY [licenses](object-model#license):
+Additional properties specific to the QUANTITY [licenses](object-model#license):
 
 -   Integer **quantity** (required) - specifies the credits amount,
     provided by this license. Normally it is copied from the
@@ -138,19 +136,20 @@ Validation response examples:
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Some credits still remain</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 productModuleNumber0=MTEST-DEMO&usedQuantity0=10
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-12-21T07:28:48.646Z">
     <infos/>
     <items>
@@ -164,25 +163,27 @@ productModuleNumber0=MTEST-DEMO&usedQuantity0=10
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">All remaining credits are used up by this
 validate call</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 productModuleNumber0=MTEST-DEMO&usedQuantity0=25
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
  <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-12-21T07:30:28.246Z">
     <infos/>
     <items>
@@ -196,25 +197,27 @@ productModuleNumber0=MTEST-DEMO&usedQuantity0=25
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Attempt to use more than the remaining
 credits</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 productModuleNumber0=MTEST-DEMO&usedQuantity0=30
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-12-21T07:30:28.246Z">
     <infos>
         <info id="usedQuantityExceedsRemaining" type="warning">
@@ -232,6 +235,7 @@ productModuleNumber0=MTEST-DEMO&usedQuantity0=30
     </items>
 </netlicensing> 
 ```
+{: .ml-5 }
 
 Pre-payment mode
 ----------------
@@ -249,19 +253,20 @@ Validation response examples:
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Enough credits available</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 productModuleNumber0=MTEST-DEMO&reserveQuantity0=10
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-12-21T07:28:48.646Z">
     <infos/>
     <items>
@@ -275,25 +280,27 @@ productModuleNumber0=MTEST-DEMO&reserveQuantity0=10
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Enough remaining credits available, all are
 used up by this validate call</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 productModuleNumber0=MTEST-DEMO&reserveQuantity0=15
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
  <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-12-21T07:30:28.246Z">
     <infos/>
     <items>
@@ -307,25 +314,27 @@ productModuleNumber0=MTEST-DEMO&reserveQuantity0=15
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Attempt to reserve more than the remaining
 credits</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 productModuleNumber0=MTEST-DEMO&reserveQuantity0=20
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-12-21T07:30:28.246Z">
     <items>
         <item type="ProductModuleValidation">
@@ -338,3 +347,4 @@ productModuleNumber0=MTEST-DEMO&reserveQuantity0=20
     </items>
 </netlicensing> 
 ```
+{: .ml-5 }

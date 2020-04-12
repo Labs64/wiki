@@ -201,7 +201,9 @@ If devices in our example were all added at the same time on Feb 01,
 2012 at 14:00, the validation result for the validation made on e.g. Mar
 15, 2012 (before the expiration date) will look like:
 
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
   <items>
@@ -226,6 +228,7 @@ If devices in our example were all added at the same time on Feb 01,
   </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 Means all devices can be used, and each device expires on Mai 05, 2012,
 91 days after it was added.
@@ -289,7 +292,9 @@ look like:
 And the validation result for the validation performed on Aug 21, 2012
 will look like:
 
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
   <items>
@@ -315,6 +320,7 @@ will look like:
   </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 Means devices DEV-341 and DEV-342 can be used, both expire on Oct 31,
 2012 (91+182 days after initially added), and for DEV-343 no active
