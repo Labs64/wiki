@@ -37,8 +37,6 @@ corresponding service:
 
 Did you know?
 
-<span class="aui-icon icon-hint">Icon</span>
-
 `"forceCascade"` query param, forces *Licensee* entity deletion and
 all descendants (*License, Transaction*)
 
@@ -53,8 +51,6 @@ Tips
 -   We recommend you to execute data deletion using two-step approach:
     1.  Collect and verify all relevant (to be deleted) entities identifiers as it is described [here](how-to-export-licensee-data)
     2.  Delete data after careful verification of to be deleted entities
-
-<span class="aui-icon icon-problem">Icon</span>
 
 Please note: deleted data cannot be restored anymore, so your customers
 might be not validated in your products and services!

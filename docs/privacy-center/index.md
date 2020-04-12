@@ -36,8 +36,6 @@ privacy rights and compliance. We prepared our business and compliance
 processes for the GDPR to take effect, and this guide is intended to
 help our customers/vendors do the same.
 
-<span class="aui-icon icon-problem">Icon</span>
-
 Please note that this guide is for informational purposes only, and
 should not be relied upon as legal advice. We encourage you to work with
 legal and other professional counsel to determine precisely how the GDPR
@@ -156,7 +154,6 @@ responsibilities on the processor, as well. Accordingly, it is important
 to understand whether you are acting as a controller or a processor and
 to familiarize yourself with your responsibilities accordingly.
 
-<span class="aui-icon icon-hint">Icon</span>
 
 In the context of the NetLicensing application and our related services,
 in the majority of circumstances, our <span
@@ -219,8 +216,6 @@ How can NetLicensing assist in your GDPR compliance efforts?
 
 You should review your organization’s data privacy and security
 practices, and there are several ways in which NetLicensing can help.
-
-<span class="aui-icon icon-hint">Icon</span>
 
 In order to outline specifics of how we will process personal data and
 what our obligations are as well as the obligations of our

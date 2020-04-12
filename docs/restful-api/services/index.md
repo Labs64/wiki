@@ -47,7 +47,7 @@ If you do not have one already, signup <a href="https://ui.netlicensing.io/#/reg
 </tr>
 <tr class="even">
 <td><strong><a href="licensee-services">Licensee Services</a></strong></td>
-<td><span markdown="1">`LIST` `GET` `CREATE` `UPDATE` `DELETE` `VALIDATE` `TRANSFER`</span></td>
+<td><span markdown="1">`LIST` `GET` `CREATE` `UPDATE` `DELETE` <strong>`VALIDATE`</strong> `TRANSFER`</span></td>
 <td><span markdown="1">`BASIC AUTH` `APIKEY`</span></td>
 </tr>
 <tr class="odd">

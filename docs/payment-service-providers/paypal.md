@@ -122,8 +122,6 @@ NetLicensing. We use
 <a href="https://developer.paypal.com/docs/classic/products/instant-payment-notification/" class="external-link">PayPal Instance Payment Notification (IPN)</a>
 mechanism to achieve this.
 
-<span class="aui-icon icon-problem">Icon</span>
-
 PayPal only allows a single notification URL per account. When it points
 to NetLicensing endpoint, PayPal will send *all* notifications related
 to your PayPal account to NetLicensing. It may not be always desirable,

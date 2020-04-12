@@ -531,8 +531,6 @@ $ curl --header "Accept: application/xml" --insecure --user demo:demo --request 
 ```
 {: .ml-5 }
 
-<span class="aui-icon icon-problem">Icon</span>
-
 HTTP method **GET** is **deprecated** for licensee validate.
 
 If you use RESTful API directly in your code, ensure to replace GET with
