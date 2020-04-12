@@ -41,8 +41,6 @@ properties:
 
 Please Note
 
-<span class="aui-icon icon-warning">Icon</span>
-
 If you are using an external shopping module or system with the
 NetLicensing integrated into fulfilment process, it's the responsibility
 of the external systems to collect customer's consent in the shopping

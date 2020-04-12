@@ -2,22 +2,19 @@
 layout: default
 title: Services
 parent: NetLicensing API (RESTful)
-nav_order: 20
+nav_order: 10
 has_children: true
-description: ""
+description: "NetLicensing exposes all available service’s functionality via an Application Programming Interface (API)"
 permalink: services
 ---
 
 Services
 ========
 
-
-NetLicensing exposes all available service's functionality via an
-Application Programming Interface (API).
+NetLicensing exposes all available service's functionality via an Application Programming Interface (API).
 
 To access the API methods you will need a NetLicensing vendor account.
-If you do not have one already, signup
-<a href="https://ui.netlicensing.io/#/register" class="external-link">here</a>.
+If you do not have one already, signup <a href="https://ui.netlicensing.io/#/register" class="external-link">here</a>.
 
 <table>
 <colgroup>

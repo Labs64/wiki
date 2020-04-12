@@ -15,8 +15,6 @@ Preparing to work with smart card
 -   [Linux-based OS](#Preparingtoworkwithsmartcard-Linux-basedOS)
     -   [Known issues](#Preparingtoworkwithsmartcard-Knownissues)
 
-<span class="aui-icon icon-warning">Icon</span>
-
 This document assumes you're familiar with the Labs64 NetLicensing
 service. If you need more info about NetLicensing, please
 visit <a href="https://netlicensing.io/" class="external-link">https://netlicensing.io</a>.

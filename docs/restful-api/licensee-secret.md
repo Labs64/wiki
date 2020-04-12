@@ -16,15 +16,9 @@ Licensee Secret (deprecated)
     -   [Predefined mode](#LicenseeSecret(deprecated)-Predefinedmode)
     -   [Client mode](#LicenseeSecret(deprecated)-Clientmode)
 
- 
-
 Node-Locked Licensing Model
 
-<span class="aui-icon icon-warning">Icon</span>
-
-We enabled a new more flexible [Node-Locked licensing
-model](node-locked), which replaces this Licensee Secret
-product feature.
+We enabled a new more flexible [Node-Locked licensing model](node-locked), which replaces this Licensee Secret product feature.
 
 Introduction
 ============
@@ -36,8 +30,7 @@ licensing models, e.g. [Floating](floating), does not make
 much sense, there is no restriction, feel free to find your own creative
 way of using Licensee Secret.
 
-**Licensee Secret** feature has the following modes of operation,
-configurable in Product settings:
+**Licensee Secret** feature has the following modes of operation, configurable in Product settings:
 
 | Mode           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

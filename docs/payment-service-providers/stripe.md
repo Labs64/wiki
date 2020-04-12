@@ -23,7 +23,6 @@ account.
 
 1.  Enable *Stripe* or *Stripe (Testing)* at "Settings / Payment Methods":
 
-    <span class="aui-icon icon-warning">Icon</span>
     Only one of Stripe or Stripe(Testing) can be enabled at the same time.
 
     <img src="assets/images/stripe-activate.png" width="900" />

@@ -72,16 +72,17 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/licensee
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="Licensee">
@@ -92,6 +93,7 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 ### Get licensee
 
@@ -146,16 +148,17 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/licensee/I001
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="Licensee">
@@ -166,6 +169,7 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 ### Create licensee
 
@@ -226,18 +230,19 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee
 productNumber=PQVJQ5F7H&number=I762LBSSX&active=false
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="Licensee">
@@ -248,6 +253,7 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 ### Update licensee
 
@@ -308,18 +314,19 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/IUI6MYNIC
 number=IP53OX9PF&active=false&custLcseeProp2=custLcseePropVal2&custLcseeProp=custLcseePropValChanged
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="Licensee">
@@ -332,6 +339,7 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 ### Delete licensee
 
@@ -386,18 +394,20 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 DELETE https://go.netlicensing.io/core/v2/rest/licensee/I001
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```html
 HTTP/1.1 204 No Content
 ```
+{: .ml-5 }
 
 ### Validate licensee
 
@@ -485,16 +495,17 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2015-11-03T15:02:36.137Z">
   <items>
     <item type="ProductModuleValidation">
@@ -511,12 +522,14 @@ Accept: application/xml
   </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request POST https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
 ```
+{: .ml-5 }
 
 <span class="aui-icon icon-problem">Icon</span>
 
@@ -530,9 +543,9 @@ releases, until then you'll get the following warning if using GET:
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Warning message</span>
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2017-04-04T10:31:45.400Z">
   <ns2:infos>
         <ns2:info id="methodIsDeprecated" type="warning">'GET' method for licensee validate is deprecated, use 'POST' instead</ns2:info>
@@ -552,6 +565,7 @@ class="expand-control-text">Warning message</span>
   </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 If using NetLicensing client library - update to the newest version.
 
@@ -631,16 +645,17 @@ productModuleNumber&lt;N&gt; (string)</em> - product module N number<br />
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2015-11-03T15:02:36.137Z">
   <items>
     <item type="ProductModuleValidation">
@@ -657,13 +672,14 @@ Accept: application/xml
   </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
 ```
-
+{: .ml-5 }
  
 
 ### Transfer licenses
@@ -714,8 +730,6 @@ Transfer licenses between licensees.
 </tbody>
 </table>
 
-<span class="aui-icon icon-warning">Icon</span>
-
 <span class="s1">The following prerequisites must be fulfilled:</span>
 
 -   <span class="s1">Licensees with *<span
@@ -736,23 +750,26 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/I011/transfer
 sourceLicenseeNumber=ISourceLicensee
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 HTTP/1.1 204 No Content
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/xml' --header 'Authorization: Basic ZGVtbzpkZW1v' -d 'sourceLicenseeNumber=ISourceLicensee' 'https://go.netlicensing.io/core/v2/rest/licensee/I011/transfer'
 ```
+{: .ml-5 }

@@ -2,7 +2,7 @@
 layout: default
 title: Security
 parent: NetLicensing API (RESTful)
-nav_order: 10
+nav_order: 20
 has_children: true
 description: ""
 permalink: security
@@ -24,11 +24,7 @@ to: Basic *\<base64\_encoded\_username\_password\>*. UTF-8 is the
 default decoding charset; therefore, the value must also have been
 encoded with the same charset.
 
-<span class="aui-icon icon-warning">Icon</span>
-
-In case of unauthorized access, HTTP response with status
-code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link">403</a> will
-be returned.
+In case of unauthorized access, HTTP response with status code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link">403</a> will be returned.
 
 ### API Key Identification
 

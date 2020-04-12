@@ -21,8 +21,6 @@ directly to your PayPal account.
 
 Recuring payment limitations
 
-<span class="aui-icon icon-warning">Icon</span>
-
 Be aware that recurring payments are not allowed by PayPal for buyers
 from Germany and China. In case you don't plan to use recurring
 payments, you can omit "Create and manage Recurring Payments" permission

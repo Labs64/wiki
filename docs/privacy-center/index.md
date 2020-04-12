@@ -94,8 +94,6 @@ personal data under the GDPR. It’s also important to note that even
 personal data that has been “pseudonymized” can be considered personal
 data if the pseudonym can be linked to any particular individual.
 
-<span class="aui-icon icon-warning">Icon</span>
-
 Sensitive personal data, such as health information or information that
 reveals a person’s racial or ethnic origin, will require even greater
 protection. You should not store data of this nature within your
