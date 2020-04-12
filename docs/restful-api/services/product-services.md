@@ -76,6 +76,7 @@ class="expand-control-text">Example</span>
 GET https://go.netlicensing.io/core/v2/rest/product
 Accept: application/xml
 ```
+{: .ml-5 }
 
 <div>Response</div>
 {: .code-example .ml-5 .code-header }
