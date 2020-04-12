@@ -531,8 +531,7 @@ $ curl --header "Accept: application/xml" --insecure --user demo:demo --request 
 ```
 {: .ml-5 }
 
-<p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <strong>Please Note</strong></p>
-HTTP method **GET** is **deprecated** for licensee validate.
+<img src="assets/images/icons/emoticons/warning.png" alt="(tick)" class="emoticon emoticon-tick" /> <strong>Please Note:</strong> HTTP method **GET** is **deprecated** for licensee validate.
 
 If you use RESTful API directly in your code, ensure to replace GET with POST for validate. GET method will be removed in one of the future releases, until then you'll get the following warning if using GET:
 
@@ -566,8 +565,7 @@ If using NetLicensing client library - update to the newest version.
 
 Besides, new features associated with the validate method will not be available when called using GET.
 
-<p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>Please Note</em></p>
-Below specification for the GET method is only present here to help migrating from old code, please <strong>don't use GET method for validate, use POST instead</strong> ([see above](#validate-licensee))!
+<img src="assets/images/icons/emoticons/warning.png" alt="(tick)" class="emoticon emoticon-tick" /> <strong>Please Note:</strong> Below specification for the GET method is only present here to help migrating from old code, please <strong>don't use GET method for validate, use POST instead</strong> ([see above](#validate-licensee))!
 
 <table>
 <colgroup>
@@ -721,18 +719,10 @@ Transfer licenses between licensees.
 </tbody>
 </table>
 
-<span class="s1">The following prerequisites must be fulfilled:</span>
+The following prerequisites must be fulfilled:
 
--   <span class="s1">Licensees with *<span
-    style="color: rgb(0,0,0);">sourceLicensee</span>Number* and *licenseeNumber* must
-    be assigned to the same product</span>
--   <span class="s1">Source </span>licensee must be marked for transfer
-    (licensee [custom
-    property](custom-properties) *markedForTransfer *must
-    be set to '*true*')
-
-<span class="s1">  
-</span>
+-   Licensees with *sourceLicenseeNumber* and *licenseeNumber* must be assigned to the same product
+-   Source licensee must be marked for transfer (licensee [custom property](custom-properties) *markedForTransfer* must be set to `true`)
 
 See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#transfer-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-" class="external-link">LicenseeService.transfer</a>
