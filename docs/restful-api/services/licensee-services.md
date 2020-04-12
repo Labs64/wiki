@@ -531,15 +531,12 @@ $ curl --header "Accept: application/xml" --insecure --user demo:demo --request 
 ```
 {: .ml-5 }
 
+<p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <strong>Please Note</strong></p>
 HTTP method **GET** is **deprecated** for licensee validate.
 
-If you use RESTful API directly in your code, ensure to replace GET with
-POST for validate. GET method will be removed in one of the future
-releases, until then you'll get the following warning if using GET:
+If you use RESTful API directly in your code, ensure to replace GET with POST for validate. GET method will be removed in one of the future releases, until then you'll get the following warning if using GET:
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
-class="expand-control-text">Warning message</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Warning message</span>
 
 <div>Response</div>
 {: .code-example .ml-5 .code-header }
@@ -567,14 +564,10 @@ class="expand-control-text">Warning message</span>
 
 If using NetLicensing client library - update to the newest version.
 
-Besides, new features associated with the validate method will not be
-available when called using GET.
+Besides, new features associated with the validate method will not be available when called using GET.
 
- 
-
-Below specification for the GET method is only present here to help
-migrating from old code, please don't use GET method for validate, use
-POST instead (see above)!
+<p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>Please Note</em></p>
+Below specification for the GET method is only present here to help migrating from old code, please <strong>don't use GET method for validate, use POST instead</strong> ([see above](#validate-licensee))!
 
 <table>
 <colgroup>

@@ -22,6 +22,7 @@ productNumber=Ptrybuy-DEMO&crmCustomerId=cust1234
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
+{: .ml-5 }
 
 <div>Response</div>
 {: .code-example .ml-5 .code-header }
@@ -57,6 +58,7 @@ crmCustomerId=
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
+{: .ml-5 }
 
 <div>Response</div>
 {: .code-example .ml-5 .code-header }
