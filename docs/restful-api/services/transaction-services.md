@@ -69,16 +69,17 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/transaction
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="Transaction">
@@ -90,6 +91,7 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 ### Get transaction
 
@@ -144,16 +146,17 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/transaction/T001
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="Transaction">
@@ -165,6 +168,7 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 ### Create transaction
 
@@ -224,18 +228,19 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/transaction
 licenseeNumber=IP53OX9PF&number=TFMEIR1B9&active=true&status=PENDING&source=SHOP
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="Transaction">
@@ -247,6 +252,7 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 ### Update transaction
 
@@ -307,18 +313,19 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/transaction/TGG8UTJS8
 number=TGG8UTJS8&active=false&status=CANCELLED
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="Transaction">
@@ -330,3 +337,4 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
+{: .ml-5 }

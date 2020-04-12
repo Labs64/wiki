@@ -65,16 +65,17 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/paymentmethod
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos/>
     <items>
@@ -90,12 +91,14 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/paymentmethod
 ```
+{: .ml-5 }
 
 ### Get payment method
 
@@ -147,16 +150,17 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/paymentmethod/PAYPAL
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos/>
     <items>
@@ -168,12 +172,14 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/paymentmethod/PAYPAL
 ```
+{: .ml-5 }
 
 ### Update payment method
 
@@ -230,18 +236,19 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/paymentmethod/PAYPAL
 active=false
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos/>
     <items>
@@ -253,3 +260,4 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
+{: .ml-5 }

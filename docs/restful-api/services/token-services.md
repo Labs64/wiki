@@ -63,16 +63,17 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/token
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos />
     <items>
@@ -90,12 +91,14 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/token
 ```
+{: .ml-5 }
 
  
 
@@ -146,16 +149,17 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/token/a6cd4cc9-5a37-4f8f-8c1d-090bd6e4bd48
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos />
     <items>
@@ -173,12 +177,14 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/token/a6cd4cc9-5a37-4f8f-8c1d-090bd6e4bd48
 ```
+{: .ml-5 }
 
  
 
@@ -248,18 +254,19 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/token
 tokenType=SHOP&licenseeNumber=I001-DEMO
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos />
     <items>
@@ -277,12 +284,14 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request POST https://go.netlicensing.io/core/v2/rest/token --data "tokenType=SHOP&licenseeNumber=I001-DEMO"
 ```
+{: .ml-5 }
 
 ### Delete token
 
@@ -331,21 +340,24 @@ JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 DELETE https://go.netlicensing.io/core/v2/rest/token/c6d36895-f2a7-497a-aad1-4290c1d17f40
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```html
 HTTP/1.1 204 No Content
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request DELETE https://go.netlicensing.io/core/v2/rest/token/c6d36895-f2a7-497a-aad1-4290c1d17f40
 ```
+{: .ml-5 }

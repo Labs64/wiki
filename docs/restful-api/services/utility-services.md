@@ -64,16 +64,17 @@ Return a list of all licensing models supported by the service.
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/utility/licensingModels
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="LicensingModelProperties">
@@ -85,13 +86,15 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/utility/licensingModels
 $ curl --header "Accept: application/json" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/utility/licensingModels
 ```
+{: .ml-5 }
 
 ### License Types list
 
@@ -143,16 +146,17 @@ Return a list of all license types supported by the service.
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Example</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 GET https://go.netlicensing.io/core/v2/rest/utility/licenseTypes
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="LicenseType">
@@ -164,10 +168,12 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
-**Try it now**
-
-``` theme:
+<div>Try it now</div>
+{: .code-example .ml-5 .code-header }
+```bash
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/utility/licenseTypes
 $ curl --header "Accept: application/json" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/utility/licenseTypes
 ```
+{: .ml-5 }
