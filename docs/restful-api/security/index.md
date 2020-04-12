@@ -47,9 +47,12 @@ to any account information, and is not used for authorization.
 
 **API key request example**
 
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```sh
 $ curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/xml' --user apiKey:%API_KEY% 'https://go.netlicensing.io/core/v2/rest/licensee/123/validate' | xmllint --format -
 ```
+{: .ml-5 }
 
 API key can be obtained via
 the <a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a> or
