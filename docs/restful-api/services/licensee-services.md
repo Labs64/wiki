@@ -16,7 +16,7 @@ Licensee Services
 -   [Create licensee](#create-licensee)
 -   [Update licensee](#update-licensee)
 -   [Delete licensee](#delete-licensee)
--   [Validate licensee](#validate-licensee)
+-   **[Validate licensee](#validate-licensee)**
 -   [Transfer licenses](#transfer-licenses)
 
 ### Licensees list

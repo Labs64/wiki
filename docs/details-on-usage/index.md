@@ -3,7 +3,7 @@ layout: default
 title: Details on Usage
 has_children: true
 has_toc: false
-nav_order: 80
+nav_order: 105
 description: "Instructions for specific procedures supported by NetLicensing"
 permalink: details-on-usage
 ---

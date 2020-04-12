@@ -49,7 +49,7 @@ If you do not have one already, signup
 <td><span markdown="1">`BASIC AUTH` `APIKEY`</span></td>
 </tr>
 <tr class="even">
-<td><a href="licensee-services">Licensee Services</a></td>
+<td><strong><a href="licensee-services">Licensee Services</a></strong></td>
 <td><span markdown="1">`LIST` `GET` `CREATE` `UPDATE` `DELETE` `VALIDATE` `TRANSFER`</span></td>
 <td><span markdown="1">`BASIC AUTH` `APIKEY`</span></td>
 </tr>
