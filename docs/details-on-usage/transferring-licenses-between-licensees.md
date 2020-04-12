@@ -71,9 +71,9 @@ API Example
 Following example calls assume the product and target licensee already
 configured with the following numbers:
 
-``` theme:
-        productNumber: PQVJQ5F7H
-target licenseeNumber: I542PBSID
+```
+productNumber: PQVJQ5F7H
+licenseeNumber (target): I542PBSID
 ```
 
 
@@ -86,18 +86,19 @@ The purchase fulfillment script will execute the following calls:
     class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
     class="expand-control-text">Example</span>
 
-    **Request**
-
-    ``` theme:
+    <div>Request</div>
+    {: .code-example .ml-5 .code-header }
+    ```http
     POST https://go.netlicensing.io/core/v2/rest/licensee
     productNumber=PQVJQ5F7H&active=true
     Accept: application/xml
     Content-Type: application/x-www-form-urlencoded
     ```
+    {: .ml-5 }
 
-    **Response**
-
-    ``` theme:
+    <div>Response</div>
+    {: .code-example .ml-5 .code-header }
+    ```xml
     <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
         <items>
             <item type="Licensee">
@@ -108,6 +109,7 @@ The purchase fulfillment script will execute the following calls:
         </items>
     </netlicensing>
     ```
+    {: .ml-5 }
 
 2.  Add licenses to the new licensee according to the shopping cart
     content
@@ -116,18 +118,19 @@ The purchase fulfillment script will execute the following calls:
     class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
     class="expand-control-text">Example</span>
 
-    **Request**
-
-    ``` theme:
+    <div>Request</div>
+    {: .code-example .ml-5 .code-header }
+    ```http
     POST https://go.netlicensing.io/core/v2/rest/license
     licenseeNumber=I762LBSSX&licenseTemplateNumber=EUJOJ74GS&active=true
     Accept: application/xml
     Content-Type: application/x-www-form-urlencoded
     ```
+    {: .ml-5 }
 
-    **Response**
-
-    ``` theme:
+    <div>Response</div>
+    {: .code-example .ml-5 .code-header }
+    ```xml
     <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
         <items>
             <item type="License">
@@ -137,6 +140,7 @@ The purchase fulfillment script will execute the following calls:
         </items>
     </netlicensing>
     ```
+    {: .ml-5 }
 
 3.  Mark the new licensee for transfer
 
@@ -144,18 +148,19 @@ The purchase fulfillment script will execute the following calls:
     class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
     class="expand-control-text">Example</span>
 
-    **Request**
-
-    ``` theme:
+    <div>Request</div>
+    {: .code-example .ml-5 .code-header }
+    ```http
     POST https://go.netlicensing.io/core/v2/rest/licensee/I762LBSSX
     markedForTransfer=true
     Accept: application/xml
     Content-Type: application/x-www-form-urlencoded
     ```
+    {: .ml-5 }
 
-    **Response**
-
-    ``` theme:
+    <div>Response</div>
+    {: .code-example .ml-5 .code-header }
+    ```xml
     <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
         <items>
             <item type="Licensee">
@@ -167,6 +172,7 @@ The purchase fulfillment script will execute the following calls:
         </items>
     </netlicensing>
     ```
+    {: .ml-5 }
 
 Now the new licensee number `I762LBSSX` to be communicated to the
 software at the end user, e.g. via the purchase confirmation page /
@@ -186,19 +192,19 @@ following:
     class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
     class="expand-control-text">Example</span>
 
-    **Request**
-
-    ``` theme:
+    <div>Request</div>
+    {: .code-example .ml-5 .code-header }
+    ```http
     POST https://go.netlicensing.io/core/v2/rest/licensee/I542PBSID/transfer
     sourceLicenseeNumber=I762LBSSX
     Accept: application/xml
     Content-Type: application/x-www-form-urlencoded
     ```
+    {: .ml-5 }
 
-    **Response**
-
-    ``` theme:
+    <div>Response</div>
+    {: .code-example .ml-5 .code-header }
+    ```html
     HTTP/1.1 204 No Content
     ```
-
- 
+    {: .ml-5 }
