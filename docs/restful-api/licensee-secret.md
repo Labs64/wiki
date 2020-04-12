@@ -59,16 +59,17 @@ Predefined mode
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Create or Update Licensee</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO?licenseeSecret=c99c12016c357200771b21645be64157
 Accept: application/xml
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos/>
     <items>
@@ -83,24 +84,26 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Subsequent validate, secret matches</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 licenseeSecret=c99c12016c357200771b21645be64157
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-11-26T12:43:44.052Z">
     <infos/>
     <items>
@@ -115,24 +118,26 @@ licenseeSecret=c99c12016c357200771b21645be64157
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Subsequent validate, secret mismatch</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 licenseeSecret=WRONG_SECRET
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-11-26T13:01:25.753Z">
     <infos>
         <info id="licenseeSecretMismatch" type="error">Licensee secret mismatch</info>
@@ -149,6 +154,7 @@ licenseeSecret=WRONG_SECRET
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 Client mode
 -----------
@@ -158,19 +164,20 @@ class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" c
 class="expand-control-text">First validate and Subsequent validate with
 matching Secret</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 licenseeSecret=c99c12016c357200771b21645be64157
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
  <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-11-26T13:05:59.255Z">
     <infos/>
     <items>
@@ -185,24 +192,26 @@ licenseeSecret=c99c12016c357200771b21645be64157
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Subsequent validate, secret mismatch</span>
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/ITEST-DEMO/validate
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 
 licenseeSecret=WRONG_SECRET
 ```
+{: .ml-5 }
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2016-11-26T13:01:25.753Z">
     <infos>
         <info id="licenseeSecretMismatch" type="error">Licensee secret mismatch</info>
@@ -219,3 +228,4 @@ licenseeSecret=WRONG_SECRET
     </items>
 </netlicensing>
 ```
+{: .ml-5 }

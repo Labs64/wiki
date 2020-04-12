@@ -3,7 +3,7 @@ layout: default
 title: Custom Properties
 parent: NetLicensing API (RESTful)
 nav_order: 30
-description: "Custom Properties"
+description: "Custom Properties / Tags allow you to add arbitrary additional information to NetLicensing entities"
 permalink: custom-properties
 ---
 
@@ -14,18 +14,18 @@ Custom properties allow you to add arbitrary additional information to NetLicen
 
 To add custom property on create or update, include it together with other properties as POST method parameter:
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee
 productNumber=Ptrybuy-DEMO&crmCustomerId=cust1234
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <netlicensing
     xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
@@ -42,24 +42,25 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
 
 
 Custom property can be modified using update same as standard property.
 
 To delete custom property, update property with empty value:
 
-**Request**
-
-``` theme:
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
 POST https://go.netlicensing.io/core/v2/rest/licensee/I3UDWEXCS
 crmCustomerId=
 Accept: application/xml
 Content-Type: application/x-www-form-urlencoded
 ```
 
-**Response**
-
-``` theme:
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <netlicensing
     xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
@@ -75,3 +76,4 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
+{: .ml-5 }
