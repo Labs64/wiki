@@ -33,11 +33,10 @@ service.*
 *\* For a consumer (non-taxable person) = the country where they are
 registered, have their permanent address or usually live.*
 
-<a href="https://ec.europa.eu/taxation_customs/business/vat/telecommunications-broadcasting-electronic-services_en" class="external-link">More details</a>
+<a href="https://ec.europa.eu/taxation_customs/business/vat/telecommunications-broadcasting-electronic-services_en" target="_blank" class="external-link">More details</a>
 
 Implementation details
 ----------------------
-
 
 ### VAT Applicability
 

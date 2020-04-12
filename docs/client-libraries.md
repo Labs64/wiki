@@ -20,27 +20,27 @@ Clients
 
 ### Java
 
--   <a href="https://github.com/Labs64/NetLicensingClient-java" class="external-link">NetLicensingClient-java</a> - Java wrapper for NetLicensing RESTful API
+-   <a href="https://github.com/Labs64/NetLicensingClient-java" target="_blank" class="external-link">NetLicensingClient-java</a> - Java wrapper for NetLicensing RESTful API
 
 ### JavaScript
 
--   <a href="https://github.com/Labs64/NetLicensingClient-javascript" class="external-link">NetLicensingClient-javascript</a> - JavaScript wrapper for NetLicensing RESTful API
+-   <a href="https://github.com/Labs64/NetLicensingClient-javascript" target="_blank" class="external-link">NetLicensingClient-javascript</a> - JavaScript wrapper for NetLicensing RESTful API
 
 ### Kotlin
 
--   <a href="https://github.com/Labs64/NetLicensingClient-kotlin" class="external-link">NetLicensingClient-kotlin</a> - Kotlin wrapper for NetLicensing RESTful API
+-   <a href="https://github.com/Labs64/NetLicensingClient-kotlin" target="_blank" class="external-link">NetLicensingClient-kotlin</a> - Kotlin wrapper for NetLicensing RESTful API
 
 ### .NET
 
--   <a href="https://github.com/Labs64/NetLicensingClient-csharp" class="external-link">NetLicensingClient-csharp</a> - C\# wrapper for NetLicensing RESTful API
+-   <a href="https://github.com/Labs64/NetLicensingClient-csharp" target="_blank" class="external-link">NetLicensingClient-csharp</a> - C\# wrapper for NetLicensing RESTful API
 
 ### PHP
 
--   <a href="https://github.com/Labs64/NetLicensingClient-php" class="external-link">NetLicensingClient-php</a> - PHP wrapper for NetLicensing RESTful API
+-   <a href="https://github.com/Labs64/NetLicensingClient-php" target="_blank" class="external-link">NetLicensingClient-php</a> - PHP wrapper for NetLicensing RESTful API
 
 ### C++
 
--   <a href="https://github.com/Labs64/NetLicensingClient-cpp" class="external-link">NetLicensingClient-cpp</a> - C++ wrapper for NetLicensing RESTful API
+-   <a href="https://github.com/Labs64/NetLicensingClient-cpp" target="_blank" class="external-link">NetLicensingClient-cpp</a> - C++ wrapper for NetLicensing RESTful API
 
 ### Command-line
 
@@ -51,16 +51,16 @@ Integrations
 
 NetLicensing can be easily integrated with common *e-Commerce, billing and subscription management* platforms, such as:
 
--   <a href="https://github.com/Labs64/NetLicensing-Gateway" class="external-link">NetLicensing-Gateway</a> - NetLicensing / eCommerce gateway
+-   <a href="https://github.com/Labs64/NetLicensing-Gateway" target="_blank" class="external-link">NetLicensing-Gateway</a> - NetLicensing / eCommerce gateway
 -   [PayPal](paypal) - NetLicensing / PayPal Integration
 -   [Stripe](stripe) - NetLicensing / Stripe Integration
--   <a href="https://zapier.com/apps/netlicensing/integrations" class="external-link">NetLicensing-Zapier</a>
+-   <a href="https://zapier.com/apps/netlicensing/integrations" target="_blank" class="external-link">NetLicensing-Zapier</a>
  -<span class="flex-auto mb-2"><span class="text-gray-dark mr-2"> NetLicensing / Zapier Integration</span></span>
--   <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki/MyCommerce" class="external-link">NetLicensing-MyCommerce</a> - NetLicensing / MyCommerce integration
--   <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki/FastSpring" class="external-link">NetLicensing-FastSpring</a> - NetLicensing / FastSpring (Contextual Commerce) integration
--   <a href="https://github.com/Labs64/NetLicensing-FastSpring" class="external-link">NetLicensing-FastSpring</a> - NetLicensing / FastSpring (Classic Commerce) integration
--   <a href="https://github.com/Labs64/NetLicensing-PrestaShop" class="external-link">NetLicensing-PrestaShop</a> - NetLicensing Connector for PrestaShop
--   WordPress - <a href="https://wordpress.org/plugins/pluginpass-pro-plugintheme-licensing/" class="external-link">PluginPass: WordPress PRO Plugin/Theme Licensing</a>
+-   <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki/MyCommerce" target="_blank" class="external-link">NetLicensing-MyCommerce</a> - NetLicensing / MyCommerce integration
+-   <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki/FastSpring" target="_blank" class="external-link">NetLicensing-FastSpring</a> - NetLicensing / FastSpring (Contextual Commerce) integration
+-   <a href="https://github.com/Labs64/NetLicensing-FastSpring" target="_blank" class="external-link">NetLicensing-FastSpring</a> - NetLicensing / FastSpring (Classic Commerce) integration
+-   <a href="https://github.com/Labs64/NetLicensing-PrestaShop" target="_blank" class="external-link">NetLicensing-PrestaShop</a> - NetLicensing Connector for PrestaShop
+-   WordPress - <a href="https://wordpress.org/plugins/pluginpass-pro-plugintheme-licensing/" target="_blank" class="external-link">PluginPass: WordPress PRO Plugin/Theme Licensing</a>
 -   WooCommerce
 -   Magento
 -   osCommerce
@@ -68,11 +68,11 @@ NetLicensing can be easily integrated with common *e-Commerce, billing and subsc
 -   Joomla (Plugins Licensing & Monetization)
 -   Braintree
 -   Cleverbridge
--   2Checkout - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/6" class="external-link">#6</a>
--   Zuora - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/4" class="external-link">#4</a>
--   SendOwl - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/5" class="external-link">#5</a>
+-   2Checkout - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/6" target="_blank" class="external-link">#6</a>
+-   Zuora - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/4" target="_blank" class="external-link">#4</a>
+-   SendOwl - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/5" target="_blank" class="external-link">#5</a>
 -   Shopware
--   Recurly - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/3" class="external-link">#3</a>
+-   Recurly - <a href="https://github.com/Labs64/NetLicensing-Gateway/issues/3" target="_blank" class="external-link">#3</a>
 -   billwerk
 -   Fusebill
 -   Paddle
@@ -92,14 +92,12 @@ NetLicensing can be easily integrated with common *e-Commerce, billing and subsc
 -   Avangate
 -   Shopify
 
-Please refer to the <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki" class="external-link">typical integration scenario</a>, which is showing how NetLicensing extending standard e-commerce flow (using digital fulfilment) by enabling license management for the digital products and services.
+Please refer to the <a href="https://github.com/Labs64/NetLicensing-Gateway/wiki" target="_blank" class="external-link">typical integration scenario</a>, which is showing how NetLicensing extending standard e-commerce flow (using digital fulfilment) by enabling license management for the digital products and services.
 
 Depending on your business processes and distribution channels there might be many different integration options. Please contact us via <a href="mailto:info@netlicensing.io" class="external-link">info@netlicensing.io</a> and we'll be happy to assist you defining best-fit integration scenario.
 
 Online test application
 -----------------------
 
--   <a href="https://netlicensing.io/NetLicensing-API/" class="external-link">NetLicensing API Test Center</a> -
-    Test Labs64 NetLicensing RESTful API online
--   <a href="https://github.com/Labs64/NetLicensing-Demo" class="external-link">NetLicensing-Demo</a> - <span
-    style="color: rgb(36,41,46);">NetLicensing Demo Application</span>
+-   <a href="https://netlicensing.io/NetLicensing-API/" class="external-link">NetLicensing API Test Center</a> - Test Labs64 NetLicensing RESTful API online
+-   <a href="https://github.com/Labs64/NetLicensing-Demo" target="_blank" class="external-link">NetLicensing-Demo</a> - NetLicensing Demo Application
