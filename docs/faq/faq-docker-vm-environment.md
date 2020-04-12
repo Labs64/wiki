@@ -19,7 +19,7 @@ How we can ensure that our applications are licensed and being used only within 
 
 Following options can be recommended here:
 
-#### Option 1: Node-Locked
+### Option 1: Node-Locked
 
 <a href="assets/images/faq-docker-vm-environment-node-locked.png" class="imagelink" data-lightbox="faq-docker-vm-environment" data-title="Node-Locked model configuration" data-alt="Node-Locked model configuration">
   <img src="assets/images/faq-docker-vm-environment-node-locked.png" />
@@ -36,7 +36,7 @@ Every N+1 pairing won't be possible and will result in negative validation resul
 - Long-living instances identified by permanent UUID; e.g. Hardware USB Dongle.
 
 
-#### Option 2: Floating
+### Option 2: Floating
 
 <a href="assets/images/faq-docker-vm-environment-floating.png" class="imagelink" data-lightbox="faq-docker-vm-environment" data-title="Floating model configuration" data-alt="Floating model configuration">
   <img src="assets/images/faq-docker-vm-environment-floating.png" />

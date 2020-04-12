@@ -17,19 +17,21 @@ How do I create a new License programmatically using NetLicensing RESTfull API?
 ## Answer
 
 Use [LicenseService.create()](license-services#create-license) method to create a new License entity and assign this to a particular Customer (Licensee entity).
+
 This method has a set of attributes to be provided, incl. 2 mandatory attributes:
-`licenseeNumber` (string) - Unique Licensee (Customer) number to assign new License object
-`licenseTemplateNumber` (string) - LicenseTemplate number to be used as a template for the new License
+
+- `licenseeNumber` (string) - Unique Licensee (Customer) number to assign new License object
+- `licenseTemplateNumber` (string) - LicenseTemplate number to be used as a template for the new License
 
 There are two ways how to retrieve the `licenseTemplateNumber`.
 
-### Option 1 - LicenseTemplateService.list()
+### Option 1: via RESTful API - LicenseTemplateService.list()
 
 Use this option to retrieve the [list of all created LicenseTemplate objects](license-template-services#license-templates-list), so you can identify the needed entity and it's `number` attribute.
 
-<div>customerData</div>
+<div>License templates list response</div>
 {: .code-example .ml-5 .code-header }
-```json
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context">
   <ns2:infos/>
@@ -88,11 +90,11 @@ Use this option to retrieve the [list of all created LicenseTemplate objects](li
 ```
 {: .ml-5 }
 
+### Option 2: via NetLicensing UI
 
-### Option 2 - NetLicensing UI
+Open customer details view you want to assign a new license and click on the *"Add license"* button. In the *"Create License"* view choose *Module* and expand *Package* drop-down list.
 
-Open customer details view you want to assign a new license and click on the "Add license" button. In the "Create License" view choose Module and expand Package drop-down list.
-The entities in that list will be named using LicenseTemplate name and number fields.
+The entities in this list will be named using LicenseTemplate `name` and `number` fields.
 
 <a href="assets/images/faq-create-license-programmatically.png" class="imagelink" data-lightbox="multiple-licensing-models" data-title="Retrieve LicenseTemplate number" data-alt="Retrieve LicenseTemplate number">
   <img src="assets/images/faq-create-license-programmatically.png" />
