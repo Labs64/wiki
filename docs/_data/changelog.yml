@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing documentation update"
+  description: "NetLicensing documentation update ease new vendor onboarding and integration process."
+  date: 2020-04-13
+  component: Docu
+  features:
+   - updated: Improve RESTful API [services](services) documentation
+   - updated: Expose deprecated GET [validation](licensee-services#validate-licensee) request method
+   - updated: Improve [licensing models](licensing-models) documentation
+  url: https://netlicensing.io/wiki/services
+
 - title: "Instant RESTful API access"
   description: "API Examples tab provides context-based reference to the NetLicensing RESTful API methods."
   date: 2020-04-08
@@ -91,7 +101,7 @@
    - fixed: Service error while working with modules
    - fixed: Error saving Multi-Feature license model packages
   url: https://ui.netlicensing.io
-  
+
 - title: "NetLicensing JavaScript Library / Node.js fix"
   description: "Latest NetLicensing JavaScript Library fix allows you to integrate License Management in your Node.js powered web applications."
   date: 2020-02-18
