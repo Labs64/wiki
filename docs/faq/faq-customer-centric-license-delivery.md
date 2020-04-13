@@ -1,0 +1,48 @@
+---
+layout: post
+title: How to deliver license after successful shop transaction
+parent: FAQ & Troubleshooting
+nav_order: 100
+description: "How to deliver license to the customer after successful shop transaction"
+permalink: faq-customer-centric-license-delivery
+---
+
+{{ page.title }}
+=============
+
+## Question
+
+How do I deliver acquired licenses after successful shop transaction to my customers?
+
+## Answer
+
+NetLicensing uses a *customer-centric* license management approach. In comparison to the *license-centric* (legacy) systems, all customer's licenses are stored in one place, so you don't need to deliver license files separately.
+Instead, using the same unique licensee number you can retrieve all product features the customer is entitled for.
+
+Regardless of whether you are using NetLicensing Shop or external e-Commerce system, you need to provide either an existing `licenseeNumber` or create a new one.
+
+**Note:** In this example, we use the following Licensee Number: `CUST-MM-01`
+
+With this `licenseeNumber` (in case of NetLicensing Shop) you can [create shop token](token-services#create-token) and forward your customer to the checkout page:
+
+<div>Create customer's shop token</div>
+{: .code-example .ml-5 .code-header }
+```bash
+curl -X POST -H 'Accept: application/xml' -H 'Authorization: Basic YXBpS2V5OmZhOGI2NDllLWRhM2EtNGViNS1iM2UxLTc0MmYzNDhmNmJhNg==' -H 'Content-Type: application/x-www-form-urlencoded' -d 'tokenType=SHOP&licenseeNumber=CUST-MM-01' https://go.netlicensing.io/core/v2/rest/token
+```
+{: .ml-5 }
+
+The same `licenseeNumber` will be shown on the order confirmation page and email (in the case customer provided a valid email address).
+
+<a href="assets/images/faq-customer-centric-license-delivery.png" class="imagelink" data-lightbox="multiple-licensing-models" data-title="Shop confirmation page" data-alt="Shop confirmation page">
+  <img src="assets/images/faq-customer-centric-license-delivery.png" />
+</a>
+
+Further product usage will be restricted based on the [validation results](licensee-services#validate-licensee) for the given customer with the above `licenseeNumber`:
+
+<div>Customer validatation request</div>
+{: .code-example .ml-5 .code-header }
+```bash
+curl -X POST -H 'Accept: application/xml' -H 'Authorization: Basic YXBpS2V5OmZhOGI2NDllLWRhM2EtNGViNS1iM2UxLTc0MmYzNDhmNmJhNg==' -H 'Content-Type: application/x-www-form-urlencoded' https://go.netlicensing.io/core/v2/rest/licensee/CUST-MM-01/validate
+```
+{: .ml-5 }
