@@ -17,7 +17,10 @@ Some of my customers do not have instant internet access. How to use offline val
 ## Answer
 
 Every NetLicensing validation response contains an attribute with the *TTL (Time-To-Live)* value.
-Successful validation response can be cached with the expiry time set to this interval.
+Successful [validation response](licensee-services#validate-licensee) can be cached with the expiry time set to this interval and used to validate product without sending online validation request.
+
+*TTL Interval* can be defined in the Settings form and be in the range from 1 minute to several days.
+
 Caching functionality need to be realised by means of the specific product implementation and technology stack.
 
 Please find below a typical flow for the *"Offline validation using TTL"*
