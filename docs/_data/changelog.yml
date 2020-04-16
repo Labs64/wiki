@@ -17,7 +17,7 @@
    - added: Enable detailed view for Customers
    - added: Enable detailed view for Licenses
    - added: Open Customer or License in a new window using double-click
-   - updated: New license: use date only as a start date
+   - updated: New license - use date only as a start date
    - fixed: Fix pricing table plan description in the shop checkout
   image: assets/images/changelog/netlicensing-detail-view.gif
   url: https://ui.netlicensing.io/#/customers
