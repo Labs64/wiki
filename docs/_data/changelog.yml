@@ -9,6 +9,19 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Customers & Licenses detail view"
+  description: "Easily navigate between Customers and Licenses list. Detailed view significantly improving the efficiency if you need to work with multiple entities."
+  date: 2020-04-15
+  component: UI
+  features:
+   - added: Enable detailed view for Customers
+   - added: Enable detailed view for Licenses
+   - added: Open Customer or License in a new window using double-click
+   - updated: New license: use date only as a start date
+   - fixed: Fix pricing table plan description in the shop checkout
+  image: assets/images/changelog/netlicensing-detail-view.gif
+  url: https://ui.netlicensing.io/#/customers
+
 - title: "NetLicensing documentation update"
   description: "NetLicensing documentation update ease new vendor onboarding and integration process."
   date: 2020-04-13
