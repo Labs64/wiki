@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Setting up
-parent: Getting Started
 nav_order: 2
 description: ""
 permalink: setting-up

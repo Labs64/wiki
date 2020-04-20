@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Planning
-parent: Getting Started
-nav_order: 1
-description: ""
+title: How to plan licensing scheme for your product
+parent: Details on Usage
+nav_order: 10
+description: "Elaborate the licensing scheme for your product"
 permalink: planning
 image: assets/images/NetLicensing-GettingStarted.png
 ---

@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Integration
-parent: Getting Started
 nav_order: 3
 description: ""
 permalink: integration
