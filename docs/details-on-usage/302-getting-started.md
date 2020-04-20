@@ -3,7 +3,7 @@ layout: default
 title: Getting Started
 nav_order: 20
 has_toc: false
-has_children: true
+nav_exclude: true
 description: "Getting Started"
 permalink: getting-started
 image: assets/images/NetLicensing-GettingStarted.png

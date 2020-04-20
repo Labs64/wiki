@@ -2,6 +2,7 @@
 layout: default
 title: Setting up
 nav_order: 2
+nav_exclude: true
 description: ""
 permalink: setting-up
 image: assets/images/NetLicensing-GettingStarted.png

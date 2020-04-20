@@ -2,6 +2,7 @@
 layout: default
 title: Integration
 nav_order: 3
+nav_exclude: true
 description: ""
 permalink: integration
 image: assets/images/NetLicensing-GettingStarted.png
