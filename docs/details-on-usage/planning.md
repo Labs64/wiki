@@ -20,63 +20,30 @@ Planning
 
 #### Product and Product Module
 
-NetLicensing uses a generalized representation for any product. In order
-to integrate your product with NetLicensing, you'll need to find out how
-to map your product on [NetLicensing Object
-Model](object-model).  
-Fortunately, the product in the NetLicensing object model is very
-simple: every product consists of one or more product modules, each
-product module is licensed according to its licensing model.
+NetLicensing uses a generalized representation for any product. In order to integrate your product with NetLicensing, you'll need to find out how to map your product on [NetLicensing Object Model](object-model).  
+Fortunately, the product in the NetLicensing object model is very simple: every product consists of one or more product modules, each product module is licensed according to its licensing model.
 
 This can be represented schematically:
 
 <img src="assets/images/netlicensing-planning.png" />
 
-Each product module is licensed independently, which means there is no
-logic within the NetLicensing that connects licenses of one product
-module with the licenses of another product module. However all product
-modules are visible to all licensees of the product. Licenses within a
-single product module are connected according to the licensing model
-chosen for this product module.
+Each product module is licensed independently, which means there is no logic within the NetLicensing that connects licenses of one product module with the licenses of another product module. However all product modules are visible to all licensees of the product. Licenses within a single product module are connected according to the licensing model chosen for this product module.
 
 #### Licensee
 
-Next category that needs a mapping is a licensee. Typically, licensee is
-the end user of your product, but it may be as well an organization,
-that acquires multi-user or shared licenses.
+Next category that needs a mapping is a licensee. Typically, licensee is the end user of your product, but it may be as well an organization, that acquires multi-user or shared licenses.
 
-For each licensee the entire product is available for licensing with all
-its modules.
+For each licensee the entire product is available for licensing with all its modules.
 
 #### License Template and License
 
-Another important category within NetLicensing is the License Template.
-License Templates serve as patterns to create corresponding licenses
-that are then assigned to licensees.
+Another important category within NetLicensing is the License Template. License Templates serve as patterns to create corresponding licenses that are then assigned to licensees.
 
-License template is a configuration element, whereas license is given to
-a licensee upon creation. Naturally, each license belongs to one and the
-only licensee.
+License template is a configuration element, whereas license is given to a licensee upon creation. Naturally, each license belongs to one and the only licensee.
 
-Each license always stays linked to the license template it was derived
-from, and inherits its type from that license template. Other properties
-of the license are also assigned initially from the license template (on
-license creation), in particular user-defined properties are copied from
-the license template to the license. However, once license is created
-with its own properties, the properties of the license can be changed
-without affecting the properties of the ancestor license template. Some
-license properties may however be read-only after being initially
-assigned from the license template. Same is true other way around:
-changes in properties of a license template do not affect licenses
-already created off this license template.
+Each license always stays linked to the license template it was derived from, and inherits its type from that license template. Other properties of the license are also assigned initially from the license template (on license creation), in particular user-defined properties are copied from the license template to the license. However, once license is created with its own properties, the properties of the license can be changed without affecting the properties of the ancestor license template. Some license properties may however be read-only after being initially assigned from the license template. Same is true other way around: changes in properties of a license template do not affect licenses already created off this license template.
 
-Example: price property of the license template. The license is created
-on purchase from the license template, including copying of the price
-property. Then price stays read-only in the license to indicate the
-actual purchase price. Price specified in the license template may be
-changed later on, reflecting the change in the actual market price for
-the product, but it will not have backwards effect on already purchased
-licenses.
+<span style="text-decoration: underline;">Example:</span> price property of the license template. The license is created on purchase from the license template, including copying of the price property. Then price stays read-only in the license to indicate the actual purchase price. Price specified in the license template may be changed later on, reflecting the change in the actual market price for the product, but it will not have backwards effect on already purchased licenses.
 
 #### Examples
 
@@ -89,7 +56,7 @@ Small tool that is licensed as a whole for evaluation within 30 days, then has t
 <span style="text-decoration: underline;">Mapping:</span>
 
 -   **`product`** the tool itself
--   **`product modules`** one product module that is again the whole tool, using "TimeLimitedEvaluation" licensing model
+-   **`product modules`** one product module that is again the whole tool, using [Try & Buy](try-n-buy) licensing model
 -   **`licensee`** tool user that for example may identify himself via the serial number embedded in his copy of the tool
 
 ##### Example 2
@@ -106,5 +73,5 @@ Online portal offering following services:
 -   **`product modules`**
     -   mailbox, licensing model "Volume"
     -   storage, licensing model "Volume"
-    -   online TV, licensing model "FeatureWithTimeVolume"
+    -   online TV, licensing model [Rental](rental)
 -   **`licensee`** portal user, identified by a unique number associated with its portal account
