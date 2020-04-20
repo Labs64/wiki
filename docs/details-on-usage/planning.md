@@ -8,23 +8,15 @@ permalink: planning
 image: assets/images/NetLicensing-GettingStarted.png
 ---
 
-**Step 1: Planning** &nbsp;&nbsp; [Step 2: Setting up](setting-up) &nbsp;&nbsp; [Step 3: Integration](integration)
-
 Planning
 ========
 
 ### Elaborate the licensing scheme for your product
 
-1.  Determine the layout of your
-    [product](object-model):
-    -   how many [modules](object-model) are
-        in your product that should be licensed independently?
-    -   choose the [licensing
-        model](object-model) for each module.
-2.  Determine the possible licenses and their parameters for each
-    product module. This must correspond to the chosen licensing model -
-    see the [Licensing Models](licensing-models) for
-    details.
+1.  Determine the layout of your [product](object-model):
+    -   how many [modules](object-model) are in your product that should be licensed independently?
+    -   choose the [licensing model](licensing-models) for each module.
+2.  Determine the possible licenses and their parameters for each product module. This must correspond to the chosen licensing model - see the [Licensing Models](licensing-models) for details.
 
 #### Product and Product Module
 
@@ -88,21 +80,17 @@ licenses.
 
 #### Examples
 
-Below mapping examples will help you to elaborate the appropriate
-mapping for your product.
+Below mapping examples will help you to elaborate the appropriate mapping for your product.
 
 ##### Example 1
 
-Small tool that is licensed as a whole for evaluation within 30 days,
-then has to be purchased by the end user.
+Small tool that is licensed as a whole for evaluation within 30 days, then has to be purchased by the end user.
 
 <span style="text-decoration: underline;">Mapping:</span>
 
--   ***product:*** the tool itself
--   ***product modules:*** one product module that is again the whole
-    tool, using "TimeLimitedEvaluation" licensing model
--   ***licensee:*** tool user that for example may identify himself via
-    the serial number embedded in his copy of the tool
+-   **`product`** the tool itself
+-   **`product modules`** one product module that is again the whole tool, using "TimeLimitedEvaluation" licensing model
+-   **`licensee`** tool user that for example may identify himself via the serial number embedded in his copy of the tool
 
 ##### Example 2
 
@@ -110,18 +98,13 @@ Online portal offering following services:
 
 -   mailbox, 1GB free, each following gigabyte to be purchased
 -   file storage, 2GB free, each following GB to be purchased
--   online TV, one channel free, further channels to be purchased for a
-    certain time.
+-   online TV, one channel free, further channels to be purchased for a certain time.
 
 <span style="text-decoration: underline;">Mapping:</span>
 
--   ***product:*** the online portal
--   ***product modules:***
+-   **`product`** the online portal
+-   **`product modules`**
     -   mailbox, licensing model "Volume"
     -   storage, licensing model "Volume"
     -   online TV, licensing model "FeatureWithTimeVolume"
--   ***licensee:*** portal user, identified by a unique number
-    associated with its portal account
-
- 
-**Step 1: Planning** &nbsp;&nbsp; [Step 2: Setting up](setting-up) &nbsp;&nbsp; [Step 3: Integration](integration)
+-   **`licensee`** portal user, identified by a unique number associated with its portal account
