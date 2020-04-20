@@ -19,7 +19,6 @@ Please help us improve this wiki and keep it up-to-date, by leaving your comment
 On the left you'll find the quick navigation tree (desktop version), and below are some links you can begin with.
 
 - [NetLicensing Overview](overview)
-- [Getting Started](getting-started)
 - [NetLicensing Object Model](object-model)
 - [Licensing Models](licensing-models)
 - [NetLicensing RESTful API](restful-api)

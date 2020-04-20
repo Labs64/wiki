@@ -101,7 +101,7 @@ key within the client environment!
 ### 3. Execute licensee validation
 
 Once the API Key is set up, use it in your software on the client-side along with the public part of the generated key pair to
-call the `validate` method (see [Integration](integration) step of [Getting Started](getting-started) guide). Store public key
+call the `validate` method. Store public key
 securely in your software along with the API Key, make sure malicious user has no easy access to the stored public key and can't
 replace it with his own - this is a very sensitive aspect of this security mechanism. Provide the public key using the `setPublicKey`
 method in the validation parameters. This will enable the signature verification logic in the client library. The public key is
