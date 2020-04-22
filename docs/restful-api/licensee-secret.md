@@ -3,6 +3,7 @@ layout: default
 title: Licensee Secret (deprecated)
 parent: NetLicensing API (RESTful)
 nav_order: 99
+nav_exclude: true
 description: "Licensee Secret (deprecated)"
 permalink: licensee-secret
 ---
