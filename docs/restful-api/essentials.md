@@ -10,7 +10,9 @@ permalink: essentials
 Essentials
 ==========
 
-NetLicensing RESTful API - Essentials.
+With the NetLicensing [RESTful API](services), you can manage and fully automate your licensing flow and easily integrate NetLicensing into your business processes, ERP, CRM or Webshop.
 
-- [Validate](licensee-services#validate-licensee)
-- [Create Shop Token](token-services#create-token)
+These are the most essential NetLicensing RESTful API services.
+
+- [Validate](licensee-services#validate-licensee) - At a minimum, you need a call to the validate method to retrieve customer's licenses.
+- [Create Shop Token](token-services#create-token) - While using an optional NetLicensing Shop you need to create Shop Token and forward the customer to NetLicensing Shop URL.
