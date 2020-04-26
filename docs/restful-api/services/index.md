@@ -11,10 +11,12 @@ permalink: services
 Services
 ========
 
-NetLicensing exposes all available service's functionality via an Application Programming Interface (API).
+NetLicensing exposes all available services functionality via an Application Programming Interface (API).
 
-To access the API methods you will need a NetLicensing vendor account.
-If you do not have one already, signup <a href="https://ui.netlicensing.io/#/register" class="external-link">here</a>.
+Using the NetLicensing REST API you can access programmatically all NetLicensing public functions and fully automate your licensing flow; from issuing and validating customer's entitlements to managing NetLicensing assets and interface with your in-house systems, such as CRM, ERP, e-Commerce, etc.
+However, in most of the integration scenarios, you would need only a smaller subset of [essential methods](essentials).
+
+Most of the applications will use one of the existing [wrapper libraries](client-libraries) in the language of your choice, but it's important to familiarize yourself with the underlying API HTTP methods first.
 
 <table>
 <colgroup>
@@ -77,3 +79,6 @@ If you do not have one already, signup <a href="https://ui.netlicensing.io/#/reg
 </tr>
 </tbody>
 </table>
+
+To access the API methods you will need a NetLicensing vendor account.
+If you do not have one already, signup <a href="https://ui.netlicensing.io/#/register" class="external-link">here</a>.
