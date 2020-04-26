@@ -13,8 +13,8 @@ Services
 
 NetLicensing exposes all available services functionality via an Application Programming Interface (API).
 
-Using the NetLicensing REST API you can access programmatically all NetLicensing public functions and fully automate your licensing flow; from issuing and validating customer's entitlements to managing NetLicensing assets and interface with your in-house systems, such as CRM, ERP, e-Commerce, etc.
-However, in most of the integration scenarios, you would need only a smaller subset of [essential methods](essentials).
+Using the NetLicensing REST API you can access programmatically all NetLicensing public functions and fully automate your licensing flow: from issuing and validating customer's entitlements to managing NetLicensing assets and interface with your in-house systems, such as CRM, ERP, e-Commerce, etc.
+However, in most of the integration scenarios, you will need only a smaller subset of [essential methods](essentials).
 
 Most of the applications will use one of the existing [wrapper libraries](client-libraries) in the language of your choice, but it's important to familiarize yourself with the underlying API HTTP methods first.
 
