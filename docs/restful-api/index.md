@@ -55,11 +55,11 @@ URIs for NetLicensing API (RESTful) resources have the following structure:
 
 `<port>` - NetLicensing API port, can be omitted, NetLicensing uses standard https port 443.
 
-`<resource>` - represents named resource (e.g. product, license etc.), you'll find the resource name on the [wiki page](services) describing corresponding resource
+`<resource>` - represents named resource (e.g. product, license etc.), you'll find the resource name on the [services page](services) describing corresponding resource
 
 `<query>` - parameters passed with the request (see below)
 
-In case the requested resource does not exist, HTTP response with status code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link">404</a> will be returned.
+In case the requested resource does not exist, HTTP response with status code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link" target="_blank">404</a> will be returned.
 
 Very rare, but it happens that top-level domain (TLD) DNS servers also have problems. In this case domain name can not be resolved to the IP address, rendering the service unavailable. TLD DNS is not under our control, and in case of problems there we can't influence recovery times. To ensure uninterruptible service even in this unlikely case, we provide a backup domain name for the NetLicensing API in another TLD: In case of DNS resolution error for `go.netlicensing.io`, retry your API request using `netlicensing.labs64.com` host name.
 
@@ -72,7 +72,7 @@ as a message body (payload) for POST and PUT.
 
 Parameters are passed in '`key=value`' form, separated by '`&`' symbol.
 When passed in a message body (for POST and PUT), it corresponds to
-the <a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1" class="external-link">Form Encoded Data</a> format.
+the <a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1" target="_blank" class="external-link">Form Encoded Data</a> format.
 Use the following request header in this case:
 
     Content-Type: application/x-www-form-urlencoded 
