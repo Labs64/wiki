@@ -15,8 +15,10 @@ Many of our vendors go beyond the out-of-the-box reporting capabilities offered 
 
 - Product Usage Tracking
 - Customized Reporting Automation
+
 | Report       | Description       | Sample |
 |:-------------|:------------------|:-------|
 | Weekly validation report | *TBD*| *TBD* |
 | Weekly validation report (Floating) | *TBD* | *TBD* |
+
 - Data Provisioning & Export
