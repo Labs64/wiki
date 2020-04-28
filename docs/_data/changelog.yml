@@ -9,6 +9,20 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Instant validate API access"
+  description: "Get instant access the essential NetLicensing RESTful API methods and see how to validate customer directly in the Management Console."
+  date: 2020-04-27
+  component: UI
+  features:
+   - added: Add validate API reference in the "API Examples" section in Customer view
+   - fixed: Button "+ Add module" doesn't work
+   - fixed: Email template notification uses old console URL
+   - fixed: Handle not existing registration token
+   - updated: Do not show "Back to Legacy Console" link to all new users
+   - added: Remember last used customers view: list or detail
+  image: assets/images/changelog/netlicensing-validate-api-access.png
+  url: https://ui.netlicensing.io/#/customers
+
 - title: "Customers & Licenses detail view"
   description: "Easily navigate between Customers and Licenses list. Detailed view significantly improving the efficiency if you need to work with multiple entities."
   date: 2020-04-15
