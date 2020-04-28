@@ -14,12 +14,12 @@
   date: 2020-04-27
   component: UI
   features:
-   - added: Add validate API reference in the "API Examples" section in Customer view
+   - added: Add [validate API reference](licensee-services#validate-licensee) in the "API Examples" section in Customer view
    - fixed: Button "+ Add module" doesn't work
    - fixed: Email template notification uses old console URL
    - fixed: Handle not existing registration token
    - updated: Do not show "Back to Legacy Console" link to all new users
-   - added: Remember last used customers view: list or detail
+   - added: Remember last used customers view - list or detail
   image: assets/images/changelog/netlicensing-validate-api-access.png
   url: https://ui.netlicensing.io/#/customers
 
