@@ -10,7 +10,7 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "Customized Reporting output format update"
-  description: Customized Reporting output format (CSV) satisfies [RFC-4180](https://tools.ietf.org/html/rfc4180) specification.
+  description: Customized Reporting output format (CSV) satisfies <a href="https://tools.ietf.org/html/rfc4180" target="_blank">RFC-4180</a> specification.
   date: 2020-04-29
   component: Reporting
   features:
