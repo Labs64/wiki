@@ -32,7 +32,9 @@ This is our *#changelog*.
 <p class="change-description">{{ change.description }}</p>
 
 {% if change.image %}
-<img src="{{ change.image }}" />
+<a href="{{ change.image }}" class="imagelink" data-lightbox="customerData" data-title="{{ change.title }}" data-alt="{{ change.title }}">
+  <img src="{{ change.image }}" />
+</a>
 {% endif %}
 
 {% if change.features %}
