@@ -14,6 +14,7 @@
   date: 2020-04-29
   component: Reporting
   features:
+   - updated: Fields containing line breaks (CRLF), double quotes, and commas will be enclosed in double-quotes
    - updated: Line endings changed from LF to CRLF (as per RFC-4180)
   url: https://netlicensing.io/wiki/customized-reporting
 
