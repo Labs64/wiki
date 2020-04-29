@@ -10,8 +10,6 @@ permalink: customized-reporting
 {{ page.title }}
 ================
 
-## Question
-
 Many of our vendors go beyond the out-of-the-box reporting capabilities offered by NetLicensing and leverage customized reporting option.
 
 Below you can find the list of the reports, which can be set up individually for your vendor account.
