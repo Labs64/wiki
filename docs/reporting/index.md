@@ -8,18 +8,11 @@ description: "NetLicensing offers a range of reporting options: from out-of-the-
 permalink: reporting
 ---
 
-Reporting
-=========
+{{ page.title }}
+================
 
 From out-of-the-box summaries to fully customizable reports, NetLicensing offers a range of reporting options to help you get a detailed view on your licensing assets.
 
-- Product Usage Tracking
-- Customized Reporting Automation
-
-| Report | Description | Sample |
-|:-------|:------------|:-------|
-| Weekly validation report | *TBD*| *TBD* |
-| Weekly validation report (Floating) | *TBD* | *TBD* |
-| Weekly fruad report (Node-Locked) | *TBD* | *TBD* |
-
-- Data Provisioning & Export
+- **Product Usage Tracking**
+- **[Customized Reporting Automation](customized-reporting)**
+- **Data Provisioning & Export**
