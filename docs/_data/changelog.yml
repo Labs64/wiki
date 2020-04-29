@@ -10,11 +10,10 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "Customized Reporting output format update"
-  description: [Customized Reporting](customized-reporting) output format (CSV) satisfies [RFC-4180](https://tools.ietf.org/html/rfc4180) specification.
+  description: Customized Reporting output format (CSV) satisfies [RFC-4180](https://tools.ietf.org/html/rfc4180) specification.
   date: 2020-04-29
   component: Reporting
   features:
-   - updated: Values containing any of `[,"\r\n]` will have `"` replaced by `""`, and surrounded by `"`
    - updated: Line endings changed from LF to CRLF (as per RFC-4180)
   url: https://netlicensing.io/wiki/customized-reporting
 
