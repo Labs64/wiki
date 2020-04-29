@@ -14,7 +14,7 @@
   date: 2020-04-29
   component: Reporting
   features:
-   - updated: Values containing any of[,"\r\n] will have `"` replaced by `""`, and surrounded by `"`
+   - updated: Values containing any of `[,"\r\n]` will have `"` replaced by `""`, and surrounded by `"`
    - updated: Line endings changed from LF to CRLF (as per RFC-4180)
   url: https://netlicensing.io/wiki/customized-reporting
 
