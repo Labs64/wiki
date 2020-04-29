@@ -1,13 +1,22 @@
 # - title: "<TITLE>"
 #   description: "<EYE-CATCHER-DESCRIPTION>"
 #   date: yyyy-mm-dd
-#   component: API|Agent|UI|Gateway|Shop|Docu|Client Libraries|Integrations
+#   component: API|Agent|UI|Gateway|Shop|Docu|Client Libraries|Integrations|Reporting
 #   features:
 #    - added: Lorem ipsum dolor sit amet
 #    - updated: Ut enim ad minim veniam
 #    - fixed: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
+
+- title: "Customized Reporting output format update"
+  description: [Customized Reporting](customized-reporting) output format (CSV) satisfies [RFC-4180](https://tools.ietf.org/html/rfc4180) specification.
+  date: 2020-04-29
+  component: Reporting
+  features:
+   - updated: Values containing any of[,"\r\n] will have `"` replaced by `""`, and surrounded by `"`
+   - updated: Line endings changed from LF to CRLF (as per RFC-4180)
+  url: https://netlicensing.io/wiki/customized-reporting
 
 - title: "Instant validate API access"
   description: "Get instant access the essential NetLicensing RESTful API methods and see how to validate customer directly in the Management Console."

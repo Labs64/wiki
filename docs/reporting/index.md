@@ -13,6 +13,6 @@ permalink: reporting
 
 From out-of-the-box summaries to fully customizable reports, NetLicensing offers a range of reporting options to help you get a detailed view on your licensing assets.
 
-- **Product Usage Tracking** - NetLicensing provides a set of standard dashboard reports to provide you with the important metrics about the performance of your product.
+- **Product Usage Tracking** - NetLicensing provides a set of standard dashboard reports to provide you with the important metrics about the performance of your products.
 - **[Customized Reporting Automation](customized-reporting)** - Go beyond the out-of-the-box reporting capabilities offered by NetLicensing and leverage customized reporting option.
-- **Data Provisioning & Export** - Use NetLicensing’s [RESTful API](services) `list` methods to retrieve data and feed your BI & Reporting systems.
+- **Data Provisioning & Export** - Use NetLicensing’s [RESTful API](services) `list` methods to retrieve licensing data and feed your BI & Reporting systems.

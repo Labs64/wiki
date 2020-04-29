@@ -14,8 +14,11 @@ Many of our vendors go beyond the out-of-the-box reporting capabilities offered 
 
 Below you can find the list of the reports, which can be set up individually for your vendor account.
 
-| Report | Description | Sample |
-|:-------|:------------|:-------|
-| Weekly validation report | *TBD*| *TBD* |
-| Weekly validation report (Floating) | *TBD* | *TBD* |
-| Weekly fraud report (Node-Locked) | *TBD* | *TBD* |
+Scheduled reports will be run automatically on the defined times and sent to your defined EMail.
+
+| Report | Description | Frequency | Sample |
+|:-------|:------------|:----------|:-------|
+| Weekly validation report | Validation requests status per customer | weekly | [sample](#){: .btn } |
+| Weekly validation report (Floating) | Floating license model checkIn/checkOut actions per customer | weekly | [sample](#){: .btn } |
+| Weekly fraud report (Node-Locked) | ... | weekly | [sample](#){: .btn } |
+| Miss a Report? | [Send Request](https://netlicensing.io/contact/) |  |  |

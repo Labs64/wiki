@@ -1,5 +1,10 @@
 var tourChangelog = [
   {
+    element: 'h3#instant-validate-api-access ~ p.change-description',
+    title: 'Instant validate API access',
+    description: 'Get instant access the essential NetLicensing RESTful API methods and see how to validate customer directly in the Management Console.',
+  },
+  {
     element: 'h3#labs64-netlicensing-for-github-teacher-toolbox ~ p.change-description',
     title: 'Labs64 NetLicensing for GitHub Teacher Toolbox',
     description: 'Great news for all teachers - Labs64 NetLicensing partnered with GitHub and offers NetLicensing Teacher (Basic) Plan for FREE all GitHub Teacher Toolbox users.',
