@@ -18,7 +18,7 @@ Scheduled reports will be run automatically on the defined times and sent to you
 
 | Report | Description | Frequency | Sample |
 |:-------|:------------|:----------|:-------|
-| Weekly validation report | Validation requests status per customer | weekly | [sample](#){: .btn } |
-| Weekly validation report (Floating) | Floating license model checkIn/checkOut actions per customer | weekly | [sample](#){: .btn } |
-| Weekly fraud report (Node-Locked) | Node-Locked model usage report per customer and machine ID | weekly | [sample](#){: .btn } |
+| Weekly validation report | Validation requests status per customer | weekly | [sample](assets/docs/weekly-validation-report.csv){: .btn } |
+| Weekly validation report (Floating) | Floating license model checkIn/checkOut actions per customer | weekly | [sample](assets/docs/weekly-validation-report-floating.csv){: .btn } |
+| Weekly fraud report (Node-Locked) | Node-Locked model usage report per customer and machine ID | weekly | [sample](assets/docs/weekly-validation-report-node-locked.csv){: .btn } |
 | Miss a Report? |  |  | [Send Request](https://netlicensing.io/contact/){: .btn } |
