@@ -12,6 +12,7 @@ NetLicensing API (RESTful)
 
 This is the reference documentation for the RESTful API provided by NetLicensing. The NetLicensing API (RESTful) is for developers integrating NetLicensing with applications and administrators who want to script interactions with the NetLicensing server.
 
+-   [Essentials](#essentials)
 -   [Getting started](#getting-started)
 -   [Services](#services)
 -   [Structure of the RESTful URIs](#structure-of-the-restful-uris)
@@ -20,6 +21,16 @@ This is the reference documentation for the RESTful API provided by NetLicensin
 -   [Data Types](#data-types)
 -   [Custom properties](#custom-properties)
 -   [Links](#links)
+
+Essentials
+----------
+
+[API services](services) cover all licensing aspects, allowing to fully automate your licensing flow, and/or integrate NetLicensing into your business processes: ERP, CRM or Webshop.
+
+However, if you only need basic integration into your product, here is the shortcut to the two most essential NetLicensing RESTful API functions:
+
+- [Validate](licensee-services#validate-licensee) - at a minimum, your product must call the validate method to retrieve the result of customer licenses validation.
+- [Create Shop Token](token-services#create-token) - if you decided to use (optional) NetLicensing Shop, you need to create `SHOP` type token every time you want to start a shopping session for your customer, and redirect him to the returned `shopURL`.
 
 Getting started
 ---------------
