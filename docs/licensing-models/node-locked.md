@@ -50,7 +50,7 @@ Licenses
 Specific properties:
 
 -   `Integer` **`quota`** (required) - specifies the quantity of nodeSecrets, provided by this license. Normally it is copied from the corresponding property of the license template, but can be changed later for each license individually. When multiple QUANTITY licenses purchased, the total quantity of nodeSecrets is the sum of **quota** of all active licenses.
--   `String` **`nodeSecret\<N\>``** (where \<N\> is the number in range \[0..quota-1\]) - stores secrets for this license (up to **quota**).
+-   `String` **`nodeSecret<N>`** (where \<N\> is the number in range \[0..quota-1\]) - stores secrets for this license (up to **quota**).
 
 Validation
 ==========
