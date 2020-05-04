@@ -7,7 +7,7 @@ description: "Floating / Concurrent licensing model authorizes the use of an app
 permalink: floating
 ---
 
-Floating
+{{ page.title }}
 ========
 
 -   [Overview](#overview)
