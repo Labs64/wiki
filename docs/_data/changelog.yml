@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.5.9"
+  description: "Ease the product configuration and customers management via a redesigned management console and improved service documentation."
+  date: 2020-04-30
+  component: API, UI
+  features:
+   - updated: Prevent direct login and vendor registration via legacy management console
+   - updated: Revisit Website and Wiki documentation (Getting Started, RESTful API, Licensing Models, etc.)
+   - fixed: User Profile shows wrong Terms of Service and Privacy Policy versions for newly registered vendors
+   - updated: Use NetLicensing branding in the service emails
+  url: https://netlicensing.io/getting-started/
+
 - title: "Customized Reporting output format update"
   description: Customized Reporting output format (CSV) satisfies <a href="https://tools.ietf.org/html/rfc4180" target="_blank">RFC-4180</a> specification.
   date: 2020-04-29
