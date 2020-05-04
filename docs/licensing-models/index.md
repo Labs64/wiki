@@ -7,8 +7,8 @@ description: "Licensing Models supported by NetLicensing as well as the combina
 permalink: licensing-models
 ---
 
-Licensing Models
-===============================================
+{{ page.title }}
+================
 
 Labs64 NetLicensing is sophisticated enough to cover even the most
 outlandish licensing models: from single-user to network overflow
