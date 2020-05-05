@@ -30,7 +30,7 @@
   url: https://netlicensing.io/wiki/customized-reporting
 
 - title: "Instant validate API access"
-  description: "Get instant access the essential NetLicensing RESTful API methods and see how to validate customer directly in the Management Console."
+  description: "Get instant access to the essential NetLicensing RESTful API methods and see how to validate customer directly in the Management Console."
   date: 2020-04-27
   component: UI
   features:
