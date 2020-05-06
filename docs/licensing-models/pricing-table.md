@@ -33,6 +33,32 @@ HTML Export
 
 *TODO*
 
+Class description for Pricing Table *render()* call (with "Accept: text/html").
+
+| Class | Description |
+|:-------|:-----------|
+| nlic-attribution | Attribution block (if present) |
+| nlic-pricing-table | Main container |
+| nlic-column | Each column |
+| nlic-column-{plan_number} | Plan number column |
+| nlic-column-head | Column head |
+| nlic-plan-column | Plan column |
+| nlic-plan-name | Column name |
+| nlic-plan-description | Column description |
+| nlic-price | Column price |
+| nlic-price-empty | Price is empty |
+| nlic-sku-item-list | <ul> SKUs list |
+| nlic-sku-item | <li> SKUs |
+| nlic-sku-{sku_name} | <li> SKUs with SKU number |
+| nlic-sku-feature | <li> SKUs feature plan |
+| nlic-sku-quota | <li> SKUs quota plan |
+| nlic-feature | Plan SKU feature container |
+| nlic-feature-not-exist | Plan SKU feature not exist container |
+| nlic-quota | Plan SKU quota container |
+| nlic-action | Action button |
+| nlic-action-{plan_number} | Action button with plan number |
+| nlic-action-url | Action button href |
+
 Validation
 ----------
 
@@ -56,6 +82,37 @@ Accept: application/xml
 <div>Response</div>
 {: .code-example .ml-5 .code-header }
 ```xml
-
+ <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context" ttl="2020-05-06T07:01:06.970Z">
+  <ns2:infos/>
+  <ns2:items>
+    <ns2:item type="ProductModuleValidation">
+      <ns2:property name="productModuleNumber">SAAS-SUBSCRIPTION-PLANS</ns2:property>
+      <ns2:property name="valid">true</ns2:property>
+      <ns2:property name="pricingPlanId">PREMIUM-PLAN</ns2:property>
+      <ns2:property name="pricingPlanName">Premium</ns2:property>
+      <ns2:property name="productModuleName">Module using "Pricing Table" licensing model</ns2:property>
+      <ns2:property name="activePricingPlans">PREMIUM-PLAN</ns2:property>
+      <ns2:property name="pricingPlanType">FEATURE</ns2:property>
+      <ns2:property name="licensingModel">PricingTable</ns2:property>
+      <ns2:list name="FEATURE01">
+        <ns2:property name="valid">true</ns2:property>
+        <ns2:property name="quota">10</ns2:property>
+        <ns2:property name="name">Feature 1 (quota)</ns2:property>
+        <ns2:property name="type">QUOTA</ns2:property>
+      </ns2:list>
+      <ns2:list name="FEATURE03">
+        <ns2:property name="valid">false</ns2:property>
+        <ns2:property name="name">Feature 3 (on/off)</ns2:property>
+        <ns2:property name="type">FEATURE</ns2:property>
+      </ns2:list>
+      <ns2:list name="FEATURE02">
+        <ns2:property name="valid">false</ns2:property>
+        <ns2:property name="name">Feature 2 (on/off)</ns2:property>
+        <ns2:property name="type">FEATURE</ns2:property>
+      </ns2:list>
+    </ns2:item>
+  </ns2:items>
+</ns2:netlicensing>
 ```
 {: .ml-5 }
