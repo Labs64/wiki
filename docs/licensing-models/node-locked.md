@@ -2,7 +2,7 @@
 layout: default
 title: Node-Locked
 parent: Licensing Models
-nav_order: 99
+nav_order: 60
 description: "Node-Locked licensing model binds product to a node specific secret, like hash of hardware related data"
 permalink: node-locked
 ---

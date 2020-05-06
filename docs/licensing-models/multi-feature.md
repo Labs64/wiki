@@ -2,7 +2,7 @@
 layout: default
 title: Multi-Feature
 parent: Licensing Models
-nav_order: 99
+nav_order: 30
 description: "Multi-Feature licensing model allows enabling or disabling single product features"
 permalink: multi-feature
 ---

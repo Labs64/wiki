@@ -2,7 +2,7 @@
 layout: default
 title: Rental
 parent: Licensing Models
-nav_order: 30
+nav_order: 80
 description: "Rental - license multiple instances of some entity, each instance for a certain period of time"
 permalink: rental
 ---

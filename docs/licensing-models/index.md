@@ -70,7 +70,7 @@ NetLicensing.
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="even">
-<td><span markdown="1">Pricing Table</span></td>
+<td><span markdown="1">[Pricing Table](pricing-table)</span></td>
 <td><ul>
 <li>Pricing Plan</li>
 <li>Membership Plan</li>

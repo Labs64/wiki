@@ -2,7 +2,7 @@
 layout: default
 title: Pay-per-Use
 parent: Licensing Models
-nav_order: 99
+nav_order: 40
 description: "Pay-per-Use licensing model counts the use of credits associated with licenses."
 permalink: pay-per-use
 ---

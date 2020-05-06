@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Floating
-nav_order: 40
+nav_order: 70
 parent: Licensing Models
 description: "Floating / Concurrent licensing model authorizes the use of an application with the given number of sessions"
 permalink: floating

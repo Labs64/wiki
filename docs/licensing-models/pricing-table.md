@@ -2,16 +2,15 @@
 layout: default
 title: Pricing Table
 parent: Licensing Models
-nav_order: 20
+nav_order: 5
 description: "Pricing plans for your products and services can be effectively modelled using Pricing Table licensing model"
 permalink: pricing-table
 ---
 
 {{ page.title }}
-============
+================
 
-Overview
---------
+## Overview
 
 Pricing plans for your products and services can be effectively modelled using **Pricing Table** licensing model, so you will be able to easily manage plans and features, bill your customers and keep track of customers membership plans and even enable/disable individual features per customer.
 
@@ -24,14 +23,52 @@ Each plan can be additionally configured to support *"free trial"* and *"freemiu
 You could be offering three different plans in your SaaS service: *"free"*, *"basic"*, *"premium"*. While some users would intend to use the service for personal use, others may be business users. Hence, you could create say, a *free plan* that provides basic features and a higher-priced basic or *premium plans* for advanced features.
 Your customers would be signed-up for plans by way of subscriptions or a one-time payment.
 
-HTML Export
------------
+## Configuration
 
-*TODO*
+### Creating a Plan
+
+Creating a new Plan is quite simple. All you need to do is:
+
+- Log into NetLicensing Management Console
+- Choose or create a product module
+- In the Module configuration click on *"Add Plan"* button
+
+Fill out the new Plan details and you're all set.
+
+#### Plan Attributes
+
+- **Name** - descriptive plan name; this name will be shown to the customer
+- **Number** - plan number is the unique identifier of the Plan and is used to refer to the plan on the NetLicensing RESTful API and in your products
+- **Description** - a short plan description for the customer
+- **Price** - the price of the plan
+- **Billing Period** - billing period or billing interval determines the frequency your customer will be billed for the plan; you can choose one of the following: *One-Time* or *Recurring* (e.g. day, week, month, year)
+- **Action Title** - Call to action button title to acquire a plan
+- **Action URL** - Shop URL (NetLiensing Shop or an external eCommerce system) to be used for plan acquisition
+
+#### Plan Flags and Actions
+
+- **Auto-assignment** - if enabled, plan will be assigned automatically; use this for default or free plan options
+- **Hidden** - if enabled, plan will not be offered to the customer
+- **Delete** - delete current plan
+- **Enable** - switch the plan on or off
+
+### Creating a SKU
+
+Store Keeping Unit or SKU is... *TODO*
+
+#### SKU Attributes
+
+- **Name** - descriptive SKU name; this name will be shown to the customer
+- **Number** - number is the unique identifier of the SKU and is used to refer to the plan features on the NetLicensing RESTful API and in your products
+- **Type** - SKU type defines the basic behaviour. You can choose one of the following: *Quantity* or *Feature*
+
+## Integration
+
+### HTML Export
+
+Click *Copy Code* button to export plain HTML for the current Pricing Table.
 
 ### CSS definitions
-
-*TODO*
 
 Class description for Pricing Table *render()* call (with "Accept: text/html").
 

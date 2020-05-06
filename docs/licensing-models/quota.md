@@ -2,7 +2,7 @@
 layout: default
 title: Quota
 parent: Licensing Models
-nav_order: 99
+nav_order: 50
 description: "Quota licensing model authorizes the use of a product within the licensed limit"
 permalink: quota
 ---
