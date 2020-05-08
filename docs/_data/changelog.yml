@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Stay up-to-date with NetLicensing platform news"
+  description: "Don't miss NetLicensing fixes, updates and new features. Notification icon will inform you about the latest changes to NetLicensing platform."
+  date: 2020-05-07
+  component: UI
+  features:
+   - added: Unread messages count on the notification icon
+   - updated: Additionally to the product and customers list, memento added to the modules list
+  image: assets/images/changelog/netlicensing-changelog-notification.png
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing 2.5.9"
   description: "Ease the product configuration and customers management via a redesigned management console and improved service documentation."
   date: 2020-04-30
