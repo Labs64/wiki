@@ -83,20 +83,19 @@ Class description for Pricing Table *render()* call (with "Accept: text/html").
 | nlic-plan-name | Plan name block |
 | nlic-plan-description | Plan description block |
 | nlic-plan-price | Column price |
-
-| nlic-price-empty | Price is empty |
-| nlic-sku-item-list | <ul> SKUs list |
-| nlic-sku-item | <li> SKUs |
-| nlic-sku-{sku_name} | <li> SKUs with SKU number |
-| nlic-sku-feature | <li> SKUs feature plan |
-| nlic-sku-quota | <li> SKUs quota plan |
-| nlic-feature | Plan SKU feature container |
-| nlic-feature-not-exist | Plan SKU feature not exist container |
-| nlic-quota | Plan SKU quota container |
+| nlic-price-empty | Column empty price |
+| nlic-sku-list | <ul> SKUs list |
+| nlic-sku-item | <li> SKUs item |
+| nlic-sku-feature | <li> SKUs feature type |
+| nlic-sku-quota | <li> SKUs quota type |
+| nlic-sku-{sku_name} | <li> SKUs with feature number |
+| nlic-sku-description | SKU description |
+| nlic-quota | Plan value for SKU type quota |
+| nlic-sku-feature-item | Plan value for SKU type feature |
+| nlic-feature-item-exist | Plan value for enabled SKU type feature |
 | nlic-action | Action button |
 | nlic-action-{plan_number} | Action button with plan number |
 | nlic-action-url | Action button href |
-| nlic-attribution | Attribution block (if present) |
 
 Validation
 ----------
