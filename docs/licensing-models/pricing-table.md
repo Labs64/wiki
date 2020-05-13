@@ -74,15 +74,16 @@ Class description for Pricing Table *render()* call (with "Accept: text/html").
 
 | Class | Description |
 |:-------|:-----------|
-| nlic-attribution | Attribution block (if present) |
 | nlic-pricing-table | Main container |
-| nlic-column | Each column |
-| nlic-column-{plan_number} | Plan number column |
-| nlic-column-head | Column head |
-| nlic-plan-column | Plan column |
-| nlic-plan-name | Column name |
-| nlic-plan-description | Column description |
-| nlic-price | Column price |
+| nlic-column | Table column container |
+| nlic-column-skus | Column containing SKUs / features |
+| nlic-column-{plan_number} | Column containing plan definition |
+| nlic-plan-column | Plan column block |
+| nlic-column-head | Column header |
+| nlic-plan-name | Plan name block |
+| nlic-plan-description | Plan description block |
+| nlic-plan-price | Column price |
+
 | nlic-price-empty | Price is empty |
 | nlic-sku-item-list | <ul> SKUs list |
 | nlic-sku-item | <li> SKUs |
@@ -95,6 +96,7 @@ Class description for Pricing Table *render()* call (with "Accept: text/html").
 | nlic-action | Action button |
 | nlic-action-{plan_number} | Action button with plan number |
 | nlic-action-url | Action button href |
+| nlic-attribution | Attribution block (if present) |
 
 Validation
 ----------
