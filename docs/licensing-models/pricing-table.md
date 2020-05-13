@@ -84,11 +84,11 @@ Class description for Pricing Table *render()* call (with "Accept: text/html").
 | nlic-plan-description | Plan description block |
 | nlic-plan-price | Column price |
 | nlic-price-empty | Column empty price |
-| nlic-sku-list | <ul> SKUs list |
-| nlic-sku-item | <li> SKUs item |
-| nlic-sku-feature | <li> SKUs feature type |
-| nlic-sku-quota | <li> SKUs quota type |
-| nlic-sku-{sku_name} | <li> SKUs with feature number |
+| nlic-sku-list | `<ul>` SKUs list |
+| nlic-sku-item | `<li>` SKUs item |
+| nlic-sku-feature | `<li>` SKUs feature type |
+| nlic-sku-quota | `<li>` SKUs quota type |
+| nlic-sku-{sku_name} | `<li>` SKUs with feature number |
 | nlic-sku-description | SKU description |
 | nlic-quota | Plan value for SKU type quota |
 | nlic-sku-feature-item | Plan value for SKU type feature |
