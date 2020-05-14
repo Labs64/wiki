@@ -96,6 +96,7 @@ Class description for Pricing Table *render()* call (with "Accept: text/html").
 | nlic-action | Action button |
 | nlic-action-{plan_number} | Action button with plan number |
 | nlic-action-url | Action button href |
+| nlic-attribution | NetLicensing attribution block (if present) |
 
 Validation
 ----------
