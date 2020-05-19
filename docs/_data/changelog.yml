@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Safeguard NetLicensing entities deletion"
+  description: "Accidental deletion of the NetLicensing entities might be crucial for your products and customers. With this release, we've introduced an additional verification upon deletion of the NetLicensing entities, such as product, module, customer or API Key."
+  date: 2020-05-19
+  component: UI
+  features:
+   - added: Add confirmation edit box on the entity deletion panel
+   - added: Allow deletion of deactivated entities only
+   - updated: Product labels (modules and customers) in the list view are clickable now
+  url: https://ui.netlicensing.io/#/settings
+
 - title: "NetLicensing Shop Customization"
   description: "NetLicensing Shop is a white-label e-commerce solution which can be easily customized to match your brand style and identity. Now you can add your brand logo, colours and texts on the Shop Customization page."
   date: 2020-05-15
