@@ -14,7 +14,7 @@
   date: 2020-05-25
   component: UI
   features:  
-   - added: Pricing Table: show plan start date as a date-picker field
+   - added: [Pricing Table](pricing-table) - show plan start date as a date-picker field
    - updated: Additional warning about dryRun on API Examples tab
    - added: Bulk delete for API keys
    - added: Bulk activate / deactivate entities
