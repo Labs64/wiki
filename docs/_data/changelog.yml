@@ -9,6 +9,20 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Bulk operations"
+  description: "Bulk operations are useful when working with large data sets. With this release, additional bulk operations, such as activate/deactivate entities or mass deletion of the API keys, introduced."
+  date: 2020-05-25
+  component: UI
+  features:  
+   - added: Pricing Table: show plan start date as a date-picker field
+   - updated: Additional warning about dryRun on API Examples tab
+   - added: Bulk delete for API keys
+   - added: Bulk activate / deactivate entities
+   - updated: Do not prompt user confirmation upon activation
+   - updated: Improve activate/deactivate entity prompts and messages
+   - added: On license create view, inherit name from the package by default
+  url: https://ui.netlicensing.io
+
 - title: "Safeguard NetLicensing entities deletion"
   description: "Accidental deletion of the NetLicensing entities might be crucial for your products and customers. With this release, we've introduced an additional verification upon deletion of the NetLicensing entities, such as product, module, customer or API Key."
   date: 2020-05-19
