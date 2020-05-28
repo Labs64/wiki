@@ -10,14 +10,14 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "Node-Locked model management"
-  description: "Get instant access and manage node secrets directly on the licenses list view. Additional "Secrets" tab provides you with an efficient way to manage Node-Locked model secrets for both Client and Predefined modes."
+  description: "Get instant access and manage node secrets directly on the licenses list view. Additional 'Secrets' tab provides you with an efficient way to manage Node-Locked model secrets for both Client and Predefined modes."
   date: 2020-05-29
   component: UI
   features:
    - added: Show available and used node secret slots per license on the licenses list view
    - added: View and delete node secrets directly on the licenses list view
    - added: Add dedicated Secrets tab in the license detail view
-   - added: Generate node secret value (UUID) for the [predefined mode](node-locked)
+   - added: "Generate node secret value (UUID) for the [predefined mode](node-locked)"
    - added: Copy node secret value to clipboard
   image: assets/images/changelog/netlicensing-node-locked-secrets.gif
   url: https://ui.netlicensing.io/#/customers
