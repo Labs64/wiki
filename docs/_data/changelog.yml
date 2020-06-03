@@ -9,6 +9,18 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Floating model sessions management"
+  description: "Verify status and release Floating model sessions directly on the licenses list view, as well on the dedicated 'Sessions' tab."
+  date: 2020-06-03
+  component: UI
+  features:
+   - added: Show available and checked out floating model sessions per license on the licenses list view
+   - added: View and delete floating model sessions directly on the licenses list view
+   - added: Add dedicated Sessions tab in the Floating License detail view
+   - added: Verify session expiration timestamp and highlight current session status
+  image: assets/images/changelog/netlicensing-floating-sessions.png
+  url: https://ui.netlicensing.io/#/customers
+
 - title: "Node-Locked model management"
   description: "Get instant access and manage node secrets directly on the licenses list view. Additional 'Secrets' tab provides you with an efficient way to manage Node-Locked model secrets for both Client and Predefined modes."
   date: 2020-05-29
@@ -16,7 +28,7 @@
   features:
    - added: Show available and used node secret slots per license on the licenses list view
    - added: View and delete node secrets directly on the licenses list view
-   - added: Add dedicated Secrets tab in the license detail view
+   - added: Add dedicated Secrets tab in the Node-Locked License detail view
    - added: "Generate node secret value (UUID) for the [predefined mode](node-locked)"
    - added: Copy node secret value to clipboard
   image: assets/images/changelog/netlicensing-node-locked-secrets.gif
