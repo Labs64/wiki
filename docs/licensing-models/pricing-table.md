@@ -41,7 +41,7 @@ Fill out the new Plan details and you're all set.
 - **Number** - plan number is the unique identifier of the Plan and is used to refer to the plan on the NetLicensing RESTful API and in your products
 - **Description** - a short plan description for the customer
 - **Price** - the price of the plan
-- **Billing Period** - billing period or billing interval determines the frequency your customer will be billed for the plan; you can choose one of the following: *One-Time* or *Recurring* (e.g. day, week, month, year)
+- **Billing Frequency** - billing period or billing interval determines the frequency your customer will be billed for the plan; you can choose one of the following: *One-Time* or *Recurring* (e.g. day, week, month, year)
 - **Action Title** - Call to action button title to acquire a plan
 - **Action URL** - Shop URL (NetLiensing Shop or an external eCommerce system) to be used for plan acquisition
 
