@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Labs64 NetLicensing JavaScript Client v1.2.23"
+  description: "The small annoying defect was fixed, so you can now serialize NetLicensing API responses without errors within JavaScript and NodeJS environments."
+  date: 2020-06-15
+  component: Client Libraries
+  features:
+   - fixed: Fix JSON circular structure conversion error
+  url: https://github.com/Labs64/NetLicensingClient-javascript/releases/tag/1.2.23
+
 - title: "Floating model sessions management"
   description: "Verify status and release Floating model sessions directly on the licenses list view, as well on the dedicated 'Sessions' tab."
   date: 2020-06-03
