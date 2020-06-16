@@ -9,6 +9,19 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing - Zapier integration update"
+  description: "Automate your workflow and connect NetLicensing vendor account with thousands of other apps with a few clicks only."
+  date: 2020-06-16
+  component: Integrations
+  features:
+   - added: Enabled API Key authentication for NetLicensing zaps
+   - updated: Deprecated insecure user/pass authentication
+   - updated: Update to the new Zapier core framework v10.0.0
+   - updated: Update NetLicensing JS library to v1.2.24
+   - updated: Revisit documentation, help texts and APIKey instructions
+  image: assets/images/changelog/netlicensing-zapier.png
+  url: https://zapier.com/apps/netlicensing/integrations
+
 - title: "Labs64 NetLicensing JavaScript Client v1.2.24"
   description: "The small annoying defect was fixed, so you can now serialize NetLicensing API responses without errors within JavaScript and NodeJS environments."
   date: 2020-06-15
