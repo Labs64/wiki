@@ -90,9 +90,9 @@ Class description for Pricing Table *render()* call (with "Accept: text/html").
 | nlic-sku-quota | `<li>` SKUs quota type |
 | nlic-sku-{sku_name} | `<li>` SKUs with feature number |
 | nlic-sku-description | SKU description |
-| nlic-sku-quota-item ~~nlic-quota~~ | Plan value for SKU type quota |
+| nlic-sku-quota-item<br/>~~nlic-quota~~ | Plan value for SKU type quota |
 | nlic-sku-feature-item | Plan value for SKU type feature |
-| nlic-sku-feature-value-enabled ~~nlic-feature-item-exist~~ | Plan value enabled |
+| nlic-sku-feature-value-enabled<br/>~~nlic-feature-item-exist~~ | Plan value enabled |
 | nlic-sku-feature-value-disabled | Plan value disabled |
 | nlic-action | Action button |
 | nlic-action-{plan_number} | Action button with plan number |
