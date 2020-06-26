@@ -15,7 +15,7 @@
   component: UI
   features:
    - added: NetLicensing Getting Started Checklist for new vendors
-  image: assets/images/changelog/netlicensing-onboarding.png
+  image: assets/images/changelog/netlicensing-onboarding.gif
   url: https://ui.netlicensing.io
 
 - title: "NetLicensing - Zapier integration update"
