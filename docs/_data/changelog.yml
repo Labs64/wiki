@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Vendor Onboarding Checklist"
+  description: "NetLicensing Onboarding Checklist guides new vendors through essential NetLicensing functionalities and makes sure you will be able to enable licensing for your products within minutes."
+  date: 2020-06-25
+  component: UI
+  features:
+   - added: NetLicensing Getting Started Checklist for new vendors
+  image: assets/images/changelog/netlicensing-onboarding.png
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing - Zapier integration update"
   description: "Automate your workflow and connect NetLicensing vendor account with thousands of other apps with a few clicks only."
   date: 2020-06-16
