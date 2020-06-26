@@ -15,6 +15,7 @@
   component: UI
   features:
    - added: NetLicensing Getting Started Checklist for new vendors
+   - updated: Update [GuideChimp](https://github.com/Labs64/GuideChimp) to the v1.6.1 to enable events listener for checklist actions
   image: assets/images/changelog/netlicensing-onboarding.gif
   url: https://ui.netlicensing.io
 
