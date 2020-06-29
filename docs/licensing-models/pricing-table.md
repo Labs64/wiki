@@ -10,11 +10,21 @@ permalink: pricing-table
 {{ page.title }}
 ================
 
+-   [Overview](#overview)
+    -   [Examples](#examples)
+-   [Configuration](#configuration)
+    -   [Creating a Plan](#creating-a-plan)
+    -   [Creating a SKU](#creating-a-sku)
+-   [Integration](#integration)
+    -   [HTML Export](#html-export)
+    -   [CSS Definitions](#css-definitions)
+-   [Validation](#validation)
+ 
 ## Overview
 
-Pricing plans for your products and services can be effectively modelled using **Pricing Table** licensing model, so you will be able to easily manage plans and features, bill your customers and keep track of customers membership plans and even enable/disable individual features per customer.
+Pricing plans for your products and services can be effectively modelled using **Pricing Table** licensing model, so you will be able to easily manage plans and features, manage your customers and keep track of customers membership plans and even enable/disable individual features per customer.
 
-Each plan is have associated with it information such as the plan's name, number, pricing, billing interval, features set, etc.
+Each plan have associated with it information such as the plan's name, number, pricing, billing interval, features set, etc.
 
 Each plan can be additionally configured to support *"free trial"* and *"freemium"* business models, as well a hidden option to create context-specific packages.
 
@@ -68,7 +78,7 @@ Store Keeping Unit or SKU is... *TODO*
 
 Click *Copy Code* button to export plain HTML for the current Pricing Table.
 
-### CSS definitions
+### CSS Definitions
 
 Class description for Pricing Table *render()* call (with "Accept: text/html").
 
@@ -99,8 +109,7 @@ Class description for Pricing Table *render()* call (with "Accept: text/html").
 | nlic-action-url | Action button href |
 | nlic-attribution | NetLicensing attribution block (if present) |
 
-Validation
-----------
+## Validation
 
 ### Validation parameters:
 
