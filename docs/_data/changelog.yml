@@ -17,10 +17,10 @@
    - added: Send welcome email to the new vendors after registration
    - added: Backend support for the upcoming Customer Portal
    - updated: Support NetLicensing Shop integration into the Pricing Table licensing model
-   - updated: 'productNumber' attribute is deprecated in the permanent SHOP token
+   - updated: "'productNumber' attribute is deprecated in the permanent SHOP token"
    - updated: Cleanup Shop from old SKUs definition
-   - fixed: Exclude 'session' API Keys from the core response; these API Keys won't be shown on the Settings view anymore
-   - added: Create a default API key with 'ROLE_APIKEY_LICENSEE' for new vendor accounts
+   - fixed: "Exclude 'session' API Keys from the core response; these API Keys won't be shown on the Settings view anymore"
+   - added: "Create a default API key with 'ROLE_APIKEY_LICENSEE' for new vendor accounts"
    - fixed: Incomplete validation response for the Floating licensing model
    - updated: Revisit NetLicensing Website, Wiki and Documentation
    - updated: Improved Getting Started guide to ease the new vendors onboarding
