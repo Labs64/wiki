@@ -13,8 +13,9 @@ permalink: pricing-table
 -   [Overview](#overview)
     -   [Usage Examples](#usage-examples)
 -   [Configuration](#configuration)
-    -   [Creating a Plan](#creating-a-plan)
-    -   [Creating a SKU](#creating-a-sku)
+    -   [Create Module](#create-module)
+    -   [Add Plan](#add-plan)
+    -   [Add SKU](#add-sku)
 -   [Integration](#integration)
     -   [HTML Export](#html-export)
     -   [CSS Definitions](#css-definitions)
@@ -35,13 +36,23 @@ Your customers would be signed-up for plans by way of subscriptions or a one-tim
 
 ## Configuration
 
-### Creating a Plan
+### Create Module
+
+<a href="assets/images/pricing-table-create.png" class="imagelink" data-lightbox="pricing-table" data-title="Pricing Table: create" data-alt="Pricing Table: create">
+  <img src="assets/images/pricing-table-create.png" />
+</a>
+    
+### Add Plan
 
 Creating a new Plan is quite simple. All you need to do is:
 
 - Log into NetLicensing Management Console
 - Choose or create a product module
 - In the Module configuration click on *"Add Plan"* button
+
+<a href="assets/images/pricing-table-plan.png" class="imagelink" data-lightbox="pricing-table" data-title="Pricing Table: add Plan" data-alt="Pricing Table: add Plan">
+  <img src="assets/images/pricing-table-plan.png" />
+</a>
 
 Fill out the new Plan details and you're all set.
 
@@ -62,9 +73,13 @@ Fill out the new Plan details and you're all set.
 - **Delete** - delete current plan
 - **Enable** - switch the plan on or off
 
-### Creating a SKU
+### Add SKU
 
 Store Keeping Unit or SKU represents the feature in your product.
+
+<a href="assets/images/pricing-table-sku.png" class="imagelink" data-lightbox="pricing-table" data-title="Pricing Table: add SKU" data-alt="Pricing Table: add SKU">
+  <img src="assets/images/pricing-table-sku.png" />
+</a>
 
 #### SKU Attributes
 
