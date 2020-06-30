@@ -84,7 +84,7 @@ There are two ways to how you can export Pricing Table HTML structure to embed t
 
 #### Request parameters
 
--   **`productModuleNumber=<productModuleNumber>`** `<productModuleNumber>` product module number for Pricing Table licensing model to be exported.
+-   **`productModuleNumber=<number>`** product module number for Pricing Table licensing model to be exported.
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }
@@ -97,14 +97,14 @@ Accept: text/html
 {: .code-example .ml-5 .code-header }
 ```html
 <div class="nlic-pricing-table">
-...
+... Pricing Table HTML structure ...
 </div>
 ```
 {: .ml-5 }
 
 ### CSS Definitions
 
-Class description for Pricing Table *render()* call (with "Accept: text/html").
+Please refer to the CSS class definitions below, which will help you to style exported Pricing Table HTML structure accordingly to your brand and corporate identity.
 
 | Class | Description |
 |:-------|:-----------|
@@ -155,7 +155,7 @@ Accept: application/xml
 <div>Response</div>
 {: .code-example .ml-5 .code-header }
 ```xml
- <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context" ttl="2020-05-06T07:01:06.970Z">
   <ns2:infos/>
   <ns2:items>
