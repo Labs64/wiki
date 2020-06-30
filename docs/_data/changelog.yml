@@ -10,7 +10,7 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "NetLicensing Shop: VAT reduction for Germany"
-  description: "Due to recent temporary tax legislation changes in Germany (that will last until 31 December 2020), the Value Added Tax (VAT) rate in NetLicensing Shop decreased from 19% to 16%. The updated VAT rate will be applicable for all customers with the Buyer Country - Germany. Refer to the VAT Calculation rules https://netlicensing.io/wiki/eu-vat-2015 for addition information."
+  description: "Due to recent temporary tax legislation changes in Germany (that will last until 31 December 2020), the Value Added Tax (VAT) rate in NetLicensing Shop decreased from 19% to 16%. The updated VAT rate will be applicable for all customers with the Buyer Country - Germany. Refer to the [VAT Calculation rules](https://netlicensing.io/wiki/eu-vat-2015) for addition information."
   date: 2020-07-01
   component: Shop
   features:
