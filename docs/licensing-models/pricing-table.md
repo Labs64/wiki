@@ -23,9 +23,9 @@ permalink: pricing-table
  
 ## Overview
 
-Pricing plans for your products and services can be effectively modelled using **Pricing Table** licensing model, so you will be able to easily manage plans and features, manage your customers and keep track of customers membership plans and even enable/disable individual features per customer.
+Pricing plans for your products and services can be effectively modelled using **Pricing Table** licensing model. By using this licensing model, you will be able to easily manage plans and features, manage your customers and also keep track of their membership plans with the possibility to enable/disable individual features per customer.
 
-Each plan have associated with it information such as the plan's name, number, pricing, billing interval, features set, etc.
+Each plan has its unique information associated with it, such as the plan’s name, number, pricing, billing interval, features set, and many more. 
 
 Each plan can be additionally configured to support *"free trial"* and *"freemium"* business models, as well a hidden option to create context-specific packages.
 
