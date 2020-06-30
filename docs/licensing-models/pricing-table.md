@@ -64,7 +64,7 @@ Fill out the new Plan details and you're all set.
 
 ### Creating a SKU
 
-Store Keeping Unit or SKU is... *TODO*
+Store Keeping Unit or SKU represents the feature in your product.
 
 #### SKU Attributes
 
