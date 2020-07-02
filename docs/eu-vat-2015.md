@@ -46,11 +46,11 @@ participants and their location
 <table>
   <tbody>
     <tr>
-      <td>Transaction participants</td>
-      <td style="text-align: center;">Seller country</td>
-      <td style="text-align: center;">Buyer country</td>
-      <td style="text-align: center;">VAT</td>
-      <td style="text-align: center;">Notes</td>
+      <td style="text-align: center;"><strong>Transaction participants</strong></td>
+      <td style="text-align: center;"><strong>Seller country</strong></td>
+      <td style="text-align: center;"><strong>Buyer country</strong></td>
+      <td style="text-align: center;"><strong>VAT</strong></td>
+      <td style="text-align: center;"><strong>Notes</strong></td>
     </tr>
     <tr>
       <td rowspan="4">C2C<br><span markdown="1">*Consumer to Consumer*</span></td>
@@ -82,13 +82,13 @@ participants and their location
       <td>EU (country A)</td>
       <td>EU (country B)</td>
       <td>No VAT (RC)</td>
-      <td>customer must account for the tax (reverse-charge mechanism)</td>
+      <td>Customer must account for the tax (reverse-charge mechanism)</td>
     </tr>
     <tr>
       <td>EU (country A)</td>
       <td>EU (country A)</td>
       <td>VAT</td>
-      <td>same country</td>
+      <td>Same country</td>
     </tr>
     <tr>
       <td>EU</td>
@@ -100,7 +100,7 @@ participants and their location
       <td>non-EU</td>
       <td>EU</td>
       <td>No VAT (RC)</td>
-      <td>customer must account for the tax (reverse-charge mechanism)</td>
+      <td>Customer must account for the tax (reverse-charge mechanism)</td>
     </tr>
     <tr>
       <td>non-EU</td>
