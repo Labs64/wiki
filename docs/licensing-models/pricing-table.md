@@ -16,11 +16,12 @@ permalink: pricing-table
     -   [Create Module](#create-module)
     -   [Add Plan](#add-plan)
     -   [Add SKU](#add-sku)
--   [Integration](#integration)
+-   [Publish](#publish)
     -   [HTML Export](#html-export)
     -   [CSS Definitions](#css-definitions)
--   [Validation](#validation)
- 
+-   [Integration](#integration)
+    -   [Validation](#validation)
+
 ## Overview
 
 Pricing plans for your products and services can be effectively modelled using **Pricing Table** licensing model. By using this licensing model, you will be able to easily manage plans and features, manage your customers and also keep track of their membership plans with the possibility to enable/disable individual features per customer.
@@ -89,7 +90,7 @@ Store Keeping Unit or SKU represents the feature in your product.
 - **Number** - number is the unique identifier of the SKU and is used to refer to the plan features on the NetLicensing RESTful API and in your products
 - **Type** - SKU type defines the basic behaviour. You can choose one of the following: *Quantity* or *Feature*
 
-## Integration
+## Publish
 
 ### HTML Export
 
@@ -150,17 +151,19 @@ Please refer to the CSS class definitions below, which will help you to style ex
 | nlic-action-url | Action button href |
 | nlic-attribution | NetLicensing attribution block (if present) |
 
-## Validation
+## Integration
 
-### Validation parameters:
+### Validation
+
+#### Validation parameters:
 
 On validation, this licensing model requires no parameters.
 
-### Validation returns values:
+#### Validation returns values:
 
 -   `Boolean` **`valid`** - **`true`** if use is allowed
 
-### Validation response examples:
+#### Validation response examples:
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }
