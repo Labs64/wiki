@@ -9,7 +9,7 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
-- title: "Pricing Table model is available in FREE forever plan"
+- title: "Pricing Table model is now available in FREE forever plan"
   description: "We assigned Pricing Table licensing model to the FREE forever plan, so now you can start creating, experimenting, and implementing different pricing plans at free of charge to see which pricing strategy is more effective for your business needs."
   date: 2020-07-07
   component: UI
