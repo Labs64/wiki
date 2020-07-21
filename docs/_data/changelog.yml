@@ -10,7 +10,7 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "Context-based UI feature tours"
-  description: You don't need to be an experienced licensing management user to be able to set up your first product configuration in NetLicensing. Our smart guide system will navigate you through the essentials."
+  description: "You don't need to be an experienced licensing management user to be able to set up your first product configuration in NetLicensing. Our smart guide system will navigate you through the essentials."
   date: 2020-07-21
   component: UI, API
   features:
