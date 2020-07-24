@@ -29,24 +29,15 @@ Securing the Agent with SSL/TLS
 Motivation
 ==========
 
-Agent has a fully functional built-in HTTP server, however plain HTTP is
-not secure, it is easy to alter the agent reply, mangling the validation
-result. This security threat can be mitigated by encrypting connection
-with SSL/TLS, however this requires proper managing of SSL certificate,
-which is not supported by the Agent alone. Solution is to delegate
-SSL/TLS handling to the external HTTP server, forwarding plain HTTP
-requests to NetLicensing Agent within local secure environment.
+Agent has a fully functional built-in HTTP server, however plain HTTP is not secure, it is easy to alter the agent reply, mangling the validation result. This security threat can be mitigated by encrypting connection with SSL/TLS, however this requires proper managing of SSL certificate, which is not supported by the Agent alone. Solution is to delegate SSL/TLS handling to the external HTTP server, forwarding plain HTTP requests to NetLicensing Agent within local secure environment.
 
-Below you will find configuration instructions for some popular HTTP
-servers, as well as recommendations to managing of SSL certificates.
+Below you will find configuration instructions for some popular HTTP servers, as well as recommendations to managing of SSL certificates.
 
 Apache HTTP
 ===========
 
-You can find the latest Apache HTTP Server
-at <a href="https://httpd.apache.org/" class="external-link">https://httpd.apache.org/</a><span
-style="color: rgb(51,51,51);">. Below you will find examples for Apache
-2.2 and 2.4.</span>
+You can find the latest Apache HTTP Server at <a href="https://httpd.apache.org/" target="_blank" rel="noopener nofollow" class="external-link">https://httpd.apache.org/</a>.
+Below you will find examples for Apache 2.2 and 2.4.
 
 httpd.conf
 ----------
@@ -54,7 +45,6 @@ httpd.conf
 -   Ensure these modules are loaded:
 
     **httpd.conf**
-
     ``` theme:
     # Proxy
     LoadModule proxy_module lib/httpd/modules/mod_proxy.so
@@ -66,7 +56,6 @@ httpd.conf
 -   Enable virtual hosts configuration: 
 
     **httpd.conf**
-
     ``` theme:
     Include conf/extra/httpd-vhosts.conf
     ```
@@ -74,7 +63,6 @@ httpd.conf
 -   Enable SSL configuration:
 
     **httpd.conf**
-
     ``` theme:
      Include conf/extra/httpd-ssl.conf
     ```
@@ -85,7 +73,6 @@ httpd-vhosts.conf
 -   Forward insecure connection to secure URL:
 
     **conf/extra/httpd-vhosts.conf**
-
     ``` theme:
     <VirtualHost *:80>
         ServerName "yourhost.com"
@@ -96,7 +83,6 @@ httpd-vhosts.conf
 -   Proxy requests over secure connection to NetLicensing Agent:
 
     **conf/extra/httpd-vhosts.conf**
-
     ``` theme:
     <VirtualHost *:443>
         ServerName "yourhost.com"
@@ -129,8 +115,7 @@ httpd-vhosts.conf
 Running Agent and Apache
 ------------------------
 
-1.  Start Agent with '`run-agent-offline`' or '`run-agent`' action. Pay
-    attention to the port specified in `conf/extra/httpd-vhosts.conf`
+1.  Start Agent with '`run-agent-offline`' or '`run-agent`' action. Pay attention to the port specified in `conf/extra/httpd-vhosts.conf`
 
     ``` theme:
     java -jar netlicensing-agent.jar --action=run-agent-offline --port=8080
@@ -138,19 +123,13 @@ Running Agent and Apache
 
 2.  Start Apache
 
-3.  NetLicensing Agent will respond to the validation requests sent over
-    HTTPS to <span
-    style="font-family: monospace;">yourhost.com:443</span>
+3.  NetLicensing Agent will respond to the validation requests sent over HTTPS to `yourhost.com:443`
 
 Nginx
 =====
 
-You can find the latest Nginx HTTP Server
-at <a href="https://nginx.org/en/download.html" class="external-link">https://nginx.org/en/download.html</a>.
+You can find the latest Nginx HTTP Server at <a href="https://nginx.org/en/download.html" target="_blank" rel="noopener nofollow" class="external-link">https://nginx.org/en/download.html</a>.
 For this example we are using Nginx 1.13.9.
-
-<span style="color: rgb(0,0,0);"><span
-style="color: rgb(0,0,0);"> </span></span>
 
 nginx.conf
 ----------
@@ -158,7 +137,6 @@ nginx.conf
 -   Forward insecure connection to secure URL:
 
     **nginx.conf**
-
     ``` theme:
      server {
             listen       80;
@@ -170,7 +148,6 @@ nginx.conf
 -   Proxy requests over secure connection to NetLicensing Agent:
 
     **nginx.conf**
-
     ``` theme:
     # HTTPS server
     server {
@@ -198,12 +175,10 @@ nginx.conf
 -   Replace `yourhost.com` with the actual host name of your server
 
  
-
 Running Agent and Nginx
 -----------------------
 
-1.  Start Agent with `'run-agent-offline'` or `'run-agent'` action. Pay
-    attention to the port specified in `nginx.conf`
+1.  Start Agent with `'run-agent-offline'` or `'run-agent'` action. Pay attention to the port specified in `nginx.conf`
 
     ``` theme:
     java -jar netlicensing-agent.jar --action=run-agent-offline --port=8080
@@ -211,8 +186,7 @@ Running Agent and Nginx
 
 2.  Start Nginx
 
-3.  NetLicensing Agent will respond to the validation requests sent over
-    HTTPS to `yourhost.com:443`
+3.  NetLicensing Agent will respond to the validation requests sent over HTTPS to `yourhost.com:443`
 
 <span style="font-family: monospace;">  
 </span>
@@ -220,15 +194,10 @@ Running Agent and Nginx
 Microsoft IIS
 =============
 
-You can find the latest <span style="color: rgb(34,34,34);">Internet
-Information Services</span>(IIS)
-at <a href="https://www.iis.net/downloads" class="external-link">https://www.iis.net/downloads</a>.
+You can find the latest <span style="color: rgb(34,34,34);">Internet Information Services</span>(IIS) at <a href="https://www.iis.net/downloads" target="_blank" rel="noopener nofollow" class="external-link">https://www.iis.net/downloads</a>.
 For this example we are using IIS 7.
 
- 
-
--   <span style="color: rgb(0,0,0);">Forward insecure connection to
-    secure URL:</span>
+-   <span style="color: rgb(0,0,0);">Forward insecure connection to secure URL:</span>
 
     **C:\\inetpub\\wwwroot\\\<your site folder\>\\web.config**
 
@@ -252,9 +221,7 @@ For this example we are using IIS 7.
     </configuration>
     ```
 
--   <span style="color: rgb(0,0,0);">Proxy the requests over the secure
-    connection to NetLicensing Agent:</span>  
-    <span style="color: rgb(0,0,0);"> </span>
+-   Proxy the requests over the secure connection to NetLicensing Agent:</span>  
 
     **C:\\inetpub\\wwwroot\\\<your site folder\>\\web.config**
 
@@ -281,9 +248,7 @@ For this example we are using IIS 7.
 Running Agent and IIS
 ---------------------
 
-1.  Start Agent with '`run-agent-offline`' or '`run-agent`' action. Pay
-    attention to the port specified in C:\\inetpub\\wwwroot\\\<your site
-    folder\>\\web.config
+1.  Start Agent with '`run-agent-offline`' or '`run-agent`' action. Pay attention to the port specified in C:\\inetpub\\wwwroot\\\<your site folder\>\\web.config
 
     ``` theme:
     java -jar netlicensing-agent.jar --action=run-agent-offline --port=8080
@@ -291,10 +256,7 @@ Running Agent and IIS
 
 2.  Start Site from IIS Manager
 
-3.  NetLicensing Agent will respond to the validation requests sent over
-    HTTPS
-    to <a href="http://yourhost.com" class="external-link">yourhost.com</a>:443
-
+3.  NetLicensing Agent will respond to the validation requests sent over HTTPS to `yourhost.com:443`
  
 
 Managing of SSL certificates for the hosts in local network
@@ -303,39 +265,26 @@ Managing of SSL certificates for the hosts in local network
 Certificates signed by a Certificate Authority (CA)
 ---------------------------------------------------
 
-In case you have a public or private Certificate Authority (CA)
-infrastructure available within your network, the preferrable way is to
-let CA issue the SSL certificate. Details are not in scope of this
-document, but should be normally availble from the corresponding CA.
+In case you have a public or private Certificate Authority (CA) infrastructure available within your network, the preferable way is to let CA issue the SSL certificate. Details are not in scope of this document, but should be normally available from the corresponding CA.
 
-This external resource maybe
-helpful: <a href="https://roll.urown.net/ca/index.html" class="external-link">https://roll.urown.net/ca/index.html</a>
+This external resource maybe helpful: <a href="https://roll.urown.net/ca/index.html" target="_blank" rel="noopener nofollow" class="external-link">https://roll.urown.net/ca/index.html</a>
 
 Self-signed certificates
 ------------------------
 
-For creating self-signed certificate you can use openssl tool or a
-number of other methods.
+For creating self-signed certificate you can use openssl tool or a number of other methods.
 
 Here are some useful links:
 
--   <a href="https://stackoverflow.com/questions/10175812/how-to-create-a-self-signed-certificate-with-openssl" class="external-link">How to create a self-signed certificate with openssl</a>
--   <a href="https://support.apple.com/kb/PH20131?locale=en_US&amp;viewlocale=en_US" class="external-link">Keychain for Mac: Create self-signed certificates using Keychain Access</a>
--   <a href="https://msdn.microsoft.com/en-us/library/ff699202.aspx" class="external-link">Windows: How to: Create Your Own Test Certificate</a>
+-   <a hreftarget="_blank" rel="noopener nofollow" class="external-link">How to create a self-signed certificate with openssl</a>
+-   <a href="https://support.apple.com/kb/PH20131?locale=en_US&amp;viewlocale=en_US" target="_blank" rel="noopener nofollow" class="external-link">Keychain for Mac: Create self-signed certificates using Keychain Access</a>
+-   <a href="https://msdn.microsoft.com/en-us/library/ff699202.aspx" target="_blank" rel="noopener nofollow" class="external-link">Windows: How to: Create Your Own Test Certificate</a>
 
-Self-signed certificate must be explicitly trusted by a client side via
-appropriate installation, it can not be automatically validated against
-a known certificate authority. Certificate installation procedure
-depends on the environment your client is running on, below you can find
-some hints:
+Self-signed certificate must be explicitly trusted by a client side via appropriate installation, it can not be automatically validated against a known certificate authority. Certificate installation procedure depends on the environment your client is running on, below you can find some hints:
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
-class="expand-control-text">Java</span>
+<span class="expand-control-text">Java</span>
 
-<span style="color: rgb(36,41,46);">Java uses its own keystore for
-certificates (separate from the OS keystore). Therefore, you must
-install the appropriate certificate in *Java's* keystore.</span>
+<span style="color: rgb(36,41,46);">Java uses its own keystore for certificates (separate from the OS keystore). Therefore, you must install the appropriate certificate in *Java's* keystore.</span>
 
 **Mac OS X**
 
@@ -359,11 +308,9 @@ $ sudo $JAVA_HOME/bin/keytool -import -trustcacerts -keystore <path-to-keystore>
 
 Where:
 
--   *\<alias-name\>* - some descriptive name of your choice that will
-    identify your key in keystore
+-   *\<alias-name\>* - some descriptive name of your choice that will identify your key in keystore
 -   *\<path-to-certificate\> *- path to the self-signed certificate
--   *\<path-to-keystore\> *- depends on the operating system and java
-    installation path, here are some standard locations:
+-   *\<path-to-keystore\> *- depends on the operating system and java installation path, here are some standard locations:
     -   Mac OS X: *$JAVA\_HOME/lib/security/cacerts*
     -   Windows: *%JAVA\_HOME%\\lib\\security\\cacerts*
     -   Linux: *$JAVA\_HOME/lib/security/cacerts*
@@ -372,9 +319,7 @@ Where:
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">C\#</span>
 
-<span style="color: rgb(36,39,41);">C\# uses OS keystore, add the
-self-signed certificate to the *Local Computer Trusted Root
-Certification Authorities*</span>
+<span style="color: rgb(36,39,41);">C\# uses OS keystore, add the self-signed certificate to the *Local Computer Trusted Root Certification Authorities*</span>
 
 **Mac OS X**
 
@@ -415,8 +360,7 @@ curl_setopt($ch, CURLOPT_CAINFO, <path-to-certificate>);
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Apache httpd</span>
 
--   Download
-    the <a href="https://curl.haxx.se/docs/caextract.html" class="external-link">certificate bundle</a>.
+-   Download the <a href="https://curl.haxx.se/docs/caextract.html" target="_blank" rel="noopener nofollow" class="external-link">certificate bundle</a>.
 -   Add your certificate to the dowloaded file.
 -   Set up <span class="pln"
     style="color: rgb(48,51,54);">curl</span><span class="pun"
@@ -436,13 +380,9 @@ class="expand-control-text">Apache httpd</span>
     openssl_get_cert_locations();
     ```
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
-class="expand-control-text">JavaScript</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">JavaScript</span>
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
-class="expand-control-text">Node.js</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Node.js</span>
 
 Specify path to self-signed certificate:
 
@@ -463,13 +403,11 @@ const instance = axios.create({
 netLicensing.Service.setAxiosInstance(instance);
 ```
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
-class="expand-control-text">Browser</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Browser</span>
 
 Add Security Exception for specified host of NetLicensing Agent server.
 
--   <a href="https://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate" class="external-link">Chrome</a>
+-   <a href="https://stackoverflow.com/questions/7580508/getting-chrome-to-accept-self-signed-localhost-certificate" target="_blank" rel="noopener nofollow" class="external-link">Chrome</a>
 -   FireFox: <span style="color: rgb(72,72,72);">Go to
     </span>**Preferences**<span style="color: rgb(72,72,72);"> \>\>
     **Privacy**</span><span style="color: rgb(72,72,72);"> \>\>
@@ -477,23 +415,15 @@ Add Security Exception for specified host of NetLicensing Agent server.
     </span>**View Certificates <span
     style="color: rgb(72,72,72);">\></span><span
     style="color: rgb(72,72,72);">\> Import</span>**
--   <a href="https://stackoverflow.com/questions/681695/what-do-i-need-to-do-to-get-internet-explorer-8-to-accept-a-self-signed-certific" class="external-link">IE</a>
+-   <a href="https://stackoverflow.com/questions/681695/what-do-i-need-to-do-to-get-internet-explorer-8-to-accept-a-self-signed-certific" target="_blank" rel="noopener nofollow" class="external-link">IE</a>
 
-In browser host environments, origin security policy may apply in
-addition, see "Known Issues" below.
-
- 
+In browser host environments, origin security policy may apply in addition, see "Known Issues" below. 
 
 Known Issues
 ============
 
-1.  CORS problem: If your client is using JavaScript library, JS engine
-    may block requests to NetLicensing Agent server for security reasons
-    (more
-    info: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" class="external-link">https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</a>).
-    To fix this problem, your NetLicensing Agent server must provide
-    appropriate HTTP CORS headers. Below are setting examples for Apache
-    and Nginx:
+1.  CORS problem: If your client is using JavaScript library, JS engine may block requests to NetLicensing Agent server for security reasons (more info: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank" rel="noopener nofollow" class="external-link">https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</a>).
+    To fix this problem, your NetLicensing Agent server must provide appropriate HTTP CORS headers. Below are setting examples for Apache and Nginx:
 
     **conf/extra/httpd-vhosts.conf**
 
@@ -562,19 +492,12 @@ Known Issues
         }
     ```
 
-2.  If you get a warning about the contents of
-    a self-signed certificate, make sure you have specified CN (The
-    Common Name) when creating the certificate.
+2.  If you get a warning about the contents of a self-signed certificate, make sure you have specified CN (The Common Name) when creating the certificate.
 
-3.  Windows servers (IIS) use .pfx files to contain the public key files
-    and the associated private key file. There are openssl examples how
-    to convert certificate to .pfx format bellow.
+3.  Windows servers (IIS) use .pfx files to contain the public key files and the associated private key file. There are openssl examples how to convert certificate to .pfx format bellow.
 
-    <span
-    class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span
-    class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span
-    class="crayon-pre crayon-code" style="color: rgb(0,0,0);"><span
-    class="crayon-e" style="color: teal;"> </span></span></span></span>
+    <span class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span class="crayon-pre crayon-code" style="color: rgb(0,0,0);"><span class="crayon-e" style="color: teal;"> </span></span></span></span>
+
     **nginx.conf**
 
     ``` theme:
@@ -588,11 +511,11 @@ Known Issues
 Useful links
 ============
 
--   <a href="https://wiki.eclipse.org/Jetty/Tutorial/Apache" class="external-link">https://wiki.eclipse.org/Jetty/Tutorial/Apache</a>
--   <a href="https://wiki.eclipse.org/Jetty/Howto/Configure_mod_proxy#Proxying_SSL_on_Apache_to_HTTP_on_Jetty" class="external-link">https://wiki.eclipse.org/Jetty/Howto/Configure_mod_proxy#Proxying_SSL_on_Apache_to_HTTP_on_Jetty</a>
--   <a href="https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html" class="external-link">https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html</a>
--   <a href="https://nginx.org/en/docs/" class="external-link">https://nginx.org/en/docs/</a>
--   <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" class="external-link">https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</a>
--   <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https" class="external-link">https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https</a>
--   <a href="https://developers.coveo.com/display/public/SearchREST/Configuring+HTTPS+Reverse+Proxy+in+IIS" class="external-link">https://developers.coveo.com/display/public/SearchREST/Configuring+HTTPS+Reverse+Proxy+in+IIS</a>
--   <a href="https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/" class="external-link">https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/</a>
+-   <a href="https://wiki.eclipse.org/Jetty/Tutorial/Apache" target="_blank" rel="noopener nofollow" class="external-link">https://wiki.eclipse.org/Jetty/Tutorial/Apache</a>
+-   <a href="https://wiki.eclipse.org/Jetty/Howto/Configure_mod_proxy#Proxying_SSL_on_Apache_to_HTTP_on_Jetty" target="_blank" rel="noopener nofollow" class="external-link">https://wiki.eclipse.org/Jetty/Howto/Configure_mod_proxy#Proxying_SSL_on_Apache_to_HTTP_on_Jetty</a>
+-   <a href="https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html" target="_blank" rel="noopener nofollow" class="external-link">https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html</a>
+-   <a href="https://nginx.org/en/docs/" target="_blank" rel="noopener nofollow" class="external-link">https://nginx.org/en/docs/</a>
+-   <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank" rel="noopener nofollow" class="external-link">https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</a>
+-   <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https" target="_blank" rel="noopener nofollow" class="external-link">https://www.namecheap.com/support/knowledgebase/article.aspx/9953/38/iis-redirect-http-to-https</a>
+-   <a href="https://developers.coveo.com/display/public/SearchREST/Configuring+HTTPS+Reverse+Proxy+in+IIS" target="_blank" rel="noopener nofollow" class="external-link">https://developers.coveo.com/display/public/SearchREST/Configuring+HTTPS+Reverse+Proxy+in+IIS</a>
+-   <a href="https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/" target="_blank" rel="noopener nofollow" class="external-link">https://www.ssl.com/how-to/create-a-pfx-p12-certificate-file-using-openssl/</a>
