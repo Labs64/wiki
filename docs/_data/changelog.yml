@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Individualize products presentation"
+  description: "Efficiently work in the NetLicensing Management Console with improved product individualization and better instant licensing models descriptions."
+  date: 2020-07-29
+  component: UI
+  features:
+   - added: Assign individual images to the products
+   - updated: Add description to the licensing models
+  image: assets/images/changelog/netlicensing-product-image.png
+  url: https://ui.netlicensing.io
+
 - title: "Context-based UI feature tours"
   description: "You don't need to be an experienced licensing management user to be able to set up your first product configuration in NetLicensing. Our smart guide system will navigate you through the essentials."
   date: 2020-07-21
