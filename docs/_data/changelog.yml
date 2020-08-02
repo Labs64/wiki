@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Floating model is now available in Premium plan"
+  description: "One of our most demanded models - Floating is now available in the Premium plan and allows you to define a comprehensive licensing strategy for your products and services."
+  date: 2020-08-01
+  component: API, UI
+  features:
+   - added: Add [Floating](https://netlicensing.io/wiki/floating) licensing model to the ‘Premium’ plan
+   - updated: New name - same promise; 'FREE forever' plan is now 'Starter'
+  image: assets/images/changelog/netlicensing-pricing-floating.png
+  url: https://netlicensing.io/pricing/
+
 - title: "Individualize products presentation"
   description: "Efficiently work in the NetLicensing Management Console with improved product individualization and better instant licensing models descriptions."
   date: 2020-07-29
