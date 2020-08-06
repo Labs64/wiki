@@ -9,6 +9,24 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Usability improvements for the Management Console"
+  description: "We rolled out a heap of new small improvements and usability fixes to make your daily work with the NetLicensing Management Console efficient and easy."
+  date: 2020-08-06
+  component: UI
+  features:   
+   - added: Show GuideChimp beacon at 'API Examples' tab
+   - fixed: Fix floating model image
+   - updated: Disable 'Add license' button if no modules available
+   - updated: Always show vendor onboarding checklist for VDEMO vendor
+   - fixed: Fix Pricing Table edit view layout
+   - fixed: API Examples tab showing an error is no modules created
+   - updated: Change style for the transaction status icons
+   - updated: cURL examples should use double quotes, to allow cURL execution on Windows
+   - fixed: Hide beacon if 'API Examples' tab is changed
+   - fixed: Fix an error 'Property or method index is not defined'
+   - fixed: Hide product version information on the product card if not set
+  url: https://ui.netlicensing.io
+
 - title: "Floating model is now available in Premium plan"
   description: "One of our most demanded models - Floating is now available in the Premium plan and allows you to define a comprehensive licensing strategy for your products and services."
   date: 2020-08-01
