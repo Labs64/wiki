@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Flex packages offerings in the NetLicensing Shop"
+  description: "With the new NetLicensing Console and Shop enhancements you can hide selected packaged (such as trial and promotion packages) from being offered in NetLicensing Shop."
+  date: 2020-08-10
+  component: UI, Shop
+  features:   
+   - added: Add option to hide a package in the NetLicensing Shop
+   - fixed: Unsaved changes dialogue is shown on entity create
+  url: https://ui.netlicensing.io
+
 - title: "Usability improvements for the Management Console"
   description: "We rolled out a heap of new small improvements and usability fixes to make your daily work with the NetLicensing Management Console efficient and easy."
   date: 2020-08-06
