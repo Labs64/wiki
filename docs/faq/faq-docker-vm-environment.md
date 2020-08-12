@@ -64,5 +64,4 @@ Below you can find some of the third-party libraries, which ease the generation 
 - Java: <a href="https://github.com/oshi/oshi" target="_blank" class="external-link">oshi/oshi</a>
 - Java: <a href="https://github.com/f4b6a3/uuid-creator" target="_blank" class="external-link">f4b6a3/uuid-creator</a>
 - C#: <a href="https://github.com/davcs86/csharp-uhwid" target="_blank" class="external-link">davcs86/csharp-uhwid</a>
-- C#: <a href="https://github.com/xanthe1337/Discord-Token-Grabber" target="_blank" class="external-link">xanthe1337/Discord-Token-Grabber</a>
 - Golang: <a href="https://github.com/denisbrodbeck/machineid" target="_blank" class="external-link">denisbrodbeck/machineid</a>
