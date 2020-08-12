@@ -61,7 +61,11 @@ Both the options above require a unique instance UUID / Fingerprint.
 You can generate UUID based on your needs, chosen programming language and environment specifics.
 Below you can find some of the third-party libraries, which ease the generation of a unique fingerprint.
 
-- Java: <a href="https://github.com/oshi/oshi" target="_blank" class="external-link">oshi/oshi</a>
-- Java: <a href="https://github.com/f4b6a3/uuid-creator" target="_blank" class="external-link">f4b6a3/uuid-creator</a>
-- C#: <a href="https://github.com/davcs86/csharp-uhwid" target="_blank" class="external-link">davcs86/csharp-uhwid</a>
-- Golang: <a href="https://github.com/denisbrodbeck/machineid" target="_blank" class="external-link">denisbrodbeck/machineid</a>
+- Java: <a href="https://github.com/oshi/oshi" target="_blank" rel="noopener nofollow" class="external-link">oshi/oshi</a>
+- Java: <a href="https://github.com/f4b6a3/uuid-creator" target="_blank" rel="noopener nofollow" class="external-link">f4b6a3/uuid-creator</a>
+- JavaScript: <a href="https://github.com/jackspirou/clientjs" target="_blank" rel="noopener nofollow" class="external-link">jackspirou/clientjs</a>
+- C#: <a href="https://github.com/davcs86/csharp-uhwid" target="_blank" rel="noopener nofollow" class="external-link">davcs86/csharp-uhwid</a>
+- C++: <a href="https://github.com/Tarik02/machineid" target="_blank" rel="noopener nofollow" class="external-link">Tarik02/machineid</a>
+- PHP: <a href="https://github.com/matomo-org/device-detector" target="_blank" rel="noopener nofollow" class="external-link">matomo-org/device-detector</a>
+- Python: <a href="https://github.com/thinkwelltwd/device_detector" target="_blank" rel="noopener nofollow" class="external-link">thinkwelltwd/device_detector</a>
+- Golang: <a href="https://github.com/denisbrodbeck/machineid" target="_blank" rel="noopener nofollow" class="external-link">denisbrodbeck/machineid</a>
