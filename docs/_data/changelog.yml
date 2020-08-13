@@ -9,11 +9,22 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing C# Client at NuGet"
+  description: "One of the first NetLicensing client libraries for C# (first commit Oct 2, 2013!!) got technology stack updates, fine-tunings, improvements (such as signed responses support), and now finally available in the NuGet repository."
+  date: 2020-08-13
+  component: Client Libraries
+  features:
+   - added: Setup NuGet publish for NetLicensingClient-csharp library
+   - updated: Use .NET Core instead of .NET Framework 4.5
+   - added: Support for signed validation responses verification
+  image: assets/images/changelog/netlicensing-csharp-nuget.png
+  url: https://www.nuget.org/packages/NetLicensingClient-csharp/
+
 - title: "Flex packages offerings in the NetLicensing Shop"
   description: "With the new NetLicensing Console and Shop enhancements you can hide selected packaged (such as trial and promotion packages) from being offered in NetLicensing Shop."
   date: 2020-08-10
   component: UI, Shop
-  features:   
+  features:
    - added: Add option to hide a package in the NetLicensing Shop
    - fixed: Unsaved changes dialogue is shown on entity create
   url: https://ui.netlicensing.io
@@ -22,7 +33,7 @@
   description: "We rolled out a heap of new small improvements and usability fixes to make your daily work with the NetLicensing Management Console efficient and easy."
   date: 2020-08-06
   component: UI
-  features:   
+  features:
    - added: Show GuideChimp beacon at 'API Examples' tab
    - fixed: Fix floating model image
    - updated: Disable 'Add license' button if no modules available
