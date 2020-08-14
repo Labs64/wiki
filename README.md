@@ -2,6 +2,8 @@
 
 # [Labs64 NetLicensing Wiki](https://netlicensing.io/wiki/) - Innovative License Management Solution
 
+[![Build NetLicensing Wiki](https://github.com/Labs64/wiki/workflows/Build%20NetLicensing%20Wiki/badge.svg)](https://github.com/Labs64/wiki/actions?query=workflow%3A%22Build+NetLicensing+Wiki%22)
+
 Visit Labs64 NetLicensing at https://netlicensing.io
 
 ## Run
