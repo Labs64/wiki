@@ -14,7 +14,7 @@
   date: 2020-08-13
   component: Client Libraries
   features:
-   - updated: Use .NET Core instead of .NET Framework 4.5
+   - updated: Use .NET Standard 2.0 instead of .NET Framework 4.5
    - added: Setup NuGet publish workflow for NetLicensingClient-csharp library
    - added: Support for signed validation responses verification
    - updated: Updated library documentation and sample code
