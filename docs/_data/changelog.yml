@@ -9,6 +9,19 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.7"
+  description: "We've tinkered with the internal workings and polished some rough edges in the system and documentation. NetLicensing service is now better than it was."
+  date: 2020-08-17
+  component: API, Docu
+  features:
+   - fixed: Chrome browser login window prompt after session timeout
+   - updated: Raise the length limit for the entity numbers to 1000 characters (product, module, template, license)
+   - updated: Improve [Pricing Table](pricing-table) model documentation
+   - updated: Revisit Pricing Table HTML export [styles](pricing-table#css-definitions)
+   - updated: Improve [Getting Started](https://netlicensing.io/getting-started/) guide and ease the onboarding process for the new users
+   - fixed: Authentication with email/password in API Test Center didn't work
+  url: https://netlicensing.io/wiki/pricing-table
+
 - title: "NetLicensing C# Client at NuGet"
   description: "One of the first NetLicensing client libraries for C# (first commit Oct 2, 2013 🤖) got technology stack updates, fine-tunings, improvements (such as signed responses support), and now finally available in the NuGet repository."
   date: 2020-08-13
