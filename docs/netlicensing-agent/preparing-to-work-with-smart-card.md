@@ -11,9 +11,9 @@ Preparing to work with smart card
 =================================
 
 -   [General
-    information](#Preparingtoworkwithsmartcard-Generalinformation)
--   [Linux-based OS](#Preparingtoworkwithsmartcard-Linux-basedOS)
-    -   [Known issues](#Preparingtoworkwithsmartcard-Knownissues)
+    information](#general-information)
+-   [Linux-based OS](#linux-based-os)
+    -   [Known issues](#known-issues)
 
 This document assumes you're familiar with the Labs64 NetLicensing
 service. If you need more info about NetLicensing, please
