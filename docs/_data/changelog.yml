@@ -23,6 +23,7 @@
    - updated: Minor cosmetic UI fixes
    - updated: Increase entity number length limit
    - updated: Make 'startDate' value 'now' case-insensitive in the License create view
+   - updated: Rename 'Pricing Table (beta)' into 'Pricing Table'
    - fixed: Click on tooltip icons doesn't work in (GuideChimp) tour mode
    - fixed: Click on VAT / Logo tabs in the product edit opens wrong tabs
   image: assets/images/changelog/netlicensing-settings-apikey.gif
