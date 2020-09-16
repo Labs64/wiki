@@ -10,7 +10,7 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "'Summer break' enhancements"
-  description: "Right after a well-deserved summer break, we would like to share with you our latest system features and improvements."
+  description: "Right after a well-deserved summer break, we would like to share with you our latest fantastic system features and improvements."
   date: 2020-09-15
   component: API, UI
   features:
@@ -20,6 +20,11 @@
    - fixed: If no action and URL provided, "null" value set at Pricing Table plan
    - updated: Show alternative actions in case a wrong token was used
    - fixed: Announcement panel in Management Console cannot be opened
+   - updated: Minor cosmetic UI fixes
+   - updated: Increase entity number length limit
+   - updated: Make 'startDate' value 'now' case-insensitive in the License create view
+   - fixed: Click on tooltip icons doesn't work in (GuideChimp) tour mode
+   - fixed: Click on VAT / Logo tabs in the product edit opens wrong tabs
   image: assets/images/changelog/netlicensing-settings-apikey.gif
   url: https://ui.netlicensing.io/#/settings
 
