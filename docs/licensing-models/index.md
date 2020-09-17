@@ -77,7 +77,7 @@ NetLicensing.
 <li>SaaS Subscription</li>
 </ul></td>
 <td><p>Price and package in minutes without having to re-code or re-engineer back-office systems.</p></td>
-<td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE (Beta)</em></p></td>
+<td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="odd">
 <td><span markdown="1">[Rental](rental)</span></td>
