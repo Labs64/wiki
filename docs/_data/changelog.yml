@@ -19,7 +19,7 @@
    - fixed: Terms of Sevice and Privacy Policy acceptance date is wrong
    - updated: Minor UI cosmetics and fixes
    - fixed: Wrong Licensee session used in Customer Portal
-   - updated: [Floating](https://netlicensing.io/wiki/floating) model support in the [Online Test Center](https://netlicensing.io/NetLicensing-API/)
+   - updated: Floating model support in the Online Test Center
    - updated: Deprecated features deleted in the Online Test Center
   url: https://netlicensing.io/NetLicensing-API/
 
