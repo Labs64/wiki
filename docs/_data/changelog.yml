@@ -15,11 +15,12 @@
   component: UI, Docu
   features:
    - fixed: If no 'privateKey' provided, a wrong API Key created with empty field. Note: we advise you recreating API Keys created after 2020-09-15
-   - fixed: NetLicensing UI guided tour doesn't highlight an element in the module view
+   - fixed: NetLicensing UI guided tour does not highlight an element in the module view
    - fixed: Terms of Sevice and Privacy Policy acceptance date is wrong
    - updated: Minor UI cosmetics and fixes
    - fixed: Wrong Licensee session used in Customer Portal
-   - updated: [Floating](https://netlicensing.io/wiki/floating) model support in the [Online Test Center](https://netlicensing.io/NetLicensing-API/); deprecated features deleted
+   - updated: [Floating](https://netlicensing.io/wiki/floating) model support in the [Online Test Center](https://netlicensing.io/NetLicensing-API/)
+   - updated: Deprecated features deleted in the Online Test Center
   url: https://netlicensing.io/NetLicensing-API/
 
 - title: "'Summer break' enhancements"
