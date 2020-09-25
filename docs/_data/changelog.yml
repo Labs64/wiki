@@ -9,6 +9,19 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Bugfix and stability release"
+  description: "With this release, we fixed the wrong API Keys creation in the Management Console, as well as added some minor usability and cosmetics fixes."
+  date: 2020-09-24
+  component: UI, Docu
+  features:
+   - fixed: If no 'privateKey' provided, a wrong API Key created with empty field. **Note:** we advise you recreating API Keys created after 2020-09-15
+   - fixed: NetLicensing UI guided tour doesn't highlight an element in the module view
+   - fixed: Terms of Sevice and Privacy Policy acceptance date is wrong
+   - updated: Minor UI cosmetics and fixes
+   - fixed: Wrong Licensee session used in Customer Portal
+   - updated: [Floating](https://netlicensing.io/wiki/floating) model support in the [Online Test Center](https://netlicensing.io/NetLicensing-API/); deprecated features deleted
+  url: https://netlicensing.io/NetLicensing-API/
+
 - title: "'Summer break' enhancements"
   description: "Right after a well-deserved summer break, we would like to share with you our latest fantastic system features and improvements."
   date: 2020-09-15
