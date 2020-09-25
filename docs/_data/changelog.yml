@@ -14,7 +14,7 @@
   date: 2020-09-24
   component: UI, Docu
   features:
-   - fixed: If no 'privateKey' provided, a wrong API Key created with empty field. **Note:** we advise you recreating API Keys created after 2020-09-15
+   - fixed: If no 'privateKey' provided, a wrong API Key created with empty field. Note: we advise you recreating API Keys created after 2020-09-15
    - fixed: NetLicensing UI guided tour doesn't highlight an element in the module view
    - fixed: Terms of Sevice and Privacy Policy acceptance date is wrong
    - updated: Minor UI cosmetics and fixes
