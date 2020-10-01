@@ -9,6 +9,18 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Bits & Pretzels edition"
+  description: "An extended bag of goodies for #bits20 participants and nifty API Keys improvements - add a name to the key to describe usage context and use this together with the key creation date."
+  date: 2020-10-01
+  component: UI
+  features:
+   - added: Enable Bits & Pretzels 2020 promo package
+   - added: Offline Validation file download in the Management Console
+   - added: Add 'Name' and 'Create Date' fields to the API Keys
+   - fixed: If no privateKey provided, an API Key token created with empty privateKey field
+  image: assets/images/changelog/netlicensing-apikey-name.png
+  url: https://ui.netlicensing.io/#/settings
+
 - title: "Bugfix and stability release"
   description: "With this release, we fixed the wrong API Keys creation in the Management Console, as well as added some minor usability and cosmetics fixes."
   date: 2020-09-24
