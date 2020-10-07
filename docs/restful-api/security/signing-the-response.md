@@ -24,7 +24,7 @@ Signature
 ---------
 
 Response signature is implemented according to [XML Signature](https://www.w3.org/TR/xmldsig-core/) spec (also known as XMLDSIG) and is currently
-only implemented in the [Java NetLicensing Client library](client-libraries). Your contribution for adding the response signature verification
+only implemented in the NetLicensing [Client Libraries](client-libraries) for Java and C#. Your contribution for adding the response signature verification
 functionality to other NetLicensing client libraries is highly welcomed!
 
 Preconditions
