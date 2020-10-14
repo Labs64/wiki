@@ -24,5 +24,4 @@ On the left you'll find the quick navigation tree (desktop version), and below a
 - [NetLicensing RESTful API](restful-api)
 - [Changelog](changelog)
 - [FAQ](faq)
-- [Community Support](https://github.com/Labs64/NetLicensing-Community){:rel="noopener nofollow"} 
-[![GitHub issues open](https://img.shields.io/github/issues/Labs64/NetLicensing-Community.svg)](https://github.com/Labs64/NetLicensing-Community/issues)
+- [Community Support](https://github.com/Labs64/NetLicensing-Community){:rel="noopener nofollow"}&nbsp;[![GitHub issues open](https://img.shields.io/github/issues/Labs64/NetLicensing-Community.svg)](https://github.com/Labs64/NetLicensing-Community/issues){:rel="noopener nofollow"}
