@@ -24,3 +24,4 @@ On the left you'll find the quick navigation tree (desktop version), and below a
 - [NetLicensing RESTful API](restful-api)
 - [Changelog](changelog)
 - [FAQ](faq)
+- [Community Support](https://github.com/Labs64/NetLicensing-Community){:rel="noopener nofollow"}
