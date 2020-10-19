@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing Community Support"
+  description: "NetLicensing Community Support is a public GitHub repository and a great way to collaborate with awesome NetLicensing community, asking questions around license management and support new NetLicensing adopters. Use this repository as your first touchpoint if you need support with your specific licensing strategy."
+  date: 2020-10-16
+  component: Docu
+  features:
+   - added: Enable NetLicensing Community Support repository and tracker
+  image: assets/images/changelog/netlicensing-community-support.png
+  url: https://github.com/Labs64/NetLicensing-Community
+
 - title: "Bits & Pretzels edition"
   description: "An extended bag of goodies for #bits20 participants and nifty API Keys improvements - add a name to the key to describe usage context and use this together with the key creation date."
   date: 2020-10-01
