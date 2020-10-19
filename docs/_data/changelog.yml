@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "License and Transaction views fixes"
+  description: "Minor License and Transaction views fixes, to show correct licensing dates."
+  date: 2020-10-20
+  component: UI
+  features:
+   - fixed: Wrong transaction date (last) used to indicate the license creation date
+   - fixed: Current timestamp used in the transaction view as "Date Closed"
+  image: assets/images/changelog/netlicensing-community-support.png
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing Community Support"
   description: "NetLicensing Community Support is a public GitHub repository and a great way to collaborate with awesome NetLicensing community, asking questions around license management and support new NetLicensing adopters. Use this repository as your first touchpoint if you need support with your specific licensing strategy."
   date: 2020-10-16
