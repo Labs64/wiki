@@ -12,9 +12,10 @@
 - title: "NetLicensing Community Support"
   description: "NetLicensing Community Support is a public GitHub repository and a great way to collaborate with awesome NetLicensing community, asking questions around license management and support new NetLicensing adopters. Use this repository as your first touchpoint if you need support with your specific licensing strategy."
   date: 2020-10-16
-  component: Docu
+  component: Docu, UI
   features:
    - added: Enable NetLicensing Community Support repository and tracker
+   - added: New top nav icon eases the creation of the new community support ticket
   image: assets/images/changelog/netlicensing-community-support.png
   url: https://github.com/Labs64/NetLicensing-Community
 
