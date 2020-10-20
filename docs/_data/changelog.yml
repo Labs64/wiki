@@ -16,7 +16,6 @@
   features:
    - fixed: Wrong transaction date (last) used to indicate the license creation date
    - fixed: Current timestamp used in the transaction view as "Date Closed"
-  image: assets/images/changelog/netlicensing-community-support.png
   url: https://ui.netlicensing.io
 
 - title: "NetLicensing Community Support"
