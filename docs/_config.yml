@@ -33,7 +33,7 @@ footer_content: "Copyright &copy; 2010 <a href=\"https://www.labs64.com\">Labs64
 # footer links for the page bottom navigation
 footer_links:
   "GuideChimp - Interactive Guided Tours":
-    - "https://github.com/Labs64/GuideChimp"
+    - "https://www.labs64.com/guidechimp/"
   "Laravel Boilerplate":
     - "https://github.com/Labs64/laravel-boilerplate"
   "PluginPass – WordPress License Manager":
