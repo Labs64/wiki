@@ -32,7 +32,7 @@ The billing is accordingly tied to the chosen model, which can be for instance:
 
 In either case, NetLicensing keeps track of credits by a simple integer counters, stored in **`quantity`** and **`usedQuantity`** properties of each license. You decide what actual metric to associate with the credits.
 
-For better adapting to various scenarios, Pay-per-Use supports two modes of operation: pre-payment and post-payment. The mode is decided by arguments passed to the validate call, see the validation section below for details.
+For better adapting to various scenarios, Pay-per-Use supports two modes of operation: *pre-payment* and *post-payment*. The mode is decided by arguments passed to the validate call, see the validation section below for details.
 
 License Templates
 =================
@@ -58,13 +58,14 @@ Additional properties specific to the QUANTITY [licenses](object-model#license)
 Validation
 ==========
 
-On validation, this licensing model uses the followin [validate parameters](licensee-services#validate-licensee):
+On validation, this licensing model uses the following [validate parameters](licensee-services#validate-licensee):
 
 -   **`productModuleNumber`**=\<String\> - specifies the product module, that uses Pay-per-Use licensing model
--   **`usedQuantity`**=\<non-negative Integer\> - specifies how many credits has been used by the application since previous validate call (post-payment mode). In case more credits were used than the remaining credits, remaining credits get negative.
--   **`reserveQuantity`**=\<non-negative Integer\> - specifies the credits amount that the application attempts to reserve for use until next validate call (pre-payment mode). It is not possible to reserve more than the remaining credits.
+-   **`usedQuantity`**=\<non-negative Integer\> - specifies how many credits has been used by the application since previous validate call (*post-payment* mode). In case more credits were used than the remaining credits, remaining credits get negative.
+-   **`reserveQuantity`**=\<non-negative Integer\> - specifies the credits amount that the application attempts to reserve for use until next validate call (*pre-payment* mode). It is not possible to reserve more than the remaining credits.
 
-**`usedQuantity`** and **`reserveQuantity`** parameters are mutually exclusive - use only one of them depending on the mode you need. If both **`usedQuantity`** and **`reserveQuantity`** parameters to validate are omitted, it is equivalent to **`usedQuantity`**=0. However, if you need to call validate just for reading-out the remaining credits, it is suggested to pass **`usedQuantity`**=0 explicitly. This helps better traceability of the call by explicit declaration of intent.
+**`usedQuantity`** and **`reserveQuantity`** parameters are mutually exclusive - use only one of them depending on the mode you need. If both **`usedQuantity`** and **`reserveQuantity`** parameters to validate are omitted, it is equivalent to **`usedQuantity`**=0.
+However, if you need to call validate just for reading-out the remaining credits, it is suggested to pass **`usedQuantity`**=0 explicitly. This helps better traceability of the call by explicit declaration of intent.
 
 Validation returns values:
 
