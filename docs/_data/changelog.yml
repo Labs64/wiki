@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Stay in touch with NetLicensing team"
+  description: "Our team is here to help you implement an efficient licensing strategy and automation for your products. We won't let you alone on this journey and enabled various ways to contact us - via chat, contact form, community support or simply by booking a one-to-one session with us."
+  date: 2020-10-27
+  component: UI
+  features:
+   - updated: Improved contact form
+   - added: Add 'Book a Session' menu item in the Management Console
+   - fixed: Fix 's is undefined' error
+   - fixed: Fix 'Cannot read property licenseeNumber of null' error
+  url: https://netlicensing.io/contact/
+
 - title: "License and Transaction views fixes"
   description: "Minor License and Transaction views fixes, to show correct licensing dates."
   date: 2020-10-20
