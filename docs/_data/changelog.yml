@@ -18,6 +18,7 @@
    - added: Add 'Book a Session' menu item in the Management Console
    - fixed: Fix 's is undefined' error
    - fixed: Fix 'Cannot read property licenseeNumber of null' error
+  image: assets/images/changelog/netlicensing-contact.gif
   url: https://netlicensing.io/contact/
 
 - title: "License and Transaction views fixes"
