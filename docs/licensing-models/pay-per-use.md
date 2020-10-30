@@ -10,12 +10,12 @@ permalink: pay-per-use
 {{ page.title }}
 ===========
 
--   [Overview](#Pay-per-Use-Overview)
--   [License Templates](#Pay-per-Use-LicenseTemplates)
--   [Licenses](#Pay-per-Use-Licenses)
--   [Validation](#Pay-per-Use-Validation)
-    -   [Post-payment mode](#Pay-per-Use-Post-paymentmode)
-    -   [Pre-payment mode](#Pay-per-Use-Pre-paymentmode)
+-   [Overview](#overview)
+-   [License Templates](#license-templates)
+-   [Licenses](#licenses)
+-   [Validation](#validation)
+    -   [Post-payment mode](#post-payment-mode)
+    -   [Pre-payment mode](#pre-payment-mode)
 
 Overview
 ========
