@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Features availability indicators"
+  description: "We improved our UI and made it clear and visible, which NetLicensing features are available in the current vendor plan."
+  date: 2020-11-09
+  component: UI
+  features:
+   - added: Feature availability indicators in the vendor plan
+   - updated: Add tooltip to the top nav buttons
+  url: https://ui.netlicensing.io
 
 - title: "Reports maintenance"
   description: "The customers base grow and additional requirements to the reporting in the last year showed us clearly the need to rework on that side. As of today, we set some of the reports in the maintenance mode, so our team can address additional requirements."
