@@ -15,7 +15,7 @@
   component: UI
   features:
    - fixed: Cannot select license configuration fields for a module with one package only
-   - fixed: 'Used Quantity' field in the new license for [Pay-per-Use licensing model](pay-per-use) should not be a required field
+   - fixed: "Used Quantity" field in the new license for [Pay-per-Use licensing model](pay-per-use) should not be a required field
    - updated: Changed tooltip colours to meet Labs64 branding
    - updated: Latest to the [GuideChimp](https://www.labs64.com/guidechimp/) version
   url: https://ui.netlicensing.io
