@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "UX and usability improvements"
+  description: "We made several improvements to the NetLicensing Management Console to improve user experience."
+  date: 2020-11-12
+  component: UI
+  features:
+   - fixed: Cannot select license configuration fields for a module with one package only
+   - fixed: 'Used Quantity' field in the new license for [Pay-per-Use licensing model](pay-per-use) should not be a required field
+   - updated: Changed tooltip colours to meet Labs64 branding
+   - updated: Latest to the [GuideChimp](https://www.labs64.com/guidechimp/) version
+  url: https://ui.netlicensing.io
+
 - title: "Features availability indicators"
   description: "We improved our UI and made it clear and visible, which NetLicensing features are available in the current vendor plan."
   date: 2020-11-09
