@@ -44,6 +44,21 @@ API Keys are *not expirable* and can be created via NetLicnsing Management Conso
   <img src="assets/images/faq-netlicensing-apikey.png" />
 </a>
 
+#### How to rotate NetLicensing API Keys
+
+Changing compromised API Keys or rotating on a regular schedule is known security best practice.
+This shortens the period an API Key is active and therefore reduces the business impact if they are compromised.
+
+Below we will show you the steps, how to rotate NetLicensing API Keys for the end-customers.
+
+To replace API Keys, follow these steps:
+
+- Create a second API Key in addition to the one in use (provide the context for the key in the name field).
+- Update all your applications to use the new API Key and make sure this key is rolled-out to all affected end-customers.
+- **Test-Test-...Test:** Validate that the applications are working as expected.
+- Backup old API Key number for further support requests (e.g. key restoration by our support team).
+- Delete the inactive old API Key.
+
 ### Refrences
 
 - How to use NetLicensing with Java and Spring Security: [https://netlicensing.io/blog/2020/11/13/netlicensing-spring-security/](https://netlicensing.io/blog/2020/11/13/netlicensing-spring-security/)
