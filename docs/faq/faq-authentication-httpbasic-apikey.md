@@ -38,7 +38,7 @@ Leveraging API Keys improves security by:
 - Creating context-specific keys for the specified customers' segments, products or use cases
 - API Keys can be easily revoked if compromised
 
-API Keys are *not expirable* and can be created via NetLicnsing Management Console ([Settings](https://ui.netlicensing.io/#/settings) view) or RESTful API ([TokenService](token-services)).
+API Keys are *not expirable* and can be created via NetLicnsing Management Console ([API Access](https://ui.netlicensing.io/#/settings) tab) or RESTful API ([TokenService](token-services)).
 
 <a href="assets/images/faq-netlicensing-apikey.png" class="imagelink" data-lightbox="faq-netlicensing-apikey" data-title="Management Console - Settings - API Keys" data-alt="Management Console - Settings - API Keys">
   <img src="assets/images/faq-netlicensing-apikey.png" />
