@@ -23,7 +23,7 @@ NetLicensing offering two [authentication alternatives](security): *HTTP Basic A
 In this approach, base64 encoded username and password need to be sent within a request header to prove authentication.
 As this approach uses the HTTP header, so there’s no need to handshakes or other complex response systems.
 
->NOTE: While using Basic Auth you will be granted full access to the NetLicensing endpoints within your vendor account. You need to make sure the credentials stored and delivered in a secure way within your application and not visible to the end-customers.
+>*NOTE: While using Basic Auth you will be granted full access to the NetLicensing endpoints (e.g. one level of account access - **super admin**) within your vendor account. You need to make sure the credentials stored and delivered in a secure way within your application and not visible to the end-customers.*
 
 *In most of the cases, we recommend **API Key Identification** as the most secure and flexible option.*
 
