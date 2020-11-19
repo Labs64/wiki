@@ -224,17 +224,21 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <tr class="even">
 <td><p>Request Parameters</p></td>
 <td><p>tokenType (enum) - Token type to be generated<br />
-- DEFAULT - default one-time token (will be expired after first request)<br />
-- SHOP       - shop token is used to redirect customer to the netlicensingShop<br />
-                   (licenseeNumber is mandatory)</p>
-<p>- APIKEY - APIKey-token</p>
+- <i>DEFAULT</i> - default one-time token (will be expired after first request)<br />
+- <i>SHOP</i> - shop token is used to redirect customer to the NetLicensing Shop ('licenseeNumber' is mandatory)<br />
+- <i>ACTION</i> - Action token (e.g. Customer Portal)<br/>
+- <i>APIKEY</i> - APIKey token<br/>
+</p>
 <p><br />
 licenseeNumber (string) - Only for tokenType=SHOP; identifies licensee that will be assigned to the shop token.</p>
 <p>successURL (URI) - Take customers to this URL when they finish checkout.</p>
 <p>successURLTitle (string) - Shop link title for successful checkout process.</p>
 <p>cancelURL (URI) - Take customers to this URL when they cancel their checkout.</p>
 <p>cancelURLTitle (string) - Shop link title for cancel checkout process.</p>
-<p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p></td>
+<p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p>
+<p>action (enum) - 'licenseeLogin'. Only for tokenType=ACTION.</p>
+<p>licenseeNumber (string) - customer number. Only for tokenType=ACTION.</p>
+</td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
