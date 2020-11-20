@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Customized reporting improvements"
+  description: "As a part of ongoing licensing reporting improvements at NetLicensing, we made some updates and fixes in Customized Reporting Automation module."
+  date: 2020-11-20
+  component: Reporting
+  features:
+   - updated: "Changed enum for 'Status' field to String instead of HTTP status code"
+   - fixed: "'sessionId' and 'secretId' resolution for [Floating](Floating) and [Node-Locked](node-locked) models"
+  url: https://netlicensing.io/wiki/customized-reporting
+
 - title: "UX and usability improvements"
   description: "We made several improvements to the NetLicensing Management Console to improve user experience."
   date: 2020-11-12
