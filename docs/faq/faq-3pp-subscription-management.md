@@ -32,7 +32,7 @@ So, you can easily set up your products and sell them online.
 The **license enforcement**, however, and instant verification of customers' entitlements usually needs to be implemented on your side. This is especially true for more complex scenarios than simple recurring subscriptions, e.g.:
 
 - customer acquired two "1-month" subscription licenses
-- the trial period needs to be extended for the given "best" SQL or prospect
+- the trial period needs to be extended for your "best" leads or prospects
 - additionally to the service subscription, a vendor using metered models, such as [Floating](floating), [Pay-per-Use](pay-per-use)
 - service [usage quota](quota) or additional [up-sell features](multi-feature) need to be assigned to the customer
 - ... and the list of the different licensing strategies can go on
