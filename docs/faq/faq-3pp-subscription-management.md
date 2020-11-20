@@ -27,13 +27,19 @@ These services offer a perfect customer eCommerce experience and cover standard 
 
 So, you can easily set up your products and sell them online.
 
+### Extended licensing flow with NetLicensing
+
 The **license enforcement**, however, and instant verification of customers' entitlements usually needs to be implemented on your side. This is especially true for more complex scenarios than simple recurring subscriptions, e.g.:
 
 - customer acquired two "1-month" subscription licenses
 - the trial period needs to be extended for the given "best" SQL or prospect
 - additionally to the service subscription, a vendor using metered models, such as [Floating](floating), [Pay-per-Use](pay-per-use)
-- service usage quota or additional up-sell features need to be assigned to the customer
-... and the list of the different licensing strategies can go on
+- service [usage quota](quota) or additional [up-sell features](multi-feature) need to be assigned to the customer
+- ... and the list of the different licensing strategies can go on
+
+>All these above concerns can be perfectly covered using NetLicensing services in addition to the standard license acquisition and renewal flow.
+
+### Digital fulfilment
 
 In most of the eCommerce systems, a **"digital fulfilment"** step can be configured using custom webhook/IPN endpoint. NetLicensing can be hocked at that step and will be instantly notified on all or selected events in the eCommerce platforms.
 
@@ -57,3 +63,8 @@ Available events and their names differ from one system to another, however, not
 </a>
 
 One central instance of the NetLicensing Gateway is hosted and maintained on NetLicensing infrastructure. You can deploy your local instance on your own infrastructure, however.
+
+### Contribution
+
+Being an open-source project, NetLicensing Gateway is maintained by our awesome community.
+New integrations can be implemented and approved after verification by NetLicensing team via GitHub Pull Request.
