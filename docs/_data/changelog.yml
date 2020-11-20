@@ -15,7 +15,7 @@
   component: Reporting
   features:
    - updated: "Changed enum for 'Status' field to String instead of HTTP status code"
-   - fixed: "'sessionId' and 'secretId' resolution for [Floating](Floating) and [Node-Locked](node-locked) models"
+   - fixed: "'sessionId' and 'secretId' resolution for [Floating](floating) and [Node-Locked](node-locked) models"
   url: https://netlicensing.io/wiki/customized-reporting
 
 - title: "UX and usability improvements"
