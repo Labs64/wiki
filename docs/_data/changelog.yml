@@ -10,7 +10,7 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "Announcement scheduled maintenance work"
-  description: "This Sunday, <strong>November 22nd 2020</strong>, we will carry out scheduled maintenance work on our servers between 8 am and 12-noon German time (CET), so our service will be temporarily unavailable.<br>Thank you for your understanding!"
+  description: "This Sunday, November 22nd 2020, we will carry out scheduled maintenance work on our servers between 8 am and 12-noon German time (CET), so our service will be temporarily unavailable.<br>Thank you for your understanding!"
   date: 2020-11-21
   component: API
   features:
