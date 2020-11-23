@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Reports maintenance"
+  description: "We addressed some improvements on the technical side and re-enabled dashboard reports."
+  date: 2020-11-23
+  component: UI
+  features:
+   - updated: Enable 'API Requests/Validations per Day' dashboard report
+  url: https://ui.netlicensing.io
+
 - title: "Announcement scheduled maintenance work"
   description: "This Sunday, November 22nd 2020, we will carry out scheduled maintenance work on our servers between 8pm and 11pm (CET), so our service will be temporarily unavailable.<br><br>Thank you for your understanding!"
   date: 2020-11-21
