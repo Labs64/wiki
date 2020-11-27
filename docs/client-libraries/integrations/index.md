@@ -2,6 +2,7 @@
 layout: default
 title: Integrations
 nav_order: 100
+parent: Client Libraries & Integrations
 has_children: true
 description: "Labs64 NetLicensing integrations and sample code"
 permalink: integrations
