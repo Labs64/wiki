@@ -45,8 +45,8 @@ var guideChimp = new GuideChimp(tourChangelog, {
 // GuideChimp->GoogleAnalytics plugin - https://github.com/Labs64/GuideChimp/tree/master/plugins/googleAnalytics
 guideChimp.gaOn('onAfterChange', 'Changelog Tour', (to, from) => {
   return {
-    event_category: 'Guided Tour (GuideChimp)',
-    event_label: 'Step (' + to.step + '): ' + to.title,
+    event_category: 'guidechimp_tour',
+    event_label: 'Step: ' + to.title,
     value: to.step
   };
 });
