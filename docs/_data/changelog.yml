@@ -16,7 +16,7 @@
   features:
    - added: Enable NetLicesning Advent Calendar 2020
   image: assets/images/changelog/netlicensing-advent-day1.png
-  url: https://netlicensing.io/?guidechimp=on&tour=advent-calendar-2020
+  url: http://l64.cc/advent20
 
 - title: "Reports maintenance"
   description: "We addressed some improvements on the technical side and re-enabled dashboard reports."
