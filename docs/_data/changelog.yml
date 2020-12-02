@@ -9,7 +9,7 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
-- title: "NetLicesning Advent Calendar 🎄"
+- title: "NetLicesning Advent Calendar"
   description: "Join us, as we count down days till Christmas with NetLicesning Advent Calendar and receive every day awesome NetLicensing Perks!"
   date: 2020-12-01
   component: Docu, Reporting
