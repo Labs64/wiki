@@ -65,7 +65,8 @@ Having this field filled, the licensing data will be retrieved and shown in the 
 ### References
 
 - [Zoho CRM](https://go.zoho.com/ZLs){:target="_blank"}{:rel="nofollow"} <sup>*</sup> is an online Sales CRM software that manages your sales, marketing and support in one CRM platform. Sign up now and earn **$100 credits** instantly!
+- [Management Console](https://ui.netlicensing.io) - NetLicensing Management Console
 
 ---
 
-<sup>*</sup> - This is an affiliate link; we get commissions for purchases made through this link at no extra cost to you.
+<sup>*</sup> this is an affiliate link; we get commissions for purchases made through this link at no extra cost to you.
