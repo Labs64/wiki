@@ -61,3 +61,11 @@ Having this field filled, the licensing data will be retrieved and shown in the 
 <a href="assets/images/zoho-screenshot2.png" class="imagelink" data-lightbox="zoho" data-title="Zoho: NetLicensing Licenses (related list)" data-alt="Zoho: NetLicensing Licenses (related list)">
     <img src="assets/images/zoho-screenshot2.png" />
 </a>
+
+### References
+
+- [Zoho CRM](https://go.zoho.com/ZLs){:target="_blank"}{:rel="nofollow"} <sup>*</sup> is an online Sales CRM software that manages your sales, marketing and support in one CRM platform. Sign up now and earn **$100 credits** instantly!
+
+---
+
+<sup>*</sup> - This is an affiliate link; we get commissions for purchases made through this link at no extra cost to you.
