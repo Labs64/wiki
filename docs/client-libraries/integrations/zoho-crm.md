@@ -11,7 +11,7 @@ permalink: zoho-crm
 {{ page.title }}
 ================
 
-Labs64 NetLicensing for Zoho CRM integrates your customers' entitlements in NetLicensing with your CRM system. The extension adds a new "Customer Number" field to the Accounts module which will be used to retrieve all available licenses for a particular vendor.
+[Labs64 NetLicensing for Zoho CRM](https://marketplace.zoho.com/crm/labs64-netlicensing-extension-for-zoho-crm){:target="_blank"}{:rel="noopener nofollow"} integrates your customers' entitlements in NetLicensing with your CRM system. The extension adds a new "Customer Number" field to the Accounts module which will be used to retrieve all available licenses for a particular vendor.
 
 ### Key Features
 - Use Zoho CRM as one-stop-shop to maintain customers' licensing
