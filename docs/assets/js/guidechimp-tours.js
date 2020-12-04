@@ -36,20 +36,25 @@ var tourChangelog = [
   },
 ];
 
-GuideChimp.extend(guideChimpPluginGoogleAnalytics);
+if (typeof guideChimpPluginGoogleAnalytics !== "undefined") {
+  GuideChimp.extend(guideChimpPluginGoogleAnalytics);
+}
 
-var guideChimp = new GuideChimp(tourChangelog, {
+var guideChimp = GuideChimp(tourChangelog, {
   position: 'left',
   scrollPadding: 50
 });
-// GuideChimp->GoogleAnalytics plugin - https://github.com/Labs64/GuideChimp/tree/master/plugins/googleAnalytics
-guideChimp.gaOn('onAfterChange', 'Changelog Tour', (to, from) => {
-  return {
-    event_category: 'guidechimp_tour',
-    event_label: 'Step: ' + to.title,
-    value: to.step
-  };
-});
+
+if (typeof guideChimpPluginGoogleAnalytics !== "undefined") {
+  // GuideChimp->GoogleAnalytics plugin - https://github.com/Labs64/GuideChimp/tree/master/plugins/googleAnalytics
+  guideChimp.gaOn('onAfterChange', 'Changelog Tour', (to, from) => {
+    return {
+      event_category: 'guidechimp_tour',
+      event_label: 'Step: ' + to.title,
+      value: to.step
+    };
+  });
+}
 
 document.getElementById('startTour').onclick = function() {
   guideChimp.start();
