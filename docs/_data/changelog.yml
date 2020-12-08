@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing Extension for Zoho CRM"
+  description: "Labs64 NetLicensing for Zoho CRM integrates your customers’ entitlements in NetLicensing with your CRM system. The extension adds a new 'Customer Number' field to the Accounts module which will be used to retrieve all available licenses for a particular vendor."
+  date: 2020-12-07
+  component: Integrations
+  features:
+   - added: Enable 'NetLicensing Extension for Zoho CRM'
+  url: https://netlicensing.io/wiki/zoho-crm
+
 - title: "NetLicesning Advent Calendar"
   description: "Join us, as we count down days till Christmas with NetLicesning Advent Calendar and receive every day awesome NetLicensing Perks!"
   date: 2020-12-01
