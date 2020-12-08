@@ -15,6 +15,7 @@
   component: Integrations
   features:
    - added: Enable 'NetLicensing Extension for Zoho CRM'
+  image: assets/images/zoho-stage.png
   url: https://netlicensing.io/wiki/zoho-crm
 
 - title: "NetLicesning Advent Calendar"
