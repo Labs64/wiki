@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing Gateway @ Docker Hub"
+  description: "Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl, and many others as a license acquisition frontend. After a successful transaction, all needed licensing configuration (Customers, Licenses and all related data) will be made available in the NetLicensing and can be used for later entitlements validation in NetLicensing."
+  date: 2020-12-09
+  component: Integrations
+  features:
+   - added: Publish NetLicensing Gateway to Docker Hub
+  image: https://repository-images.githubusercontent.com/73901823/f634b580-38ce-11eb-8e5f-71b6f1e79d3b
+  url: https://hub.docker.com/r/labs64/netlicensing-gateway
+
 - title: "NetLicensing Extension for Zoho CRM"
   description: "Labs64 NetLicensing for Zoho CRM integrates your customers’ entitlements in NetLicensing with your CRM system. The extension adds a new 'Customer Number' field to the Accounts module which will be used to retrieve all available licenses for a particular vendor."
   date: 2020-12-07
