@@ -447,7 +447,7 @@ Validates active licenses of the licensee.
 <td><p><em>licenseeNumber (string)</em> - licensee number with a maximum length of 1000 characters<br />
 <em>productNumber (string) (optional)</em> - product number, must be provided when "licensee auto-create" is enabled (see also <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/domain/entity/Product.html" class="external-link">Product</a> JavaDoc). Identifies the product to which new licensee should be added.<br />
 <em>licenseeName (string) (optional)</em> - human-readable name for the auto-created licensee (will be set as custom Licensee property)<br />
-<em>licenseeSecret (string) (optional)</em> - when provided and licensee secret enabled, will enable the licensee secret logic as described in <a href="licensee-secret">Licensee Secret (deprecated)</a></p>
+<em><del>licenseeSecret</del> (deprecated) (string) (optional)</em> - when provided and licensee secret enabled, will enable the licensee secret logic as described in <a href="licensee-secret">Licensee Secret (deprecated)</a></p>
 <p>Some product modules (depending on the licensing model) may require parameters passed on validate. Parameters to the product modules are passed using the following format:</p>
 <p><em>productModuleNumber0 (string)</em> - product module 0 number<em><br />
 &lt;pmParam1&gt;0</em> <em>(any)</em> - product module 0 parameter "&lt;pmParam1&gt;"<em><br />
