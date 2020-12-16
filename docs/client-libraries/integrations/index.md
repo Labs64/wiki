@@ -13,14 +13,12 @@ permalink: integrations
 
 NetLicensing can be easily integrated with common *eCommerce, Billing and Subscription Management* platforms, such as:
 
-- [NetLicensing-Gateway](https://github.com/Labs64/NetLicensing-Gateway){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / eCommerce Gateway
-  - [labs64/netlicensing-gateway](https://hub.docker.com/r/labs64/netlicensing-gateway){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing Gateway Docker Image at Docker Hub
+- [NetLicensing-Gateway](gateway) - NetLicensing / eCommerce Gateway
+  - [NetLicensing-MyCommerce](https://github.com/Labs64/NetLicensing-Gateway/wiki/MyCommerce){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / MyCommerce integration
+  - [NetLicensing-FastSpring](https://github.com/Labs64/NetLicensing-Gateway/wiki/FastSpring){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / FastSpring (Contextual Commerce) integration
 - [PayPal](paypal) - NetLicensing / PayPal Integration
 - [Stripe](stripe) - NetLicensing / Stripe Integration
 - [NetLicensing-Zapier](https://zapier.com/apps/netlicensing/integrations){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / Zapier Integration
-- [NetLicensing-MyCommerce](https://github.com/Labs64/NetLicensing-Gateway/wiki/MyCommerce){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / MyCommerce integration
-- [NetLicensing-FastSpring](https://github.com/Labs64/NetLicensing-Gateway/wiki/FastSpring){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / FastSpring (Contextual Commerce) integration
-- [NetLicensing-FastSpring](https://github.com/Labs64/NetLicensing-FastSpring){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / FastSpring (Classic Commerce) integration
 - [NetLicensing-PrestaShop](https://github.com/Labs64/NetLicensing-PrestaShop){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing Connector for PrestaShop
 - WordPress - [PluginPass: WordPress PRO Plugin/Theme Licensing](https://wordpress.org/plugins/pluginpass-pro-plugintheme-licensing/){:target="_blank"}{:rel="noopener nofollow"}
 -   [Zoho CRM](zoho-crm) - NetLicensing Extension for Zoho CRM
