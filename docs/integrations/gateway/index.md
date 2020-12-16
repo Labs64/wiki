@@ -15,18 +15,18 @@ permalink: gateway
 
 Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl, and many others as a license acquisition frontend. After a successful transaction, all needed licensing configuration (Customers, Licenses and all related data) will be made available in the NetLicensing and can be used for later entitlements validation.
 
-### License Acquisition Flow
+## License Acquisition Flow
 
 <a href="assets/images/gateway-external-ecommerce-flow.png" class="imagelink" data-lightbox="gateway" data-title="License Acquisition Flow" data-alt="License Acquisition Flow">
     <img src="assets/images/gateway-external-ecommerce-flow.png" alt="License Acquisition Flow" />
 </a>
 
-### Gateway
+## Gateway
 
 - [NetLicensing-Gateway](https://github.com/Labs64/NetLicensing-Gateway){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / eCommerce Gateway
   - [labs64/netlicensing-gateway](https://hub.docker.com/r/labs64/netlicensing-gateway){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing Gateway Docker Image at Docker Hub
 
-### Connectors
+## Connectors
 
 - [MyCommerce](mycommerce) - NetLicensing / MyCommerce integration
 - [FastSpring (Contextual Commerce)](fastspring) - NetLicensing / FastSpring (Contextual Commerce) integration
