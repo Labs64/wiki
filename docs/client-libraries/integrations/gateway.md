@@ -18,3 +18,15 @@ Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl,
 - [NetLicensing-MyCommerce](https://github.com/Labs64/NetLicensing-Gateway/wiki/MyCommerce){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / MyCommerce integration
 - [NetLicensing-FastSpring](https://github.com/Labs64/NetLicensing-Gateway/wiki/FastSpring){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / FastSpring (Contextual Commerce) integration
 - [NetLicensing-FastSpring](https://github.com/Labs64/NetLicensing-FastSpring){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / FastSpring (Classic Commerce) integration
+- 2Checkout - [#6](https://github.com/Labs64/NetLicensing-Gateway/issues/6){:target="_blank"}{:rel="noopener nofollow"}
+- Zuora - [#4](https://github.com/Labs64/NetLicensing-Gateway/issues/4){:target="_blank"}{:rel="noopener nofollow"}
+- SendOwl - [#5](https://github.com/Labs64/NetLicensing-Gateway/issues/5){:target="_blank"}{:rel="noopener nofollow"}
+- Shopware
+- Chargebee
+- Recurly - [#3](https://github.com/Labs64/NetLicensing-Gateway/issues/3){:target="_blank"}{:rel="noopener nofollow"}
+- billwerk
+- Paddle
+- Chargify
+- Braintree
+- Cleverbridge
+- jvZoo
