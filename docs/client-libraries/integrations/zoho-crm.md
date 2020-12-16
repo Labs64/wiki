@@ -1,6 +1,6 @@
 ---
 layout: default
-title: NetLicensing Extension for Zoho CRM
+title: Zoho CRM
 parent: Integrations
 grand_parent: Client Libraries & Integrations
 nav_order: 10
@@ -8,7 +8,7 @@ description: "Connect NetLicensing customers and Zoho CRM"
 permalink: zoho-crm
 ---
 
-{{ page.title }}
+NetLicensing Extension for Zoho CRM
 ================
 
 [Labs64 NetLicensing for Zoho CRM](https://marketplace.zoho.com/crm/labs64-netlicensing-extension-for-zoho-crm){:target="_blank"}{:rel="noopener nofollow"} integrates your customers' entitlements in NetLicensing with your CRM system. The extension adds a new "Customer Number" field to the Accounts module which will be used to retrieve all available licenses for a particular vendor.
