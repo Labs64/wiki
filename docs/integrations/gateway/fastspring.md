@@ -4,7 +4,7 @@ title: FastSpring
 parent: NetLicensing Gateway
 grand_parent: Integrations
 nav_order: 10
-description: "FastSpring (Contextual Commerce)"
+description: "FastSpring (Contextual Commerce) ..."
 permalink: fastspring
 ---
 
