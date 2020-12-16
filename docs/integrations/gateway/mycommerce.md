@@ -28,7 +28,7 @@ Integration with [MyCommerce](https://www.mycommerce.com){:target="_blank"}{:rel
 
 ## Limitations
 
-* Too big quantity may lead to incomplete purchase, see [Quantity support](#quantitysupport) below.
+* Too big quantity may lead to incomplete purchase, see [Quantity support](#quantity-support) below.
 
 ## URL format
 
@@ -47,7 +47,7 @@ https://{user}:{pass}@gateway.netlicensing.io/mycommerce/codegen/{productNumber}
 #### Example 1
 
 ```
-    URL: https://demo:demo@gateway.netlicensing.io/mycommerce/codegen/PFLOAT-DEMO?saveUserData=false&licenseTemplateNumber=EFLOAT01-DEMO&licenseTemplateNumber=EFLOAT02-DEMO
+URL: https://demo:demo@gateway.netlicensing.io/mycommerce/codegen/PFLOAT-DEMO?saveUserData=false&licenseTemplateNumber=EFLOAT01-DEMO&licenseTemplateNumber=EFLOAT02-DEMO
 ```
 
 * demo:demo - NetLicensing credentials
@@ -58,7 +58,7 @@ https://{user}:{pass}@gateway.netlicensing.io/mycommerce/codegen/{productNumber}
 #### Example 2
 
 ```
-    URL: https://username:password@gateway.netlicensing.io/mycommerce/codegen/PSUBS-DEMO?saveUserData=true&licenseTemplateNumber=ESUBS01-DEMO
+URL: https://username:password@gateway.netlicensing.io/mycommerce/codegen/PSUBS-DEMO?saveUserData=true&licenseTemplateNumber=ESUBS01-DEMO
 ```
 
 * username:password - NetLicensing credentials
@@ -164,7 +164,7 @@ Select "Prevent changes to the cart" -> "Prevent changes to quantity and product
 In case an error happens in the Remote Code Generator, MyCommerce will not complete the purchase, and the end user will not receive his order confirmation, but will be redirected to an error page. Besides, MyCommerce will send you as a vendor a notification message to the email associated with your MyCommerce account. The error page and the email will contain the "Ref #" that is the PURCHASE_ID of the failed transaction. You can use this number to retrieve the NetLicensing Gateway log by sending the following request:
 
 ```
-    https://{user}:{pass}@gateway.netlicensing.io/mycommerce/log/{productNumber}[?PURCHASE_ID={ref_no}]
+https://{user}:{pass}@gateway.netlicensing.io/mycommerce/log/{productNumber}[?PURCHASE_ID={ref_no}]
 ```
 
 * **user:pass** and **productNumber** - same as for codegen endpoint (see above)

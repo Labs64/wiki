@@ -4,6 +4,7 @@ title: NetLicensing Gateway
 parent: Integrations
 nav_order: 1
 has_children: true
+has_toc: false
 description: "Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl, and many others as a license acquisition frontend."
 permalink: gateway
 ---

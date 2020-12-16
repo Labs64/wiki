@@ -28,7 +28,7 @@ Integration with [FastSpring](https://fastspring.com){:target="_blank"}{:rel="no
 
 ## Limitations
 
-* Too big quantity may lead to incomplete purchase, see [Quantity support](#quantitysupport) below.
+* Too big quantity may lead to incomplete purchase, see [Quantity support](#quantity-support) below.
 
 ## URL format
 
@@ -36,7 +36,7 @@ Integration with [FastSpring](https://fastspring.com){:target="_blank"}{:rel="no
 https://gateway.netlicensing.io/fastspring/codegen/
 ```
 
-* **apiKey** - authorization apiKey; see [Authorization](#authorization) manual.
+* **apiKey** - authorization [apiKey](security#api-key-identification).
 * **productNumber** - replace with the actual product number from NetLicensing
 * **licenseTemplateList** - license will be created from each specified license template. Multiple allowed, comma separated (_licenseTemplateNumber,licenseTemplateNumber,licenseTemplateNumber..._).
 * **saveUserData** - "true" will trigger saving of the user data passed by FastSpring with the created licensee as custom properties. Default is "false".
@@ -46,6 +46,7 @@ https://gateway.netlicensing.io/fastspring/codegen/
 
 ```
 URL: https://gateway.netlicensing.io/fastspring/codegen/
+
 POST data: 
 * productNumber=PFLOAT-DEMO - NetLicensing productNumber (required)
 * saveUserData=true - save user information (such as email, last name, first name, etc.) collected by FastSpring with new licensee in json format as custom property (key: fastSpringUserData)
@@ -56,6 +57,7 @@ POST data:
 
 ```
 URL: https://gateway.netlicensing.io/fastspring/codegen/
+
 POST data: 
 * productNumber=PSUBS-DEMO - Product Number in netlicensing.io (required)
 * saveUserData=true - save user information (such as email, last name, first name, etc.) collected by FastSpring with new licensee in json format as custom property (key: fastSpringUserData)
@@ -69,8 +71,8 @@ We assume you have successfully signed up to FastSpring and activated your accou
 #### Step 1: Create your products
 
 * Click **Create Product** and choose **Product**
-<a href="assets/images/fastspring-01-create-product.png" class="imagelink" data-lightbox="fastspring" data-title="Create Product" data-alt="Create Product">
-    <img src="assets/images/fastspring-01-create-product.png" alt="Create Product" />
+<a href="assets/images/fastspring-01-create-product.png" class="imagelink" data-lightbox="fastspring" data-title="Create product" data-alt="Create product">
+    <img src="assets/images/fastspring-01-create-product.png" alt="Create product" />
 </a>
 
 * Configure **Details** of your product
@@ -81,13 +83,13 @@ We assume you have successfully signed up to FastSpring and activated your accou
 #### Step 2: Add **Fulfillment**
 
 * Click **Add Fulfillment**
-<a href="assets/images/fastspring-03-add-fulfillment.png" class="imagelink" data-lightbox="fastspring" data-title="Add Fulfillment" data-alt="Add Fulfillment">
-    <img src="assets/images/fastspring-03-add-fulfillment.png" alt="Add Fulfillment" />
+<a href="assets/images/fastspring-03-add-fulfillment.png" class="imagelink" data-lightbox="fastspring" data-title="Add fulfillment" data-alt="Add fulfillment">
+    <img src="assets/images/fastspring-03-add-fulfillment.png" alt="Add fulfillment" />
 </a>
 
 * Choose **Generate a License** and click **Remote Server Request**
-<a href="assets/images/fastspring-04-generate-license.png" class="imagelink" data-lightbox="fastspring" data-title="Generate a License" data-alt="Generate a License">
-    <img src="assets/images/fastspring-04-generate-license.png" alt="Generate a License" />
+<a href="assets/images/fastspring-04-generate-license.png" class="imagelink" data-lightbox="fastspring" data-title="Generate License" data-alt="Generate License">
+    <img src="assets/images/fastspring-04-generate-license.png" alt="Generate License" />
 </a>
 
 * Fill **URL** and click **Multi-Line License**
@@ -150,7 +152,7 @@ Select "Default Quantity" -> "Locked"
 In case an error happens in the Remote Code Generator, FastSpring will not complete the purchase, and the end user will not receive his order confirmation, but will be redirected to an error page. Besides, FastSpring will send you as a vendor a notification message to the email associated with your FastSpring account. The error page and the email will contain the "Order Reference: #" that is the 'reference' of the failed transaction. You can use this number to retrieve the NetLicensing Gateway log by sending the following request:
 
 ```
-    https://gateway.netlicensing.io/FastSpring/log/{productNumber}[?reference={reference}]
+https://gateway.netlicensing.io/FastSpring/log/{productNumber}[?reference={reference}]
 ```
 
 * **productNumber** - same as for codegen endpoint (see above)
