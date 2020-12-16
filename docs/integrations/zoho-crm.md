@@ -2,7 +2,6 @@
 layout: default
 title: Zoho CRM
 parent: Integrations
-grand_parent: Client Libraries & Integrations
 nav_order: 10
 description: "Connect NetLicensing customers and Zoho CRM"
 permalink: zoho-crm

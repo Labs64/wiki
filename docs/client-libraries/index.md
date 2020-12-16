@@ -2,7 +2,6 @@
 layout: default
 title: Client Libraries & Integrations
 nav_order: 100
-has_children: true
 description: "Labs64 NetLicensing client libraries, integrations and sample code"
 permalink: client-libraries
 ---
