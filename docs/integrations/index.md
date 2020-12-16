@@ -21,6 +21,6 @@ NetLicensing can be easily integrated with common *eCommerce, Billing and Subscr
 - WordPress - [PluginPass: WordPress PRO Plugin/Theme Licensing](https://wordpress.org/plugins/pluginpass-pro-plugintheme-licensing/){:target="_blank"}{:rel="noopener nofollow"}
 - [Zoho CRM](zoho-crm) - NetLicensing Extension for Zoho CRM
 
-Please refer to the [typical integration scenario](gateway), which is showing how NetLicensing extending standard e-commerce flow (using digital fulfilment) by enabling license management for the digital products and services.
+Please refer to the [typical integration scenario](gateway#license-acquisition-flow), which is showing how NetLicensing extending standard e-commerce flow (using digital fulfilment) by enabling license management for the digital products and services.
 
 Depending on your business processes and distribution channels there might be many different integration options. Please contact us via [info@netlicensing.io](mailto:info@netlicensing.io) and we'll be happy to assist you defining best-fit integration scenario.
