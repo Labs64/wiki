@@ -2,7 +2,7 @@
 layout: default
 title: Integrations
 has_children: true
-has_toc: true
+has_toc: false
 nav_order: 97
 description: "Labs64 NetLicensing integrations and sample code"
 permalink: integrations

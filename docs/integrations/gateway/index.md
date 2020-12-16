@@ -3,6 +3,7 @@ layout: default
 title: NetLicensing Gateway
 parent: Integrations
 nav_order: 1
+has_children: true
 description: "Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl, and many others as a license acquisition frontend."
 permalink: gateway
 ---
@@ -27,7 +28,7 @@ Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl,
 
 ### Connectors
 
-- [MyCommerce](https://github.com/Labs64/NetLicensing-Gateway/wiki/MyCommerce){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / MyCommerce integration
+- [MyCommerce](mycommerce) - NetLicensing / MyCommerce integration
 - [FastSpring (Contextual Commerce)](fastspring) - NetLicensing / FastSpring (Contextual Commerce) integration
 - [FastSpring (Classic Commerce)](https://github.com/Labs64/NetLicensing-FastSpring){:target="_blank"}{:rel="noopener nofollow"} *(deprecated)* - NetLicensing / FastSpring (Classic Commerce) integration
 - Recurly - [#3](https://github.com/Labs64/NetLicensing-Gateway/issues/3){:target="_blank"}{:rel="noopener nofollow"}

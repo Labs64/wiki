@@ -3,7 +3,7 @@ layout: default
 title: FastSpring
 parent: NetLicensing Gateway
 grand_parent: Integrations
-nav_order: 10
+nav_order: 20
 description: "FastSpring (Contextual Commerce) ..."
 permalink: fastspring
 ---
