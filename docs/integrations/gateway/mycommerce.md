@@ -4,7 +4,7 @@ title: MyCommerce
 parent: NetLicensing Gateway
 grand_parent: Integrations
 nav_order: 10
-description: "MyCommerce ..."
+description: "MyCommerce integration"
 permalink: mycommerce
 ---
 
@@ -19,7 +19,6 @@ permalink: mycommerce
 [Error handling](#error-handling)  
 
 # Introduction
-In this manual we assume you're familiar with NetLicensing and prepared a [[NetLicensing setup]] for your product.
 
 Integration with [MyCommerce](https://www.mycommerce.com/) uses [Remote Code Generator](http://help.mycommerce.com/add-topics/product-setup/211-prodsetup-licensingoptions#remote). NetLicensing Gateway returns licensee number as license code.
 

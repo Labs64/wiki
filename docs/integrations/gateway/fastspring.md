@@ -4,7 +4,7 @@ title: FastSpring
 parent: NetLicensing Gateway
 grand_parent: Integrations
 nav_order: 20
-description: "FastSpring (Contextual Commerce) ..."
+description: "FastSpring (Contextual Commerce) integration"
 permalink: fastspring
 ---
 
@@ -19,7 +19,6 @@ permalink: fastspring
 [Error handling](#error-handling)  
 
 # Introduction
-In this manual we assume you're familiar with NetLicensing and prepared a [[NetLicensing setup]] for your product.
 
 Integration with [FastSpring](https://fastspring.com/) uses [Fulfillments](https://docs.fastspring.com/products-bundles-and-subscriptions/fulfillments#Fulfillments-remote). NetLicensing Gateway returns licensee number as license code.
 
