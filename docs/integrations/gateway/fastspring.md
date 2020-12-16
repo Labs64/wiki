@@ -60,28 +60,42 @@ We assume you have successfully signed up to FastSpring and activated your accou
 
 #### Step 1: Create your products
 * Click **Create Product** and choose **Product**
-[[images/FastSpring/01_create-product.png]]
+<a href="assets/images/fastspring-01-create-product.png" class="imagelink" data-lightbox="fastspring" data-title="" data-alt="">
+    <img src="assets/images/fastspring-01-create-product.png" alt="" />
+</a>
 
 * Configure **Details** of your product
-[[images/FastSpring/02_create-product-details.png]]
+<a href="assets/images/fastspring-02-create-product-details.png" class="imagelink" data-lightbox="fastspring" data-title="" data-alt="">
+    <img src="assets/images/fastspring-02-create-product-details.png" alt="" />
+</a>
 
 #### Step 2: Add **Fulfillment**
 * Click **Add Fulfillment**
-[[images/FastSpring/03_add-fulfillment.png]]
+<a href="assets/images/fastspring-03-add-fulfillment.png" class="imagelink" data-lightbox="fastspring" data-title="" data-alt="">
+    <img src="assets/images/fastspring-03-add-fulfillment.png" alt="" />
+</a>
 
 * Choose **Generate a License** and click **Remote Server Request**
-[[images/FastSpring/04_generate-license.png]]
+<a href="assets/images/fastspring-04-generate-license.png" class="imagelink" data-lightbox="fastspring" data-title="" data-alt="">
+    <img src="assets/images/fastspring-04-generate-license.png" alt="" />
+</a>
 
 * Fill **URL** and click **Multi-Line License**
-[[images/FastSpring/05_license-configuration.png]]
+<a href="assets/images/fastspring-05-license-configuration.png" class="imagelink" data-lightbox="fastspring" data-title="" data-alt="">
+    <img src="assets/images/fastspring-05-license-configuration.png" alt="" />
+</a>
 
 * click **Security** tab and copy Private Key
-[[images/FastSpring/06_private-key-security.png]]
+<a href="assets/images/fastspring-06-private-key-security.png" class="imagelink" data-lightbox="fastspring" data-title="" data-alt="">
+    <img src="assets/images/fastspring-06-private-key-security.png" alt="" />
+</a>
 
 * create Token with **tokenType=APIKEY**, **apiKeyRole=ROLE_APIKEY_ADMIN** and Custom property **fastspringPrivateKey=(copied from previous step)** on NetLicensing side. (see: [NetLicensing API Documentation](token-services#create-token))
 
 * click **Parameter** tab and insert necessary fields. Insert apiKey number from the previous step.
-[[images/FastSpring/07_remote-license-configuration.png]]
+<a href="assets/images/fastspring-07-remote-license-configuration.png" class="imagelink" data-lightbox="fastspring" data-title="" data-alt="">
+    <img src="assets/images/fastspring-07-remote-license-configuration.png" alt="" />
+</a>
 
 #### Step 3: Solution for Subscription renewal
 **Option A:** by requesting existing licensee number
@@ -97,7 +111,9 @@ This renewal mode uses a licenses transfer feature of NetLicensing. It requires 
 
 #### Step 4: Verify order confirmation page
 User should receive an order confirmation page with licensee number as license code:
-[[images/FastSpring/08_order-complete.png]]
+<a href="assets/images/fastspring-08-order-complete.png" class="imagelink" data-lightbox="fastspring" data-title="" data-alt="">
+    <img src="assets/images/fastspring-08-order-complete.png" alt="" />
+</a>
 
 ## Quantity support
 Quantity parameter from the shopping cart is supported in two different modes:
@@ -112,7 +128,9 @@ Execution time of a single request to the Gateway will linear increase with the 
 Since FastSpring does not allow to specify the quantity upper limit, the only possible way to avoid this situation currently is to prevent the quantity change by the user in the shopping cart:
 
 Select "Default Quantity" -> "Locked"
-[[images/FastSpring/09_prevent-quantity-change.png]]
+<a href="assets/images/fastspring-09-prevent-quantity-change.png" class="imagelink" data-lightbox="fastspring" data-title="" data-alt="">
+    <img src="assets/images/fastspring-09-prevent-quantity-change.png" alt="" />
+</a>
 
 ## Error handling
 In case an error happens in the Remote Code Generator, FastSpring will not complete the purchase, and the end user will not receive his order confirmation, but will be redirected to an error page. Besides, FastSpring will send you as a vendor a notification message to the email associated with your FastSpring account. The error page and the email will contain the "Order Reference: #" that is the 'reference' of the failed transaction. You can use this number to retrieve the NetLicensing Gateway log by sending the following request:

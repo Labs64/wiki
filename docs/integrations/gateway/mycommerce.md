@@ -63,23 +63,33 @@ We assume you have successfully signed up to MyCommerce and activated your accou
 
 #### Step 1: Create your products
 * Click **Create Product** and choose **Product**
-[[images/MyCommerce/01_create-product.png]]
+<a href="assets/images/mycommerce-01-create-product.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-01-create-product.png" alt="" />
+</a>
 
 * Configure **Details** of your product
-[[images/MyCommerce/02_edit-product.png]]
+<a href="assets/images/mycommerce-02-edit-product.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-02-edit-product.png" alt="" />
+</a>
 
 * Configure **Description**, **Marketing** (if necessary)
 
 
 #### Step 2: Configure **Delivery**
 * Click **Edit** in Delivery section
-[[images/MyCommerce/03_edit-delivery.png]]
+<a href="assets/images/mycommerce-03-edit-delivery.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-03-edit-delivery.png" alt="" />
+</a>
 
 * Choose **License key** and click **Add**
-[[images/MyCommerce/04_edit-delivery-types.png]]
+<a href="assets/images/mycommerce-04-edit-delivery-types.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-04-edit-delivery-types.png" alt="" />
+</a>
 
 * Select **Key generator via a URL**, enter URL (see above) and choose **UTF-8** in **Key generator version**.
-[[images/MyCommerce/05_edit-delivery-key-generator.png]]
+<a href="assets/images/mycommerce-05-edit-delivery-key-generator.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-05-edit-delivery-key-generator.png" alt="" />
+</a>
 
 
 #### Step 3: Solution for Subscription renewal
@@ -87,10 +97,14 @@ We assume you have successfully signed up to MyCommerce and activated your accou
 
 This mode of subscription renewal requires existing licensee number to be passed to the code generator. This is accomplished by letting the user to enter it in the custom field. To configure custom field:
 * Click **Additional Options**
-[[images/MyCommerce/06_additional-options.png]]
+<a href="assets/images/mycommerce-06-additional-options.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-06-additional-options.png" alt="" />
+</a>
 
 * set **ID** value to **`LICENSEENUMBER`**
-[[images/MyCommerce/07_edit-additional-options.png]]
+<a href="assets/images/mycommerce-07-edit-additional-options.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-07-edit-additional-options.png" alt="" />
+</a>
 Attention: The input field must be configured for all languages, otherwise it will disappear on the checkout page when user switches languages. When additional languages are configured, it becomes visible on the checkout page only after certain time, not immediately.
 
 Note: Since only a single licensee number can be used, **quantityToLicensee** must be set to **false**.
@@ -102,7 +116,9 @@ This renewal mode uses a licenses transfer feature of NetLicensing. It requires 
 
 #### Step 4: Verify order confirmation page
 User should receive an order confirmation page with licensee number as license code:
-[[images/MyCommerce/08_order-complete.png]]
+<a href="assets/images/mycommerce-08-order-complete.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-08-order-complete.png" alt="" />
+</a>
 
 ## Quantity support
 Quantity parameter from the shopping cart is supported in two different modes:
@@ -117,10 +133,14 @@ Execution time of a single request to the Gateway will linear increase with the 
 Since MyCommerce does not allow to specify the quantity upper limit, the only possible way to avoid this situation currently is to prevent the quantity change by the user in the shopping cart:
 
 On the generate links page:
-[[images/MyCommerce/20_generate-link.png]]
+<a href="assets/images/mycommerce-20-generate-link.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-20-generate-link.png" alt="" />
+</a>
 
 Select "Prevent changes to the cart" -> "Prevent changes to quantity and product removal"
-[[images/MyCommerce/21_prevent-quantity-changes.png]]
+<a href="assets/images/mycommerce-21-prevent-quantity-changes.png" class="imagelink" data-lightbox="mycommerce" data-title="" data-alt="">
+    <img src="assets/images/mycommerce-21-prevent-quantity-changes.png" alt="" />
+</a>
 
 ## Error handling
 In case an error happens in the Remote Code Generator, MyCommerce will not complete the purchase, and the end user will not receive his order confirmation, but will be redirected to an error page. Besides, MyCommerce will send you as a vendor a notification message to the email associated with your MyCommerce account. The error page and the email will contain the "Ref #" that is the PURCHASE_ID of the failed transaction. You can use this number to retrieve the NetLicensing Gateway log by sending the following request:
