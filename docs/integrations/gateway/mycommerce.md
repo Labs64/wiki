@@ -22,13 +22,13 @@ permalink: mycommerce
 
 Integration with [MyCommerce](https://www.mycommerce.com){:target="_blank"}{:rel="noopener nofollow"} uses *Remote Code Generator*. NetLicensing Gateway returns licensee number as license code.
 
-**Option 1:** New licensee is created for every MyCommerce purchase. MyCommerce allows to purchase several products at once (in the same shopping cart), in this case all these MyCommerce products must be mapped to a single NetLicensing product, and all will be associated with the same licensee. Accordingly, MyCommerce will return the same license code several times.
+**Option 1:** New licensee is created for every MyCommerce purchase. MyCommerce allows to purchase several products at once (in the same shopping cart), in this case, all these MyCommerce products must be mapped to a single NetLicensing product, and all will be associated with the same licensee. Accordingly, MyCommerce will return the same license code several times.
 
-**Option 2:** MyCommerce product may be configured to add licenses to an existing licensee, instead of creating a new one. To use this functionality, custom field with id 'LICENSEENUMBER' must be configured for this product.
+**Option 2:** MyCommerce product may be configured to add licenses to an existing licensee, instead of creating a new one. To use this functionality, a custom field with id `LICENSEENUMBER` must be configured for this product.
 
 ## Limitations
 
-* Too big quantity may lead to incomplete purchase, see [Quantity support](#quantity-support) below.
+* Too big quantity may lead to an incomplete purchase, see [Quantity support](#quantity-support) below.
 
 ## URL format
 
@@ -50,10 +50,10 @@ https://{user}:{pass}@gateway.netlicensing.io/mycommerce/codegen/{productNumber}
 URL: https://demo:demo@gateway.netlicensing.io/mycommerce/codegen/PFLOAT-DEMO?saveUserData=false&licenseTemplateNumber=EFLOAT01-DEMO&licenseTemplateNumber=EFLOAT02-DEMO
 ```
 
-* demo:demo - NetLicensing credentials
-* PFLOAT-DEMO - NetLicensing productNumber (required)
-* saveUserData=false - don't save user information collected by MyCommerce with new licensee
-* licenseTemplateNumber=EFLOAT01-DEMO&licenseTemplateNumber=EFLOAT02-DEMO - List of NetLicensing license template numbers (at least one required)
+* **demo:demo** - NetLicensing credentials
+* **PFLOAT-DEMO** - NetLicensing productNumber (required)
+* **saveUserData=false** - don't save user information collected by MyCommerce with new licensee
+* **licenseTemplateNumber=EFLOAT01-DEMO&licenseTemplateNumber=EFLOAT02-DEMO** - List of NetLicensing license template numbers (at least one required)
 
 #### Example 2
 
@@ -61,14 +61,14 @@ URL: https://demo:demo@gateway.netlicensing.io/mycommerce/codegen/PFLOAT-DEMO?sa
 URL: https://username:password@gateway.netlicensing.io/mycommerce/codegen/PSUBS-DEMO?saveUserData=true&licenseTemplateNumber=ESUBS01-DEMO
 ```
 
-* username:password - NetLicensing credentials
-* PSUBS-DEMO - Product Number in netlicensing.io (required)
-* saveUserData=true - save user information (such as email, last name, first name, etc.) collected by MyCommerce with new licensee as custom properties
-* licenseTemplateNumber=ESUBS01-DEMO - List of NetLicensing license template numbers (at least one required)
+* **username:password** - NetLicensing credentials
+* **PSUBS-DEMO** - Product Number in netlicensing.io (required)
+* **saveUserData=true** - save user information (such as email, last name, first name, etc.) collected by MyCommerce with the new licensee as custom properties
+* **licenseTemplateNumber=ESUBS01-DEMO** - List of NetLicensing license template numbers (at least one required)
 
 ## Configuring MyCommerce
 
-We assume you have successfully signed up to MyCommerce and activated your account. Also necessary products / product modules / license templates are configured in NetLicensing.
+We assume you have successfully signed up to MyCommerce and activated your account. Also, necessary products / product modules / license templates are configured in NetLicensing.
 
 #### Step 1: Create your products
 
@@ -97,7 +97,7 @@ We assume you have successfully signed up to MyCommerce and activated your accou
     <img src="assets/images/mycommerce-04-edit-delivery-types.png" alt="Edit delivery types" />
 </a>
 
-* Select **Key generator via a URL**, enter URL (see above) and choose **UTF-8** in **Key generator version**.
+* Select **Key generator via a URL**, enter URL (see above examples) and choose **UTF-8** in **Key generator version**.
 <a href="assets/images/mycommerce-05-edit-delivery-key-generator.png" class="imagelink" data-lightbox="mycommerce" data-title="Key generator" data-alt="Key generator">
     <img src="assets/images/mycommerce-05-edit-delivery-key-generator.png" alt="Key generator" />
 </a>
@@ -107,7 +107,7 @@ We assume you have successfully signed up to MyCommerce and activated your accou
 
 **Option A:** by requesting existing licensee number
 
-This mode of subscription renewal requires existing licensee number to be passed to the code generator. This is accomplished by letting the user to enter it in the custom field. To configure custom field:
+This mode of subscription renewal requires an existing licensee number to be passed to the code generator. This is accomplished by letting the user enter it in the custom field. To configure the custom field:
 
 * Click **Additional Options**
 <a href="assets/images/mycommerce-06-additional-options.png" class="imagelink" data-lightbox="mycommerce" data-title="Additional options" data-alt="Additional options">
@@ -119,7 +119,7 @@ This mode of subscription renewal requires existing licensee number to be passed
     <img src="assets/images/mycommerce-07-edit-additional-options.png" alt="Edit additional options" />
 </a>
 
-Attention: The input field must be configured for all languages, otherwise it will disappear on the checkout page when user switches languages. When additional languages are configured, it becomes visible on the checkout page only after certain time, not immediately.
+**Note:** The input field must be configured for all languages, otherwise it will disappear on the checkout page when user switch languages. When additional languages are configured, it becomes visible on the checkout page only after a certain time, not immediately.
 
 Note: Since only a single licensee number can be used, **quantityToLicensee** must be set to **false**.
 
@@ -145,7 +145,7 @@ Quantity parameter from the shopping cart is supported in two different modes:
 
 ### Big quantity issue
 
-Execution time of a single request to the Gateway will linear increase with the quantity. If too big quantity is entered (in a range of hundreds), MyCommerce will timeout on external code generator execution, reporting the purchase as failed. The Gateway will nevertheless finish its job, however all generated licensee numbers will not be returned to the user.
+Execution time of a single request to the Gateway will linearly increase with the quantity. If too big quantity is entered (in a range of hundreds), MyCommerce will timeout on external code generator execution, reporting the purchase as failed. The Gateway will nevertheless finish its job, however, all generated licensee numbers will not be returned to the user.
 
 Since MyCommerce does not allow to specify the quantity upper limit, the only possible way to avoid this situation currently is to prevent the quantity change by the user in the shopping cart:
 
@@ -161,16 +161,16 @@ Select "Prevent changes to the cart" -> "Prevent changes to quantity and product
 
 ## Error handling
 
-In case an error happens in the Remote Code Generator, MyCommerce will not complete the purchase, and the end user will not receive his order confirmation, but will be redirected to an error page. Besides, MyCommerce will send you as a vendor a notification message to the email associated with your MyCommerce account. The error page and the email will contain the "Ref #" that is the PURCHASE_ID of the failed transaction. You can use this number to retrieve the NetLicensing Gateway log by sending the following request:
+In case an error happens in the Remote Code Generator, MyCommerce will not complete the purchase, and the end-user will not receive his order confirmation but will be redirected to an error page. Besides, MyCommerce will send you as a vendor a notification message to the email associated with your MyCommerce account. The error page and the email will contain the "Ref #" that is the PURCHASE_ID of the failed transaction. You can use this number to retrieve the NetLicensing Gateway log by sending the following request:
 
 ```
 https://{user}:{pass}@gateway.netlicensing.io/mycommerce/log/{productNumber}[?PURCHASE_ID={ref_no}]
 ```
 
 * **user:pass** and **productNumber** - same as for codegen endpoint (see above)
-* **ref_no** - Optional reference number / purchase id from MyCommerce error notification. If PURCHASE_ID parameter omitted, entire log for the given productNumber is returned.
+* **ref_no** - Optional reference number / purchase id from MyCommerce error notification. If PURCHASE_ID parameter omitted, the entire log for the given productNumber is returned.
 
-NetLicensing Gateway keeps the logs for 30 days, however logs are only kept in memory and will be lost on gateway maintenance, therefore we encourage you to retrieve the logs as soon as possible upon error detection.
+NetLicensing Gateway keeps the logs for 30 days, however, logs are only kept in memory and will be lost on gateway maintenance, therefore we encourage you to retrieve the logs as soon as possible upon error detection.
 
 ### Non-existing product case
 

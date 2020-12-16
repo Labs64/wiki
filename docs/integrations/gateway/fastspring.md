@@ -22,13 +22,13 @@ permalink: fastspring
 
 Integration with [FastSpring](https://fastspring.com){:target="_blank"}{:rel="noopener nofollow"} uses [Fulfillments](https://docs.fastspring.com/products-bundles-and-subscriptions/fulfillments#Fulfillments-remote){:target="_blank"}{:rel="noopener nofollow"}. NetLicensing Gateway returns licensee number as license code.
 
-**Option 1:** New licensee is created for every FastSpring purchase. FastSpring allows to purchase several products at once (in the same shopping cart), in this case all these FastSpring products must be mapped to a single NetLicensing product, and all will be associated with the same licensee. Accordingly, FastSpring will return the same license code several times.
+**Option 1:** New licensee is created for every FastSpring purchase. FastSpring allows to purchase several products at once (in the same shopping cart), in this case, all these FastSpring products must be mapped to a single NetLicensing product, and all will be associated with the same licensee. Accordingly, FastSpring will return the same license code several times.
 
 **Option 2:** FastSpring product may be configured to add licenses to an existing licensee, instead of creating a new one. To use this functionality, 'licenseeNumber' parameter must be configured for this product.
 
 ## Limitations
 
-* Too big quantity may lead to incomplete purchase, see [Quantity support](#quantity-support) below.
+* Too big quantity may lead to an incomplete purchase, see [Quantity support](#quantity-support) below.
 
 ## URL format
 
@@ -66,7 +66,7 @@ POST data:
 
 ## Configuring FastSpring
 
-We assume you have successfully signed up to FastSpring and activated your account. Also necessary products / product modules / license templates are configured in NetLicensing.
+We assume you have successfully signed up to FastSpring and activated your account. Also, necessary products / product modules / license templates are configured in NetLicensing.
 
 #### Step 1: Create your products
 
@@ -97,14 +97,14 @@ We assume you have successfully signed up to FastSpring and activated your accou
     <img src="assets/images/fastspring-05-license-configuration.png" alt="License configuration" />
 </a>
 
-* click **Security** tab and copy Private Key
+* Click **Security** tab and copy Private Key
 <a href="assets/images/fastspring-06-private-key-security.png" class="imagelink" data-lightbox="fastspring" data-title="Security" data-alt="Security">
     <img src="assets/images/fastspring-06-private-key-security.png" alt="Security" />
 </a>
 
-* create Token with **tokenType=APIKEY**, **apiKeyRole=ROLE_APIKEY_ADMIN** and Custom property **fastspringPrivateKey=(copied from previous step)** on NetLicensing side. (see: [NetLicensing API Documentation](token-services#create-token))
+* Create Token with **tokenType=APIKEY**, **apiKeyRole=ROLE_APIKEY_ADMIN** and Custom property **fastspringPrivateKey=(copied from previous step)** on NetLicensing side. (see: [NetLicensing API Documentation](token-services#create-token))
 
-* click **Parameter** tab and insert necessary fields. Insert apiKey number from the previous step.
+* Click **Parameter** tab and insert necessary fields. Insert apiKey number from the previous step.
 <a href="assets/images/fastspring-07-remote-license-configuration.png" class="imagelink" data-lightbox="fastspring" data-title="Remote license configuration" data-alt="Remote license configuration">
     <img src="assets/images/fastspring-07-remote-license-configuration.png" alt="Remote license configuration" />
 </a>
@@ -113,7 +113,7 @@ We assume you have successfully signed up to FastSpring and activated your accou
 
 **Option A:** by requesting existing licensee number
 
-This mode of subscription renewal requires existing licensee number to be passed to the code generator. This is accomplished by passing licenseeNumber with tags parameter. To tags field see: [FastSpring Tags](https://docs.fastspring.com/integrating-with-fastspring/passing-and-capturing-custom-order-tags-and-product-attributes){:target="_blank"}{:rel="noopener nofollow"}
+This mode of subscription renewal requires an existing licensee number to be passed to the code generator. This is accomplished by passing licenseeNumber with tags parameter. To tags field see: [FastSpring Tags](https://docs.fastspring.com/integrating-with-fastspring/passing-and-capturing-custom-order-tags-and-product-attributes){:target="_blank"}{:rel="noopener nofollow"}
 
 Note: Since only a single licensee number can be used, **quantityToLicensee** must be set to **false**.
 
@@ -138,7 +138,7 @@ Quantity parameter from the shopping cart is supported in two different modes:
 
 ### Big quantity issue
 
-Execution time of a single request to the Gateway will linear increase with the quantity. If too big quantity is entered (in a range of hundreds), FastSpring will timeout on external code generator execution, reporting the purchase as failed. The Gateway will nevertheless finish its job, however all generated licensee numbers will not be returned to the user.
+Execution time of a single request to the Gateway will linearly increase with the quantity. If the too big quantity is entered (in a range of hundreds), FastSpring will timeout on external code generator execution, reporting the purchase as failed. The Gateway will nevertheless finish its job, however, all generated licensee numbers will not be returned to the user.
 
 Since FastSpring does not allow to specify the quantity upper limit, the only possible way to avoid this situation currently is to prevent the quantity change by the user in the shopping cart:
 
@@ -149,16 +149,16 @@ Select "Default Quantity" -> "Locked"
 
 ## Error handling
 
-In case an error happens in the Remote Code Generator, FastSpring will not complete the purchase, and the end user will not receive his order confirmation, but will be redirected to an error page. Besides, FastSpring will send you as a vendor a notification message to the email associated with your FastSpring account. The error page and the email will contain the "Order Reference: #" that is the 'reference' of the failed transaction. You can use this number to retrieve the NetLicensing Gateway log by sending the following request:
+In case an error happens in the Remote Code Generator, FastSpring will not complete the purchase, and the end-user will not receive his order confirmation but will be redirected to an error page. Besides, FastSpring will send you as a vendor a notification message to the email associated with your FastSpring account. The error page and the email will contain the "Order Reference: #" that is the 'reference' of the failed transaction. You can use this number to retrieve the NetLicensing Gateway log by sending the following request:
 
 ```
 https://gateway.netlicensing.io/FastSpring/log/{productNumber}[?reference={reference}]
 ```
 
 * **productNumber** - same as for codegen endpoint (see above)
-* **reference** - Optional reference number from FastSpring error notification. If 'reference' parameter omitted, entire log for the given productNumber is returned.
+* **reference** - Optional reference number from FastSpring error notification. If 'reference' parameter omitted, the entire log for the given productNumber is returned.
 
-NetLicensing Gateway keeps the logs for 30 days, however logs are only kept in memory and will be lost on gateway maintenance, therefore we encourage you to retrieve the logs as soon as possible upon error detection.
+NetLicensing Gateway keeps the logs for 30 days, however, logs are only kept in memory and will be lost on gateway maintenance, therefore we encourage you to retrieve the logs as soon as possible upon error detection.
 
 ### Non-existing product case
 
