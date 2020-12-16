@@ -29,7 +29,7 @@ Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl,
 ### Connectors
 
 - [FastSpring (Contextual Commerce)](https://github.com/Labs64/NetLicensing-Gateway/wiki/FastSpring){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / FastSpring (Contextual Commerce) integration
-- [FastSpring (Classic Commerce)](https://github.com/Labs64/NetLicensing-FastSpring){:target="_blank"}{:rel="noopener nofollow"} (deprecated) - NetLicensing / FastSpring (Classic Commerce) integration
+- [FastSpring (Classic Commerce)](https://github.com/Labs64/NetLicensing-FastSpring){:target="_blank"}{:rel="noopener nofollow"} *(deprecated)* - NetLicensing / FastSpring (Classic Commerce) integration
 - [MyCommerce](https://github.com/Labs64/NetLicensing-Gateway/wiki/MyCommerce){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / MyCommerce integration
 - Recurly - [#3](https://github.com/Labs64/NetLicensing-Gateway/issues/3){:target="_blank"}{:rel="noopener nofollow"}
 - SendOwl - [#5](https://github.com/Labs64/NetLicensing-Gateway/issues/5){:target="_blank"}{:rel="noopener nofollow"}
