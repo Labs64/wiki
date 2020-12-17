@@ -15,7 +15,7 @@
   component: Docu, Integrations
   features:
    - added: NetLicensing Gateway documentation at NetLicensing Wiki
-  image: https://netlicensing.io/wiki/assets/images/gateway-stage.png
+  image: https://netlicensing.io/wiki/assets/images/gateway-external-ecommerce-flow.png
   url: https://netlicensing.io/wiki/gateway
 
 - title: "NetLicensing Gateway @ Docker Hub"
