@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing Gateway Documentation"
+  description: "Implement comprehensive license acquisition and management workflow by connecting any eCommerce platform (as a license acquisition frontend) with NetLicensing Core services. NetLicensing Gateway wiki page describes the process, toolset and available connectors."
+  date: 2020-12-17
+  component: Docu, Integrations
+  features:
+   - added: NetLicensing Gateway documentation at NetLicensing Wiki
+  image: https://netlicensing.io/wiki/assets/images/gateway-stage.png
+  url: https://netlicensing.io/wiki/gateway
+
 - title: "NetLicensing Gateway @ Docker Hub"
   description: "Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl, and many others as a license acquisition frontend. After a successful transaction, all needed licensing configuration (Customers, Licenses and all related data) will be made available in the NetLicensing and can be used for later entitlements validation in NetLicensing."
   date: 2020-12-09
