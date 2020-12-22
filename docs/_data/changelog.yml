@@ -16,8 +16,8 @@
   features:
    - added: Enable deprecated 'Licensee Secret' in the customer view
    - updated: Show 'Licensee Secret' filed only for the products configured to use deprecated option 'Licensee Secret'
-  image: assets/images/netlicensing-licensee-secret.png
-  url: https://netlicensing.io/wiki/gateway
+  image: assets/images/changelog/netlicensing-licensee-secret.png
+  url: https://ui.netlicensing.io/#/customers
 
 - title: "NetLicensing Gateway Documentation"
   description: "Implement comprehensive license acquisition and management workflow by connecting any eCommerce platform (as a license acquisition frontend) with NetLicensing Core services. NetLicensing Gateway wiki page describes the process, toolset and available connectors."
