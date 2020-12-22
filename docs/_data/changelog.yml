@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Licensee Secret ported to the new console"
+  description: "New Node-Locked licensing model replaced the old locking technique used in the earlier NetLicensing versions. Even though this new model offering better configurability and flexibility for the users, the old deprecated option 'Licensee Secret' is still in use. With this update, we enabled the possibility to manage 'Licensee Secret' in the customer profile."
+  date: 2020-12-22
+  component: UI
+  features:
+   - added: Enable deprecated 'Licensee Secret' in the customer view
+   - updated: Show 'Licensee Secret' filed only for the products configured to use deprecated option 'Licensee Secret'
+  image: assets/images/netlicensing-licensee-secret.png
+  url: https://netlicensing.io/wiki/gateway
+
 - title: "NetLicensing Gateway Documentation"
   description: "Implement comprehensive license acquisition and management workflow by connecting any eCommerce platform (as a license acquisition frontend) with NetLicensing Core services. NetLicensing Gateway wiki page describes the process, toolset and available connectors."
   date: 2020-12-17
