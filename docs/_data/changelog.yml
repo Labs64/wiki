@@ -9,6 +9,21 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Ho-Ho-Ho! NetLicensing Christmas edition released!"
+  description: "Offer your products in different regions and local currencies. NetLicensing Shop now supports multiple currencies."
+  date: 2020-12-23
+  component: Shop, UI
+  features:
+   - added: Multi-currency support in NetLicensing Shop and Console
+   - added: Show core release version in the new Management Console
+   - added: Support offline files in the NetLicensing clients
+   - updated: Sign validation response; return fingerprint for the private key
+   - updated: Add signature validation to C# client
+   - fixed: Various performance fixes, to make service more stable
+   - fixed: PayPal IPN notification processing
+  image: assets/images/changelog/netlicensing-multicurrency.png
+  url: https://ui.netlicensing.io/#/settings
+
 - title: "Licensee Secret ported to the new console"
   description: "New Node-Locked licensing model replaced the old locking technique used in the earlier NetLicensing versions. Even though this new model offering better configurability and flexibility for the users, the old deprecated option 'Licensee Secret' is still in use. With this update, we enabled the possibility to manage 'Licensee Secret' in the customer profile."
   date: 2020-12-22
