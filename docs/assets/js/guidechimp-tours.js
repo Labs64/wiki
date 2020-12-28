@@ -1,5 +1,10 @@
 var tourChangelog = [
   {
+    element: 'h3#ho-ho-ho-netlicensing-christmas-edition-released ~ p.change-description',
+    title: 'Multi-currency support in NetLicensing Shops',
+    description: 'Offer your products in different regions and local currencies. NetLicensing Shop now supports multiple currencies.',
+  },
+  {
     element: 'h3#instant-validate-api-access ~ p.change-description',
     title: 'Instant validate API access',
     description: 'Get instant access the essential NetLicensing RESTful API methods and see how to validate customer directly in the Management Console.',
