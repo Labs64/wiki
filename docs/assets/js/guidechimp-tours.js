@@ -41,6 +41,8 @@ var tourChangelog = [
   },
 ];
 
+GuideChimp.extend(guideChimpPluginLicensing, { id: "INLIC" });
+
 if (typeof guideChimpPluginGoogleAnalytics !== "undefined") {
   GuideChimp.extend(guideChimpPluginGoogleAnalytics);
 }
