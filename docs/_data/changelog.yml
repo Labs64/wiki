@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Connect Stripe account"
+  description: "We are moving forward to shut down old NetLicensing Management Console and ported one of the last features - 'Connect to Stripe'. Now you can enable and disable Stripe and Stripe (Test) payment services in your vendor account, as well as configure 'Stripe Connect' to be offered as a payment method to your customers in the NetLicensing Shop."
+  date: 2021-01-14
+  component: Shop, Integrations
+  features:
+   - added: ON/OFF 'Stripe' and 'Stripe (Test)' payment services
+   - added: Enable 'Stripe Connect'
+  image: assets/images/changelog/netlicensing-stripe.png
+  url: https://ui.netlicensing.io/#/settings
+
 - title: "NetLicensing Shop hotfix release"
   description: "Shop session initialisation issue (introduced with the last NetLicensing release 2.8) fixed now."
   date: 2020-12-28
