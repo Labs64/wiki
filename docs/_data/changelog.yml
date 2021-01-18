@@ -9,6 +9,18 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Stability and usability improvements"
+  description: "Last week we added some useful improvements to the NetLicensing service and console."
+  date: 2021-01-18
+  component: UI
+  features:
+   - updated: Minor fixes on Payment Methods configuration page
+   - added: Highlight currently active view in the main menu
+   - updated: Update [GuideChimp](https://www.labs64.com/guidechimp/) version (v3.x) for the guided tours
+   - fixed: Filtering on a list display (customers) conflicts with pagination
+   - updated: Improve affiliate view and description
+  url: https://ui.netlicensing.io
+
 - title: "Connect Stripe account"
   description: "We are moving forward to shut down old NetLicensing Management Console and ported one of the last features - 'Connect to Stripe'. Now you can enable and disable 'Stripe' and 'Stripe (Testing)' payment services in your vendor account, as well as configure 'Stripe Connect' to be offered as a payment method to your customers in the NetLicensing Shop."
   date: 2021-01-14
