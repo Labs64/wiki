@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Old NetLicensing Console Shutdown"
+  description: "Last year we introduced brand new and improved NetLicensing Management Console. The feature set of this new console includes all known features from the old console, as well as improved customer-centric license management.<br>Today we announce the intention to shut down the old Management Console by the end of Q1/2021.<br>In case you bookmarked the old console URL, we advise you to replace this using new one: ui.netlicensing.io<br>Should you have any questions, please contact us at info@netlicensing.io"
+  date: 2021-01-31
+  component: UI
+  features:
+   - updated: Shutdown old NetLicensing Management Console announcement
+  image: assets/images/changelog/netlicensing-console-old-new.gif
+
 - title: "NetLicensing console availability"
   description: "The annoying issue, which prevented the start of the NetLicensing console dashboard is fixed now."
   date: 2021-01-19
