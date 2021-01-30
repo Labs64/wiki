@@ -16,6 +16,7 @@
   features:
    - updated: Shutdown old NetLicensing Management Console announcement
   image: assets/images/changelog/netlicensing-console-old-new.gif
+  url: https://ui.netlicensing.io
 
 - title: "NetLicensing console availability"
   description: "The annoying issue, which prevented the start of the NetLicensing console dashboard is fixed now."
