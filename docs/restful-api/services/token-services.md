@@ -233,7 +233,9 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 - <i>ACTION</i> - Action token (e.g. Customer Portal)<br/>
 </p>
 <p>
-licenseeNumber (string) - Only for tokenType=SHOP; identifies licensee that will be assigned to the shop token.</p>
+licenseeNumber (string) -
+<br><i>tokenType=SHOP</i> - identifies licensee that will be assigned to the shop token
+<br><i>tokenType=APIKEY</i> - specifies the scope of validity of the APIKey; the only licensee with the given number can be validated using this APIKey</p>
 <p>successURL (URI) - Take customers to this URL when they finish checkout.</p>
 <p>successURLTitle (string) - Shop link title for successful checkout process.</p>
 <p>cancelURL (URI) - Take customers to this URL when they cancel their checkout.</p>
