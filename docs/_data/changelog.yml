@@ -11,7 +11,7 @@
 
 - title: "Specify API Key scope"
   description: "Now you can specify API Key scope by providing specific customer number, so the API Key 'validation' and 'transfer' operations can be executed for this specified customer only."
-  date: 2021-02-10
+  date: 2021-02-12
   component: API, UI
   features:
    - added: Extend [TokenServices.create()](https://netlicensing.io/wiki/token-services#create-token) endpoint to allow 'licenseeNumber' attribute for APIKEY tokens
