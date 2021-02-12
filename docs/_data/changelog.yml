@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Specify API Key scope"
+  description: "Now you can specify API Key scope by providing specific customer number, so the API Key 'validation' and 'transfer' operations can be executed for this specified customer only."
+  date: 2021-02-10
+  component: API, UI
+  features:
+   - added: Extend [TokenServices.create()](https://netlicensing.io/wiki/token-services#create-token) endpoint to allow 'licenseeNumber' attribute for APIKEY tokens
+   - added: Allow optional customer definition on the API Key create form.
+  image: assets/images/changelog/netlicensing-customer-apikey.png
+  url: https://ui.netlicensing.io/#/settings
+
 - title: "Old NetLicensing Console Shutdown"
   description: "Last year we introduced brand new and improved NetLicensing Management Console. The feature set of this new console includes all known features from the old console, as well as improved customer-centric license management.<br>Today we announce the intention to shut down the old Management Console by the end of Q1/2021.<br>In case you bookmarked the old console URL, we advise you to replace this using new one: ui.netlicensing.io<br>Should you have any questions, please contact us at info@netlicensing.io"
   date: 2021-01-31
