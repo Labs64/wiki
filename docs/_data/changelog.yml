@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Maintenance Release"
+  description: "Now you can specify the start date for the Try & Buy licences to define the start of the trial period. We also fixed annoying defect reported by some of the customers, which reset the start date for the created licenses."
+  date: 2021-03-05
+  component: UI
+  features:
+   - updated: Add 'startDate' field to [Try-and-Buy](https://netlicensing.io/wiki/try-n-buy) evaluation license
+   - fixed: Customer's license wrong 'startDate' shown
+   - fixed: Onboarding checklist is always ON
+   - fixed: Customers count shown as 0
+  url: https://netlicensing.io
+  
 - title: "PayPal Express Checkout fix"
   description: "We fixed the PayPal Express Checkout issue in the NetLicensing Shop."
   date: 2021-02-15
