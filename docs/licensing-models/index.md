@@ -280,6 +280,20 @@ NetLicensing.
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="even">
+<td>Donationware</td>
+<td><ul>
+<li>Pay what you want (PWYW)</li>
+<li>Value-for-Value</li>
+<li>Careware</li>
+<li>Charityware</li>
+<li>Helpware</li>
+<li>Goodware</li>
+</ul></td>
+<td>This licensing model supports tracking of donations to the licensor, or to an external (usually charitable) organization. Such tracking information may be useful to display live statistics, e.g. to motivate donators.</td>
+<td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
+<p><em>PLANNED</em></p></td>
+</tr>
+<tr class="odd">
 <td>Custom Licenses</td>
 <td> </td>
 <td><p>With NetLicensing, you can create complex licensing models that fit your business needs.</p></td>
