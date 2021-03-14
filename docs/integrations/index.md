@@ -16,6 +16,7 @@ NetLicensing can be easily integrated with common *eCommerce, Billing and Subscr
 - [NetLicensing-Gateway](gateway) - NetLicensing / eCommerce Gateway
 - [PayPal](paypal) - NetLicensing / PayPal Integration
 - [Stripe](stripe) - NetLicensing / Stripe Integration
+- [NetLicensing-Auth0](https://github.com/Labs64/NetLicensing-Auth0){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / Auth0 Integration
 - [NetLicensing-Zapier](https://zapier.com/apps/netlicensing/integrations){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / Zapier Integration
 - [NetLicensing-PrestaShop](https://github.com/Labs64/NetLicensing-PrestaShop){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing Connector for PrestaShop
 - WordPress - [PluginPass: WordPress PRO Plugin/Theme Licensing](https://wordpress.org/plugins/pluginpass-pro-plugintheme-licensing/){:target="_blank"}{:rel="noopener nofollow"}
