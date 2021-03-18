@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Stripe connection details renewed"
+  description: "We renewed connection details and reactivated Stripe integration. There are no additional steps from vendor side required and vendors will be able to offer licenses acquisition using Stripe payment processing."
+  date: 2021-03-15
+  component: UI, Integrations
+  features:
+   - updated: Renew [Stripe integration](https://netlicensing.io/wiki/stripe) details
+   - fixed: [Subscription](https://netlicensing.io/wiki/subscription) - invalid 'startDate' handling
+  url: https://netlicensing.io/wiki/stripe
+
 - title: "Maintenance Release"
   description: "Now you can specify the start date for the Try & Buy licences to define the start of the trial period. We also fixed annoying defect reported by some of the customers, which reset the start date for the created licenses."
   date: 2021-03-05
