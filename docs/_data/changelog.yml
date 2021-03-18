@@ -15,7 +15,7 @@
   component: UI, Integrations
   features:
    - updated: Renew [Stripe integration](https://netlicensing.io/wiki/stripe) details
-   - fixed: [Subscription](https://netlicensing.io/wiki/subscription) - invalid 'startDate' handling
+   - fixed: "[Subscription](https://netlicensing.io/wiki/subscription) licensing model invalid 'startDate' handling"
   url: https://netlicensing.io/wiki/stripe
 
 - title: "Maintenance Release"
