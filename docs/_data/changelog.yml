@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing / Auth0 Integration"
+  description: Enable <a href="https://netlicensing.io/blog/2020/09/24/authenticate-authorize-validate-framework/">AAV Framework</a> for your products by enriching Auth0 authentication flow and user profile with the NetLicensing validation data.
+  date: 2021-03-22
+  component: Integrations
+  features:
+   - added: Enable Auth0 Integration
+  image: assets/images/changelog/netlicensing-auth0-rule.png
+  url: https://github.com/Labs64/NetLicensing-Auth0
+
 - title: "Stripe connection details renewed"
   description: "We renewed connection details and reactivated Stripe integration. There are no additional steps from vendor side required and vendors will be able to offer licenses acquisition using Stripe payment processing."
   date: 2021-03-15
