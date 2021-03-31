@@ -229,7 +229,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 - <i>SHOP</i> - shop token is used to redirect customer to the NetLicensing Shop ('licenseeNumber' is mandatory)<br />
 - <i>APIKEY</i> - APIKey token<br/>
 </p>
-<p>token (enum) - Token type to be generated<br />
+<p>type (enum) - Token type to be generated<br />
 - <i>ACTION</i> - Action token (e.g. Customer Portal)<br/>
 </p>
 <p>
