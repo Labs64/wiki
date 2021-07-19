@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Product discounts fix"
+  description: "Product discounts update and deletion has been fixed with this UI release."
+  date: 2021-07-16
+  component: UI
+  features:
+   - fixed: Not able to delete the latest discount in the product's discounts list [#38](https://github.com/Labs64/NetLicensing-Community/issues/38)
+  image: https://user-images.githubusercontent.com/37653298/125110750-e5565780-e0dc-11eb-8c63-fa817e149b00.gif
+  url: https://github.com/Labs64/NetLicensing-Community/issues/38
+
 - title: "NetLicensing usability improvements"
   description: "We added some useful improvements to the NetLicensing service, console and documentation"
   date: 2021-05-05
