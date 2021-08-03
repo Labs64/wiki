@@ -48,7 +48,7 @@ If you do not have one already, signup <a href="https://ui.netlicensing.io/#/reg
 Structure of the RESTful URIs
 -----------------------------
 
-NetLicensing API (RESTful) provide access to resources (data entities) via URI paths. To use a RESTful API, your application will make an HTTP(S) request and parse the response. The NetLicensing API (RESTful) uses <a href="https://en.wikipedia.org/wiki/JSON" class="external-link">JSON</a> or <a href="https://en.wikipedia.org/wiki/XML" class="external-link">XML</a> as its response format
+NetLicensing API (RESTful) provide access to resources (data entities) via URI paths. To use a RESTful API, your application will make an HTTPS request and parse the response. The NetLicensing API (RESTful) uses <a href="https://en.wikipedia.org/wiki/JSON" class="external-link">JSON</a> or <a href="https://en.wikipedia.org/wiki/XML" class="external-link">XML</a> as its response format
 
     Use following request headers:
     Accept: application/json       # for JSON formatted responses
@@ -97,7 +97,7 @@ The structure of the response is documented in XML Schema Definition that can be
 Data Types
 ----------
 
-All values are transmitted over HTTP in text form. The following table summarizes the text representation of non-trivial data types:
+All values are transmitted over HTTPS in text form. The following table summarizes the text representation of non-trivial data types:
 
 <table>
 <colgroup>
