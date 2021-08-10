@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing Console maintenance and performance improvements"
+  description: "Growing NetLicensing's customer base adding requirements to the system availability and performance. To keep the system performance on the highest level we implemented additional measures and disabled temporary dashboard charts and transactions lists."
+  date: 2021-08-05
+  component: UI
+  features:
+   - updated: disable temporary dashboard charts
+   - updated: disable temporary transactions lists
+  url: https://ui.netlicensing.io
+
 - title: "Product discounts fix"
   description: "Product discounts update and deletion has been fixed with this UI release."
   date: 2021-07-16
