@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Add new product using demo data"
+  description: "It is now even easier to create a new product using demo data. This will set up a predefined configuration for product and product modules for the specific licensing model."
+  date: 2021-11-08
+  component: UI
+  features:
+   - added: Add new product using demo data
+  image: assets/images/changelog/create-demo-product.gif
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing Console maintenance and performance improvements"
   description: "Growing NetLicensing's customer base adding requirements to the system availability and performance. To keep the system performance on the highest level we implemented additional measures and disabled temporary dashboard charts and transactions lists."
   date: 2021-08-05
