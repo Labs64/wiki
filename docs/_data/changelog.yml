@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+
+- title: "Customer creation issue resolved"
+  description: "The issue has been resolved and customer creation is now possible via NetLicensing management console."
+  date: 2021-11-25
+  component: UI
+  features:
+   - fixed: Fix customer create form
+  url: https://ui.netlicensing.io/#/customers/create
+
 - title: "Registration issue resolved"
   description: "The issue has been resolved and new vendor registration is now possible again."
   date: 2021-11-24
