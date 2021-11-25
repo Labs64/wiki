@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Registration issue resolved"
+  description: "The issue has been resolved and new vendor registration is now possible again."
+  date: 2021-11-24
+  component: UI, API
+  features:
+   - fixed: Fix new vendor registration
+  url: https://ui.netlicensing.io/#/register
+
 - title: "Add new product using demo data"
   description: "It is now even easier to create a new product using demo data. This will set up a predefined configuration for product and product modules for the specific licensing model."
   date: 2021-11-08
