@@ -24,6 +24,7 @@
   component: UI, API
   features:
    - fixed: Fix new vendor registration
+   - fixed: Fix password strength meter
   url: https://ui.netlicensing.io/#/register
 
 - title: "Add new product using demo data"
