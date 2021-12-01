@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Announcement: RESTful API - GET validate method deprecation"
+  description: "Please Note: HTTP method GET /validate is deprecated and will be out of maintenance by Q4/2022.<br>In case you use RESTful API directly in your code, ensure to replace GET with POST for validation operation. Until the GET method will be deprecated, you’ll get the warning in the validation response."
+  date: 2021-12-01
+  component: API, Docu
+  features:
+   - updated: Announce GET validate method deprecation
+   - updated: Update LicenseeServices.validate documentation
+  url: https://netlicensing.io/wiki/licensee-services#validate-licensee
 
 - title: "Customer creation issue resolved"
   description: "The issue has been resolved and customer creation is now possible via NetLicensing management console."
