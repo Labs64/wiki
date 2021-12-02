@@ -9,6 +9,18 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing maintenance and performance improvements"
+  description: "We addressed and fixed some minor but annoying defects and made our licensing services more stable and reliable."
+  date: 2021-12-03
+  component: API, Shop
+  features:
+   - fixed: [Try & Buy](https://netlicensing.io/wiki/try-n-buy) licensing model - revisit trial expiration time logic
+   - fixed: Subscription licensing model returned NaN in the expiration response
+   - updated: Minor shop fixes and improvements
+   - updated: Verify up-2-date VAT for all EU countries in NetLicensing Shop
+   - updated: Database performance tuning
+  url: https://ui.netlicensing.io
+
 - title: "Announcement: RESTful API - GET validate method deprecation"
   description: "Please Note: HTTP method GET /validate is deprecated and will be out of maintenance by Q4/2022.<br>In case you use RESTful API directly in your code, ensure to replace GET with POST for validation operation. Until the GET method will be deprecated, you’ll get the warning in the validation response."
   date: 2021-12-01
