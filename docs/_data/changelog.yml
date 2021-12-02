@@ -15,8 +15,8 @@
   component: API, Shop
   features:
    - fixed: "[Try & Buy](https://netlicensing.io/wiki/try-n-buy) licensing model - revisit trial expiration time logic"
-   - fixed: Subscription licensing model returned NaN in the expiration response
-   - updated: Minor shop fixes and improvements
+   - fixed: [Subscription](https://netlicensing.io/wiki/subscription) licensing model returned NaN in the expiration response
+   - updated: Minor NetLicensing Shop fixes and improvements
    - updated: Verify up-2-date VAT for all EU countries in NetLicensing Shop
    - updated: Database performance tuning
   url: https://ui.netlicensing.io
