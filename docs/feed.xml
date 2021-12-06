@@ -29,7 +29,7 @@ layout: vendor/compress
         {% else %}
         <link>{{ site.baseurl | prepend: site.url }}</link>
         {% endif %}
-        <guid isPermaLink="false">{{ change.title | prepend: '-' | prepend: change.date | slugify }}</guid>
+        <guid isPermaLink="true">{{ change.title | slugify | prepend: site.baseurl | prepend: site.url }}</guid>
         {% if change.component %}
         <category>{{ change.component | xml_escape }}</category>
         {% endif %}
