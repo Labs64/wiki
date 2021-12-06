@@ -34,7 +34,7 @@
    - updated: Database performance tuning
   url: https://ui.netlicensing.io
 
-- title: "Announcement: RESTful API - GET validate method deprecation"
+- title: "Announcement: RESTful API GET validate method deprecation"
   description: "Please Note: HTTP method GET /validate is deprecated and will be out of maintenance by Q4/2022.<br>In case you use RESTful API directly in your code, ensure to replace GET with POST for validation operation. Until the GET method will be deprecated, you’ll get the warning in the validation response."
   date: 2021-12-01
   component: API, Docu
@@ -518,7 +518,7 @@
   image: assets/images/changelog/netlicensing-onboarding.gif
   url: https://ui.netlicensing.io
 
-- title: "NetLicensing - Zapier integration update"
+- title: "NetLicensing Zapier integration update"
   description: "Automate your workflow and connect NetLicensing vendor account with thousands of other apps with a few clicks only."
   date: 2020-06-16
   component: Integrations
