@@ -9,6 +9,21 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Management Console Improvements"
+  description: "With this release, we added some handy UI improvements, such as revisited detail view layout and “Warning Level” indicator."
+  date: 2021-12-13
+  component: UI
+  features:
+   - added: persist customers filter status
+   - added: stick upper banner panel on scrolling
+   - updated: move 'Warning Level' content to 'General' tab
+   - added: force update customer's 'Warning Level' in the detail view
+   - updated: hide 'warningLevel' in tags
+   - updated: use shaded rows in all lists to ease visual navigation
+   - updated: move Update/Cancel buttons to upper banner
+   - fixed: label translations on Customers Warning chart
+  url: https://ui.netlicensing.io
+
 - title: "(Experimental) Customer Warning Level"
   description: "Get an instant view of customers' status using the new experimental feature 'Customer Warning Level'. Customer status is represented using intuitive traffic light shown on the customers' list and detail view.<br>Please let us know your experience with this new feature."
   date: 2021-12-06
