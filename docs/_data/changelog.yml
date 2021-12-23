@@ -9,6 +9,19 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "New Customer Portal released"
+  description: "Ho-Ho-Ho!! The new Customer Portal just arrived!<br>Easily create, customize and embed a new white-label Customer Portal, and offer your customers a comprehensive view of all their licenses."
+  date: 2021-12-22
+  component: UI
+  features:
+   - added: new token action 'licenseeLogin' to create Customer Portal token and URL
+   - updated: update Token.create() documentation at https://netlicensing.io/wiki/token-services#create-token
+   - added: enable Customer Portal on my.netlicensing.io subdomain
+   - added: new section 'Customer Portal' on the 'API Examples' tab for the entitled vendor profiles
+   - added: add customer portal direct link to the licenseeLogin token
+  image: assets/images/changelog/netlicensing-customer-portal.gif
+  url: https://ui.netlicensing.io/#/customers
+
 - title: "Management Console Improvements"
   description: "With this release, we added some handy UI improvements, such as revisited detail view layout and “Warning Level” indicator."
   date: 2021-12-13
