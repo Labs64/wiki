@@ -15,7 +15,7 @@
   component: UI
   features:
    - added: new token action 'licenseeLogin' to create Customer Portal token and URL
-   - updated: update Token.create() documentation at https://netlicensing.io/wiki/token-services#create-token
+   - updated: update [TokenServices.create()](https://netlicensing.io/wiki/token-services#create-token) documentation (introduce 'licenseeLogin' action key)
    - added: enable Customer Portal on my.netlicensing.io subdomain
    - added: new section 'Customer Portal' on the 'API Examples' tab for the entitled vendor profiles
    - added: add customer portal direct link to the licenseeLogin token
