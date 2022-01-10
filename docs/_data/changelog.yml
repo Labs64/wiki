@@ -9,6 +9,19 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Customer's Aliases"
+  description: "Specify alternative unique aliases for your customers or provide a list of the aliases, such as course participants, students, team members, etc. and use these for the validation calls."
+  date: 2022-01-10
+  component: API, UI, Shop
+  features:
+   - added: Make the eMail field mandatory if 'Collect Customer Info' option is enabled
+   - added: Add customer's eMail ID as alias upon shop checkout process
+   - updated: Extend [LicenseeService API](https://netlicensing.io/wiki/licensee-services) to allow working with the aliases (e.g. create, update, list)
+   - added: Extend LicenseeService API to allow customer validation using specified aliases
+   - added: Add new tab 'Aliases' to the customer view at NetLicensing Management Console
+  image: assets/images/changelog/netlicensing-aliases.png
+  url: https://ui.netlicensing.io/#/customers
+
 - title: "Mitigate Apache Log4j remote code execution 'Log4Shell' vulnerability"
   description: "To mitigate 'Log4Shell' vulnerability, NetLicensingClient for Java was updated with the latest Apache Log4j v2.17.0. We strongly recommend updating to this latest version."
   date: 2021-12-23
