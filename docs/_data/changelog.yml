@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Revisit Traffic Light Calculation Rules"
+  description: "Get an instant view of customers' status using the new experimental feature 'Customer Warning Level'. Customer status is represented using intuitive traffic light shown on the customers' list and detail view."
+  date: 2022-01-13
+  component: UI, API
+  features:
+   - fixed: revisit traffic light calculation rules for Node-Locked and Floating models
+   - updated: add Log4j vulnerability fix to the on-premises version
+  url: https://ui.netlicensing.io/#/customers
+
 - title: "Customer Aliases"
   description: "Specify alternative unique aliases for your customers or provide a list of the aliases, such as course participants, students, team members, etc. and use these for the validation calls."
   date: 2022-01-10
