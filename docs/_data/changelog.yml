@@ -11,7 +11,7 @@
 
 
 - title: "System Stability Update"
-  description: "Our new AWS Graviton infrastructure was tuned to improve NetLicensing availability and stability."
+  description: "Our new AWS Graviton infrastructure was tuned to improve NetLicensing availability and stability. All our systems are now fully functional."
   date: 2022-01-18
   component: UI, API
   features:
