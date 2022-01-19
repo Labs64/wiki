@@ -9,13 +9,12 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
-
 - title: "System Stability Update"
   description: "Our new AWS Graviton infrastructure was tuned to improve NetLicensing availability and stability. All our systems are now fully functional."
   date: 2022-01-18
-  component: UI, API
+  component: API
   features:
-   - fixed: fixed: verify AWS Graviton settings
+   - fixed: verify AWS Graviton settings
    - updated: temporarily disable management console dashboard
   url: https://ui.netlicensing.io
 
