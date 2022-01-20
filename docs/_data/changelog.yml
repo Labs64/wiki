@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Customer Portal Logo Path Fix"
+  description: "A minor Customer Portal issue with an empty vendor company logo was fixed."
+  date: 2022-01-20
+  component: UI
+  features:
+   - fixed: empty or null logoPath crashes Customer Portal
+  url: https://ui.netlicensing.io
+
 - title: "System Stability Update"
   description: "Our new AWS Graviton infrastructure was tuned to improve NetLicensing availability and stability. All our systems are now fully functional."
   date: 2022-01-18
