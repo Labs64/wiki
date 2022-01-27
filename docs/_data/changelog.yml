@@ -9,6 +9,19 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.8.8"
+  description: "With this release, NetLicensing on-premises setup was revisited and improved. We also made some minor database fixes to improve stability."
+  date: 2022-01-27
+  component: API, UI
+  features:
+   - updated: database performance improvements
+   - added: add Java memory options for on-prem installation
+   - added: rotate logs using logrotate for on-prem installation
+   - fixed: update Docker images to use platform linux/amd64
+   - fixed: dashboard charts throw an error upon failed dataset load from the backend
+   - fixed: improve Start Date validation rule
+  url: https://netlicensing.io/getting-started/
+
 - title: "Customer Portal Logo Path Fix"
   description: "A minor Customer Portal issue with an empty vendor company logo was fixed."
   date: 2022-01-20
