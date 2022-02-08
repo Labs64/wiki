@@ -11,6 +11,8 @@ url: "https://netlicensing.io"
 # subpath of the site, e.g. /blog/
 baseurl: "/wiki/"
 
+repository: Labs64/wiki
+
 # Enable or disable the site search
 search_enabled: true
 
