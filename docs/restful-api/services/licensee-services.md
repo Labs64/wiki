@@ -444,7 +444,7 @@ Validates active licenses of the licensee.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p><em>licenseeNumber (string)</em> - licensee number with a maximum length of 1000 characters<br />
+<td><p><em>licenseeNumber (string)</em> - licensee number or <a href="aliases">alias</a> with a maximum length of 1000 characters<br />
 <em>productNumber (string) (optional)</em> - product number, must be provided when "licensee auto-create" is enabled (see also <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/domain/entity/Product.html" class="external-link">Product</a> JavaDoc). Identifies the product to which new licensee should be added.<br />
 <em>licenseeName (string) (optional)</em> - human-readable name for the auto-created licensee (will be set as custom Licensee property)<br />
 <em><del>licenseeSecret</del> (deprecated) (string) (optional)</em> - when provided and licensee secret enabled, will enable the licensee secret logic as described in <a href="licensee-secret">Licensee Secret (deprecated)</a></p>
