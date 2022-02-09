@@ -2,7 +2,7 @@
 layout: default
 title: Customer Portal
 nav_order: 80
-description: "Customer Portal..."
+description: "Easily create, customize and embed a white-label Customer Portal, and offer your customers a comprehensive view of all their licenses."
 permalink: customer-portal
 ---
 
