@@ -58,19 +58,41 @@ Content-Type: application/x-www-form-urlencoded
 ```
 {: .ml-5 }
 
-The value of the attribute `customerPortalURL` in the successful token create response need to be used to forward customer to hosted Customer Portal page.
+Use the `customerPortalURL` value from the above response to redirect the customer to the Customer Portal.
 
 ### Customization & Branding Options
 
 Customer Portal is a white-label solution and can be adjusted accordingly to your brand identity.
 
-**Adjustable elements:**
+**Adjustable elements**
+
+The following elements can be adjusted via the NetLicensing UI:
 
 - **Logo** - Vendor logo can be loaded at "Settings / Shop Customization". This logo will be shown in the Customer Portal header and open vendor card on click.
 - **Accent colour** - Accent colour can be specified at "Settings / Shop Customization" as "Primary Color".
 - **Vendor card** - Vendor card is opened on logo click and contains vendor data as it s filled at "Profile"
 - **Legal information** - The valid URLs for the "Terms of Service", "Privacy Policy" and "Imprint" hyperlinks in the footer are being taken from "Profile / Legal Information (tab)".
 - **Product information** - Product and product module details (such as Name, Description and Logo) can be provided for each configured product in the system.
+
+<div>
+    <a href="assets/images/customer-portal-branding-01-shop.png" class="imagelink" data-lightbox="customer-portal" data-title="Customer Portal branding - Logo & Accent colour" data-alt="Customer Portal branding - Logo & Accent colour">
+      <img style="width: 250px;" src="assets/images/customer-portal-branding-01-shop.png" />
+    </a>
+
+    <a href="assets/images/customer-portal-branding-02-profile.png" class="imagelink" data-lightbox="customer-portal" data-title="Customer Portal branding - Profile" data-alt="Customer Portal branding - Profile">
+      <img style="width: 250px;" src="assets/images/customer-portal-branding-02-profile.png" />
+    </a>
+
+    <a href="assets/images/customer-portal-branding-03-legal.png" class="imagelink" data-lightbox="customer-portal" data-title="Customer Portal branding - Legal information" data-alt="Customer Portal branding - Legal information">
+      <img style="width: 250px;" src="assets/images/customer-portal-branding-03-legal.png" />
+    </a>
+
+    <a href="assets/images/customer-portal-branding-04-address.png" class="imagelink" data-lightbox="customer-portal" data-title="Customer Portal branding - Address" data-alt="Customer Portal branding - Address">
+      <img style="width: 250px;" src="assets/images/customer-portal-branding-04-address.png" />
+    </a>
+</div>
+
+**Layout configuration**
 
 Certain layout elements of the Customer Portal can be enabled or disabled by adding additional query parameters to the `customerPortalURL`:
 
