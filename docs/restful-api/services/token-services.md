@@ -226,21 +226,23 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <td>
 <p>tokenType (enum) - Token type to be generated<br />
 - <i>DEFAULT</i> - default one-time token (will be expired after first request)<br />
-- <i>SHOP</i> - shop token is used to redirect customer to the <a href="netlicensing-shop">NetLicensing Shop</a> (`licenseeNumber` is mandatory)<br />
-- <i>APIKEY</i> - APIKey token<br/>
-- <i>ACTION</i> - Action token (e.g. Customer Portal)<br/>
+- <i>SHOP</i> - shop token is used to redirect customer to the NetLicensing Shop ('licenseeNumber' is mandatory)<br />
+- <i>APIKEY</i> - APIKey token<br />
+- <i>ACTION</i> - Action token (e.g. access token for the <a href="customer-portal">Customer Portal</a>)
 </p>
-<p>
-licenseeNumber (string) -
-<br>- <i>tokenType=SHOP</i> - identifies licensee that will be assigned to the shop token
-<br>- <i>tokenType=APIKEY</i> - specifies the scope of validity of the APIKey; the only licensee with the given number can be validated using this APIKey</p>
+<p>licenseeNumber (string) - unique customer number<br />
+- <i>tokenType=SHOP</i> - identifies licensee that will be assigned to the shop token<br />
+- <i>tokenType=APIKEY</i> - specifies the scope of validity of the APIKey; the only licensee with the given number can be validated using this APIKey<br />
+- <i>tokenType=ACTION</i> - identifies licensee for whom action token will be created
+</p>
+<p>action (enum) - Action to be executed; only for tokenType=ACTION<br />
+- <i>licenseeLogin</i> - action to open <a href="customer-portal">Customer Portal</a>
+</p>
+<p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p>
 <p>successURL (URI) - Take customers to this URL when they finish checkout.</p>
 <p>successURLTitle (string) - Shop link title for successful checkout process.</p>
 <p>cancelURL (URI) - Take customers to this URL when they cancel their checkout.</p>
 <p>cancelURLTitle (string) - Shop link title for cancel checkout process.</p>
-<p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p>
-<p>action (enum) - 'licenseeLogin'. Only for token=ACTION.</p>
-<p>licenseeNumber (string) - customer number. Only for token=ACTION.</p>
 </td>
 </tr>
 <tr class="odd">
