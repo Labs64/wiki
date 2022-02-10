@@ -227,15 +227,16 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>tokenType (enum) - Token type to be generated<br />
 - <i>DEFAULT</i> - default one-time token (will be expired after first request)<br />
 - <i>SHOP</i> - shop token is used to redirect customer to the NetLicensing Shop ('licenseeNumber' is mandatory)<br />
-- <i>APIKEY</i> - APIKey token<br/>
-- <i>ACTION</i> - Action token (e.g. access token for the <a href="customer-portal">Customer Portal</a>)<br/>
+- <i>APIKEY</i> - APIKey token<br />
+- <i>ACTION</i> - Action token (e.g. access token for the <a href="customer-portal">Customer Portal</a>)
 </p>
 <p>licenseeNumber (string) - unique customer number<br />
-<br>- <i>tokenType=SHOP</i> - identifies licensee that will be assigned to the shop token
-<br>- <i>tokenType=APIKEY</i> - specifies the scope of validity of the APIKey; the only licensee with the given number can be validated using this APIKey</<br>- <i>tokenType=ACTION</i> - identifies licensee for whom action token will be created
+- <i>tokenType=SHOP</i> - identifies licensee that will be assigned to the shop token<br />
+- <i>tokenType=APIKEY</i> - specifies the scope of validity of the APIKey; the only licensee with the given number can be validated using this APIKey<br />
+- <i>tokenType=ACTION</i> - identifies licensee for whom action token will be created
 </p>
 <p>action (enum) - Action to be executed; only for tokenType=ACTION<br />
-<br>- <i>licenseeLogin</i> - action to open <a href="customer-portal">Customer Portal</a>
+- <i>licenseeLogin</i> - action to open <a href="customer-portal">Customer Portal</a>
 </p>
 <p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p>
 <p>successURL (URI) - Take customers to this URL when they finish checkout.</p>
