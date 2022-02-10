@@ -19,7 +19,7 @@ How do I deliver acquired licenses after successful shop transaction to my custo
 NetLicensing uses a *customer-centric* license management approach. In comparison to the *license-centric* (legacy) systems, all customer's licenses are kept in one place, so you don't need to deliver license files separately.
 Instead, using the same unique licensee number you can retrieve all product features the customer is entitled for.
 
-Regardless of whether you are using NetLicensing Shop or external e-Commerce system, you need to provide either an existing `licenseeNumber` or create a new one.
+Regardless of whether you are using [NetLicensing Shop](netlicensing-shop) or external e-Commerce system, you need to provide either an existing `licenseeNumber` or create a new one.
 
 **Note:** In this example, we use the following Licensee Number: `CUST-MM-01`
 

@@ -49,7 +49,7 @@ How it works
 
 As a vendor, you need just three steps to integrate NetLicensing into
 your product. Once the product delivered to customers, the customers
-purchase their licenses directly at NetLicensing Shop, without the need
+purchase their licenses directly at [NetLicensing Shop](netlicensing-shop), without the need
 of further product vendor intervention. Payments for the licenses are
 credited directly to the account of the product vendor through the
 payment service built into NetLicensing Shop.

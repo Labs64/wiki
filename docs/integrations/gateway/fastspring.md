@@ -24,7 +24,7 @@ Integration with [FastSpring](https://fastspring.com){:target="_blank"}{:rel="no
 
 **Option 1:** New licensee is created for every FastSpring purchase. FastSpring allows to purchase several products at once (in the same shopping cart), in this case, all these FastSpring products must be mapped to a single NetLicensing product, and all will be associated with the same licensee. Accordingly, FastSpring will return the same license code several times.
 
-**Option 2:** FastSpring product may be configured to add licenses to an existing licensee, instead of creating a new one. To use this functionality, 'licenseeNumber' parameter must be configured for this product.
+**Option 2:** FastSpring product may be configured to add licenses to an existing licensee, instead of creating a new one. To use this functionality, `licenseeNumber` parameter must be configured for this product.
 
 ## Limitations
 

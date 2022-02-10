@@ -2,7 +2,8 @@
 layout: default
 title: Stripe
 parent: Payment Service Providers
-nav_order: 99
+grand_parent: NetLicensing Shop
+nav_order: 20
 description: "Stripe"
 permalink: stripe
 ---
@@ -10,16 +11,11 @@ permalink: stripe
 Stripe
 ======
 
-<span class="aui-icon icon-success">Icon</span>
+You may use your existing Stripe account, or create one while connecting to Stripe from NetLicensing.
 
-You may use your existing Stripe account, or create one while connecting
-to Stripe from NetLicensing.
+You will receive all the payments processed via NetLicensing Shop directly to your Stripe account.
 
-You will receive all the payments processed via NetLicensing Shop
-directly to your Stripe account.
-
-Follow steps below to enable Stripe payments for your NetLicensing
-account.
+Follow steps below to enable Stripe payments for your NetLicensing account.
 
 1.  Enable *Stripe* or *Stripe (Testing)* at "Settings / Payment Methods":
 

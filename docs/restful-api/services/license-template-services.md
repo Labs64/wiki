@@ -215,7 +215,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
 <p>- EUR       - Euro currency for the license price</p>
 <p><span style="color: rgb(0,0,0);">automatic (boolean) - If set to 'true', every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">hidden (boolean) - If set to 'true', this license template is not shown in NetLicensing Shop as offered for purchase. Optional.</span></p>
+<p><span style="color: rgb(0,0,0);">hidden (boolean) - If set to 'true', this license template is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as offered for purchase. Optional.</span></p>
 <p><span style="color: rgb(0,0,0);">hideLicenses (boolean) - If set to 'true', licenses from this license template are not visible to the end customer, but participate in validation. Optional.</span></p></td>
 </tr>
 <tr class="odd">
@@ -307,7 +307,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
 <p>- EUR       - Euro currency for the license price</p>
 <p><span style="color: rgb(0,0,0);">automatic (boolean) - If set to 'true', every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">hidden (boolean) - If set to 'true', this license template is not shown in NetLicensing Shop as offered for purchase. Optional.</span></p>
+<p><span style="color: rgb(0,0,0);">hidden (boolean) - If set to 'true', this license template is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as offered for purchase. Optional.</span></p>
 <p><span style="color: rgb(0,0,0);">hideLicenses (boolean) - If set to 'true', licenses from this license template are not visible to the end customer, but participate in validation. Optional.</span></p></td>
 </tr>
 <tr class="odd">

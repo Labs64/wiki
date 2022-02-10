@@ -2,7 +2,8 @@
 layout: default
 title: PayPal
 parent: Payment Service Providers
-nav_order: 99
+grand_parent: NetLicensing Shop
+nav_order: 10
 description: "PayPal"
 permalink: paypal
 ---
@@ -10,25 +11,13 @@ permalink: paypal
 PayPal
 ======
 
-<span class="aui-icon icon-success">Icon</span>
+In order to enable PayPal as a payment method you need a Business Account at PayPal and selected payment solution **"PayPal Digital Goods (PayPal Express Checkout)"**.
 
-In order to enable PayPal as a payment method you need a Business
-Account at PayPal and selected payment solution **"PayPal Digital Goods
-(PayPal Express Checkout)"**.
-
-You will receive all the payments processed via NetLicensing Shop
-directly to your PayPal account.
+You will receive all the payments processed via NetLicensing Shop directly to your PayPal account.
 
 Recuring payment limitations
 
-Be aware that recurring payments are not allowed by PayPal for buyers
-from Germany and China. In case you don't plan to use recurring
-payments, you can omit "Create and manage Recurring Payments" permission
-as well as skip entire "Step 2: Setup Instant Payment Notification".
-
- 
-
- 
+Be aware that recurring payments are not allowed by PayPal for buyers from Germany and China. In case you don't plan to use recurring payments, you can omit "Create and manage Recurring Payments" permission as well as skip entire "Step 2: Setup Instant Payment Notification".
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
@@ -154,12 +143,5 @@ Follow steps below to set up IPN:
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
 class="expand-control-text">Step3: Configure NetLicensing</span>
 
--   Enable *PayPal* or *PayPal (Sandbox)* as a payment method at
-    "Settings / Payment Methods"
--   Provide *Subject* (typically this is the email address your PayPal
-    account is associated with)
-
- 
-
-<span style="white-space: pre-wrap;">
-</span>
+-   Enable *PayPal* or *PayPal (Sandbox)* as a payment method at "Settings / Payment Methods"
+-   Provide *Subject* (typically this is the email address your PayPal account is associated with)

@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Payment Service Providers
-nav_order: 60
+parent: NetLicensing Shop
+nav_order: 10
 has_children: true
 has_toc: false
 description: "Payment Service Providers (PSP) offered by NetLicensing to be used in NetLicensing Shop as a payment method"
