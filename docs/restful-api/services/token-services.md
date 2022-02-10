@@ -228,14 +228,13 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 - <i>DEFAULT</i> - default one-time token (will be expired after first request)<br />
 - <i>SHOP</i> - shop token is used to redirect customer to the NetLicensing Shop ('licenseeNumber' is mandatory)<br />
 - <i>APIKEY</i> - APIKey token<br/>
-- <i>ACTION</i> - Action token (e.g. <a href="customer-portal">Customer Portal</a>)<br/>
+- <i>ACTION</i> - Action token (e.g. access token for the <a href="customer-portal">Customer Portal</a>)<br/>
 </p>
 <p>
-licenseeNumber (string) -
+licenseeNumber (string) - unique customer number
 <br>- <i>tokenType=SHOP</i> - identifies licensee that will be assigned to the shop token
 <br>- <i>tokenType=APIKEY</i> - specifies the scope of validity of the APIKey; the only licensee with the given number can be validated using this APIKey</p>
 <p>action (enum) - 'licenseeLogin'; only for token=ACTION.</p>
-<p>licenseeNumber (string) - customer number; only for token=ACTION.</p>
 <p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p>
 <p>successURL (URI) - Take customers to this URL when they finish checkout.</p>
 <p>successURLTitle (string) - Shop link title for successful checkout process.</p>
