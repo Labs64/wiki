@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+
+- title: "Documentation Update"
+  description: "Wiki documentation was updated with the description of new NetLicensing functionalities - Customer Portal and Aliases."
+  date: 2022-02-14
+  component: Docu
+  features:
+   - added: Add [Customer Portal](https://netlicensing.io/wiki/customer-portal) wiki page
+   - added: Add [Aliases](https://netlicensing.io/wiki/aliases) wiki page
+  url: https://netlicensing.io/wiki/customer-portal
+
 - title: "NetLicensing 2.8.8"
   description: "With this release, NetLicensing on-premises setup was revisited and improved. We also made some minor database fixes to improve stability."
   date: 2022-01-27
