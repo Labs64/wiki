@@ -1,5 +1,30 @@
 var tourChangelog = [
   {
+    element: 'h3#customer-aliases ~ p.change-description',
+    title: 'Customer Aliases',
+    description: 'Specify alternative unique aliases for your customers or provide a list of the aliases, such as course participants, students, team members, etc. and use these for the validation calls.',
+  },
+  {
+    element: 'h3#new-customer-portal-released ~ p.change-description',
+    title: 'New Customer Portal',
+    description: 'Easily create, customize and embed a new white-label Customer Portal, and offer your customers a comprehensive view of all their licenses.',
+  },  
+  {
+    element: 'h3#experimental-customer-warning-level ~ p.change-description',
+    title: 'Customer Warning Level',
+    description: 'Get an instant view of customers status using the new experimental feature Customer Warning Level. Customer status is represented using intuitive traffic light shown on the customers list and detail view.',
+  },
+  {
+    element: 'h3#netlicensing--auth0-integration ~ p.change-description',
+    title: 'NetLicensing / Auth0 Integration',
+    description: 'Enable AAV Framework for your products by enriching Auth0 authentication flow and user profile with the NetLicensing validation data.',
+  },
+  {
+    element: 'h3#specify-api-key-scope ~ p.change-description',
+    title: 'Specify API Key scope',
+    description: 'Now you can specify API Key scope by providing specific customer number, so the API Key validation and transfer operations can be executed for this specified customer only.',
+  },
+  {
     element: 'h3#ho-ho-ho-netlicensing-christmas-edition-released ~ p.change-description',
     title: 'Multi-currency support in NetLicensing Shops',
     description: 'Offer your products in different regions and local currencies. NetLicensing Shop now supports multiple currencies.',
