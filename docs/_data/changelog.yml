@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Warning Level Indicator Fix"
+  description: "Warning Level indicator fix allows showing most accurate customers status who is using Floating and Node-Locked models."
+  date: 2022-02-18
+  component: API, UI
+  features:
+   - fixed: Fix Warning Level (Traffic Light) for [Node-Locked](node-locked) and [Floating](floating) licensing models
+   - updated: Restore Warning Level refresh button on the list and customer detail view
+   - fixed: Customer Portal showing an error in case vendor do not loaded a logo
+   - fixed: Dashboard report 'API Requests/Validations per Day' is called twice
+  image: assets/images/changelog/netlicensing-warning-level.png
+  url: https://ui.netlicensing.io/#/customers
 
 - title: "Documentation Update"
   description: "Wiki documentation was updated with the description of new NetLicensing functionalities - Customer Portal and Aliases."
