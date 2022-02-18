@@ -21,7 +21,7 @@ var tourChangelog = [
   },
   {
     element: 'h3#specify-api-key-scope ~ p.change-description',
-    title: 'Specify API Key scope',
+    title: 'Specify API Key Scope',
     description: 'Now you can specify API Key scope by providing specific customer number, so the API Key validation and transfer operations can be executed for this specified customer only.',
   },
   {
