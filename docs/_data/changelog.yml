@@ -9,6 +9,21 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing UI libraries update"
+  description: "We updated NetLicensing Management Console libraries to fix some critical vulnerabilities in the transitive dependencies."
+  date: 2022-03-05
+  component: UI
+  features:
+   - fixed: Cross-site Scripting in Prism - CVE-2022-23647
+   - fixed: Inefficient Regular Expression Complexity in Validator.js - CVE-2021-3765
+   - fixed: Regular Expression Denial of Service in prismjs - CVE-2021-3801
+   - fixed: Incorrect Comparison in axios - CVE-2021-3749
+   - fixed: Regular Expression Denial of Service (ReDoS) in Prism - CVE-2021-32723
+   - fixed: Passing in a non-string ‘html’ argument can lead to unsanitized output - CVE-2021-32696
+   - fixed: Command Injection in lodash - CVE-2021-23337
+   - fixed: Regular Expression Denial of Service (ReDoS) in lodash - CVE-2020-28500
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing JavaScript Client v1.2.28"
   description: "NetLicensing JavaScript Client dependencies updated to fix some critical vulnerabilities."
   date: 2022-03-02
