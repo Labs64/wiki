@@ -10,6 +10,16 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "NetLicensing UI libraries update"
+  description: "We updated NetLicensing Management Console libraries to fix some critical vulnerabilities, as well as improved Customer's tags handling."
+  date: 2022-03-18
+  component: UI
+  features:
+   - fixed: Mitigate Input Validation while data is read from window.location.hash and passed to window.history.pushState() - CWE-20
+   - fixed: Prototype Pollution in Chart.js - CVE-2020-7746
+   - updated: Showíng tags containing reserved words
+  url: https://ui.netlicensing.io
+
+- title: "NetLicensing UI libraries update"
   description: "We updated NetLicensing Management Console libraries to fix some critical vulnerabilities in the transitive dependencies."
   date: 2022-03-05
   component: UI
