@@ -9,6 +9,20 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.8.10"
+  description: "Configurable database cleanup enables scheduled database housekeeping routines to automate regular maintenance tasks. We also made some minor database fixes and updated core libraries to improve the stability and security of the service."
+  date: 2022-03-21
+  component: API
+  features:
+   - added: Enabled scheduled automatic database cleanup
+   - updated: Transactions count growing fast
+   - updated: Upgrade XMLDSig to the latest version
+   - updated: Upgrade Stripe Client library to the latest version
+   - fixed: Requests-per-day report is triggered twice
+   - fixed: Fix customized reports delivery
+  image: assets/images/changelog/netlicensing-scheduled-maintenance.png
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing UI libraries update"
   description: "We updated NetLicensing Management Console libraries to fix some critical vulnerabilities, as well as improved Customer's tags handling."
   date: 2022-03-18
