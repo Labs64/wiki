@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.8.11"
+  description: "With this release, we addressed the latest Spring Framework Spring4Shell vulnerability for all NetLicensing versions - SaaS and on-premises."
+  date: 2022-04-04
+  component: API
+  features:
+   - fixed: (Spring4Shell) Remote Code Execution in Spring Framework - CVE-2022-22965
+   - fixed: Deeply nested json in jackson-databind - CVE-2020-36518
+   - added: Ability to switch off/on service audit for on-premises setup
+  url: https://github.com/advisories/GHSA-36p3-wjmg-h94x
+
 - title: "OAuth Sign-in / Sign-up Support"
   description: "Now you can sign up and sign in with your GitHub, Auth0 and Microsoft identity platform accounts for the NetLicensing online services."
   date: 2022-03-24
