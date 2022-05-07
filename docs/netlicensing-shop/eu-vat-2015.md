@@ -1,7 +1,8 @@
 ---
 layout: default
 title: EU VAT
-nav_order: 70
+parent: NetLicensing Shop
+nav_order: 20
 description: "EU VAT Rules applicable since 2015"
 permalink: eu-vat-2015
 ---
@@ -20,18 +21,11 @@ EU VAT Rules applicable since 2015
 General Info
 ------------
 
-From January 1st, 2015, telecommunications, broadcasting and electronic
-services are** always taxed in the country where the customer
-belongs\*** – regardless of whether the customer is a business or
-consumer – and regardless of whether the supplier is based in the EU or
-outside.
+From January 1st, 2015, telecommunications, broadcasting and electronic services are** always taxed in the country where the customer belongs\*** – regardless of whether the customer is a business or consumer – and regardless of whether the supplier is based in the EU or outside.
 
-*\* For a business (taxable person) = either the country where it is
-registered or the country where it has fixed premises receiving the
-service.*
+*\* For a business (taxable person) = either the country where it is registered or the country where it has fixed premises receiving the service.*
 
-*\* For a consumer (non-taxable person) = the country where they are
-registered, have their permanent address or usually live.*
+*\* For a consumer (non-taxable person) = the country where they are registered, have their permanent address or usually live.*
 
 <a href="https://ec.europa.eu/taxation_customs/business/vat/telecommunications-broadcasting-electronic-services_en" target="_blank" class="external-link">More details</a>
 
@@ -177,9 +171,7 @@ prior to introduction of VAT handling.*
 
 ### Shop and VAT Calculation Mode
 
-1.  **Gross** calculation mode implies that the VAT is already included
-    in the specified price, which is reflected in the NetLicensing Shop
-    as a corresponding note below the shown prices:
+1.  **Gross** calculation mode implies that the VAT is already included in the specified price, which is reflected in the NetLicensing Shop as a corresponding note below the shown prices:
 
     <a href="assets/images/eu-vat-07.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Gross shopping" data-alt="Gross shopping">
       <img src="assets/images/eu-vat-07.png" />

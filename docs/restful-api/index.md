@@ -30,7 +30,7 @@ Essentials
 However, if you only need basic integration into your product, here is the shortcut to the two most essential NetLicensing RESTful API functions:
 
 - [Validate](licensee-services#validate-licensee) - at a minimum, your product must call the validate method to retrieve the result of customer licenses validation.
-- [Create Shop Token](token-services#create-token) - if you decided to use (optional) NetLicensing Shop, you need to create `SHOP` type token every time you want to start a shopping session for your customer, and redirect him to the returned `shopURL`.
+- [Create Shop Token](token-services#create-token) - if you decided to use (optional) [NetLicensing Shop](netlicensing-shop), you need to create `SHOP` type token every time you want to start a shopping session for your customer, and redirect him to the returned `shopURL`.
 
 Getting started
 ---------------

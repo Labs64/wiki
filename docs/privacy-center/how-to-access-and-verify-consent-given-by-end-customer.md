@@ -13,10 +13,7 @@ How to access and verify consent given by end-customer
 To keep proof of customers' consent is mandatory with the new GDPR
 rules.
 
-In NetLicensing, when a customer acquires new Licenses using
-NetLicensing Shop, he should give you a consent and agree to your Terms
-and Conditions as well as Privacy Policies applicable to your product or
-service.
+In NetLicensing, when a customer acquires new Licenses using [NetLicensing Shop](netlicensing-shop), he should give you a consent and agree to your Terms and Conditions as well as Privacy Policies applicable to your product or service.
 
 NetLicensing provides a logging feature which records every consent
 given within corresponding *Transaction* entity.

@@ -102,7 +102,7 @@ within NetLicensing. There are two main operations performed for
 licensee: validation and obtaining new licenses. Validation process is
 typically completely transparent to the licensee and performed from the
 product by means of NetLicensing API. Licensee can be offered to obtain
-new licenses for the product by redirecting him to the NetLicensing Shop
+new licenses for the product by redirecting him to the [NetLicensing Shop](netlicensing-shop)
 in web browser.
 
 <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/domain/entity/Transaction.html" class="external-link">Transaction</a>
@@ -110,7 +110,7 @@ in web browser.
 
 Transaction is created each time a new bunch of licenses is obtained by
 a licensee. It can be either a direct purchase by a licensee via
-NetLicensing Shop, licenses can be given to a licensee by a vendor, or
+[NetLicensing Shop](netlicensing-shop), licenses can be given to a licensee by a vendor, or
 assigned implicitly by NetLicensing if it is defined so by some license
 model (e.g. evaluation license may be given automatically). All these
 events are reflected in transactions.

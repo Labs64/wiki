@@ -25,8 +25,8 @@ method of the licensee services.
 
 ### NetLicensing Shop
 
-Provide a link to NetLicensing Shop in the UI of your product or forward
-the user to NetLicensing Shop URL by other means.  
+Provide a link to [NetLicensing Shop](netlicensing-shop) in the UI of your product or forward the user to NetLicensing Shop URL by other means.  
+
 The URL of NetLicensing Shop has the following format:
 
 ``` theme:

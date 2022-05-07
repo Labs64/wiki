@@ -20,4 +20,4 @@ encourage you to maintain your
 
 <a href="https://ui.netlicensing.io/#/profile" class="external-link"><img src="assets/images/vendor-profile.png" title="Vendor Profile" alt="Vendor Profile" width="600" /></a>
 
-This information will be used in the NetLicensing Shop checkout and order confirmation/invoice.
+This information will be used in the [NetLicensing Shop](netlicensing-shop) checkout and order confirmation/invoice.

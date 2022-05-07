@@ -210,7 +210,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
 <p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
 <p>- EUR       - Euro currency for the license price</p>
-<p>hidden (boolean) - If set to 'true', this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p>
+<p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p>
 <p><span style="color: rgb(0,0,0);">parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</span></p>
 <p><span style="color: rgb(0,0,0);">timeVolume (string) - Mandatory for 'TIMEVOLUME' license type. Optional.</span></p></td>
 </tr>
@@ -299,7 +299,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
 <p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
 <p>- EUR       - Euro currency for the license price</p>
-<p>hidden (boolean) - If set to 'true', this license is not shown in NetLicensing Shop as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p></td>
+<p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
