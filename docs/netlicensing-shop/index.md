@@ -11,7 +11,11 @@ permalink: netlicensing-shop
 NetLicensing Shop
 =================
 
-While using NetLicensing Shop you need to create Shop Token and provide `shopURL` in the UI of your product or forward the user to NetLicensing Shop URL by other means.
+NetLicensing Shop is a white-label licensing e-commerce solution, which offers your customers easy licenses acquisition. NetLicensing products, modules and packages configuration will be used to show your customers available licensing options.
+
+### Access Shop
+
+To use NetLicensing Shop, [Shop Token](token-services#create-token) need to be created; `shopURL` parameter in the response can be used to forward the customer to NetLicensing Shop.
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }
@@ -46,3 +50,24 @@ Accept: application/xml
 </ns2:netlicensing>
 ```
 {: .ml-5 }
+
+### Customization
+
+You can customize NetLicensing Shop at **Settings > Shop Customization** to display your brand elements: logo, legal information and links, and custom texts.
+
+### Payment Methods
+
+On the **Settings > Payment Methods** page you can configure payment methods to be used during the checkout process.
+
+NetLicensing Shop works in the single currency mode. System currency for the entire vendor account can be configured at **Settings > General** page.
+
+**Note:** In case, no paments method is activated and configured, NetLicensing checkout will be executed without payment step and selected licenses will be assigned to the customer. This scenario can be used for non-profit or to test the checkout process.
+
+### Alternatives
+
+NetLicensing Shop is an optional component.
+Below you will find alternative options on how new licenses can be added to the customer profile.
+
+- *External e-Commerce* - Enable external e-Commerce system using [NetLicensing Gateway](gateway)
+- *RESTful API* - Use [License Services](license-services#create-license) API to create a new License and assign this to the Customer
+- *Management Console* - Add licenses manually via NetLicensing Management Console
