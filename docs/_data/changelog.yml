@@ -9,6 +9,101 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.8.11"
+  description: "With this release, we addressed the latest Spring Framework Spring4Shell vulnerability for all NetLicensing versions - SaaS and on-premises."
+  date: 2022-04-04
+  component: API
+  features:
+   - fixed: (Spring4Shell) Remote Code Execution in Spring Framework - CVE-2022-22965
+   - fixed: Deeply nested json in jackson-databind - CVE-2020-36518
+   - added: Ability to switch off/on service audit for on-premises setup
+  url: https://github.com/advisories/GHSA-36p3-wjmg-h94x
+
+- title: "OAuth Sign-in / Sign-up Support"
+  description: "Now you can sign up and sign in with your GitHub, Auth0 and Microsoft identity platform accounts for the NetLicensing online services."
+  date: 2022-03-24
+  component: API, UI, Integrations
+  features:
+   - added: GitHub sign up and sign in for SaaS and on-premises version
+   - added: Auth0 sign up and sign in for on-premises version
+   - added: Microsoft OpenID sign in for on-premises version
+  image: assets/images/changelog/netlicensing-oauth-github.png
+  url: https://ui.netlicensing.io/#/login
+
+- title: "NetLicensing 2.8.10"
+  description: "Configurable database cleanup enables scheduled database housekeeping routines to automate regular maintenance tasks. We also made some minor database fixes and updated core libraries to improve the stability and security of the service."
+  date: 2022-03-21
+  component: API
+  features:
+   - added: Enabled scheduled automatic database cleanup
+   - updated: Transactions count growing fast
+   - updated: Upgrade XMLDSig to the latest version
+   - updated: Upgrade Stripe Client library to the latest version
+   - fixed: Requests-per-day report is triggered twice
+   - fixed: Fix customized reports delivery
+  image: assets/images/changelog/netlicensing-scheduled-maintenance.png
+  url: https://ui.netlicensing.io
+
+- title: "NetLicensing UI libraries update"
+  description: "We updated NetLicensing Management Console libraries to fix some critical vulnerabilities, as well as improved Customer's tags handling."
+  date: 2022-03-18
+  component: UI
+  features:
+   - fixed: Mitigate Input Validation while data is read from window.location.hash and passed to window.history.pushState() - CWE-20
+   - fixed: Prototype Pollution in Chart.js - CVE-2020-7746
+   - updated: Showíng tags containing reserved words
+  url: https://ui.netlicensing.io
+
+- title: "NetLicensing UI libraries update"
+  description: "We updated NetLicensing Management Console libraries to fix some critical vulnerabilities in the transitive dependencies."
+  date: 2022-03-05
+  component: UI
+  features:
+   - fixed: Cross-site Scripting in Prism - CVE-2022-23647
+   - fixed: Inefficient Regular Expression Complexity in Validator.js - CVE-2021-3765
+   - fixed: Regular Expression Denial of Service in prismjs - CVE-2021-3801
+   - fixed: Incorrect Comparison in axios - CVE-2021-3749
+   - fixed: Regular Expression Denial of Service (ReDoS) in Prism - CVE-2021-32723
+   - fixed: Passing in a non-string ‘html’ argument can lead to unsanitized output - CVE-2021-32696
+   - fixed: Command Injection in lodash - CVE-2021-23337
+   - fixed: Regular Expression Denial of Service (ReDoS) in lodash - CVE-2020-28500
+  url: https://ui.netlicensing.io
+
+- title: "NetLicensing JavaScript Client v1.2.28"
+  description: "NetLicensing JavaScript Client dependencies updated to fix some critical vulnerabilities."
+  date: 2022-03-02
+  component: Client Libraries
+  features:
+   - fixed: Prototype Pollution in minimist - CVE-2020-7598
+   - fixed: Open redirect in karma - CVE-2021-23495
+   - fixed: Exposure of Sensitive Information to an Unauthorized Actor in follow-redirects - CVE-2022-0536
+   - fixed: Exposure of sensitive information in follow-redirects - CVE-2022-0155
+   - fixed: Cross-site Scripting in karma - CVE-2022-0437
+   - fixed: Incorrect Default Permissions in log4js - CVE-2022-21704
+   - fixed: Inefficient Regular Expression Complexity in chalk/ansi-regex - CVE-2021-3807
+  url: https://github.com/Labs64/NetLicensingClient-javascript/releases/tag/1.2.28
+
+- title: "Warning Level Indicator Fix"
+  description: "Warning Level indicator fix allows showing most accurate customers status who is using Floating and Node-Locked models."
+  date: 2022-02-18
+  component: API, UI
+  features:
+   - fixed: Fix Warning Level (Traffic Light) for [Node-Locked](node-locked) and [Floating](floating) licensing models
+   - updated: Restore Warning Level refresh button on the list and customer detail view
+   - fixed: Customer Portal showing an error in case vendor do not loaded a logo
+   - fixed: Dashboard report 'API Requests/Validations per Day' is called twice
+  image: assets/images/changelog/netlicensing-warning-level.png
+  url: https://ui.netlicensing.io/#/customers
+
+- title: "Documentation Update"
+  description: "Wiki documentation was updated with the description of new NetLicensing functionalities - Customer Portal and Aliases."
+  date: 2022-02-14
+  component: Docu
+  features:
+   - added: Add [Customer Portal](https://netlicensing.io/wiki/customer-portal) wiki page
+   - added: Add [Aliases](https://netlicensing.io/wiki/aliases) wiki page
+  url: https://netlicensing.io/wiki/customer-portal
+
 - title: "NetLicensing 2.8.8"
   description: "With this release, NetLicensing on-premises setup was revisited and improved. We also made some minor database fixes to improve stability."
   date: 2022-01-27
