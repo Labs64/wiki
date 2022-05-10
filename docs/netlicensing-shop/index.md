@@ -57,11 +57,11 @@ You can customize NetLicensing Shop at **Settings > Shop Customization** to disp
 
 ### Payment Methods
 
-On the **Settings > Payment Methods** page you can configure payment methods to be used during the checkout process.
+On the **Settings > Payment Methods** page you can configure [payment methods](payment-service-providers) to be used during the checkout process.
 
 NetLicensing Shop works in the single currency mode. System currency for the entire vendor account can be configured at **Settings > General** page.
 
-**Note:** In case, no paments method is activated and configured, NetLicensing checkout will be executed without payment step and selected licenses will be assigned to the customer. This scenario can be used for non-profit or to test the checkout process.
+**Note:** In case, no payments method is activated and configured, NetLicensing checkout will be executed without payment step and selected licenses will be assigned to the customer. This scenario can be used for non-profit or to test the checkout process.
 
 ### Alternatives
 
