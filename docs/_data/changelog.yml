@@ -9,6 +9,22 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.8.13"
+  description: "With this maintenance release, we significantly improved dashboard performance, as well as polished customer portal look-and-feel.<br><strong>Known Issues:</strong><br>'All Time' filter may deliver empty or inaccurate numbers and is currently work-in-progress."
+  date: 2022-05-24
+  component: API, UI, Client Libraries
+  features:
+   - updated: improve UI dashboard performance
+   - fixed: restore charts tooltips
+   - fixed: logrotate do not rotate logs on managed and on-prem instances
+   - fixed: login page error if Grammarly or Selenium UI plugins installed
+   - fixed: fix customer link on products page with grid
+   - updated: use Core warning level on Customer Portal
+   - updated: minor OAuth improvements
+   - updated: add a link to a forgot password page if the user is logged in via OAuth provider
+   - updated: NetLicensing-Client JS library dependencies update
+  url: https://ui.netlicensing.io
+
 - title: "Restructure NetLicensing Wiki"
   description: "NetLicensing Wiki menu structure was revisited to provide a better view on the essential NetLicensing functionalities, such as NetLicensing Shop and Customer Portal."
   date: 2022-05-09
