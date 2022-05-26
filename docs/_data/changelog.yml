@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Historical dashboard report data"
+  description: "We started the historical API requests and validation data migration process, so the full 'All Time' reports will be available on the vendors' dashboards."
+  date: 2022-05-26
+  component: UI
+  features:
+   - updated: Enable 'All Time' report data retrieval
+   - fixed: Demo login for the first adopters restored
+  image: assets/images/changelog/netlicensing-all-time.png
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing 2.8.13"
   description: "With this maintenance release, we significantly improved dashboard performance, as well as polished customer portal look-and-feel.<br><strong>Known Issues:</strong><br>'All Time' filter may deliver empty or inaccurate numbers and is currently work-in-progress."
   date: 2022-05-24
