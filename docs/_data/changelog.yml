@@ -9,6 +9,25 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Dashboard reports improvements"
+  description: "Now you can see the most up-to-date information on the dashboard reports, as well as the report data is more accurate now and excludes API Examples requests."
+  date: 2022-05-30
+  component: UI
+  features:
+   - updated: exclude internal traffic and 'API Examples' from the API requests report
+   - updated: add current day in the API requests and validation report
+   - fixed: fixed [GuideChimp](https://www.labs64.com/guidechimp/) vendor onboarding tours
+  url: https://ui.netlicensing.io
+
+- title: "NetLicensing 2.8.14"
+  description: "With this release, we addressed the latest Spring Security vulnerability for all NetLicensing versions - SaaS and on-premises."
+  date: 2022-05-28
+  component: API
+  features:
+   - fixed: Authorization bypass in Spring Security - CVE-2022-22978
+   - fixed: Integer overflow in BCrypt class in Spring Security - CVE-2022-22976
+  url: https://github.com/advisories/GHSA-hh32-7344-cg2f
+
 - title: "Historical dashboard report data"
   description: "We started the historical API requests and validation data migration process, so the full 'All Time' reports will be available on the vendors' dashboards."
   date: 2022-05-26
