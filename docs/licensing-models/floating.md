@@ -22,7 +22,7 @@ Overview
 
 Session is acquired by checkout operation and returned back to the pool by subsequent checkin. Maximum checkout validity time is limited by the product module parameter:
 
--   `Integer` **`maxCheckoutValidity`** - floating license maximum checkout validity, in seconds ("Maximum checkout validity" in <a href="http://l64.cc/nlUI" class="external-link">NetLicensing Management Console</a> / product module edit form)
+-   `Integer` **`maxCheckoutValidity`** - floating license maximum checkout validity, in seconds ("Maximum checkout validity" in <a href="https://l64.cc/nlUI" class="external-link">NetLicensing Management Console</a> / product module edit form)
 
 Validity can be extended as long as needed by subsequent checkouts before the expiration time.
 
