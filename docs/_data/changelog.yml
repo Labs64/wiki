@@ -16,7 +16,6 @@
   features:
    - updated: Discontinue GitHub Student Developer Pack
    - updated: Discontinue GitHub Teacher Toolbox
-   - fixed: fixed [GuideChimp](https://www.labs64.com/guidechimp/) vendor onboarding tours
   image: assets/images/changelog/github-students -sunset-at-netlicensing.png
   url: https://github.com/Labs64/NetLicensing-Community/issues/50
 
