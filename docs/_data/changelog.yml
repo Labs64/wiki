@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Sunset of GitHub Education Program at NetLicensing"
+  description: "NetLicensing support for GitHub Student Developer Pack and Teacher Toolbox is discontinued as of today, and we no longer accept new GitHub Student and Teacher referrals."
+  date: 2022-06-20
+  component: Integrations
+  features:
+   - updated: Discontinue GitHub Student Developer Pack
+   - updated: Discontinue GitHub Teacher Toolbox
+   - fixed: fixed [GuideChimp](https://www.labs64.com/guidechimp/) vendor onboarding tours
+  image: assets/images/changelog/github-students -sunset-at-netlicensing.png
+  url: https://github.com/Labs64/NetLicensing-Community/issues/50
+
 - title: "Dashboard reports improvements"
   description: "Now you can see the most up-to-date information on the dashboard reports, as well as the report data is more accurate now and excludes API Examples requests."
   date: 2022-05-30
