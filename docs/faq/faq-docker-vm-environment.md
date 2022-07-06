@@ -61,10 +61,13 @@ Both the options above require a unique instance UUID / Fingerprint.
 You can generate UUID based on your needs, chosen programming language and environment specifics.
 Below you can find some of the third-party libraries, which ease the generation of a unique fingerprint.
 
+- Linux: <a href="https://www.commandlinux.com/man-page/man5/machine-id.5.html" target="_blank" rel="noopener nofollow" class="external-link">machine-id</a>
 - Java: <a href="https://github.com/oshi/oshi" target="_blank" rel="noopener nofollow" class="external-link">oshi/oshi</a>
 - Java: <a href="https://github.com/f4b6a3/uuid-creator" target="_blank" rel="noopener nofollow" class="external-link">f4b6a3/uuid-creator</a>
+- JavaScript: <a href="https://github.com/fingerprintjs/fingerprintjs" target="_blank" rel="noopener nofollow" class="external-link">fingerprintjs/fingerprintjs</a>
 - JavaScript: <a href="https://github.com/jackspirou/clientjs" target="_blank" rel="noopener nofollow" class="external-link">jackspirou/clientjs</a>
 - JavaScript: <a href="https://github.com/Song-Li/cross_browser" target="_blank" rel="noopener nofollow" class="external-link">Song-Li/cross_browser</a>
+- JavaScript/NodeJS: <a href="https://github.com/automation-stack/node-machine-id" target="_blank" rel="noopener nofollow" class="external-link">automation-stack/node-machine-id</a>
 - C#: <a href="https://github.com/davcs86/csharp-uhwid" target="_blank" rel="noopener nofollow" class="external-link">davcs86/csharp-uhwid</a>
 - C#: <a href="https://github.com/melchiork/Fingerprinty" target="_blank" rel="noopener nofollow" class="external-link">melchiork/Fingerprinty</a>
 - C++: <a href="https://github.com/Tarik02/machineid" target="_blank" rel="noopener nofollow" class="external-link">Tarik02/machineid</a>
