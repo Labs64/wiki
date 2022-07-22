@@ -472,7 +472,7 @@ from that of the NetLicensing Cloud, as summarized below.
 <tr class="even">
 <td>Pay-per-Use</td>
 <td>All used quantity values will be lost.</td>
-<td>Avoid using this model with the Agent v2.3.9.</td>
+<td>Avoid using this model with the current Agent release.</td>
 </tr>
 <tr class="odd">
 <td>Quota</td>
