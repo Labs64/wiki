@@ -42,12 +42,12 @@ footer_links:
     - "https://wordpress.org/plugins/pluginpass-pro-plugintheme-licensing/"
 
 # Google Analytics Tracking
-ga_tracking: UA-32654174-2
+#ga_tracking: UA-32654174-2
 ga_tracking_anonymize_ip: true
 # Yandex.Metrika
 #yandex_metrika_tracking_id: "61860391"
 # Microsoft Clarity
-microsoft_clarity_tracking_id: "4zn6pj7gd7"
+#microsoft_clarity_tracking_id: "4zn6pj7gd7"
 
 # SEO
 title: NetLicensing Wiki
