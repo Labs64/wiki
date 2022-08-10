@@ -58,15 +58,18 @@ var tourChangelog = [
 
 GuideChimp.extend(guideChimpPluginLicensing, { id: "INLIC" });
 
+/*
 if (typeof guideChimpPluginGoogleAnalytics !== "undefined") {
   GuideChimp.extend(guideChimpPluginGoogleAnalytics);
 }
+*/
 
 var guideChimp = GuideChimp(tourChangelog, {
   position: 'left',
   scrollPadding: 50
 });
 
+/*
 if (typeof guideChimpPluginGoogleAnalytics !== "undefined") {
   // GuideChimp->GoogleAnalytics plugin - https://github.com/Labs64/GuideChimp/tree/master/plugins/googleAnalytics
   guideChimp.gaOn('onAfterChange', 'Changelog Tour', (to, from) => {
@@ -77,6 +80,7 @@ if (typeof guideChimpPluginGoogleAnalytics !== "undefined") {
     };
   });
 }
+*/
 
 document.getElementById('startTour').onclick = function() {
   guideChimp.start();
