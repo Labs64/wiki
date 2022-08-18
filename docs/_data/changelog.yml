@@ -20,6 +20,7 @@
    - updated: New NetLicensing Agent version released
    - updated: Add Microsoft Azure IAM OAuth configuration
    - fixed: Request without Accept header results in HTTP500
+  image: assets/images/changelog/netlicensing-manage-aliases.gif
   url: https://netlicensing.io/wiki/customer-portal
 
 - title: "Sunset of GitHub Education Program at NetLicensing"
