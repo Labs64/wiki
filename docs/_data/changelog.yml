@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Specify end date for the subscription licenses"
+  description: "We added a new UI field 'End Date', to allow you easily adjust license validity time period."
+  date: 2022-09-14
+  component: UI
+  features:
+   - added: Added 'End Date' UI field to the subscription model edit view
+  image: assets/images/changelog/netlicensing-end-date.gif
+  url: https://netlicensing.io/wiki/subscription
+
 - title: "Manage Nodes, Sessions and Aliases via Customer Portal"
   description: "Customer Portal got two most wanted features. Now your customer can manage Aliases for their own customer profiles, as well as manage Floating model sessions and secrets for the Node-Locked model."
   date: 2022-08-18
@@ -30,7 +39,7 @@
   features:
    - updated: Discontinue GitHub Student Developer Pack
    - updated: Discontinue GitHub Teacher Toolbox
-  image: assets/images/changelog/github-students -sunset-at-netlicensing.png
+  image: assets/images/changelog/github-students-sunset-at-netlicensing.png
   url: https://github.com/Labs64/NetLicensing-Community/issues/50
 
 - title: "Dashboard reports improvements"
