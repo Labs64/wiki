@@ -32,6 +32,19 @@
   image: assets/images/changelog/netlicensing-manage-aliases.gif
   url: https://netlicensing.io/wiki/customer-portal
 
+- title: "NetLicensing 2.8.15"
+  description: "With this release, we fixed some defects, as well as revisited API examples and offline validation views."
+  date: 2022-08-15
+  component: API, UI
+  features:
+   - fixed: OperationFailedException is thrown when an email is null or email access is denied by the OAuth provider
+   - fixed: Fixed UI [guided tours](https://www.labs64.com/guidechimp/)
+   - updated: API Examples tuning
+   - updated: Show 'licenseeNumber' in the offline validation view
+   - fixed: Offline Validation tab offers incompatible keys
+   - updated: Info part of the netlicensing error response ignored
+  url: https://netlicensing.io
+
 - title: "Sunset of GitHub Education Program at NetLicensing"
   description: "NetLicensing support for GitHub Student Developer Pack and Teacher Toolbox is discontinued as of today, and we no longer accept new GitHub Student and Teacher referrals."
   date: 2022-06-20
