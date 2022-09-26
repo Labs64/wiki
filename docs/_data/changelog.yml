@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Subscription license edit improvements"
+  description: "Handling of the subscription licenses was improved, to simplify the 'Time Period' and 'End Date' fields definition."
+  date: 2022-09-26
+  component: UI
+  features:
+   - fixed: Update button enabled even if there are no changes in the subscription license
+   - updated: Remove minDate from the 'End Date' calendar widget
+   - updated: Add validation to timeVolume field
+   - fixed: Fix error 'Cannot read properties of null (isValid)'
+  url: https://netlicensing.io/wiki/subscription
+
 - title: "Specify end date for the subscription licenses"
   description: "We added a new UI field 'End Date', to allow you easily adjust license validity time period."
   date: 2022-09-14
