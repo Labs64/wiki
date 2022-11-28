@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Custom properties in validate call"
+  description: "NetLicensing validate method was extended to allow specifying the custom properties for new customers in the validate call."
+  date: 2022-11-22
+  component: API
+  features:
+   - added: specify custom properties for new customers on validate call
+  image: assets/images/changelog/netlicensing-validate-tags.png
+  url: https://github.com/Labs64/NetLicensing-Community/issues/5#issuecomment-1328221314
+
 - title: "Subscription license edit improvements"
   description: "Handling of the subscription licenses was improved, to simplify the 'Time Period' and 'End Date' fields definition."
   date: 2022-09-26
