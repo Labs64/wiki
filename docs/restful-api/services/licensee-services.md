@@ -477,6 +477,9 @@ productModuleNumber&lt;N&gt; (string)</em> - product module N number<br />
 </tbody>
 </table>
 
+You can specify Licensee/Customer custom properties to be set in the validation request.
+These properties will be considered for all new customers upon initial validation.
+
 <span class="s1">To use NetLicnesing effectively, validation must be
 up-to-date. On the other hand, performing validation requests too
 frequently will make response time of your service longer and create
