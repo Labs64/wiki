@@ -9,6 +9,26 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.8.16"
+  description: "With this release, we addressed the latest Apache Commons Text vulnerability for all NetLicensing versions (SaaS and on-premises), as well as added some most asked features to the NetLicensing Core Services, Management Console and client libraries."
+  date: 2022-12-09
+  component: API, UI, Client Libraries
+  features:
+   - updated: Introduce a grey warning level filter
+   - fixed: The same 'nodeSecret' cannot be used with inactive licenses
+   - added: Add product download link in the Management Console, Shop and Customer Portal
+   - added: Allow custom properties for an [auto-created licensee](https://github.com/Labs64/NetLicensing-Community/issues/5#issuecomment-1328221314)
+   - updated: Restrict entities number format to alphanumeric characters only
+   - updated: Update NetLicensing Agent
+   - fixed: Fix 'dryRun' validation of pricing plans w/o start date
+   - updated: Improve manage aliases page in the customer view
+   - fixed: Prevent sending empty custom properties or discounts on entities create
+   - fixed: Arbitrary code execution in Apache Commons Text - CVE-2022-42889
+   - fixed: Spring Security athorization rules can be bypassed via forward or include dispatcher types - CVE-2022-31692
+   - fixed: Prototype pollution in webpack loader-utils - CVE-2022-37601
+  image: assets/images/changelog/netlicensing-release-2-8-16.png
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing's Cyber Weeks Offer 2022"
   description: "We are happy to offer <strong>64% OFF</strong> Basic and Premium Plans for 1 year for all new NetLicensing vendors as well as the vendors on the Community and Free plans!"
   date: 2022-11-28
