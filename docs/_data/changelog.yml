@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Export dashboard chart data as CSV"
+  description: "With this release, we fixed some defects, as well as introduced minor UI improvements."
+  date: 2023-01-19
+  component: UI
+  features:
+   - added: Export dashboard chart data as CSV
+   - updated: Revisited and fixed Microsoft Auzure OAuth login
+   - added: Dynamic environment support to rewrite OAuth parameters
+   - fixed: Update vulnerable JSON5 library - CVE-2022-46175
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing 2.8.16"
   description: "With this release, we addressed the latest Apache Commons Text vulnerability for all NetLicensing versions (SaaS and on-premises), as well as added some most asked features to the NetLicensing Core Services, Management Console and client libraries."
   date: 2022-12-09
