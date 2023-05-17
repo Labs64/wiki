@@ -17,6 +17,7 @@ NetLicensing Object Model
 -   [License](#license)
 -   [Licensee](#licensee)
 -   [Transaction](#transaction)
+-   [Bundle](#bundle)
 
 <img src="assets/images/netlicensing-object-model.png" usemap="#object-model-map"/>
 <map name="object-model-map">
@@ -114,5 +115,11 @@ a licensee. It can be either a direct purchase by a licensee via
 assigned implicitly by NetLicensing if it is defined so by some license
 model (e.g. evaluation license may be given automatically). All these
 events are reflected in transactions.
+
+Bundle
+--------------------------------------------------------------------------------------------------------------------------------------------
+Bundle stores license templates for different product modules, but all
+templates in a bundle belong to the same product. It is used to create
+an array of licenses based on the saved license templates.
 
 <script type="text/javascript"> imageMapResize(); </script>
