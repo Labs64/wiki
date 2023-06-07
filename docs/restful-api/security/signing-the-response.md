@@ -41,22 +41,28 @@ Currently, response signing setup is only possible via direct call to the NetLic
 [Java NetLicensing Client library](client-libraries) and cURL in code examples and [OpenSSL](https://www.openssl.org/) for the key manipulation.
 
 ### 1. Create public/private RSA key pair
-NetLicensing currently only supports RSA algorithm for the keys, we recommend to use at least 2048 bits key length.
-Other algorithms may be added in the future.
+NetLicensing currently only supports RSA algorithm for the keys, we recommend to use at least 2048 bits key length. Other algorithms may
+be added in the future.The key should be in PEM format, without any additional text information.
 
 <div>Generating key pair</div>
 {: .code-example .ml-5 .code-header }
 ```sh
 $ openssl genpkey -algorithm RSA -out rsa_private.pem -pkeyopt rsa_keygen_bits:2048
 $ openssl rsa -in rsa_private.pem -pubout -out rsa_public.pem
+$ cat rsa_private.pem
+-----BEGIN PRIVATE KEY-----
+MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAhleNJf9h+aZ9KlkL
+...
+wvc3k5g5kqc=
+-----END PRIVATE KEY-----
 ```
 {: .ml-5 }
 
 ### 2. Create an API Key with the attached RSA private key
 
-Create a token with the type `APIKEY`, setting the property `privateKey` to the content of your private key. Since this API Key
-will only be used for the licensee validate call, also limit its access by assigning the 'ROLE_APIKEY_LICENSEE' role, although it is
-not required for the signature.
+Create a token with the type `APIKEY`, setting the property `privateKey` to the content of your private key (PEM headers, footers,
+and line breaks can be omitted). the Since this API Key will only be used for the licensee validate call, also limit its access
+by assigning the 'ROLE_APIKEY_LICENSEE' role, although it is not required for the signature.
 
 <div>Create API Key (cURL)</div>
 {: .code-example .ml-5 .code-header }
