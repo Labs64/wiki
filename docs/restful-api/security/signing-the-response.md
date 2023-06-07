@@ -61,7 +61,7 @@ wvc3k5g5kqc=
 ### 2. Create an API Key with the attached RSA private key
 
 Create a token with the type `APIKEY`, setting the property `privateKey` to the content of your private key (PEM headers, footers,
-and line breaks can be omitted). the Since this API Key will only be used for the licensee validate call, also limit its access
+and line breaks can be omitted). Since this API Key will only be used for the licensee validate call, also limit its access
 by assigning the 'ROLE_APIKEY_LICENSEE' role, although it is not required for the signature.
 
 <div>Create API Key (cURL)</div>
