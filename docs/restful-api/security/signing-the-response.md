@@ -42,7 +42,7 @@ Currently, response signing setup is only possible via direct call to the NetLic
 
 ### 1. Create public/private RSA key pair
 NetLicensing currently only supports RSA algorithm for the keys, we recommend to use at least 2048 bits key length. Other algorithms may
-be added in the future.The key should be in PEM format, without any additional text information.
+be added in the future. The key should be in PEM format, without any additional text information.
 
 <div>Generating key pair</div>
 {: .code-example .ml-5 .code-header }
