@@ -18,8 +18,17 @@
    - updated: Enable preview mode for the new NetLicensing notifications
    - added: Send notifications on customer create
    - added: Send notifications on license create
+   - updated: Update UI dependencies
   image: assets/images/changelog/netlicensing-notifications.png
   url: https://ui.netlicensing.io/#/settings?tab=notifications
+
+- title: "NetLicensing JavaScript client dependencies update"
+  description: "We upgraded several key libraries to their latest versions to leverage new features, performance enhancements, and security patches."
+  date: 2023-05-22
+  component: Client Libraries
+  features:
+    - updated: Update NetLicensing JavaScript Client dependencies
+  url: https://github.com/Labs64/NetLicensingClient-javascript
 
 - title: "NetLicensing maintenance and performance improvements"
   description: "We addressed and fixed some minor but annoying defects and made our licensing services more stable and reliable."
