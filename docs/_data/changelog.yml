@@ -9,7 +9,6 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
-
 - title: "NetLicensing Notifications"
   description: "Send instant notifications to the subscribers' webhook endpoints when a specific NetLicensing event (such as customer or license creation) occurs."
   date: 2023-06-12
@@ -21,6 +20,14 @@
    - added: Send notifications on license create
   image: assets/images/changelog/netlicensing-notifications.png
   url: https://ui.netlicensing.io/#/settings?tab=notifications
+
+- title: "NetLicensing maintenance and performance improvements"
+  description: "We addressed and fixed some minor but annoying defects and made our licensing services more stable and reliable."
+  date: 2023-04-01
+  component: API, UI
+  features:
+   - updated: Minor NetLicensing Shop fixes and improvements
+  url: https://ui.netlicensing.io
 
 - title: "Export dashboard chart data as CSV"
   description: "With this release, we fixed some defects, as well as introduced minor UI improvements."
