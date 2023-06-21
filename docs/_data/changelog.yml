@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Fix Stripe Connect"
+  description: "Resolved an issue with the Stripe Connect functionality that was causing intermittent errors during the Stripe authentication process."
+  date: 2023-06-20
+  component: UI
+  features:
+   - fixed: Stripe Connect authentication
+  url: https://ui.netlicensing.io/#/settings?tab=payment-methods
+
 - title: "NetLicensing Notifications"
   description: "Send instant notifications to the subscribers' webhook endpoints when a specific NetLicensing event (such as customer or license creation) occurs."
   date: 2023-06-12
