@@ -12,25 +12,25 @@ permalink: faq-paypal-transaction-limit
 
 ## Question
 
-* What is the amount upper limit on a single PayPal transaction?
-* Is there a limit on a number of PayPal transactions?
+* What is the maximum amount allowed for a single PayPal transaction?
+* Is there a limit on the number of PayPal transactions?
 * Is there a limit on the total receipts via PayPal?
 
 ## Answer
 
 As of 2013:
 
-- in European Union EUR 8,000
-- in United States USD 10,000
-- in other countries in the same range
+- European Union: The upper limit is EUR 8,000.
+- United States: The upper limit is USD 10,000.
+- Other countries have similar ranges.
 
-There may be though other limits on the buyer’s side, for instance there is an additional limit for not verified PayPal account in EU, or credit card / bank account limits. Check with local PayPal and/or corresponding financial institution.
+It's important to note that there might be additional limitations on the buyer's side, such as restrictions on unverified PayPal accounts in the EU or limitations related to credit cards and bank accounts. For accurate information, it's recommended to consult your local PayPal office or corresponding financial institution.
 
-*There is no limit on a number of PayPal transactions.*
+There are no restrictions on the number of PayPal transactions you can conduct.
 
-After a certain amount of annual receipts via PayPal (EUR 2500 in EU as of 2013), one-time extended account verification may be required by PayPal.
+After reaching a certain annual receipt threshold via PayPal (EUR 2,500 in the EU as of 2013), PayPal may require a one-time extended account verification.
 
-Please get in contact with local PayPal for details.
+For specific details, please reach out to your local PayPal representative.
 
 ### References
 
