@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Fix customer alias handling in the NetLicensing Shop"
+  description: "We have resolved an issue related to the NetLicensing Shop. The problem was related to the handling of licensee aliases, which occasionally led to errors during the checkout process. You can now experience a smoother and error-free checkout process when using the NetLicensing Shop."
+  date: 2023-08-17
+  component: Shop
+  features:
+   - fixed: Fix alias handling in the NetLicensing Shop
+   - added: Include the product download link on the NetLicensing Shop confirmation page if it has been specified
+  url: https://ui.netlicensing.io
+
 - title: "Fix Stripe Connect"
   description: "Resolved an issue with the Stripe Connect functionality that was causing intermittent errors during the Stripe authentication process."
   date: 2023-06-20
