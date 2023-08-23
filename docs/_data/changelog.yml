@@ -1,13 +1,22 @@
 # - title: "<TITLE>"
 #   description: "<EYE-CATCHER-DESCRIPTION>"
 #   date: yyyy-mm-dd
-#   component: API|Agent|UI|Gateway|Shop|Docu|Client Libraries|Integrations|Reporting
+#   component: API|Agent|UI|Customer Portal|Gateway|Shop|Docu|Client Libraries|Integrations|Reporting
 #   features:
 #    - added: Lorem ipsum dolor sit amet
 #    - updated: Ut enim ad minim veniam
 #    - fixed: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
+
+- title: "NetLicensing UI and Customer Portal maintenance release"
+  description: "Your security is our top priority! We've just released a vital maintenance update that patches some vulnerabilities in the libraries we use. These fixes ensure your data remains safe and sound."
+  date: 2023-08-24
+  component: UI, Customer Portal
+  features:
+   - updated: Update NetLicensing UI libraries
+   - updated: Update NetLicensing Customer Portal libraries
+  url: https://ui.netlicensing.io
 
 - title: "Fix customer alias handling in the NetLicensing Shop"
   description: "We have resolved an issue related to the NetLicensing Shop. The problem was related to the handling of licensee aliases, which occasionally led to errors during the checkout process. You can now experience a smoother and error-free checkout process when using the NetLicensing Shop."
