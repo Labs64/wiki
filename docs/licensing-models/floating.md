@@ -63,6 +63,9 @@ On validation, this licensing model requires the following [validate parameters]
     -   **`checkOut`** - check out a session and assign it an identifier `<sessionId>`. If session with given identifier already checked out, its validity extended.
     -   **`checkIn`** - check in session with identifier `<sessionId>`, returning it to the pool of available sessions.
 
+To modify the "maxCheckoutValidity" module parameter, simply include the following:
+-   **`maxCheckoutValidityN=<maxCheckoutValidity>`** `<maxCheckoutValidity>` - This value represents the desired floating license maximum checkout validity, specified in seconds.
+
 ### Validation returns values:
 
 -   `Boolean` **`valid`** - **`true`** if action is **`checkOut`** and operation succeeds, hence the product use is allowed. **`false`** on not successful checkout or when action is **`checkIn`**.
