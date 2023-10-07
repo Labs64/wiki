@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "New Pricing Table Editor in License View"
+  description: "Managing your pricing plans has never been more convenient. With this update, you can effortlessly select the customer's pricing plan or customize the chosen plan according to the unique requirements of each customer."
+  date: 2023-10-06
+  component: UI, Customer Portal
+  features:
+   - updated: Revamped license detail View
+   - added: Enhanced license detail View with the newly enabled Pricing Table editor
+  image: assets/images/changelog/netlicensing-license-pricing-table.gif
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing UI and Customer Portal maintenance release"
   description: "Your security is our top priority! We've just released a vital maintenance update that patches some vulnerabilities in the libraries we use. These fixes ensure your data remains safe and sound."
   date: 2023-08-24
