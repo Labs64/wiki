@@ -15,6 +15,7 @@
   component: Client Libraries
   features:
    - added: Enable offline license file support for NetLicensing C# Client
+   - updated: Updated: NuGet 'NetLicensingClient-csharp' package
   url: https://github.com/Labs64/NetLicensingClient-csharp/releases/tag/2.6.0
 
 - title: "New Pricing Table Editor in License View"
