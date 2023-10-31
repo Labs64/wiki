@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing maintenance and security improvements"
+  description: "We addressed and fixed some minor but annoying defects and made our licensing services more stable and secure."
+  date: 2023-10-31
+  component: UI
+  features:
+   - fixed: Main currency reset upon vendor profile profile
+   - fixed: Logo image upload form overflows out of the box
+   - fixed: Wrong terms accept date used on vendor registration
+   - fixed: Fix cypress vulnerability 
+  url: https://ui.netlicensing.io
+
 - title: "Offline License File Support for NetLicensing C# Client"
   description: "Provide seamless activation experiences to your users, whether they are online or offline. No more interruptions due to connectivity issues – your users can enjoy your applications anytime, anywhere."
   date: 2023-10-24
