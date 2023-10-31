@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Offline License File Support for NetLicensing C# Client"
+  description: "Provide seamless activation experiences to your users, whether they are online or offline. No more interruptions due to connectivity issues – your users can enjoy your applications anytime, anywhere."
+  date: 2023-11-01
+  component: Client Libraries
+  features:
+   - updated: Enable offline license file support #39
+   - fixed: parse licenseeNumber property in the offline license file
+  url: https://github.com/Labs64/NetLicensingClient-csharp/releases/tag/2.6.3
+
 - title: "NetLicensing maintenance and security improvements"
   description: "We addressed and fixed some minor but annoying defects and made our licensing services more stable and secure."
   date: 2023-10-31
@@ -27,7 +36,7 @@
   features:
    - added: Enable offline license file support for NetLicensing C# Client
    - updated: Update NuGet 'NetLicensingClient-csharp' package
-  url: https://github.com/Labs64/NetLicensingClient-csharp/releases/tag/2.6.0
+  url: https://github.com/Labs64/NetLicensingClient-csharp/releases/tag/2.6.3
 
 - title: "New Pricing Table Editor in License View"
   description: "Managing your pricing plans has never been more convenient. With this update, you can effortlessly select the customer's pricing plan or customize the chosen plan according to the unique requirements of each customer."
