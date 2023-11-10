@@ -42,7 +42,7 @@ Currently, response signing setup is only possible via direct call to the NetLic
 
 ### 1. Create public/private RSA key pair
 NetLicensing currently only supports RSA algorithm for the keys, we recommend to use at least 2048 bits key length. Other algorithms may
-be added in the future. The key should be in PEM format, without any additional text information.
+be added in the future. The key should be in PKCS#8 PEM format, without any additional text information.
 
 <div>Generating key pair</div>
 {: .code-example .ml-5 .code-header }
@@ -60,7 +60,7 @@ wvc3k5g5kqc=
 
 ### 2. Create an API Key with the attached RSA private key
 
-Create a token with the type `APIKEY`, setting the property `privateKey` to the content of your private key (PEM headers, footers,
+Create a token with the type `APIKEY`, setting the property `privateKey` to the content of your private key (headers, footers,
 and line breaks can be omitted). Since this API Key will only be used for the licensee validate call, also limit its access
 by assigning the 'ROLE_APIKEY_LICENSEE' role, although it is not required for the signature.
 
