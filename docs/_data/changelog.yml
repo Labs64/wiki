@@ -9,6 +9,21 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Improve usability for Pricing Table and Rental licensing models"
+  description: "We implemented substantial enhancements to elevate the user interface usability for both pricing table and rental licensing models."
+  date: 2023-12-19
+  component: UI, Customer Portal
+  features:
+   - updated: Enhance [Pricing Table](https://netlicensing.io/wiki/pricing-table) license edit view
+   - updated: Optimize usability of [Rental](https://netlicensing.io/wiki/rental) model
+   - fixed: Update dependencies to address known vulnerabilities
+   - fixed: Resolve product logo image upload issues for large images
+   - fixed: Rectify currency reset to EUR upon vendor profile update
+   - updated: Review and refine warning level labels
+   - updated: Provide link for new [community discussions](https://github.com/orgs/Labs64/discussions?discussions_q=) at GitHub
+  image: assets/images/changelog/netlicensing-rent-a-tesla.png
+  url: https://ui.netlicensing.io
+
 - title: "Offline License File Support for NetLicensing C# Client"
   description: "Provide seamless activation experiences to your users, whether they are online or offline. No more interruptions due to connectivity issues – your users can enjoy your applications anytime, anywhere."
   date: 2023-11-01
