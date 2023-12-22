@@ -9,6 +9,26 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing festive X-mas release 2023"
+  description: "We are excited to present the festive X-mas release of 2023, which brings a comprehensive set of improvements, enhancements, and bug fixes to elevate your experience with our licensing services. In this release, our focus has been on fortifying the system's security, introducing new features to enhance notification framework, and addressing key issues reported by our customers."
+  date: 2023-12-22
+  component: API, Agent, Shop, Client Libraries
+  features:
+   - added: Added support for Warning Level change notifications, providing more visibility and control over customer status change warnings
+   - updated: Updated dependencies to address known vulnerabilities, enhancing the overall security of the system
+   - updated: Revamped all NetLicensing [client libraries](https://netlicensing.io/wiki/client-libraries) to meet the latest standards in security and functionality, ensuring a seamless integration with enhanced service improvements
+   - fixed: Resolved an issue causing an Error 500 on the non-existing agent endpoint
+   - fixed: Fixed the validation of dry-run pricing plans without a start date
+   - fixed: Corrected the terms acceptDate in the vendor profile at registration
+   - fixed: Addressed a NullPointer issue in the order confirmation process
+   - fixed: Fixed the possibility of creating two notifications with the same number
+   - fixed: Resolved null payload for an empty notification payload field
+   - updated: Improved the handling of invalid aliases in Shop
+   - updated: Enhanced the signed validation responses for private keys created on Windows
+   - updated: And, to cap it all off, NetLicensing is now adorned in festive attire for the holiday season!
+  image: assets/images/changelog/netlicensing-notification-warninglevel.png
+  url: https://ui.netlicensing.io/#/settings?tab=notifications
+
 - title: "Improve usability for Pricing Table and Rental licensing models"
   description: "We implemented substantial enhancements to elevate the user interface usability for both pricing table and rental licensing models."
   date: 2023-12-19
