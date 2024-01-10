@@ -9,6 +9,14 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Rental model usability"
+  description: "A small bug in the NetLicensing Management Console has been fixed, and the usability of the Rental model has been improved."
+  date: 2024-01-10
+  component: UI
+  features:
+   - fixed: Resolved the issue of the parent feature belonging to another licensee being displayed during the time volume license creation for the [Rental model](https://netlicensing.io/wiki/rental)
+  url: https://netlicensing.io/wiki/rental
+
 - title: "NetLicensing festive X-mas release 2023"
   description: "We are excited to present the festive X-mas release of 2023, which brings a comprehensive set of improvements, enhancements, and bug fixes to elevate your experience with our licensing services. In this release, our focus has been on fortifying the system's security, introducing new features to enhance notification framework, and addressing key issues reported by our customers."
   date: 2023-12-22
