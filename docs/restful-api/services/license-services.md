@@ -202,18 +202,17 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseeNumber (string) - <span>licenseeNumber</span> to assign new license object.</p>
-<p>licenseTemplateNumber (string) - <span>licenseTemplateNumber</span> to assign new license object. </p>
+<td><p><span style="color: rgb(0,0,0);">licenseeNumber (string) - <span>licenseeNumber</span></span> to assign new license object.</p>
+<p><span style="color: rgb(0,0,0);">licenseTemplateNumber (string) - <span>licenseTemplateNumber</span></span> to assign new license object.<span style="color: rgb(0,0,0);"> </span></p>
 <p>number (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed.</p>
 <p>active (boolean) - If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process.</p>
 <p>name (string) - Name for the licensed item. Set from license template on creation, if not specified explicitly. Optional.</p>
-<p>price (double) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
+<p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
 <p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
 <p>- EUR       - Euro currency for the license price</p>
 <p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p>
-<p>parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</p>
-<p>timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</p></td>
-<p>timeVolumePeriod (string) - indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</p></td>
+<p><span style="color: rgb(0,0,0);">parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</span></p>
+<p><span style="color: rgb(0,0,0);">timeVolume (string) - Mandatory for 'TIMEVOLUME' license type. Optional.</span></p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -294,11 +293,10 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>number (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed. Optional.</p>
 <p>active (boolean) - If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process. Optional.</p>
 <p>name (string) - Name for the licensed item. Set from license template on creation, if not specified explicitly. Optional.</p>
-<p>startDate (<span>date-time</span>) - for TIMEVOLUME licenseType</p>
-<p>parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</p>
-<p>timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</p></td>
-<p>timeVolumePeriod (string) - indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</p></td>
-<p>price (double) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
+<p><span style="color: rgb(0,0,0);">startDate (<span>date-time</span>) - for TIMEVOLUME licenseType</span></p>
+<p><span style="color: rgb(0,0,0);">parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</span></p>
+<p><span style="color: rgb(0,0,0);">timeVolume (string) - Mandatory for 'TIMEVOLUME' license type. Optional.</span></p>
+<p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
 <p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
 <p>- EUR       - Euro currency for the license price</p>
 <p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p></td>
