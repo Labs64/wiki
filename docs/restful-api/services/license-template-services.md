@@ -208,7 +208,8 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p><span style="color: rgb(0,0,0);">name (string) - L</span>icense template name to create license template object.</p>
 <p><span style="color: rgb(0,0,0);"><span>active (boolean) - If set to 'false', the license template is disabled. Licensee can not obtain any new licenses off this license template.</span> </span></p>
 <p>licenseType (<span style="color: rgb(0,0,0);">Array[string]</span>) - Type of licenses created from this license template. Supported types: "FEATURE", "TIMEVOLUME", "FLOATING", "QUANTITY".</p>
-<p><span style="color: rgb(0,0,0);">timeVolume <span>(string) </span>- Mandatory for 'TIMEVOLUME' license type. </span></p>
+<p><span style="color: rgb(0,0,0);">timeVolume <span>(number) </span>- Mandatory for 'TIMEVOLUME' license type. </span></p>
+<p>timeVolumePeriod (string) - indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</p></td>
 <p><span style="color: rgb(0,0,0);">maxSessions <span>(string) </span>- Mandatory for 'FLOATING' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">quantity (<span>string</span>) - </span><span style="color: rgb(0,0,0);">Mandatory for 'QUANTITY' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">price (<span>double</span>) - Price for the license. If &gt;0, it must always be accompanied by the currency specification. Optional.</span><span style="color: rgb(0,0,0);"> </span></p>
@@ -300,7 +301,8 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p><span style="color: rgb(0,0,0);">name (string) - L</span>icense template name to create license template object.</p>
 <p><span style="color: rgb(0,0,0);">active (boolean) - If set to 'false', the license template is disabled. Licensee can not obtain any new licenses off this license template. </span></p>
 <p>licenseType (<span style="color: rgb(0,0,0);">Array[string]</span>) - Type of licenses created from this license template. Supported types: "FEATURE", "TIMEVOLUME", "FLOATING", "QUANTITY".</p>
-<p><span style="color: rgb(0,0,0);">timeVolume (string) - Mandatory for 'TIMEVOLUME' license type. </span></p>
+<p><span style="color: rgb(0,0,0);">timeVolume (bumber) - Mandatory for 'TIMEVOLUME' license type. </span></p>
+<p>timeVolumePeriod (string) - indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</p></td>
 <p><span style="color: rgb(0,0,0);">maxSessions (string) - Mandatory for 'FLOATING' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">quantity (string) - </span><span style="color: rgb(0,0,0);">Mandatory for 'QUANTITY' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">price (double) - Price for the license. If &gt;0, it must always be accompanied by the currency specification. Optional.</span><span style="color: rgb(0,0,0);"> </span></p>
