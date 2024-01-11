@@ -212,7 +212,10 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>- EUR       - Euro currency for the license price</p>
 <p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p>
 <p><span style="color: rgb(0,0,0);">parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">timeVolume (string) - Mandatory for 'TIMEVOLUME' license type. Optional.</span></p></td>
+<p><span style="color: rgb(0,0,0);">timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</span></p>
+<p><span style="color: rgb(0,0,0);">timeVolumePeriod (string) - Indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</span></p>
+</td>
+</td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -295,7 +298,8 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>name (string) - Name for the licensed item. Set from license template on creation, if not specified explicitly. Optional.</p>
 <p><span style="color: rgb(0,0,0);">startDate (<span>date-time</span>) - for TIMEVOLUME licenseType</span></p>
 <p><span style="color: rgb(0,0,0);">parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">timeVolume (string) - Mandatory for 'TIMEVOLUME' license type. Optional.</span></p>
+<p><span style="color: rgb(0,0,0);">timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</span></p>
+<p><span style="color: rgb(0,0,0);">timeVolumePeriod (string) - Indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</span></p>
 <p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
 <p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
 <p>- EUR       - Euro currency for the license price</p>
