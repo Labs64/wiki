@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Update RESTful API documentation for LicenseService"
+  description: "We updated LicenseService documentation, including a description of the timeVolumePeriod parameter. This parameter allows developers to specify the time period over which license usage is aggregated, enabling more granular control over license enforcement."
+  date: 2024-01-11
+  component: Docu
+  features:
+   - updated: provide description of the 'timeVolumePeriod' parameter in the RESTful API / License Service documentation
+   - updated: provide description of the 'timeVolumePeriod' parameter in the RESTful API / License Template Services documentation
+   - added: describe License create and update methods in the NetLicemsing Community [How to create and update Licenses using NetLicensing RESTful API](https://github.com/orgs/Labs64/discussions/134)
+  url: https://netlicensing.io/wiki/license-services
+
 - title: "Rental model usability"
   description: "A small bug in the NetLicensing Management Console has been fixed, and the usability of the Rental model has been improved."
   date: 2024-01-10
