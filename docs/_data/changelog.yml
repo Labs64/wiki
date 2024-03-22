@@ -22,7 +22,7 @@
    - fixed: Warning level notifications deliver empty warningLevel property
    - updated: Improved log outputs for on-prem installations
    - updated: Revisited vendor access rules (e.g., customer portal and notifications) based on the latest NetLicensing pricing plan adjustments
-  url: https://netlicensing.io
+  url: https://netlicensing.io/wiki/bundle-services
 
 - title: "Update RESTful API documentation for LicenseService"
   description: "We updated LicenseService documentation, including a description of the timeVolumePeriod parameter. This parameter allows developers to specify the time period over which license usage is aggregated, enabling more granular control over license enforcement."
