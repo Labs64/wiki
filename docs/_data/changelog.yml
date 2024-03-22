@@ -9,6 +9,21 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.8.21"
+  description: "This release introduces exciting new features and enhancements to streamline your experience with our product, such as Enhanced License Bundling, allowing vendors to group models and packages within a single license bundle, offering enhanced flexibility and control over licensing configurations. Our new feature, Backup and Restore, enables vendors to save the entire product configuration as a downloadable/uploadable file, ensuring effortless recovery and migration of settings while bolstering data security."
+  date: 2024-03-19
+  component: API, UI, Customer Portal, Client Libraries
+  features:
+   - added: Group models & packages in a license bundle
+   - added: Backup and restore the entire product configuration as a downloadable/uploadable file
+   - added: Return licensee custom properties in the offline validation results
+   - fixed: Rental model parent features for another licensee are visible
+   - fixed: Addressed several vulnerability reports and issues
+   - fixed: Warning level notifications deliver empty warningLevel property
+   - updated: Improved log outputs for on-prem installations
+   - updated: Revisited vendor access rules (e.g., customer portal and notifications) based on the latest NetLicensing pricing plan adjustments
+  url: https://netlicensing.io
+
 - title: "Update RESTful API documentation for LicenseService"
   description: "We updated LicenseService documentation, including a description of the timeVolumePeriod parameter. This parameter allows developers to specify the time period over which license usage is aggregated, enabling more granular control over license enforcement."
   date: 2024-01-11
