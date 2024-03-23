@@ -33,7 +33,7 @@ aux_links:
 heading_anchors: true
 
 # Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2010 - 2023 <a href=\"https://www.labs64.com\">Labs64 GmbH</a>"
+footer_content: "Copyright &copy; 2010 - 2024 <a href=\"https://www.labs64.com\">Labs64 GmbH</a>"
 # footer links for the page bottom navigation
 footer_links:
   "GuideChimp - Interactive Guided Tours":
