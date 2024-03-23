@@ -25,6 +25,8 @@ aux_links:
     - "//netlicensing.io"
   "Management Console":
     - "//ui.netlicensing.io"
+  "Status":
+    - "//status.netlicensing.io"
 
 # Heading anchor links appear on hover over h1-h6 tags in page content
 # allowing users to deep link to a particular heading on a page.
