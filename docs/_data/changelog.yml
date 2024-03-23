@@ -22,6 +22,7 @@
    - fixed: Warning level notifications deliver empty warningLevel property
    - updated: Improved log outputs for on-prem installations
    - updated: Revisited vendor access rules (e.g., customer portal and notifications) based on the latest NetLicensing pricing plan adjustments
+  image: assets/images/changelog/netlicensing-bundles.png
   url: https://netlicensing.io/wiki/bundle-services
 
 - title: "Update RESTful API documentation for LicenseService"
