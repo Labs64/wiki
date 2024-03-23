@@ -3,7 +3,7 @@ layout: default
 title: Bundle Services
 parent: Services
 grand_parent: NetLicensing API (RESTful)
-nav_order: 10
+nav_order: 55
 description: "Bundle Services"
 permalink: bundle-services
 ---

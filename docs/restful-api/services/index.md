@@ -58,21 +58,26 @@ Most of the applications will use one of the existing [wrapper libraries](client
 <td><span markdown="1">`BASIC AUTH` `APIKEY`</span></td>
 </tr>
 <tr class="even">
+<td><a href="bundle-services">Bundle Services</a></td>
+<td><span markdown="1">`LIST` `GET` `CREATE` `UPDATE` `DELETE` `OBTAIN`</span></td>
+<td><span markdown="1">`BASIC AUTH` `APIKEY`</span></td>
+</tr>
+<tr class="odd">
 <td><a href="transaction-services">Transaction Services</a></td>
 <td><span markdown="1">`LIST` `GET` `CREATE` `UPDATE`</span></td>
 <td><span markdown="1">`BASIC AUTH` `APIKEY`</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="token-services">Token Services</a></td>
 <td><span markdown="1">`LIST` `GET` `CREATE` `DELETE`</span></td>
 <td><span markdown="1">`BASIC AUTH` `APIKEY`</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><a href="payment-method-services">Payment Method Services</a></td>
 <td><span markdown="1">`LIST` `GET` `UPDATE`</span></td>
 <td><span markdown="1">`BASIC AUTH` `APIKEY`</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><a href="utility-services">Utility Services</a></td>
 <td><span markdown="1">`LIST`</span></td>
 <td><span markdown="1">`BASIC AUTH` `APIKEY`</span></td>
