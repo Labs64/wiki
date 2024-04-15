@@ -744,7 +744,7 @@ Content-Type: application/x-www-form-urlencoded
 ```
 {: .ml-5 }
 
-<div>Request</div>
+<div>Response</div>
 {: .code-example .ml-5 .code-header }
 ```http
 HTTP/1.1 204 No Content
