@@ -37,7 +37,7 @@ Return a list of all configured bundles for the current vendor.
 <td>
 <ul>
 <li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
+<li><a href="security">API Key Identification</a></li>
 <li>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
