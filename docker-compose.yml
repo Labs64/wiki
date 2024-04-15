@@ -6,6 +6,6 @@ services:
     volumes:
       - "./docs:/srv/jekyll"
     working_dir: /srv/jekyll
-    command: jekyll serve --watch --incremental --verbose --drafts --future --config _config.yml
+    command: bash -c "gem install webrick && jekyll serve --watch --incremental --verbose --drafts --future --config _config.yml"
     ports:
       - "4000:4000"

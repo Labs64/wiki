@@ -37,8 +37,7 @@ Return a list of all configured bundles for the current vendor.
 <td>
 <ul>
 <li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a></li>
-<li>
+<li><a href="security">API Key Identification</a>
 <ul>
 <li>ROLE_APIKEY_ADMIN</li>
 <li>ROLE_APIKEY_MAINTENANCE</li>
@@ -205,8 +204,6 @@ Accept: application/xml
 
 Creates a new bundle.
 
- 
-
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -239,10 +236,10 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>active (boolean) - If set to false, the bundle is disabled. Licensees can not obtain new licenses.</p>
 <p>name (string) - Bundle name. Identifies the bundle for the end customer.</p>
 <p>description (string) - Bundle description. Optional.</p>
-<p><span style="color: rgb(0,0,0);">price (<span>double</span>) - Price for the bundle. If &gt;0, it must always be accompanied by the currency specification. Optional.</span><span style="color: rgb(0,0,0);"> </span></p>
+<p>price (double) - Price for the bundle. If &gt;0, it must always be accompanied by the currency specification. Optional.</p>
 <p>currency (enum) - specifies currency for the bundle price. Check data types to discover which currencies are supported. Optional.</p>
 <p>- EUR       - Euro currency for the bundle price</p>
-<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p>
+<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -324,16 +321,16 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p>active (boolean) - If set to false, the bundle is disabled. Licensees can not obtain new licenses.</p>
 <p>name (string) - Bundle name. Identifies the bundle for the end customer.</p>
 <p>description (string) - Bundle description. Optional.</p>
-<p>price (<span>double</span>) - Price for the bundle. If &gt;0, it must always be accompanied by the currency specification. Optional.</p>
+<p>price (double) - Price for the bundle. If &gt;0, it must always be accompanied by the currency specification. Optional.</p>
 <p>currency (enum) - specifies currency for the bundle price. Check data types to discover which currencies are supported. Optional.</p>
 <p>- EUR       - Euro currency for the bundle price</p>
-<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p>
+<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
 <td><p>200 - Successful request<br />
 400 - Malformed or illegal request<br />
-<span>402 - <span>Not allowed within your pricing plan</span></span><br />
+402 - Not allowed within your pricing plan<br />
 403 - Access is denied<br />
 404 - Resource not found<br />
 500 - Internal service error</p></td>
