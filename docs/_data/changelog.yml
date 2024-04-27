@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Notifications on the Usage Tab"
+  description: "With the Notifications gauge added to the Usage tab, you gain instant visibility into your usage metrics and limits, empowering you to stay informed and in control."
+  date: 2024-04-25
+  component: UI
+  features:
+   - added: Show Notifications on the Usage and Limits tab
+   - updated: Update NetLicensing UI libraries
+   - updated: Update NetLicensing Customer Portal libraries
+  image: assets/images/changelog/netlicensing-usage-limits-notifications.png
+  url: https://netlicensing.io/wiki/bundle-services
+
 - title: "NetLicensing 2.8.21"
   description: "This release introduces exciting new features and enhancements to streamline your experience with our product, such as Enhanced License Bundling, allowing vendors to group models and packages within a single license bundle, offering enhanced flexibility and control over licensing configurations. Our new feature, Backup and Restore, enables vendors to save the entire product configuration as a downloadable/uploadable file, ensuring effortless recovery and migration of settings while bolstering data security."
   date: 2024-03-19
