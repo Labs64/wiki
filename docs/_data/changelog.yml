@@ -18,7 +18,7 @@
    - updated: Update NetLicensing UI libraries
    - updated: Update NetLicensing Customer Portal libraries
   image: assets/images/changelog/netlicensing-usage-limits-notifications.png
-  url: https://netlicensing.io/wiki/bundle-services
+  url: https://ui.netlicensing.io/#/usage
 
 - title: "NetLicensing 2.8.21"
   description: "This release introduces exciting new features and enhancements to streamline your experience with our product, such as Enhanced License Bundling, allowing vendors to group models and packages within a single license bundle, offering enhanced flexibility and control over licensing configurations. Our new feature, Backup and Restore, enables vendors to save the entire product configuration as a downloadable/uploadable file, ensuring effortless recovery and migration of settings while bolstering data security."
