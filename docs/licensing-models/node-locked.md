@@ -10,10 +10,10 @@ permalink: node-locked
 {{ page.title }}
 ===========
 
--   [Overview](#Node-Locked-Overview)
--   [License Templates](#Node-Locked-LicenseTemplates)
--   [Licenses](#Node-Locked-Licenses)
--   [Validation](#Node-Locked-Validation)
+-   [Overview](#overview)
+-   [License Templates](#license-templates)
+-   [Licenses](#licenses)
+-   [Validation](#validation)
 
 Overview
 ========
