@@ -50,6 +50,9 @@ Besides, every session that is checked out is listed as
 
 -   [`Timestamp`](restful-api#data-types) **`sessionId_<sessionId>`** custom property. Session can be forcibly checked in on demand by removing the corresponding **`sessionId_<sessionId>`** property.
 
+**Please Note:** NetLicensing services and client libraries do not include session ID or fingerprint generation capabilities. It is the responsibility of the vendor to create a unique session identifier. For guidance, please refer to the best practices for [generating machine IDs and fingerprints](faq-how-to-generate-machine-fingerprint#machine-id--fingerprint-libraries).
+
+
 Validation
 ----------
 

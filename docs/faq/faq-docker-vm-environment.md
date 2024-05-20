@@ -57,4 +57,4 @@ The VMs will be identified by the UUID and will check-out a free seat to be able
 
 ### Machine ID & Fingerprint libraries
 
-In this [FAQ article](faq-how-to-generate-machine-fingerprint), you can find some third-party libraries that simplify the generation of a unique fingerprint or hardware ID.
+In this [FAQ article](faq-how-to-generate-machine-fingerprint#machine-id--fingerprint-libraries), you can find some third-party libraries that simplify the generation of a unique fingerprint or hardware ID.

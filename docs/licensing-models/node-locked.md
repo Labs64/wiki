@@ -16,7 +16,7 @@ permalink: node-locked
 -   [Validation](#validation)
 
 Overview
-========
+--------
 
 **Node-Locked** licensing model binds product to a node specific secret, like hash of hardware related data, hardware id (dongle), user login data, or just a generated random string - feel free to invent your own sources for the secret. Important is that the same secret is presented for the same node on every validation. Certainly, it should be hard enough for a malicious user to fake this secret.
 
@@ -30,7 +30,7 @@ The model has two modes of operation, configurable in the product module setting
 | **Client**     | This mode is similar to the Predefined, but secrets must not be stored in advance, instead a secret provided in the *nodeSecret* parameter on [validate](licensee-services#validate-licensee) call will be stored if seen for the first time, and the number of already stored secrets is below the *quota*. This allows automatic locking to any secret provided by the licensee, typically hash of some HW related data (e.g. MAC address, CPU serial number, etc). This mode can be used with hardware dongle too: the dongle holds the secret, but it is only bound to the specific license on the first [validate](licensee-services#validate-licensee). |
 
 License Templates
-=================
+-----------------
 
 This licensing model requires one or more [license templates](object-model#license-template) of type QUANTITY, each specifying the quantity of allowed node secrets (via **`quota`** property) and a purchase price.
 
@@ -45,15 +45,17 @@ Specific properties:
 -   `Integer` **`quota`** (required) - specifies the quantity of node secrets, which is assigned by default to the licenses created off this template.
 
 Licenses
-========
+--------
 
 Specific properties:
 
 -   `Integer` **`quota`** (required) - specifies the quantity of nodeSecrets, provided by this license. Normally it is copied from the corresponding property of the license template, but can be changed later for each license individually. When multiple QUANTITY licenses purchased, the total quantity of nodeSecrets is the sum of **quota** of all active licenses.
 -   `String` **`nodeSecret<N>`** (where \<N\> is the number in range \[0..quota-1\]) - stores secrets for this license (up to **quota**).
 
+**Please Note:** NetLicensing services and client libraries do not include machine ID or fingerprint generation capabilities. It is the responsibility of the vendor to create a unique node identifier. For guidance, please refer to the best practices for [generating machine IDs and fingerprints](faq-how-to-generate-machine-fingerprint#machine-id--fingerprint-libraries).
+
 Validation
-==========
+----------
 
 On validation, this licensing model uses the following [validate parameters](licensee-services#validate-licensee):
 

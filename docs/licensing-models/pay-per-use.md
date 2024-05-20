@@ -18,7 +18,7 @@ permalink: pay-per-use
     -   [Pre-payment mode](#pre-payment-mode)
 
 Overview
-========
+--------
 
 **Pay-per-Use** licensing model counts the use of credits associated with licenses. User buys one or more licenses for a certain total amount of credits, credits are written off according to the reported use. At any time user can get more credits by buying additional licenses.
 
@@ -35,7 +35,7 @@ In either case, NetLicensing keeps track of credits by a simple integer counters
 For better adapting to various scenarios, Pay-per-Use supports two modes of operation: *pre-payment* and *post-payment*. The mode is decided by arguments passed to the validate call, see the validation section below for details.
 
 License Templates
-=================
+-----------------
 
 To use this licensing model you must define one or more license templates of type QUANTITY, each specifying the credits amount (via **`quantity`** property) and a purchase price. Multiple license templates allow to configure discounts, e.g.:
 
@@ -48,7 +48,7 @@ Additional properties specific to the QUANTITY [license templates](object-model#
 -   `Integer` **`quantity`** (required) - specifies credits amount, which is assigned by default to the licenses created off this template.
 
 Licenses
-========
+--------
 
 Additional properties specific to the QUANTITY [licenses](object-model#license):
 
@@ -56,7 +56,7 @@ Additional properties specific to the QUANTITY [licenses](object-model#license)
 -   `Integer` **`usedQuantity`** (optional) - specifies the amount of used credits. When not present, it is equivalent to **`usedQuantity`**=0. This property is updated automatically according to the parameters passed to the validate call (see below). **`usedQuantity`** equal to **`quantity`** means all credits of this license are used up.
 
 Validation
-==========
+----------
 
 On validation, this licensing model uses the following [validate parameters](licensee-services#validate-licensee):
 
