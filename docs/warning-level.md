@@ -14,8 +14,8 @@ The NetLicensing Warning Level feature provides vendors with valuable metrics re
 Important Clarifications
 ------------------------
 
-- **Warning Level** vs. **Valid Parameter**: The Warning Level should not be confused with the `valid` parameter in the validation response. While the valid parameter represents the current validity of a specific licensing model for a given customer, the Warning Level offers an informative status of the licensing situation, highlighting potential or imminent under-licensing issues.
-- **Purpose**: The Warning Level is designed to be an indicator of the licensee's health and is not intended to replace the validation response. It serves solely as a supplementary metric to provide insights into licensing status. 
+- **Warning Level** vs. **Valid Status**: The Warning Level should not be confused with the `valid` status in the validation response. While the `valid` status indicates the current validity of a specific product module for a given customer at the time of the request, the Warning Level value provides information about potential or imminent changes in the licensing situation, highlighting any forthcoming under-licensing issues.
+- **Purpose**: The Warning Level is intended to act as an indicator of the licensee's health and is not meant to replace the validation response. It serves solely as a supplementary metric, providing an early warning if the customer's licensing situation is likely to change soon or requires immediate action.
 
 Statuses
 --------
