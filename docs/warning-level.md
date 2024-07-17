@@ -43,7 +43,7 @@ The `warningLevel` value is included in the [validation results](licensee-servic
 
 ### Get Licensee
 
-The `warningLevel` parameter provides a combined [result](licensee-services#get-licensee) of all product modules and their respective warning level statuses.
+The `warningLevel` value in the licensee object provides a combined [result](licensee-services#get-licensee) of all product modules and their respective warning levels. This is a cached value, and is not recalculated on the request - see the note in the "Supported Warning Levels" section above.
 
 **Example:**
 ```xml
