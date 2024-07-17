@@ -34,7 +34,7 @@ The Warning Level can be accessed via the following [RESTful API](restful-api) m
 
 ### Validation
 
-The `warningLevel` parameter is included in the [validation results](licensee-services#validate-licensee) for each product module.
+The `warningLevel` value is included in the [validation results](licensee-services#validate-licensee) for each product module.
 
 **Example:**
 ```xml
