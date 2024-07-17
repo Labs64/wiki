@@ -17,15 +17,15 @@ Important Clarifications
 - **Warning Level** vs. **Valid Status**: The Warning Level should not be confused with the `valid` status in the validation response. While the `valid` status indicates the current validity of a specific product module for a given customer at the time of the request, the Warning Level value provides information about potential or imminent changes in the licensing situation, highlighting any forthcoming under-licensing issues.
 - **Purpose**: The Warning Level is intended to act as an indicator of the licensee's health and is not meant to replace the validation response. It serves solely as a supplementary metric, providing an early warning if the customer's licensing situation is likely to change soon or requires immediate action.
 
-Statuses
+Supported Warning Levels
 --------
 
-The Warning Level is calculated during each validation request and is represented by the following statuses:
--	GREEN – the customer is licensed for all configured product modules
--	YELLOW – some licensing parameters are approaching under-licensed status
--	RED – some licensing parameters have reached under-licensed status
+The Warning Level can have one of the following values:
+- **GREEN (Licensed):** The customer is licensed for all configured product modules.
+- **YELLOW (Warning):** Some product modules are approaching under-licensed status.
+- **RED (Underlicensed):** Some product modules have reached under-licensed status.
 
-**Note:** The warning level status resets after a certain period, usually due to extended licensee inactivity or delayed validation requests. When this occurs, the customer status is shown as `GREY (undefined)`. You can force an update of the Warning Level by sending a validation request with the parameter `dryRun` set to `true`.
+**Note:** The warning level is calculated with each validation request from the customer and cached for a period of time. The value may be evicted from cache due to extended inactivity (no validation requests) or license changes since the last validation. In such cases, the warning level is not returned via API and is shown as grey-colored `Unknown` in the UI. To force an update, send a validation request with the `dryRun` parameter set to `true` (or click refresh symbol in the UI). Be aware that some licenses only activate on the first non-dry validation request, which may cause the warning level to be incorrectly reported as RED or YELLOW if updated via a dry validation.
 
 Access
 ------
