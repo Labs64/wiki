@@ -269,3 +269,12 @@ The logic is simple:
 -   When the amount of days remaining until expiration is more than "`yellowThreshold`", "`expirationWarningLevel`" == "`green`"
 -   When the amount of days remaining until expiration is more than "`redThreshold`", but less then or equal to the "`yellowThreshold`", "`expirationWarningLevel`" == "`yellow`"
 -   When the amount of days remaining until expiration is less then or equal to the "`redThreshold`", "`expirationWarningLevel`" == "`red`"
+
+Warning Levels
+--------------
+
+Below are the default [warning levels](warning-level) associated with this licensing model.
+
+| GREEN | YELLOW | RED |
+|:------|:-------|:----|
+| Time-volume not reached yellow threshold<br>AND<br>Time-volume not reached red threshold | Time-volume reached yellow threshold | No time-volume license associated with the feature license<br>OR<br>Time-volume license expired<br>OR<br>Time-volume reached red threshold |

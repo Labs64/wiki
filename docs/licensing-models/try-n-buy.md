@@ -99,3 +99,12 @@ Accept: application/xml
 </ns2:netlicensing>
 ```
 {: .ml-5 }
+
+Warning Levels
+--------------
+
+Below are the default [warning levels](warning-level) associated with this licensing model.
+
+| GREEN | YELLOW | RED |
+|:------|:-------|:----|
+| trialPeriodActive = true<br>AND<br>featureAquired = true | trialPeriodActive = true | trialPeriodActive = false<br>AND<br>featureAquired = false |
