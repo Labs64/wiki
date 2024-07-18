@@ -106,3 +106,12 @@ Accept: application/xml
 </netlicensing>
 ```
 {: .ml-5 }
+
+Warning Levels
+--------------
+
+Below are the default [warning levels](warning-level) associated with this licensing model.
+
+| GREEN | YELLOW | RED |
+|:------|:-------|:----|
+| timeUsed < 80% | timeUsed >= 80% | timeUsed = 100% |

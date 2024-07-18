@@ -135,3 +135,12 @@ productModuleNumber0=Floating-DEMO&sessionId0=SampleSessionId&action0=checkIn
 </netlicensing>
 ```
 {: .ml-5 }
+
+Warning Levels
+--------------
+
+Below are the default [warning levels](warning-level) associated with this licensing model.
+
+| GREEN | YELLOW | RED |
+|:------|:-------|:----|
+| sessionsUsed < 80% | sessionsTotal < 10 AND sessionsUsed >= sessionsTotal<br>OR<br>sessionsUsed >= 80% | sessionsTotal >= 10<br>AND<br>sessionsUsed >= sessionsTotal |

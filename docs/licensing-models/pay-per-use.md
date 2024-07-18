@@ -275,3 +275,12 @@ productModuleNumber0=MTEST-DEMO&reserveQuantity0=20
 </netlicensing> 
 ```
 {: .ml-5 }
+
+Warning Levels
+--------------
+
+Below are the default [warning levels](warning-level) associated with this licensing model.
+
+| GREEN | YELLOW | RED |
+|:------|:-------|:----|
+| remainingQuantity < 80% | remainingQuantity >= 80% | remainingQuantity = 100% |

@@ -83,3 +83,12 @@ Validation response example:
 </ns2:netlicensing>
 ```
 {: .ml-5 }
+
+Warning Levels
+--------------
+
+Below are the default [warning levels](warning-level) associated with this licensing model.
+
+| GREEN | YELLOW | RED |
+|:------|:-------|:----|
+| totalQuota > 0 | N/A | totalQuota = 0 |

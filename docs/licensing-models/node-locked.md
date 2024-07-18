@@ -127,3 +127,12 @@ productModuleNumber0=MTEST-DEMO&nodeSecret0=HardwareOrGeneratedSecret
 </ns2:netlicensing>
 ```
 {: .ml-5 }
+
+Warning Levels
+--------------
+
+Below are the default [warning levels](warning-level) associated with this licensing model.
+
+| GREEN | YELLOW | RED |
+|:------|:-------|:----|
+| nodeSecretsUsed < 80% | nodeSecretsTotal < 10 AND nodeSecretsUsed >= nodeSecretsTotal<br>OR<br>nodeSecretsUsed >= 80% | nodeSecretsTotal >= 10<br>AND<br>nodeSecretsUsed >= nodeSecretsTotal |
