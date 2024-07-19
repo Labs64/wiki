@@ -9,6 +9,22 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.10.0"
+  description: "This significant release introduces a range of new features, enhancements, and bug fixes. We've upgraded the NetLicensing technology stack and implemented several highly requested features, including improved Shop token support for bundle acquisitions to enhance purchasing experience for users."
+  date: 2024-07-19
+  component: API, UI, Customer Portal, Client Libraries
+  features:
+   - added: The Shop token now supports bundle acquisitions, enhancing the purchasing experience for users
+   - updated: Upgraded the entire codebase to the new technology stack and updated to the latest versions of all libraries, ensuring improved performance and security
+   - fixed: Resolved issues with bundles for the rental licensing model, ensuring proper functionality
+   - fixed: Fixed subscription grace period logic that broke license creation or updates
+   - fixed: Removed unsafe-eval from the Management Console headers to enhance security
+   - fixed: Fixed issues with utility services for on-premises setups
+   - updated: Revisited and updated the bundles documentation for clarity and completeness
+   - added: Added documentation for the Notifications feature
+   - updated: Updated the subscription documentation to include details about the Grace Period feature
+  url: https://netlicensing.io/wiki/bundle-services
+
 - title: "Notifications on the Usage Tab"
   description: "With the Notifications gauge added to the Usage tab, you gain instant visibility into your usage metrics and limits, empowering you to stay informed and in control."
   date: 2024-04-25
