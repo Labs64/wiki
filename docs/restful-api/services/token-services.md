@@ -235,6 +235,9 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 - <i>tokenType=APIKEY</i> - specifies the scope of validity of the APIKey; the only licensee with the given number can be validated using this APIKey<br />
 - <i>tokenType=ACTION</i> - identifies licensee for whom action token will be created
 </p>
+<p>expirationTime (optional) - Specify a custom expiration time for the token. If not provided, the default expiration time of 30 minutes will be applied.</p>
+<p>bundleNumber (optional) - Specify the bundle number to display on the Shop checkout page.</p>
+<p>bundlePrice (optional) - Specify the customer's individual bundle price. The default bundle price will be used if no bundlePrice is set.</p>
 <p>action (enum) - Action to be executed; only for tokenType=ACTION<br />
 - <i>licenseeLogin</i> - action to open <a href="customer-portal">Customer Portal</a>
 </p>
