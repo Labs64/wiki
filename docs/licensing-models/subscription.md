@@ -13,6 +13,7 @@ permalink: subscription
 -   [Overview](#overview)
 -   [License templates](#license-templates)
 -   [Licenses](#licenses)
+-   [Grace Period](#grace-period)
 -   [Validation](#validation)
 
 Overview
