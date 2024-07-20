@@ -13,7 +13,7 @@ NetLicensing Shop
 
 NetLicensing Shop is a white-label licensing e-commerce solution, which offers your customers easy licenses acquisition. NetLicensing products, modules and packages configuration will be used to show your customers available licensing options.
 
-### Access Shop
+## Access Shop
 
 To use NetLicensing Shop, [Shop Token](token-services#create-token) need to be created; `shopURL` parameter in the response can be used to forward the customer to NetLicensing Shop.
 
@@ -51,11 +51,55 @@ Accept: application/xml
 ```
 {: .ml-5 }
 
-### Customization
+## Shop Token Types
+
+The NetLicensing Shop supports various token types, allowing vendors to implement specific license acquisition flows and improve the shopping experience for their customers.
+
+### Licensee Shop Token
+
+This is the default token type, created for a specific licensee/customer. The identified customer can choose from the available modules and licenses. The aquired licenses will be assigned to the customer.
+
+<div>Request Parameters</div>
+{: .code-example .ml-5 .code-header }
+```http
+tokenType=SHOP&licenseeNumber=%LICENSEE_NUMBER%
+```
+{: .ml-5 }
+
+### Bundle Shop Token
+
+This token type can be created for a specific bundle, allowing customers to purchase only that bundle. The licenses acquired within the bundle will then be assigned to the customer.
+
+<div>Request Parameters</div>
+{: .code-example .ml-5 .code-header }
+```http
+tokenType=SHOP&licenseeNumber=%LICENSEE_NUMBER%&bundleNumber=%BUNDLE_NUMBER%&bundlePrice=%BUNDLE_PRICE%
+```
+{: .ml-5 }
+
+### Permanent Shop Token
+
+This non-expiring token type allows the acquisition of predefined shopping cart items (such as a Pricing Table plan) identified by one or more “licenseTemplateNumber_N” values.
+
+A permanent token is created when “licenseeNumber” is omitted and the following custom properties are included in the token properties at creation:
+
+- "productNumber" - the product to be purchased.
+- "predefinedShoppingItem" - the name of the shopping cart item to be purchased.
+- "licenseTemplateNumber_N" - the license template number(s), where N is an incrementing index starting from “1”.
+
+<div>Request Parameters</div>
+{: .code-example .ml-5 .code-header }
+```http
+tokenType=SHOP&productNumber=%PRODUCT_NUMBER%&licenseTemplateNumber=%LICENSETEMPLATE_NUMBER%&predefinedShoppingItem=Plan%20Name
+```
+{: .ml-5 }
+
+
+## Customization
 
 You can customize NetLicensing Shop at **Settings > Shop Customization** to display your brand elements: logo, legal information and links, and custom texts.
 
-### Payment Methods
+## Payment Methods
 
 On the **Settings > Payment Methods** page you can configure [payment methods](payment-service-providers) to be used during the checkout process.
 
@@ -63,7 +107,7 @@ NetLicensing Shop works in the single currency mode. System currency for the ent
 
 **Note:** In case, no payments method is activated and configured, NetLicensing checkout will be executed without payment step and selected licenses will be assigned to the customer. This scenario can be used for non-profit or to test the checkout process.
 
-### Alternatives
+## Alternatives
 
 NetLicensing Shop is an optional component.
 Below you will find alternative options on how new licenses can be added to the customer profile.
