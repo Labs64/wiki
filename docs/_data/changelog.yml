@@ -15,7 +15,7 @@
   component: API, UI, Customer Portal, Client Libraries
   features:
    - added: The Shop token now supports bundle acquisitions, enhancing the purchasing experience for users
-   - added: Customizable expirationTime for the Shop token, allowing vendors to set the individual token's expiration time
+   - added: Customizable 'expirationTime' for the Shop token, allowing vendors to set the individual token's expiration time
    - updated: Upgraded the entire codebase to the new technology stack and updated to the latest versions of all libraries, ensuring improved performance and security
    - fixed: Resolved issues with bundles for the rental licensing model, ensuring proper functionality
    - fixed: Fixed subscription grace period logic that broke license creation or updates
