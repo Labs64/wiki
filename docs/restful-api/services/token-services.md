@@ -226,7 +226,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <td>
 <p>tokenType (enum) - Token type to be generated<br />
 - <i>DEFAULT</i> - default one-time token (will be expired after first request)<br />
-- <i>SHOP</i> - shop token is used to redirect customer to the <a href="netlicensing-shop">NetLicensing Shop</a> ('licenseeNumber' is mandatory)<br />
+- <i>SHOP</i> - shop token is used to redirect customer to the <a href="netlicensing-shop">NetLicensing Shop</a><br />
 - <i>APIKEY</i> - APIKey token<br />
 - <i>ACTION</i> - Action token (e.g. access token for the <a href="customer-portal">Customer Portal</a>)
 </p>
