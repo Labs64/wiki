@@ -53,7 +53,7 @@ Accept: application/xml
 
 ## Shop Token Kind
 
-The NetLicensing Shop supports various token types, allowing vendors to implement specific license acquisition flows and improve the shopping experience for their customers.
+The NetLicensing Shop supports various kinds of tokens for opening a shop session, allowing vendors to implement specific license acquisition flows and improve the shopping experience for their customers.
 
 ### Licensee Shop Token
 
