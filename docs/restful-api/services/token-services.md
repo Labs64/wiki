@@ -236,16 +236,19 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 - <i>tokenType=ACTION</i> - identifies licensee for whom action token will be created
 </p>
 <p>expirationTime (optional) - Specify a custom expiration time for the token. If not provided, the default expiration time of 30 minutes will be applied.</p>
-<p>bundleNumber (optional) - Specify the bundle number to display on the Shop checkout page.</p>
-<p>bundlePrice (optional) - Specify the customer's individual bundle price. The default bundle price will be used if no bundlePrice is set.</p>
-<p>action (enum) - Action to be executed; only for tokenType=ACTION<br />
-- <i>licenseeLogin</i> - action to open <a href="customer-portal">Customer Portal</a>
-</p>
-<p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p>
+<p>bundleNumber (optional / Bundle Shop Token) - Specify the bundle number to display on the Shop checkout page.</p>
+<p>bundlePrice (optional / Bundle Shop Token) - Specify the customer's individual bundle price. The default bundle price will be used if no bundlePrice is set.</p>
+<p>productNumber (optional / Permanent Shop Token) - The product to be purchased.</p>
+<p>predefinedShoppingItem (optional / Permanent Shop Token) - The name of the shopping cart item to be purchased.</p>
+<p>licenseTemplateNumber_N (optional / Permanent Shop Token) - The license template number(s), where N is an incrementing index starting from “1”.</p>
 <p>successURL (URI) - Take customers to this URL when they finish checkout.</p>
 <p>successURLTitle (string) - Shop link title for successful checkout process.</p>
 <p>cancelURL (URI) - Take customers to this URL when they cancel their checkout.</p>
 <p>cancelURLTitle (string) - Shop link title for cancel checkout process.</p>
+<p>action (enum) - Action to be executed; only for tokenType=ACTION<br />
+- <i>licenseeLogin</i> - action to open <a href="customer-portal">Customer Portal</a>
+</p>
+<p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p>
 </td>
 </tr>
 <tr class="odd">
