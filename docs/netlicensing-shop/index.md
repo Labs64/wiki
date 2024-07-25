@@ -68,7 +68,7 @@ tokenType=SHOP&licenseeNumber=%LICENSEE_NUMBER%
 
 ### Bundle Shop Token
 
-This token type can be created for a specific bundle, allowing customers to purchase only that bundle. The licenses acquired within the bundle will then be assigned to the customer.
+This token kind can be created for a specific bundle, allowing customers to purchase the entire bundle as a whole. The licenses acquired within the bundle will then be assigned to the customer.
 
 <div>Request Parameters</div>
 {: .code-example .ml-5 .code-header }
