@@ -57,7 +57,7 @@ The NetLicensing Shop supports various kinds of tokens for opening a shop sessio
 
 ### Licensee Shop Token
 
-This is the default token type, created for a specific licensee/customer. The identified customer can choose from the available modules and licenses. The aquired licenses will be assigned to the customer.
+This is the default token kind, created for a specific licensee/customer. The identified customer can choose from the available modules and licenses. The process considers the customer's existing licenses, and newly acquired licenses will be assigned to the customer.
 
 <div>Request Parameters</div>
 {: .code-example .ml-5 .code-header }
