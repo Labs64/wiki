@@ -79,7 +79,7 @@ tokenType=SHOP&licenseeNumber=%LICENSEE_NUMBER%&bundleNumber=%BUNDLE_NUMBER%&bun
 
 ### Permanent Shop Token
 
-This non-expiring token type allows the acquisition of predefined shopping cart items (such as a Pricing Table plan) identified by one or more “licenseTemplateNumber_N” values.
+This non-expiring token kind allows the acquisition of predefined shopping cart items (such as a Pricing Table plan) identified by one or more “licenseTemplateNumber_N” values. It is similar to a bundle, except that the specific license templates are defined directly in the token properties.
 
 A permanent token is created when “licenseeNumber” is omitted and the following custom properties are included in the token properties at creation:
 
