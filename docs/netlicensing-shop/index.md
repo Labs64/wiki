@@ -51,7 +51,7 @@ Accept: application/xml
 ```
 {: .ml-5 }
 
-## Shop Token Types
+## Shop Token Kind
 
 The NetLicensing Shop supports various token types, allowing vendors to implement specific license acquisition flows and improve the shopping experience for their customers.
 
