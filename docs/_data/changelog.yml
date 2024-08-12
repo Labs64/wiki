@@ -9,6 +9,18 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing Management Console Update v2.10.1"
+  description: "This update focuses on enhancing the security, performance, and usability of the NetLicensing Management system. Key improvements include optimized resource loading, and crucial bug fixes to ensure smoother operations in the Bundle Shop Token creation processes."
+  date: 2024-08-12
+  component: UI
+  features:
+   - added: The 'expirationTime' property is now consistently displayed in all API examples, providing clearer guidance on its usage
+   - fixed: Improved security by removing the use of unsafe 'eval' in the headers of the NetLicensing Management Console
+   - fixed: Fixed an issue in the Shop where bundles could erroneously be set to a negative or zero price, preventing checkout errors
+   - fixed: Resolved a bundle creation issue caused by currency mismatches
+   - updated: Optimized UI performance by eliminating the unnecessary loading of resources on every page, resulting in faster load times
+  url: https://netlicensing.io/wiki/netlicensing-shop#bundle-shop-token
+
 - title: "Bundle Shop Token Documentation Update"
   description: "We have revised and updated the NetLicensing Bundle Shop Token documentation to streamline the vendor onboarding process for this new NetLicensing feature."
   date: 2024-08-02
