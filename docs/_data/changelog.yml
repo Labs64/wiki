@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing C++ Client Library Update"
+  description: "In this release, we have enhanced the mapping of custom properties from NetLicensing entities to ensure seamless integration with C++ client library objects. Additionally, we have resolved an issue with the 'expirationTime' mapping, providing more accurate license management."
+  date: 2024-08-13
+  component: Client Libraries
+  features:
+   - updated: Mapped custom properties of NetLicensing entities to corresponding C++ client library objects
+   - fixed: Corrected the ‘expirationTime’ mapping in the C++ client library
+  url: https://github.com/Labs64/NetLicensingClient-cpp
+
 - title: "NetLicensing Management Console Update v2.10.1"
   description: "This update focuses on enhancing the security, performance, and usability of the NetLicensing Management system. Key improvements include optimized resource loading, and crucial bug fixes to ensure smoother operations in the Bundle Shop Token creation processes."
   date: 2024-08-12
