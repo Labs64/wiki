@@ -9,13 +9,21 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Notifications Documentation"
+  description: "The Notifications documentation has been updated to reflect the changes in the new notification payload structure."
+  date: 2024-09-19
+  component: Docu
+  features:
+   - updated: Updated notifications documentation
+  url: https://netlicensing.io/wiki/notifications
+
 - title: "NetLicensing 2.10.1"
   description: "With this release, we've introduced valuable features like the vendor email change confirmation flow and customizable warning levels configurations. Additionally, we've enhanced existing functionality and resolved several persistent issues to improve overall performance and usability."
   date: 2024-09-17
   component: API, UI, Client Libraries, Docu
   features:
+   - updated: Revisited notifications payload
    - added: Enabled configuration rules for warnings levels
-   - updated: Rvisited notifications payload
    - updated: Renamed the Licensee property 'warningLevel' to 'warningLevelSummary' for better clarity
    - fixed: Fixed an issue where bundles with rental models could not be obtained
    - updated: Updated PayPal API integration for better compatibility
