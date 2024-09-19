@@ -54,69 +54,44 @@ Notification payload can be configured to include specific data related to the e
 
 The standard payload structure includes the following fields:
 
-- **Event**: `${event}` - full event object
-- **Data**: `${event.data}` - event-specific data
-- **Name**: `${event.name}` - event name; can be one of the following: `LICENSEE_CREATED`, `LICENSE_CREATED`, `WARNING_LEVEL_CHANGED`
-- **Timestamp**: `${event.timestamp}` - timestamp of the event
+- **Notification**: `{$}` - full notification data
+- **Timestamp**: `{$.timestamp}` - timestamp of the notification
+- **Origin**: `{$.origin}` - can be one of the following: `Notification`
+- **Entities**: `{$.entities}` - notification-specific data
+- **Name**: `{$.entities.Event[0].name}` - notification name; can be one of the following: `LICENSEE_CREATED`, `LICENSE_CREATED`, `WARNING_LEVEL_CHANGED`
 
-Below are examples of the payload structure (`event.data` element) for different events:
+Below are examples of the payload structure (`{$}` element) for different notification types:
 
 <div>LICENSEE_CREATED</div>
 {: .code-example .ml-5 .code-header }
 ```json
 {
-    ...
-    "items": {
-        "item": [
+    "timestamp": "2024-09-19T04:29:47.445Z",
+    "origin": "Notification",
+    "entities": {
+        "Event": [
             {
-                "property": [
-                    {
-                        "value": "IADGNSGZG",
-                        "name": "number"
-                    },
-                    {
-                        "value": "true",
-                        "name": "active"
-                    },
-                    {
-                        "value": "PQMW7JWWN",
-                        "name": "productNumber"
-                    },
-                    {
-                        "value": "Customer 04",
-                        "name": "name"
-                    },
-                    {
-                        "value": "{\"RED\":[],\"YELLOW\":[],\"GREEN\":[]}",
-                        "name": "warningLevel"
-                    },
-                    ...
-                ],
-                "type": "Licensee"
-            },
-            {
-                "property": [
-                    {
-                        "value": "PQMW7JWWN",
-                        "name": "number"
-                    },
-                    {
-                        "value": "true",
-                        "name": "active"
-                    },
-                    {
-                        "value": "Pricing Table demo product",
-                        "name": "name"
-                    },
-                    ...
-                ],
-                ...
-                "type": "Product"
+                "name": "LICENSEE_CREATED"
             }
         ],
-        ...
-    },
-    ...
+        "Licensee": [
+            {
+                "number": "IKWUYQ9GR",
+                "active": true,
+                "licenseeSecret": "",
+                "warningLevelSummary": {
+                    "RED": [],
+                    "YELLOW": [],
+                    "GREEN": []
+                },
+                "name": "Customer Uno",
+                "markedForTransfer": "false",
+                "products": [
+                    "PEP4ZQ6MV"
+                ]
+            }
+        ]
+    }
 }
 ```
 {: .ml-5 }
@@ -126,40 +101,30 @@ Below are examples of the payload structure (`event.data` element) for different
 {: .code-example .ml-5 .code-header }
 ```json
 {
-    ...
-    "items": {
-        "item": [
+    "timestamp": "2024-09-19T04:30:26.006Z",
+    "origin": "Notification",
+    "entities": {
+        "Event": [
             {
-                "property": [
-                    {
-                        "value": "L76HEM5M6",
-                        "name": "number"
-                    },
-                    {
-                        "value": "true",
-                        "name": "active"
-                    },
-                    {
-                        "value": "License 01",
-                        "name": "name"
-                    },
-                    {
-                        "value": "IADGNSGZG",
-                        "name": "licenseeNumber"
-                    },
-                    {
-                        "value": "E9FSDF2RX",
-                        "name": "licenseTemplateNumber"
-                    },
-                    ...
-                ],
-                "list": [],
-                "type": "License"
+                "name": "LICENSE_CREATED"
             }
         ],
-        ...
-    },
-    ...
+        "License": [
+            {
+                "number": "LN2TD47QY",
+                "active": true,
+                "currency": "EUR",
+                "price": 0,
+                "hidden": false,
+                "gracePeriod": "false",
+                "timeVolumePeriod": "MONTH",
+                "timeVolume": "3",
+                "startDate": "2024-09-19T04:30:26.004Z",
+                "licensee": "IKWUYQ9GR",
+                "licenseTemplate": "E27NV3IQD"
+            }
+        ]
+    }
 }
 ```
 {: .ml-5 }
@@ -169,64 +134,63 @@ Below are examples of the payload structure (`event.data` element) for different
 {: .code-example .ml-5 .code-header }
 ```json
 {
-    ...
-    "items": {
-        "item": [
+    "timestamp": "2024-09-19T04:30:57.709Z",
+    "origin": "Notification",
+    "entities": {
+        "Event": [
             {
-                "property": [
-                    {
-                        "value": "N123456",
-                        "name": "number"
-                    },
-                    {
-                        "value": "true",
-                        "name": "active"
-                    },
-                    {
-                        "value": "P5URES4FZ",
-                        "name": "productNumber"
-                    },
-                    {
-                        "value": "Customer 04",
-                        "name": "name"
-                    },
-                    {
-                        "value": "{\"RED\":[],\"YELLOW\":[],\"GREEN\":[\"MQWTGNYMI\",\"MT2VNWASP\"]}",
-                        "name": "warningLevel"
-                    }
-                    ...
-                ],
-                "list": [],
-                "type": "Licensee"
-            },
-            {
-                "property": [
-                    {
-                        "value": "true",
-                        "name": "valid"
-                    },
-                    {
-                        "value": "Features",
-                        "name": "productModuleName"
-                    },
-                    {
-                        "value": "GREEN",
-                        "name": "warningLevel"
-                    },
-                    {
-                        "value": "MultiFeature",
-                        "name": "licensingModel"
-                    },
-                    {
-                        "value": "MT2VNWASP",
-                        "name": "productModuleNumber"
-                    }
-                ],
-                ...
-                "type": "ProductModuleValidation"
+                "name": "WARNING_LEVEL_CHANGED"
             }
         ],
-        ...
+        "Licensee": [
+            {
+                "number": "IKWUYQ9GR",
+                "active": true,
+                "licenseeSecret": "",
+                "warningLevelSummary": {
+                    "RED": [
+                        "MW53JJ3RY",
+                        "MCJZGAMXS"
+                    ],
+                    "YELLOW": [],
+                    "GREEN": [
+                        "MVEMJ5P9D"
+                    ]
+                },
+                "name": "Customer Uno",
+                "markedForTransfer": "false",
+                "products": [
+                    "PEP4ZQ6MV"
+                ],
+                "licenses": [
+                    "LN2TD47QY"
+                ]
+            }
+        ],
+        "ProductModuleValidation": [
+            {
+                "productModuleNumber": "MW53JJ3RY",
+                "valid": "false",
+                "productModuleName": "Subscription",
+                "warningLevel": "RED",
+                "licensingModel": "Subscription"
+            },
+            {
+                "productModuleNumber": "MCJZGAMXS",
+                "valid": "false",
+                "productModuleName": "Maintenance",
+                "warningLevel": "RED",
+                "licensingModel": "Subscription"
+            },
+            {
+                "productModuleNumber": "MVEMJ5P9D",
+                "valid": "true",
+                "expires": "2024-12-19T04:30:26.004Z",
+                "productModuleName": "Support",
+                "warningLevel": "GREEN",
+                "licensingModel": "Subscription"
+            }
+        ]
     }
 }
 ```
