@@ -18,7 +18,7 @@
   url: https://netlicensing.io/wiki/notifications
 
 - title: "NetLicensing 2.10.1"
-  description: "With this release, we've introduced valuable features like the vendor email change confirmation flow and customizable warning levels configurations. Additionally, we've enhanced existing functionality and resolved several persistent issues to improve overall performance and usability."
+  description: "With this release, we've introduced valuable features like customizable warning levels configurations and revisited notifications payload. Additionally, we've enhanced existing functionality and resolved several persistent issues to improve overall performance and usability."
   date: 2024-09-17
   component: API, UI, Client Libraries, Docu
   features:
@@ -27,7 +27,6 @@
    - updated: Renamed the Licensee property 'warningLevel' to 'warningLevelSummary' for better clarity
    - fixed: Fixed an issue where bundles with rental models could not be obtained
    - updated: Updated PayPal API integration for better compatibility
-   - added: Added a confirmation flow to enable email changes
    - fixed: Fixed issues with PayPal recurring payments
    - fixed: Fixed an error occurring when the shop token expired upon return from the Payment Service Provider (PSP)
    - updated: Made C++ client tests more stable and added an example for bundle shop tokens
