@@ -9,6 +9,18 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing Management Console Improvements"
+  description: "This UI update enhance performance, usability, and compliance, giving you a smoother and more efficient experience."
+  date: 2024-10-17
+  component: UI
+  features:
+   - updated: When creating a product from the Demo Data, the local licensing model logo is now automatically applied
+   - updated: Fonts are now loaded as local resources, enhancing page load performance and ensuring better control over font usage
+   - updated: Added the product module name to bundle package rows
+   - updated: A fix has been implemented to ensure a smooth connection to local fonts, improving compatibility with Content Security Policy (CSP) requirements
+   - fixed: Fixed Pricing Table SKU handling, preventing updating of product details
+  url: https://ui.netlicensing.io
+
 - title: "Notifications Documentation"
   description: "The Notifications documentation has been updated to reflect the changes in the new notification payload structure."
   date: 2024-09-19
