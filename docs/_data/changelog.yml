@@ -16,7 +16,8 @@
   features:
    - added: Now you can specify promo codes in the new licensing model — making it easier than ever to customize your offerings
    - fixed: Squashed a few bugs to make NetLicensing even more stable and reliable
-  url: https://ui.netlicensing.io
+  image: assets/images/changelog/netlicensing-websummit24.png
+  url: https://websummit.com/appearances/lis24/81df96ec-2cb0-4749-a9aa-6d1d2c96acf7/labs64-netlicensing/
 
 - title: "NetLicensing Management Console Improvements"
   description: "This UI update enhance performance, usability, and compliance, giving you a smoother and more efficient experience."
