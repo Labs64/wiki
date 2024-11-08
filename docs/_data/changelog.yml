@@ -9,6 +9,15 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing WebSummit Edition"
+  description: "We’ve got some exclusive perks lined up for WebSummit attendees! Swing by Booth A515 on November 12th to learn more."
+  date: 2024-11-08
+  component: UI
+  features:
+   - added: Now you can specify promo codes in the new licensing model — making it easier than ever to customize your offerings
+   - fixed: Squashed a few bugs to make NetLicensing even more stable and reliable
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing Management Console Improvements"
   description: "This UI update enhance performance, usability, and compliance, giving you a smoother and more efficient experience."
   date: 2024-10-17
