@@ -9,6 +9,18 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Enhanced Payment Integrations: Stripe Recurring Payments, PayPal Fixes, and More"
+  description: "This release is packed with significant updates and fixes designed to enhance your payment processing experience. It focuses on improving PSP integrations, including enabling Stripe recurring payments, expanding PayPal capabilities, and supporting recurring payments for bundles. These enhancements ensure smoother transactions and greater flexibility for your subscription-based offerings."
+  date: 2024-12-23
+  component: Shop, Integrations
+  features:
+   - updated: Enabled recurring payments for seamless subscription management via Stripe
+   - fixed: Resolved an issue preventing PayPal Instant Payment Notifications (IPN) from being processed
+   - fixed: Addressed a bug where no shop transaction was created for PayPal recurring payments
+   - added: Included support for additional PayPal parameters to improve shop transaction tracking and customization
+   - added: Introduced the ability to allow recurring payments for bundles, streamlining subscription offerings
+  url: https://netlicensing.io/wiki/netlicensing-shop
+
 - title: "NetLicensing WebSummit Edition"
   description: "We’ve got some exclusive perks lined up for WebSummit attendees! Swing by Booth A515 on November 12th to learn more."
   date: 2024-11-08
