@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Improved Payment Processing in NetLicensing Shop"
+  description: "Enjoy a smoother checkout experience with improved Stripe stability, seamless cart rendering, and enhanced payment data handling."
+  date: 2025-02-04
+  component: Shop, Integrations
+  features:
+   - updated: Extended Stripe Payment Intent and Customer Data handling
+   - fixed: Improved stability of Stripe checkout form rendering when handling input containing special characters
+   - fixed: Fixed shopping cart rendering issues in case of PSP errors
+   - updated: Enhanced vendor validation traceability
+  url: https://netlicensing.io/wiki/netlicensing-shop
+
 - title: "Enhanced Payment Integrations: Stripe Recurring Payments, PayPal Fixes, and More"
   description: "This release is packed with significant updates and fixes designed to enhance your payment processing experience. It focuses on improving PSP integrations, including enabling Stripe recurring payments, expanding PayPal capabilities, and supporting recurring payments for bundles. These enhancements ensure smoother transactions and greater flexibility for your subscription-based offerings."
   date: 2024-12-23
