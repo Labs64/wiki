@@ -9,6 +9,21 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Enhanced Stripe Integration and Notification Framework"
+  description: "This release focuses on enhancing the Stripe integration and extending the notification framework, delivering substantial improvements in reliability, user experience, and security. These updates are designed to provide a seamless and efficient experience for both customers and administrators, ensuring smoother transactions, better tracking, and enhanced system stability."
+  date: 2025-03-17
+  component: API, Shop, Integrations
+  features:
+   - updated: Enhanced reliability and user experience for Stripe Recurring Payments
+   - added: Added a Recurring Payments tab to the Customer Profile for easier management
+   - updated: Auto-populate Customer profile reference and Billing Information at Stripe for seamless transactions
+   - fixed: Resolved issue with order confirmation emails not being sent
+   - fixed: Fixed case sensitivity issue preventing custom properties from being saved
+   - added: Enabled Shop Transactions notifications for better tracking and integration with monitoring/accounting systems
+   - updated: Added missing Audit Table methods to ensure accurate data recording
+   - updated: Addressed vulnerabilities in client libraries and core components for improved security and stability
+  url: https://netlicensing.io/wiki/notifications
+
 - title: "Improved Payment Processing in NetLicensing Shop"
   description: "Enjoy a smoother checkout experience with improved Stripe stability, seamless cart rendering, and enhanced payment data handling."
   date: 2025-02-04
