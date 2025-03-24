@@ -42,6 +42,7 @@ Manage your NetLicensing Notifications from the *"Settings / Notifications"* sec
 - **Events**: One or more events that will trigger the notification. Options include:
   - **Create Customer**: Triggered when a new customer is created.
   - **Create License**: Triggered when a new license is created.
+  - **Payment Transaction Processed**: Triggered on NetLicensing Shop transaction status change.
   - **Change Warning Level**: Triggered on customer's [warning level](warning-level) changes (e.g., from `GREEN` to `YELLOW` or `YELLOW` to `RED`).
 - **Type**: The type of notification. Currently, only `WEBHOOK` is supported.
 - **Endpoint**: The URL where an HTTP POST request with the specified payload will be sent. **Note:** The endpoint must use the secured HTTPS protocol with a public SSL/TLS certificate.
@@ -58,7 +59,7 @@ The standard payload structure includes the following fields:
 - **Timestamp**: `{$.timestamp}` - timestamp of the notification
 - **Origin**: `{$.origin}` - can be one of the following: `Notification`
 - **Entities**: `{$.entities}` - notification-specific data
-- **Name**: `{$.entities.Event[0].name}` - notification name; can be one of the following: `LICENSEE_CREATED`, `LICENSE_CREATED`, `WARNING_LEVEL_CHANGED`
+- **Name**: `{$.entities.Event[0].name}` - notification name; can be one of the following: `LICENSEE_CREATED`, `LICENSE_CREATED`, `WARNING_LEVEL_CHANGED`, `PAYMENT_TRANSACTION_PROCESSED`
 
 Below are examples of the payload structure (`{$}` element) for different notification types:
 
@@ -129,6 +130,53 @@ Below are examples of the payload structure (`{$}` element) for different notifi
 ```
 {: .ml-5 }
 
+<div>PAYMENT_TRANSACTION_PROCESSED</div>
+{: .code-example .ml-5 .code-header }
+```json
+{
+    "timestamp": "2025-03-24T13:31:14.532Z",
+    "origin": "Notification",
+    "entities": {
+        "Event": [
+            {
+                "name": "PAYMENT_TRANSACTION_PROCESSED"
+            }
+        ],
+        "Transaction": [
+            {
+                "number": "TET7WUW3Y",
+                "active": true,
+                "source": "SHOP",
+                "status": "CLOSED",
+                "price": 10,
+                "discount": 0,
+                "currency": "EUR",
+                "inUse": true,
+                "datecreated": "2025-03-24T13:31:14.531Z",
+                "dateclosed": "2025-03-24T13:31:14.531Z",
+                "vatMode": "GROSS",
+                "totalExcludingVat": "0.00",
+                "isSubjectToVat": "false",
+                "isReverseCharge": "false",
+                "subTotal": "0.00",
+                "vatPercent": "0",
+                "vatAmount": "0.00",
+                "consentTimestamp": "2025-03-24T13:31:13.162Z",
+                "consentTermsOfServiceURL": "https://en.wikipedia.org/wiki/North_Pole#terms",
+                "paymentMethodNumber": "NULL",
+                "vendorCountryCode": "DE",
+                "countryCode": "BW",
+                "paymentMethod": "STRIPE",
+                "consentPrivacyPolicyURL": "https://en.wikipedia.org/wiki/North_Pole#privacy",
+                "licenses": [
+                    "LQZ2GAKTZ"
+                ]
+            }
+        ]
+    }
+}
+```
+{: .ml-5 }
 
 <div>WARNING_LEVEL_CHANGED</div>
 {: .code-example .ml-5 .code-header }
