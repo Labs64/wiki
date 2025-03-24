@@ -14,6 +14,7 @@ NetLicensing offers a Notifications feature that allows you to receive real-time
 With the Notifications feature, you can set up endpoints to receive notifications for events such as:
 - Creation of a new customer
 - Issuance of a license
+- Shop transaction created/changed
 - Change in a customer’s warning level
 
 These notifications are sent via HTTP POST requests to the specified endpoint URL, allowing you to integrate them into your systems or applications for further processing.
