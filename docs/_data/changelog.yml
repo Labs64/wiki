@@ -9,6 +9,17 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing 2.10.6"
+  description: "This release improves the reliability of recurring payments, enhances vendor communication during payment issues, and adds support for updating vendor profile emails."
+  date: 2025-07-29
+  component: UI, Shop
+  features:
+   - updated: Stabilized and optimized the processing logic for recurring payments to prevent interruptions and ensure consistent execution
+   - added: Vendors are now automatically notified via email in case of any issues during recurring payment processing, improving visibility and reducing downtime
+   - added: Vendors can now change their registered email address directly via their profile settings
+   - updated: General system improvements, minor bug fixes, and backend optimizations for better performance and maintainability
+  url: https://netlicensing.io/wiki/payment-service-providers
+
 - title: "Enhanced Stripe Integration and Notification Framework"
   description: "This release focuses on enhancing the Stripe integration and extending the notification framework, delivering substantial improvements in reliability, user experience, and security. These updates are designed to provide a seamless and efficient experience for both customers and administrators, ensuring smoother transactions, better tracking, and enhanced system stability."
   date: 2025-03-17
