@@ -158,6 +158,7 @@ Below are examples of the payload structure (`{$}` element) for different notifi
                 "vatMode": "GROSS",
                 "totalExcludingVat": "0.00",
                 "isSubjectToVat": "false",
+                "recurring": "true",
                 "isReverseCharge": "false",
                 "subTotal": "0.00",
                 "vatPercent": "0",
