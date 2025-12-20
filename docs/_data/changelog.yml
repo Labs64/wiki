@@ -9,6 +9,22 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "User Experience and Stronger Security"
+  description: "Several UI refinements make daily workflows clearer, while critical fixes ensure transactions and recurring payments behave reliably. Security and internal optimizations further harden the platform without adding complexity."
+  date: 2025-12-18
+  component: UI, API
+  features:
+   - updated: Minor UI improvements across the application
+   - added: Add pagination range label for data tables to improve navigation clarity
+   - added: Add product module filter on the customers list for faster data access
+   - updated: Require re-login on email change confirmation to prevent account takeover
+   - updated: Avoid unnecessary loading of private key to reduce security surface and startup overhead
+   - fixed: Fix for 't.$marks.skus.forget is not a function' error
+   - fixed: Fix NullPointerException in Transaction GrandTotal
+   - fixed: Fix recurring payment flow where null values caused processing errors
+   - fixed: Multiple dependency updates to keep the platform secure, stable, and up to date
+  url: https://netlicensing.io
+
 - title: "NetLicensing 2.10.6"
   description: "This release improves the reliability of recurring payments, enhances vendor communication during payment issues, and adds support for updating vendor profile emails."
   date: 2025-07-29
