@@ -9,6 +9,25 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Enterprise Scalability and Agent Resilience"
+  description: "This update significantly boosts NetLicensing's performance in high-demand environments. By optimizing database interactions and hardening the NetLicensing Agent, we’ve ensured a more stable experience during peak traffic."
+  date: 2026-03-18
+  component: API, Agent
+  features:
+    - fixed: Resolved connectivity and synchronization issues to ensure stable performance under heavy system load
+    - updated: Modernized core infrastructure to support the latest industry-standard environments
+    - fixed: Enhanced Agent stability with critical fixes for initialization and runtime reliability
+    - fixed: Hardened Agent security by restricting unauthorized directory access
+    - fixed: Hardened system performance under heavy load by resolving intermittent service and directory lookup exceptions
+    - updated: Improved Agent resilience with intelligent handling of database transitions during version upgrades
+    - updated: Enhanced system responsiveness through optimized database indexing
+    - updated: Confirmed compatibility with PostgreSQL 18, providing access to the latest database performance and security features
+    - updated: Improved clarity by reducing log noise and refining diagnostic data
+    - updated: Refined data validation and error messaging for a more intuitive user experience
+    - updated: Strengthened system security and stability through comprehensive updates to core encryption and server libraries
+  image: assets/images/changelog/netlicensing-release-2-10-8.png
+  url: https://netlicensing.io/wiki/netlicensing-agent
+
 - title: "User Experience and Stronger Security"
   description: "Several UI refinements make daily workflows clearer, while critical fixes ensure transactions and recurring payments behave reliably. Security and internal optimizations further harden the platform without adding complexity."
   date: 2025-12-18
