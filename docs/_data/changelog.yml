@@ -9,6 +9,26 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Management Console Modernization"
+  description: "The NetLicensing Management Console gets a major upgrade — with a focus on simplicity, speed, and a delightful user experience."
+  date: 2026-04-01
+  component: UI
+  features:
+    - updated: Improved overall user experience across the NetLicensing Management Console
+    - added: Pricing Table compact view with additional usability enhancements
+    - updated: Enhanced table views with better readability and interaction patterns
+    - updated: Revised edit views for more intuitive data management workflows
+    - updated: Revised bundles management interface
+    - updated: Responsive design improvements for better usability across different screen sizes
+    - updated: Migrated framework from Vue 2 to Vue 3 for improved reactivity, performance, and long-term maintainability
+    - updated: Upgraded UI framework from Bootstrap 4 to Bootstrap 5 with modern component architecture and utility classes
+    - updated: General codebase cleanup and modernization for better maintainability and efficiency
+    - updated: Node-locked and Session views for Node-Locked and Floatin models revisited and improved
+    - updated: Improved application performance and responsiveness
+    - fixed: Enhanced security measures across the application
+    - fixed: Updated dependencies to address known vulnerabilities
+  url: https://ui.netlicensing.io
+
 - title: "Enterprise Scalability and Agent Resilience"
   description: "This update significantly boosts NetLicensing's performance in high-demand environments. By optimizing database interactions and hardening the NetLicensing Agent, we’ve ensured a more stable experience during peak traffic."
   date: 2026-03-18
