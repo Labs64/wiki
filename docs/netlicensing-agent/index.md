@@ -16,6 +16,7 @@ NetLicensing Agent
     -   [Files](#files)
     -   [Command Line](#command-line)
     -   [Modes of Operation](#modes-of-operation)
+    -   [Validation Cache in Proxy Mode](#validation-cache-in-proxy-mode)
     -   [Setting Up for the Offline Mode](#setting-up-for-the-offline-mode)
 -   [Client Configuration](#client-configuration)
 -   [Security](#security)
@@ -190,6 +191,48 @@ Command line options:
 <td><p>TCP port the NetLicensing Agent will listen on. Used for <strong><code>run-agent</code></strong> and <strong><code>run-agent-offline</code></strong>.</p></td>
 </tr>
 <tr class="even">
+<td>&nbsp;</td>
+<td><p><code>--cache.type</code></p></td>
+<td><pre><code>local</code></pre></td>
+<td><p>Validation cache backend for <strong><code>run-agent</code></strong>. Supported values: <code>local</code>, <code>redis</code>.</p></td>
+</tr>
+<tr class="odd">
+<td>&nbsp;</td>
+<td><p><code>--cache.host</code></p></td>
+<td><pre><code>localhost</code></pre></td>
+<td><p>Redis host name, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
+</tr>
+<tr class="even">
+<td>&nbsp;</td>
+<td><p><code>--cache.port</code></p></td>
+<td><pre><code>6379</code></pre></td>
+<td><p>Redis TCP port, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
+</tr>
+<tr class="odd">
+<td>&nbsp;</td>
+<td><p><code>--cache.password</code></p></td>
+<td>&nbsp;</td>
+<td><p>Redis password, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
+</tr>
+<tr class="even">
+<td>&nbsp;</td>
+<td><p><code>--cache.database</code></p></td>
+<td><pre><code>0</code></pre></td>
+<td><p>Redis database index, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
+</tr>
+<tr class="odd">
+<td>&nbsp;</td>
+<td><p><code>--cache.key-prefix</code></p></td>
+<td><pre><code>agent:validate:</code></pre></td>
+<td><p>Prefix for validation cache keys, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
+</tr>
+<tr class="even">
+<td>&nbsp;</td>
+<td><p><code>--cache.ssl</code></p></td>
+<td><pre><code>false</code></pre></td>
+<td><p>Enable SSL/TLS for Redis connections, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
+</tr>
+<tr class="odd">
 <td><pre><code>-o</code></pre></td>
 <td><pre><code>--output</code></pre></td>
 <td>.</td>
@@ -275,6 +318,36 @@ Currently this mode has limited support and should not be used in production env
 </tr>
 </tbody>
 </table>
+
+Validation Cache in Proxy Mode
+------------------------------
+
+Validation cache configuration is only relevant for
+<strong><code>run-agent</code></strong>, when Agent operates as a
+caching proxy to the NetLicensing Cloud.
+
+Two validation cache backends are available:
+
+-   <strong><code>local</code></strong> - built-in validation cache
+    using Agent local storage. This is the default behavior.
+-   <strong><code>redis</code></strong> - external Redis-backed
+    validation cache.
+
+When Redis is used, validation results are stored under keys prefixed by
+<code>agent:validate:</code> by default. Entry expiration is managed by
+Redis TTL, expired entries are removed automatically.
+
+Example using the default local cache:
+
+``` theme:
+java -jar netlicensing-agent.jar --action=run-agent --port=8080
+```
+
+Example using Redis:
+
+``` theme:
+java -jar netlicensing-agent.jar --action=run-agent --port=8080 --verbose --cache.type=redis --cache.host=localhost --cache.port=6379 --cache.password=secret
+```
 
 Setting Up for the Offline Mode
 -------------------------------
