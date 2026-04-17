@@ -215,7 +215,6 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <p><span style="color: rgb(0,0,0);">timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">timeVolumePeriod (string) - Indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</span></p>
 </td>
-</td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
