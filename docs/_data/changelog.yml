@@ -9,6 +9,23 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Cleaner UI Interface with Enhanced Deployment Capabilities"
+  description: "Reworked UI interface for clearer usability and smoother workflows. Added flexible deployment options and dynamic configuration. Enhanced licensing experience with Agent download, improved API examples, and stronger stability."
+  date: 2026-04-30
+  component: UI
+  features:
+    - updated: Reworked UI with content organized into standalone cards
+    - updated: Secured and hardened Docker images with updated dependencies for on-prem setups
+    - added: Allow running the UI over HTTP or HTTPS depending on deployment requirements
+    - added: Allow configuring environments dynamically without rebuilding or redeploying images
+    - added: Download the NetLicensing Agent directly from the UI for eligible vendors
+    - updated: Rework on the ready-to-copy API examples to retrieve license template numbers
+    - updated: Create licenses more easily with built-in API guidance
+    - updated: Improve pricing tables layout and styling
+    - updated: Revisited registration flows with fewer errors and smoother handling
+    - fixed: Stabilize UI by avoiding crashes caused by undefined property access issues
+  url: https://ui.netlicensing.io
+
 - title: "Management Console Modernization"
   description: "The NetLicensing Management Console gets a major upgrade — with a focus on simplicity, speed, and a delightful user experience."
   date: 2026-04-01
