@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing API Improvements for MCP and AI Agents"
+  description: "NetLicensing API capabilities now better support MCP-based integrations and AI-powered licensing automation, with additional safeguards for controlled delete operations."
+  date: 2026-05-15
+  component: Integrations
+  features:
+    - added: AWS deployment helpers for ECS Fargate and App Runner based MCP server hosting
+    - updated: Extended the NetLicensing API ecosystem with agent-ready integration capabilities for AI assistants and automated licensing workflows
+    - fixed: Added safer delete handling with explicit force_cascade option to avoid unintended cascading operations
+  url: https://netlicensing.io/wiki/netlicensing-mcp
+
 - title: "NetLicensing MCP Server for Agentic License Management"
   description: "Manage products, customers, licenses, entitlements, renewals, transactions, and audits directly from MCP-compatible AI assistants — using natural language instead of writing API calls."
   date: 2026-05-11
@@ -21,10 +31,9 @@
     - added: Licensee validation, license transfer, entitlement checks, renewal URL generation, and transaction review through conversational commands
     - added: Quick start options via uvx, pip, Docker, and GitHub Container Registry images
     - added: HTTP transport mode for remote or shared MCP deployments
-    - added: AWS deployment helpers for ECS Fargate and App Runner based MCP server hosting
     - added: Demo sandbox mode for trying the MCP server without a NetLicensing API key
   image: assets/images/changelog/netlicensing-mcp-server.png
-  url: https://github.com/Labs64/NetLicensing-MCP
+  url: https://netlicensing.io/wiki/netlicensing-mcp
 
 - title: "Cleaner UI Interface with Enhanced Deployment Capabilities"
   description: "Reworked UI interface for clearer usability and smoother workflows. Added flexible deployment options and dynamic configuration. Enhanced licensing experience with Agent download, improved API examples, and stronger stability."
