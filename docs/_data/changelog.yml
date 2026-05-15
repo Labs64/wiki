@@ -9,6 +9,23 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing MCP Server for Agentic License Management"
+  description: "Manage products, customers, licenses, entitlements, renewals, transactions, and audits directly from MCP-compatible AI assistants — using natural language instead of writing API calls."
+  date: 2026-05-11
+  component: Integrations
+  features:
+    - added: Official NetLicensing MCP Server for connecting NetLicensing with MCP-compatible AI clients and agentic workflows
+    - added: Natural language licensing operations for products, modules, license templates, licensees, licenses, bundles, tokens, transactions, and payment methods
+    - added: Support for Claude Desktop, GitHub Copilot Agent mode, VS Code, JetBrains IDEs, and other MCP-compatible clients
+    - added: Ready-to-use audit prompts for full account audits, customer reviews, expiry sweeps, cleanup checks, and anomaly detection
+    - added: Licensee validation, license transfer, entitlement checks, renewal URL generation, and transaction review through conversational commands
+    - added: Quick start options via uvx, pip, Docker, and GitHub Container Registry images
+    - added: HTTP transport mode for remote or shared MCP deployments
+    - added: AWS deployment helpers for ECS Fargate and App Runner based MCP server hosting
+    - added: Demo sandbox mode for trying the MCP server without a NetLicensing API key
+  image: assets/images/changelog/netlicensing-mcp-server.png
+  url: https://github.com/Labs64/NetLicensing-MCP
+
 - title: "Cleaner UI Interface with Enhanced Deployment Capabilities"
   description: "Reworked UI interface for clearer usability and smoother workflows. Added flexible deployment options and dynamic configuration. Enhanced licensing experience with Agent download, improved API examples, and stronger stability."
   date: 2026-04-30
