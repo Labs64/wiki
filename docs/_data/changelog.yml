@@ -9,6 +9,23 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing v2.10.9 — Concurrency, PostgreSQL 18, Redis Caching"
+  description: "This release focuses on platform reliability and scalability. Highlights include true concurrent ServiceAudit processing, Redis-backed agent proxy caching, and PostgreSQL 18 support for on-premise deployments. Several long-standing issues have also been resolved, including license template parameter handling and recurring payment visibility."
+  date: 2026-06-10
+  component: API, Agent, UI
+  features:
+    - updated: Pricing table HTML export improved, you can now choose which columns to include instead of exporting everything and trimming later
+    - updated: Agent Licensee export supports APIKey authentication
+    - updated: Acquired licenses can be grouped by product module
+    - updated: Agent proxy now uses Redis as the cache backend — eliminates contention under load
+    - updated: ServiceAudit handles true concurrent operations; parallel writes no longer race each other
+    - updated: PostgreSQL 18 support for on-prem deployments confirmed
+    - updated: Recurring payment errors now show up in the UI instead of failing silently
+    - fixed: License template parameters were being ignored when a license was created
+    - fixed: Wrong customer number was showing in certain views
+    - updated: WarningLevel logic corrected
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing API Improvements for MCP and AI Agents"
   description: "NetLicensing API capabilities now better support MCP-based integrations and AI-powered licensing automation, with additional safeguards for controlled delete operations."
   date: 2026-05-15
