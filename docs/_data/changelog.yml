@@ -9,6 +9,16 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing MCP v0.1.8: Critical Security Patch"
+  description: "This NetLicensing MCP version patches a critical path traversal vulnerability (GHSA-hxpf-9xvq-wph8, CVSS 9.6) that allowed any authenticated MCP client to extract plaintext API keys — including admin-level credentials — that the token tools were designed to redact."
+  date: 2026-06-18
+  component: Integrations
+  features:
+    - fixed: "Path traversal in MCP tool inputs could bypass token redaction and expose plaintext API keys to any authenticated client (GHSA-hxpf-9xvq-wph8)"
+    - fixed: "Input validation now applied across all HTTP helpers in the client layer, not just the affected endpoint"
+    - fixed: "Regression tests added to prevent reintroduction of the traversal vector"
+  url: https://github.com/Labs64/NetLicensing-MCP/releases/tag/0.1.8
+
 - title: "NetLicensing v2.10.9 — Concurrency, PostgreSQL 18, Redis Caching"
   description: "This release focuses on platform reliability and scalability. Highlights include true concurrent ServiceAudit processing, Redis-backed agent proxy caching, and PostgreSQL 18 support for on-premise deployments. Several long-standing issues have also been resolved, including license template parameter handling and recurring payment visibility."
   date: 2026-06-10
