@@ -16,6 +16,13 @@ permalink: pricing-table
     -   [Create Module](#create-module)
     -   [Add Plan](#add-plan)
     -   [Add SKU](#add-sku)
+-   [Data Structure and Schema](#data-structure-and-schema)
+    -   [SKU Definition](#sku-definition-skudef)
+    -   [Plan SKU Values](#plan-sku-values-skus)
+    -   [Complete Example](#complete-example)
+-   [Building a Pricing Table via API](#building-a-pricing-table-via-api)
+    -   [Create Module](#create-module-1)
+    -   [Create Pricing Plans](#create-pricing-plans)
 -   [Publish](#publish)
     -   [HTML Export](#html-export)
     -   [CSS Definitions](#css-definitions)
@@ -89,6 +96,267 @@ Store Keeping Unit or SKU represents the feature in your product.
 - **Name** - descriptive SKU name; this name will be shown to the customer
 - **Number** - number is the unique identifier of the SKU and is used to refer to the plan features on the NetLicensing RESTful API and in your products
 - **Type** - SKU type defines the basic behaviour. You can choose one of the following: *Quantity* or *Feature*
+
+## Data Structure and Schema
+
+### SKU Definition (`skudef`)
+
+The `skudef` property on a Product Module defines the **catalog of available SKUs** (features and quotas) that can be used across all pricing plans. It is a JSON object containing a single key with an array of SKU definitions:
+
+```json
+{
+  "skudef": [
+    {
+      "number": "<SKU_ID>",
+      "name": "<Display Name>",
+      "type": "<FEATURE|QUOTA>"
+    }
+  ]
+}
+```
+
+#### SKU Definition Fields
+
+| Field | Type | Description |
+|---|---|---|
+| `number` | string | Unique SKU identifier — this is the **key** referenced in each template's `skus` map |
+| `name` | string | Human-readable label shown to customers |
+| `type` | enum: `FEATURE` \| `QUOTA` | Determines what kind of value this SKU holds in a template |
+
+#### SKU Type Behavior
+
+Note: In the Management Console UI these types are shown as **Feature** (`FEATURE`) and **Quantity** (`QUOTA`).
+
+- **`FEATURE`** — A boolean flag indicating whether the plan includes this feature (e.g., "API Access", "Advanced Analytics")
+- **`QUOTA`** — A numeric limit for the feature (e.g., "API Requests", "Storage in GB")
+
+### Plan SKU Values (`skus`)
+
+Each License Template (pricing plan) has a `skus` property that maps SKU numbers to their respective values for that plan. The value type depends on the matching `type` from `skudef`:
+
+```json
+{
+  "skus": {
+    "<SKU_number_1>": <value>,
+    "<SKU_number_2>": <value>
+  }
+}
+```
+
+#### SKU Value Types
+
+| skudef `type` | skus value | Meaning | Examples |
+|---|---|---|---|
+| `FEATURE` | `true` / `false` (or string `"true"` / `"false"`) | Whether the plan includes the feature | `true` = included, `false` = not included |
+| `QUOTA` | numeric string | The quantity limit for the plan | `"-1"` = unlimited, `"0"` = none, `"100"` = max 100 units |
+
+#### Schema Relationship
+
+```
+skudef[i].number  ──(key)──>  skus["<number>"]
+skudef[i].type     ──(governs)──>  type of value in skus["<number>"]
+```
+
+### Complete Example
+
+Given this module-level SKU definition:
+
+```json
+{
+  "skudef": [
+    {"number": "APIREQUESTS", "name": "API Requests", "type": "QUOTA"},
+    {"number": "USERS", "name": "Team Members", "type": "QUOTA"},
+    {"number": "CONSOLE_ACCESS", "name": "Admin Console", "type": "FEATURE"},
+    {"number": "API_ACCESS", "name": "API Access", "type": "FEATURE"}
+  ]
+}
+```
+
+A plan might define its SKU values as:
+
+```json
+{
+  "skus": {
+    "APIREQUESTS": "10",
+    "USERS": "1",
+    "CONSOLE_ACCESS": true,
+    "API_ACCESS": false
+  }
+}
+```
+
+This means the plan includes:
+- 10 API requests per month
+- 1 team member
+- Admin Console access enabled
+- API access disabled
+
+## Building a Pricing Table via API
+
+### Create Module
+
+Create a new product module with the Pricing Table licensing model using the REST API:
+
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
+POST https://go.netlicensing.io/core/v2/rest/productmodule
+Accept: application/xml
+Content-Type: application/x-www-form-urlencoded
+
+productNumber=PROD-001&number=M-PRICING-001&name=SaaS%20Pricing%20Plans&licensingModel=PricingTable&skudef=%7B%22skudef%22%3A%5B%7B%22number%22%3A%22APIREQUESTS%22%2C%22name%22%3A%22API%20Requests%22%2C%22type%22%3A%22QUOTA%22%7D%2C%7B%22number%22%3A%22USERS%22%2C%22name%22%3A%22Team%20Members%22%2C%22type%22%3A%22QUOTA%22%7D%2C%7B%22number%22%3A%22CONSOLE_ACCESS%22%2C%22name%22%3A%22Admin%20Console%22%2C%22type%22%3A%22FEATURE%22%7D%2C%7B%22number%22%3A%22API_ACCESS%22%2C%22name%22%3A%22API%20Access%22%2C%22type%22%3A%22FEATURE%22%7D%5D%7D
+```
+{: .ml-5 }
+
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context">
+  <ns2:infos/>
+  <ns2:items>
+    <ns2:item type="ProductModule">
+      <ns2:property name="number">M-PRICING-001</ns2:property>
+      <ns2:property name="active">true</ns2:property>
+      <ns2:property name="name">SaaS Pricing Plans</ns2:property>
+      <ns2:property name="productNumber">PROD-001</ns2:property>
+      <ns2:property name="licensingModel">PricingTable</ns2:property>
+      <ns2:property name="inUse">false</ns2:property>
+      <ns2:property name="skudef">{"skudef":[{"number":"APIREQUESTS","name":"API Requests","type":"QUOTA"},{"number":"USERS","name":"Team Members","type":"QUOTA"},{"number":"CONSOLE_ACCESS","name":"Admin Console","type":"FEATURE"},{"number":"API_ACCESS","name":"API Access","type":"FEATURE"}]}</ns2:property>
+    </ns2:item>
+  </ns2:items>
+</ns2:netlicensing>
+```
+{: .ml-5 }
+
+### Create Pricing Plans
+
+Create individual pricing plans within the module, each with their own SKU values:
+
+#### Free Plan
+
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
+POST https://go.netlicensing.io/core/v2/rest/licensetemplate
+Accept: application/xml
+Content-Type: application/x-www-form-urlencoded
+
+productModuleNumber=M-PRICING-001&number=PLAN-FREE&name=Free&description=Perfect%20for%20getting%20started&price=0&currency=EUR&licenseType=FEATURE&automatic=true&hidden=true&skus=%7B%22APIREQUESTS%22%3A%2210%22%2C%22USERS%22%3A%221%22%2C%22CONSOLE_ACCESS%22%3Afalse%2C%22API_ACCESS%22%3Afalse%7D
+```
+{: .ml-5 }
+
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context">
+  <ns2:infos/>
+  <ns2:items>
+    <ns2:item type="LicenseTemplate">
+      <ns2:property name="number">PLAN-FREE</ns2:property>
+      <ns2:property name="active">true</ns2:property>
+      <ns2:property name="name">Free</ns2:property>
+      <ns2:property name="licenseType">FEATURE</ns2:property>
+      <ns2:property name="price">0.00</ns2:property>
+      <ns2:property name="currency">EUR</ns2:property>
+      <ns2:property name="automatic">true</ns2:property>
+      <ns2:property name="hidden">true</ns2:property>
+      <ns2:property name="hideLicenses">false</ns2:property>
+      <ns2:property name="productModuleNumber">M-PRICING-001</ns2:property>
+      <ns2:property name="productModuleName">SaaS Pricing Plans</ns2:property>
+      <ns2:property name="inUse">false</ns2:property>
+      <ns2:property name="skus">{"APIREQUESTS":"10","USERS":"1","CONSOLE_ACCESS":false,"API_ACCESS":false}</ns2:property>
+      <ns2:property name="description">Perfect for getting started</ns2:property>
+    </ns2:item>
+  </ns2:items>
+</ns2:netlicensing>
+```
+{: .ml-5 }
+
+#### Premium Plan
+
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
+POST https://go.netlicensing.io/core/v2/rest/licensetemplate
+Accept: application/xml
+Content-Type: application/x-www-form-urlencoded
+
+productModuleNumber=M-PRICING-001&number=PLAN-PREMIUM&name=Premium&description=For%20growing%20teams&price=99&currency=EUR&licenseType=TIMEVOLUME&timeVolume=1&timeVolumePeriod=MONTH&skus=%7B%22APIREQUESTS%22%3A%221000%22%2C%22USERS%22%3A%2210%22%2C%22CONSOLE_ACCESS%22%3Atrue%2C%22API_ACCESS%22%3Atrue%7D
+```
+{: .ml-5 }
+
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context">
+  <ns2:infos/>
+  <ns2:items>
+    <ns2:item type="LicenseTemplate">
+      <ns2:property name="number">PLAN-PREMIUM</ns2:property>
+      <ns2:property name="active">true</ns2:property>
+      <ns2:property name="name">Premium</ns2:property>
+      <ns2:property name="licenseType">TIMEVOLUME</ns2:property>
+      <ns2:property name="price">99.00</ns2:property>
+      <ns2:property name="currency">EUR</ns2:property>
+      <ns2:property name="automatic">false</ns2:property>
+      <ns2:property name="hidden">false</ns2:property>
+      <ns2:property name="hideLicenses">false</ns2:property>
+      <ns2:property name="productModuleNumber">M-PRICING-001</ns2:property>
+      <ns2:property name="productModuleName">SaaS Pricing Plans</ns2:property>
+      <ns2:property name="inUse">false</ns2:property>
+      <ns2:property name="skus">{"APIREQUESTS":"1000","USERS":"10","CONSOLE_ACCESS":true,"API_ACCESS":true}</ns2:property>
+      <ns2:property name="description">For growing teams</ns2:property>
+      <ns2:property name="timeVolume">1</ns2:property>
+      <ns2:property name="timeVolumePeriod">MONTH</ns2:property>
+    </ns2:item>
+  </ns2:items>
+</ns2:netlicensing>
+```
+{: .ml-5 }
+
+#### Enterprise Plan (Unlimited)
+
+<div>Request</div>
+{: .code-example .ml-5 .code-header }
+```http
+POST https://go.netlicensing.io/core/v2/rest/licensetemplate
+Accept: application/xml
+Content-Type: application/x-www-form-urlencoded
+
+productModuleNumber=M-PRICING-001&number=PLAN-ENTERPRISE&name=Enterprise&description=Unlimited%20everything&price=0&currency=EUR&licenseType=FEATURE&skus=%7B%22APIREQUESTS%22%3A%22-1%22%2C%22USERS%22%3A%22-1%22%2C%22CONSOLE_ACCESS%22%3Atrue%2C%22API_ACCESS%22%3Atrue%7D
+```
+{: .ml-5 }
+
+<div>Response</div>
+{: .code-example .ml-5 .code-header }
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ns2:netlicensing xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://netlicensing.labs64.com/schema/context">
+  <ns2:infos/>
+  <ns2:items>
+    <ns2:item type="LicenseTemplate">
+      <ns2:property name="number">PLAN-ENTERPRISE</ns2:property>
+      <ns2:property name="active">true</ns2:property>
+      <ns2:property name="name">Enterprise</ns2:property>
+      <ns2:property name="licenseType">FEATURE</ns2:property>
+      <ns2:property name="price">0.00</ns2:property>
+      <ns2:property name="currency">EUR</ns2:property>
+      <ns2:property name="automatic">false</ns2:property>
+      <ns2:property name="hidden">false</ns2:property>
+      <ns2:property name="hideLicenses">false</ns2:property>
+      <ns2:property name="productModuleNumber">M-PRICING-001</ns2:property>
+      <ns2:property name="productModuleName">SaaS Pricing Plans</ns2:property>
+      <ns2:property name="inUse">false</ns2:property>
+      <ns2:property name="skus">{"APIREQUESTS":"-1","USERS":"-1","CONSOLE_ACCESS":true,"API_ACCESS":true}</ns2:property>
+      <ns2:property name="description">Unlimited everything</ns2:property>
+    </ns2:item>
+  </ns2:items>
+</ns2:netlicensing>
+```
+{: .ml-5 }
 
 ## Publish
 
