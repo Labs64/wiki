@@ -9,6 +9,26 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing v2.10.10 — Stronger Security, Smarter Pricing Tables"
+  description: "This release puts account security and pricing table flexibility front and center. Two-factor authentication is here to keep vendor accounts safer, the Pricing Table editor got a visual refresh that makes editable fields obvious at a glance, and you can now attach your own custom properties to plans and carry them into exported HTML. We also cleared out a batch of bugs around recurring payments, currencies, and license templates so things behave the way you'd expect."
+  date: 2026-09-22
+  component: API, UI, Shop
+  features:
+    - added: Two-factor authentication (2FA) is now available to add an extra layer of protection to your account
+    - added: Custom properties can now be attached to Pricing Table plans and are automatically included in the exported HTML
+    - updated: Editable fields in the Pricing Table editor are now visually highlighted, so it's immediately clear what you can customize
+    - updated: Recurring payment errors are now surfaced clearly instead of failing quietly
+    - updated: Cancelling a recurring payment now properly cancels its scheduler too, instead of leaving it running in the background
+    - updated: Warning levels are now based only on the relevant product module, giving you a more accurate picture at a glance
+    - updated: Signing up with GitHub is working again
+    - updated: Attribution is now enforced on FREE plans
+    - added: New Discounts Licensing Model, giving you more flexibility to run promotions in the Shop and Customer View
+    - fixed: Downloading a Pricing Table as HTML no longer fails with an error after your session expires
+    - fixed: License template parameters are now correctly applied when a license is created
+    - fixed: Currency now displays correctly after switching currencies in settings
+    - fixed: Warning level after a feature purchase in Try & Buy now updates correctly
+  url: https://ui.netlicensing.io
+
 - title: "NetLicensing MCP v0.1.8: Critical Security Patch"
   description: "This NetLicensing MCP version patches a critical path traversal vulnerability (GHSA-hxpf-9xvq-wph8, CVSS 9.6) that allowed any authenticated MCP client to extract plaintext API keys — including admin-level credentials — that the token tools were designed to redact."
   date: 2026-06-18
