@@ -44,6 +44,15 @@ NetLicensing.
 </tr>
 </thead>
 <tbody>
+<tr class="even">
+<td><span markdown="1">[Discount](discount)</span></td>
+<td><ul>
+<li>Promo code</li>
+<li>Coupon</li>
+</ul></td>
+<td><p>Configure fixed-amount or percentage discounts that can be resolved by promo code, with optional date and minimum-cart-total eligibility rules.</p></td>
+<td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
+</tr>
 <tr class="odd">
 <td><span markdown="1">[Try & Buy](try-n-buy)</span></td>
 <td><ul>
