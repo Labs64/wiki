@@ -316,7 +316,7 @@ Where:
     -   Linux: *$JAVA\_HOME/lib/security/cacerts*
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">C\#</span>
 
 <span style="color: rgb(36,39,41);">C\# uses OS keystore, add the self-signed certificate to the *Local Computer Trusted Root Certification Authorities*</span>
@@ -341,11 +341,11 @@ $ sudo update-ca-certificates
 ```
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">PHP</span>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Standalone</span>
 
 Specify path to self-signed certificate:
@@ -357,7 +357,7 @@ curl_setopt($ch, CURLOPT_CAINFO, <path-to-certificate>);
 ```
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Apache httpd</span>
 
 -   Download the <a href="https://curl.haxx.se/docs/caextract.html" target="_blank" rel="noopener nofollow" class="external-link">certificate bundle</a>.
@@ -380,9 +380,9 @@ class="expand-control-text">Apache httpd</span>
     openssl_get_cert_locations();
     ```
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">JavaScript</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">JavaScript</span>
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Node.js</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">Node.js</span>
 
 Specify path to self-signed certificate:
 
@@ -403,7 +403,7 @@ const instance = axios.create({
 netLicensing.Service.setAxiosInstance(instance);
 ```
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Browser</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">Browser</span>
 
 Add Security Exception for specified host of NetLicensing Agent server.
 

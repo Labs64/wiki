@@ -27,7 +27,7 @@ Follow this guide to configure the product using Subscription and Multi-Feature 
 Your final product configuration should be similar to this one.
 
 <a href="assets/images/faq-multiple-licensing-models.png" class="imagelink" data-lightbox="multiple-licensing-models" data-title="Configure product using different licensing models" data-alt="Configure product using different licensing models">
-  <img src="assets/images/faq-multiple-licensing-models.png" />
+  <img alt="Product with multiple licensing models" src="assets/images/faq-multiple-licensing-models.png" />
 </a>
 
 

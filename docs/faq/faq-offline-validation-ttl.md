@@ -26,5 +26,5 @@ Caching functionality need to be realised by means of the specific product imple
 Please find below a typical flow for the *"Offline validation using TTL"*
 
 <a href="assets/images/faq-offline-validation-ttl.png" class="imagelink" data-lightbox="multiple-licensing-models" data-title="Offline validation using TTL" data-alt="Offline validation using TTL">
-  <img src="assets/images/faq-offline-validation-ttl.png" />
+  <img alt="Offline validation time-to-live (TTL) timeline" src="assets/images/faq-offline-validation-ttl.png" />
 </a>

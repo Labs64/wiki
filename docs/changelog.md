@@ -14,56 +14,53 @@ sitemap:
 {{ page.title }}
 =============
 
-We improve the NetLicensing services every day by releasing new features, squashing bugs, and delivering fresh documentation.
-Here's an account of what's recently happened.
-This is our *#changelog*.
+We improve NetLicensing every day by releasing new features, squashing bugs, and delivering fresh documentation.
+Here's an account of what's recently happened. This is our *#changelog*.
 
-<button class="btn" id="startTour">Tour: Notable Features</button>
-<script type="text/javascript" src="{{ "/assets/js/guidechimp-tours.js" | absolute_url }}"></script>
+<div class="cl" markdown="1">
 
-{% for change in site.data.changelog %}
+<div class="cl-toolbar">
+<button class="btn" id="startTour" type="button">Tour: Notable Features</button>
+<a class="cl-feed" href="{{ '/feed.xml' | relative_url }}"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true" focusable="false"><path d="M3 3a10 10 0 0 1 10 10M3 7.5A5.5 5.5 0 0 1 8.5 13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="3.6" cy="12.4" r="1.4" fill="currentColor"/></svg>Subscribe via RSS</a>
+</div>
 
----
+{% assign cutoff = site.time | date: '%s' | plus: 0 | minus: 31536000 %}
+{% assign years = site.data.changelog | group_by_exp: "c", "c.date | date: '%Y'" %}
 
-<section markdown="1" title="{{ change.title }}">
+<div class="cl-recent" markdown="1">
+{% for change in site.data.changelog %}{% assign ts = change.date | date: '%s' | plus: 0 %}{% if ts >= cutoff %}
+{% include changelog-entry.html change=change %}
+{% endif %}{% endfor %}
+</div>
 
-### {{ change.title }}
-<p style="font-size: smaller; font-style: italic;">{% if change.component %}In {{ change.component }} on {% endif %}{{ change.date | date: '%B %d, %Y' }}</p>
-<p class="change-description">{{ change.description }}</p>
+<div class="cl-archive" markdown="1">
 
-{% if change.image %}
-<a href="{{ change.image }}" class="imagelink" data-lightbox="{{ change.title | prepend: '-' | prepend: change.date | slugify }}" data-title="{{ change.title }}" data-alt="{{ change.title }}">
-  <img src="{{ change.image }}" />
-</a>
-{% endif %}
+## Earlier entries
 
-{% if change.features %}
-**Changes:**
-{% for feature in change.features %}
-{% for item in feature %}
-{% case item[0] %}
-{% when 'added' %}
-{% assign style = 'label-green' %}
-{% when 'updated' %}
-{% assign style = 'label-yellow' %}
-{% when 'fixed' %}
-{% assign style = 'label-red' %}
-{% else %}
-{% assign style = 'label-purple' %}
-{% endcase %}
-- <span class="label {{ style }}">{{ item[0] }}</span> {{ item[1] }}
-{% endfor %}
-{% endfor %}
-{% endif %}
+Older than twelve months, grouped by year.
 
-{% if change.url %}
-[Learn more]({{ change.url }}){: .btn }
-{% endif %}
+{% for g in years %}{% assign n = 0 %}{% for c in g.items %}{% assign ts = c.date | date: '%s' | plus: 0 %}{% if ts < cutoff %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}{% if n > 0 %}
+<details class="cl-year" markdown="1">
+<summary><span class="cl-year-name">{{ g.name }}</span><span class="cl-count">{{ n }} {% if n == 1 %}entry{% else %}entries{% endif %}</span></summary>
+<div class="cl-year-body" markdown="1">
+{% for c in g.items %}{% assign ts = c.date | date: '%s' | plus: 0 %}{% if ts < cutoff %}
+{% include changelog-entry.html change=c %}
+{% endif %}{% endfor %}
+</div>
+</details>
+{% endif %}{% endfor %}
 
-</section>
+</div>
 
-{% endfor %}
+</div>
 
 ---
 
 [Here](release-notes) you can find a historical archive of past NetLicensing release notes.
+
+<link rel="stylesheet" href="{{ '/assets/css/changelog.css' | relative_url }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/guidechimp@5.0.5/dist/guidechimp.min.css" integrity="sha384-CtCHUCPNI8pOj9U8q5F3gMrcnIcQEaaLt/2zf1fYHdxbf1+0p5cqJ4HO5lELpcK/" crossorigin="anonymous">
+<script defer src="{{ '/assets/js/changelog.js' | relative_url }}"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/guidechimp@5.0.5/dist/guidechimp.min.js" integrity="sha384-FB4v/hFf+kaEn1SOXCvF9/iI7mB5Dmw6wA4x1IUm7y+bcOHdFyCVrX4mDYdYIu0j" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/guidechimp@5.0.5/dist/plugins/licensing.js" integrity="sha384-bT8xjX2OuTWFBu3WJ4VYuT76IZVHkX9TmcVKA/oIbcssTuERI2VQzDJkcGGiHLxg" crossorigin="anonymous"></script>
+<script defer src="{{ '/assets/js/guidechimp-tours.js' | relative_url }}"></script>

@@ -45,7 +45,7 @@ Validation flow
 
 Here is the licensee secret workflow diagram for the "**Client**" mode:
 
-<img src="assets/images/licensee-secret.png" />
+<img alt="Licensee secret in the Management Console" src="assets/images/licensee-secret.png" />
 
 Examples
 ========
@@ -56,7 +56,7 @@ Predefined mode
 ---------------
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Create or Update Licensee</span>
 
 <div>Request</div>
@@ -87,7 +87,7 @@ Accept: application/xml
 {: .ml-5 }
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Subsequent validate, secret matches</span>
 
 <div>Request</div>
@@ -121,7 +121,7 @@ licenseeSecret=c99c12016c357200771b21645be64157
 {: .ml-5 }
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Subsequent validate, secret mismatch</span>
 
 <div>Request</div>
@@ -160,7 +160,7 @@ Client mode
 -----------
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">First validate and Subsequent validate with
 matching Secret</span>
 
@@ -195,7 +195,7 @@ licenseeSecret=c99c12016c357200771b21645be64157
 {: .ml-5 }
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Subsequent validate, secret mismatch</span>
 
 <div>Request</div>

@@ -1,3 +1,6 @@
+# Tour: Notable Features (assets/js/guidechimp-tours.js) points at entries by heading anchor;
+# keep it to ~10-15 customer-facing features and re-check anchors when titles change.
+#
 # - title: "<TITLE>"
 #   description: "<EYE-CATCHER-DESCRIPTION>"
 #   date: yyyy-mm-dd
@@ -6,6 +9,7 @@
 #    - added: Lorem ipsum dolor sit amet
 #    - updated: Ut enim ad minim veniam
 #    - fixed: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+#   security: true   # optional; adds a Security badge
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
@@ -13,6 +17,7 @@
   description: "This release strengthens the security and reliability of the NetLicensing PHP client. It addresses vulnerabilities in XML signature verification dependencies, improves offline license validation, fixes credential handling and Discount data submission, and adds comprehensive automated security tests. The client has also been tested with PHP 8.2, 8.3, 8.4, and 8.5."
   date: 2026-10-22
   component: Client Libraries
+  security: true
   features:
     - updated: "**Keep your PHP runtime patched.** The client does not introduce or contain the PHP core vulnerabilities *CVE-2026-109618* and *CVE-2026-109619* (PHP2Shell), which affect PHP's request-handling internals and can enable unauthenticated remote code execution. Updating the client alone does not protect a vulnerable PHP runtime. Upgrade to PHP 8.5.12+, 8.4.27+, 8.3.36+ or 8.2.35+ (or the latest security release of your branch). On an unsupported PHP version, migrate to a supported branch or check whether your distribution provides a security backport"
     - updated: Improved XML signature security by requiring robrichards/xmlseclibs 3.1.5, addressing known vulnerabilities in the library used to verify signed NetLicensing responses
@@ -32,6 +37,7 @@
   description: "This release strengthens the security and reliability of the NetLicensing Java client. It upgrades XML digital signature verification dependencies, aligns Bouncy Castle components, and raises the minimum Java version to 17. Comprehensive XMLDSig tests, enforced 100% line and branch coverage for the custom validator, and automated dependency updates further improve security and maintainability."
   date: 2026-10-21
   component: Client Libraries
+  security: true
   features:
     - updated: Upgraded ph-xmldsig from 5.0.2 to 6.1.0 to address critical security vulnerabilities
     - updated: Aligned Bouncy Castle dependencies bcprov-jdk18on, bcpkix-jdk18on, and bcutil-jdk18on to version 1.86
@@ -62,6 +68,7 @@
   description: "This release puts account security and pricing table flexibility front and center. Two-factor authentication is here to keep vendor accounts safer, the Pricing Table editor got a visual refresh that makes editable fields obvious at a glance, and you can now attach your own custom properties to plans and carry them into exported HTML. We also cleared out a batch of bugs around recurring payments, currencies, and license templates so things behave the way you'd expect."
   date: 2026-09-22
   component: API, UI, Shop
+  security: true
   features:
     - added: Two-factor authentication (2FA) is now available to add an extra layer of protection to your account
     - added: Custom properties can now be attached to Pricing Table plans and are automatically included in the exported HTML
@@ -82,6 +89,7 @@
   description: "This NetLicensing MCP version patches a critical path traversal vulnerability (GHSA-hxpf-9xvq-wph8, CVSS 9.6) that allowed any authenticated MCP client to extract plaintext API keys — including admin-level credentials — that the token tools were designed to redact."
   date: 2026-06-18
   component: Integrations
+  security: true
   features:
     - fixed: "Path traversal in MCP tool inputs could bypass token redaction and expose plaintext API keys to any authenticated client (GHSA-hxpf-9xvq-wph8)"
     - fixed: "Input validation now applied across all HTTP helpers in the client layer, not just the affected endpoint"
@@ -448,6 +456,7 @@
   description: "We addressed and fixed some minor but annoying defects and made our licensing services more stable and secure."
   date: 2023-10-31
   component: UI
+  security: true
   features:
    - fixed: Main currency reset upon vendor profile profile
    - fixed: Logo image upload form overflows out of the box
@@ -840,6 +849,7 @@
   description: "To mitigate 'Log4Shell' vulnerability, NetLicensingClient for Java was updated with the latest Apache Log4j v2.17.0. We strongly recommend updating to this latest version."
   date: 2021-12-23
   component: Client Libraries
+  security: true
   features:
    - updated: Upgrade log4j library to v2.17.0
    - updated: Upgrade other NetLicensingClient dependencies

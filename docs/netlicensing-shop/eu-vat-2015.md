@@ -143,7 +143,7 @@ either **Private** or **Company**:
 <a href="https://ui.netlicensing.io/#/profile" class="external-link">Vendor Profile</a> section of the NetLicensing Console:
 
 <a href="assets/images/eu-vat-09.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Vendor type" data-alt="Vendor type">
-  <img src="assets/images/eu-vat-09.png" />
+  <img alt="EU VAT screenshot, step 9" src="assets/images/eu-vat-09.png" />
 </a>
 
 
@@ -165,7 +165,7 @@ prior to introduction of VAT handling.*
 **Vat Calculation Mode** is managed via the Product Edit in the NetLicensing Console:
 
 <a href="assets/images/eu-vat-08.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Vat Calculation Mode" data-alt="Vat Calculation Mode">
-  <img src="assets/images/eu-vat-08.png" />
+  <img alt="EU VAT screenshot, step 8" src="assets/images/eu-vat-08.png" />
 </a>
 
 
@@ -174,17 +174,17 @@ prior to introduction of VAT handling.*
 1.  **Gross** calculation mode implies that the VAT is already included in the specified price, which is reflected in the NetLicensing Shop as a corresponding note below the shown prices:
 
     <a href="assets/images/eu-vat-07.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Gross shopping" data-alt="Gross shopping">
-      <img src="assets/images/eu-vat-07.png" />
+      <img alt="EU VAT screenshot, step 7" src="assets/images/eu-vat-07.png" />
     </a>
 
     And VAT percentage and actual calculated amount shown on the
     checkout page as well as order confirmation:
 
     <a href="assets/images/eu-vat-01.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Gross checkout" data-alt="Gross checkout">
-      <img src="assets/images/eu-vat-01.png" />
+      <img alt="EU VAT screenshot, step 1" src="assets/images/eu-vat-01.png" />
     </a>
     <a href="assets/images/eu-vat-06.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Gross confirmation" data-alt="Gross confirmation">
-      <img src="assets/images/eu-vat-06.png" />
+      <img alt="EU VAT screenshot, step 6" src="assets/images/eu-vat-06.png" />
     </a>
 
 2.  **Net** calculation mode implies
@@ -193,17 +193,17 @@ prior to introduction of VAT handling.*
     adds a note below the shown prices:
 
     <a href="assets/images/eu-vat-05.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Net shopping" data-alt="Net shopping">
-      <img src="assets/images/eu-vat-05.png" />
+      <img alt="EU VAT screenshot, step 5" src="assets/images/eu-vat-05.png" />
     </a>
 
     Shopping cart view and confirmation page shows calculated VAT as a
     separate field:
 
     <a href="assets/images/eu-vat-02.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Net checkout" data-alt="Net checkout">
-      <img src="assets/images/eu-vat-02.png" />
+      <img alt="EU VAT screenshot, step 2" src="assets/images/eu-vat-02.png" />
     </a>
     <a href="assets/images/eu-vat-04.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Net confirmation" data-alt="Net confirmation">
-      <img src="assets/images/eu-vat-04.png" />
+      <img alt="EU VAT screenshot, step 4" src="assets/images/eu-vat-04.png" />
     </a>
 
 
@@ -217,5 +217,5 @@ calculation:
 -   Tax/VAT ID
 
 <a href="assets/images/eu-vat-03.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Checkout" data-alt="Checkout">
-  <img src="assets/images/eu-vat-03.png" />
+  <img alt="EU VAT screenshot, step 3" src="assets/images/eu-vat-03.png" />
 </a>

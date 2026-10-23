@@ -97,5 +97,5 @@ Open customer details view you want to assign a new license and click on the *"A
 The entities in this list will be named using LicenseTemplate `name` and `number` fields.
 
 <a href="assets/images/faq-create-license-programmatically.png" class="imagelink" data-lightbox="multiple-licensing-models" data-title="Retrieve LicenseTemplate number" data-alt="Retrieve LicenseTemplate number">
-  <img src="assets/images/faq-create-license-programmatically.png" />
+  <img alt="Creating a license programmatically: flow diagram" src="assets/images/faq-create-license-programmatically.png" />
 </a>

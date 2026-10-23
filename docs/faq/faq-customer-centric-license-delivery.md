@@ -35,7 +35,7 @@ curl -X POST -H 'Accept: application/xml' -H 'Authorization: Basic YXBpS2V5OmZhO
 The same `licenseeNumber` will be shown on the order confirmation page and email (in the case customer provided a valid email address).
 
 <a href="assets/images/faq-customer-centric-license-delivery.png" class="imagelink" data-lightbox="multiple-licensing-models" data-title="Shop order confirmation page" data-alt="Shop order confirmation page">
-  <img src="assets/images/faq-customer-centric-license-delivery.png" />
+  <img alt="Customer-centric license delivery flow" src="assets/images/faq-customer-centric-license-delivery.png" />
 </a>
 
 Further product usage will be restricted based on the [validation results](licensee-services#validate-licensee) for the given customer with the above `licenseeNumber`:
