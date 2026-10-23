@@ -9,6 +9,21 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensingClient-java — Critical Security Updates"
+  description: "This release strengthens the security and reliability of the NetLicensing Java client. It upgrades XML digital signature verification dependencies, aligns Bouncy Castle components, and raises the minimum Java version to 17. Comprehensive XMLDSig tests, enforced 100% line and branch coverage for the custom validator, and automated dependency updates further improve security and maintainability."
+  date: 2026-10-21
+  component: Client Libraries
+  features:
+    - updated: Upgraded ph-xmldsig from 5.0.2 to 6.1.0 to address critical security vulnerabilities
+    - updated: Aligned Bouncy Castle dependencies bcprov-jdk18on, bcpkix-jdk18on, and bcutil-jdk18on to version 1.86
+    - updated: Raised the minimum required Java version from 11 to 17 to meet the requirements of ph-xmldsig 6.1.0
+    - updated: Updated runtime and test dependencies to their latest stable, compatible versions
+    - updated: Migrated CI and release workflows to Java 17
+    - added: Configured Dependabot to monitor Maven dependencies and GitHub Actions for updates
+    - added: Expanded XML digital signature tests to cover valid inline and detached signatures, missing and multiple signatures, modified signed content, incorrect verification keys, and null input
+    - added: Enforced 100% line and branch coverage for XMLDSigValidatorCustom through a JaCoCo verification gate
+  url: https://github.com/Labs64/NetLicensingClient-java/releases/tag/2.10.3
+
 - title: "NetLicensing v2.10.10 — Stronger Security, Smarter Pricing Tables"
   description: "This release puts account security and pricing table flexibility front and center. Two-factor authentication is here to keep vendor accounts safer, the Pricing Table editor got a visual refresh that makes editable fields obvious at a glance, and you can now attach your own custom properties to plans and carry them into exported HTML. We also cleared out a batch of bugs around recurring payments, currencies, and license templates so things behave the way you'd expect."
   date: 2026-09-22
