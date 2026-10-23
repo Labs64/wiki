@@ -24,6 +24,21 @@
     - added: Enforced 100% line and branch coverage for XMLDSigValidatorCustom through a JaCoCo verification gate
   url: https://github.com/Labs64/NetLicensingClient-java/releases/tag/2.10.3
 
+- title: "NetLicensing Management Console — Smoother Discount Setup and Improved Audit Integration"
+  description: "This release makes licensing configuration easier and more reliable. You can now create demo scenarios directly from the Product Module list, configure Discount licensing with clearer guidance and fewer input errors, and benefit from improved Pricing Table validation. Behind the scenes, session handling and AuditFlow integration have also been improved, while dependency updates help keep the Management Console up to date."
+  date: 2026-10-12
+  component: UI, Integrations
+  features:
+    - added: Create demo scenarios directly from the Product Module list to get started with licensing configurations more quickly
+    - updated: Discount licensing now has a dedicated icon and a clearer model description, making it easier to identify and understand
+    - fixed: Prevent duplicate promo codes in the Discount module form to avoid configuration errors
+    - fixed: Pricing Table recovery validation now follows the documented SKU value types, improving compatibility when recovering pricing table configurations
+    - updated: Improved session handling and relay behavior for more reliable interactions
+    - updated: Improved [AuditFlow event publishing](https://github.com/Labs64/labs64.io-auditflow) and correlation to support audit tracking and troubleshooting
+    - updated: Refreshed frontend dependencies to keep the Management Console current
+    - updated: Removed outdated "New" badges to keep the interface clear and focused
+  url: https://netlicensing.io
+
 - title: "NetLicensing v2.10.10 — Stronger Security, Smarter Pricing Tables"
   description: "This release puts account security and pricing table flexibility front and center. Two-factor authentication is here to keep vendor accounts safer, the Pricing Table editor got a visual refresh that makes editable fields obvious at a glance, and you can now attach your own custom properties to plans and carry them into exported HTML. We also cleared out a batch of bugs around recurring payments, currencies, and license templates so things behave the way you'd expect."
   date: 2026-09-22
