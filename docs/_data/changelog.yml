@@ -4,6 +4,7 @@
 # - title: "<TITLE>"
 #   description: "<EYE-CATCHER-DESCRIPTION>"
 #   date: yyyy-mm-dd
+#   date_precision: year   # optional; show only the year (for entries whose exact release date is unknown)
 #   component: API|Agent|UI|Customer Portal|Gateway|Shop|Docu|Client Libraries|Integrations|Reporting
 #   features:
 #    - added: Lorem ipsum dolor sit amet
@@ -1762,6 +1763,14 @@
    - updated: Update all NetLicensing client libraries
    - updated: Subscription license model now supports Grace Period
    - updated: NetLicensing Shop / Transaction improvements for recurring payments
+   - added: Public alpha of the new NetLicensing Management Console at https://ui.netlicensing.io
+   - added: NetLicensing Kotlin client library
+   - added: Custom properties can be passed to the validate call
+   - updated: Grace Period is available for the Rental licensing model as well, with notifications
+   - updated: Licensee list supports several filters at the same time
+   - updated: Anonymous users can register a new vendor account
+   - fixed: Security vulnerabilities in NetLicensing Gateway
+   - fixed: NetLicensing Agent proxy mode
   url: https://netlicensing.io/wiki/node-locked
 
 - title: "Vendor usage page"
@@ -1780,3 +1789,311 @@
   features:
    - updated: Update C++ client library
   url: https://github.com/Labs64/NetLicensingClient-cpp
+
+# ---- Entries below come from the former Release Notes archive. Exact release dates were not recorded,
+# ---- so they carry the year only (date_precision: year); the date value is a placeholder inside that year.
+
+- title: "NetLicensing 2.4.1"
+  description: "Vendors are now warned when they approach the usage limits of their plan, and PayPal recurring payments and Quota calculations were fixed."
+  date: 2019-01-01
+  date_precision: year
+  component: UI, API
+  features:
+   - added: Vendor usage limits notification and improved account settings
+   - updated: Improved API key access to the Token service endpoints
+   - updated: Verified and improved PayPal recurring payments
+   - updated: Improved demo data for the Pricing Table licensing model
+   - updated: Added default features to the Trial Premium plan
+   - updated: Clarified the description of the Agent's run-agent (incubation) action
+   - updated: More helpful "Not permitted" message for Licensee Secret
+   - fixed: Quota licensing model calculated the quota incorrectly
+   - fixed: Plan prolongation did not work for recurring payments
+
+- title: "NetLicensing 2.4.0"
+  description: "Use several API keys with different roles, protect the Agent with a hardware dongle for offline use, and collect customer consent in the Shop to support GDPR compliance."
+  date: 2018-01-01
+  date_precision: year
+  component: API, UI, Shop
+  features:
+   - added: Multiple API keys with different roles
+   - added: NetLicensing Agent protection by a hardware dongle, with an offline mode
+   - added: Customer consent is collected in the Shop (GDPR)
+   - updated: Improved RESTful API documentation
+   - updated: Updated the Stripe integration to the current Stripe API and verified payment acceptance
+   - updated: CORS is enabled in NetLicensing Core and in the Agent
+   - updated: Agent can export and import a product setup and returns proper exit codes
+   - updated: Management Console shows the current licensing model on the license template edit page, adds "Add Product Module" to the Product drop-down and a context menu entry for products, shows the username, and prevents changing the number of an entity in use
+   - updated: Dashboard Y-axis is no longer bounded by the maximum over the whole time period
+   - updated: Vendor usernames are restricted to alphanumeric characters
+   - updated: Shop clears the Terms of Service / Privacy Policy checkbox when you leave the shopping cart
+   - fixed: Two vendor accounts could end up with the same email address
+   - fixed: Product, Product Module and License Template numbers could not be found in drop-down lists
+   - fixed: Creating an API key in the Management Console, the cancel URL for plan upgrades, and the return from the Shop to the Management Console
+   - fixed: Confirmation email listed all sub-licenses of a Pricing Table
+   - fixed: Vendor profile website validation, and a wrong status code (402 instead of 400) for a product module with a non-existing licensing model
+
+- title: "NetLicensing 2.3.9"
+  description: "A feature-packed release: signed validation responses, offline validation with the Agent, PayPal recurring payments, the C++ client library, and two new licensing models, Quota and Pricing Table (beta)."
+  date: 2018-01-01
+  date_precision: year
+  component: API, UI, Shop, Client Libraries
+  features:
+   - added: In-app guided tour of the Management Console
+   - added: Validation responses can be signed (XMLDSig) so clients can verify them
+   - added: Quota licensing model, with client library support
+   - added: Pricing Table licensing model (beta), with support in the Shop, the client libraries and demo data
+   - added: Pay-per-Use licensing model distinguishes pre-accounting from post-accounting
+   - added: PayPal recurring payments, for example for the Subscription model, with vendor notifications and cancellation of the previous recurring payment
+   - added: Billing information of the licensee is collected during the Shop checkout
+   - added: C++ client library
+   - added: NetLicensing demo web application (Docker)
+   - added: Vendors can log in with their email address or their vendor number
+   - added: NetLicensing vendor profiles are integrated with NetLicensing itself
+   - added: Fields are pre-filled from the license template when a license is created
+   - added: Agent offline validation, secure communication between client, Agent and netlicensing.io, operational data storage, and export of assets for selected licensees
+   - updated: Default TTL of the validation response is configurable by the vendor
+   - updated: Vendors can change their pricing plan in the Management Console
+   - updated: Agent supports the legacy GET method for validate, has revised command-line properties, quieter logging, and marks exported licensees with the export timestamp
+   - updated: Shop adds the transaction number to the successURL and handles redirects better
+   - updated: Management Console dashboard is faster, and "Add License" is available in the license template context menu
+   - fixed: Rental licensing model did not order TimeVolume licenses under their features in the purchase confirmation email
+   - fixed: 'The "Transaction exists" error after cancelling a PayPal checkout'
+   - fixed: Inconsistent startDate validation for Subscription TimeVolume licenses
+   - fixed: IE11 hung when opening the Shop from the Management Console
+   - fixed: Shopping cart differed between private and business vendors, and PayPal and Shop behaved inconsistently
+  url: https://netlicensing.io/wiki/signing-the-response
+
+- title: "NetLicensing 2.3.8"
+  description: "A permanent Shop token and the ability to validate licensees that are marked for transfer, plus a faster dashboard and fixes for license transfer and discounts."
+  date: 2017-01-01
+  date_precision: year
+  component: API, Shop, Client Libraries
+  features:
+   - added: Permanent NetLicensing Shop token
+   - added: Licensees that are marked for transfer can still be validated
+   - updated: Pay-per-Use allows negative values of remainingQuantity
+   - updated: Dashboard statistics load much faster
+   - updated: Client libraries (Java, C#, C++, PHP, JavaScript) return the ttl of the validation result and can delete discounts
+   - updated: The ttl is returned as a date and time instead of a timestamp when the response is JSON
+   - updated: MyCommerce integration verified with automatic renewal
+   - fixed: Repeated checkout after an incomplete attempt caused an error
+   - fixed: Discounts could not be removed
+   - fixed: Licensee could not be found in the drop-down of the license edit view
+   - fixed: License template showed no price in edit mode, and start date had a wrong format after create or edit
+   - fixed: License transfer caused error 500 when source and target were the same, could leave licenses inconsistent, and gave new licensees automatic licenses although they were marked for transfer
+   - fixed: Shop error on the demo product
+  url: https://netlicensing.io/wiki/transferring-licenses-between-licensees
+
+- title: "NetLicensing 2.3.7"
+  description: "Ready for the EU VAT rules for digital products and services, and licenses can now be transferred between licensees."
+  date: 2017-01-01
+  date_precision: year
+  component: API, UI, Shop
+  features:
+   - added: Support for the EU VAT rules for digital products and services (VAT mode per product, country and VAT ID at checkout, VAT by country, VAT data in transactions and confirmation emails)
+   - added: Transfer licenses between licensees, also in the client libraries
+   - updated: Handling of reused passwords from the password history
+   - updated: Custom properties are validated for predefined fields
+   - updated: Licensee validate can use POST, replacing the deprecated GET
+   - updated: Java client supports discounts
+   - updated: Transactions show the grand total, with a revised field order in the transaction view
+   - updated: New page for unsuccessful payments and a revised Shop 404 page
+   - fixed: Wrong handling of custom property fields on the licensee edit page
+   - fixed: Misleading messages during password reset
+  url: https://netlicensing.io/wiki/eu-vat-2015
+
+- title: "NetLicensing 2.3.6"
+  description: "Maintenance release for PayPal payments."
+  date: 2017-01-01
+  date_precision: year
+  component: Shop
+  features:
+   - updated: PayPal integration updated for Digital Goods
+   - fixed: PayPal checkout failed for existing customers
+
+- title: "NetLicensing 2.3.5"
+  description: "Charge per use with the new Pay-per-Use licensing model."
+  date: 2016-01-01
+  date_precision: year
+  component: API, Shop, Docu
+  features:
+   - added: Pay-per-Use licensing model
+   - added: Documentation for the Pay-per-Use licensing model and the Quantity license type
+   - updated: Shop supports the Pay-per-Use licensing model
+   - fixed: Missing message for the required start date, and translation issues
+  url: https://netlicensing.io/wiki/pay-per-use
+
+- title: "NetLicensing 2.3.4"
+  description: "Prevent misuse of licensee numbers with the Licensee Secret."
+  date: 2016-01-01
+  date_precision: year
+  component: API, UI
+  features:
+   - added: Licensee Secret to prevent misuse of licensee numbers
+   - updated: Floating licensing model sets maxCheckoutValidity in minutes
+   - updated: More stable Stripe payments
+   - updated: Revised documentation and Management Console improvements
+   - fixed: Custom property key could not be modified
+   - fixed: Transaction view page did not display
+
+- title: "NetLicensing 2.3.2 / 2.3.3"
+  description: "A new Shop backend with customization, Fastspring and Stripe integrations, and better service security."
+  date: 2016-01-01
+  date_precision: year
+  component: Shop, Integrations, UI
+  features:
+   - added: Fastspring integration
+   - added: New Shop backend
+   - added: Shop customization
+   - added: Stripe payments
+   - updated: Order confirmation uses standard invoice attribution
+   - updated: Clearer sign-up error messages and an autofilled email field
+   - updated: Extended context menu for linked entities
+   - updated: Improved service security
+   - updated: Documentation page for the Multi-Feature licensing model
+   - fixed: Wrong response when the current password was invalid during a password change, and inconsistent Start Date validation for Subscription licenses
+   - fixed: Payment methods that were never activated were not listed, and the vendor profile could not be saved
+   - fixed: Shop could not be opened from the license list popup or the licensee and license context menus
+   - fixed: Shop showed product modules without available licenses, mishandled the product description and licensing information, and showed an empty page for an invalid product tree or a missing shop token
+   - fixed: Empty fields in the order confirmation, and missing JavaDoc for entities
+  url: https://netlicensing.io/wiki/fastspring
+
+- title: "NetLicensing 2.3.1"
+  description: "Maintenance release with fixes for Shop checkout, PayPal and license validation."
+  date: 2016-01-01
+  date_precision: year
+  component: UI, Shop, API
+  features:
+   - updated: Generating a new API key now overrides the old one
+   - updated: Revised email templates
+   - updated: Multi-Feature licenses show the license template relation, and the Floating model indicates when no active licenses exist
+   - updated: Java client no longer sends form parameters with GET requests
+   - fixed: Wrong date format for Subscription licenses broke validation
+   - fixed: Token GET and DELETE returned HTTP 500
+   - fixed: A price could not be emptied again once set, and checkout still required a payment provider when the cart held only free licenses
+   - fixed: Custom property deletion in the Management Console
+   - fixed: PayPal did not fund the vendor account after a successful payment
+   - fixed: The null payment method was always shown on the confirmation page
+   - fixed: Success and cancel URLs were not rendered, and order confirmation emails were not received
+   - fixed: Try & Buy did not allow a second licensee to buy a full-featured license
+   - fixed: Licenses bound to inactive license templates were not considered for validation
+
+- title: "NetLicensing 2.3.0"
+  description: "A completely redesigned NetLicensing Shop, the new Multi-Feature licensing model, and a reliable production environment on AWS."
+  date: 2015-01-01
+  date_precision: year
+  component: Shop, UI, API
+  features:
+   - added: Multi-Feature licensing model
+   - added: Redesigned NetLicensing Shop with modules, licenses and shopping cart pages, order confirmation, error page, and i18n
+   - added: Checkout with null payment and PayPal Sandbox, and payment providers selectable via radio buttons
+   - added: Try & Buy and Multi-Feature licensing models are available in the Shop
+   - added: Shop token accepts successURL and cancelURL custom properties
+   - added: Reliable production environment on AWS
+   - added: Step-by-step introduction to NetLicensing
+   - updated: Create a license from the license template context menu
+   - updated: Shop shows product module status as a traffic light, validates add-license parameters and the shopping cart, and handles inactive licenses
+   - updated: Documented the TTL validate result parameter
+   - fixed: Shopping cart, payment methods and order confirmation did not update or display correctly, and inactive license templates were shown in the Shop
+   - fixed: Rental licensing model did not handle a feature with a zero price, and start date handling differed between Subscription and Try & Buy
+  url: https://netlicensing.io/wiki/multi-feature
+
+- title: "NetLicensing 2.2.0"
+  description: "Floating licensing model, the Java client library and a demo virtual appliance."
+  date: 2015-01-01
+  date_precision: year
+  component: API, Client Libraries
+  features:
+   - added: Floating licensing model
+   - added: Java client library (NetLicensingClient-java)
+   - added: NetLicensing demo virtual appliance
+   - updated: Icons for popup menus and info icons in the Management Console, adapted for retina displays
+   - updated: Fine-tuned demo data creation and style improvements in the Shop
+   - updated: Vendors can configure the cancel link of the Shop
+   - updated: Compliance with the PayPal system updates
+   - updated: Improved documentation (LicenseeService, licensing models, deleting custom properties)
+   - fixed: Registration view was broken for logged-in users
+   - fixed: A token was listed but could not be retrieved after it expired
+   - fixed: A misconfigured product module prevented validation of the entire product
+   - fixed: Multiple Try & Buy licenses could be added
+   - fixed: Special characters in numbers, and the PayPal/PSP call for zero amounts
+   - fixed: Agent did not handle requests without authentication or the "No active modules" error
+   - fixed: Pending licenses activation through null payment, and the licensing model of a product module in use could be changed via the REST API
+  url: https://netlicensing.io/wiki/floating
+
+- title: "NetLicensing 2.1.0"
+  description: "Introducing the Vendor Dashboard and the NetLicensing Agent, plus clearer licensing model names."
+  date: 2014-01-01
+  date_precision: year
+  component: UI, API, Client Libraries
+  features:
+   - added: Vendor Dashboard
+   - added: NetLicensing Agent
+   - updated: Renamed licensing models (Try & Buy, Subscription, Rental)
+   - updated: Updated the XML schema and the user-agent string in the client libraries
+   - updated: Only license templates of the licensee's product are offered when creating or editing a license
+   - updated: The tokenType parameter of TokenService list moved to the filter
+   - fixed: Missing services in the C# client and demo
+   - fixed: DELETE requests without authorization return HTTP 403 instead of 401, and error responses have the correct content type
+   - fixed: Try & Buy could set an evaluation time volume of 0, and licensee auto-create added no transaction
+   - fixed: A license could be added from a license template of another product, and Subscription offered the Feature license type
+   - fixed: Shop cancel link, add-license popup, token shown as API key, and customization and cart data not reset between sessions
+
+- title: "NetLicensing 2.0.2"
+  description: "HTTP Basic authentication with API keys and a set of fixes."
+  date: 2014-01-01
+  date_precision: year
+  component: API, Client Libraries
+  features:
+   - added: API key authentication using HTTP Basic, with documentation and support in the PHP and C# libraries
+   - added: Navigate to the Shop from the licensee column of the license list
+   - added: 'The "Add license template" action in the product module context menu'
+   - fixed: Inconsistent TokenService naming between Java, RESTful and C#
+   - fixed: Server error 500 when POST was sent with a content type other than x-www-form-urlencoded
+   - fixed: Time zone mismatch around daylight saving time changes
+   - fixed: Inactive licensees passed validation, and Try & Buy created another evaluation license although an inactive one existed
+   - fixed: Licensee edit form lacked the Name field, the reset password form was broken, and the confirmation email linked to a broken logo
+
+- title: "NetLicensing 2.0.0"
+  description: "LmBox becomes Labs64 NetLicensing: redesigned Management Console, APIKey authentication, email service and many improvements."
+  date: 2014-01-01
+  date_precision: year
+  component: UI, API, Shop
+  features:
+   - updated: LmBox is renamed to Labs64 NetLicensing
+   - added: Authentication via API key (token), with a view for API key maintenance
+   - added: Email service for activation, registration confirmation, order confirmation and password reset ("Forgot password")
+   - added: Redesigned Management Console layout and texts, with pagination for list operations
+   - added: Shop URL can be generated through the API key, and vendors can visit the Shop to validate it
+   - added: Validation messages are human-readable, and the licensee Name is returned by validate
+   - added: Validation can be tested for a given date with TimeVolume licenses
+   - added: Vendor registration is refused for an email that is already known
+   - added: C# client library and demo adapted to NetLicensing
+   - updated: A longer licensee number, price format and info texts, and the old password is requested when changing the password
+   - updated: Request identifier attribute in the NetLicensing XML schema
+   - fixed: Shop failed for non-automatic licenses without a price, or in case of a failed backend call or an expired token
+   - fixed: Feature With TimeVolume licensing model purchased, activated or deleted licenses in the wrong order and accepted invalid warning thresholds
+   - fixed: Pagination with filters, list navigation and linked entity navigation in the Management Console
+   - fixed: Password reset email was not delivered, and a login with an unactivated account failed silently
+   - fixed: Wrong response (500 instead of 404) for a non-existing endpoint, and Tax/VAT ID could not be saved
+
+- title: "NetLicensing (LmBox) 1.0.0"
+  description: "The first Labs64 NetLicensing release, then still called LmBox, with a RESTful API, the management console, the Shop and the first licensing models."
+  date: 2014-01-01
+  date_precision: year
+  component: API, UI, Shop
+  features:
+   - added: RESTful API with licensee validate and auto-creation of licensees
+   - added: Management Console (LmBoxManage) with filters and the LmQL filter expression
+   - added: LmBoxShop with a confirmation page and PayPal payments, including payment method configuration instructions for vendors
+   - added: Volume discount system, calculated in the Shop and validated in the core
+   - added: Licensing models Feature With Time Volume, with warning levels (green, yellow, red), and Time Volume
+   - added: Time Limited Evaluation licensing model
+   - added: User registration, with sample data proposed after registration
+   - added: Custom properties for entities, and sub-entity linking
+   - added: Token service
+   - added: C# client library and demo
+   - updated: Object model refactored, and the XML schema published
+   - updated: Dates use the ISO 8601 format
+   - updated: Entities can be deleted
+   - fixed: Numerous issues in the entity forms, the Shop checkout and the filters of the first release

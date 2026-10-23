@@ -32,4 +32,3 @@ Full history: {{ '/changelog' | absolute_url }}
 ## Optional
 
 - [Getting Started]({{ '/getting-started' | absolute_url }}): First steps with NetLicensing
-- [Release notes archive]({{ '/release-notes' | absolute_url }}): Historical release notes

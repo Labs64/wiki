@@ -9,6 +9,26 @@ permalink: changelog
 sitemap:
   changefreq: daily
   priority: 0.8
+redirect_from:
+  - /release-notes
+  - /netlicensing-1-0-0-final
+  - /netlicensing-2-0-0-final
+  - /netlicensing-2-0-2-final
+  - /netlicensing-2-1-0-final
+  - /netlicensing-2-2-0-final
+  - /netlicensing-2-3-0-final
+  - /netlicensing-2-3-1-final
+  - /netlicensing-2-3-2-final
+  - /netlicensing-2-3-3-final
+  - /netlicensing-2-3-4-final
+  - /netlicensing-2-3-5-final
+  - /netlicensing-2-3-6-final
+  - /netlicensing-2-3-7-final
+  - /netlicensing-2-3-8-final
+  - /netlicensing-2-3-9-final
+  - /netlicensing-2-4-0-final
+  - /netlicensing-2-4-1-final
+  - /netlicensing-2-5-0-final
 ---
 
 {{ page.title }}
@@ -54,9 +74,6 @@ Older than twelve months, grouped by year.
 
 </div>
 
----
-
-[Here](release-notes) you can find a historical archive of past NetLicensing release notes.
 
 <link rel="stylesheet" href="{{ '/assets/css/changelog.css' | relative_url }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/guidechimp@5.0.5/dist/guidechimp.min.css" integrity="sha384-CtCHUCPNI8pOj9U8q5F3gMrcnIcQEaaLt/2zf1fYHdxbf1+0p5cqJ4HO5lELpcK/" crossorigin="anonymous">
