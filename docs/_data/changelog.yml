@@ -10,7 +10,7 @@
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
 - title: "NetLicensingClient-php — Stronger Signature Security and More Reliable Validation"
-  description: "This release strengthens the security and reliability of the NetLicensing PHP client. It addresses vulnerabilities in XML signature verification dependencies, improves offline license validation, fixes credential handling and Discount data submission, and adds comprehensive automated security tests. The client has also been tested with PHP 8.2, 8.3, 8.4, and 8.5. Important: the client is not affected by the PHP core vulnerabilities CVE-2026-109618 and CVE-2026-109619 (PHP2Shell), but applications must update their PHP runtime to a patched version to address those vulnerabilities."
+  description: "This release strengthens the security and reliability of the NetLicensing PHP client. It addresses vulnerabilities in XML signature verification dependencies, improves offline license validation, fixes credential handling and Discount data submission, and adds comprehensive automated security tests. The client has also been tested with PHP 8.2, 8.3, 8.4, and 8.5. **Important:** the client is not affected by the PHP core vulnerabilities *CVE-2026-109618* and *CVE-2026-109619* (PHP2Shell), but applications must update their PHP runtime to a patched version to address those vulnerabilities."
   date: 2026-10-22
   component: Client Libraries
   features:
@@ -25,7 +25,7 @@
     - updated: Expanded CI coverage to PHP 8.5, moved CI to Ubuntu 24.04, and added Composer security auditing
     - updated: Added daily dependency installation checks on PHP 8.2 and 8.5
     - updated: Documented the PHP runtime security requirements to help users keep their deployments protected
-  url: https://github.com/Labs64/NetLicensingClient-php
+  url: https://github.com/Labs64/NetLicensingClient-php/releases/tag/2.7.0
 
 - title: "NetLicensingClient-java — Critical Security Updates"
   description: "This release strengthens the security and reliability of the NetLicensing Java client. It upgrades XML digital signature verification dependencies, aligns Bouncy Castle components, and raises the minimum Java version to 17. Comprehensive XMLDSig tests, enforced 100% line and branch coverage for the custom validator, and automated dependency updates further improve security and maintainability."
