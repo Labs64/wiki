@@ -7,9 +7,10 @@ import re, sys, pathlib
 
 site = pathlib.Path(sys.argv[1])
 tours = pathlib.Path(sys.argv[2] if len(sys.argv) > 2 else 'docs/assets/js/guidechimp-tours.js')
-pages = list(site.rglob('changelog.html'))
+# only a fully built changelog counts; an unthemed or data-less build has no entries to check against
+pages = [p for p in site.rglob('changelog.html') if 'class="cl-entry"' in p.read_text(encoding='utf-8')]
 if not pages:
-    print(f'warning: no changelog.html under {site}; skipping tour anchor check')
+    print(f'warning: no fully built changelog page under {site}; skipping tour anchor check')
     sys.exit(0)
 html = pages[0].read_text(encoding='utf-8')
 ids = set(re.findall(r'\bid="([^"]+)"', html))
