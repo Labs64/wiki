@@ -2,31 +2,21 @@
 layout: vendor/compress
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- generated-on="{{ site.time | date_to_rfc822 }}" -->
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="https://www.google.com/schemas/sitemap-image/1.1">
-  {% for page in site.html_pages %}
-    {% unless page.sitemap.exclude %}
-    <url>
-      <loc>{{ page.url | remove_first:'/' | remove: "index.html" | prepend: site.baseurl | prepend: site.url }}</loc>
-      {% if page.sitemap.lastmod %}
-        <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
-      {% elsif page.date %}
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
-      {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      {% endif %}
-      {% if page.sitemap.changefreq %}
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-      {% else %}
-        <changefreq>weekly</changefreq>
-      {% endif %}
-      {% if page.sitemap.priority %}
-        <priority>{{ page.sitemap.priority }}</priority>
-      {% else %}
-        <priority>0.5</priority>
-      {% endif %}
-    </url>
-    {% endunless %}
-  {% endfor %}
+<!-- lastmod is emitted only when it is known (page front matter, or the newest changelog entry for the pages it feeds); a build-time stamp on every URL would tell crawlers nothing -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- assign latest = site.data.changelog | first %}
+  {%- for page in site.html_pages %}
+  {%- unless page.sitemap.exclude or page.url == '/404.html' %}
+  <url>
+    <loc>{{ page.url | remove: "index.html" | absolute_url }}</loc>
+    {%- if page.sitemap.lastmod %}
+    <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+    {%- elsif page.date %}
+    <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+    {%- elsif page.url == '/' or page.url == '/changelog.html' or page.url == '/changelog' %}
+    <lastmod>{{ latest.date | date: "%Y-%m-%d" }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endunless %}
+  {%- endfor %}
 </urlset>

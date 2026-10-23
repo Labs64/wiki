@@ -22,11 +22,11 @@ search_tokenizer_separator: /[\s/]+/
 # Aux links for the upper right navigation
 aux_links:
   "NetLicensing Website":
-    - "//netlicensing.io"
+    - "https://netlicensing.io"
   "Management Console":
-    - "//ui.netlicensing.io"
+    - "https://ui.netlicensing.io"
   "Service Status":
-    - "//status.netlicensing.io"
+    - "https://status.netlicensing.io"
 
 # Heading anchor links appear on hover over h1-h6 tags in page content
 # allowing users to deep link to a particular heading on a page.
@@ -50,6 +50,7 @@ ga_tracking_anonymize_ip: true
 zoho_salesiq_code: "57912641e38953d1e82182c4935dd7cc6768a402d6735d94c891a15169899c4bc025d1c7bcb6f0795fd8083772e86cd8"
 
 # SEO
+lang: en
 title: NetLicensing Wiki
 description: Resources that will help you learn about Labs64 NetLicensing
 logo: "assets/images/logos/netlicensing-logo-transparent.png"
@@ -58,7 +59,7 @@ author:
   twitter: netlicensing
 twitter:
   username: netlicensing
-  card: summary
+  card: summary_large_image
 social:
   name: Labs64 NetLicensing
   links:
@@ -67,3 +68,11 @@ social:
     - https://github.com/Labs64/
     - https://www.facebook.com/netlicensing
     - https://twitter.com/netlicensing
+
+# Default social preview (Open Graph / Twitter large card); a page's own `image:` front matter wins.
+# jekyll-seo-tag reads the image from page front matter only, so it is set through defaults.
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "https://netlicensing.io/img/netlicensing-stage-twitter.jpg"

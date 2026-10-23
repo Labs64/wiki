@@ -10,11 +10,11 @@ permalink: licensee-secret
 Licensee Secret (deprecated)
 ============================
 
--   [Introduction](#LicenseeSecret(deprecated)-Introduction)
--   [Validation flow](#LicenseeSecret(deprecated)-Validationflow)
--   [Examples](#LicenseeSecret(deprecated)-Examples)
-    -   [Predefined mode](#LicenseeSecret(deprecated)-Predefinedmode)
-    -   [Client mode](#LicenseeSecret(deprecated)-Clientmode)
+-   [Introduction](#introduction)
+-   [Validation flow](#validation-flow)
+-   [Examples](#examples)
+    -   [Predefined mode](#predefined-mode)
+    -   [Client mode](#client-mode)
 
 Node-Locked Licensing Model
 

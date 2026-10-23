@@ -11,9 +11,7 @@ permalink: rental
 ======
 
 -   [Overview](#overview)
--   [License templates](#license-templates)
--   [Licenses](#licenses)
--   [Validation](#validation)
+-   [Warning levels](#warning-levels)
 
 Overview
 --------
@@ -24,7 +22,7 @@ This licensing model can be easier explained using an example:
 
 Assume you have a payment processing server, and credit card terminal devices that communicate credit card data to the server. You want to license every terminal device individually for a specific time period. Your customers may order multiple terminal devices.
 
-<img alt="Rental screenshot" src="assets/images/rental-overview.png" />
+<img alt="Diagram: a payment processing server connected to terminal devices belonging to three customers" src="assets/images/rental-overview.png" />
 
 For our example assume that each device is initially licensed for 3 months; before this period ends a renewal license must be purchased in order to keep the device in operation. Renewal is possible for different periods with quantity discounts:
 
@@ -49,7 +47,7 @@ For our example we need one TIMEVOLUME license template for the initial 3 months
 
 Below is the summary of all the license templates that need to be configured for our example:
 
-<img alt="Rental screenshot, step 4" src="assets/images/rental-overview-04.png" />
+<img alt="Rental model setup: product, product module, licensing model FeatureWithTimeVolume, one FEATURE and four TIMEVOLUME license templates" src="assets/images/rental-overview-04.png" />
 
 <table style="width:100%;">
 <colgroup>
@@ -128,7 +126,7 @@ Let's assume now a customer with the [id number](glossary) "CUST-4567" orders 3 
 First of all, if this is a new customer, corresponding [Licensee](object-model#licensee) object must be created within NetLicensing, holding the above customer number - "CUST-4567".  
 This can be done either manually via <a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a> or the application on the payment processing server can do it via [NetLicensing API](restful-api), if it has an automated customer registration procedure.
 
-<img alt="Rental screenshot, step 2" src="assets/images/rental-overview-02.png" />
+<img alt="Rental model license templates: one FEATURE template and four TIMEVOLUME templates (91 days evaluation, 91 days EUR 10, 182 days EUR 17, 365 days EUR 30) with a licensee" src="assets/images/rental-overview-02.png" />
 
 Once required licensee object is in place, for each of the ordered terminal devices create the following licenses, binding them to the licensee "CUST-4567" (again NetLicensing Management Console or NetLicensing API can be used at your choice):
 
@@ -139,7 +137,7 @@ Once required licensee object is in place, for each of the ordered terminal devi
 -   from license template "LT-DEV", number=DEV-343
 -   from license template "LT-EVAL": parentFeature=DEV-343, startDate=now
 
-<img alt="Rental screenshot, step 1" src="assets/images/rental-overview-01.png" />
+<img alt="Object diagram of the Rental model: licensee with three FEATURE licenses, each with one 91 day TIMEVOLUME license" src="assets/images/rental-overview-01.png" />
 
 Now when the application on the payment processing server calls validate() for the customer "CUST-4567", it will get the state for the three devices registered for this customer.
 
@@ -221,7 +219,7 @@ Customer selects a license he wants to purchase by pressing "+" in the correspon
 
 Assuming for our example that the customer selected 6 months license for devices "DEV-341" and "DEV-342", the licenses after his purchase will look like:
 
-<img alt="Rental screenshot, step 3" src="assets/images/rental-overview-03.png" />
+<img alt="Object diagram of the Rental model: licensee with three FEATURE licenses; two of them have an additional 182 day TIMEVOLUME license" src="assets/images/rental-overview-03.png" />
 
 And the validation result for the validation performed on Aug 21, 2012 will look like:
 

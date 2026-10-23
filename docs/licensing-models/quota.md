@@ -10,10 +10,10 @@ permalink: quota
 {{ page.title }}
 =====
 
--   [Overview](#Quota-Overview)
--   [License templates](#Quota-Licensetemplates)
--   [Licenses](#Quota-Licenses)
--   [Validation](#Quota-Validation)
+-   [Overview](#overview)
+-   [License templates](#license-templates)
+-   [Licenses](#licenses)
+-   [Validation](#validation)
 
 Overview
 --------

@@ -174,7 +174,7 @@ nginx.conf
 
 -   Replace `yourhost.com` with the actual host name of your server
 
- 
+
 Running Agent and Nginx
 -----------------------
 
@@ -276,7 +276,7 @@ For creating self-signed certificate you can use openssl tool or a number of oth
 
 Here are some useful links:
 
--   <a hreftarget="_blank" rel="noopener nofollow" class="external-link">How to create a self-signed certificate with openssl</a>
+-   How to create a self-signed certificate with openssl
 -   <a href="https://support.apple.com/kb/PH20131?locale=en_US&amp;viewlocale=en_US" target="_blank" rel="noopener nofollow" class="external-link">Keychain for Mac: Create self-signed certificates using Keychain Access</a>
 -   <a href="https://msdn.microsoft.com/en-us/library/ff699202.aspx" target="_blank" rel="noopener nofollow" class="external-link">Windows: How to: Create Your Own Test Certificate</a>
 

@@ -1,0 +1,35 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap:
+  exclude: true
+---
+# NetLicensing Wiki
+
+> Documentation for Labs64 NetLicensing, a licensing-as-a-service (LaaS) platform for software vendors: licensing models (node-locked, floating, subscription, rental, pay-per-use, quota, pricing table, discount and more), RESTful API, client libraries, Shop, Customer Portal, Agent, MCP server and integrations.
+
+Each page below is a standalone HTML page. The Markdown sources are public at https://github.com/Labs64/wiki/tree/master/docs. For the most recent product changes read the changelog first. Machine-readable feed of the latest entries: {{ '/feed.xml' | absolute_url }}
+
+{% assign sorted = site.pages | sort: "nav_order" -%}
+{%- for top in sorted %}{% if top.title and top.layout == "default" and top.nav_exclude != true and top.parent == nil %}
+## {{ top.title }}
+
+- [{{ top.title }}]({{ top.url | absolute_url }}){% if top.description %}: {{ top.description | strip_newlines | strip }}{% endif %}
+{%- for kid in sorted %}{% if kid.parent == top.title and kid.grand_parent == nil %}
+- [{{ kid.title }}]({{ kid.url | absolute_url }}){% if kid.description %}: {{ kid.description | strip_newlines | strip }}{% endif %}
+{%- for gk in sorted %}{% if gk.grand_parent == top.title and gk.parent == kid.title %}
+- [{{ kid.title }} / {{ gk.title }}]({{ gk.url | absolute_url }}){% if gk.description %}: {{ gk.description | strip_newlines | strip }}{% endif %}
+{%- endif %}{% endfor %}
+{%- endif %}{% endfor %}
+{% endif %}{% endfor %}
+## Latest changes
+
+{% for change in site.data.changelog limit: 10 -%}
+- {{ change.date | date: '%Y-%m-%d' }}: {{ change.title }}{% if change.component %} ({{ change.component }}){% endif %}
+{% endfor %}
+Full history: {{ '/changelog' | absolute_url }}
+
+## Optional
+
+- [Getting Started]({{ '/getting-started' | absolute_url }}): First steps with NetLicensing
+- [Release notes archive]({{ '/release-notes' | absolute_url }}): Historical release notes

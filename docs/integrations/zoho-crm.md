@@ -26,7 +26,7 @@ The Customer view at NetLicensing [Management Console](https://ui.netlicensing.i
 Having this information in Zoho CRM would connect CRM and Licence Management system and significantly improve vendors workflow.
 
 <a href="assets/images/zoho-screenshot3.png" class="imagelink" data-lightbox="zoho" data-title="NetLicensing Licenses" data-alt="NetLicensing Licenses">
-    <img alt="Zoho CRM screenshot, step 3" src="assets/images/zoho-screenshot3.png" />
+    <img alt="NetLicensing Management Console customer page showing the customer number and its list of licenses" src="assets/images/zoho-screenshot3.png" />
 </a>
 
 #### NetLicensing API Key
@@ -35,7 +35,7 @@ The information kept in the NetLicensing can be retrieved using the RESTful API,
 A new API Key can be created at *"Settings - API Access"* page.
 
 <a href="assets/images/zoho-screenshot4.png" class="imagelink" data-lightbox="zoho" data-title="NetLicensing API Key" data-alt="NetLicensing API Key">
-    <img alt="Zoho CRM screenshot, step 4" src="assets/images/zoho-screenshot4.png" />
+    <img alt="NetLicensing Management Console API Access tab with the API key for Zoho CRM (role Analytics) highlighted" src="assets/images/zoho-screenshot4.png" />
 </a>
 
 #### Configure Zoho CRM
@@ -43,7 +43,7 @@ A new API Key can be created at *"Settings - API Access"* page.
 Created API Key need to be used in the Zoho CRM configuration for the variable *"API Key"*.
 
 <a href="assets/images/zoho-screenshot5.png" class="imagelink" data-lightbox="zoho" data-title="Zoho: Configuration" data-alt="Zoho: Configuration">
-    <img alt="Zoho CRM screenshot, step 5" src="assets/images/zoho-screenshot5.png" />
+    <img alt="Zoho CRM Variables page with the netlicensing__API_Key variable and its empty value field highlighted" src="assets/images/zoho-screenshot5.png" />
 </a>
 
 #### Zoho Account: Customer Number
@@ -51,14 +51,14 @@ Created API Key need to be used in the Zoho CRM configuration for the variable *
 Provide NetLicensing Customer Number in the corresponding Account field.
 
 <a href="assets/images/zoho-screenshot1.png" class="imagelink" data-lightbox="zoho" data-title="Zoho: Customer Number" data-alt="Zoho: Customer Number">
-    <img alt="Zoho CRM screenshot, step 1" src="assets/images/zoho-screenshot1.png" />
+    <img alt="Zoho CRM account page with the Customer Number field (CUST-CAD-01) highlighted" src="assets/images/zoho-screenshot1.png" />
 </a>
 
 Having this field filled, the licensing data will be retrieved and shown in the *"NetLicensing Licenses"* list.
 #### Zoho Account: NetLicensing Licenses as related view
 
 <a href="assets/images/zoho-screenshot2.png" class="imagelink" data-lightbox="zoho" data-title="Zoho: NetLicensing Licenses (related list)" data-alt="Zoho: NetLicensing Licenses (related list)">
-    <img alt="Zoho CRM screenshot, step 2" src="assets/images/zoho-screenshot2.png" />
+    <img alt="Zoho CRM account page with the NetLicensing Licenses related list and the View Licenses link highlighted" src="assets/images/zoho-screenshot2.png" />
 </a>
 
 ### References

@@ -11,25 +11,25 @@ permalink: privacy-center
 Privacy Center
 ==============
 
--   [What is the GDPR?](#PrivacyCenter-WhatistheGDPR?)
-    -   [Who does it affect?](#PrivacyCenter-Whodoesitaffect?)
+-   [What is the GDPR?](#what-is-the-gdpr)
+    -   [Who does it affect?](#who-does-it-affect)
     -   [What is considered “personal
-        data”?](#PrivacyCenter-Whatisconsidered“personaldata”?)
+        data”?](#what-is-considered-personal-data)
     -   [What does it mean to “process”
-        data?](#PrivacyCenter-Whatdoesitmeanto“process”data?)
+        data?](#what-does-it-mean-to-process-data)
 -   [Do you need to comply with the
-    GDPR?](#PrivacyCenter-DoyouneedtocomplywiththeGDPR?)
+    GDPR?](#do-you-need-to-comply-with-the-gdpr)
 -   [Does it matter whether you are a controller or a
-    processor?](#PrivacyCenter-Doesitmatterwhetheryouareacontrolleroraprocessor?)
+    processor?](#does-it-matter-whether-you-are-a-controller-or-a-processor)
 -   [How NetLicensing comply with the
-    GDPR?](#PrivacyCenter-HowNetLicensingcomplywiththeGDPR?)
+    GDPR?](#how-netlicensing-comply-with-the-gdpr)
 -   [How can NetLicensing assist in your GDPR compliance
-    efforts?](#PrivacyCenter-HowcanNetLicensingassistinyourGDPRcomplianceefforts?)
+    efforts?](#how-can-netlicensing-assist-in-your-gdpr-compliance-efforts)
     -   [Expansion of Individual
-        Rights](#PrivacyCenter-ExpansionofIndividualRights)
+        Rights](#expansion-of-individual-rights)
     -   [Stricter Consent and Processing
-        Requirements](#PrivacyCenter-StricterConsentandProcessingRequirements)
-    -   [Detailed Instructions](#PrivacyCenter-DetailedInstructions)
+        Requirements](#stricter-consent-and-processing-requirements)
+    -   [Detailed Instructions](#detailed-instructions)
 
 The GDPR is effective on May 25, 2018, and setting a high bar for global
 privacy rights and compliance. We prepared our business and compliance

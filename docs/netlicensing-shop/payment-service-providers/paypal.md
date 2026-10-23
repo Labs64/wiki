@@ -36,7 +36,7 @@ Configure permissions for NetLicensing:
 -   Choose "`My Selling Tools`", then click `"Update"` next to
     "`API Access`"
     <a href="assets/images/paypal-selling-tools-03.png" class="imagelink" data-lightbox="paypal" data-title="My Selling Tools" data-alt="My Selling Tools">
-      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-selling-tools-03.png" />
+      <img alt="PayPal My Profile, My selling tools, with the API access row highlighted" src="assets/images/paypal-selling-tools-03.png" />
     </a>
 
 <!-- -->
@@ -64,14 +64,14 @@ Configure permissions for NetLicensing:
         *"*`paypal-sandbox_api1.labs64.de`*"*
 
     <a href="assets/images/paypal-3pp-add.png" class="imagelink" data-lightbox="paypal" data-title="Grant API permission" data-alt="Grant API permission">
-      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-3pp-add.png" />
+      <img alt="PayPal Add New Third Party Permissions form with the third party username entered and a Lookup button" src="assets/images/paypal-3pp-add.png" />
     </a>
     If modifying permissions (`"Manage API permission"` option at the
     previous bullet) - click "Edit Third Party" next to the
     corresponding username
 
     <a href="assets/images/paypal-3pp-access.png" class="imagelink" data-lightbox="paypal" data-title="Manage API permission" data-alt="Manage API permission">
-      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-3pp-access.png" />
+      <img alt="PayPal Manage Third Party Access list showing the added third party with an Edit Third Party button" src="assets/images/paypal-3pp-access.png" />
     </a>
 
 <!-- -->
@@ -80,7 +80,7 @@ Configure permissions for NetLicensing:
     at the previous bullet) - select permissions as shown below and
     press `"Add"`
     <a href="assets/images/paypal-3pp-permissions.png" class="imagelink" data-lightbox="paypal" data-title="Grant API permission" data-alt="Grant API permission">
-      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-3pp-permissions.png" />
+      <img alt="PayPal Available Permissions checklist with the permissions required by NetLicensing selected, including recurring payments" src="assets/images/paypal-3pp-permissions.png" />
     </a>
 
     If modifying permissions (`"Manage API permission"` option at the
@@ -89,7 +89,7 @@ Configure permissions for NetLicensing:
     `"Save"`
 
     <a href="assets/images/paypal-3pp-permissions-recurring.png" class="imagelink" data-lightbox="paypal" data-title="Granted Permissions" data-alt="Granted Permissions">
-      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-3pp-permissions-recurring.png" />
+      <img alt="PayPal Edit Third Party Permissions with the Create and manage Recurring Payments permission selected" src="assets/images/paypal-3pp-permissions-recurring.png" />
     </a>
 
 <!-- -->
@@ -97,7 +97,7 @@ Configure permissions for NetLicensing:
 -   You have now enabled NetLicensing to call PayPal API on your behalf
     to receive one-time and recurring payments
     <a href="assets/images/paypal-3pp-access-02.png" class="imagelink" data-lightbox="paypal" data-title="PayPal API" data-alt="PayPal API">
-      <img alt="PayPal screenshot, step 2" src="assets/images/paypal-3pp-access-02.png" />
+      <img alt="PayPal confirmation that the third party was successfully added to Manage Third Party Access" src="assets/images/paypal-3pp-access-02.png" />
     </a>
 
 <span
@@ -122,21 +122,21 @@ Follow steps below to set up IPN:
 -   Choose first "`My Selling Tools`", then
     "`Instant Payment Notification`"
     <a href="assets/images/paypal-selling-tools-02.png" class="imagelink" data-lightbox="paypal" data-title="Instant Payment Notification" data-alt="Instant Payment Notification">
-      <img alt="PayPal screenshot, step 2" src="assets/images/paypal-selling-tools-02.png" />
+      <img alt="PayPal My Profile, My selling tools, with Instant payment notifications highlighted" src="assets/images/paypal-selling-tools-02.png" />
     </a>
 -   Press "`Choose IPN Settings`"
     <a href="assets/images/paypal-ipn-02.png" class="imagelink" data-lightbox="paypal" data-title="Choose IPN Settings" data-alt="Choose IPN Settings">
-      <img alt="PayPal screenshot, step 2" src="assets/images/paypal-ipn-02.png" />
+      <img alt="PayPal Instant Payment Notification (IPN) page with the Choose IPN Settings button" src="assets/images/paypal-ipn-02.png" />
     </a>
 -   Set up Notification URL
     "*`https://go.netlicensing.io/core/v2/external/paypal/ipn/`*" and
     press Save button
     <a href="assets/images/paypal-ipn-edit.png" class="imagelink" data-lightbox="paypal" data-title="Set up Notification URL" data-alt="Set up Notification URL">
-      <img alt="PayPal screenshot" src="assets/images/paypal-ipn-edit.png" />
+      <img alt="PayPal Edit IPN settings with the NetLicensing notification URL entered and Receive IPN messages enabled" src="assets/images/paypal-ipn-edit.png" />
     </a>
 -   Instant Payment Notification for NetLicensing is now enabled
     <a href="assets/images/paypal-ipn.png" class="imagelink" data-lightbox="paypal" data-title="Instant Payment Notification" data-alt="Instant Payment Notification">
-      <img alt="PayPal screenshot" src="assets/images/paypal-ipn.png" />
+      <img alt="PayPal IPN page confirming the notification URL and that message delivery is enabled" src="assets/images/paypal-ipn.png" />
     </a>
 
 <span
