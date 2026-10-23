@@ -61,7 +61,7 @@ Return a list of all licensing models supported by the service.
 </table>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -143,7 +143,7 @@ Return a list of all license types supported by the service.
 </table>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>

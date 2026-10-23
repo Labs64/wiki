@@ -69,7 +69,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseeService.list</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -145,7 +145,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseeService.get</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -227,7 +227,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Licensee-" class="external-link">LicenseeService.create</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -311,7 +311,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Licensee-" class="external-link">LicenseeService.update</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -391,7 +391,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseeService.delete</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -495,7 +495,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#validate-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.vo.ValidationParameters-com.labs64.netlicensing.domain.vo.MetaInfo...-" class="external-link">LicenseeService.validate</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -538,7 +538,7 @@ $ curl --header "Accept: application/xml" --insecure --user demo:demo --request 
 
 If you use RESTful API directly in your code, ensure to replace GET with POST for validate. GET method will be removed in one of the future releases, until then you'll get the following warning if using GET:
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Warning message</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">Warning message</span>
 
 <div>Response</div>
 {: .code-example .ml-5 .code-header }
@@ -634,7 +634,7 @@ productModuleNumber&lt;N&gt; (string)</em> - product module N number<br />
 </table>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -731,7 +731,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#transfer-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-" class="external-link">LicenseeService.transfer</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>

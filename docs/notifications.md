@@ -33,7 +33,7 @@ Manage your NetLicensing Notifications from the *"Settings / Notifications"* sec
 3. Click "Create" to create notification
 
 <a href="assets/images/notifications.png" class="imagelink" data-lightbox="notifications" data-title="Notifications" data-alt="Notifications">
-    <img src="assets/images/notifications.png" />
+    <img alt="Notifications settings in the Management Console" src="assets/images/notifications.png" />
 </a>
 
 ### Notification Attributes

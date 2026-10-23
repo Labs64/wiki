@@ -65,7 +65,7 @@ productModuleNumber=DISCOUNT-MODULE-01&number=WINTER10&name=Winter+sale&licenseT
 ```
 {: .ml-5 }
 
-For a fixed amount, set `discountType=FIX`, provide `discountAmount` and `discountCurrency`, for example `discountAmount=5&discountCurrency=EUR`. The `productModuleNumber` must identify a Product Module configured with the Discount licensing model. See [License Template services](../restful-api/services/license-template-services) for authentication and the full set of template operations.
+For a fixed amount, set `discountType=FIX`, provide `discountAmount` and `discountCurrency`, for example `discountAmount=5&discountCurrency=EUR`. The `productModuleNumber` must identify a Product Module configured with the Discount licensing model. See [License Template services](license-template-services) for authentication and the full set of template operations.
 
 NetLicensing Shop
 -----------------

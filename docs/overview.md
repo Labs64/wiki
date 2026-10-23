@@ -54,18 +54,18 @@ of further product vendor intervention. Payments for the licenses are
 credited directly to the account of the product vendor through the
 payment service built into NetLicensing Shop.
 
-### <img src="assets/images/netlicensing-overview.png" class="image-center" />
+### <img alt="NetLicensing overview diagram" src="assets/images/netlicensing-overview.png" class="image-center" />
 
 The following steps describe main integration and operation tasks:
 
 #### Integration tasks:
 
-<img src="assets/images/icons/bullet-1.png" />
+<img alt="" src="assets/images/icons/bullet-1.png" />
 [Plan](planning): No matter if you already have a product
 or plan to create a new one, NetLicensing can be added at every stage.
 All you need is to clearly formulate your licensing needs.
 
-<img src="assets/images/icons/bullet-2.png" />
+<img alt="" src="assets/images/icons/bullet-2.png" />
 [Setup](setting-up): NetLicensing Management Console
 (NMC) is the integrated online administration center that allows you to
 control all licensing aspects of your products. Once you have decided on
@@ -75,7 +75,7 @@ Management Console at any time to alter your configuration or monitor
 the licenses. Besides, NetLicensing business intelligence module will
 consolidate your product usage information in regular reports.
 
-<img src="assets/images/icons/bullet-3.png" />
+<img alt="" src="assets/images/icons/bullet-3.png" />
 [Integrate](integration): Your product needs to
 communicate with NetLicensing in order to get the actual licensing
 information. Here comes NetLicensing API into play. With just a single
@@ -86,17 +86,17 @@ in your product's business logic.
 
 #### Operational tasks:
 
-<img src="assets/images/icons/bullet-a.png" />
+<img alt="" src="assets/images/icons/bullet-a.png" />
 Deliver your product or service to customers, assigning a unique
 identity to each customer. This unique identity is referred as "Licensee
 Number".
 
-<img src="assets/images/icons/bullet-b.png" />
+<img alt="" src="assets/images/icons/bullet-b.png" />
 Using the assigned Licensee Number, your product will query via
 NetLicensing API (see Integration step 3) the actual licensing state of
 the customer.
 
-<img src="assets/images/icons/bullet-c.png" />
+<img alt="" src="assets/images/icons/bullet-c.png" />
 Your product lets customers to visit NetLicensing Shop for obtaining new
 licenses. Payment integrated in NetLicensing Shop takes over the
 complexity of multiple individual monetary transactions.

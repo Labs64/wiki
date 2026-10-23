@@ -22,7 +22,7 @@ Following options can be recommended here:
 ### Option 1: Node-Locked
 
 <a href="assets/images/faq-docker-vm-environment-node-locked.png" class="imagelink" data-lightbox="faq-docker-vm-environment" data-title="Node-Locked model configuration" data-alt="Node-Locked model configuration">
-  <img src="assets/images/faq-docker-vm-environment-node-locked.png" />
+  <img alt="Node-locked licensing in a Docker or VM environment" src="assets/images/faq-docker-vm-environment-node-locked.png" />
 </a>
 
 Use [Node-Locked]( node-locked) licensing model configured to be used with N nodes.
@@ -39,7 +39,7 @@ Every N+1 pairing won't be possible and will result in negative validation resul
 ### Option 2: Floating
 
 <a href="assets/images/faq-docker-vm-environment-floating.png" class="imagelink" data-lightbox="faq-docker-vm-environment" data-title="Floating model configuration" data-alt="Floating model configuration">
-  <img src="assets/images/faq-docker-vm-environment-floating.png" />
+  <img alt="Floating licensing in a Docker or VM environment" src="assets/images/faq-docker-vm-environment-floating.png" />
 </a>
 
 Use [Floating](floating) licensing model configured to be used with N seats.

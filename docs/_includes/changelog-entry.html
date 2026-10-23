@@ -1,0 +1,19 @@
+{%- assign change = include.change -%}
+{%- assign comps = change.component | split: ',' -%}
+<section class="cl-entry" markdown="1" data-components="{{ change.component | downcase | replace: ', ', ',' | replace: ' ', '-' }}"{% if change.security %} data-security="true"{% endif %}>
+
+### {{ change.title }}
+<p class="cl-meta"><time datetime="{{ change.date | date: '%Y-%m-%d' }}">{{ change.date | date: '%B %-d, %Y' }}</time>{% if change.security %}<span class="cl-tag cl-tag-security"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true" focusable="false"><path d="M8 1 2.5 3v4.2c0 3.3 2.3 6 5.5 7.8 3.2-1.8 5.5-4.5 5.5-7.8V3L8 1z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Security</span>{% endif %}{% for c in comps %}<span class="cl-tag">{{ c | strip }}</span>{% endfor %}</p>
+<p class="change-description">{{ change.description | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+{% if change.image %}<a href="{{ change.image }}" class="imagelink" data-lightbox="{{ change.title | prepend: '-' | prepend: change.date | slugify }}" data-title="{{ change.title | escape }}" data-alt="{{ change.title | escape }}"><img src="{{ change.image }}" alt="{{ change.title | escape }}" loading="lazy" decoding="async"></a>{% endif %}
+{% if change.features %}
+<ul class="cl-changes">
+{%- for feature in change.features -%}{%- for item in feature -%}
+{%- case item[0] -%}{%- when 'added' -%}{%- assign kind = 'added' -%}{%- when 'updated' -%}{%- assign kind = 'updated' -%}{%- when 'fixed' -%}{%- assign kind = 'fixed' -%}{%- else -%}{%- assign kind = 'other' -%}{%- endcase -%}
+<li><span class="cl-kind cl-kind-{{ kind }}">{{ item[0] }}</span><span class="cl-text">{{ item[1] | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span></li>
+{%- endfor -%}{%- endfor -%}
+</ul>
+{% endif %}
+{% if change.url %}<p class="cl-more"><a href="{{ change.url }}" class="btn">Learn more</a></p>{% endif %}
+
+</section>

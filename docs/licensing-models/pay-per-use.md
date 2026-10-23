@@ -80,7 +80,7 @@ When all remaining credits are used up (validate has returned **`valid`**=**`fa
 
 Validation response examples:
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Some credits still remain</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">Some credits still remain</span>
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }
@@ -111,7 +111,7 @@ productModuleNumber0=MTEST-DEMO&usedQuantity0=10
 ```
 {: .ml-5 }
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">All remaining credits are used up by this validate call</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">All remaining credits are used up by this validate call</span>
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }
@@ -142,7 +142,7 @@ productModuleNumber0=MTEST-DEMO&usedQuantity0=25
 ```
 {: .ml-5 }
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Attempt to use more than the remaining credits</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">Attempt to use more than the remaining credits</span>
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }
@@ -184,7 +184,7 @@ This mode is activated by passing **`reserveQuantity`** validate parameter. If
 
 Validation response examples:
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Enough credits available</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">Enough credits available</span>
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }
@@ -215,7 +215,7 @@ productModuleNumber0=MTEST-DEMO&reserveQuantity0=10
 ```
 {: .ml-5 }
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Enough remaining credits available, all are used up by this validate call</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">Enough remaining credits available, all are used up by this validate call</span>
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }
@@ -246,7 +246,7 @@ productModuleNumber0=MTEST-DEMO&reserveQuantity0=15
 ```
 {: .ml-5 }
 
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span class="expand-control-text">Attempt to reserve more than the remaining credits</span>
+<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">Attempt to reserve more than the remaining credits</span>
 
 <div>Request</div>
 {: .code-example .ml-5 .code-header }

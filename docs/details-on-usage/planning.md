@@ -25,7 +25,7 @@ Fortunately, the product in the NetLicensing object model is very simple: every 
 
 This can be represented schematically:
 
-<img src="assets/images/netlicensing-planning.png" />
+<img alt="License planning overview" src="assets/images/netlicensing-planning.png" />
 
 Each product module is licensed independently, which means there is no logic within the NetLicensing that connects licenses of one product module with the licenses of another product module. However all product modules are visible to all licensees of the product. Licenses within a single product module are connected according to the licensing model chosen for this product module.
 

@@ -97,5 +97,9 @@ if (typeof guideChimpPluginGoogleAnalytics !== "undefined") {
 */
 
 document.getElementById('startTour').onclick = function() {
+  // tour steps may point at entries inside collapsed archive years
+  if (typeof window.changelogReveal === 'function') {
+    window.changelogReveal();
+  }
   guideChimp.start();
 };

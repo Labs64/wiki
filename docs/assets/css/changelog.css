@@ -1,0 +1,248 @@
+/* Changelog page: entries, archive. Scoped to .cl so it cannot leak into other pages. */
+.cl {
+  --cl-ink: #302d36;
+  --cl-muted: #5c5962;
+  --cl-line: #e6e1e8;
+  --cl-wash: #f5f6fa;
+  --cl-accent: #e14817;
+  --cl-accent-ink: #7b2a10;
+}
+
+.cl ::selection {
+  background: #ffd9c9;
+}
+
+/* toolbar */
+.cl-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: center;
+  margin: 1.25rem 0 1rem;
+}
+
+.cl-feed {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.cl-year > summary:focus-visible,
+.cl-feed:focus-visible {
+  outline: 2px solid var(--cl-accent);
+  outline-offset: 2px;
+}
+
+/* entries */
+.cl-entry {
+  padding-top: 1.75rem;
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--cl-line);
+}
+
+.cl-entry[hidden] {
+  display: none;
+}
+
+.cl-entry > h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.cl-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  align-items: center;
+  margin: 0 0 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--cl-muted);
+}
+
+.cl-meta time {
+  margin-right: 0.25rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.cl-tag {
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #44434d;
+  background: var(--cl-wash);
+  border-radius: 3px;
+}
+
+.cl-tag-security {
+  font-weight: 600;
+  color: var(--cl-accent-ink);
+  background: #fff1ea;
+  box-shadow: inset 0 0 0 1px #f0c3ae;
+}
+
+.cl .change-description {
+  max-width: 70ch;
+  margin: 0 0 1rem;
+  text-wrap: pretty;
+}
+
+.cl .imagelink {
+  display: inline-block;
+  margin: 0 0 1rem;
+  cursor: zoom-in;
+}
+
+.cl .imagelink img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--cl-line);
+  border-radius: 4px;
+}
+
+/* change list: fixed label column so the text edge stays aligned */
+.page-content .cl-changes {
+  padding: 0;
+  margin: 0 0 1rem;
+  list-style: none;
+}
+
+.page-content .cl-changes > li {
+  display: grid;
+  grid-template-columns: 4.75rem minmax(0, 1fr);
+  gap: 0 0.75rem;
+  align-items: baseline;
+  padding: 0.3rem 0;
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.page-content .cl-changes > li::before {
+  content: none;
+}
+
+.cl-kind {
+  display: inline-block;
+  padding: 0 0.4rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+}
+
+.cl-kind-added {
+  color: #0b5d44;
+  background: #def5ea;
+}
+
+.cl-kind-updated {
+  color: #6b4e00;
+  background: #fdf0c4;
+}
+
+.cl-kind-fixed {
+  color: #9c2420;
+  background: #fde6e4;
+}
+
+.cl-kind-other {
+  color: #4e26af;
+  background: #ece8fb;
+}
+
+.cl-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.cl-more {
+  margin: 0;
+}
+
+/* archive */
+.cl-archive > h2 {
+  margin-top: 3rem;
+}
+
+.cl-year {
+  border-top: 1px solid var(--cl-line);
+}
+
+.cl-year:last-of-type {
+  border-bottom: 1px solid var(--cl-line);
+}
+
+.cl-year > summary {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+.cl-year > summary::-webkit-details-marker {
+  display: none;
+}
+
+.cl-year > summary::before {
+  flex: none;
+  align-self: center;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.15rem;
+  content: "";
+  border-right: 2px solid var(--cl-muted);
+  border-bottom: 2px solid var(--cl-muted);
+  transition: transform 0.15s ease-out;
+  transform: rotate(-45deg);
+}
+
+.cl-year[open] > summary::before {
+  transform: rotate(45deg);
+}
+
+.cl-year-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--cl-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.cl-count {
+  font-size: 0.8125rem;
+  color: var(--cl-muted);
+}
+
+.cl-year-body > .cl-entry:first-child {
+  margin-top: 0.25rem;
+  border-top: 0;
+}
+
+@media (max-width: 500px) {
+  .page-content .cl-changes > li {
+    grid-template-columns: 4.25rem minmax(0, 1fr);
+    gap: 0 0.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cl-year > summary::before {
+    transition: none;
+  }
+}
+
+@media print {
+  .cl-toolbar {
+    display: none;
+  }
+}

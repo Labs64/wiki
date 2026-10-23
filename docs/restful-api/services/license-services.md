@@ -67,7 +67,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseService.list</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -143,7 +143,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseService.get</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -231,7 +231,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.entity.License-" class="external-link">LicenseService.create</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -319,7 +319,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.entity.License-" class="external-link">LicenseService.update</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -398,7 +398,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseService.delete</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>

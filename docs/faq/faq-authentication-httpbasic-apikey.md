@@ -41,7 +41,7 @@ Leveraging API Keys improves security by:
 API Keys are *not expirable* and can be created via NetLicnsing Management Console ([API Access](https://ui.netlicensing.io/#/settings) tab) or RESTful API ([TokenService](token-services)).
 
 <a href="assets/images/faq-netlicensing-apikey.png" class="imagelink" data-lightbox="faq-netlicensing-apikey" data-title="Management Console - Settings - API Keys" data-alt="Management Console - Settings - API Keys">
-  <img src="assets/images/faq-netlicensing-apikey.png" />
+  <img alt="API key in the Management Console" src="assets/images/faq-netlicensing-apikey.png" />
 </a>
 
 #### How to rotate NetLicensing API Keys

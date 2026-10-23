@@ -83,7 +83,7 @@ The purchase fulfillment script will execute the following calls:
     (`I762LBSSX` in this example)
 
     <span
-    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
     class="expand-control-text">Example</span>
 
     <div>Request</div>
@@ -115,7 +115,7 @@ The purchase fulfillment script will execute the following calls:
     content
 
     <span
-    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
     class="expand-control-text">Example</span>
 
     <div>Request</div>
@@ -145,7 +145,7 @@ The purchase fulfillment script will execute the following calls:
 3.  Mark the new licensee for transfer
 
     <span
-    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
     class="expand-control-text">Example</span>
 
     <div>Request</div>
@@ -189,7 +189,7 @@ following:
      
 
     <span
-    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+    class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
     class="expand-control-text">Example</span>
 
     <div>Request</div>

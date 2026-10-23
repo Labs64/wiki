@@ -71,7 +71,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/BundleService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">BundleService.list</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -170,7 +170,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/BundleService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">BundleService.get</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -254,7 +254,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -339,7 +339,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -414,7 +414,7 @@ Delete a bundle by number.
 </table>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -482,7 +482,7 @@ Obtain bundle - create licenses based on license templates.
 </table>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>

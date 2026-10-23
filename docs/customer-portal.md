@@ -17,7 +17,7 @@ NetLicensing Customer Portal is an online hosted page that works as a helpful to
 NetLicensing Customer Portal allows you to white-label the entire license management experience within your website or product, using our API and hosted Customer Portal.
 
 <a href="assets/images/changelog/netlicensing-customer-portal.gif" class="imagelink" data-lightbox="customer-portal" data-title="Customer Portal" data-alt="Customer Portal">
-    <img src="assets/images/changelog/netlicensing-customer-portal.gif" />
+    <img alt="Customer Portal walkthrough" src="assets/images/changelog/netlicensing-customer-portal.gif" />
 </a>
 
 ### Customer Portal Access
@@ -76,19 +76,19 @@ The following elements can be adjusted via the NetLicensing UI:
 
 <div>
     <a href="assets/images/customer-portal-branding-01-shop.png" class="imagelink" data-lightbox="customer-portal" data-title="Customer Portal branding - Logo & Accent colour" data-alt="Customer Portal branding - Logo & Accent colour">
-      <img style="width: 250px;" src="assets/images/customer-portal-branding-01-shop.png" />
+      <img alt="Customer Portal branding: Shop" style="width: 250px;" src="assets/images/customer-portal-branding-01-shop.png" />
     </a>
 
     <a href="assets/images/customer-portal-branding-02-profile.png" class="imagelink" data-lightbox="customer-portal" data-title="Customer Portal branding - Profile" data-alt="Customer Portal branding - Profile">
-      <img style="width: 250px;" src="assets/images/customer-portal-branding-02-profile.png" />
+      <img alt="Customer Portal branding: Profile" style="width: 250px;" src="assets/images/customer-portal-branding-02-profile.png" />
     </a>
 
     <a href="assets/images/customer-portal-branding-03-legal.png" class="imagelink" data-lightbox="customer-portal" data-title="Customer Portal branding - Legal information" data-alt="Customer Portal branding - Legal information">
-      <img style="width: 250px;" src="assets/images/customer-portal-branding-03-legal.png" />
+      <img alt="Customer Portal branding: Legal" style="width: 250px;" src="assets/images/customer-portal-branding-03-legal.png" />
     </a>
 
     <a href="assets/images/customer-portal-branding-04-address.png" class="imagelink" data-lightbox="customer-portal" data-title="Customer Portal branding - Address" data-alt="Customer Portal branding - Address">
-      <img style="width: 250px;" src="assets/images/customer-portal-branding-04-address.png" />
+      <img alt="Customer Portal branding: Address" style="width: 250px;" src="assets/images/customer-portal-branding-04-address.png" />
     </a>
 </div>
 

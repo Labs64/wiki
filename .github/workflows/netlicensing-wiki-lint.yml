@@ -34,6 +34,9 @@ jobs:
             jekyll/builder:4.2.2 \
             /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --strict_front_matter"
 
+      - name: Check guided tour anchors
+        run: python3 scripts/check-tour-anchors.py _site docs/assets/js/guidechimp-tours.js
+
       - name: Run HTMLProofer
         run: |
           docker run --rm \

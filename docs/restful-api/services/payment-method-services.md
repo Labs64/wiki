@@ -62,7 +62,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">PaymentMethodService.list</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -147,7 +147,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">PaymentMethodService.get</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>
@@ -233,7 +233,7 @@ See also
 JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.PaymentMethod-" class="external-link">PaymentMethodService.update</a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Example</span>
 
 <div>Request</div>

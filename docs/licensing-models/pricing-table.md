@@ -49,7 +49,7 @@ Your customers would be signed-up for plans by way of subscriptions or a one-tim
 Create a new product module and choose Model "Pricing Table".
 
 <a href="assets/images/pricing-table-create.png" class="imagelink" data-lightbox="pricing-table" data-title="Create Pricing Table" data-alt="Create Pricing Table">
-  <img src="assets/images/pricing-table-create.png" />
+  <img alt="Creating a Pricing Table" src="assets/images/pricing-table-create.png" />
 </a>
     
 ### Add Plan
@@ -61,7 +61,7 @@ Creating a new Plan is quite simple. All you need to do is:
 - In the Module configuration click on *"Add Plan"* button
 
 <a href="assets/images/pricing-table-plan.png" class="imagelink" data-lightbox="pricing-table" data-title="Pricing Table: Add Plan" data-alt="Pricing Table: Add Plan">
-  <img src="assets/images/pricing-table-plan.png" />
+  <img alt="Pricing Table plan settings" src="assets/images/pricing-table-plan.png" />
 </a>
 
 Fill out the new Plan details and you're all set.
@@ -88,7 +88,7 @@ Fill out the new Plan details and you're all set.
 Store Keeping Unit or SKU represents the feature in your product.
 
 <a href="assets/images/pricing-table-sku.png" class="imagelink" data-lightbox="pricing-table" data-title="Pricing Table: Add SKU" data-alt="Pricing Table: Add SKU">
-  <img src="assets/images/pricing-table-sku.png" />
+  <img alt="Pricing Table plan SKU settings" src="assets/images/pricing-table-sku.png" />
 </a>
 
 #### SKU Attributes

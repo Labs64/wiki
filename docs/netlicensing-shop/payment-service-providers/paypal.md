@@ -20,7 +20,7 @@ Recuring payment limitations
 Be aware that recurring payments are not allowed by PayPal for buyers from Germany and China. In case you don't plan to use recurring payments, you can omit "Create and manage Recurring Payments" permission as well as skip entire "Step 2: Setup Instant Payment Notification".
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Step1: Configure PayPal</span>
 
 Configure permissions for NetLicensing:
@@ -36,7 +36,7 @@ Configure permissions for NetLicensing:
 -   Choose "`My Selling Tools`", then click `"Update"` next to
     "`API Access`"
     <a href="assets/images/paypal-selling-tools-03.png" class="imagelink" data-lightbox="paypal" data-title="My Selling Tools" data-alt="My Selling Tools">
-      <img src="assets/images/paypal-selling-tools-03.png" />
+      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-selling-tools-03.png" />
     </a>
 
 <!-- -->
@@ -47,7 +47,7 @@ Configure permissions for NetLicensing:
     permissions for NetLicensing previously and now adding permission
     for recurring payments.
     <a href="assets/images/paypal-api-grant.png" class="imagelink" data-lightbox="paypal" data-title="Pre-built payment solution" data-alt="Pre-built payment solution">
-      <img src="assets/images/paypal-api-grant.png" />
+      <img alt="Granting PayPal API access" src="assets/images/paypal-api-grant.png" />
     </a>
 
 <!-- -->
@@ -64,14 +64,14 @@ Configure permissions for NetLicensing:
         *"*`paypal-sandbox_api1.labs64.de`*"*
 
     <a href="assets/images/paypal-3pp-add.png" class="imagelink" data-lightbox="paypal" data-title="Grant API permission" data-alt="Grant API permission">
-      <img src="assets/images/paypal-3pp-add.png" />
+      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-3pp-add.png" />
     </a>
     If modifying permissions (`"Manage API permission"` option at the
     previous bullet) - click "Edit Third Party" next to the
     corresponding username
 
     <a href="assets/images/paypal-3pp-access.png" class="imagelink" data-lightbox="paypal" data-title="Manage API permission" data-alt="Manage API permission">
-      <img src="assets/images/paypal-3pp-access.png" />
+      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-3pp-access.png" />
     </a>
 
 <!-- -->
@@ -80,7 +80,7 @@ Configure permissions for NetLicensing:
     at the previous bullet) - select permissions as shown below and
     press `"Add"`
     <a href="assets/images/paypal-3pp-permissions.png" class="imagelink" data-lightbox="paypal" data-title="Grant API permission" data-alt="Grant API permission">
-      <img src="assets/images/paypal-3pp-permissions.png" />
+      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-3pp-permissions.png" />
     </a>
 
     If modifying permissions (`"Manage API permission"` option at the
@@ -89,7 +89,7 @@ Configure permissions for NetLicensing:
     `"Save"`
 
     <a href="assets/images/paypal-3pp-permissions-recurring.png" class="imagelink" data-lightbox="paypal" data-title="Granted Permissions" data-alt="Granted Permissions">
-      <img src="assets/images/paypal-3pp-permissions-recurring.png" />
+      <img alt="PayPal screenshot, step 3" src="assets/images/paypal-3pp-permissions-recurring.png" />
     </a>
 
 <!-- -->
@@ -97,11 +97,11 @@ Configure permissions for NetLicensing:
 -   You have now enabled NetLicensing to call PayPal API on your behalf
     to receive one-time and recurring payments
     <a href="assets/images/paypal-3pp-access-02.png" class="imagelink" data-lightbox="paypal" data-title="PayPal API" data-alt="PayPal API">
-      <img src="assets/images/paypal-3pp-access-02.png" />
+      <img alt="PayPal screenshot, step 2" src="assets/images/paypal-3pp-access-02.png" />
     </a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Step2: Setup Instant Payment
 Notification</span>
 
@@ -122,25 +122,25 @@ Follow steps below to set up IPN:
 -   Choose first "`My Selling Tools`", then
     "`Instant Payment Notification`"
     <a href="assets/images/paypal-selling-tools-02.png" class="imagelink" data-lightbox="paypal" data-title="Instant Payment Notification" data-alt="Instant Payment Notification">
-      <img src="assets/images/paypal-selling-tools-02.png" />
+      <img alt="PayPal screenshot, step 2" src="assets/images/paypal-selling-tools-02.png" />
     </a>
 -   Press "`Choose IPN Settings`"
     <a href="assets/images/paypal-ipn-02.png" class="imagelink" data-lightbox="paypal" data-title="Choose IPN Settings" data-alt="Choose IPN Settings">
-      <img src="assets/images/paypal-ipn-02.png" />
+      <img alt="PayPal screenshot, step 2" src="assets/images/paypal-ipn-02.png" />
     </a>
 -   Set up Notification URL
     "*`https://go.netlicensing.io/core/v2/external/paypal/ipn/`*" and
     press Save button
     <a href="assets/images/paypal-ipn-edit.png" class="imagelink" data-lightbox="paypal" data-title="Set up Notification URL" data-alt="Set up Notification URL">
-      <img src="assets/images/paypal-ipn-edit.png" />
+      <img alt="PayPal screenshot" src="assets/images/paypal-ipn-edit.png" />
     </a>
 -   Instant Payment Notification for NetLicensing is now enabled
     <a href="assets/images/paypal-ipn.png" class="imagelink" data-lightbox="paypal" data-title="Instant Payment Notification" data-alt="Instant Payment Notification">
-      <img src="assets/images/paypal-ipn.png" />
+      <img alt="PayPal screenshot" src="assets/images/paypal-ipn.png" />
     </a>
 
 <span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" /></span><span
+class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Step3: Configure NetLicensing</span>
 
 -   Enable *PayPal* or *PayPal (Sandbox)* as a payment method at "Settings / Payment Methods"
