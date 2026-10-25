@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "NetLicensing Management Console - Bad Credentials error message during the login"
 permalink: faq-console-cannot-login
+faq_category: Troubleshooting
 ---
 
 {{ page.title }}

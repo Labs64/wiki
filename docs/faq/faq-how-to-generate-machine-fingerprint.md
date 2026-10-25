@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 5
 description: "Machine ID or fingerprint, helps distinguish one device from another"
 permalink: faq-how-to-generate-machine-fingerprint
+faq_category: Licensing models
 ---
 
 {{ page.title }}

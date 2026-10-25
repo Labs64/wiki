@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "PayPal transaction upper limit for one single transaction"
 permalink: faq-paypal-transaction-limit
+faq_category: Troubleshooting
 ---
 
 {{ page.title }}

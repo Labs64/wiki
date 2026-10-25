@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "Setup NetLicensing reseller mode via Predefined Licensee or Auto-Created Licensee"
 permalink: faq-reseller
+faq_category: Licenses and customers
 ---
 
 {{ page.title }}

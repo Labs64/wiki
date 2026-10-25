@@ -3,8 +3,9 @@ layout: post
 title: How to create a new License programmatically
 parent: FAQ & Troubleshooting
 nav_order: 100
-description: "How to create a new License programmatically"
+description: "Create licensees and licenses from your own back end with the NetLicensing REST API or a client library, for example after a purchase in your own shop."
 permalink: faq-create-license-programmatically
+faq_category: Licenses and customers
 ---
 
 {{ page.title }}

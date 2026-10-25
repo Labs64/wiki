@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "Use NetLicensing Java Client library behind proxy"
 permalink: faq-use-java-client-behind-proxy
+faq_category: Troubleshooting
 ---
 
 {{ page.title }}
@@ -16,7 +17,7 @@ I am behind a proxy server. How can I configure NetLicensing Java Client to use 
 
 ## Answer
 
-Proxy server act as an intermediate instance between your product using [NetLicensing Java Client](https://github.com/Labs64/NetLicensingClient-java){:target="_blank"}{:rel="noopener nofollow"} library and NetLicensing Server at go.netlicensing.io
+Proxy server act as an intermediate instance between your product using [NetLicensing Java Client](https://github.com/Labs64/NetLicensingClient-java){:target="_blank"}{:rel="noopener"} library and NetLicensing Server at go.netlicensing.io
 
 Java exposes a set of system properties that can be used to configure JVM-wide behaviour.
 

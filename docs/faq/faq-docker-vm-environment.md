@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 1
 description: "Licensing options available for the dockerized and VM applications"
 permalink: faq-docker-vm-environment
+faq_category: Licensing models
 ---
 
 {{ page.title }}

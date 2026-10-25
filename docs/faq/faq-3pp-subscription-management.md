@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 10
 description: "NetLicensing Gateway is an open-source component, being used to maintain eCommerce integrations with NetLicensing core services"
 permalink: faq-3pp-subscription-management
+faq_category: Integrations
 ---
 
 {{ page.title }}
@@ -56,7 +57,7 @@ Available events and their names differ from one system to another, however, not
 
 ### Digital fulfilment process with NetLicensing Gateway
 
-[NetLicensing Gateway](https://github.com/Labs64/NetLicensing-Gateway){:target="_blank"}{:rel="noopener nofollow"} is an open-source component, which is being used to maintain eCommerce integrations with NetLicensing core services.
+[NetLicensing Gateway](https://github.com/Labs64/NetLicensing-Gateway){:target="_blank"}{:rel="noopener"} is an open-source component, which is being used to maintain eCommerce integrations with NetLicensing core services.
 
 <a href="https://netlicensing.io/img/usage-scenarios/netlicensing-integration-ecommerce.png" class="imagelink" data-lightbox="faq-3pp-subscription-management" data-title="Digital fulfilment process with NetLicensing Gateway" data-alt="Digital fulfilment process with NetLicensing Gateway">
   <img alt="E-commerce integration scenario with NetLicensing" src="https://netlicensing.io/img/usage-scenarios/netlicensing-integration-ecommerce.png" />

@@ -3,8 +3,9 @@ layout: default
 title: Payment cannot be processed due to the PayPal currency conversion handling error
 parent: FAQ & Troubleshooting
 nav_order: 100
-description: "Payment cannot be processed due to the PayPal currency conversion handling error"
+description: "Fix the PayPal error where a NetLicensing Shop payment fails because of PayPal currency conversion settings in the receiving account."
 permalink: faq-paypal-currency-conversion-error
+faq_category: Troubleshooting
 ---
 
 {{ page.title }}

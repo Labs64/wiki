@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "NetLicensing usage in the Unity3D and game development projects"
 permalink: faq-unity3d
+faq_category: Integrations
 ---
 
 {{ page.title }}

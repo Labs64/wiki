@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "How to add additional data to the customer profile in NetLicensing UI."
 permalink: faq-add-customer-data
+faq_category: Licenses and customers
 ---
 
 {{ page.title }}

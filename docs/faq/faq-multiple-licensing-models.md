@@ -3,8 +3,9 @@ layout: default
 title: How to license product using multiple licensing models
 parent: FAQ & Troubleshooting
 nav_order: 100
-description: "How to license product using multiple licensing models"
+description: "Combine several licensing models in one product, for example a subscription plus feature licensing, by adding one product module per licensing model."
 permalink: faq-multiple-licensing-models
+faq_category: Licensing models
 ---
 
 {{ page.title }}

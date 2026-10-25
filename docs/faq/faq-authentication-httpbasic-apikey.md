@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "Which authentication method needs to be used with NetLicensing RESTful API - HTTP Basic Auth or API Key?"
 permalink: faq-authentication-httpbasic-apikey
+faq_category: Security
 ---
 
 {{ page.title }}

@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "Offer multiple virtual machine licenses to one customer with the subscription package"
 permalink: faq-multiple-vm-licenses
+faq_category: Licensing models
 ---
 
 {{ page.title }}

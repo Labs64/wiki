@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "How to add tags/custom properties to the customer using NetLicensing RESTful API"
 permalink: faq-add-licensee-customproperty
+faq_category: Licenses and customers
 ---
 
 {{ page.title }}

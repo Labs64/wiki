@@ -5,6 +5,7 @@ parent: FAQ & Troubleshooting
 nav_order: 100
 description: "How to deliver license to the customer after successful shop transaction"
 permalink: faq-customer-centric-license-delivery
+faq_category: Licenses and customers
 ---
 
 {{ page.title }}
