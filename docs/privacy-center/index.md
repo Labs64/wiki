@@ -266,7 +266,7 @@ data from your end-customers.
 
 -   The personal data of your end-customers may be collected and
     transferred to NetLicensing using NetLicensing RESTful API and by
-    means of the concrete implementation of your products and services.
+    means of the concrete implementation of your products and services.
     We encourage you to design your products and NetLicensing
     integration with the GDPR and data protection and security in mind,
     so you can meet your specific GDPR compliance needs.
@@ -284,16 +284,16 @@ data from your end-customers.
     help you obtain proof of consent and will store a record of your
     end-customers’ consent in your NetLicensing account. When you use a
     NetLicensing Shop, NetLicensing records the email address, IP
-    address, and timestamp associated with every end-customer who
+    address, and timestamp associated with every end-customer who
     completes and submits the shopping cart, providing you with
     easy-to-access [proof of
     consent](how-to-access-and-verify-consent-given-by-end-customer).
--   Keep in mind that any consent you obtain from your end-customers
+-   Keep in mind that any consent you obtain from your end-customers
     must comply with the GDPR requirements, irrespective of when that
     consent was obtained.
 -   **We recommend consulting with local counsel to determine if
     consents obtained prior to the GDPR comply with its requirements, or
-    whether you should instead contact your end-customers to re-request
+    whether you should instead contact your end-customers to re-request
     consent in accordance with the GDPR requirements or rely on a
     different lawful basis for your processing under the GDPR.**
 -   You should review any NetLicensing integrations or add-ons that you
@@ -303,7 +303,7 @@ data from your end-customers.
     end-customers.
 -   You should review the privacy statement and practices applicable to
     your organization and ensure that they provide proper notice that
-    the personal data of your end-customers will be
+    the personal data of your end-customers will be
     [transferred to NetLicensing and processed by NetLicensing](privacy-statement-data-processing-by-netlicensing).
 
 Detailed Instructions

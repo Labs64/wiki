@@ -1,10 +1,11 @@
 ---
 layout: default
-title: License Services
+title: License Services API
+nav_title: License Services
 parent: Services
-grand_parent: NetLicensing API (RESTful)
+grand_parent: NetLicensing REST API Reference
 nav_order: 50
-description: "License Services"
+description: "REST API reference for licenses: list, get, create, update and delete licenses, and activate or deactivate a license to grant or revoke entitlements."
 permalink: license-services
 ---
 
@@ -64,7 +65,7 @@ Return a list of all licenses for the current vendor.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseService.list</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseService.list</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -126,7 +127,7 @@ Return a license by licenseNumber.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseNumber (string) - License number.</p></td>
+<td><p>licenseNumber (string) - License number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -140,7 +141,7 @@ Return a license by licenseNumber.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseService.get</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseService.get</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -203,14 +204,14 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <tr class="even">
 <td><p>Request Parameters</p></td>
 <td><p><span style="color: rgb(0,0,0);">licenseeNumber (string) - <span>licenseeNumber</span></span> to assign new license object.</p>
-<p><span style="color: rgb(0,0,0);">licenseTemplateNumber (string) - <span>licenseTemplateNumber</span></span> to assign new license object.<span style="color: rgb(0,0,0);"> </span></p>
-<p>number (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed.</p>
-<p>active (boolean) - If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process.</p>
-<p>name (string) - Name for the licensed item. Set from license template on creation, if not specified explicitly. Optional.</p>
-<p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
-<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
-<p>- EUR       - Euro currency for the license price</p>
-<p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p>
+<p><span style="color: rgb(0,0,0);">licenseTemplateNumber (string) - <span>licenseTemplateNumber</span></span> to assign new license object.<span style="color: rgb(0,0,0);"> </span></p>
+<p>number (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed.</p>
+<p>active (boolean) - If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process.</p>
+<p>name (string) - Name for the licensed item. Set from license template on creation, if not specified explicitly. Optional.</p>
+<p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
+<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
+<p>- EUR       - Euro currency for the license price</p>
+<p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p>
 <p><span style="color: rgb(0,0,0);">parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</span></p>
 <p><span style="color: rgb(0,0,0);">timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">timeVolumePeriod (string) - Indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</span></p>
@@ -228,7 +229,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.entity.License-" class="external-link">LicenseService.create</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.entity.License-" class="external-link">LicenseService.create</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -291,18 +292,18 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseNumber (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed.</p>
-<p>number (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed. Optional.</p>
-<p>active (boolean) - If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process. Optional.</p>
-<p>name (string) - Name for the licensed item. Set from license template on creation, if not specified explicitly. Optional.</p>
+<td><p>licenseNumber (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed.</p>
+<p>number (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed. Optional.</p>
+<p>active (boolean) - If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process. Optional.</p>
+<p>name (string) - Name for the licensed item. Set from license template on creation, if not specified explicitly. Optional.</p>
 <p><span style="color: rgb(0,0,0);">startDate (<span>date-time</span>) - for TIMEVOLUME licenseType</span></p>
 <p><span style="color: rgb(0,0,0);">parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</span></p>
 <p><span style="color: rgb(0,0,0);">timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">timeVolumePeriod (string) - Indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</span></p>
-<p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
-<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
-<p>- EUR       - Euro currency for the license price</p>
-<p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p></td>
+<p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
+<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
+<p>- EUR       - Euro currency for the license price</p>
+<p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -316,7 +317,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.entity.License-" class="external-link">LicenseService.update</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.entity.License-" class="external-link">LicenseService.update</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -381,7 +382,7 @@ Delete a license by number.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseNumber (string) - License number.</p></td>
+<td><p>licenseNumber (string) - License number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -395,7 +396,7 @@ Delete a license by number.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseService.delete</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseService.delete</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span

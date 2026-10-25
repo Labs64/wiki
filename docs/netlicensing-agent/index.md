@@ -1,10 +1,14 @@
 ---
 layout: default
-title: NetLicensing Agent
+title: "NetLicensing Agent: On-Premises and Offline License Validation"
+nav_title: "NetLicensing Agent"
 has_children: true
 nav_order: 90
-description: "NetLicensing allowing operation in isolated networks without connection to the Internet and the NetLicensing cloud service"
+description: "NetLicensing Agent answers license validation requests on a local server, so licensed software works in air-gapped or restricted networks without access to the NetLicensing cloud. Modes, setup, security and limitations."
+last_modified_at: 2026-10-25
 permalink: netlicensing-agent
+redirect_from:
+  - /agent
 ---
 
 NetLicensing Agent
@@ -28,7 +32,7 @@ NetLicensing Agent
     -   [Entity Numbers](#entity-numbers)
     -   [Licensee Auto-Create](#licensee-auto-create)
 
-This document assumes you're familiar with the Labs64 NetLicensing service. If you need more info about NetLicensing, please visit <a href="https://netlicensing.io" class="external-link">https://netlicensing.io</a>.
+This document assumes you're familiar with the Labs64 NetLicensing service. If you need more info about NetLicensing, please visit <a href="https://netlicensing.io" class="external-link">https://netlicensing.io</a>.
 
 Motivation
 ==========
@@ -72,7 +76,7 @@ service.
 NetLicensing Agent is a simple java command-line tool that only requires
 JRE for its operation.
 
-<img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> NetLicensing
+<img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> NetLicensing
 Agent is only available in selected pricing plans. In case your pricing
 plan does not include NetLicensing Agent, you'll get the message:
 
@@ -143,19 +147,19 @@ Command line options:
 <tr class="odd">
 <td><pre><code>-h</code></pre></td>
 <td><pre><code>--help</code></pre></td>
-<td> </td>
+<td></td>
 <td><p>Print help screen and exit.</p></td>
 </tr>
 <tr class="even">
 <td><pre><code>-v</code></pre></td>
 <td><pre><code>--version</code></pre></td>
-<td> </td>
+<td></td>
 <td><p>Print the version of the application and exit.</p></td>
 </tr>
 <tr class="odd">
 <td><pre><code>-a</code></pre></td>
 <td><pre><code>--action</code></pre></td>
-<td> </td>
+<td></td>
 <td><p>Action to perform. Available actions:</p>
 <ul>
 <li><p><code>run-agent</code> - run as a caching proxy to the NetLicensing Cloud;</p></li>
@@ -167,7 +171,7 @@ Command line options:
 </ul></td>
 </tr>
 <tr class="even">
-<td> </td>
+<td></td>
 <td><pre><code>--core.base.host</code></pre></td>
 <td><pre><code>https://go.netlicensing.io</code></pre></td>
 <td><p>NetLicensing Cloud host, including protocol and port, if necessary. Used for <strong><code>export-assets</code></strong>.</p></td>
@@ -175,59 +179,59 @@ Command line options:
 <tr class="odd">
 <td><pre><code>-u</code></pre></td>
 <td><pre><code>--nlic.username</code></pre></td>
-<td> </td>
+<td></td>
 <td><p>Vendor username at NetLicensing Cloud. Required for <strong><code>export-assets</code></strong>.</p></td>
 </tr>
 <tr class="even">
 <td><pre><code>-p</code></pre></td>
 <td><pre><code>--nlic.password</code></pre></td>
-<td> </td>
+<td></td>
 <td><p>Vendor password at NetLicensing Cloud. Required for <strong><code>export-assets</code></strong>.</p></td>
 </tr>
 <tr class="odd">
-<td> </td>
+<td></td>
 <td><p><code>--port</code></p></td>
 <td><pre><code>8080</code></pre></td>
 <td><p>TCP port the NetLicensing Agent will listen on. Used for <strong><code>run-agent</code></strong> and <strong><code>run-agent-offline</code></strong>.</p></td>
 </tr>
 <tr class="even">
-<td>&nbsp;</td>
+<td></td>
 <td><p><code>--cache.type</code></p></td>
 <td><pre><code>local</code></pre></td>
 <td><p>Validation cache backend for <strong><code>run-agent</code></strong>. Supported values: <code>local</code>, <code>redis</code>.</p></td>
 </tr>
 <tr class="odd">
-<td>&nbsp;</td>
+<td></td>
 <td><p><code>--cache.host</code></p></td>
 <td><pre><code>localhost</code></pre></td>
 <td><p>Redis host name, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
 </tr>
 <tr class="even">
-<td>&nbsp;</td>
+<td></td>
 <td><p><code>--cache.port</code></p></td>
 <td><pre><code>6379</code></pre></td>
 <td><p>Redis TCP port, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
 </tr>
 <tr class="odd">
-<td>&nbsp;</td>
+<td></td>
 <td><p><code>--cache.password</code></p></td>
-<td>&nbsp;</td>
+<td></td>
 <td><p>Redis password, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
 </tr>
 <tr class="even">
-<td>&nbsp;</td>
+<td></td>
 <td><p><code>--cache.database</code></p></td>
 <td><pre><code>0</code></pre></td>
 <td><p>Redis database index, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
 </tr>
 <tr class="odd">
-<td>&nbsp;</td>
+<td></td>
 <td><p><code>--cache.key-prefix</code></p></td>
 <td><pre><code>agent:validate:</code></pre></td>
 <td><p>Prefix for validation cache keys, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
 </tr>
 <tr class="even">
-<td>&nbsp;</td>
+<td></td>
 <td><p><code>--cache.ssl</code></p></td>
 <td><pre><code>false</code></pre></td>
 <td><p>Enable SSL/TLS for Redis connections, used when <strong><code>--cache.type=redis</code></strong>.</p></td>
@@ -247,31 +251,31 @@ Command line options:
 <tr class="even">
 <td><pre><code>-l</code></pre></td>
 <td><pre><code>--licensees</code></pre></td>
-<td> </td>
+<td></td>
 <td><p>Comma-separated list of licensee numbers targeted for <code>export-assets</code>. Required for <strong><code>export-assets</code></strong>.</p></td>
 </tr>
 <tr class="odd">
 <td><pre><code>-f</code></pre></td>
 <td><pre><code>--force</code></pre></td>
-<td> </td>
+<td></td>
 <td><p>Ignore conflicts on <strong><code>export-assets</code></strong> or <strong><code>import-assets</code></strong>.</p></td>
 </tr>
 <tr class="even">
-<td> </td>
+<td></td>
 <td><p><strong><code>--serial-number</code></strong></p></td>
-<td> </td>
+<td></td>
 <td><p>Specify smart card serial number for <strong><code>export-assets</code></strong>. <span>Required for </span><strong><code>export-assets</code></strong><span>, unless </span><strong><code>--without-card</code></strong> is used.</p></td>
 </tr>
 <tr class="odd">
-<td> </td>
+<td></td>
 <td><p><strong><code>--without-card</code></strong></p></td>
-<td> </td>
+<td></td>
 <td><p>Don't use the smart card. Can be used for <strong><code>export-assets</code></strong>, <strong><code>import-assets</code></strong>, <strong><code>run-agent-offline</code></strong>.</p></td>
 </tr>
 <tr class="even">
-<td> </td>
+<td></td>
 <td><p><strong><code>--verbose</code></strong></p></td>
-<td> </td>
+<td></td>
 <td><p>Enable detailed log output to the console.</p></td>
 </tr>
 </tbody>
@@ -369,7 +373,7 @@ Setting Up for the Offline Mode
     Agent binds exported licensees to the smart card with provided
     serial number, and creates one or more transfer files with the name
     '`{n}_netlicensing-assets.xml`' in the current working directory,
-    where *`{n}`* is a sequential number. Smart card must not be present
+    where *`{n}`* is a sequential number. Smart card must not be present
     at this step, however in case you plan to work without smart card,
     add '`--without-card`' option, see also note below.
 
@@ -380,25 +384,25 @@ Setting Up for the Offline Mode
     on the target server.
 
 5.  Execute Agent with '`import-assets`' action, while in the working
-    directory. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> Requires
+    directory. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> Requires
     smart card (see note below).
 
     ``` theme:
     java -jar netlicensing-agent.jar --action=import-assets
     ```
 
-    Agent creates local database in the working directory, and imports
+    Agent creates local database in the working directory, and imports
     assets from the transfer files into the new database. After
     successful execution, the transfer files
-    '`{n}_netlicensing-assets.xml`' can be removed. Do not delete or
+    '`{n}_netlicensing-assets.xml`' can be removed. Do not delete or
     alter the content of the created files belonging to the local
     database!
 
 6.  <span style="color: rgb(0,0,0);"><span
     style="color: rgb(0,0,0);">Staying in the same working directory as
     in step 5, s</span>tart Agent to serve
-    offline. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> Requires
-    smart card (see note below).</span>
+    offline. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> Requires
+    smart card (see note below).</span>
 
     ``` theme:
     java -jar netlicensing-agent.jar --action=run-agent-offline --port=8080
@@ -413,11 +417,11 @@ Setting Up for the Offline Mode
 ### Requires smart card
 
 <span style="color: rgb(0,0,0);">If using smart card, be
-sure</span><span style="color: rgb(0,0,0);"> it</span><span
-style="color: rgb(0,0,0);"> is attached, see also [Preparing to work
+sure</span><span style="color: rgb(0,0,0);"> it</span><span
+style="color: rgb(0,0,0);"> is attached, see also [Preparing to work
 with smart card](preparing-to-work-with-smart-card).
 I<span style="color: rgb(0,0,0);">f working without smart card,</span>
-use **`--without-card`** option.</span>
+use **`--without-card`** option.</span>
 
 Steps 3-5 can be repeated to update licensing assets after changes have
 been made on the NetLicensing Cloud.
@@ -455,9 +459,9 @@ Besides, today's virtualized environments allow easy cloning of virtual
 machines, which allows to create exact copy of a NetLicensing Agent
 instance including all licensing assets even without having an export
 file. This risk can be significantly reduced by a
-controlled installation of NetLicensing Agent at customer premises on a
+controlled installation of NetLicensing Agent at customer premises on a
 host properly protected against tampering using up-to-date HW/SW
-security measures, including secure networking (see below). 
+security measures, including secure networking (see below). 
 
 Smart Card
 ----------
@@ -468,7 +472,7 @@ which case user gets access to the NetLicening Agent executable /
 database files. To keep security even in these cases, NetLicensing Agent
 offers protection with smart card. Smart card protects from the Agent
 cloning, as well as from attempts to revert the use counters / time
-accounting by restoring the environment from an older snapshot. Note
+accounting by restoring the environment from an older snapshot. Note
 that the communication security (see below) is still important,
 therefore we recommend a controlled installation even when using the
 smart card.
@@ -483,7 +487,7 @@ controlled installation of the agent on a secured host and/or using
 smart card security we recommend to setup agent behind HTTPS reverse
 proxy. Reverse proxy and SSL support is available as a standard
 functionality in most popular HTTP frontends Apache, NGINX and IIS.
-Please refer to [Securing the Agent with SSL/TLS](securing-the-agent-with-ssl-tls) for
+Please refer to [Securing the Agent with SSL/TLS](securing-the-agent-with-ssl-tls) for
 details.
 
 Known Limitations
@@ -495,7 +499,7 @@ Licensing Models
 On repeated export/import operation for the assets, NetLicensing Agent
 performs merging of changes made in the NetLicensing Cloud (master copy)
 into the current state of the Agent local database to ensure
-Agent functioning as close as possible to the NetLicensing Cloud.
+Agent functioning as close as possible to the NetLicensing Cloud.
 Nevertheless, the logic of some Licensing Models in Agent may differ
 from that of the NetLicensing Cloud, as summarized below.
 
@@ -569,3 +573,9 @@ Licensee Auto-Create
 --------------------
 
 NetLicensing Agent does not support licensee auto-create.
+
+Related guides
+--------------
+
+- [Offline Software License Validation: Architecture and Trade-offs](offline-license-validation): when to use the Agent, cached TTL results or signed offline files
+- [FAQ: Can NetLicensing run on premises or in an air-gapped network?](faq-air-gapped-on-premises)

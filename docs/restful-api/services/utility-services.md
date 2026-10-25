@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Utility Services
+title: Utility Services API
+nav_title: Utility Services
 parent: Services
-grand_parent: NetLicensing API (RESTful)
+grand_parent: NetLicensing REST API Reference
 nav_order: 90
-description: "Utility Services"
+description: "REST API reference for utilities: list available licensing models, license types and countries."
 permalink: utility-services
 ---
 
@@ -46,7 +47,7 @@ Return a list of all licensing models supported by the service.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td><p>- None -</p></td>
 </tr>
 <tr class="odd">
@@ -128,7 +129,7 @@ Return a list of all license types supported by the service.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td><p>- None -</p></td>
 </tr>
 <tr class="odd">

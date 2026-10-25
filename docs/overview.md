@@ -1,8 +1,10 @@
 ---
 layout: default
-title: NetLicensing Overview
+last_modified_at: 2026-10-25
+title: "NetLicensing Overview: Licensing-as-a-Service for Software Vendors"
+nav_title: "NetLicensing Overview"
 nav_order: 10
-description: "NetLicensing - Licensing-as-a-Service solution overview"
+description: "What Labs64 NetLicensing is, how it works and how software vendors use it to license, sell and validate their products without building their own license server."
 permalink: overview
 image: /assets/images/netlicensing-overview.png
 ---
@@ -10,19 +12,50 @@ image: /assets/images/netlicensing-overview.png
 NetLicensing Overview
 =====================
 
+Labs64 NetLicensing is a cloud service for managing software licenses, sometimes called Licensing-as-a-Service (LaaS).
+You set up your products and licensing models in NetLicensing, and your application asks the NetLicensing
+[REST API](restful-api) what a customer is allowed to use. That one call replaces the license server, license database
+and license shop you'd otherwise have to build and keep running yourself.
 
-Innovative Licensing Solution
------------------------------
+What NetLicensing does
+----------------------
 
-<a href="https://netlicensing.io" class="external-link">Labs64 NetLicensing</a>
-is a first-class solution in the *Licensing as a Service (LaaS)* sector.
+It comes with licensing models you can use straight away: [Try & Buy](try-n-buy), [Subscription](subscription),
+[Pricing Table](pricing-table) plans, [Multi-Feature](multi-feature), [Floating](floating) for concurrent sessions,
+[Node-Locked](node-locked) for device-bound licenses, [Pay-per-Use](pay-per-use), [Quota](quota) and [Rental](rental).
+A product can use several of them at once, one per [product module](object-model#product-module).
 
-Based on open standards, it provides a cost effective, integrated and
-scalable platform for software vendors and developers who want to
-concentrate on their product's core functionality instead of spending
-resources on developing an own license management software.  
-NetLicensing allows vendors and developers to enable license management
-for their new or existing products right away and with minimum effort.
+To check a license, your application sends the customer's ID (the *licensee number*) to the
+[validate](licensee-services#validate-licensee) endpoint. It gets back a ready-to-use answer for every product module:
+whether use is allowed, when the subscription ends, how many credits are left, and so on.
+
+Customers buy, upgrade and renew in the white-label [NetLicensing Shop](netlicensing-shop) and can look up their
+licenses in the [Customer Portal](customer-portal). If you already have an online shop, connect it through one of the
+[integrations](integrations) instead. For day-to-day work there's the Management Console, plus
+[webhook notifications](notifications), [warning levels](warning-level) and [reports](reporting).
+
+Customers without a steady internet connection are covered by cached validation results, signed offline validation
+files and the on-premises [NetLicensing Agent](netlicensing-agent); see [Offline License Validation](offline-license-validation).
+For developers there are official [client libraries](client-libraries) for Java, C#/.NET, PHP, JavaScript, Kotlin and C++,
+an [OpenAPI specification](restful-api#openapi-specification-and-api-test-center), and the
+[NetLicensing MCP server](netlicensing-mcp) for AI agents.
+
+What NetLicensing doesn't do
+----------------------------
+
+NetLicensing doesn't create machine fingerprints or session IDs. Your application supplies those; see
+[How to Generate a Machine ID or Fingerprint](faq-how-to-generate-machine-fingerprint) for ideas.
+
+It also doesn't obfuscate your application or protect the binary against tampering. Your code makes its decisions
+from the validation response, so protect that response with [response signing](signing-the-response) and protect the
+code itself with the tools your platform offers.
+
+And unless you run the [Agent](netlicensing-agent), validation needs to reach the NetLicensing cloud at least once per
+TTL.
+
+New to NetLicensing? Start with [Getting Started](getting-started), or compare the
+[licensing models](software-licensing-models-compared). Still deciding whether to build your own? Read
+[Build vs Buy](build-vs-buy-software-licensing).
 
 An Ecosystem of Licensing Models
 --------------------------------
@@ -67,11 +100,11 @@ All you need is to clearly formulate your licensing needs.
 
 <img alt="" src="assets/images/icons/bullet-2.png" />
 [Setup](setting-up): NetLicensing Management Console
-(NMC) is the integrated online administration center that allows you to
+(NMC) is the integrated online administration center that allows you to
 control all licensing aspects of your products. Once you have decided on
-the licensing scheme, log in to NetLicensing Management Console and
+the licensing scheme, log in to NetLicensing Management Console and
 create desired licensing configuration. You can get back to NetLicensing
-Management Console at any time to alter your configuration or monitor
+Management Console at any time to alter your configuration or monitor
 the licenses. Besides, NetLicensing business intelligence module will
 consolidate your product usage information in regular reports.
 

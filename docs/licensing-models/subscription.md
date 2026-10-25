@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Subscription
+title: "Subscription Licensing: Time-Based Software Licenses"
+nav_title: "Subscription"
 parent: Licensing Models
 nav_order: 20
-description: "Subscription licensing model reflects a typical subscription scenario, where the use is permitted for a certain period of time"
+description: "Subscription licensing model: permit product use for a purchased period of days, extend it on renewal, offer a free evaluation period and a grace period. License templates, validation and expiry date handling."
+last_modified_at: 2026-10-25
 permalink: subscription
 ---
 
@@ -91,18 +93,18 @@ Accept: application/xml
 {: .code-example .ml-5 .code-header }
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<netlicensing 
-    xmlns="http://netlicensing.labs64.com/schema/context">
-    <infos/>
-    <items>
-        <item type="ProductModuleValidation">
-            <property name="productModuleNumber">Mass-DEMO</property>
-            <property name="valid">true</property>
-            <property name="licensingModel">Subscription</property>
-            <property name="expires">2020-05-04T16:03:30.032+03:00</property>
-            <property name="productModuleName">Subscription module</property>
-        </item>
-    </items>
+<netlicensing 
+    xmlns="http://netlicensing.labs64.com/schema/context">
+    <infos/>
+    <items>
+        <item type="ProductModuleValidation">
+            <property name="productModuleNumber">Mass-DEMO</property>
+            <property name="valid">true</property>
+            <property name="licensingModel">Subscription</property>
+            <property name="expires">2020-05-04T16:03:30.032+03:00</property>
+            <property name="productModuleName">Subscription module</property>
+        </item>
+    </items>
 </netlicensing>
 ```
 {: .ml-5 }
@@ -115,3 +117,10 @@ Below are the default [warning levels](warning-level) associated with this licen
 | GREEN | YELLOW | RED |
 |:------|:-------|:----|
 | timeUsed < 80% | timeUsed >= 80% | timeUsed = 100% |
+
+Related guides
+--------------
+
+- [Subscription vs Perpetual Licensing](subscription-vs-perpetual-licensing)
+- [FAQ: How do customers renew an expired subscription?](faq-renew-subscription)
+- [License Lifecycle: Activation, Expiry, Renewal and Revocation](license-lifecycle)

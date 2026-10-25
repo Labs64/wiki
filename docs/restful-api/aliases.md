@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Aliases
-parent: NetLicensing API (RESTful)
+parent: NetLicensing REST API Reference
 nav_order: 40
 description: "Aliases allow you to add alternative unique identifiers (one or more) to the Licensee entity."
 permalink: aliases

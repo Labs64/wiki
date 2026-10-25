@@ -3,7 +3,7 @@ layout: default
 title: Transferring licenses between licensees
 parent: Details on Usage
 nav_order: 99
-description: "Transferring licenses between licensees"
+description: "Move licenses from one licensee to another with the transfer API, for example to bind renewals bought in an external e-commerce system to an existing customer."
 permalink: transferring-licenses-between-licensees
 ---
 
@@ -22,7 +22,7 @@ possible to pass existing *licensee number* to a shopping session, so
 that newly purchased licenses are bound to already existing licensee.
 This makes it difficult to use external eCommerce together with
 [licensing models](licensing-models) requiring licenses
-renewal or extension, such as [Subscription](subscription)
+renewal or extension, such as [Subscription](subscription)
 or [Pay-per-Use](pay-per-use). To overcome this problem,
 NetLicensing allows to bind renewal / extension licenses to a temporary
 licensee, and transfer these licenses to the target licensee later on.
@@ -30,10 +30,10 @@ licensee, and transfer these licenses to the target licensee later on.
 Workflow
 --------
 
-In the following workflow we will use the term *licensee number* when
-referring to NetLicensing and *license key* when referring to an
+In the following workflow we will use the term *licensee number* when
+referring to NetLicensing and *license key* when referring to an
 external eCommerce system. When using NetLicensing with external
-eCommerce, *licensee number* is mapped to eCommerce's *license key*.
+eCommerce, *licensee number* is mapped to eCommerce's *license key*.
 
 Typical flow for eCommerce shopping session:
 
@@ -79,7 +79,7 @@ licenseeNumber (target): I542PBSID
 
 The purchase fulfillment script will execute the following calls:
 
-1.  Create new (temporary) licensee and receive its *licensee number*
+1.  Create new (temporary) licensee and receive its *licensee number*
     (`I762LBSSX` in this example)
 
     <span
@@ -174,19 +174,19 @@ The purchase fulfillment script will execute the following calls:
     ```
     {: .ml-5 }
 
-Now the new licensee number `I762LBSSX` to be communicated to the
+Now the new licensee number `I762LBSSX` to be communicated to the
 software at the end user, e.g. via the purchase confirmation page /
 email and entered manually by the user, notification URL, or by any
-other means. The permanent licensee number `I542PBSID` is already
+other means. The permanent licensee number `I542PBSID` is already
 assigned to the end user and is known to the software. When the software
 receives the new (temporary) licensee number, it will execute the
 following:
 
-1.  Call [transfer](licensee-services#transfer-licenses) method
-    for permanent licensee number `I542PBSID`, passing the new licensee
-    number `I762LBSSX` as `sourceLicenseeNumber` parameter
+1.  Call [transfer](licensee-services#transfer-licenses) method
+    for permanent licensee number `I542PBSID`, passing the new licensee
+    number `I762LBSSX` as `sourceLicenseeNumber` parameter
 
-     
+     
 
     <span
     class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span

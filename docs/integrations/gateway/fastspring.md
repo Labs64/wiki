@@ -166,4 +166,4 @@ If you see `NotFoundException: Requested product does not exist` instead of the 
 
 ## References
 
-* [Integrating NetLicensing @ FastSpring](https://community.fastspring.com/s/article/Integrating-NetLicensing){:target="_blank"}{:rel="noopener nofollow"}
+* [Integrating NetLicensing @ FastSpring](https://community.fastspring.com/s/article/Integrating-NetLicensing){:target="_blank"}{:rel="noopener nofollow"}

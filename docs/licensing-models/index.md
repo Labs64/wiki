@@ -3,7 +3,8 @@ layout: default
 title: Licensing Models
 has_children: true
 nav_order: 40
-description: "Licensing Models supported by NetLicensing as well as the combinations that can be adopted by NetLicensing"
+description: "Licensing Models supported by NetLicensing as well as the combinations that can be adopted by NetLicensing"
+last_modified_at: 2026-10-25
 permalink: licensing-models
 ---
 
@@ -13,18 +14,18 @@ permalink: licensing-models
 Labs64 NetLicensing is sophisticated enough to cover even the most
 outlandish licensing models: from single-user to network overflow
 licenses. Labs64 NetLicensing provides the software vendor with the
-ability to map/combine numerous licensing models.
+ability to map/combine numerous licensing models.
 
 Licensing models combine different parameters that define how a product
 can be used by the end user. NetLicensing offers you the flexibility to
-assign multiple licensing models to your product, so you can create a
-composite licensing model that is specific to your needs. With
+assign multiple licensing models to your product, so you can create a
+composite licensing model that is specific to your needs. With
 NetLicensing you can define licensing models for specific customers,
 geographies, business models, or any other criteria.
 
 This table provides a description and configuration specifics for
-licensing models supported by NetLicensing as well as some of the
-possible licensing models and combinations that can be adopted by
+licensing models supported by NetLicensing as well as some of the
+possible licensing models and combinations that can be adopted by
 NetLicensing.
 
 <table>
@@ -145,7 +146,7 @@ NetLicensing.
 <li>Named host</li>
 </ul></td>
 <td><p>Software is licensed for use only on one or more named computer systems. Usually, hardware-bound identification like CPU serial number is used to enforce this type of license.</p>
-<p> </p></td>
+<p> </p></td>
 <td><p><img src="assets/images/icons/emoticons/check.png" alt="(tick)" class="emoticon emoticon-tick" /> <em>AVAILABLE</em></p></td>
 </tr>
 <tr class="even">
@@ -166,7 +167,7 @@ NetLicensing.
 <li>Single-user</li>
 <li>Perpetual</li>
 </ul></td>
-<td><p>This license is a non-transferable license allowing product use on a single computer and/or by a single user. Once purchased, the product can be used without limitations.</p>
+<td><p>This license is a non-transferable license allowing product use on a single computer and/or by a single user. Once purchased, the product can be used without limitations.</p>
 <div class="aui-message hint shadowed information-macro has-no-icon">
 <p><strong>How to configure</strong></p>
 <div class="message-content">
@@ -197,77 +198,77 @@ NetLicensing.
 </tr>
 <tr class="odd">
 <td>Duplicate grouping (license sharing) by user, host or display</td>
-<td> </td>
+<td></td>
 <td>Grouping license defines rules for counting usage when a single user concurrently runs the same application on several computers. This instance may count as a single use or a multiple use, depending on the license terms.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="even">
 <td>Capacity or performance</td>
-<td> </td>
+<td></td>
 <td>A licensing model based on the host computer's (one or more servers) capacity or performance can be used for compute-intensive applications such as databases or transaction processing. However, the complexity and diversity of computers, platforms, networks and fabrics make deriving relevant metrics extremely equivocal. The business value is likely to be not at all related to CPU cycles or processes invoked.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="odd">
 <td>Group License</td>
-<td> </td>
+<td></td>
 <td><p>This type of license can be used to develop a consortium. It grants rights only to members of a specific group such as named entities, or those that adhere to a particular standard, or have received a particular certification. Group licenses may require licensees to grant special rights to all members of the group such as mandatory no-fee cross-licensing.</p></td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="even">
 <td>High-watermark of past use</td>
-<td> </td>
+<td></td>
 <td>Usage fees are calculated based on the maximum number of concurrent users in a defined past time period (typically monthly).</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="odd">
 <td>Linger use</td>
-<td> </td>
+<td></td>
 <td>The user has license rights for a fixed time period. Linger licenses are attractive for applications that are used for very short periods such as a few seconds or minutes. They increase the number of low-cost licenses that larger customers must buy, while small customers may enjoy a lower price thereby allowing the vendor to reach a broader audience through pricing.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="even">
 <td>Node-locked counted</td>
-<td> </td>
+<td></td>
 <td>Software is licensed for a limited number if concurrent users on a single computer system.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="odd">
 <td>Overdraft</td>
-<td> </td>
+<td></td>
 <td>Such licenses grant N more licenses than were purchased, giving customers a way to manage peak use without violating the license. The licensor can charge a fee for overdrafts protection (insurance) as well as separate fees for each overdraft license. Advantages to licensors are flexibility, simplicity, and price locks that give predictable costs.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="even">
 <td>Packages or bundling</td>
-<td> </td>
+<td></td>
 <td>Packages licenses grant rights to use a set of functionally dependent or independent products, or bundle. Vendors define the components of the packages or bundles in the license agreement. Such licenses allow vendors to easily customize solutions on a marketing, not engineering, level.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="odd">
 <td>Package suite</td>
-<td> </td>
+<td></td>
 <td>Package suites restrict the concurrent sharing of a package's components. For example, no two users may concurrently use MS Word and MS PowerPoint. This type of license is used by vendors with broad product lines as a competitive price discounting strategy.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="even">
 <td>Site license</td>
-<td> </td>
+<td></td>
 <td>Grant rights to all valid users at a named location; may be unlimited in number, or up to a certain number. This is a cost-effective option for large customers, especially where the usage load might grow quickly or varies greatly.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
 </tr>
 <tr class="odd">
 <td>Upgrade dates and/or version numbers</td>
-<td> </td>
+<td></td>
 <td>Upgrade terms grant rights to use upgraded versions of the software. The customer may upgrade only X number of times or the customer can only use specific upgrade versions, or must upgrade within a certain time period following the release of Version X. These terms encourage the installed base to use certain versions so that the licensor may withdraw, or offer special pricing for support of other versions.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
@@ -283,7 +284,7 @@ NetLicensing.
 </tr>
 <tr class="odd">
 <td>VLK (Volume License Key)</td>
-<td> </td>
+<td></td>
 <td>A license model that enables you to sell a pool of licenses to an organization, without requiring product activation on every machine, while still enforcing the maximum number of installed workstations.</td>
 <td><p><em><img src="assets/images/icons/emoticons/lightbulb.png" alt="(grey lightbulb)" class="emoticon emoticon-light-off" /></em></p>
 <p><em>PLANNED</em></p></td>
@@ -304,10 +305,18 @@ NetLicensing.
 </tr>
 <tr class="odd">
 <td>Custom Licenses</td>
-<td> </td>
+<td></td>
 <td><p>With NetLicensing, you can create complex licensing models that fit your business needs.</p></td>
 <td><p><img src="assets/images/icons/emoticons/help_16.png" alt="(question)" class="emoticon emoticon-question" /></p>
 <p><a href="https://netlicensing.io/contact/" class="external-link">CONTACT US!</a></p></td>
 </tr>
 </tbody>
 </table>
+
+Related guides
+--------------
+
+- [Software Licensing Models Compared](software-licensing-models-compared): side-by-side comparison and common combinations
+- [Node-Locked vs Floating Licenses](node-locked-vs-floating-licenses)
+- [Subscription vs Perpetual Licensing](subscription-vs-perpetual-licensing)
+- [Usage-Based Software Licensing](usage-based-licensing)

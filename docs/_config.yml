@@ -53,10 +53,14 @@ zoho_salesiq_code: "57912641e38953d1e82182c4935dd7cc6768a402d6735d94c891a1516989
 # SEO
 lang: en
 title: NetLicensing Wiki
-description: Resources that will help you learn about Labs64 NetLicensing
+description: "Documentation for Labs64 NetLicensing, the Licensing-as-a-Service platform: licensing models, REST API, client libraries, integration guides, offline validation, Shop, Agent and MCP server."
 logo: "assets/images/logos/netlicensing-logo-transparent.png"
 email: info@netlicensing.io
+# jekyll-seo-tag uses author.name as the JSON-LD publisher name
 author:
+  name: Labs64 NetLicensing
+  type: Organization
+  url: https://netlicensing.io
   twitter: netlicensing
 twitter:
   username: netlicensing
@@ -69,6 +73,22 @@ social:
     - https://github.com/Labs64/
     - https://www.facebook.com/netlicensing
     - https://twitter.com/netlicensing
+
+# Home page Organization / SoftwareApplication structured data (theme include organization-jsonld.html).
+# Keep this description identical to the one on netlicensing.io, the GitHub READMEs and directory profiles.
+organization:
+  name: Labs64 GmbH
+  url: https://www.labs64.com
+  logo: assets/images/logos/netlicensing-logo-transparent.png
+software:
+  name: Labs64 NetLicensing
+  url: https://netlicensing.io
+  category: BusinessApplication
+  operating_system: Any
+  description: "Labs64 NetLicensing is a cloud-based software license management service (Licensing-as-a-Service). Software vendors configure licensing models such as subscription, try-and-buy, floating, node-locked, pay-per-use and quota, then validate a customer's entitlements from their application with a single REST API call, without building and operating their own license server."
+
+# Pages with this parent get FAQPage structured data (theme include faq-jsonld.html)
+faq_parent: FAQ & Troubleshooting
 
 # Default social preview (Open Graph / Twitter large card); a page's own `image:` front matter wins.
 # jekyll-seo-tag reads the image from page front matter only, so it is set through defaults.

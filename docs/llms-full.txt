@@ -1,0 +1,23 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap:
+  exclude: true
+---
+# NetLicensing Wiki (full text)
+
+> {{ site.software.description }}
+
+This file contains the text of every page of the NetLicensing Wiki ({{ '/' | absolute_url }}) in one document, for AI
+assistants and offline reading. The page index is at {{ '/llms.txt' | absolute_url }}.
+{% assign title_tag = '{' | append: '{ page.title }' | append: '}' -%}
+{% assign sorted = site.pages | sort: "url" -%}
+{%- for p in sorted %}{% if p.title and p.layout != nil and p.nav_exclude != true and p.url != '/404.html' and p.redirect == nil %}
+---
+
+## {{ p.title }}
+
+Source: {{ p.url | absolute_url }}{% if p.last_modified_at %} (updated {{ p.last_modified_at | date: '%Y-%m-%d' }}){% endif %}
+
+{{ p.content | strip_html | replace: title_tag, p.title | strip }}
+{% endif %}{% endfor %}

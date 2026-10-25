@@ -1,21 +1,23 @@
 ---
 layout: default
-title: Multi-Feature
+title: "Multi-Feature Licensing: Enable Product Features per Customer"
+nav_title: "Multi-Feature"
 parent: Licensing Models
 nav_order: 30
-description: "Multi-Feature licensing model allows enabling or disabling single product features"
+description: "Multi-Feature (feature-based) licensing model: sell and enable individual product features, or build lite, pro and enterprise editions, and read each feature's state from the validation response."
+last_modified_at: 2026-10-25
 permalink: multi-feature
 ---
 
 {{ page.title }}
 =============
 
-**Multi-Feature** licensing model is designed to make the product adjustable to the specific needs of different individual users. Certain aspects of the software may be considered as ‘core’ i.e. they will be needed in order for the software to perform its basic functions and delivery its core purpose, but all of the other features are paid for individually. Using this licensing model it is possible to create an upgrade path from a *“lite”* version to *“standard”*, *“pro”*, *“enterprise”* etc. NetLicensing Validation shows what features are valid (permitted) for the [licensee](object-model#licensee) at the time of validation.
+**Multi-Feature** licensing model is designed to make the product adjustable to the specific needs of different individual users. Certain aspects of the software may be considered as ‘core’ i.e. they will be needed in order for the software to perform its basic functions and delivery its core purpose, but all of the other features are paid for individually. Using this licensing model it is possible to create an upgrade path from a *“lite”* version to *“standard”*, *“pro”*, *“enterprise”* etc. NetLicensing Validation shows what features are valid (permitted) for the [licensee](object-model#licensee) at the time of validation.
 
-To enable certain product feature, licensee acquires an appropriate [license](object-model#license). Accordingly, Multi-Feature licensing model must be configured with one or more [license templates](object-model#license-template) of type FEATURE. The entity **`number`** of each license template serves also as an identifier of the corresponding feature and is made available for processing in the validation result. License template **`name`** field provides a descriptive name of the feature, which is visible to the end user in the NetLicensing shop. Every feature gets its own price. E.g.:
+To enable certain product feature, licensee acquires an appropriate [license](object-model#license). Accordingly, Multi-Feature licensing model must be configured with one or more [license templates](object-model#license-template) of type FEATURE. The entity **`number`** of each license template serves also as an identifier of the corresponding feature and is made available for processing in the validation result. License template **`name`** field provides a descriptive name of the feature, which is visible to the end user in the NetLicensing shop. Every feature gets its own price. E.g.:
 
--   License template with number **`Emf-lite`** -\> "Lite SW version" for 10 EUR
--   License template with number **`Emf-pro`** -\> "Professional SW version" for 20 EUR
+-   License template with number **`Emf-lite`** -\> "Lite SW version" for 10 EUR
+-   License template with number **`Emf-pro`** -\> "Professional SW version" for 20 EUR
 
 Optionally, some features may be marked "automatic" in their license templates - licenses for these features will be added automatically to every new licensee, regardless of the license price. This may be used for features that can be later disabled at vendor's decision, by deactivating the corresponding license.
 
@@ -24,8 +26,8 @@ No additional properties required for license templates or licenses in this lice
 On validation, this licensing model returns all configured features (according to the license templates), with the following values per feature:
 
 -   `String` **`name`** - attribute of the \<list\> container representing a feature, to be interpreted as a unique feature id. This is the entity **`number`** of the corresponding license template.
--   `Boolean` **`valid`** - **`true`** if the feature use is allowed (valid license is available)
--   `String` **`featureName`** - descriptive user-friendly name of the feature. This is the **`name`** field of the corresponding license template.
+-   `Boolean` **`valid`** - **`true`** if the feature use is allowed (valid license is available)
+-   `String` **`featureName`** - descriptive user-friendly name of the feature. This is the **`name`** field of the corresponding license template.
 
 Validation response example:
 <div>Response</div>
@@ -61,3 +63,9 @@ Below are the default [warning levels](warning-level) associated with this licen
 | GREEN | YELLOW | RED |
 |:------|:-------|:----|
 | always GREEN | N/A | N/A |
+
+Related guides
+--------------
+
+- [FAQ: How do I enable features or editions per customer?](faq-feature-based-licensing)
+- [Software Licensing Models Compared](software-licensing-models-compared)

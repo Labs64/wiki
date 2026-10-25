@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Setting up
+title: Setting Up Products and License Templates
 nav_order: 2
 nav_exclude: true
-description: ""
+description: "Step 2 of getting started: create a NetLicensing account, then configure a product, product modules and license templates in the Management Console, with a worked Rental licensing example."
 permalink: setting-up
 image: assets/images/NetLicensing-GettingStarted.png
 ---
 
-[Step 1: Planning](planning) &nbsp;&nbsp; **Step 2: Setting up** &nbsp;&nbsp; [Step 3: Integration](integration)
+[Step 1: Planning](planning) · **Step 2: Setting up** · [Step 3: Integration](integration)
 
 Setting up
 ==========
@@ -16,7 +16,7 @@ Setting up
 ### Configure the product in NetLicensing via NetLicensing Management Console
 
 1.  Create a NetLicensing account by registering
-    at <a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a>
+    at <a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a>
 2.  Setup the layout using NetLicensing Management Console:
     -   create a product
     -   create product modules
@@ -29,7 +29,7 @@ Setting up
 
 1\. Create an account with NetLicensing
 
-2\. Login to NetLicensing Management Console at
+2\. Login to NetLicensing Management Console at
 <a href="https://ui.netlicensing.io" class="external-link">ui.netlicensing.io</a>
 
 2.1. Create a product
@@ -81,4 +81,4 @@ volume/price combinations)
     -   Do not check `"Hide Licenses"`, as you want licensee to see what
         time volume he has already purchased.
 
-[Step 1: Planning](planning) &nbsp;&nbsp; **Step 2: Setting up** &nbsp;&nbsp; [Step 3: Integration](integration)
+[Step 1: Planning](planning) · **Step 2: Setting up** · [Step 3: Integration](integration)

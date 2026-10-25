@@ -3,7 +3,7 @@ layout: default
 title: How to access and verify consent given by end-customer
 parent: Privacy Center
 nav_order: 99
-description: "How to access and verify consent given by end-customer"
+description: "Check the consent an end customer gave in NetLicensing Shop and verify when and to what it was given, for GDPR record keeping."
 permalink: how-to-access-and-verify-consent-given-by-end-customer
 ---
 

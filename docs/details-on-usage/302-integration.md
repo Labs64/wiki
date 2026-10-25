@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Integration
+title: "Integration: Call the NetLicensing API from Your Product"
 nav_order: 3
 nav_exclude: true
-description: ""
+description: "Step 3 of getting started: call the validate method of the NetLicensing REST API from your product, and send customers to NetLicensing Shop with a shop token to buy or renew licenses."
 permalink: integration
 image: assets/images/NetLicensing-GettingStarted.png
 ---
 
-[Step 1: Planning](planning) &nbsp;&nbsp; [Step 2: Setting up](setting-up) &nbsp;&nbsp; **Step 3: Integration**
+[Step 1: Planning](planning) · [Step 2: Setting up](setting-up) · **Step 3: Integration**
 
 Integration
 ===========
@@ -40,5 +40,5 @@ style="line-height: 1.4285715;"> service with
 Generate token service returns also the complete shop URL for
 convenience.</span>
 
- 
-[Step 1: Planning](planning) &nbsp;&nbsp; [Step 2: Setting up](setting-up) &nbsp;&nbsp; **Step 3: Integration**
+ 
+[Step 1: Planning](planning) · [Step 2: Setting up](setting-up) · **Step 3: Integration**

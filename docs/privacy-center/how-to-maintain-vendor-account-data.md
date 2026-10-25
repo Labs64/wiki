@@ -3,7 +3,7 @@ layout: default
 title: How to maintain vendor account data
 parent: Privacy Center
 nav_order: 99
-description: "How to maintain vendor account data"
+description: "View and update the personal and company data of your own NetLicensing vendor account."
 permalink: how-to-maintain-vendor-account-data
 ---
 

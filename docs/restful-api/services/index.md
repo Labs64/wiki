@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Services
-parent: NetLicensing API (RESTful)
+parent: NetLicensing REST API Reference
 nav_order: 10
 has_children: true
-description: "NetLicensing exposes all available service’s functionality via an Application Programming Interface (API)"
+description: "Overview of the NetLicensing REST API services: products, product modules, license templates, licensees, licenses, bundles, tokens, transactions, payment methods and utilities."
 permalink: services
 ---
 

@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Product Services
+title: Product Services API
+nav_title: Product Services
 parent: Services
-grand_parent: NetLicensing API (RESTful)
+grand_parent: NetLicensing REST API Reference
 nav_order: 10
-description: "Product Services"
+description: "REST API reference for products: list, get, create, update and delete products, including licensee auto-create, VAT mode and discounts."
 permalink: product-services
 ---
 
@@ -49,7 +50,7 @@ Return a list of all configured products for the current vendor.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td><p>- None -</p></td>
 </tr>
 <tr class="odd">
@@ -64,7 +65,7 @@ Return a list of all configured products for the current vendor.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">ProductService.list</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">ProductService.list</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -134,8 +135,8 @@ Return a product by productNumber.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>productNumber (string) - Product number.</p></td>
+<td><p>Request Parameters</p></td>
+<td><p>productNumber (string) - Product number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -149,7 +150,7 @@ Return a product by productNumber.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">ProductService.get</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">ProductService.get</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -191,7 +192,7 @@ $ curl --header "Accept: application/xml" --insecure --user demo:demo --request 
 
 Creates a new product.
 
- 
+ 
 
 <table>
 <colgroup>
@@ -220,26 +221,26 @@ Creates a new product.
 Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>number (string) - Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.</p>
-<p>active (boolean) - If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.</p>
-<p>name (string) - Product name. Together with the version identifies the product for the end customer.</p>
-<p>version (string) - Product version. Convenience parameter, additional to the product name.</p>
-<p>licenseeAutoCreate (boolean) - If set to 'true', non-existing licensees will be created at first validation attempt.</p>
-<p>description (string) - Product description. Optional.</p>
-<p>licensingInfo (string) - Licensing information. Optional.</p>
-<p>licenseeSecretMode (enum) - Licensee secret mode for product (<img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /> available in selected pricing plans). Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> <em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></p>
+<td><p>Request Parameters</p></td>
+<td><p>number (string) - Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.</p>
+<p>active (boolean) - If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.</p>
+<p>name (string) - Product name. Together with the version identifies the product for the end customer.</p>
+<p>version (string) - Product version. Convenience parameter, additional to the product name.</p>
+<p>licenseeAutoCreate (boolean) - If set to 'true', non-existing licensees will be created at first validation attempt.</p>
+<p>description (string) - Product description. Optional.</p>
+<p>licensingInfo (string) - Licensing information. Optional.</p>
+<p>licenseeSecretMode (enum) - Licensee secret mode for product (<img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /> available in selected pricing plans). Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> <em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></p>
 <p><span style="color: rgb(0,0,0);"> - DISABLED - licensee secret ignored.</span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"> - <span>PREDEFINED - licensee secret must be set in NetLicensing (can't be used with Auto-create Licensee).</span></span></span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"><span> - <span>CLIENT - client sets the licensee secret on first validate.</span></span></span></span></p>
 <p>vatMode (Enum) - Vat mode for product. Optional.</p>
 <p>- <span style="color: rgb(0,0,0);">GROSS: VAT is included in the prices.</span></p>
-<p><span style="color: rgb(0,0,0);">- NET: VAT is not included in the prices.</span></p>
+<p><span style="color: rgb(0,0,0);">- NET: VAT is not included in the prices.</span></p>
 <p>discount (list) - Product discounts list. Optional, multiple allowed (list). Parameters of each product discount are passed using the following format:</p>
 <p><span style="color: rgb(80,80,80);"><em>discount=<em>t<span style="color: rgb(81,81,81);">otalPrice;currency;<em>discountAmount</em></span></em><br />
-&lt;t<span style="color: rgb(81,81,81);">otalPrice</span>&gt; <em>(string)</em></em>  - <span style="color: rgb(81,81,81);">Total Price</span><em><br />
-&lt;</em></span>currency<em>&gt;</em><span style="color: rgb(80,80,80);">  <em>(string)</em> - Currency<span style="color: rgb(81,81,81);"><em><br />
-&lt;discountAmount&gt;</em> <em>(string)</em> - <span style="color: rgb(81,81,81);">Discount Amount: absolute (e.g. "1.50") or percent (e.g. "5%")</span></span></span></p></td>
+&lt;t<span style="color: rgb(81,81,81);">otalPrice</span>&gt; <em>(string)</em></em>  - <span style="color: rgb(81,81,81);">Total Price</span><em><br />
+&lt;</em></span>currency<em>&gt;</em><span style="color: rgb(80,80,80);">  <em>(string)</em> - Currency<span style="color: rgb(81,81,81);"><em><br />
+&lt;discountAmount&gt;</em> <em>(string)</em> - <span style="color: rgb(81,81,81);">Discount Amount: absolute (e.g. "1.50") or percent (e.g. "5%")</span></span></span></p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -254,7 +255,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#create-com.labs64.netlicensing.domain.vo.Context-com.labs64.netlicensing.domain.entity.Product-" class="external-link">ProductService.create</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#create-com.labs64.netlicensing.domain.vo.Context-com.labs64.netlicensing.domain.entity.Product-" class="external-link">ProductService.create</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -327,27 +328,27 @@ Sets the provided properties to a product. Return an updated product.
 Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>productNumber (string) - Unique number that identifies the product.</p>
-<p>number (string) - New product number (update)</p>
-<p>active (boolean) - If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.</p>
-<p>name (string) - Product name. Together with the version identifies the product for the end customer.</p>
-<p>version (string) - Product version. Convenience parameter, additional to the product name.</p>
-<p>licenseeAutoCreate (boolean) - If set to 'true', non-existing licensees will be created at first validation attempt.</p>
-<p>description (string) - Product description. Optional.</p>
-<p>licensingInfo (string) - Licensing information. Optional.</p>
-<p>licenseeSecretMode (enum) - <span>Licensee secret mode for product (</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> </span><span>available in selected pricing plans</span><span>). Optional. </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></p>
+<td><p>Request Parameters</p></td>
+<td><p>productNumber (string) - Unique number that identifies the product.</p>
+<p>number (string) - New product number (update)</p>
+<p>active (boolean) - If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.</p>
+<p>name (string) - Product name. Together with the version identifies the product for the end customer.</p>
+<p>version (string) - Product version. Convenience parameter, additional to the product name.</p>
+<p>licenseeAutoCreate (boolean) - If set to 'true', non-existing licensees will be created at first validation attempt.</p>
+<p>description (string) - Product description. Optional.</p>
+<p>licensingInfo (string) - Licensing information. Optional.</p>
+<p>licenseeSecretMode (enum) - <span>Licensee secret mode for product (</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> </span><span>available in selected pricing plans</span><span>). Optional. </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></p>
 <p><span style="color: rgb(0,0,0);"> - DISABLED - licensee secret ignored.</span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"> - PREDEFINED - licensee secret must be set in NetLicensing (can't be used with Auto-create Licensee).</span></span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"> - CLIENT - client sets the licensee secret on first validate.</span></span></p>
 <p>vatMode (Enum) - Vat mode for product. Optional.</p>
 <p>- <span style="color: rgb(0,0,0);">GROSS: VAT is included in the prices.</span></p>
-<p><span style="color: rgb(0,0,0);">- NET: VAT is not included in the prices.</span></p>
+<p><span style="color: rgb(0,0,0);">- NET: VAT is not included in the prices.</span></p>
 <p>discount (list) - Product discounts list. Optional<span>, multiple allowed (list)</span>. Parameters of each product discount are passed using the following format:</p>
 <p><span style="color: rgb(80,80,80);"><em>discount=<em>t<span style="color: rgb(81,81,81);">otalPrice;currency;<em>discountAmount</em></span></em><br />
-&lt;t<span style="color: rgb(81,81,81);">otalPrice</span>&gt; <em>(string)</em></em>  - <span style="color: rgb(81,81,81);">Total Price</span><em><br />
-&lt;</em></span>currency<em>&gt;</em><span style="color: rgb(80,80,80);">  <em>(string)</em> - Currency<span style="color: rgb(81,81,81);"><em><br />
-&lt;discountAmount&gt;</em> <em>(string)</em> - Discount Amount: absolute (e.g. "1.50") or percent (e.g. "5%") </span></span></p>
+&lt;t<span style="color: rgb(81,81,81);">otalPrice</span>&gt; <em>(string)</em></em>  - <span style="color: rgb(81,81,81);">Total Price</span><em><br />
+&lt;</em></span>currency<em>&gt;</em><span style="color: rgb(80,80,80);">  <em>(string)</em> - Currency<span style="color: rgb(81,81,81);"><em><br />
+&lt;discountAmount&gt;</em> <em>(string)</em> - Discount Amount: absolute (e.g. "1.50") or percent (e.g. "5%") </span></span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(81,81,81);">Discounts are always replaced all or none - specify all required discounts on update, even if some are unchanged. Discounts can also be deleted completely by specifying a single discount with an </span></span><span style="color: rgb(81,81,81);">empty value</span><span style="color: rgb(81,81,81);">:</span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(81,81,81);"><span style="color: rgb(80,80,80);"><em>discount=</em></span></span></span></p></td>
 </tr>
@@ -364,7 +365,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Product-" class="external-link">ProductService.update</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Product-" class="external-link">ProductService.update</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -437,9 +438,9 @@ Delete a product by number.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>productNumber (string) - Product number.<br />
-forceCascade (boolean) - Force object deletion and all descendants.</p></td>
+<td><p>Request Parameters</p></td>
+<td><p>productNumber (string) - Product number.<br />
+forceCascade (boolean) - Force object deletion and all descendants.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -453,7 +454,7 @@ forceCascade (boolean) - Force object deletion and all descendants.</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">ProductService.delete</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">ProductService.delete</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span

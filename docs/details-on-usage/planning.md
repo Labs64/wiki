@@ -3,7 +3,7 @@ layout: default
 title: How to plan licensing scheme for your product
 parent: Details on Usage
 nav_order: 10
-description: "Elaborate the licensing scheme for your product"
+description: "Step 1 of getting started: decide how to license your product, which features and modules to license separately, and which NetLicensing licensing models match your business model."
 permalink: planning
 image: assets/images/NetLicensing-GettingStarted.png
 ---

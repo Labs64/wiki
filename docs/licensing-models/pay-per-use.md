@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Pay-per-Use
+title: "Pay-per-Use Licensing: Usage-Based Credits and Metering"
+nav_title: "Pay-per-Use"
 parent: Licensing Models
 nav_order: 40
-description: "Pay-per-Use licensing model counts the use of credits associated with licenses."
+description: "Pay-per-Use licensing model for usage-based billing: customers buy credits, the application reports usage (post-payment) or reserves credits (pre-payment) on validation, and NetLicensing tracks remaining quantity."
+last_modified_at: 2026-10-25
 permalink: pay-per-use
 ---
 
@@ -45,15 +47,15 @@ To use this licensing model you must define one or more license templates of typ
 
 Additional properties specific to the QUANTITY [license templates](object-model#license-template):
 
--   `Integer` **`quantity`** (required) - specifies credits amount, which is assigned by default to the licenses created off this template.
+-   `Integer` **`quantity`** (required) - specifies credits amount, which is assigned by default to the licenses created off this template.
 
 Licenses
 --------
 
-Additional properties specific to the QUANTITY [licenses](object-model#license):
+Additional properties specific to the QUANTITY [licenses](object-model#license):
 
--   `Integer` **`quantity`** (required) - specifies the credits amount, provided by this license. Normally it is copied from the corresponding property of the license template, but can be changed later for each license individually. When multiple QUANTITY licenses purchased, the total amount of credits is the sum of **`quantity`** of all active licenses.
--   `Integer` **`usedQuantity`** (optional) - specifies the amount of used credits. When not present, it is equivalent to **`usedQuantity`**=0. This property is updated automatically according to the parameters passed to the validate call (see below). **`usedQuantity`** equal to **`quantity`** means all credits of this license are used up.
+-   `Integer` **`quantity`** (required) - specifies the credits amount, provided by this license. Normally it is copied from the corresponding property of the license template, but can be changed later for each license individually. When multiple QUANTITY licenses purchased, the total amount of credits is the sum of **`quantity`** of all active licenses.
+-   `Integer` **`usedQuantity`** (optional) - specifies the amount of used credits. When not present, it is equivalent to **`usedQuantity`**=0. This property is updated automatically according to the parameters passed to the validate call (see below). **`usedQuantity`** equal to **`quantity`** means all credits of this license are used up.
 
 Validation
 ----------
@@ -61,22 +63,22 @@ Validation
 On validation, this licensing model uses the following [validate parameters](licensee-services#validate-licensee):
 
 -   **`productModuleNumber`**=\<String\> - specifies the product module, that uses Pay-per-Use licensing model
--   **`usedQuantity`**=\<non-negative Integer\> - specifies how many credits has been used by the application since previous validate call (*post-payment* mode). In case more credits were used than the remaining credits, remaining credits get negative.
--   **`reserveQuantity`**=\<non-negative Integer\> - specifies the credits amount that the application attempts to reserve for use until next validate call (*pre-payment* mode). It is not possible to reserve more than the remaining credits.
+-   **`usedQuantity`**=\<non-negative Integer\> - specifies how many credits has been used by the application since previous validate call (*post-payment* mode). In case more credits were used than the remaining credits, remaining credits get negative.
+-   **`reserveQuantity`**=\<non-negative Integer\> - specifies the credits amount that the application attempts to reserve for use until next validate call (*pre-payment* mode). It is not possible to reserve more than the remaining credits.
 
-**`usedQuantity`** and **`reserveQuantity`** parameters are mutually exclusive - use only one of them depending on the mode you need. If both **`usedQuantity`** and **`reserveQuantity`** parameters to validate are omitted, it is equivalent to **`usedQuantity`**=0.
-However, if you need to call validate just for reading-out the remaining credits, it is suggested to pass **`usedQuantity`**=0 explicitly. This helps better traceability of the call by explicit declaration of intent.
+**`usedQuantity`** and **`reserveQuantity`** parameters are mutually exclusive - use only one of them depending on the mode you need. If both **`usedQuantity`** and **`reserveQuantity`** parameters to validate are omitted, it is equivalent to **`usedQuantity`**=0.
+However, if you need to call validate just for reading-out the remaining credits, it is suggested to pass **`usedQuantity`**=0 explicitly. This helps better traceability of the call by explicit declaration of intent.
 
 Validation returns values:
 
--   `Boolean` **`valid`** - **`true`** if the sum of **`quantity`** of all active licenses (given credits) is bigger than the sum of **`usedQuantity`** of these licenses (used credits).
--   `Integer` **`remainingQuantity`** - the amount of credits still available for use. It is the difference between the sum of **`quantity`** and the sum of **`usedQuantity`** of all active licenses.
+-   `Boolean` **`valid`** - **`true`** if the sum of **`quantity`** of all active licenses (given credits) is bigger than the sum of **`usedQuantity`** of these licenses (used credits).
+-   `Integer` **`remainingQuantity`** - the amount of credits still available for use. It is the difference between the sum of **`quantity`** and the sum of **`usedQuantity`** of all active licenses.
 
 Post-payment mode
 -----------------
 
-This mode is activated by passing **`usedQuantity`** validate parameter. Provided value is written off from the remaining credits. **`valid`**=**`true`** in the response indicates that some credits still remain after writing off passed value. The application should take care that the **`remainingQuantity`** returned by the previous validate call is not exceeded, however in this mode overdraft is allowed, in which case **`remainingQuantity`** in the response will get negative.
-When all remaining credits are used up (validate has returned **`valid`**=**`false`**), the application would normally direct the user to the appropriate step for getting more credits, or disable corresponding functionality.
+This mode is activated by passing **`usedQuantity`** validate parameter. Provided value is written off from the remaining credits. **`valid`**=**`true`** in the response indicates that some credits still remain after writing off passed value. The application should take care that the **`remainingQuantity`** returned by the previous validate call is not exceeded, however in this mode overdraft is allowed, in which case **`remainingQuantity`** in the response will get negative.
+When all remaining credits are used up (validate has returned **`valid`**=**`false`**), the application would normally direct the user to the appropriate step for getting more credits, or disable corresponding functionality.
 
 Validation response examples:
 
@@ -127,7 +129,7 @@ productModuleNumber0=MTEST-DEMO&usedQuantity0=25
 <div>Response</div>
 {: .code-example .ml-5 .code-header }
 ```xml
- <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2020-05-21T07:30:28.246Z">
+ <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2020-05-21T07:30:28.246Z">
     <infos/>
     <items>
         <item type="ProductModuleValidation">
@@ -173,14 +175,14 @@ productModuleNumber0=MTEST-DEMO&usedQuantity0=30
             <property name="licensingModel">PayPerUse</property>
         </item>
     </items>
-</netlicensing> 
+</netlicensing> 
 ```
 {: .ml-5 }
 
 Pre-payment mode
 ----------------
 
-This mode is activated by passing **`reserveQuantity`** validate parameter. If provided value is less than or equal to the remaining credits, it is written off from the remaining credits, and **`valid`**=**`true`** returned in the response. In case provided value exceeds remaining credits, remaining credits stay unchanged, and **`valid`**=**`false`** returned in the response.
+This mode is activated by passing **`reserveQuantity`** validate parameter. If provided value is less than or equal to the remaining credits, it is written off from the remaining credits, and **`valid`**=**`true`** returned in the response. In case provided value exceeds remaining credits, remaining credits stay unchanged, and **`valid`**=**`false`** returned in the response.
 
 Validation response examples:
 
@@ -231,7 +233,7 @@ productModuleNumber0=MTEST-DEMO&reserveQuantity0=15
 <div>Response</div>
 {: .code-example .ml-5 .code-header }
 ```xml
- <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2020-05-21T07:30:28.246Z">
+ <netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2020-05-21T07:30:28.246Z">
     <infos/>
     <items>
         <item type="ProductModuleValidation">
@@ -272,7 +274,7 @@ productModuleNumber0=MTEST-DEMO&reserveQuantity0=20
             <property name="licensingModel">PayPerUse</property>
         </item>
     </items>
-</netlicensing> 
+</netlicensing> 
 ```
 {: .ml-5 }
 
@@ -284,3 +286,9 @@ Below are the default [warning levels](warning-level) associated with this licen
 | GREEN | YELLOW | RED |
 |:------|:-------|:----|
 | remainingQuantity < 80% | remainingQuantity >= 80% | remainingQuantity = 100% |
+
+Related guides
+--------------
+
+- [Usage-Based Software Licensing with Metering and Quotas](usage-based-licensing)
+- [FAQ: How do I implement usage-based billing or metering?](faq-usage-based-billing)

@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Stripe
+title: Stripe Payments in NetLicensing Shop
+nav_title: "Stripe"
 parent: Payment Service Providers
 grand_parent: NetLicensing Shop
 nav_order: 20
-description: "Stripe"
+description: "Accept card payments with Stripe for licenses sold through NetLicensing Shop: connect your Stripe account and enable it as a payment method in the Management Console."
 permalink: stripe
 ---
 
@@ -17,7 +18,7 @@ You will receive all the payments processed via NetLicensing Shop directly to yo
 
 Follow steps below to enable Stripe payments for your NetLicensing account.
 
-1.  Enable *Stripe* or *Stripe (Testing)* at "Settings / Payment Methods":
+1.  Enable *Stripe* or *Stripe (Testing)* at "Settings / Payment Methods":
 
     Only one of Stripe or Stripe(Testing) can be enabled at the same time.
 

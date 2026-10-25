@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Try & Buy
+title: "Try & Buy Licensing: Free Trial with Paid Upgrade"
+nav_title: "Try & Buy"
 parent: Licensing Models
 nav_order: 10
-description: "Try & Buy licensing model allows to offer a product free of charge in demo or evaluation mode for a limited period of time"
+description: "Try & Buy licensing model: give every new customer a time-limited free evaluation that starts on first use, then unlock the full product after purchase. Configuration, validation parameters and response values."
+last_modified_at: 2026-10-25
 permalink: try-n-buy
 ---
 
@@ -33,13 +35,13 @@ TIMEVOLUME license template properties:
 -   [`Monetary`](restful-api#data-types) **`price`** / **`currency`** - must be set to **`0`** / **`EUR`**, evaluation is free of charge
 -   `Boolean` **`automatic`** - must be set to **`true`**: evaluation starts automatically after the first use)
 -   `Boolean` **`hidden`** - must be set to **`true`**: evaluation license is not available for purchase in NetLicensing Shop
--   `Boolean` **`hideLicenses`** - if set to **`false`**, evaluation license will be visible in the shopping cart of NetLicensing Shop as already acquired license.
+-   `Boolean` **`hideLicenses`** - if set to **`false`**, evaluation license will be visible in the shopping cart of NetLicensing Shop as already acquired license.
 
 FEATURE license template properties:
 
 -   [`Monetary`](restful-api#data-types) **`price`** / **`currency`** - specify the purchase price for the product here
 -   `Boolean` **`automatic`** - must be set to **`false`**: license must be explicitly purchased
--   `Boolean` **`hidden`** - must be set to **`false`**: the license based on this template should be available for purchase in NetLicensing Shop
+-   `Boolean` **`hidden`** - must be set to **`false`**: the license based on this template should be available for purchase in NetLicensing Shop
 
 Validation
 ----------
@@ -108,3 +110,10 @@ Below are the default [warning levels](warning-level) associated with this licen
 | GREEN | YELLOW | RED |
 |:------|:-------|:----|
 | trialPeriodActive = true<br>AND<br>featureAquired = true | trialPeriodActive = true | trialPeriodActive = false<br>AND<br>featureAquired = false |
+
+Related guides
+--------------
+
+- [FAQ: How do I offer a free trial of my software?](faq-free-trial)
+- [FAQ: How do I sell a perpetual license?](faq-perpetual-license)
+- [Subscription vs Perpetual Licensing](subscription-vs-perpetual-licensing)

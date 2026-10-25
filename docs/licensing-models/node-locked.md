@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Node-Locked
+title: "Node-Locked Licensing: Bind Licenses to Devices"
+nav_title: "Node-Locked"
 parent: Licensing Models
 nav_order: 60
-description: "Node-Locked licensing model binds product to a node specific secret, like hash of hardware related data"
+description: "Node-Locked licensing model: bind a license to one or more devices or users through a node secret such as a hardware fingerprint, in predefined or client mode, with a per-license device quota."
+last_modified_at: 2026-10-25
 permalink: node-locked
 ---
 
@@ -18,11 +20,11 @@ permalink: node-locked
 Overview
 --------
 
-**Node-Locked** licensing model binds product to a node specific secret, like hash of hardware related data, hardware id (dongle), user login data, or just a generated random string - feel free to invent your own sources for the secret. Important is that the same secret is presented for the same node on every validation. Certainly, it should be hard enough for a malicious user to fake this secret.
+**Node-Locked** licensing model binds product to a node specific secret, like hash of hardware related data, hardware id (dongle), user login data, or just a generated random string - feel free to invent your own sources for the secret. Important is that the same secret is presented for the same node on every validation. Certainly, it should be hard enough for a malicious user to fake this secret.
 
 The model has two modes of operation, configurable in the product module settings:
 
- 
+ 
 
 | Mode           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -32,25 +34,25 @@ The model has two modes of operation, configurable in the product module setting
 License Templates
 -----------------
 
-This licensing model requires one or more [license templates](object-model#license-template) of type QUANTITY, each specifying the quantity of allowed node secrets (via **`quota`** property) and a purchase price.
+This licensing model requires one or more [license templates](object-model#license-template) of type QUANTITY, each specifying the quantity of allowed node secrets (via **`quota`** property) and a purchase price.
 
 Multiple license templates allow to configure discounts, e.g.:
 
--   10 nodes for 5 EUR
--   100 nodes for 45 EUR
+-   10 nodes for 5 EUR
+-   100 nodes for 45 EUR
 -   1000 nodes for 400 EUR
 
 Specific properties:
 
--   `Integer` **`quota`** (required) - specifies the quantity of node secrets, which is assigned by default to the licenses created off this template.
+-   `Integer` **`quota`** (required) - specifies the quantity of node secrets, which is assigned by default to the licenses created off this template.
 
 Licenses
 --------
 
 Specific properties:
 
--   `Integer` **`quota`** (required) - specifies the quantity of nodeSecrets, provided by this license. Normally it is copied from the corresponding property of the license template, but can be changed later for each license individually. When multiple QUANTITY licenses purchased, the total quantity of nodeSecrets is the sum of **quota** of all active licenses.
--   `String` **`nodeSecret<N>`** (where \<N\> is the number in range \[0..quota-1\]) - stores secrets for this license (up to **quota**).
+-   `Integer` **`quota`** (required) - specifies the quantity of nodeSecrets, provided by this license. Normally it is copied from the corresponding property of the license template, but can be changed later for each license individually. When multiple QUANTITY licenses purchased, the total quantity of nodeSecrets is the sum of **quota** of all active licenses.
+-   `String` **`nodeSecret<N>`** (where \<N\> is the number in range \[0..quota-1\]) - stores secrets for this license (up to **quota**).
 
 **Please Note:** NetLicensing services and client libraries do not include machine ID or fingerprint generation capabilities. It is the responsibility of the vendor to create a unique node identifier. For guidance, please refer to the best practices for [generating machine IDs and fingerprints](faq-how-to-generate-machine-fingerprint#machine-id--fingerprint-libraries).
 
@@ -60,12 +62,12 @@ Validation
 On validation, this licensing model uses the following [validate parameters](licensee-services#validate-licensee):
 
 -   **`productModuleNumber`**=\<String\> - product module using the Node-Locked licensing model
--   **`nodeSecret`**=\<String\> - specifies unique secret.
+-   **`nodeSecret`**=\<String\> - specifies unique secret.
 
 
 Validation returns value:
 
--   `Boolean` **`valid`** - **`true`** if the value in *nodeSecret* validate parameter matches one of the stored ones or the number of already stored secrets is below the total quota in Client mode.
+-   `Boolean` **`valid`** - **`true`** if the value in *nodeSecret* validate parameter matches one of the stored ones or the number of already stored secrets is below the total quota in Client mode.
 
 **Predefined** mode example:
 
@@ -96,9 +98,9 @@ productModuleNumber0=MTEST-DEMO&nodeSecret0=SecretGivenByVendor
 </ns2:netlicensing>
 ```
 {: .ml-5 }
- 
+ 
 
-**Client** mode example:
+**Client** mode example:
 
 <div>Request Client mode</div>
 {: .code-example .ml-5 .code-header }
@@ -136,3 +138,10 @@ Below are the default [warning levels](warning-level) associated with this licen
 | GREEN | YELLOW | RED |
 |:------|:-------|:----|
 | nodeSecretsUsed < 80% | nodeSecretsTotal < 10 AND nodeSecretsUsed >= nodeSecretsTotal<br>OR<br>nodeSecretsUsed >= 80% | nodeSecretsTotal >= 10<br>AND<br>nodeSecretsUsed >= nodeSecretsTotal |
+
+Related guides
+--------------
+
+- [Node-Locked vs Floating Licenses](node-locked-vs-floating-licenses)
+- [FAQ: How do I limit the number of devices per license?](faq-limit-devices-per-license)
+- [FAQ: How do I move a node-locked license to a new computer?](faq-move-license-to-new-computer)

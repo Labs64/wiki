@@ -3,7 +3,7 @@ layout: default
 title: "Privacy statement: Data processing by NetLicensing"
 parent: Privacy Center
 nav_order: 99
-description: "Privacy statement: Data processing by NetLicensing"
+description: "Which personal data NetLicensing processes for software vendors and their customers, for what purposes, and how it is protected."
 permalink: privacy-statement-data-processing-by-netlicensing
 ---
 

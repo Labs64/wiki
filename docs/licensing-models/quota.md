@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Quota
+title: "Quota Licensing: Capacity and Usage Limits"
+nav_title: "Quota"
 parent: Licensing Models
 nav_order: 50
-description: "Quota licensing model authorizes the use of a product within the licensed limit"
+description: "Quota licensing model: license a capacity limit such as users, documents, storage or requests per day, sum quotas across licenses, and read the total quota from the validation response."
+last_modified_at: 2026-10-25
 permalink: quota
 ---
 
@@ -18,7 +20,7 @@ permalink: quota
 Overview
 --------
 
-**Quota** licensing model authorizes the use of a product (or an aspect of the product) within the licensed limit (quota), which is expressed as integer value. The value may represent any resource, here are some examples:
+**Quota** licensing model authorizes the use of a product (or an aspect of the product) within the licensed limit (quota), which is expressed as integer value. The value may represent any resource, here are some examples:
 
 -   Number of active users
 -   Number of documents
@@ -41,18 +43,18 @@ This licensing model requires one or more license templates of type QUANTITY, ea
 -   100 users for 45 EUR
 -   1000 users for 400 EUR
 
-Required additional properties specific to the QUANTITY [license templates](object-model#license-template):
+Required additional properties specific to the QUANTITY [license templates](object-model#license-template):
 
--   `Integer` **`quantity`** - specifies the quota allowed by the licenses created off this template. Positive integer, or '-1' for unlimited quota.
+-   `Integer` **`quantity`** - specifies the quota allowed by the licenses created off this template. Positive integer, or '-1' for unlimited quota.
 
 Licenses
 --------
 
 According to the license templates, QUANTITY licenses define a quota via its **`quantity`** property.
 
-Required additional properties specific to the QUANTITY [licenses](object-model#license):
+Required additional properties specific to the QUANTITY [licenses](object-model#license):
 
--   `Integer` **`quantity`** - specifies the quota allowed by the license. Positive integer, or '-1' for unlimited quota. Normally it is copied from the corresponding license template, but can be changed later for each license individually. When multiple QUANTITY licenses purchased, the total quota is the sum of **`quantity`** of all active licenses, or '-1' if any active license has **`quantity`** '-1'.
+-   `Integer` **`quantity`** - specifies the quota allowed by the license. Positive integer, or '-1' for unlimited quota. Normally it is copied from the corresponding license template, but can be changed later for each license individually. When multiple QUANTITY licenses purchased, the total quota is the sum of **`quantity`** of all active licenses, or '-1' if any active license has **`quantity`** '-1'.
 
 Validation
 ----------
@@ -61,7 +63,7 @@ On validation, this licensing model does not require any [validate parameters](l
 
 Validation returns following values, specific to **Quota** licensing model:
 
--   `Boolean` **`valid`** - **`true`** if quota is positive or '-1' (unlimited); **`false`** if total quota = 0
+-   `Boolean` **`valid`** - **`true`** if quota is positive or '-1' (unlimited); **`false`** if total quota = 0
 -   `Integer` **`quota`** - total quota, '-1' for unlimited
 
 Validation response example:
@@ -92,3 +94,9 @@ Below are the default [warning levels](warning-level) associated with this licen
 | GREEN | YELLOW | RED |
 |:------|:-------|:----|
 | totalQuota > 0 | N/A | totalQuota = 0 |
+
+Related guides
+--------------
+
+- [Usage-Based Software Licensing with Metering and Quotas](usage-based-licensing)
+- [Licensing a SaaS Application](saas-licensing)

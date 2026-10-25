@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Transaction Services
+title: Transaction Services API
+nav_title: Transaction Services
 parent: Services
-grand_parent: NetLicensing API (RESTful)
+grand_parent: NetLicensing REST API Reference
 nav_order: 60
-description: "Transaction Services"
+description: "REST API reference for transactions: list, get, create and update the transactions that record how licensees obtained licenses."
 permalink: transaction-services
 ---
 
@@ -63,7 +64,7 @@ Return a list of all transactions for the current vendor.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TransactionService.list</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TransactionService.list</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -126,7 +127,7 @@ Return a transaction by transactionNumber.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>transactionNumber (string) - Transaction number.</p></td>
+<td><p>transactionNumber (string) - Transaction number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -140,7 +141,7 @@ Return a transaction by transactionNumber.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TransactionService.get</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TransactionService.get</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -201,7 +202,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p><span style="color: rgb(0,0,0);">licenseeNumber</span> (string) - L<span style="color: rgb(0,0,0);">icensee number</span>.</p>
+<td><p><span style="color: rgb(0,0,0);">licenseeNumber</span> (string) - L<span style="color: rgb(0,0,0);">icensee number</span>.</p>
 <p><span style="color: rgb(0,0,0);">number (string) - Unique number (across all products of a vendor) that identifies the transaction. <span>Optional.</span></span></p>
 <p><span style="color: rgb(0,0,0);">active (boolean) - Always true for transactions.</span></p>
 <p><span style="color: rgb(0,0,0);">status (string) - Status of transaction. "<span style="color: rgb(34,34,34);">CANCELLED</span>", "<span style="color: rgb(34,34,34);">CLOSED</span>", "<span style="color: rgb(34,34,34);">PENDING</span>".</span></p>
@@ -222,7 +223,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#create-com.labs64.netlicensing.domain.vo.Context-com.labs64.netlicensing.domain.entity.Transaction-" class="external-link">TransactionService.create</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#create-com.labs64.netlicensing.domain.vo.Context-com.labs64.netlicensing.domain.entity.Transaction-" class="external-link">TransactionService.create</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -286,7 +287,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>transactionNumber (string) - Transaction number</p>
+<td><p>transactionNumber (string) - Transaction number</p>
 <p><span style="color: rgb(0,0,0);">number (string) - Unique number (across all products of a vendor) that identifies the transaction. <span>Optional.</span></span></p>
 <p><span style="color: rgb(0,0,0);">active (boolean) - Always true for transactions. <span>Optional.</span></span></p>
 <p><span style="color: rgb(0,0,0);">status (string) - Status of transaction. "<span style="color: rgb(34,34,34);">CANCELLED</span>", "<span style="color: rgb(34,34,34);">CLOSED</span>", "<span style="color: rgb(34,34,34);">PENDING</span>". <span>Optional.</span></span></p>
@@ -307,7 +308,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Transaction-" class="external-link">TransactionService.update</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Transaction-" class="external-link">TransactionService.update</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span

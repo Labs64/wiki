@@ -24,18 +24,18 @@ Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl,
 
 ## Gateway
 
-- [NetLicensing-Gateway](https://github.com/Labs64/NetLicensing-Gateway){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / eCommerce Gateway
-  - [labs64/netlicensing-gateway](https://hub.docker.com/r/labs64/netlicensing-gateway){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing Gateway Docker Image at Docker Hub
+- [NetLicensing-Gateway](https://github.com/Labs64/NetLicensing-Gateway){:target="_blank"}{:rel="noopener"} - NetLicensing / eCommerce Gateway
+  - [labs64/netlicensing-gateway](https://hub.docker.com/r/labs64/netlicensing-gateway){:target="_blank"}{:rel="noopener"} - NetLicensing Gateway Docker Image at Docker Hub
 
 ## Connectors
 
-- [MyCommerce](mycommerce) - NetLicensing / MyCommerce integration
-- [FastSpring (Contextual Commerce)](fastspring) - NetLicensing / FastSpring (Contextual Commerce) integration
-- [FastSpring (Classic Commerce)](https://github.com/Labs64/NetLicensing-FastSpring){:target="_blank"}{:rel="noopener nofollow"} *(deprecated)* - NetLicensing / FastSpring (Classic Commerce) integration
-- Recurly - [#3](https://github.com/Labs64/NetLicensing-Gateway/issues/3){:target="_blank"}{:rel="noopener nofollow"}
-- SendOwl - [#5](https://github.com/Labs64/NetLicensing-Gateway/issues/5){:target="_blank"}{:rel="noopener nofollow"}
-- 2Checkout - [#6](https://github.com/Labs64/NetLicensing-Gateway/issues/6){:target="_blank"}{:rel="noopener nofollow"}
-- Zuora - [#4](https://github.com/Labs64/NetLicensing-Gateway/issues/4){:target="_blank"}{:rel="noopener nofollow"}
+- [MyCommerce](mycommerce) - NetLicensing / MyCommerce integration
+- [FastSpring (Contextual Commerce)](fastspring) - NetLicensing / FastSpring (Contextual Commerce) integration
+- [FastSpring (Classic Commerce)](https://github.com/Labs64/NetLicensing-FastSpring){:target="_blank"}{:rel="noopener"} *(deprecated)* - NetLicensing / FastSpring (Classic Commerce) integration
+- Recurly - [#3](https://github.com/Labs64/NetLicensing-Gateway/issues/3){:target="_blank"}{:rel="noopener"}
+- SendOwl - [#5](https://github.com/Labs64/NetLicensing-Gateway/issues/5){:target="_blank"}{:rel="noopener"}
+- 2Checkout - [#6](https://github.com/Labs64/NetLicensing-Gateway/issues/6){:target="_blank"}{:rel="noopener"}
+- Zuora - [#4](https://github.com/Labs64/NetLicensing-Gateway/issues/4){:target="_blank"}{:rel="noopener"}
 - Shopware
 - Chargebee
 - billwerk

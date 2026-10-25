@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Securing the Agent with SSL/TLS
-parent: NetLicensing Agent
+parent: "NetLicensing Agent: On-Premises and Offline License Validation"
 nav_order: 99
-description: "Securing the Agent with SSL/TLS"
+description: "Put NetLicensing Agent behind an HTTPS reverse proxy (Apache, Nginx or IIS) so validation responses on the local network cannot be tampered with."
 permalink: securing-the-agent-with-ssl-tls
 ---
 
@@ -29,14 +29,14 @@ Securing the Agent with SSL/TLS
 Motivation
 ==========
 
-Agent has a fully functional built-in HTTP server, however plain HTTP is not secure, it is easy to alter the agent reply, mangling the validation result. This security threat can be mitigated by encrypting connection with SSL/TLS, however this requires proper managing of SSL certificate, which is not supported by the Agent alone. Solution is to delegate SSL/TLS handling to the external HTTP server, forwarding plain HTTP requests to NetLicensing Agent within local secure environment.
+Agent has a fully functional built-in HTTP server, however plain HTTP is not secure, it is easy to alter the agent reply, mangling the validation result. This security threat can be mitigated by encrypting connection with SSL/TLS, however this requires proper managing of SSL certificate, which is not supported by the Agent alone. Solution is to delegate SSL/TLS handling to the external HTTP server, forwarding plain HTTP requests to NetLicensing Agent within local secure environment.
 
 Below you will find configuration instructions for some popular HTTP servers, as well as recommendations to managing of SSL certificates.
 
 Apache HTTP
 ===========
 
-You can find the latest Apache HTTP Server at <a href="https://httpd.apache.org/" target="_blank" rel="noopener nofollow" class="external-link">https://httpd.apache.org/</a>.
+You can find the latest Apache HTTP Server at <a href="https://httpd.apache.org/" target="_blank" rel="noopener nofollow" class="external-link">https://httpd.apache.org/</a>.
 Below you will find examples for Apache 2.2 and 2.4.
 
 httpd.conf
@@ -53,7 +53,7 @@ httpd.conf
     LoadModule ssl_module lib/httpd/modules/mod_ssl.so
     ```
 
--   Enable virtual hosts configuration: 
+-   Enable virtual hosts configuration: 
 
     **httpd.conf**
     ``` theme:
@@ -64,7 +64,7 @@ httpd.conf
 
     **httpd.conf**
     ``` theme:
-     Include conf/extra/httpd-ssl.conf
+     Include conf/extra/httpd-ssl.conf
     ```
 
 httpd-vhosts.conf
@@ -108,14 +108,14 @@ httpd-vhosts.conf
     </VirtualHost>
     ```
 
--   Replace port `8080` with the actual port Agent is listening on
+-   Replace port `8080` with the actual port Agent is listening on
 
 -   Replace `yourhost.com` with the actual host name of your server
 
 Running Agent and Apache
 ------------------------
 
-1.  Start Agent with '`run-agent-offline`' or '`run-agent`' action. Pay attention to the port specified in `conf/extra/httpd-vhosts.conf`
+1.  Start Agent with '`run-agent-offline`' or '`run-agent`' action. Pay attention to the port specified in `conf/extra/httpd-vhosts.conf`
 
     ``` theme:
     java -jar netlicensing-agent.jar --action=run-agent-offline --port=8080
@@ -128,8 +128,8 @@ Running Agent and Apache
 Nginx
 =====
 
-You can find the latest Nginx HTTP Server at <a href="https://nginx.org/en/download.html" target="_blank" rel="noopener nofollow" class="external-link">https://nginx.org/en/download.html</a>.
-For this example we are using Nginx 1.13.9.
+You can find the latest Nginx HTTP Server at <a href="https://nginx.org/en/download.html" target="_blank" rel="noopener nofollow" class="external-link">https://nginx.org/en/download.html</a>.
+For this example we are using Nginx 1.13.9.
 
 nginx.conf
 ----------
@@ -138,7 +138,7 @@ nginx.conf
 
     **nginx.conf**
     ``` theme:
-     server {
+     server {
             listen       80;
             server_name  yourhost.com  alias  yourhost.com.alias;
             return 301 https://yourhost.com;
@@ -170,15 +170,15 @@ nginx.conf
         }
     ```
 
--   Replace port `8080` with the actual port Agent is listening on
+-   Replace port `8080` with the actual port Agent is listening on
 
--   Replace `yourhost.com` with the actual host name of your server
+-   Replace `yourhost.com` with the actual host name of your server
 
 
 Running Agent and Nginx
 -----------------------
 
-1.  Start Agent with `'run-agent-offline'` or `'run-agent'` action. Pay attention to the port specified in `nginx.conf`
+1.  Start Agent with `'run-agent-offline'` or `'run-agent'` action. Pay attention to the port specified in `nginx.conf`
 
     ``` theme:
     java -jar netlicensing-agent.jar --action=run-agent-offline --port=8080
@@ -194,8 +194,8 @@ Running Agent and Nginx
 Microsoft IIS
 =============
 
-You can find the latest <span style="color: rgb(34,34,34);">Internet Information Services</span>(IIS) at <a href="https://www.iis.net/downloads" target="_blank" rel="noopener nofollow" class="external-link">https://www.iis.net/downloads</a>.
-For this example we are using IIS 7.
+You can find the latest <span style="color: rgb(34,34,34);">Internet Information Services</span>(IIS) at <a href="https://www.iis.net/downloads" target="_blank" rel="noopener nofollow" class="external-link">https://www.iis.net/downloads</a>.
+For this example we are using IIS 7.
 
 -   <span style="color: rgb(0,0,0);">Forward insecure connection to secure URL:</span>
 
@@ -243,12 +243,12 @@ For this example we are using IIS 7.
     </configuration>
     ```
 
--   Replace port `8080` with the actual port Agent is listening on
+-   Replace port `8080` with the actual port Agent is listening on
 
 Running Agent and IIS
 ---------------------
 
-1.  Start Agent with '`run-agent-offline`' or '`run-agent`' action. Pay attention to the port specified in C:\\inetpub\\wwwroot\\\<your site folder\>\\web.config
+1.  Start Agent with '`run-agent-offline`' or '`run-agent`' action. Pay attention to the port specified in C:\\inetpub\\wwwroot\\\<your site folder\>\\web.config
 
     ``` theme:
     java -jar netlicensing-agent.jar --action=run-agent-offline --port=8080
@@ -256,8 +256,8 @@ Running Agent and IIS
 
 2.  Start Site from IIS Manager
 
-3.  NetLicensing Agent will respond to the validation requests sent over HTTPS to `yourhost.com:443`
- 
+3.  NetLicensing Agent will respond to the validation requests sent over HTTPS to `yourhost.com:443`
+ 
 
 Managing of SSL certificates for the hosts in local network
 ===========================================================
@@ -267,7 +267,7 @@ Certificates signed by a Certificate Authority (CA)
 
 In case you have a public or private Certificate Authority (CA) infrastructure available within your network, the preferable way is to let CA issue the SSL certificate. Details are not in scope of this document, but should be normally available from the corresponding CA.
 
-This external resource maybe helpful: <a href="https://roll.urown.net/ca/index.html" target="_blank" rel="noopener nofollow" class="external-link">https://roll.urown.net/ca/index.html</a>
+This external resource maybe helpful: <a href="https://roll.urown.net/ca/index.html" target="_blank" rel="noopener nofollow" class="external-link">https://roll.urown.net/ca/index.html</a>
 
 Self-signed certificates
 ------------------------
@@ -284,7 +284,7 @@ Self-signed certificate must be explicitly trusted by a client side via appropri
 
 <span class="expand-control-text">Java</span>
 
-<span style="color: rgb(36,41,46);">Java uses its own keystore for certificates (separate from the OS keystore). Therefore, you must install the appropriate certificate in *Java's* keystore.</span>
+<span style="color: rgb(36,41,46);">Java uses its own keystore for certificates (separate from the OS keystore). Therefore, you must install the appropriate certificate in *Java's* keystore.</span>
 
 **Mac OS X**
 
@@ -308,12 +308,12 @@ $ sudo $JAVA_HOME/bin/keytool -import -trustcacerts -keystore <path-to-keystore>
 
 Where:
 
--   *\<alias-name\>* - some descriptive name of your choice that will identify your key in keystore
--   *\<path-to-certificate\> *- path to the self-signed certificate
--   *\<path-to-keystore\> *- depends on the operating system and java installation path, here are some standard locations:
-    -   Mac OS X: *$JAVA\_HOME/lib/security/cacerts*
-    -   Windows: *%JAVA\_HOME%\\lib\\security\\cacerts*
-    -   Linux: *$JAVA\_HOME/lib/security/cacerts*
+-   *\<alias-name\>* - some descriptive name of your choice that will identify your key in keystore
+-   *\<path-to-certificate\> *- path to the self-signed certificate
+-   *\<path-to-keystore\> *- depends on the operating system and java installation path, here are some standard locations:
+    -   Mac OS X: *$JAVA\_HOME/lib/security/cacerts*
+    -   Windows: *%JAVA\_HOME%\\lib\\security\\cacerts*
+    -   Linux: *$JAVA\_HOME/lib/security/cacerts*
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -360,7 +360,7 @@ curl_setopt($ch, CURLOPT_CAINFO, <path-to-certificate>);
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
 class="expand-control-text">Apache httpd</span>
 
--   Download the <a href="https://curl.haxx.se/docs/caextract.html" target="_blank" rel="noopener nofollow" class="external-link">certificate bundle</a>.
+-   Download the <a href="https://curl.haxx.se/docs/caextract.html" target="_blank" rel="noopener nofollow" class="external-link">certificate bundle</a>.
 -   Add your certificate to the dowloaded file.
 -   Set up <span class="pln"
     style="color: rgb(48,51,54);">curl</span><span class="pun"
@@ -368,8 +368,8 @@ class="expand-control-text">Apache httpd</span>
     style="color: rgb(48,51,54);">cainfo and </span><span class="pln"
     style="color: rgb(48,51,54);">openssl</span><span class="pun"
     style="color: rgb(48,51,54);">.</span><span class="pln"
-    style="color: rgb(48,51,54);">cafile in </span>`php.ini` files:  
-    ` curl.cainfo="<path to the certificate bundle>" `  
+    style="color: rgb(48,51,54);">cafile in </span>`php.ini` files:  
+    ` curl.cainfo="<path to the certificate bundle>" `  
     ` openssl.cafile="<path to the certificate bundle>"`
 -   Restart httpd server.
 -   Verify the correct certificate bundle is used by calling:
@@ -417,12 +417,12 @@ Add Security Exception for specified host of NetLicensing Agent server.
     style="color: rgb(72,72,72);">\> Import</span>**
 -   <a href="https://stackoverflow.com/questions/681695/what-do-i-need-to-do-to-get-internet-explorer-8-to-accept-a-self-signed-certific" target="_blank" rel="noopener nofollow" class="external-link">IE</a>
 
-In browser host environments, origin security policy may apply in addition, see "Known Issues" below. 
+In browser host environments, origin security policy may apply in addition, see "Known Issues" below. 
 
 Known Issues
 ============
 
-1.  CORS problem: If your client is using JavaScript library, JS engine may block requests to NetLicensing Agent server for security reasons (more info: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank" rel="noopener nofollow" class="external-link">https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</a>).
+1.  CORS problem: If your client is using JavaScript library, JS engine may block requests to NetLicensing Agent server for security reasons (more info: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank" rel="noopener nofollow" class="external-link">https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</a>).
     To fix this problem, your NetLicensing Agent server must provide appropriate HTTP CORS headers. Below are setting examples for Apache and Nginx:
 
     **conf/extra/httpd-vhosts.conf**
@@ -449,7 +449,7 @@ Known Issues
         #path to you local sectificate
         SSLCertificateFile /usr/local/etc/httpd/server.crt
         SSLCertificateKeyFile /usr/local/etc/httpd/server.key
-     
+     
         #CORS Headers
         Header always set Access-Control-Allow-Origin "*"
         Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
@@ -477,7 +477,7 @@ Known Issues
         ssl_session_timeout  5m;
         ssl_ciphers  HIGH:!aNULL:!MD5;
         ssl_prefer_server_ciphers  on;
-     
+     
         #CORS Headers
         add_header Access-Control-Allow-Origin *;
         add_header Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS";
@@ -492,18 +492,18 @@ Known Issues
         }
     ```
 
-2.  If you get a warning about the contents of a self-signed certificate, make sure you have specified CN (The Common Name) when creating the certificate.
+2.  If you get a warning about the contents of a self-signed certificate, make sure you have specified CN (The Common Name) when creating the certificate.
 
-3.  Windows servers (IIS) use .pfx files to contain the public key files and the associated private key file. There are openssl examples how to convert certificate to .pfx format bellow.
+3.  Windows servers (IIS) use .pfx files to contain the public key files and the associated private key file. There are openssl examples how to convert certificate to .pfx format bellow.
 
-    <span class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span class="crayon-pre crayon-code" style="color: rgb(0,0,0);"><span class="crayon-e" style="color: teal;"> </span></span></span></span>
+    <span class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span class="crayon-syntax crayon-syntax-inline crayon-theme-github crayon-theme-github-inline crayon-font-consolas"><span class="crayon-pre crayon-code" style="color: rgb(0,0,0);"><span class="crayon-e" style="color: teal;"> </span></span></span></span>
 
     **nginx.conf**
 
     ``` theme:
     #PEM (.pem, .crt, .cer) to PFX
     openssl pkcs12 -export -out certificate.pfx -inkey privateKey.key -in certificate.crt
-     
+     
     #PKCS#7/P7B (.p7b, .p7c) to PFX
     openssl pkcs7 -print_certs -in certificate.p7b -out certificate.crt
     ```

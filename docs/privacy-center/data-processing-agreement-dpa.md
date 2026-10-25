@@ -3,14 +3,14 @@ layout: default
 title: Data Processing Agreement (DPA)
 parent: Privacy Center
 nav_order: 99
-description: "Data Processing Agreement (DPA)"
+description: "How to conclude the GDPR Data Processing Agreement (DPA) with Labs64 for personal data that NetLicensing processes on behalf of software vendors."
 permalink: data-processing-agreement-dpa
 ---
 
 Data Processing Agreement (DPA)
 ===============================
 
-NetLicensing offers a GDPR-compliant Data Processing Agreement (DPA), enabling you to comply with GDPR contractual obligations. This document forms part of a contract of service with Labs64 NetLicensing (as the **Data Processor**) and our vendors/customers (as the **Controllers**). The DPA reflects the parties’ agreement with regard to the processing of personal data performed using our service.
+NetLicensing offers a GDPR-compliant Data Processing Agreement (DPA), enabling you to comply with GDPR contractual obligations. This document forms part of a contract of service with Labs64 NetLicensing (as the **Data Processor**) and our vendors/customers (as the **Controllers**). The DPA reflects the parties’ agreement with regard to the processing of personal data performed using our service.
 
 You can find sample DPA document [here](assets/docs/Labs64-NetLicensing-GDPR-DPA-V1.0_sample.pdf).
 

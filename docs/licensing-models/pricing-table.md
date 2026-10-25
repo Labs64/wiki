@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Pricing Table
+title: "Pricing Table Licensing: SaaS Plans and Feature Tiers"
+nav_title: "Pricing Table"
 parent: Licensing Models
 nav_order: 5
-description: "Pricing plans for your products and services can be effectively modelled using Pricing Table licensing model"
+description: "Pricing Table licensing model for SaaS plans: define free, basic and premium plans with SKUs, billing intervals, trials and freemium, publish a pricing table and validate the customer's active plan."
+last_modified_at: 2026-10-25
 permalink: pricing-table
 ---
 
@@ -481,3 +483,9 @@ Below are the default [warning levels](warning-level) associated with this licen
 | GREEN | YELLOW | RED |
 |:------|:-------|:----|
 | timeUsed < 80% | timeUsed >= 80% | timeUsed = 100% |
+
+Related guides
+--------------
+
+- [Licensing a SaaS Application: Plans, Tenants and Entitlements](saas-licensing)
+- [FAQ: How do I license a SaaS application?](faq-saas-licensing)

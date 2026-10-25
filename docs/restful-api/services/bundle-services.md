@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Bundle Services
+title: Bundle Services API
+nav_title: Bundle Services
 parent: Services
-grand_parent: NetLicensing API (RESTful)
+grand_parent: NetLicensing REST API Reference
 nav_order: 55
-description: "Bundle Services"
+description: "REST API reference for bundles: list, get, create, update and delete bundles of license templates, and obtain a bundle for a licensee."
 permalink: bundle-services
 ---
 
@@ -53,7 +54,7 @@ Return a list of all configured bundles for the current vendor.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td><p>- None -</p></td>
 </tr>
 <tr class="odd">
@@ -68,7 +69,7 @@ Return a list of all configured bundles for the current vendor.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/BundleService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">BundleService.list</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/BundleService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">BundleService.list</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -152,8 +153,8 @@ Return a bundle by bundleNumber.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>bundleNumber (string) - Bundle number.</p></td>
+<td><p>Request Parameters</p></td>
+<td><p>bundleNumber (string) - Bundle number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -167,7 +168,7 @@ Return a bundle by bundleNumber.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/BundleService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">BundleService.get</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/BundleService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">BundleService.get</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -231,15 +232,15 @@ Creates a new bundle.
 Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>number (string) - Unique number that identifies the bundle. Vendor can assign this number when creating a bundle or let NetLicensing generate one.</p>
-<p>active (boolean) - If set to false, the bundle is disabled. Licensees can not obtain new licenses.</p>
-<p>name (string) - Bundle name. Identifies the bundle for the end customer.</p>
-<p>description (string) - Bundle description. Optional.</p>
+<td><p>Request Parameters</p></td>
+<td><p>number (string) - Unique number that identifies the bundle. Vendor can assign this number when creating a bundle or let NetLicensing generate one.</p>
+<p>active (boolean) - If set to false, the bundle is disabled. Licensees can not obtain new licenses.</p>
+<p>name (string) - Bundle name. Identifies the bundle for the end customer.</p>
+<p>description (string) - Bundle description. Optional.</p>
 <p>price (double) - Price for the bundle. If &gt;0, it must always be accompanied by the currency specification. Optional.</p>
-<p>currency (enum) - specifies currency for the bundle price. Check data types to discover which currencies are supported. Optional.</p>
-<p>- EUR       - Euro currency for the bundle price</p>
-<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p></td>
+<p>currency (enum) - specifies currency for the bundle price. Check data types to discover which currencies are supported. Optional.</p>
+<p>- EUR       - Euro currency for the bundle price</p>
+<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -315,16 +316,16 @@ Sets the provided properties to a bundle. Return an updated bundle.
 Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>bundleNumber (string) - Unique number that identifies the bundle.</p>
-<p>number (string) - New bundle number (update)</p>
-<p>active (boolean) - If set to false, the bundle is disabled. Licensees can not obtain new licenses.</p>
-<p>name (string) - Bundle name. Identifies the bundle for the end customer.</p>
-<p>description (string) - Bundle description. Optional.</p>
+<td><p>Request Parameters</p></td>
+<td><p>bundleNumber (string) - Unique number that identifies the bundle.</p>
+<p>number (string) - New bundle number (update)</p>
+<p>active (boolean) - If set to false, the bundle is disabled. Licensees can not obtain new licenses.</p>
+<p>name (string) - Bundle name. Identifies the bundle for the end customer.</p>
+<p>description (string) - Bundle description. Optional.</p>
 <p>price (double) - Price for the bundle. If &gt;0, it must always be accompanied by the currency specification. Optional.</p>
-<p>currency (enum) - specifies currency for the bundle price. Check data types to discover which currencies are supported. Optional.</p>
-<p>- EUR       - Euro currency for the bundle price</p>
-<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p></td>
+<p>currency (enum) - specifies currency for the bundle price. Check data types to discover which currencies are supported. Optional.</p>
+<p>- EUR       - Euro currency for the bundle price</p>
+<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -399,8 +400,8 @@ Delete a bundle by number.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>bundleNumber (string) - Bundle number.</p></td>
+<td><p>Request Parameters</p></td>
+<td><p>bundleNumber (string) - Bundle number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -463,10 +464,10 @@ Obtain bundle - create licenses based on license templates.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td>
-<p>bundleNumber (string) - Bundle number.</p>
-<p>licenseeNumber (string) - Licensee number</p>
+<p>bundleNumber (string) - Bundle number.</p>
+<p>licenseeNumber (string) - Licensee number</p>
 </td>
 </tr>
 <tr class="odd">

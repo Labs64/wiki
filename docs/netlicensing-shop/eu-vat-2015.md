@@ -3,7 +3,7 @@ layout: default
 title: EU VAT
 parent: NetLicensing Shop
 nav_order: 20
-description: "EU VAT Rules applicable since 2015"
+description: "How NetLicensing Shop applies EU VAT rules for digital services sold to consumers since 2015: VAT rates by customer country, evidence of location and vendor configuration."
 permalink: eu-vat-2015
 ---
 
@@ -13,7 +13,7 @@ EU VAT Rules applicable since 2015
 -   [General Info](#general-info)
 -   [Implementation details](#implementation-details)
     -   [VAT Applicability](#vat-applicability)
-    -   [VAT Calculation and Vendor Type](#vat-calculation-and-vendor-type)
+    -   [VAT Calculation and Vendor Type](#vat-calculation-and-vendor-type)
     -   [VAT Calculation and Product](#vat-calculation-and-product)
     -   [Shop and VAT Calculation Mode](#shop-and-vat-calculation-mode)
     -   [Changes to the Checkout Flow](#changes-to-the-checkout-flow)
@@ -21,7 +21,7 @@ EU VAT Rules applicable since 2015
 General Info
 ------------
 
-From January 1st, 2015, telecommunications, broadcasting and electronic services are** always taxed in the country where the customer belongs\*** – regardless of whether the customer is a business or consumer – and regardless of whether the supplier is based in the EU or outside.
+From January 1st, 2015, telecommunications, broadcasting and electronic services are** always taxed in the country where the customer belongs\*** – regardless of whether the customer is a business or consumer – and regardless of whether the supplier is based in the EU or outside.
 
 *\* For a business (taxable person) = either the country where it is registered or the country where it has fixed premises receiving the service.*
 
@@ -51,25 +51,25 @@ participants and their location
       <td>EU</td>
       <td>EU</td>
       <td>No VAT mention</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
     <tr>
       <td>EU</td>
       <td>non-EU</td>
       <td>No VAT mention</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
     <tr>
       <td>non-EU</td>
       <td>EU</td>
       <td>No VAT mention</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
     <tr>
       <td>non-EU</td>
       <td>non-EU</td>
       <td>No VAT mention</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
     <tr>
       <td rowspan="5">B2B<br><span markdown="1">*Business to Business*</span></td>
@@ -88,7 +88,7 @@ participants and their location
       <td>EU</td>
       <td>non-EU</td>
       <td>No VAT</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
     <tr>
       <td>non-EU</td>
@@ -100,32 +100,32 @@ participants and their location
       <td>non-EU</td>
       <td>non-EU</td>
       <td>No VAT</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
     <tr>
       <td rowspan="4">B2C<br><span markdown="1">*Business to Consumer*</span></td>
       <td>EU</td>
       <td>EU</td>
       <td>VAT</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
     <tr>
       <td>EU</td>
       <td>non-EU</td>
       <td>No VAT</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
     <tr>
       <td>non-EU</td>
       <td>EU</td>
       <td>VAT</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
     <tr>
       <td>non-EU</td>
       <td>non-EU</td>
       <td>No VAT</td>
-      <td>&nbsp;</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
@@ -134,12 +134,12 @@ participants and their location
 ### VAT Calculation and Vendor Type
 
 Vat calculation depends on the vendor account type, which is
-either **Private** or **Company**:
+either **Private** or **Company**:
 
--   **Private** - VAT is not applicable
--   **Company** - VAT is applied to all prices.
+-   **Private** - VAT is not applicable
+-   **Company** - VAT is applied to all prices.
 
-**Vendor type** is managed in the
+**Vendor type** is managed in the
 <a href="https://ui.netlicensing.io/#/profile" class="external-link">Vendor Profile</a> section of the NetLicensing Console:
 
 <a href="assets/images/eu-vat-09.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Vendor type" data-alt="Vendor type">
@@ -159,12 +159,12 @@ Modes**:
 *\* **Gross** mode is default for all new products and products created
 prior to introduction of VAT handling.*
 
-<img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" />* **Vat Calculation Mode** options may not be available in your pricing plan!*
+<img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" />* **Vat Calculation Mode** options may not be available in your pricing plan!*
 {: .alert .alert-warning}
 
-**Vat Calculation Mode** is managed via the Product Edit in the NetLicensing Console:
+**Vat Calculation Mode** is managed via the Product Edit in the NetLicensing Console:
 
-<a href="assets/images/eu-vat-08.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Vat Calculation Mode" data-alt="Vat Calculation Mode">
+<a href="assets/images/eu-vat-08.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Vat Calculation Mode" data-alt="Vat Calculation Mode">
   <img alt="Management Console product settings with the VAT Calculation Mode option: Gross (VAT included in prices) or Net (VAT not included)" src="assets/images/eu-vat-08.png" />
 </a>
 
@@ -177,7 +177,7 @@ prior to introduction of VAT handling.*
       <img alt="Shop product page listing 20, 10 and 5 unit Pay-per-Use packages with prices including sales tax/VAT" src="assets/images/eu-vat-07.png" />
     </a>
 
-    And VAT percentage and actual calculated amount shown on the
+    And VAT percentage and actual calculated amount shown on the
     checkout page as well as order confirmation:
 
     <a href="assets/images/eu-vat-01.png" class="imagelink" data-lightbox="eu-vat-2015" data-title="Gross checkout" data-alt="Gross checkout">
@@ -209,7 +209,7 @@ prior to introduction of VAT handling.*
 
 ### Changes to the Checkout Flow
 
-Checkout page includes new fields, required for the correct VAT
+Checkout page includes new fields, required for the correct VAT
 calculation:
 
 -   Country

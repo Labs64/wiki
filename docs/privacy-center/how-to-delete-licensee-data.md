@@ -3,7 +3,7 @@ layout: default
 title: How to delete licensee data
 parent: Privacy Center
 nav_order: 99
-description: "How to delete licensee data"
+description: "Delete a licensee and its personal data from NetLicensing to answer a GDPR erasure (right to be forgotten) request."
 permalink: how-to-delete-licensee-data
 ---
 
@@ -19,7 +19,7 @@ NetLicensing Management Console
 
 <span class="hardreadability">You can access customer's data such as profile details, licenses and transaction, by choosing menu item <a href="https://ui.netlicensing.io/#/customers" class="external-link">Customers</a></span>.
 
-By clicking on a single list entry and selecting `"Delete"` you can delete entity and all descendants (*License, Transaction*).
+By clicking on a single list entry and selecting `"Delete"` you can delete entity and all descendants (*License, Transaction*).
 
 <a href="https://ui.netlicensing.io/#/customers" class="external-link"><img src="assets/images/gdpr-delete-licensee.png" title="Operate - Delete Licensee" alt="Operate - Delete Licensee" width="800" /></a>  
 
@@ -38,12 +38,12 @@ corresponding service:
 Did you know?
 
 `"forceCascade"` query param, forces *Licensee* entity deletion and
-all descendants (*License, Transaction*)
+all descendants (*License, Transaction*)
 
 -   [License Services](license-services#delete-license) -
     to *delete License* data using its *LicenseNumber*
 -   [Transaction Services](transaction-services) -
-    to *delete Transaction* data using its **Transaction*Number*
+    to *delete Transaction* data using its **Transaction*Number*
 
 Tips
 ----

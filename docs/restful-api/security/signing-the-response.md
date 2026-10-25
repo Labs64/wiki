@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Signing The Response
-parent: Security
-grand_parent: NetLicensing API (RESTful)
+title: Signing the Validation Response (XML Signature)
+nav_title: "Signing The Response"
+parent: "API Security: Authentication, API Keys and Roles"
+grand_parent: NetLicensing REST API Reference
 nav_order: 10
-description: "Signing The Response"
+description: "Protect licensee validation responses against spoofing by signing them with your RSA private key and verifying the signature in the Java or C# client library."
+last_modified_at: 2026-10-25
 permalink: signing-the-response
 ---
 
@@ -90,12 +92,12 @@ final Token newToken = new TokenImpl();
 newToken.setTokenType(TokenType.APIKEY);
 newToken.addProperty("apiKeyRole", "ROLE_APIKEY_LICENSEE");
 newToken.addProperty(Constants.Token.TOKEN_PROP_PRIVATE_KEY,
-        "MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAhleNJf9h+aZ9KlkLLIUiqt4p3O8kAijzvEUSG4CuS95"
-                + "VsUC6iVnpTlepyLB4ZImyWBjcNme4DLufbwCKi0iPzQIDAQABAkBSv7sBnL0MubB/VTm8woUIGrBOlj7n1bHMVf9"
-                + "BUZIKyI/2qOVmFKtlxXXe8i5XHcg0pZukICTSWB4htxXqs8ABAiEA4JUTuq9yl2jy4aAyyrOQyPJ9s2a449tsiw3"
-                + "VNIcS8wECIQCZIrcE1FxNKZLgE4mrMnfZwXJ4MqO2WH6QGznMHLP4zQIgCxwUz8ViG89bRIISQSjE3svwH/HS76K"
-                + "pKe/TPjf4XgECIQCRE5pgMO/hCmnjb58VWZLB8csIpLEEp4H/9EslXGwEYQIgVw4LJk0EINngF2qSv0z12Q29WMr"
-                + "aaNNcwvc3k5g5kqc=");
+        "MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAhleNJf9h+aZ9KlkLLIUiqt4p3O8kAijzvEUSG4CuS95"
+                + "VsUC6iVnpTlepyLB4ZImyWBjcNme4DLufbwCKi0iPzQIDAQABAkBSv7sBnL0MubB/VTm8woUIGrBOlj7n1bHMVf9"
+                + "BUZIKyI/2qOVmFKtlxXXe8i5XHcg0pZukICTSWB4htxXqs8ABAiEA4JUTuq9yl2jy4aAyyrOQyPJ9s2a449tsiw3"
+                + "VNIcS8wECIQCZIrcE1FxNKZLgE4mrMnfZwXJ4MqO2WH6QGznMHLP4zQIgCxwUz8ViG89bRIISQSjE3svwH/HS76K"
+                + "pKe/TPjf4XgECIQCRE5pgMO/hCmnjb58VWZLB8csIpLEEp4H/9EslXGwEYQIgVw4LJk0EINngF2qSv0z12Q29WMr"
+                + "aaNNcwvc3k5g5kqc=");
 final Token apiKeyToken = TokenService.create(context, newToken);
 final String apiKey = apiKeyToken.getNumber();
 ```
@@ -148,3 +150,9 @@ If the signature verification fails, `WrongResponseFormatException` exception is
 com.labs64.netlicensing.exception.WrongResponseFormatException: Response has no signature.
 ```
 {: .ml-5 }
+
+Related guides
+--------------
+
+- [FAQ: How do I protect validation responses against tampering?](faq-prevent-response-spoofing)
+- [Offline License Validation](offline-license-validation): signed offline validation files

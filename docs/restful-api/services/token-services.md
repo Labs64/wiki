@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Token Services
+title: "Token Services API: Shop Tokens and API Keys"
+nav_title: Token Services
 parent: Services
-grand_parent: NetLicensing API (RESTful)
+grand_parent: NetLicensing REST API Reference
 nav_order: 70
-description: "Token Services"
+description: "REST API reference for tokens: create shop tokens to open NetLicensing Shop, create and revoke API keys, and create action tokens such as Customer Portal login."
 permalink: token-services
 ---
 
@@ -41,7 +42,7 @@ Return a list of all tokens for the current vendor.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td><p>- None -</p></td>
 </tr>
 <tr class="odd">
@@ -56,7 +57,7 @@ Return a list of all tokens for the current vendor.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TokenService.list<br />
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TokenService.list<br />
 </a>
 
 <span
@@ -100,11 +101,11 @@ $ curl --header "Accept: application/xml" --insecure --user demo:demo --request 
 ```
 {: .ml-5 }
 
- 
+ 
 
 ### Get token
 
-Return a token by tokenNumber.
+Return a token by tokenNumber.
 
 <table>
 <colgroup>
@@ -127,7 +128,7 @@ Return a token by tokenNumber.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td><p>tokenNumber (string) - Token number.</p></td>
 </tr>
 <tr class="odd">
@@ -142,7 +143,7 @@ Return a token by tokenNumber.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TokenService.get<br />
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TokenService.get<br />
 </a>
 
 <span
@@ -186,7 +187,7 @@ $ curl --header "Accept: application/xml" --insecure --user demo:demo --request 
 ```
 {: .ml-5 }
 
- 
+ 
 
 ### Create token
 
@@ -222,13 +223,13 @@ Create token by tokenType and additional token parameters.
 Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td>
 <p>tokenType (enum) - Token type to be generated<br />
 - <i>DEFAULT</i> - default one-time token (will be expired after first request)<br />
 - <i>SHOP</i> - shop token is used to redirect customer to the <a href="netlicensing-shop">NetLicensing Shop</a><br />
-- <i>APIKEY</i> - APIKey token<br />
-- <i>ACTION</i> - Action token (e.g. access token for the <a href="customer-portal">Customer Portal</a>)
+- <i>APIKEY</i> - APIKey token<br />
+- <i>ACTION</i> - Action token (e.g. access token for the <a href="customer-portal">Customer Portal</a>)
 </p>
 <p>licenseeNumber (string) - unique customer number<br />
 - <i>tokenType=SHOP</i> - identifies licensee that will be assigned to the shop token<br />
@@ -263,7 +264,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#create-com.labs64.netlicensing.domain.vo.Context-com.labs64.netlicensing.domain.entity.Token-" class="external-link">TokenService.create</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#create-com.labs64.netlicensing.domain.vo.Context-com.labs64.netlicensing.domain.entity.Token-" class="external-link">TokenService.create</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -333,8 +334,8 @@ Delete a token by number.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>tokenNumber (string) - Token number.</p></td>
+<td><p>Request Parameters</p></td>
+<td><p>tokenNumber (string) - Token number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -348,7 +349,7 @@ Delete a token by number.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TokenService.delete<br />
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TokenService.delete<br />
 </a>
 
 <span

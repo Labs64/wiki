@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Payment Method Services
+title: Payment Method Services API
+nav_title: Payment Method Services
 parent: Services
-grand_parent: NetLicensing API (RESTful)
+grand_parent: NetLicensing REST API Reference
 nav_order: 80
-description: "Payment Method Services"
+description: "REST API reference for payment methods: list, get and update the payment methods (such as PayPal and Stripe) used by NetLicensing Shop."
 permalink: payment-method-services
 ---
 
@@ -44,7 +45,7 @@ Return a list of all payment methods for the current vendor.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td><p>- None -</p></td>
 </tr>
 <tr class="odd">
@@ -59,7 +60,7 @@ Return a list of all payment methods for the current vendor.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">PaymentMethodService.list</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">PaymentMethodService.list</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -129,8 +130,8 @@ Return a payment method info by paymentMethodNumber.
 <td><p>Accept: application/json | application/xml</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>paymentMethodNumber (string) - Payment method number.</p></td>
+<td><p>Request Parameters</p></td>
+<td><p>paymentMethodNumber (string) - Payment method number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -144,7 +145,7 @@ Return a payment method info by paymentMethodNumber.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">PaymentMethodService.get</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">PaymentMethodService.get</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -212,7 +213,7 @@ payment method.
 Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
-<td><p>Request Parameters</p></td>
+<td><p>Request Parameters</p></td>
 <td><p>paymentMethodNumber (string) - Payment method number.</p>
 <p><span style="color: rgb(0,0,0);">active (boolean) - If set to 'false', the payment method is disabled.</span></p>
 <p><span style="color: rgb(0,0,0);">paypal.subject (string) - The e-mail address of the PayPal account for which you are making the API calls.</span></p></td>
@@ -230,7 +231,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.PaymentMethod-" class="external-link">PaymentMethodService.update</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.PaymentMethod-" class="external-link">PaymentMethodService.update</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span

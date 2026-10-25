@@ -2,7 +2,7 @@
 layout: default
 title: Warning Level
 nav_order: 93
-description: "Labs64 NetLicensing warning level"
+description: "Warning Level shows whether a customer is fully licensed (GREEN), close to under-licensing (YELLOW) or under-licensed (RED), from validation results, the licensee object and notifications."
 permalink: warning-level
 ---
 

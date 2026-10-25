@@ -1,16 +1,21 @@
 ---
 layout: default
-title: NetLicensing API (RESTful)
+title: NetLicensing REST API Reference
+nav_title: "NetLicensing API (RESTful)"
 nav_order: 50
 has_children: true
-description: "NetLicensing RESTful API is for developers integrating NetLicensing with applications and administrators who want to script interactions with the NetLicensing server"
+description: "Reference for the NetLicensing REST API: URI structure, authentication, JSON and XML responses, parameters, data types, OpenAPI specification and the essential validate call."
 permalink: restful-api
+last_modified_at: 2026-10-25
+redirect_from:
+  - /api
+  - /rest-api
 ---
 
 NetLicensing API (RESTful)
 ==========================
 
-This is the reference documentation for the RESTful API provided by NetLicensing. The NetLicensing API (RESTful) is for developers integrating NetLicensing with applications and administrators who want to script interactions with the NetLicensing server.
+This is the reference documentation for the RESTful API provided by NetLicensing. The NetLicensing API (RESTful) is for developers integrating NetLicensing with applications and administrators who want to script interactions with the NetLicensing server.
 
 -   [Essentials](#essentials)
 -   [Getting started](#getting-started)
@@ -20,6 +25,7 @@ This is the reference documentation for the RESTful API provided by NetLicensin
 -   [Response](#response)
 -   [Data Types](#data-types)
 -   [Custom properties](#custom-properties)
+-   [OpenAPI specification and API Test Center](#openapi-specification-and-api-test-center)
 -   [Links](#links)
 
 Essentials
@@ -35,7 +41,12 @@ However, if you only need basic integration into your product, here is the short
 Getting started
 ---------------
 
-Since NetLicensing API (RESTful) is based on open standards, you can use any programming language to access the API; there are also lots of pre-built [client libraries](client-libraries) for interacting with NetLicensing.
+Since NetLicensing API (RESTful) is based on open standards, you can use any programming language to access the API; there are also lots of pre-built [client libraries](client-libraries) for interacting with NetLicensing.
+
+The *"Try it now"* examples on the service pages use the public demo account (`--user demo:demo`). It's a shared sandbox,
+so the entity numbers in the examples, such as `I011`, may no longer exist. List the current entities first, for
+example `curl --header "Accept: application/json" --user demo:demo https://go.netlicensing.io/core/v2/rest/licensee`,
+and use one of the numbers you get back. Step-by-step examples for your language are in the [Guides](guides).
 
 Services
 --------
@@ -48,11 +59,11 @@ If you do not have one already, signup <a href="https://ui.netlicensing.io/#/reg
 Structure of the RESTful URIs
 -----------------------------
 
-NetLicensing API (RESTful) provide access to resources (data entities) via URI paths. To use a RESTful API, your application will make an HTTPS request and parse the response. The NetLicensing API (RESTful) uses <a href="https://en.wikipedia.org/wiki/JSON" class="external-link">JSON</a> or <a href="https://en.wikipedia.org/wiki/XML" class="external-link">XML</a> as its response format
+NetLicensing API (RESTful) provide access to resources (data entities) via URI paths. To use a RESTful API, your application will make an HTTPS request and parse the response. The NetLicensing API (RESTful) uses <a href="https://en.wikipedia.org/wiki/JSON" class="external-link">JSON</a> or <a href="https://en.wikipedia.org/wiki/XML" class="external-link">XML</a> as its response format
 
-    Use following request headers:
-    Accept: application/json       # for JSON formatted responses
-    Accept: application/xml        # for XML formatted responses
+    Use following request headers:
+    Accept: application/json       # for JSON formatted responses
+    Accept: application/xml        # for XML formatted responses
 
 and the standard HTTP methods like GET, PUT, POST and DELETE (see endpoints documentation to find out which methods are supported by particular resource).
 
@@ -62,15 +73,15 @@ URIs for NetLicensing API (RESTful) resources have the following structure:
 
 <span style="line-height: 1.4285715;">where:</span>
 
-`<host>` - NetLicensing API host name - `go.netlicensing.io` Backup host name - `netlicensing.labs64.com`
+`<host>` - NetLicensing API host name - `go.netlicensing.io` Backup host name - `netlicensing.labs64.com`
 
-`<port>` - NetLicensing API port, can be omitted, NetLicensing uses standard https port 443.
+`<port>` - NetLicensing API port, can be omitted, NetLicensing uses standard https port 443.
 
 `<resource>` - represents named resource (e.g. product, license etc.), you'll find the resource name on the [services page](services) describing corresponding resource
 
 `<query>` - parameters passed with the request (see below)
 
-In case the requested resource does not exist, HTTP response with status code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link" target="_blank">404</a> will be returned.
+In case the requested resource does not exist, HTTP response with status code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link" target="_blank">404</a> will be returned.
 
 Very rare, but it happens that top-level domain (TLD) DNS servers also have problems. In this case domain name can not be resolved to the IP address, rendering the service unavailable. TLD DNS is not under our control, and in case of problems there we can't influence recovery times. To ensure uninterruptible service even in this unlikely case, we provide a backup domain name for the NetLicensing API in another TLD: In case of DNS resolution error for `go.netlicensing.io`, retry your API request using `netlicensing.labs64.com` host name.
 
@@ -78,15 +89,15 @@ Parameters
 ----------
 
 Resources may require additional input parameters, in which case
-parameters must be passed as query string for GET and DELETE methods and
+parameters must be passed as query string for GET and DELETE methods and
 as a message body (payload) for POST and PUT.
 
 Parameters are passed in '`key=value`' form, separated by '`&`' symbol.
 When passed in a message body (for POST and PUT), it corresponds to
-the <a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1" target="_blank" class="external-link">Form Encoded Data</a> format.
+the <a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1" target="_blank" class="external-link">Form Encoded Data</a> format.
 Use the following request header in this case:
 
-    Content-Type: application/x-www-form-urlencoded 
+    Content-Type: application/x-www-form-urlencoded 
 
 Response
 --------
@@ -125,7 +136,19 @@ All values are transmitted over HTTPS in text form. The following table summariz
 Custom properties
 -----------------
 
-Besides standard properties defined for each entity type (see <a href="https://go.netlicensing.io/javadoc/v2/index.html" class="external-link">JavaDoc</a>), arbitrary custom properties can be added to entities. See [Custom Properties](custom-properties) for details.
+Besides standard properties defined for each entity type (see <a href="https://go.netlicensing.io/javadoc/v2/index.html" class="external-link">JavaDoc</a>), arbitrary custom properties can be added to entities. See [Custom Properties](custom-properties) for details.
+
+OpenAPI specification and API Test Center
+-----------------------------------------
+
+A machine-readable description of the API is available as an OpenAPI (Swagger 2.0) document:
+<a href="https://netlicensing.io/NetLicensing-API/v2.x/netlicensing.json" class="external-link">https://netlicensing.io/NetLicensing-API/v2.x/netlicensing.json</a>.
+Use it to generate a client for languages without an official [client library](client-libraries), or to import the
+API into tools such as Postman.
+
+The same specification powers the <a href="https://netlicensing.io/NetLicensing-API/" class="external-link">NetLicensing API Test Center</a>,
+where you can try every endpoint in the browser with the demo account (user `demo`, password `demo`) or your own
+credentials.
 
 Links
 -----

@@ -1,10 +1,12 @@
 ---
 layout: default
-title: Security
-parent: NetLicensing API (RESTful)
+title: "API Security: Authentication, API Keys and Roles"
+nav_title: "Security"
+parent: NetLicensing REST API Reference
 nav_order: 20
 has_children: true
-description: ""
+description: "Authenticate to the NetLicensing REST API with HTTP Basic or API keys, choose the API key role with the least privilege (Licensee, Analytics, Operation, Maintenance, Admin), and protect validation responses."
+last_modified_at: 2026-10-25
 permalink: security
 ---
 
@@ -16,15 +18,15 @@ Authentication
 
 ### Basic Authentication
 
-NetLicensing supports HTTP Basic authentication (via SSL) relying on the
+NetLicensing supports HTTP Basic authentication (via SSL) relying on the
 client's username and password to be added in the request.  
 In order to access secured REST services with HTTP Basic authentication,
 client applications have to set the HTTP Authorization header's value
-to: Basic *\<base64\_encoded\_username\_password\>*. UTF-8 is the
+to: Basic *\<base64\_encoded\_username\_password\>*. UTF-8 is the
 default decoding charset; therefore, the value must also have been
 encoded with the same charset.
 
-In case of unauthorized access, HTTP response with status code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link">403</a> will be returned.
+If the credentials are wrong, the API answers with HTTP status code <a href="https://en.wikipedia.org/wiki/HTTP_401" class="external-link">401</a>. If they are valid but not allowed to perform the operation, for example an API key whose role is too limited, it answers with <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link">403</a>.
 
 ### API Key Identification
 
@@ -41,7 +43,7 @@ Leveraging API key improves security by:
 
 Access to the REST services with an API key is the same as with Basic
 authentication, except that username is fixed to the value
-"`apiKey"` (without quotation marks) and the actual API key should be
+"`apiKey"` (without quotation marks) and the actual API key should be
 provided in the password field. Use of the API key does not grant access
 to any account information, and is not used for authorization.
 
@@ -55,8 +57,8 @@ $ curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --head
 {: .ml-5 }
 
 API key can be obtained via
-the <a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a> or
-using the API [token service](token-services).
+the <a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a> or
+using the API [token service](token-services).
 
 Each API key has associated role, that grants access to a specific API
 subset:
@@ -79,3 +81,9 @@ Signing The Response
 --------------------
 
 NetLicensing response spoofing by man-in-the-middle (MITM) is prevented by using SSL for encryption between NetLicensing server and the client. This however does not guarantee against response spoofing by the malicious user directly at the client, for example by substituting the NetLicensing server with a host in the local network. Therefore NetLicensing adds an additional security layer, namely signing the response of a call to licensee validate method. Have a look at the [Signing The Response](signing-the-response) page for details how to enable the response signature.
+
+Related guides
+--------------
+
+- [FAQ: Is it safe to embed a NetLicensing API key in my application?](faq-api-key-in-client-application)
+- [Secure AI-agent access with NetLicensing MCP](netlicensing-mcp-security)

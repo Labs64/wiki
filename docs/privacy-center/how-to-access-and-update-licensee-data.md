@@ -3,7 +3,7 @@ layout: default
 title: How to access and update licensee data
 parent: Privacy Center
 nav_order: 99
-description: "How to access and update licensee data"
+description: "Find and update the personal data stored for a licensee (customer) in NetLicensing, to answer GDPR access and rectification requests."
 permalink: how-to-access-and-update-licensee-data
 ---
 

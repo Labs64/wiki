@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Object Model
+title: "NetLicensing Object Model: Products, Modules, Licensees and Licenses"
+nav_title: "Object Model"
 nav_order: 30
-description: "NetLicensing Object Model"
+description: "How NetLicensing models licensing: vendor, product, product module, license template, licensing model, license, licensee, transaction and bundle, and how they relate during validation."
 permalink: object-model
 ---
 

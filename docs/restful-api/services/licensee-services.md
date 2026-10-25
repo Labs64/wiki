@@ -1,10 +1,11 @@
 ---
 layout: default
-title: Licensee Services
+title: "Licensee Services API: Validate and Transfer"
+nav_title: Licensee Services
 parent: Services
-grand_parent: NetLicensing API (RESTful)
+grand_parent: NetLicensing REST API Reference
 nav_order: 40
-description: "Licensee Services"
+description: "REST API reference for licensees: validate a licensee's licenses, transfer licenses, and list, get, create, update and delete licensees (customers)."
 permalink: licensee-services
 ---
 
@@ -52,7 +53,7 @@ Return a list of all licensees for the current vendor.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p> - None -</p></td>
+<td><p> - None -</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -66,7 +67,7 @@ Return a list of all licensees for the current vendor.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseeService.list</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseeService.list</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -128,7 +129,7 @@ Return a licensee by licenseeNumber.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseeNumber (string) - Licensee number.</p></td>
+<td><p>licenseeNumber (string) - Licensee number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -142,7 +143,7 @@ Return a licensee by licenseeNumber.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseeService.get</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseeService.get</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -205,10 +206,10 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <tr class="even">
 <td><p>Request Parameters</p></td>
 <td><p><span style="color: rgb(0,0,0);">productNumber (string) - </span>productNumber to assign new licensee object.</p>
-<p>number (string) - Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee. Optional.</p>
+<p>number (string) - Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee. Optional.</p>
 <p>active (boolean) - If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled (tbd).</p>
-<p>name (string) - Licensee name. Optional.</p>
-<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L<span>icensee Secret for this licensee <span>(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> available in selected pricing plans)</span>. </span>Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></span></p>
+<p>name (string) - Licensee name. Optional.</p>
+<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L<span>icensee Secret for this licensee <span>(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> available in selected pricing plans)</span>. </span>Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(34,34,34);">markedForTransfer (boolean) - Mark licensee for transfer. <span style="color: rgb(80,80,80);">Optional.</span></span></span></p></td>
 </tr>
 <tr class="odd">
@@ -224,7 +225,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Licensee-" class="external-link">LicenseeService.create</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Licensee-" class="external-link">LicenseeService.create</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -288,11 +289,11 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseeNumber (string) - Licensee number.</p>
-<p>number (string) - Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee. Optional.</p>
+<td><p>licenseeNumber (string) - Licensee number.</p>
+<p>number (string) - Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee. Optional.</p>
 <p>active (boolean) - If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled (tbd). Optional.</p>
-<p>name (string) - Licensee name. Optional.</p>
-<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L</span><span style="color: rgb(80,80,80);">icensee Secret for licensee <span style="color: rgb(80,80,80);">(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span style="color: rgb(80,80,80);"> available in selected pricing plans)</span>. </span><span style="color: rgb(80,80,80);">Optional.<span style="color: rgb(80,80,80);"> </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span style="color: rgb(80,80,80);"> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></span></p>
+<p>name (string) - Licensee name. Optional.</p>
+<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L</span><span style="color: rgb(80,80,80);">icensee Secret for licensee <span style="color: rgb(80,80,80);">(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span style="color: rgb(80,80,80);"> available in selected pricing plans)</span>. </span><span style="color: rgb(80,80,80);">Optional.<span style="color: rgb(80,80,80);"> </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span style="color: rgb(80,80,80);"> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></span></p>
 <p><span style="color: rgb(80,80,80);"><span style="color: rgb(34,34,34);">markedForTransfer (boolean) - Mark licensee for transfer. </span><span>Optional.</span></span></p></td>
 </tr>
 <tr class="odd">
@@ -308,7 +309,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Licensee-" class="external-link">LicenseeService.update</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Licensee-" class="external-link">LicenseeService.update</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -373,8 +374,8 @@ Delete a licensee by number.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseeNumber (string) - Licensee number.</p>
-<p>forceCascade (boolean) - Force object deletion and all descendants.</p></td>
+<td><p>licenseeNumber (string) - Licensee number.</p>
+<p>forceCascade (boolean) - Force object deletion and all descendants.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -388,7 +389,7 @@ Delete a licensee by number.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseeService.delete</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseeService.delete</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -463,7 +464,7 @@ productModuleNumber&lt;N&gt; (string)</em> - product module N number<br />
 <ul>
 <li>&lt;N&gt; is 0-based decimal number incremented for every product module that receives parameters.</li>
 <li>Order of product modules is not important.</li>
-<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="licensing-models">licensing model</a>.</li>
+<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="licensing-models">licensing model</a>.</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -489,10 +490,10 @@ it for a certain period for repeated validation requests. To determine
 the maximum validity duration of the validation response, NetLicensing
 returns an additional value with the validation response that is called
 „ttl“: it is the expiration timestamp of this validation response
-in <a href="https://en.wikipedia.org/wiki/ISO_8601" class="external-link"><span class="s2">ISO 8601</span></a> format.</span>
+in <a href="https://en.wikipedia.org/wiki/ISO_8601" class="external-link"><span class="s2">ISO 8601</span></a> format.</span>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#validate-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.vo.ValidationParameters-com.labs64.netlicensing.domain.vo.MetaInfo...-" class="external-link">LicenseeService.validate</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#validate-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.vo.ValidationParameters-com.labs64.netlicensing.domain.vo.MetaInfo...-" class="external-link">LicenseeService.validate</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -534,7 +535,7 @@ $ curl --header "Accept: application/xml" --insecure --user demo:demo --request 
 ```
 {: .ml-5 }
 
-<img src="assets/images/icons/emoticons/warning.png" alt="(tick)" class="emoticon emoticon-tick" /> <strong>Please Note:</strong> HTTP method **GET** is **deprecated** for licensee validate.
+<img src="assets/images/icons/emoticons/warning.png" alt="(tick)" class="emoticon emoticon-tick" /> <strong>Please Note:</strong> HTTP method **GET** is **deprecated** for licensee validate.
 
 If you use RESTful API directly in your code, ensure to replace GET with POST for validate. GET method will be removed in one of the future releases, until then you'll get the following warning if using GET:
 
@@ -566,7 +567,7 @@ If you use RESTful API directly in your code, ensure to replace GET with POST fo
 
 If using NetLicensing client library - update to the newest version.
 
-Besides, new features associated with the validate method will not be available when called using GET.
+Besides, new features associated with the validate method will not be available when called using GET.
 
 <img src="assets/images/icons/emoticons/warning.png" alt="(tick)" class="emoticon emoticon-tick" /> <strong>Please Note:</strong> Below specification for the GET method is only present here to help migrating from old code, please <strong>don't use GET method for validate, use POST instead</strong> ([see above](#validate-licensee))!
 
@@ -619,7 +620,7 @@ productModuleNumber&lt;N&gt; (string)</em> - product module N number<br />
 <ul>
 <li>&lt;N&gt; is 0-based decimal number incremented for every product module that receives parameters.</li>
 <li>Order of product modules is not important.</li>
-<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="licensing-models">licensing model</a>.</li>
+<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="licensing-models">licensing model</a>.</li>
 </ul></td>
 </tr>
 <tr class="odd">
@@ -672,7 +673,7 @@ Accept: application/xml
 $ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
 ```
 {: .ml-5 }
- 
+ 
 
 ### Transfer licenses
 
@@ -724,11 +725,11 @@ Transfer licenses between licensees.
 
 The following prerequisites must be fulfilled:
 
--   Licensees with *sourceLicenseeNumber* and *licenseeNumber* must be assigned to the same product
--   Source licensee must be marked for transfer (licensee [custom property](custom-properties) *markedForTransfer* must be set to `true`)
+-   Licensees with *sourceLicenseeNumber* and *licenseeNumber* must be assigned to the same product
+-   Source licensee must be marked for transfer (licensee [custom property](custom-properties) *markedForTransfer* must be set to `true`)
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#transfer-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-" class="external-link">LicenseeService.transfer</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#transfer-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-" class="external-link">LicenseeService.transfer</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span

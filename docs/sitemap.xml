@@ -2,7 +2,7 @@
 layout: vendor/compress
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- lastmod is emitted only when it is known (page front matter, or the newest changelog entry for the pages it feeds); a build-time stamp on every URL would tell crawlers nothing -->
+<!-- lastmod is emitted only when it is known (page front matter sitemap.lastmod / last_modified_at, or the newest changelog entry for the pages it feeds); a build-time stamp on every URL would tell crawlers nothing -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {%- assign latest = site.data.changelog | first %}
   {%- for page in site.html_pages %}
@@ -11,6 +11,8 @@ layout: vendor/compress
     <loc>{{ page.url | remove: "index.html" | absolute_url }}</loc>
     {%- if page.sitemap.lastmod %}
     <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+    {%- elsif page.last_modified_at %}
+    <lastmod>{{ page.last_modified_at | date: "%Y-%m-%d" }}</lastmod>
     {%- elsif page.date %}
     <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
     {%- elsif page.url == '/' or page.url == '/changelog.html' or page.url == '/changelog' %}

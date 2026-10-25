@@ -1,10 +1,11 @@
 ---
 layout: default
-title: License Template Services
+title: License Template Services API
+nav_title: License Template Services
 parent: Services
-grand_parent: NetLicensing API (RESTful)
+grand_parent: NetLicensing REST API Reference
 nav_order: 30
-description: "License Template Services"
+description: "REST API reference for license templates: list, get, create, update and delete the templates that define what customers can obtain and at what price."
 permalink: license-template-services
 ---
 
@@ -50,7 +51,7 @@ Return a list of all license templates for the current vendor.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p> - None -</p></td>
+<td><p> - None -</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -64,7 +65,7 @@ Return a list of all license templates for the current vendor.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseTemplateService.list</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseTemplateService.list</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -127,7 +128,7 @@ Return a license template by licenseTemplateNumber.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseTemplateNumber (string) - License template number.</p></td>
+<td><p>licenseTemplateNumber (string) - License template number.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -141,7 +142,7 @@ Return a license template by licenseTemplateNumber.
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseTemplateService.get</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseTemplateService.get</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -206,15 +207,15 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 <td><p><span style="color: rgb(0,0,0);">productModuleNumber (string) - </span>Number of product module to ?reate license template object.</p>
 <p><span style="color: rgb(0,0,0);">number (string) - </span>Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.</p>
 <p><span style="color: rgb(0,0,0);">name (string) - L</span>icense template name to create license template object.</p>
-<p><span style="color: rgb(0,0,0);"><span>active (boolean) - If set to 'false', the license template is disabled. Licensee can not obtain any new licenses off this license template.</span> </span></p>
-<p>licenseType (<span style="color: rgb(0,0,0);">Array[string]</span>) - Type of licenses created from this license template. Supported types: "FEATURE", "TIMEVOLUME", "FLOATING", "QUANTITY".</p>
+<p><span style="color: rgb(0,0,0);"><span>active (boolean) - If set to 'false', the license template is disabled. Licensee can not obtain any new licenses off this license template.</span> </span></p>
+<p>licenseType (<span style="color: rgb(0,0,0);">Array[string]</span>) - Type of licenses created from this license template. Supported types: "FEATURE", "TIMEVOLUME", "FLOATING", "QUANTITY".</p>
 <p><span style="color: rgb(0,0,0);">timeVolume <span>(number) </span>- Mandatory for 'TIMEVOLUME' license type. </span></p>
 <p><span style="color: rgb(0,0,0);">timeVolumePeriod (string) - Indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</span></p>
 <p><span style="color: rgb(0,0,0);">maxSessions <span>(string) </span>- Mandatory for 'FLOATING' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">quantity (<span>string</span>) - </span><span style="color: rgb(0,0,0);">Mandatory for 'QUANTITY' license type.</span></p>
-<p><span style="color: rgb(0,0,0);">price (<span>double</span>) - Price for the license. If &gt;0, it must always be accompanied by the currency specification. Optional.</span><span style="color: rgb(0,0,0);"> </span></p>
-<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
-<p>- EUR       - Euro currency for the license price</p>
+<p><span style="color: rgb(0,0,0);">price (<span>double</span>) - Price for the license. If &gt;0, it must always be accompanied by the currency specification. Optional.</span><span style="color: rgb(0,0,0);"> </span></p>
+<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
+<p>- EUR       - Euro currency for the license price</p>
 <p><span style="color: rgb(0,0,0);">automatic (boolean) - If set to 'true', every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0. Optional.</span></p>
 <p><span style="color: rgb(0,0,0);">hidden (boolean) - If set to 'true', this license template is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as offered for purchase. Optional.</span></p>
 <p><span style="color: rgb(0,0,0);">hideLicenses (boolean) - If set to 'true', licenses from this license template are not visible to the end customer, but participate in validation. Optional.</span></p></td>
@@ -231,7 +232,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.LicenseTemplate-" class="external-link">LicenseTemplateService.create</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.LicenseTemplate-" class="external-link">LicenseTemplateService.create</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -296,18 +297,18 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseTemplateNumber (string) - License template number.</p>
+<td><p>licenseTemplateNumber (string) - License template number.</p>
 <p><span style="color: rgb(0,0,0);">number (string) - </span>Unique number (across all products of a vendor) that identifies the license template. Vendor can assign this number when creating a license template or let NetLicensing generate one. Read-only after creation of the first license from this license template.</p>
 <p><span style="color: rgb(0,0,0);">name (string) - L</span>icense template name to create license template object.</p>
-<p><span style="color: rgb(0,0,0);">active (boolean) - If set to 'false', the license template is disabled. Licensee can not obtain any new licenses off this license template. </span></p>
-<p>licenseType (<span style="color: rgb(0,0,0);">Array[string]</span>) - Type of licenses created from this license template. Supported types: "FEATURE", "TIMEVOLUME", "FLOATING", "QUANTITY".</p>
+<p><span style="color: rgb(0,0,0);">active (boolean) - If set to 'false', the license template is disabled. Licensee can not obtain any new licenses off this license template. </span></p>
+<p>licenseType (<span style="color: rgb(0,0,0);">Array[string]</span>) - Type of licenses created from this license template. Supported types: "FEATURE", "TIMEVOLUME", "FLOATING", "QUANTITY".</p>
 <p><span style="color: rgb(0,0,0);">timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">timeVolumePeriod (string) - Indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</span></p>
 <p><span style="color: rgb(0,0,0);">maxSessions (string) - Mandatory for 'FLOATING' license type.</span></p>
 <p><span style="color: rgb(0,0,0);">quantity (string) - </span><span style="color: rgb(0,0,0);">Mandatory for 'QUANTITY' license type.</span></p>
-<p><span style="color: rgb(0,0,0);">price (double) - Price for the license. If &gt;0, it must always be accompanied by the currency specification. Optional.</span><span style="color: rgb(0,0,0);"> </span></p>
-<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
-<p>- EUR       - Euro currency for the license price</p>
+<p><span style="color: rgb(0,0,0);">price (double) - Price for the license. If &gt;0, it must always be accompanied by the currency specification. Optional.</span><span style="color: rgb(0,0,0);"> </span></p>
+<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
+<p>- EUR       - Euro currency for the license price</p>
 <p><span style="color: rgb(0,0,0);">automatic (boolean) - If set to 'true', every new licensee automatically gets one license out of this license template on creation. Automatic licenses must have their price set to 0. Optional.</span></p>
 <p><span style="color: rgb(0,0,0);">hidden (boolean) - If set to 'true', this license template is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as offered for purchase. Optional.</span></p>
 <p><span style="color: rgb(0,0,0);">hideLicenses (boolean) - If set to 'true', licenses from this license template are not visible to the end customer, but participate in validation. Optional.</span></p></td>
@@ -324,7 +325,7 @@ Content-Type: application/x-www-form-urlencoded</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.LicenseTemplate-" class="external-link">LicenseTemplateService.update</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.LicenseTemplate-" class="external-link">LicenseTemplateService.update</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
@@ -387,8 +388,8 @@ Delete a license template by number.
 </tr>
 <tr class="even">
 <td><p>Request Parameters</p></td>
-<td><p>licenseTemplateNumber (string) - License template number.<br />
-forceCascade (boolean) - Force object deletion and all descendants.</p></td>
+<td><p>licenseTemplateNumber (string) - License template number.<br />
+forceCascade (boolean) - Force object deletion and all descendants.</p></td>
 </tr>
 <tr class="odd">
 <td><p>HTTP Status Code</p></td>
@@ -402,7 +403,7 @@ forceCascade (boolean) - Force object deletion and all descendants.</p></td>
 </table>
 
 See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseTemplateService.delete</a>
+JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseTemplateService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseTemplateService.delete</a>
 
 <span
 class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span

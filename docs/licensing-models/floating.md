@@ -1,9 +1,11 @@
 ---
 layout: default
-title: Floating
+title: "Floating Licensing: Concurrent User and Session Limits"
+nav_title: "Floating"
 nav_order: 70
 parent: Licensing Models
-description: "Floating / Concurrent licensing model authorizes the use of an application with the given number of sessions"
+description: "Floating (concurrent) licensing model: limit how many sessions, users or hosts run your application at the same time with check-out and check-in on validation, and configure maximum checkout validity."
+last_modified_at: 2026-10-25
 permalink: floating
 ---
 
@@ -18,11 +20,11 @@ permalink: floating
 Overview
 --------
 
-**Floating** licensing model authorizes the use of an application with the given number of sessions (users, hosts, etc.). The number of concurrent sessions is tracked, and the total number of running sessions of the licensed application at any time is limited by the maximum allowed sessions in the floating licenses purchased by the licensee.
+**Floating** licensing model authorizes the use of an application with the given number of sessions (users, hosts, etc.). The number of concurrent sessions is tracked, and the total number of running sessions of the licensed application at any time is limited by the maximum allowed sessions in the floating licenses purchased by the licensee.
 
 Session is acquired by checkout operation and returned back to the pool by subsequent checkin. Maximum checkout validity time is limited by the product module parameter:
 
--   `Integer` **`maxCheckoutValidity`** - floating license maximum checkout validity, in seconds ("Maximum checkout validity" in <a href="https://l64.cc/nlUI" class="external-link">NetLicensing Management Console</a> / product module edit form)
+-   `Integer` **`maxCheckoutValidity`** - floating license maximum checkout validity, in seconds ("Maximum checkout validity" in <a href="https://l64.cc/nlUI" class="external-link">NetLicensing Management Console</a> / product module edit form)
 
 Validity can be extended as long as needed by subsequent checkouts before the expiration time.
 
@@ -37,18 +39,18 @@ This licensing model requires one or more license templates of type FLOATING, ea
 
 Required additional properties specific to the FLOATING [license templates](object-model#license-template):
 
--   `Integer` **`maxSessions`** - specifies the maximum number of sessions allowed concurrently per license.
+-   `Integer` **`maxSessions`** - specifies the maximum number of sessions allowed concurrently per license.
 
 Licenses
 --------
 
 Required additional properties specific to the FLOATING [licenses](object-model#license):
 
--   `Integer` **`maxSessions`** - specifies the maximum number of sessions allowed concurrently per license. Normally it is copied from the corresponding license template, but can be changed later for each license individually. When multiple FLOATING licenses purchased, the total number of concurrently allowed sessions is the sum of **`maxSessions`** of all active licenses.
+-   `Integer` **`maxSessions`** - specifies the maximum number of sessions allowed concurrently per license. Normally it is copied from the corresponding license template, but can be changed later for each license individually. When multiple FLOATING licenses purchased, the total number of concurrently allowed sessions is the sum of **`maxSessions`** of all active licenses.
 
-Besides, every session that is checked out is listed as
+Besides, every session that is checked out is listed as
 
--   [`Timestamp`](restful-api#data-types) **`sessionId_<sessionId>`** custom property. Session can be forcibly checked in on demand by removing the corresponding **`sessionId_<sessionId>`** property.
+-   [`Timestamp`](restful-api#data-types) **`sessionId_<sessionId>`** custom property. Session can be forcibly checked in on demand by removing the corresponding **`sessionId_<sessionId>`** property.
 
 **Please Note:** NetLicensing services and client libraries do not include session ID or fingerprint generation capabilities. It is the responsibility of the vendor to create a unique session identifier. For guidance, please refer to the best practices for [generating machine IDs and fingerprints](faq-how-to-generate-machine-fingerprint#machine-id--fingerprint-libraries).
 
@@ -71,8 +73,8 @@ To modify the "maxCheckoutValidity" module parameter, simply include the followi
 
 ### Validation returns values:
 
--   `Boolean` **`valid`** - **`true`** if action is **`checkOut`** and operation succeeds, hence the product use is allowed. **`false`** on not successful checkout or when action is **`checkIn`**.
--   [`Timestamp`](restful-api#data-types) **`expirationTimestamp`** - on successful checkout, provides the point in time until checkout is valid.
+-   `Boolean` **`valid`** - **`true`** if action is **`checkOut`** and operation succeeds, hence the product use is allowed. **`false`** on not successful checkout or when action is **`checkIn`**.
+-   [`Timestamp`](restful-api#data-types) **`expirationTimestamp`** - on successful checkout, provides the point in time until checkout is valid.
 
 ### Validation response examples:
 -   **checkOut:**
@@ -144,3 +146,10 @@ Below are the default [warning levels](warning-level) associated with this licen
 | GREEN | YELLOW | RED |
 |:------|:-------|:----|
 | sessionsUsed < 80% | sessionsTotal < 10 AND sessionsUsed >= sessionsTotal<br>OR<br>sessionsUsed >= 80% | sessionsTotal >= 10<br>AND<br>sessionsUsed >= sessionsTotal |
+
+Related guides
+--------------
+
+- [Node-Locked vs Floating Licenses](node-locked-vs-floating-licenses)
+- [FAQ: How do I limit the number of concurrent users?](faq-limit-concurrent-users)
+- [Offline License Validation](offline-license-validation) (floating sessions with the Agent)

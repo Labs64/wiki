@@ -1,10 +1,11 @@
 ---
 layout: default
-title: PayPal
+title: PayPal Payments in NetLicensing Shop
+nav_title: "PayPal"
 parent: Payment Service Providers
 grand_parent: NetLicensing Shop
 nav_order: 10
-description: "PayPal"
+description: "Accept PayPal payments, including recurring subscription payments, for licenses sold through NetLicensing Shop: account setup, configuration in the Management Console and troubleshooting."
 permalink: paypal
 ---
 

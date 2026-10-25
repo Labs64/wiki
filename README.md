@@ -36,6 +36,8 @@ docker compose down
 |------|-----------|
 | `docs/` | The published site (Jekyll source). Pages are Markdown with front matter; the theme comes from [Labs64/NetLicensing-Wiki-template](https://github.com/Labs64/NetLicensing-Wiki-template) via `remote_theme`. |
 | `docs/_data/changelog.yml` | Source of the [changelog](https://netlicensing.io/wiki/changelog), the home page "What's new" block and the RSS feed. See the comment at the top of the file for the entry format. |
+| `docs/guides/` | Task and concept guides (licensing API, offline validation, model comparisons, build vs buy, language quick starts). |
+| `docs/netlicensing-mcp/` | MCP server pillar page plus client setup, workflows and security pages. |
 | `docs/llms.txt` | Machine-readable site index for AI assistants, generated from page front matter. |
 | `scripts/` | CI helpers. |
 
@@ -60,3 +62,14 @@ Following files, directories and their contents are copyright Labs64. You may no
 * `docs/` including all subdirectories
 
 All other files and directories are licensed under the [MIT License](https://www.opensource.org/licenses/mit-license.php) unless explicitly stated.
+
+## Page front matter conventions
+
+| Key | Purpose |
+|-----|---------|
+| `title` | Descriptive page title used for `<title>`, the H1, breadcrumbs and `llms.txt`. Child pages reference their parent by this exact value in `parent:` / `grand_parent:`. |
+| `nav_title` | Optional short label for the sidebar when `title` is long. |
+| `description` | One or two factual sentences; shown in search results, social previews and `llms.txt`. Do not repeat the title. |
+| `last_modified_at` | Date of the last substantive change (`YYYY-MM-DD`); feeds the sitemap `lastmod` and JSON-LD `dateModified`. |
+| `faq_category` | FAQ pages only: the group on the [FAQ index](https://netlicensing.io/wiki/faq). FAQ pages also get FAQPage structured data from the theme. |
+

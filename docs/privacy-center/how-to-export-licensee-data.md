@@ -3,7 +3,7 @@ layout: default
 title: How to export licensee data
 parent: Privacy Center
 nav_order: 99
-description: "How to export licensee data"
+description: "Export the data NetLicensing stores for a licensee to answer a GDPR data portability or access request."
 permalink: how-to-export-licensee-data
 ---
 
@@ -22,4 +22,4 @@ Please refer to the documentation for the GET operations of the corresponding se
 -   [Licensee Services](licensee-services) - to retrieve *Licensee* data using its *LicenseeNumber*
 -   [License Services](license-services) - to retrieve *License* data, which can be filtered post-export by
     `licenseeNumber` property within single *License* entity
--   [Transaction Services](transaction-services) - to retrieve *Transaction* data, which can be filtered post-export by `licenseNumber` property within single *Transaction* entity
+-   [Transaction Services](transaction-services) - to retrieve *Transaction* data, which can be filtered post-export by `licenseNumber` property within single *Transaction* entity

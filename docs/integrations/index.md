@@ -4,7 +4,7 @@ title: Integrations
 has_children: true
 has_toc: false
 nav_order: 97
-description: "Labs64 NetLicensing integrations and sample code"
+description: "Connect NetLicensing to e-commerce, billing, CRM and automation platforms such as FastSpring, MyCommerce, Zoho CRM and Zapier."
 permalink: integrations
 ---
 
@@ -13,12 +13,12 @@ permalink: integrations
 
 NetLicensing can be easily integrated with common *eCommerce, Billing and Subscription Management* platforms, such as:
 
-- [NetLicensing-Gateway](gateway) - NetLicensing / eCommerce Gateway
+- [NetLicensing-Gateway](gateway) - NetLicensing / eCommerce Gateway
 - [PayPal](paypal) - NetLicensing / PayPal Integration
 - [Stripe](stripe) - NetLicensing / Stripe Integration
-- [NetLicensing-Auth0](https://github.com/Labs64/NetLicensing-Auth0){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / Auth0 Integration
-- [NetLicensing-Zapier](https://zapier.com/apps/netlicensing/integrations){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing / Zapier Integration
-- [NetLicensing-PrestaShop](https://github.com/Labs64/NetLicensing-PrestaShop){:target="_blank"}{:rel="noopener nofollow"} - NetLicensing Connector for PrestaShop
+- [NetLicensing-Auth0](https://github.com/Labs64/NetLicensing-Auth0){:target="_blank"}{:rel="noopener"} - NetLicensing / Auth0 Integration
+- [NetLicensing-Zapier](https://zapier.com/apps/netlicensing/integrations){:target="_blank"}{:rel="noopener"} - NetLicensing / Zapier Integration
+- [NetLicensing-PrestaShop](https://github.com/Labs64/NetLicensing-PrestaShop){:target="_blank"}{:rel="noopener"} - NetLicensing Connector for PrestaShop
 - WordPress - [PluginPass: WordPress PRO Plugin/Theme Licensing](https://wordpress.org/plugins/pluginpass-pro-plugintheme-licensing/){:target="_blank"}{:rel="noopener nofollow"}
 - [Zoho CRM](zoho-crm) - NetLicensing Extension for Zoho CRM
 

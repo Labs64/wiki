@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Discount
+title: Discounts and Promo Codes in NetLicensing Shop
+nav_title: "Discount"
 parent: Licensing Models
 nav_order: 10
-description: "Offer promo-code discounts in NetLicensing Shop"
+description: "Discount model: offer fixed-amount or percentage promo-code discounts in NetLicensing Shop with optional validity dates and minimum cart total."
 permalink: discount
 ---
 

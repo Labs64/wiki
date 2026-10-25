@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Rental
+title: "Rental Licensing: Time-Limited Licenses per Instance"
+nav_title: "Rental"
 parent: Licensing Models
 nav_order: 80
-description: "Rental - license multiple instances of some entity, each instance for a certain period of time"
+description: "Rental licensing model: license many instances of a feature, such as devices, each for its own time period, with renewals at different prices. Worked example with license templates and validation."
 permalink: rental
 ---
 
@@ -124,11 +125,11 @@ Once license templates are configured, licensing model is ready for use.
 Let's assume now a customer with the [id number](glossary) "CUST-4567" orders 3 terminal devices identified by the numbers "DEV-341", "DEV-342" and "DEV-343".
 
 First of all, if this is a new customer, corresponding [Licensee](object-model#licensee) object must be created within NetLicensing, holding the above customer number - "CUST-4567".  
-This can be done either manually via <a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a> or the application on the payment processing server can do it via [NetLicensing API](restful-api), if it has an automated customer registration procedure.
+This can be done either manually via <a href="https://ui.netlicensing.io" class="external-link">NetLicensing Management Console</a> or the application on the payment processing server can do it via [NetLicensing API](restful-api), if it has an automated customer registration procedure.
 
 <img alt="Rental model license templates: one FEATURE template and four TIMEVOLUME templates (91 days evaluation, 91 days EUR 10, 182 days EUR 17, 365 days EUR 30) with a licensee" src="assets/images/rental-overview-02.png" />
 
-Once required licensee object is in place, for each of the ordered terminal devices create the following licenses, binding them to the licensee "CUST-4567" (again NetLicensing Management Console or NetLicensing API can be used at your choice):
+Once required licensee object is in place, for each of the ordered terminal devices create the following licenses, binding them to the licensee "CUST-4567" (again NetLicensing Management Console or NetLicensing API can be used at your choice):
 
 -   from license template "LT-DEV", number=DEV-341
 -   from license template "LT-EVAL": parentFeature=DEV-341, startDate=now
@@ -193,7 +194,7 @@ Once in the NetLicensing Shop, for each TIMEVOLUME license template that is not 
 <tr class="header">
 <th><p>License</p></th>
 <th><p>Price per item</p></th>
-<th><p> </p></th>
+<th><p> </p></th>
 </tr>
 </thead>
 <tbody>
@@ -255,10 +256,10 @@ And the validation result for the validation performed on Aug 21, 2012 will look
 
 Means devices DEV-341 and DEV-342 can be used, both expire on Oct 31, 2012 (91+182 days after initially added), and for DEV-343 no active licenses available.
 
-For user convenience, **Rental** licensing model assigns the "expiration warning level" to each feature. The level has three steps: "`green`", "`yellow`" or "`red`", and is indicated in NetLicensing Shop by displaying the feature name in the corresponding color, while the "`validate`" NetLicensing API call returns it as "`expirationWarningLevel`" property of each feature. This level tells roughly how much time remains until the feature expires, and is configurable via two additional properties of the corresponding product module:
+For user convenience, **Rental** licensing model assigns the "expiration warning level" to each feature. The level has three steps: "`green`", "`yellow`" or "`red`", and is indicated in NetLicensing Shop by displaying the feature name in the corresponding color, while the "`validate`" NetLicensing API call returns it as "`expirationWarningLevel`" property of each feature. This level tells roughly how much time remains until the feature expires, and is configurable via two additional properties of the corresponding product module:
 
--   "Remaining time volume for yellow level" in NetLicensing Management Console, "`yellowThreshold`" property in NetLicensing API
--   "Remaining time volume for red level" in NetLicensing Management Console, "`redThreshold`" property in NetLicensing API
+-   "Remaining time volume for yellow level" in NetLicensing Management Console, "`yellowThreshold`" property in NetLicensing API
+-   "Remaining time volume for red level" in NetLicensing Management Console, "`redThreshold`" property in NetLicensing API
 
 The parameters are optional, if not provided, assumed to be 0 days.
 

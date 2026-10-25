@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Preparing to work with smart card
-parent: NetLicensing Agent
+parent: "NetLicensing Agent: On-Premises and Offline License Validation"
 nav_order: 99
-description: "Preparing to work with smart card"
+description: "Prepare the smart card that protects NetLicensing Agent against cloning and snapshot rollback in offline mode: drivers, reader setup and serial number."
 permalink: preparing-to-work-with-smart-card
 ---
 
@@ -17,7 +17,7 @@ Preparing to work with smart card
 
 This document assumes you're familiar with the Labs64 NetLicensing
 service. If you need more info about NetLicensing, please
-visit <a href="https://netlicensing.io/" class="external-link">https://netlicensing.io</a>.
+visit <a href="https://netlicensing.io/" class="external-link">https://netlicensing.io</a>.
 
 General information
 ===================
@@ -33,14 +33,14 @@ Preparation depends on the operating system:
 | macOS High Sierra (10.13) and above | Supported, no extra steps requires                                                   |
 | Linux-based OS                      | Supported, requires installation of additional components, follow instructions below |
 
- 
+ 
 
 <span style="color: rgb(64,15,0);font-size: 24.0px;">Linux-based OS</span>
 ==========================================================================
 
-To work with smart card on Linux the following packages are required:
+To work with smart card on Linux the following packages are required:
 
- 
+ 
 
 <table>
 <colgroup>
@@ -60,7 +60,7 @@ To work with smart card on Linux the following packages are required:
 </tr>
 <tr class="even">
 <td><strong>libpcsclite1</strong></td>
-<td><p>Middleware to access a smart card using PC/SC </p></td>
+<td><p>Middleware to access a smart card using PC/SC </p></td>
 </tr>
 <tr class="odd">
 <td><strong>libccid</strong> (<span>&gt;= 1.3.11)</span></td>
@@ -69,10 +69,10 @@ To work with smart card on Linux the following packages are required:
 </tbody>
 </table>
 
-To install the required packages use the following commands:
+To install the required packages use the following commands:
 
 -   For Linux distributions using Debian package management with APT
-    toolset (Ubuntu, Debian, Linux Mint, etc.)
+    toolset (Ubuntu, Debian, Linux Mint, etc.)
 
     ``` theme:
     $ sudo apt-get install libccid pcscd libpcsclite1
@@ -80,8 +80,8 @@ To install the required packages use the following commands:
 
 <!-- -->
 
--   For Linux distributions using RPM Package Manager with YUM
-    toolset (RedHat, CentOS, Fedora, etc.)
+-   For Linux distributions using RPM Package Manager with YUM
+    toolset (RedHat, CentOS, Fedora, etc.)
 
     ``` theme:
     $ sudo yum install ccid pcsc-lite-devel
@@ -125,7 +125,7 @@ Known issues
 
 
 
- 
+ 
 
 <span style="white-space: pre-wrap;">  
 </span>

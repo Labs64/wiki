@@ -4,7 +4,7 @@ title: Changelog
 nav_order: 140
 has_children: false
 has_toc: false
-description: "Track NetLicensing additions, updates and fixes using NetLicensing changelog"
+description: "NetLicensing release notes: new features, updates, fixes and security changes in the service, Management Console, Shop, Agent, MCP server and client libraries."
 permalink: changelog
 sitemap:
   changefreq: daily
