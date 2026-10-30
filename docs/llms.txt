@@ -33,7 +33,7 @@ Full history: {{ '/changelog' | absolute_url }}
 
 ## Optional
 
-- [OpenAPI (Swagger 2.0) specification](https://netlicensing.io/NetLicensing-API/v2.x/netlicensing.json): Machine-readable description of the NetLicensing REST API
+- [OpenAPI 3.1 specification](https://netlicensing.io/NetLicensing-API/v2.x/netlicensing.yaml): Machine-readable description of the NetLicensing REST API
 - [API Test Center](https://netlicensing.io/NetLicensing-API/): Try the REST API in the browser with the demo account
 - [NetLicensing MCP server](https://github.com/Labs64/NetLicensing-MCP): Model Context Protocol server for managing NetLicensing from AI agents
 - [Client libraries on GitHub](https://github.com/Labs64): Java, C#/.NET, PHP, JavaScript/Node.js, Kotlin and C++ wrappers for the REST API
