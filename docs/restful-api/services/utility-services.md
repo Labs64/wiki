@@ -7,74 +7,53 @@ grand_parent: NetLicensing REST API Reference
 nav_order: 90
 description: "REST API reference for utilities: list available licensing models, license types and countries."
 permalink: utility-services
+last_modified_at: 2026-10-30
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/http-methods.css' | relative_url }}">
 
 Utility Services
 ================
 
--   [Licensing Models list](#licensing-models-list)
--   [License Types list](#license-types-list)
+Reference data such as licensing models, license types, countries and currencies.
 
-### Licensing Models list
+Authentication, formats, error codes, paging and role levels are the same for all endpoints and described on the [Conventions](api-conventions) page. Paths are relative to `https://go.netlicensing.io/core/v2/rest`. Every call can be tried in the [API Test Center](https://netlicensing.io/NetLicensing-API/).
+
+| Endpoint | Purpose | Role |
+|----------|---------|------|
+| <span class="http-method get">GET</span> [`/utility/licensingModels`](#licensing-models-list) | List licensing models | Analytics+ |
+| <span class="http-method get">GET</span> [`/utility/licenseTypes`](#license-types-list) | List license types | Analytics+ |
+| <span class="http-method get">GET</span> [`/utility/countries`](#countries-list) | List countries | Analytics+ |
+| <span class="http-method get">GET</span> [`/utility/currencies`](#currencies-list) | List currencies | Analytics+ |
+
+A role followed by "+" means that role and every higher one, see [Roles](api-conventions#roles).
+
+---
+
+Licensing Models list
+---------------------
+
+<span class="http-method get">GET</span> `/utility/licensingModels`
+
+**Required role:** Analytics+
 
 Return a list of all licensing models supported by the service.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/utility/licensingModels</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>- None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+One `LicensingModelProperties` item (property `name`) per registered model.
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Parameters:** none.
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/utility/licensingModels
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/utility/licensingModels
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -87,76 +66,35 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/utility/licensingModels
-$ curl --header "Accept: application/json" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/utility/licensingModels
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Utility/listLicensingModels)
 
-### License Types list
+---
+
+License Types list
+------------------
+
+<span class="http-method get">GET</span> `/utility/licenseTypes`
+
+**Required role:** Analytics+
 
 Return a list of all license types supported by the service.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/utility/licenseTypes</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>- None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+One `LicenseType` item (property `name`) per value of `LicenseType`.
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Parameters:** none.
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/utility/licenseTypes
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/utility/licenseTypes
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -169,12 +107,58 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Utility/listLicenseTypes)
+
+---
+
+Countries list
+--------------
+
+<span class="http-method get">GET</span> `/utility/countries`
+
+**Required role:** Analytics+
+
+Return a list of all countries.
+
+`Country` items with properties `code`, `name`, `vatPercent`, `isEu`.
+
+**Parameters:** none.
+
+**Example**
+
+<div>Request</div>
+{: .code-example .code-header }
 ```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/utility/licenseTypes
-$ curl --header "Accept: application/json" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/utility/licenseTypes
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/utility/countries
 ```
-{: .ml-5 }
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Utility/listCountries)
+
+---
+
+Currencies list
+---------------
+
+<span class="http-method get">GET</span> `/utility/currencies`
+
+**Required role:** Analytics+
+
+Return a list of all currencies.
+
+`Currency` items (property `name`), one for each currency except `NONE`.
+
+**Parameters:** none.
+
+**Example**
+
+<div>Request</div>
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/utility/currencies
+```
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Utility/listCurrencies)
+

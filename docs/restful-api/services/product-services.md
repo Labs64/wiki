@@ -7,80 +7,63 @@ grand_parent: NetLicensing REST API Reference
 nav_order: 10
 description: "REST API reference for products: list, get, create, update and delete products, including licensee auto-create, VAT mode and discounts."
 permalink: product-services
+last_modified_at: 2026-10-30
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/http-methods.css' | relative_url }}">
 
 Product Services
 ================
 
--   [Products list](#products-list)
--   [Get product](#get-product)
--   [Create product](#create-product)
--   [Update product](#update-product)
--   [Delete product](#delete-product)
+Products are the top-level entities that hold your product modules, licensees and discounts.
 
-### Products list
+Authentication, formats, error codes, paging and role levels are the same for all endpoints and described on the [Conventions](api-conventions) page. Paths are relative to `https://go.netlicensing.io/core/v2/rest`. Every call can be tried in the [API Test Center](https://netlicensing.io/NetLicensing-API/).
+
+| Endpoint | Purpose | Role |
+|----------|---------|------|
+| <span class="http-method get">GET</span> [`/product`](#products-list) | List products | Licensee+ |
+| <span class="http-method get">GET</span> [`/product/{productNumber}`](#get-product) | Get product | Licensee+ |
+| <span class="http-method post">POST</span> [`/product`](#create-product) | Create product | Maintenance+ |
+| <span class="http-method post">POST</span> [`/product/{productNumber}`](#update-product) | Update product | Maintenance+ |
+| <span class="http-method delete">DELETE</span> [`/product/{productNumber}`](#delete-product) | Delete product | Maintenance+ |
+
+A role followed by "+" means that role and every higher one, see [Roles](api-conventions#roles).
+
+---
+
+Products list
+-------------
+
+<span class="http-method get">GET</span> `/product`
+
+**Required role:** Licensee+
 
 Return a list of all configured products for the current vendor.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/product</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>- None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+For `ROLE_APIKEY_LICENSEE` the filter is forced to the licensee bound to the API key, so the
+result holds only that licensee's products.
+Extra filter keys: `exportSettings=true` also returns the products' ProductModule and
+LicenseTemplate items. `exportAssets=true` also returns License and Licensee items plus one
+`VendorDataExport` item, and marks the response for signing. `licenseeNumber=<n1>,<n2>`
+restricts the exported licenses and licensees.
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">ProductService.list</a>
+**Parameters**
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `filter` | query | string |  | `;`-separated `key=value` pairs, e.g. `page=0;items=50;sortorder=number;sortdirection=DESC`. |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/product
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/product
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -94,78 +77,39 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/product
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Product/listProducts)
 
-### Get product
+---
+
+Get product
+-----------
+
+<span class="http-method get">GET</span> `/product/{productNumber}`
+
+**Required role:** Licensee+
 
 Return a product by productNumber.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/product/{productNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>productNumber (string) - Product number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+For `ROLE_APIKEY_LICENSEE` the product must belong to the key's licensee, otherwise the call fails.
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">ProductService.get</a>
+**Parameters**
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `productNumber` | path | string | yes | Number of the product. |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/product/P014
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/product/P014
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -179,100 +123,49 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/product/P014
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Product/getProduct)
 
-### Create product
+---
 
-Creates a new product.
+Create product
+--------------
 
- 
+<span class="http-method post">POST</span> `/product`
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/product</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>number (string) - Unique number that identifies the product. Vendor can assign this number when creating a product or let NetLicensing generate one. Read-only after creation of the first licensee for the product.</p>
-<p>active (boolean) - If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.</p>
-<p>name (string) - Product name. Together with the version identifies the product for the end customer.</p>
-<p>version (string) - Product version. Convenience parameter, additional to the product name.</p>
-<p>licenseeAutoCreate (boolean) - If set to 'true', non-existing licensees will be created at first validation attempt.</p>
-<p>description (string) - Product description. Optional.</p>
-<p>licensingInfo (string) - Licensing information. Optional.</p>
-<p>licenseeSecretMode (enum) - Licensee secret mode for product (<img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /> available in selected pricing plans). Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /> <em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></p>
-<p><span style="color: rgb(0,0,0);"> - DISABLED - licensee secret ignored.</span></p>
-<p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"> - <span>PREDEFINED - licensee secret must be set in NetLicensing (can't be used with Auto-create Licensee).</span></span></span></p>
-<p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"><span> - <span>CLIENT - client sets the licensee secret on first validate.</span></span></span></span></p>
-<p>vatMode (Enum) - Vat mode for product. Optional.</p>
-<p>- <span style="color: rgb(0,0,0);">GROSS: VAT is included in the prices.</span></p>
-<p><span style="color: rgb(0,0,0);">- NET: VAT is not included in the prices.</span></p>
-<p>discount (list) - Product discounts list. Optional, multiple allowed (list). Parameters of each product discount are passed using the following format:</p>
-<p><span style="color: rgb(80,80,80);"><em>discount=<em>t<span style="color: rgb(81,81,81);">otalPrice;currency;<em>discountAmount</em></span></em><br />
-&lt;t<span style="color: rgb(81,81,81);">otalPrice</span>&gt; <em>(string)</em></em>  - <span style="color: rgb(81,81,81);">Total Price</span><em><br />
-&lt;</em></span>currency<em>&gt;</em><span style="color: rgb(80,80,80);">  <em>(string)</em> - Currency<span style="color: rgb(81,81,81);"><em><br />
-&lt;discountAmount&gt;</em> <em>(string)</em> - <span style="color: rgb(81,81,81);">Discount Amount: absolute (e.g. "1.50") or percent (e.g. "5%")</span></span></span></p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-402 - <span>Not allowed within your pricing plan</span><br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Required role:** Maintenance+
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#create-com.labs64.netlicensing.domain.vo.Context-com.labs64.netlicensing.domain.entity.Product-" class="external-link">ProductService.create</a>
+Creates a new product. The body is form encoded (`application/x-www-form-urlencoded`).
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `name` | body | string | yes | Product name. Together with the version it identifies the product for the end customer. Required on create. |
+| `version` | body | string |  | Product version. Optional, shown next to the product name. |
+| `licenseeAutoCreate` | body | boolean |  | If `true`, a licensee that does not exist is created at its first validation. |
+| `description` | body | string |  | Product description. |
+| `licensingInfo` | body | string |  | Licensing information shown to the end customer. |
+| `discount` | body | string |  | Repeatable. Volume discount in the format `totalPrice;currency;amount`. Append `%` to `amount` for a percentage, otherwise it is a fixed amount in `currency`. |
+| `licenseeSecretMode` | body | string |  | How licensee secrets are handled. Values: `PREDEFINED`, `CLIENT`. |
+| `vatMode` | body | string |  | Whether prices include VAT (`GROSS`) or exclude it (`NET`). `NET` is allowed only for company accounts. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/product
-number=PQVJQ5F7H&active=false&name=Product+6QP3NKHO&version=v3.4&discount=100;EUR;10&discount=10;EUR;9%
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "number=PQVJQ5F7H&active=false&name=Product+6QP3NKHO&version=v3.4&discount=100;EUR;10&discount=10;EUR;9%" \
+  https://go.netlicensing.io/core/v2/rest/product
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -295,94 +188,50 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Update product
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Product/createProduct)
 
-Sets the provided properties to a product. Return an updated product.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/product/{productNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>productNumber (string) - Unique number that identifies the product.</p>
-<p>number (string) - New product number (update)</p>
-<p>active (boolean) - If set to false, the product is disabled. No new licensees can be registered for the product, existing licensees can not obtain new licenses.</p>
-<p>name (string) - Product name. Together with the version identifies the product for the end customer.</p>
-<p>version (string) - Product version. Convenience parameter, additional to the product name.</p>
-<p>licenseeAutoCreate (boolean) - If set to 'true', non-existing licensees will be created at first validation attempt.</p>
-<p>description (string) - Product description. Optional.</p>
-<p>licensingInfo (string) - Licensing information. Optional.</p>
-<p>licenseeSecretMode (enum) - <span>Licensee secret mode for product (</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> </span><span>available in selected pricing plans</span><span>). Optional. </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></p>
-<p><span style="color: rgb(0,0,0);"> - DISABLED - licensee secret ignored.</span></p>
-<p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"> - PREDEFINED - licensee secret must be set in NetLicensing (can't be used with Auto-create Licensee).</span></span></p>
-<p><span style="color: rgb(80,80,80);"><span style="color: rgb(0,0,0);"> - CLIENT - client sets the licensee secret on first validate.</span></span></p>
-<p>vatMode (Enum) - Vat mode for product. Optional.</p>
-<p>- <span style="color: rgb(0,0,0);">GROSS: VAT is included in the prices.</span></p>
-<p><span style="color: rgb(0,0,0);">- NET: VAT is not included in the prices.</span></p>
-<p>discount (list) - Product discounts list. Optional<span>, multiple allowed (list)</span>. Parameters of each product discount are passed using the following format:</p>
-<p><span style="color: rgb(80,80,80);"><em>discount=<em>t<span style="color: rgb(81,81,81);">otalPrice;currency;<em>discountAmount</em></span></em><br />
-&lt;t<span style="color: rgb(81,81,81);">otalPrice</span>&gt; <em>(string)</em></em>  - <span style="color: rgb(81,81,81);">Total Price</span><em><br />
-&lt;</em></span>currency<em>&gt;</em><span style="color: rgb(80,80,80);">  <em>(string)</em> - Currency<span style="color: rgb(81,81,81);"><em><br />
-&lt;discountAmount&gt;</em> <em>(string)</em> - Discount Amount: absolute (e.g. "1.50") or percent (e.g. "5%") </span></span></p>
-<p><span style="color: rgb(80,80,80);"><span style="color: rgb(81,81,81);">Discounts are always replaced all or none - specify all required discounts on update, even if some are unchanged. Discounts can also be deleted completely by specifying a single discount with an </span></span><span style="color: rgb(81,81,81);">empty value</span><span style="color: rgb(81,81,81);">:</span></p>
-<p><span style="color: rgb(80,80,80);"><span style="color: rgb(81,81,81);"><span style="color: rgb(80,80,80);"><em>discount=</em></span></span></span></p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-<span>402 - <span>Not allowed within your pricing plan</span></span><br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Update product
+--------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Product-" class="external-link">ProductService.update</a>
+<span class="http-method post">POST</span> `/product/{productNumber}`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Maintenance+
+
+Sets the provided properties to a product. Return an updated product. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `productNumber` | path | string | yes | Number of the product. |
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `name` | body | string |  | Product name. Together with the version it identifies the product for the end customer. Required on create. |
+| `version` | body | string |  | Product version. Optional, shown next to the product name. |
+| `licenseeAutoCreate` | body | boolean |  | If `true`, a licensee that does not exist is created at its first validation. |
+| `description` | body | string |  | Product description. |
+| `licensingInfo` | body | string |  | Licensing information shown to the end customer. |
+| `discount` | body | string |  | Repeatable. Volume discount in the format `totalPrice;currency;amount`. Append `%` to `amount` for a percentage, otherwise it is a fixed amount in `currency`. |
+| `licenseeSecretMode` | body | string |  | How licensee secrets are handled. Values: `PREDEFINED`, `CLIENT`. |
+| `vatMode` | body | string |  | Whether prices include VAT (`GROSS`) or exclude it (`NET`). `NET` is allowed only for company accounts. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/product/PJIF898SP
-number=PQVJQ5F7H&active=false&name=Product+6QP3NKHO&version=v3.4&discount=100;EUR;20&discount=10;EUR;9%
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "number=PQVJQ5F7H&active=false&name=Product+6QP3NKHO&version=v3.4&discount=100;EUR;20&discount=10;EUR;9%" \
+  https://go.netlicensing.io/core/v2/rest/product/PJIF898SP
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -406,71 +255,42 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Delete product
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Product/updateProduct)
+
+---
+
+Delete product
+--------------
+
+<span class="http-method delete">DELETE</span> `/product/{productNumber}`
+
+**Required role:** Maintenance+
 
 Delete a product by number.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>DELETE /core/v2/rest/product/{productNumber}?forceCascade</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>productNumber (string) - Product number.<br />
-forceCascade (boolean) - Force object deletion and all descendants.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>204 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">ProductService.delete</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `productNumber` | path | string | yes | Number of the product. |
+| `forceCascade` | query | string |  | `true` also deletes dependent entities. Any other value, or no value, means `false`. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-DELETE https://go.netlicensing.io/core/v2/rest/product/P001
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --request DELETE \
+  https://go.netlicensing.io/core/v2/rest/product/P001
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
-```html
+{: .code-example .code-header }
+```http
 HTTP/1.1 204 No Content
 ```
-{: .ml-5 }
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Product/deleteProduct)
+

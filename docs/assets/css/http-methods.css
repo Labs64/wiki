@@ -1,0 +1,31 @@
+/* HTTP method badges; colours match the NetLicensing API Test Center (https://netlicensing.io/NetLicensing-API/) */
+.http-method {
+  --m: #4a5560;
+  --m-ink: #fff;
+  display: inline-block;
+  min-width: 4.6em;
+  padding: 0.1em 0.6em;
+  border-radius: 4px;
+  background: var(--m);
+  color: var(--m-ink);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  text-align: center;
+  vertical-align: 0.1em;
+}
+
+.http-method.get { --m: #4a5560; }
+.http-method.post { --m: #e14817; }
+.http-method.put { --m: #8a5a00; }
+.http-method.delete { --m: #9b1c1c; }
+
+/* lighter fills with dark text on the dark palette (served only when the OS prefers dark) */
+@media (prefers-color-scheme: dark) {
+  .http-method { --m-ink: #17110f; }
+  .http-method.get { --m: #8e9aa5; }
+  .http-method.post { --m: #e14817; --m-ink: #fff; }
+  .http-method.put { --m: #d79a2b; }
+  .http-method.delete { --m: #e26a6a; }
+}

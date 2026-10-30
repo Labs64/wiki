@@ -7,79 +7,59 @@ grand_parent: NetLicensing REST API Reference
 nav_order: 60
 description: "REST API reference for transactions: list, get, create and update the transactions that record how licensees obtained licenses."
 permalink: transaction-services
+last_modified_at: 2026-10-30
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/http-methods.css' | relative_url }}">
 
 Transaction Services
 ====================
 
--   [Transactions list](#transactions-list)
--   [Get transaction](#get-transaction)
--   [Create transaction](#create-transaction)
--   [Update transaction](#update-transaction)
+Transactions record purchases and automatic license changes.
 
-### Transactions list
+Authentication, formats, error codes, paging and role levels are the same for all endpoints and described on the [Conventions](api-conventions) page. Paths are relative to `https://go.netlicensing.io/core/v2/rest`. Every call can be tried in the [API Test Center](https://netlicensing.io/NetLicensing-API/).
+
+| Endpoint | Purpose | Role |
+|----------|---------|------|
+| <span class="http-method get">GET</span> [`/transaction`](#transactions-list) | List transactions | Analytics+ |
+| <span class="http-method get">GET</span> [`/transaction/{transactionNumber}`](#get-transaction) | Get transaction | Analytics+ |
+| <span class="http-method post">POST</span> [`/transaction`](#create-transaction) | Create transaction | Admin |
+| <span class="http-method post">POST</span> [`/transaction/{transactionNumber}`](#update-transaction) | Update transaction | Admin |
+
+A role followed by "+" means that role and every higher one, see [Roles](api-conventions#roles).
+
+---
+
+Transactions list
+-----------------
+
+<span class="http-method get">GET</span> `/transaction`
+
+**Required role:** Analytics+
 
 Return a list of all transactions for the current vendor.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/transaction</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>- None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Extra filter keys: `licenseeNumber=<number>` returns only that licensee's transactions.
+`shopOnly=true` returns only transactions with source `SHOP`. Results are always sorted newest
+first: `sortorder` and `sortdirection` are ignored.
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TransactionService.list</a>
+**Parameters**
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `filter` | query | string |  | `;`-separated `key=value` pairs, e.g. `page=0;items=50;sortorder=number;sortdirection=DESC`. |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/transaction
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/transaction
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -92,71 +72,37 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Get transaction
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Transaction/listTransactions)
+
+---
+
+Get transaction
+---------------
+
+<span class="http-method get">GET</span> `/transaction/{transactionNumber}`
+
+**Required role:** Analytics+
 
 Return a transaction by transactionNumber.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/transaction/{transactionNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>transactionNumber (string) - Transaction number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TransactionService.get</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `transactionNumber` | path | string | yes | Number of the transaction. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/transaction/T001
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/transaction/T001
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -169,78 +115,46 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Create transaction
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Transaction/getTransaction)
 
-Creates a new transaction.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/transaction</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p><span style="color: rgb(0,0,0);">licenseeNumber</span> (string) - L<span style="color: rgb(0,0,0);">icensee number</span>.</p>
-<p><span style="color: rgb(0,0,0);">number (string) - Unique number (across all products of a vendor) that identifies the transaction. <span>Optional.</span></span></p>
-<p><span style="color: rgb(0,0,0);">active (boolean) - Always true for transactions.</span></p>
-<p><span style="color: rgb(0,0,0);">status (string) - Status of transaction. "<span style="color: rgb(34,34,34);">CANCELLED</span>", "<span style="color: rgb(34,34,34);">CLOSED</span>", "<span style="color: rgb(34,34,34);">PENDING</span>".</span></p>
-<p><span style="color: rgb(0,0,0);">source (<span>string</span>) - "SHOP". AUTO transaction for internal use only.</span></p>
-<p><span style="color: rgb(0,0,0);"><span><span><span><span>dateCreated (<span>date-time</span>) - <span>Date created. <span>Optional.</span></span></span></span></span></span></span></p>
-<p><span style="color: rgb(0,0,0);"><span><span><span><span><span>dateClosed (<span>date-time</span>) - <span>Date closed. <span>Optional.</span></span></span></span></span></span></span></span></p>
-<p><span style="color: rgb(0,0,0);"><span><span><span><span><span><span>paymentMethod (<span>string</span>) - P<span>ayment method. <span>Optional.</span></span></span></span></span></span></span></span></span></p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Create transaction
+------------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#create-com.labs64.netlicensing.domain.vo.Context-com.labs64.netlicensing.domain.entity.Transaction-" class="external-link">TransactionService.create</a>
+<span class="http-method post">POST</span> `/transaction`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Admin
+
+Creates a new transaction. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `status` | body | string |  | Values: `PENDING`, `CLOSED`. |
+| `source` | body | string |  | Use `SHOP` for transactions you create. The other values are set by NetLicensing for automatic transactions. |
+| `grandTotal` | body | string |  | Decimal grand total. |
+| `discount` | body | string |  | Decimal discount. |
+| `currency` | body | string |  | Values: `EUR`, `USD`. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/transaction
-licenseeNumber=IP53OX9PF&number=TFMEIR1B9&active=true&status=PENDING&source=SHOP
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "licenseeNumber=IP53OX9PF&number=TFMEIR1B9&active=true&status=PENDING&source=SHOP" \
+  https://go.netlicensing.io/core/v2/rest/transaction
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -253,79 +167,47 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Update transaction
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Transaction/createTransaction)
 
-Sets the provided properties to a transaction. Return an updated
-transaction.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/transaction/{transactionNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>transactionNumber (string) - Transaction number</p>
-<p><span style="color: rgb(0,0,0);">number (string) - Unique number (across all products of a vendor) that identifies the transaction. <span>Optional.</span></span></p>
-<p><span style="color: rgb(0,0,0);">active (boolean) - Always true for transactions. <span>Optional.</span></span></p>
-<p><span style="color: rgb(0,0,0);">status (string) - Status of transaction. "<span style="color: rgb(34,34,34);">CANCELLED</span>", "<span style="color: rgb(34,34,34);">CLOSED</span>", "<span style="color: rgb(34,34,34);">PENDING</span>". <span>Optional.</span></span></p>
-<p><span style="color: rgb(0,0,0);">source (string) - "SHOP". AUTO transaction for internal use only. <span>Optional.</span></span></p>
-<p><span style="color: rgb(0,0,0);">dateCreated (date-time) - Date created. <span>Optional.</span></span></p>
-<p><span style="color: rgb(0,0,0);">dateClosed (date-time) - Date closed. <span>Optional.</span></span></p>
-<p><span style="color: rgb(0,0,0);">paymentMethod (string) - Payment method. <span>Optional.</span></span></p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Update transaction
+------------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TransactionService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Transaction-" class="external-link">TransactionService.update</a>
+<span class="http-method post">POST</span> `/transaction/{transactionNumber}`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Admin
+
+Sets the provided properties to a transaction. Return an updated transaction. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `transactionNumber` | path | string | yes | Number of the transaction. |
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `status` | body | string |  | Values: `PENDING`, `CLOSED`. |
+| `source` | body | string |  | Use `SHOP` for transactions you create. The other values are set by NetLicensing for automatic transactions. |
+| `grandTotal` | body | string |  | Decimal grand total. |
+| `discount` | body | string |  | Decimal discount. |
+| `currency` | body | string |  | Values: `EUR`, `USD`. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/transaction/TGG8UTJS8
-number=TGG8UTJS8&active=false&status=CANCELLED
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "number=TGG8UTJS8&active=false&status=CANCELLED" \
+  https://go.netlicensing.io/core/v2/rest/transaction/TGG8UTJS8
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -338,4 +220,6 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Transaction/updateTransaction)
+

@@ -6,7 +6,7 @@ nav_order: 50
 has_children: true
 description: "Reference for the NetLicensing REST API: URI structure, authentication, JSON and XML responses, parameters, data types, OpenAPI specification and the essential validate call."
 permalink: restful-api
-last_modified_at: 2026-10-25
+last_modified_at: 2026-10-30
 redirect_from:
   - /api
   - /rest-api
@@ -81,7 +81,7 @@ URIs for NetLicensing API (RESTful) resources have the following structure:
 
 `<query>` - parameters passed with the request (see below)
 
-In case the requested resource does not exist, HTTP response with status code <a href="https://en.wikipedia.org/wiki/HTTP_403" class="external-link" target="_blank">404</a> will be returned.
+A missing entity returns HTTP status code `400`; `404` means an unknown endpoint, an unavailable feature or an unsupported HTTP method. Error codes, paging and filtering, and role levels shared by all endpoints are described on the [Conventions](api-conventions) page.
 
 Very rare, but it happens that top-level domain (TLD) DNS servers also have problems. In this case domain name can not be resolved to the IP address, rendering the service unavailable. TLD DNS is not under our control, and in case of problems there we can't influence recovery times. To ensure uninterruptible service even in this unlikely case, we provide a backup domain name for the NetLicensing API in another TLD: In case of DNS resolution error for `go.netlicensing.io`, retry your API request using `netlicensing.labs64.com` host name.
 
@@ -128,7 +128,7 @@ All values are transmitted over HTTPS in text form. The following table summariz
 </tr>
 <tr class="even">
 <td><p>Monetary</p></td>
-<td><p>Always represented by two fields: decimal "price" and "currency" - 3-character code according to <a href="https://en.wikipedia.org/wiki/ISO_4217" class="external-link">ISO 4217</a>. Currently only "EUR" is supported.</p></td>
+<td><p>Always represented by two fields: decimal "price" and "currency" - 3-character code according to <a href="https://en.wikipedia.org/wiki/ISO_4217" class="external-link">ISO 4217</a>. Supported currencies: `EUR` and `USD`.</p></td>
 </tr>
 </tbody>
 </table>
@@ -141,8 +141,8 @@ Besides standard properties defined for each entity type (see <a href="https://g
 OpenAPI specification and API Test Center
 -----------------------------------------
 
-A machine-readable description of the API is available as an OpenAPI (Swagger 2.0) document:
-<a href="https://netlicensing.io/NetLicensing-API/v2.x/netlicensing.json" class="external-link">https://netlicensing.io/NetLicensing-API/v2.x/netlicensing.json</a>.
+A machine-readable description of the API is available as an OpenAPI 3.1 document:
+<a href="https://netlicensing.io/NetLicensing-API/v2.x/netlicensing.yaml" class="external-link">https://netlicensing.io/NetLicensing-API/v2.x/netlicensing.yaml</a>.
 Use it to generate a client for languages without an official [client library](client-libraries), or to import the
 API into tools such as Postman.
 

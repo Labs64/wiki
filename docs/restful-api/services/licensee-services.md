@@ -7,82 +7,87 @@ grand_parent: NetLicensing REST API Reference
 nav_order: 40
 description: "REST API reference for licensees: validate a licensee's licenses, transfer licenses, and list, get, create, update and delete licensees (customers)."
 permalink: licensee-services
+last_modified_at: 2026-10-30
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/http-methods.css' | relative_url }}">
 
 Licensee Services
 =================
 
--   [Licensees list](#licensees-list)
--   [Get licensee](#get-licensee)
--   [Create licensee](#create-licensee)
--   [Update licensee](#update-licensee)
--   [Delete licensee](#delete-licensee)
--   **[Validate licensee](#validate-licensee)**
--   [Transfer licenses](#transfer-licenses)
+A **licensee** is your customer, or one installation of your product. Licenses belong to a licensee, and your software [validates](#validate-licensee) the licensee to find out what it may use.
 
-### Licensees list
+Authentication, formats, error codes, paging and role levels are the same for all endpoints and described on the [Conventions](api-conventions) page. Paths are relative to `https://go.netlicensing.io/core/v2/rest`. Every call can be tried in the [API Test Center](https://netlicensing.io/NetLicensing-API/).
 
-Return a list of all licensees for the current vendor.
+| Endpoint | Purpose | Role |
+|----------|---------|------|
+| <span class="http-method get">GET</span> [`/licensee`](#licensees-list) | List licensees | Analytics+ |
+| <span class="http-method get">GET</span> [`/licensee/{licenseeNumber}`](#get-licensee) | Get one licensee | Licensee+ |
+| <span class="http-method post">POST</span> [`/licensee`](#create-licensee) | Create a licensee | Operation+ |
+| <span class="http-method post">POST</span> [`/licensee/{licenseeNumber}`](#update-licensee) | Update a licensee | Operation+ |
+| <span class="http-method delete">DELETE</span> [`/licensee/{licenseeNumber}`](#delete-licensee) | Delete a licensee | Operation+ |
+| <span class="http-method post">POST</span> [`/licensee/{licenseeNumber}/validate`](#validate-licensee) | **Validate a licensee** | Licensee+ |
+| <span class="http-method post">POST</span> [`/licensee/{licenseeNumber}/transfer`](#transfer-licenses) | Move licenses to another licensee | Licensee+ |
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/licensee</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p> - None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+"Analytics+" means that role and every higher one, see [Roles](api-conventions#roles).
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseeService.list</a>
+---
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+Licensees list
+--------------
+
+<span class="http-method get">GET</span> `/licensee`
+
+**Required role:** Analytics+
+
+Returns the licensees of the current vendor, one page at a time.
+
+**Parameters**
+
+| Name | In | Type | Description |
+|------|----|------|-------------|
+| `filter` | query | string | Optional. Paging and sorting, see [Conventions](api-conventions#paging-sorting-and-filtering). |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/licensee
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/json" \
+  --get --data-urlencode "filter=page=0;items=5" \
+  https://go.netlicensing.io/core/v2/rest/licensee
 ```
-{: .ml-5 }
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Licensee/listLicensees)
+
+---
+
+Get licensee
+------------
+
+<span class="http-method get">GET</span> `/licensee/{licenseeNumber}`
+
+**Required role:** Licensee+
+
+Returns one licensee.
+
+**Parameters**
+
+| Name | In | Type | Description |
+|------|----|------|-------------|
+| `licenseeNumber` | path | string | Number of the licensee. |
+
+**Example**
+
+<div>Request</div>
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/licensee/I001
+```
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -94,155 +99,45 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Get licensee
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Licensee/getLicensee)
 
-Return a licensee by licenseeNumber.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/licensee/{licenseeNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>licenseeNumber (string) - Licensee number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Create licensee
+---------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseeService.get</a>
+<span class="http-method post">POST</span> `/licensee`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Operation+
+
+Creates a licensee. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | Type | | Description |
+|------|------|-|-------------|
+| `productNumber` | string | required | Product the new licensee belongs to. |
+| `number` | string | | Unique number across all products of the vendor. Generated if omitted. Cannot be changed after the first license is created. |
+| `active` | boolean | | If `false`, the licensee is disabled: it cannot obtain new licenses and validation is disabled. |
+| `name` | string | | Human-readable name. |
+| `aliases` | string | | Alternative identifiers, see [Aliases](aliases). |
+| `markedForTransfer` | boolean | | Marks the licensee as the source of a [license transfer](#transfer-licenses). |
+
+Any other field is stored as a [custom property](custom-properties). Status `402` means the operation is not included in your pricing plan.
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/licensee/I001
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "productNumber=PQVJQ5F7H&number=I762LBSSX&active=false" \
+  https://go.netlicensing.io/core/v2/rest/licensee
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
-```xml
-<netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
-    <items>
-        <item type="Licensee">
-            <property name="number">I001</property>
-            <property name="active">true</property>
-            <property name="CustomProperty">CustomPropertyValue</property>
-        </item>
-    </items>
-</netlicensing>
-```
-{: .ml-5 }
-
-### Create licensee
-
-Creates a new licensee.
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/licensee</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p><span style="color: rgb(0,0,0);">productNumber (string) - </span>productNumber to assign new licensee object.</p>
-<p>number (string) - Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee. Optional.</p>
-<p>active (boolean) - If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled (tbd).</p>
-<p>name (string) - Licensee name. Optional.</p>
-<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L<span>icensee Secret for this licensee <span>(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span> available in selected pricing plans)</span>. </span>Optional. <img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></span></p>
-<p><span style="color: rgb(80,80,80);"><span style="color: rgb(34,34,34);">markedForTransfer (boolean) - Mark licensee for transfer. <span style="color: rgb(80,80,80);">Optional.</span></span></span></p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-402 - <span>Not allowed within your pricing plan</span><br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
-
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Licensee-" class="external-link">LicenseeService.create</a>
-
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
-
-<div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/licensee
-productNumber=PQVJQ5F7H&number=I762LBSSX&active=false
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
-```
-{: .ml-5 }
-
-<div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -254,263 +149,121 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Update licensee
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Licensee/createLicensee)
 
-Sets the provided properties to a licensee. Return an updated licensee.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/licensee/{licenseeNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>licenseeNumber (string) - Licensee number.</p>
-<p>number (string) - Unique number (across all products of a vendor) that identifies the licensee. Vendor can assign this number when creating a licensee or let NetLicensing generate one. Read-only after creation of the first license for the licensee. Optional.</p>
-<p>active (boolean) - If set to false, the licensee is disabled. Licensee can not obtain new licenses, and validation is disabled (tbd). Optional.</p>
-<p>name (string) - Licensee name. Optional.</p>
-<p><span style="color: rgb(80,80,80);">licenseeSecret (string) - L</span><span style="color: rgb(80,80,80);">icensee Secret for licensee <span style="color: rgb(80,80,80);">(</span><img src="assets/images/icons/emoticons/information.png" alt="(info)" class="emoticon emoticon-information" /><span style="color: rgb(80,80,80);"> available in selected pricing plans)</span>. </span><span style="color: rgb(80,80,80);">Optional.<span style="color: rgb(80,80,80);"> </span><img src="assets/images/icons/emoticons/warning.png" alt="(warning)" class="emoticon emoticon-warning" /><span style="color: rgb(80,80,80);"> </span><em>Deprecated, use <a href="node-locked">Node-Locked Licensing Model</a> instead.</em></span></p>
-<p><span style="color: rgb(80,80,80);"><span style="color: rgb(34,34,34);">markedForTransfer (boolean) - Mark licensee for transfer. </span><span>Optional.</span></span></p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-402 - <span>Not allowed within your pricing plan</span><br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Update licensee
+---------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.Licensee-" class="external-link">LicenseeService.update</a>
+<span class="http-method post">POST</span> `/licensee/{licenseeNumber}`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Operation+
+
+Sets the given properties and returns the updated licensee. Fields you leave out stay unchanged. The body is form encoded.
+
+**Parameters**
+
+| Name | In | Type | Description |
+|------|----|------|-------------|
+| `licenseeNumber` | path | string | Number of the licensee to update. |
+| `number`, `active`, `name`, `aliases`, `markedForTransfer` | body | | Optional. Same meaning as in [Create licensee](#create-licensee). |
+
+Any other field is stored as a [custom property](custom-properties). Status `402` means the operation is not included in your pricing plan.
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/licensee/IUI6MYNIC
-number=IP53OX9PF&active=false&custLcseeProp2=custLcseePropVal2&custLcseeProp=custLcseePropValChanged
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "active=false&custLcseeProp=custLcseePropValChanged" \
+  https://go.netlicensing.io/core/v2/rest/licensee/IUI6MYNIC
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
         <item type="Licensee">
-            <property name="number">IP53OX9PF</property>
+            <property name="number">IUI6MYNIC</property>
             <property name="active">false</property>
             <property name="productNumber">PJIF898SP</property>
             <property name="custLcseeProp">custLcseePropValChanged</property>
-            <property name="custLcseeProp2">custLcseePropVal2</property>
         </item>
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Delete licensee
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Licensee/updateLicensee)
 
-Delete a licensee by number.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>DELETE /core/v2/rest/licensee/{licenseeNumber}?forceCascade</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>licenseeNumber (string) - Licensee number.</p>
-<p>forceCascade (boolean) - Force object deletion and all descendants.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>204 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Delete licensee
+---------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseeService.delete</a>
+<span class="http-method delete">DELETE</span> `/licensee/{licenseeNumber}`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Operation+
+
+Deletes a licensee. Responds with `204` and no body.
+
+**Parameters**
+
+| Name | In | Type | Description |
+|------|----|------|-------------|
+| `licenseeNumber` | path | string | Number of the licensee to delete. |
+| `forceCascade` | query | boolean | Optional. Also deletes everything that belongs to the licensee, such as its licenses. |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-DELETE https://go.netlicensing.io/core/v2/rest/licensee/I001
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --request DELETE \
+  "https://go.netlicensing.io/core/v2/rest/licensee/I001?forceCascade=true"
 ```
-{: .ml-5 }
 
-<div>Response</div>
-{: .code-example .ml-5 .code-header }
-```html
-HTTP/1.1 204 No Content
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Licensee/deleteLicensee)
 
-### Validate licensee
+---
 
-Validates active licenses of the licensee.
+Validate licensee
+-----------------
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/licensee/{licenseeNumber}/validate</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-<li><p>ROLE_APIKEY_LICENSEE</p></li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p>
-<p>Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p><em>licenseeNumber (string)</em> - licensee number or <a href="aliases">alias</a> with a maximum length of 1000 characters<br />
-<em>productNumber (string) (optional)</em> - product number, must be provided when "licensee auto-create" is enabled (see also <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/domain/entity/Product.html" class="external-link">Product</a> JavaDoc). Identifies the product to which new licensee should be added.<br />
-<em>licenseeName (string) (optional)</em> - human-readable name for the auto-created licensee (will be set as custom Licensee property)<br />
-<em><del>licenseeSecret</del> (deprecated) (string) (optional)</em> - when provided and licensee secret enabled, will enable the licensee secret logic as described in <a href="licensee-secret">Licensee Secret (deprecated)</a></p>
-<p>Some product modules (depending on the licensing model) may require parameters passed on validate. Parameters to the product modules are passed using the following format:</p>
-<p><em>productModuleNumber0 (string)</em> - product module 0 number<em><br />
-&lt;pmParam1&gt;0</em> <em>(any)</em> - product module 0 parameter "&lt;pmParam1&gt;"<em><br />
-&lt;pmParam2&gt;0 <em>(any)</em></em> - product module 0 parameter "&lt;pmParam2&gt;"<em><br />
-<em>...<br />
-productModuleNumber1 (string)</em></em> - product module 1 number<em><br />
-<em>&lt;pmParam1&gt;1 <em>(any)</em></em></em> - product module 1 parameter "&lt;pmParam1&gt;"<br />
-<em>...<br />
-productModuleNumber&lt;N&gt; (string)</em> - product module N number<br />
-<em>&lt;pmParam1&gt;&lt;N&gt; <em>(any)</em></em> - product module N parameter "&lt;pmParam1&gt;"<br />
-<em>...</em></p>
-<p>Notes:</p>
-<ul>
-<li>&lt;N&gt; is 0-based decimal number incremented for every product module that receives parameters.</li>
-<li>Order of product modules is not important.</li>
-<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="licensing-models">licensing model</a>.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>204 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+<span class="http-method post">POST</span> `/licensee/{licenseeNumber}/validate`
 
-You can specify Licensee/Customer custom properties to be set in the validation request.
-These properties will be considered for all new customers upon initial validation.
+**Required role:** Licensee+
 
-<span class="s1">To use NetLicnesing effectively, validation must be
-up-to-date. On the other hand, performing validation requests too
-frequently will make response time of your service longer and create
-unnecessary load on the NetLicensing servers. Therefore it is
-recommended to keep last validation result on the client side and reuse
-it for a certain period for repeated validation requests. To determine
-the maximum validity duration of the validation response, NetLicensing
-returns an additional value with the validation response that is called
-„ttl“: it is the expiration timestamp of this validation response
-in <a href="https://en.wikipedia.org/wiki/ISO_8601" class="external-link"><span class="s2">ISO 8601</span></a> format.</span>
+Checks the licenses of a licensee and returns, for each product module, whether it is valid. This is the call your product makes to decide what the customer may use. The body is optional and form encoded.
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#validate-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.vo.ValidationParameters-com.labs64.netlicensing.domain.vo.MetaInfo...-" class="external-link">LicenseeService.validate</a>
+**Parameters**
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+| Name | In | Type | Description |
+|------|----|------|-------------|
+| `licenseeNumber` | path | string | Licensee number or an [alias](aliases), up to 1000 characters. |
+| `productNumber` | body | string | Required when the licensee does not exist yet and the product has *licensee auto-create* enabled. |
+| `licenseeName` | body | string | Name for an auto-created licensee. |
+| `dryRun` | body | boolean | If `true`, validation runs without saving any changes. |
+| `forOfflineUse` | body | boolean | If `true`, the response is prepared for [offline validation](offline-license-validation). |
+
+Any other field is stored as a licensee [custom property](custom-properties) if this call creates the licensee.
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" --request POST \
+  https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
-<netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2015-11-03T15:02:36.137Z">
+<netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2026-10-30T15:02:36.137Z">
   <items>
     <item type="ProductModuleValidation">
       <property name="productModuleNumber">M011</property>
@@ -519,242 +272,74 @@ Accept: application/xml
       <list name="L011">
         <property name="valid">false</property>
       </list>
-      <list name="L012">
-        <property name="valid">false</property>
-      </list>
     </item>
   </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request POST https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
+### Product module parameters
+
+Some [licensing models](licensing-models) need extra input on validation. Send it together with the number of the product module it applies to.
+
+| Licensing model | Parameters |
+|-----------------|------------|
+| [Floating](floating) | `sessionId` (required), `action` (`checkOut` or `checkIn`, required), `maxCheckoutValidity` (seconds, overrides the module setting) |
+| [Node-locked](node-locked) | `nodeSecret` (required in `CLIENT` secret mode) |
+| [Pay-per-use](pay-per-use) | `usedQuantity` (uses to record) or `reserveQuantity` (uses to reserve), never both |
+
+For **one module**, send `productModuleNumber` followed by its parameters:
+
 ```
-{: .ml-5 }
-
-<img src="assets/images/icons/emoticons/warning.png" alt="(tick)" class="emoticon emoticon-tick" /> <strong>Please Note:</strong> HTTP method **GET** is **deprecated** for licensee validate.
-
-If you use RESTful API directly in your code, ensure to replace GET with POST for validate. GET method will be removed in one of the future releases, until then you'll get the following warning if using GET:
-
-<span class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span class="expand-control-text">Warning message</span>
-
-<div>Response</div>
-{: .code-example .ml-5 .code-header }
-```xml
-<netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2017-04-04T10:31:45.400Z">
-  <ns2:infos>
-        <ns2:info id="methodIsDeprecated" type="warning">'GET' method for licensee validate is deprecated, use 'POST' instead</ns2:info>
-  </ns2:infos>
-  <items>
-    <item type="ProductModuleValidation">
-      <property name="productModuleNumber">M011</property>
-      <property name="productModuleName">Terminal Devices</property>
-      <property name="licensingModel">Rental</property>
-      <list name="L011">
-        <property name="valid">false</property>
-      </list>
-      <list name="L012">
-        <property name="valid">false</property>
-      </list>
-    </item>
-  </items>
-</netlicensing>
+productModuleNumber=M001&sessionId=abc&action=checkOut
 ```
-{: .ml-5 }
 
-If using NetLicensing client library - update to the newest version.
+For **several modules**, add the same 0-based number to a module and its parameters. The order does not matter:
 
-Besides, new features associated with the validate method will not be available when called using GET.
+```
+productModuleNumber0=M001&sessionId0=abc&action0=checkOut&productModuleNumber1=M002&nodeSecret1=xyz
+```
 
-<img src="assets/images/icons/emoticons/warning.png" alt="(tick)" class="emoticon emoticon-tick" /> <strong>Please Note:</strong> Below specification for the GET method is only present here to help migrating from old code, please <strong>don't use GET method for validate, use POST instead</strong> ([see above](#validate-licensee))!
+### Caching the result
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/licensee/{licenseeNumber}/validate[?productNumber={productNumber}&amp;licenseeName={licenseeName}]</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-<li><p>ROLE_APIKEY_LICENSEE</p></li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p><em>licenseeNumber (string)</em> - licensee number with a maximum length of 1000 characters<br />
-<em>productNumber (string) (optional)</em> - product number, must be provided when "licensee auto-create" is enabled (see also <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/domain/entity/Product.html" class="external-link">Product</a> JavaDoc). Identifies the product to which new licensee should be added.<br />
-<em>licenseeName (string) (optional)</em> - human-readable name for the auto-created licensee (will be set as custom Licensee property)<br />
-<em>licenseeSecret (string) (optional)</em> - when provided and licensee secret enabled, will enable the licensee secret logic as described in <a href="licensee-secret">Licensee Secret (deprecated)</a></p>
-<p>Some product modules (depending on the licensing model) may require parameters passed on validate. Parameters to the product modules are passed using the following format:</p>
-<p><em>productModuleNumber0 (string)</em> - product module 0 number<em><br />
-&lt;pmParam1&gt;0</em> <em>(any)</em> - product module 0 parameter "&lt;pmParam1&gt;"<em><br />
-&lt;pmParam2&gt;0 <em>(any)</em></em> - product module 0 parameter "&lt;pmParam2&gt;"<em><br />
-<em>...<br />
-productModuleNumber1 (string)</em></em> - product module 1 number<em><br />
-<em>&lt;pmParam1&gt;1 <em>(any)</em></em></em> - product module 1 parameter "&lt;pmParam1&gt;"<br />
-<em>...<br />
-productModuleNumber&lt;N&gt; (string)</em> - product module N number<br />
-<em>&lt;pmParam1&gt;&lt;N&gt; <em>(any)</em></em> - product module N parameter "&lt;pmParam1&gt;"<br />
-<em>...</em></p>
-<p>Notes:</p>
-<ul>
-<li>&lt;N&gt; is 0-based decimal number incremented for every product module that receives parameters.</li>
-<li>Order of product modules is not important.</li>
-<li>For the &lt;pmParamX&gt; documentation refer to the corresponding <a href="licensing-models">licensing model</a>.</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>204 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Do not validate on every action: it slows your product down and loads the server. Every response has a `ttl` attribute, the time (ISO 8601) until which the result may be reused. Keep the last result on the client and validate again after `ttl`.
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+### Signed responses
+
+If the API key used for the call has a private key, the XML response is signed. See [Signing the response](signing-the-response).
+
+<div class="alert alert-warning" markdown="1">
+`GET /licensee/{licenseeNumber}/validate` is deprecated and returns a `methodIsDeprecated` warning. Use `POST`.
+</div>
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Licensee/validateLicensee)
+
+---
+
+Transfer licenses
+-----------------
+
+<span class="http-method post">POST</span> `/licensee/{licenseeNumber}/transfer`
+
+**Required role:** Licensee+
+
+Moves the licenses of a source licensee to the licensee in the path. Responds with `204` and no body. The body is form encoded.
+
+**Parameters**
+
+| Name | In | Type | Description |
+|------|----|------|-------------|
+| `licenseeNumber` | path | string | Target licensee, which receives the licenses. |
+| `sourceLicenseeNumber` | body | string | Required. Licensee whose licenses are moved. |
+
+Both licensees must be active and belong to the same product, and the source licensee must have `markedForTransfer=true`.
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
-Accept: application/xml
-```
-{: .ml-5 }
-
-<div>Response</div>
-{: .code-example .ml-5 .code-header }
-```xml
-<netlicensing xmlns="http://netlicensing.labs64.com/schema/context" ttl="2015-11-03T15:02:36.137Z">
-  <items>
-    <item type="ProductModuleValidation">
-      <property name="productModuleNumber">M011</property>
-      <property name="productModuleName">Terminal Devices</property>
-      <property name="licensingModel">Rental</property>
-      <list name="L011">
-        <property name="valid">false</property>
-      </list>
-      <list name="L012">
-        <property name="valid">false</property>
-      </list>
-    </item>
-  </items>
-</netlicensing>
-```
-{: .ml-5 }
-
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/licensee/I011/validate
+curl --user demo:demo --data "sourceLicenseeNumber=ISourceLicensee" \
+  https://go.netlicensing.io/core/v2/rest/licensee/I011/transfer
 ```
-{: .ml-5 }
- 
 
-### Transfer licenses
-
-Transfer licenses between licensees.
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/licensee/{licenseeNumber}/transfer</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-<li><p>ROLE_APIKEY_LICENSEE</p></li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p><em>licenseeNumber (string)</em> - the number of licensee receiving licenses (max length: 1000 characters) - target</p>
-<p><em><span style="color: rgb(0,0,0);">sourceLicensee</span>Number (string)</em> - the number of (temporary) licensee transferring its licenses (max length: 1000 characters) - source</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>204 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
-
-The following prerequisites must be fulfilled:
-
--   Licensees with *sourceLicenseeNumber* and *licenseeNumber* must be assigned to the same product
--   Source licensee must be marked for transfer (licensee [custom property](custom-properties) *markedForTransfer* must be set to `true`)
-
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseeService.html#transfer-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-" class="external-link">LicenseeService.transfer</a>
-
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
-
-<div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/licensee/I011/transfer
-sourceLicenseeNumber=ISourceLicensee
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
-```
-{: .ml-5 }
-
-<div>Response</div>
-{: .code-example .ml-5 .code-header }
-```http
-HTTP/1.1 204 No Content
-```
-{: .ml-5 }
-
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl -X POST --header 'Content-Type: application/x-www-form-urlencoded' --header 'Accept: application/xml' --header 'Authorization: Basic ZGVtbzpkZW1v' -d 'sourceLicenseeNumber=ISourceLicensee' 'https://go.netlicensing.io/core/v2/rest/licensee/I011/transfer'
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Licensee/transferLicenses)

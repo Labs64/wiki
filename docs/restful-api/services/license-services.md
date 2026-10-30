@@ -7,80 +7,56 @@ grand_parent: NetLicensing REST API Reference
 nav_order: 50
 description: "REST API reference for licenses: list, get, create, update and delete licenses, and activate or deactivate a license to grant or revoke entitlements."
 permalink: license-services
+last_modified_at: 2026-10-30
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/http-methods.css' | relative_url }}">
 
 License Services
 ================
 
--   [Licenses list](#licenses-list)
--   [Get license](#get-license)
--   [Create license](#create-license)
--   [Update license](#update-license)
--   [Delete license](#delete-license)
+Licenses are issued to a licensee from a license template.
 
-### Licenses list
+Authentication, formats, error codes, paging and role levels are the same for all endpoints and described on the [Conventions](api-conventions) page. Paths are relative to `https://go.netlicensing.io/core/v2/rest`. Every call can be tried in the [API Test Center](https://netlicensing.io/NetLicensing-API/).
+
+| Endpoint | Purpose | Role |
+|----------|---------|------|
+| <span class="http-method get">GET</span> [`/license`](#licenses-list) | List licenses | Licensee+ |
+| <span class="http-method get">GET</span> [`/license/{licenseNumber}`](#get-license) | Get license | Licensee+ |
+| <span class="http-method post">POST</span> [`/license`](#create-license) | Create license | Operation+ |
+| <span class="http-method post">POST</span> [`/license/{licenseNumber}`](#update-license) | Update license | Operation+ |
+| <span class="http-method delete">DELETE</span> [`/license/{licenseNumber}`](#delete-license) | Delete license | Operation+ |
+
+A role followed by "+" means that role and every higher one, see [Roles](api-conventions#roles).
+
+---
+
+Licenses list
+-------------
+
+<span class="http-method get">GET</span> `/license`
+
+**Required role:** Licensee+
 
 Return a list of all licenses for the current vendor.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/license</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>- None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseService.list</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `filter` | query | string |  | `;`-separated `key=value` pairs, e.g. `page=0;items=50;sortorder=number;sortdirection=DESC`. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/license
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/license
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -92,71 +68,37 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Get license
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/License/listLicenses)
+
+---
+
+Get license
+-----------
+
+<span class="http-method get">GET</span> `/license/{licenseNumber}`
+
+**Required role:** Licensee+
 
 Return a license by licenseNumber.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/license/{licenseNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>licenseNumber (string) - License number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">LicenseService.get</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `licenseNumber` | path | string | yes | Number of the license. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/license/L001
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/license/L001
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -168,85 +110,54 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Create license
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/License/getLicense)
 
-Creates a new license.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/license</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p><span style="color: rgb(0,0,0);">licenseeNumber (string) - <span>licenseeNumber</span></span> to assign new license object.</p>
-<p><span style="color: rgb(0,0,0);">licenseTemplateNumber (string) - <span>licenseTemplateNumber</span></span> to assign new license object.<span style="color: rgb(0,0,0);"> </span></p>
-<p>number (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed.</p>
-<p>active (boolean) - If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process.</p>
-<p>name (string) - Name for the licensed item. Set from license template on creation, if not specified explicitly. Optional.</p>
-<p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
-<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
-<p>- EUR       - Euro currency for the license price</p>
-<p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p>
-<p><span style="color: rgb(0,0,0);">parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</span></p>
-<p><span style="color: rgb(0,0,0);">timeVolumePeriod (string) - Indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</span></p>
-</td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Create license
+--------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.entity.License-" class="external-link">LicenseService.create</a>
+<span class="http-method post">POST</span> `/license`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Operation+
+
+Creates a new license. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `licenseeNumber` | body | string | yes | Licensee that receives the license. Required on create. |
+| `licenseTemplateNumber` | body | string | yes | Template the license is created from. Required on create. |
+| `transactionNumber` | body | string |  | Optional. Links the license to an existing transaction. |
+| `name` | body | string |  | Name of the licensed item. Taken from the license template when omitted. |
+| `hidden` | body | boolean |  | If `true`, the license is not shown to the end customer. Taken from the license template when omitted. |
+| `startDate` | body | string |  | TIMEVOLUME licenses: start of the time volume. Required for `Rental` and for non-automatic `Subscription` licenses. |
+| `parentFeature` | body | string |  | `Rental` TIMEVOLUME licenses (required): number of the FEATURE license that this time volume extends. |
+| `timeVolume` | body | string |  | TIMEVOLUME licenses. Taken from the license template when omitted. |
+| `timeVolumePeriod` | body | string |  | Unit of `timeVolume`. Defaults to `DAY` when omitted. Values: `DAY`, `WEEK`, `MONTH`, `YEAR`. |
+| `maxSessions` | body | string |  | FLOATING licenses. Taken from the license template when omitted. |
+| `quantity` | body | string |  | QUANTITY licenses (`PayPerUse`, `Quota`, `NodeLocked`). Taken from the license template when omitted. |
+| `usedQuantity` | body | string |  | `PayPerUse`: quantity already used. Must not exceed `quantity`. |
+| `gracePeriod` | body | boolean |  | `Rental`, `Subscription`: marks the license as a grace period license. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/license
-licenseeNumber=IKPQGUUJ4&licenseTemplateNumber=EUJOJ74GS&active=true
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "licenseeNumber=IKPQGUUJ4&licenseTemplateNumber=EUJOJ74GS&active=true" \
+  https://go.netlicensing.io/core/v2/rest/license
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -257,84 +168,55 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Update license
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/License/createLicense)
 
-Sets the provided properties to a license. Return an updated license.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/license/{licenseNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>licenseNumber (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed.</p>
-<p>number (string) - Unique number (across all products/licensees of a vendor) that identifies the license. Vendor can assign this number when creating a license or let NetLicensing generate one. Read-only after corresponding creation transaction status is set to closed. Optional.</p>
-<p>active (boolean) - If set to false, the license is disabled. License can be re-enabled, but as long as it is disabled, the license is excluded from the validation process. Optional.</p>
-<p>name (string) - Name for the licensed item. Set from license template on creation, if not specified explicitly. Optional.</p>
-<p><span style="color: rgb(0,0,0);">startDate (<span>date-time</span>) - for TIMEVOLUME licenseType</span></p>
-<p><span style="color: rgb(0,0,0);">parentfeature (string) - Mandatory for 'TIMEVOLUME' license type and 'RENTAL' licensing model. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">timeVolume (number) - Mandatory for 'TIMEVOLUME' license type.</span></p>
-<p><span style="color: rgb(0,0,0);">timeVolumePeriod (string) - Indicates the time unit for the 'timeVolume' parameter; allowed values - DAY, WEEK, MONTH, YEAR</span></p>
-<p>price (<span style="color: rgb(0,0,0);">double</span>) - price for the license. If &gt;0, it must always be accompanied by the currency specification. Read-only, set from license template on creation. Optional.</p>
-<p>currency (enum) - specifies currency for the license price. Check data types to discover which currencies are supported. Read-only, set from license template on creation. Optional.</p>
-<p>- EUR       - Euro currency for the license price</p>
-<p>hidden (boolean) - If set to 'true', this license is not shown in <a href="netlicensing-shop">NetLicensing Shop</a> as purchased license. Set from license template on creation, if not specified explicitly. Optional.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Update license
+--------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-java.lang.String-com.labs64.netlicensing.domain.entity.License-" class="external-link">LicenseService.update</a>
+<span class="http-method post">POST</span> `/license/{licenseNumber}`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Operation+
+
+Sets the provided properties to a license. Return an updated license. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `licenseNumber` | path | string | yes | Number of the license. |
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `licenseeNumber` | body | string |  | Licensee that receives the license. Required on create. |
+| `licenseTemplateNumber` | body | string |  | Template the license is created from. Required on create. |
+| `transactionNumber` | body | string |  | Optional. Links the license to an existing transaction. |
+| `name` | body | string |  | Name of the licensed item. Taken from the license template when omitted. |
+| `hidden` | body | boolean |  | If `true`, the license is not shown to the end customer. Taken from the license template when omitted. |
+| `startDate` | body | string |  | TIMEVOLUME licenses: start of the time volume. Required for `Rental` and for non-automatic `Subscription` licenses. |
+| `parentFeature` | body | string |  | `Rental` TIMEVOLUME licenses (required): number of the FEATURE license that this time volume extends. |
+| `timeVolume` | body | string |  | TIMEVOLUME licenses. Taken from the license template when omitted. |
+| `timeVolumePeriod` | body | string |  | Unit of `timeVolume`. Defaults to `DAY` when omitted. Values: `DAY`, `WEEK`, `MONTH`, `YEAR`. |
+| `maxSessions` | body | string |  | FLOATING licenses. Taken from the license template when omitted. |
+| `quantity` | body | string |  | QUANTITY licenses (`PayPerUse`, `Quota`, `NodeLocked`). Taken from the license template when omitted. |
+| `usedQuantity` | body | string |  | `PayPerUse`: quantity already used. Must not exceed `quantity`. |
+| `gracePeriod` | body | boolean |  | `Rental`, `Subscription`: marks the license as a grace period license. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/license/L2DH0QG1O
-active=true
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "active=true" \
+  https://go.netlicensing.io/core/v2/rest/license/L2DH0QG1O
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -348,71 +230,42 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Delete license
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/License/updateLicense)
+
+---
+
+Delete license
+--------------
+
+<span class="http-method delete">DELETE</span> `/license/{licenseNumber}`
+
+**Required role:** Operation+
 
 Delete a license by number.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>DELETE /core/v2/rest/license/{licenseNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>licenseNumber (string) - License number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>204 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/LicenseService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">LicenseService.delete</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `licenseNumber` | path | string | yes | Number of the license. |
+| `forceCascade` | query | string |  | `true` also deletes dependent entities. Any other value, or no value, means `false`. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-DELETE https://go.netlicensing.io/core/v2/rest/license/L001
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --request DELETE \
+  https://go.netlicensing.io/core/v2/rest/license/L001
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
-```html
+{: .code-example .code-header }
+```http
 HTTP/1.1 204 No Content
 ```
-{: .ml-5 }
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/License/deleteLicense)
+

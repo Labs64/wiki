@@ -7,75 +7,56 @@ grand_parent: NetLicensing REST API Reference
 nav_order: 80
 description: "REST API reference for payment methods: list, get and update the payment methods (such as PayPal and Stripe) used by NetLicensing Shop."
 permalink: payment-method-services
+last_modified_at: 2026-10-30
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/http-methods.css' | relative_url }}">
 
 Payment Method Services
 =======================
 
--   [Payment methods list](#payment-methods-list)
--   [Get payment method](#get-payment-method)
--   [Update payment method](#update-payment-method)
+Payment methods available in the NetLicensing shop.
 
-### Payment methods list
+Authentication, formats, error codes, paging and role levels are the same for all endpoints and described on the [Conventions](api-conventions) page. Paths are relative to `https://go.netlicensing.io/core/v2/rest`. Every call can be tried in the [API Test Center](https://netlicensing.io/NetLicensing-API/).
+
+| Endpoint | Purpose | Role |
+|----------|---------|------|
+| <span class="http-method get">GET</span> [`/paymentmethod`](#payment-methods-list) | List payment methods | Admin |
+| <span class="http-method get">GET</span> [`/paymentmethod/{paymentMethodNumber}`](#get-payment-method) | Get payment method | Admin |
+| <span class="http-method post">POST</span> [`/paymentmethod/{paymentMethodNumber}`](#update-payment-method) | Update payment method | Admin |
+
+A role followed by "+" means that role and every higher one, see [Roles](api-conventions#roles).
+
+---
+
+Payment methods list
+--------------------
+
+<span class="http-method get">GET</span> `/paymentmethod`
+
+**Required role:** Admin
 
 Return a list of all payment methods for the current vendor.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/paymentmethod</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>- None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Paging attributes (`pagenumber` and the others) are **not** set on this list response.
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">PaymentMethodService.list</a>
+**Parameters**
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `filter` | query | string |  | `;`-separated `key=value` pairs, e.g. `page=0;items=50;sortorder=number;sortdirection=DESC`. |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/paymentmethod
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/paymentmethod
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos/>
@@ -92,75 +73,37 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/paymentmethod
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/PaymentMethod/listPaymentMethods)
 
-### Get payment method
+---
+
+Get payment method
+------------------
+
+<span class="http-method get">GET</span> `/paymentmethod/{paymentMethodNumber}`
+
+**Required role:** Admin
 
 Return a payment method info by paymentMethodNumber.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/paymentmethod/{paymentMethodNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>paymentMethodNumber (string) - Payment method number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">PaymentMethodService.get</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `paymentMethodNumber` | path | string | yes | Number of the payment method. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/paymentmethod/PAYPAL
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/paymentmethod/PAYPAL
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos/>
@@ -173,82 +116,41 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/paymentmethod/PAYPAL
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/PaymentMethod/getPaymentMethod)
 
-### Update payment method
+---
 
-Sets the provided properties to a payment method. Return an updated
-payment method.
+Update payment method
+---------------------
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/paymentmethod/{paymentMethodNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>paymentMethodNumber (string) - Payment method number.</p>
-<p><span style="color: rgb(0,0,0);">active (boolean) - If set to 'false', the payment method is disabled.</span></p>
-<p><span style="color: rgb(0,0,0);">paypal.subject (string) - The e-mail address of the PayPal account for which you are making the API calls.</span></p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-<span>402 - Not allowed within your pricing plan</span><br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+<span class="http-method post">POST</span> `/paymentmethod/{paymentMethodNumber}`
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/PaymentMethodService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.PaymentMethod-" class="external-link">PaymentMethodService.update</a>
+**Required role:** Admin
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+Sets the provided properties to a payment method. Return an updated payment method. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `paymentMethodNumber` | path | string | yes | Number of the payment method. |
+| `active` | body | boolean |  | Parsed with Java `Boolean.parseBoolean`. Only `true` (case-insensitive) is true. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/paymentmethod/PAYPAL
-active=false
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "active=false" \
+  https://go.netlicensing.io/core/v2/rest/paymentmethod/PAYPAL
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos/>
@@ -261,4 +163,6 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/PaymentMethod/updatePaymentMethod)
+

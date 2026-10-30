@@ -7,73 +7,57 @@ grand_parent: NetLicensing REST API Reference
 nav_order: 70
 description: "REST API reference for tokens: create shop tokens to open NetLicensing Shop, create and revoke API keys, and create action tokens such as Customer Portal login."
 permalink: token-services
+last_modified_at: 2026-10-30
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/http-methods.css' | relative_url }}">
 
 Token Services
 ==============
 
--   [Tokens list](#tokens-list)
--   [Get token](#get-token)
--   [Create token](#create-token)
--   [Delete token](#delete-token)
+Tokens grant temporary or API-key access, and create shop links for licensees.
 
-### Tokens list
+Authentication, formats, error codes, paging and role levels are the same for all endpoints and described on the [Conventions](api-conventions) page. Paths are relative to `https://go.netlicensing.io/core/v2/rest`. Every call can be tried in the [API Test Center](https://netlicensing.io/NetLicensing-API/).
+
+| Endpoint | Purpose | Role |
+|----------|---------|------|
+| <span class="http-method get">GET</span> [`/token`](#tokens-list) | List active tokens | Admin |
+| <span class="http-method get">GET</span> [`/token/{tokenNumber}`](#get-token) | Get token | Admin |
+| <span class="http-method post">POST</span> [`/token`](#create-token) | Create token | Licensee+ |
+| <span class="http-method delete">DELETE</span> [`/token/{tokenNumber}`](#delete-token) | Delete token | Admin |
+
+A role followed by "+" means that role and every higher one, see [Roles](api-conventions#roles).
+
+---
+
+Tokens list
+-----------
+
+<span class="http-method get">GET</span> `/token`
+
+**Required role:** Admin
 
 Return a list of all tokens for the current vendor.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/token</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>- None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Extra filter key: `tokenType=<TokenType>`. An unknown value adds a WARNING info.
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TokenService.list<br />
-</a>
+**Parameters**
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `filter` | query | string |  | `;`-separated `key=value` pairs, e.g. `page=0;items=50;sortorder=number;sortdirection=DESC`. |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/token
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/token
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos />
@@ -92,74 +76,40 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/token
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Token/listTokens)
 
- 
+---
 
-### Get token
+Get token
+---------
+
+<span class="http-method get">GET</span> `/token/{tokenNumber}`
+
+**Required role:** Admin
 
 Return a token by tokenNumber.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/token/{tokenNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>tokenNumber (string) - Token number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Can be called without credentials. An expired or inactive token fails with `NotFoundException`
+("Requested token is expired."), returned as 400.
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TokenService.get<br />
-</a>
+**Parameters**
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `tokenNumber` | path | string | yes | Number of the token. |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/token/a6cd4cc9-5a37-4f8f-8c1d-090bd6e4bd48
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/token/a6cd4cc9-5a37-4f8f-8c1d-090bd6e4bd48
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos />
@@ -178,110 +128,61 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/token/a6cd4cc9-5a37-4f8f-8c1d-090bd6e4bd48
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Token/getToken)
 
- 
+---
 
-### Create token
+Create token
+------------
 
-Create token by tokenType and additional token parameters.
+<span class="http-method post">POST</span> `/token`
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/token</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a> (<span>Only for tokenType=SHOP)</span>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-<li><p>ROLE_APIKEY_LICENSEE</p></li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td>
-<p>tokenType (enum) - Token type to be generated<br />
-- <i>DEFAULT</i> - default one-time token (will be expired after first request)<br />
-- <i>SHOP</i> - shop token is used to redirect customer to the <a href="netlicensing-shop">NetLicensing Shop</a><br />
-- <i>APIKEY</i> - APIKey token<br />
-- <i>ACTION</i> - Action token (e.g. access token for the <a href="customer-portal">Customer Portal</a>)
-</p>
-<p>licenseeNumber (string) - unique customer number<br />
-- <i>tokenType=SHOP</i> - identifies licensee that will be assigned to the shop token<br />
-- <i>tokenType=APIKEY</i> - specifies the scope of validity of the APIKey; the only licensee with the given number can be validated using this APIKey<br />
-- <i>tokenType=ACTION</i> - identifies licensee for whom action token will be created
-</p>
-<p>expirationTime (optional) - Specify a custom expiration time for the token. If not provided, the default expiration time of 30 minutes will be applied.</p>
-<p>bundleNumber (optional / Bundle Shop Token) - Specify the bundle number to display on the Shop checkout page.</p>
-<p>bundlePrice (optional / Bundle Shop Token) - Specify the customer's individual bundle price. The default bundle price will be used if no bundlePrice is set.</p>
-<p>productNumber (optional / Permanent Shop Token) - The product to be purchased.</p>
-<p>predefinedShoppingItem (optional / Permanent Shop Token) - The name of the shopping cart item to be purchased.</p>
-<p>licenseTemplateNumber_N (optional / Permanent Shop Token) - The license template number(s), where N is an incrementing index starting from “1”.</p>
-<p>successURL (URI) - Take customers to this URL when they finish checkout.</p>
-<p>successURLTitle (string) - Shop link title for successful checkout process.</p>
-<p>cancelURL (URI) - Take customers to this URL when they cancel their checkout.</p>
-<p>cancelURLTitle (string) - Shop link title for cancel checkout process.</p>
-<p>action (enum) - Action to be executed; only for tokenType=ACTION<br />
-- <i>licenseeLogin</i> - action to open <a href="customer-portal">Customer Portal</a>
-</p>
-<p>apiKeyRole (string) - RoleID (see <a href="security">Security</a>). Only for tokenType=APIKEY.</p>
-</td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Required role:** Licensee+
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#create-com.labs64.netlicensing.domain.vo.Context-com.labs64.netlicensing.domain.entity.Token-" class="external-link">TokenService.create</a>
+Create token by tokenType and additional token parameters. The body is form encoded (`application/x-www-form-urlencoded`).
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+Every role may call this endpoint, but an API key that is not `ROLE_APIKEY_ADMIN` may only
+create `SHOP` tokens and `ACTION` tokens with `action=licenseeLogin`. Vendor credentials may
+create any type. Otherwise 403.
+Lifetimes: DEFAULT 1800 s, APIKEY unlimited, SHOP 1800 s (unlimited without `licenseeNumber`),
+ACTION 604800 s.
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `tokenType` | body | string |  | Defaults to `DEFAULT`. |
+| `expirationTime` | body | string |  | Expiration time. When omitted, the default lifetime of the token type applies. |
+| `apiKeyRole` | body | string |  | `APIKEY` tokens: role of the API key. Defaults to `ROLE_APIKEY_LICENSEE`. |
+| `privateKey` | body | string |  | `APIKEY` tokens: private key (on one line, without spaces) used to sign the XML responses of licensee validation made with this key. |
+| `licenseeNumber` | body | string |  | `SHOP` and `ACTION` tokens: target licensee. Must exist and must not be marked for transfer. |
+| `productNumber` | body | string |  | `SHOP` tokens: required when it cannot be taken from `licenseeNumber`. |
+| `successURL` | body | string |  | `SHOP` tokens: page the customer returns to after checkout. |
+| `successURLTitle` | body | string |  | `SHOP` tokens: title of the return link after checkout. |
+| `cancelURL` | body | string |  | `SHOP` tokens: page the customer returns to when checkout is cancelled. |
+| `cancelURLTitle` | body | string |  | `SHOP` tokens: title of the return link when checkout is cancelled. |
+| `bundleNumber` | body | string |  | `SHOP` tokens: sell this bundle. Must exist. |
+| `bundlePrice` | body | string |  | `SHOP` tokens: positive bundle price in '0.00' format. |
+| `predefinedShoppingItem` | body | string |  | `SHOP` tokens: name of the shopping item shown to the customer. |
+| `action` | body | string |  | `ACTION` tokens: `licenseeLogin`. The created token has a `customerPortalURL` that opens the customer portal for the licensee. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/token
-tokenType=SHOP&licenseeNumber=I001-DEMO
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "tokenType=SHOP&licenseeNumber=I001-DEMO" \
+  https://go.netlicensing.io/core/v2/rest/token
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <infos />
@@ -300,80 +201,41 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request POST https://go.netlicensing.io/core/v2/rest/token --data "tokenType=SHOP&licenseeNumber=I001-DEMO"
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Token/createToken)
 
-### Delete token
+---
+
+Delete token
+------------
+
+<span class="http-method delete">DELETE</span> `/token/{tokenNumber}`
+
+**Required role:** Admin
 
 Delete a token by number.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>DELETE /core/v2/rest/token/{tokenNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>tokenNumber (string) - Token number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>204 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/TokenService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">TokenService.delete<br />
-</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `tokenNumber` | path | string | yes | Number of the token. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-DELETE https://go.netlicensing.io/core/v2/rest/token/c6d36895-f2a7-497a-aad1-4290c1d17f40
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --request DELETE \
+  https://go.netlicensing.io/core/v2/rest/token/c6d36895-f2a7-497a-aad1-4290c1d17f40
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
-```html
+{: .code-example .code-header }
+```http
 HTTP/1.1 204 No Content
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request DELETE https://go.netlicensing.io/core/v2/rest/token/c6d36895-f2a7-497a-aad1-4290c1d17f40
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Token/deleteToken)
+

@@ -7,84 +7,57 @@ grand_parent: NetLicensing REST API Reference
 nav_order: 55
 description: "REST API reference for bundles: list, get, create, update and delete bundles of license templates, and obtain a bundle for a licensee."
 permalink: bundle-services
+last_modified_at: 2026-10-30
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/http-methods.css' | relative_url }}">
+
 Bundle Services
-================
+===============
 
--   [Bundles list](#bundles-list)
--   [Get bundle](#get-bundle)
--   [Create bundle](#create-bundle)
--   [Update bundle](#update-bundle)
--   [Delete bundle](#delete-bundle)
--   [Obtain bundle](#obtain-bundle)
+Bundles group several license templates so they can be sold and issued together.
 
-### Bundles list
+Authentication, formats, error codes, paging and role levels are the same for all endpoints and described on the [Conventions](api-conventions) page. Paths are relative to `https://go.netlicensing.io/core/v2/rest`. Every call can be tried in the [API Test Center](https://netlicensing.io/NetLicensing-API/).
+
+| Endpoint | Purpose | Role |
+|----------|---------|------|
+| <span class="http-method get">GET</span> [`/bundle`](#bundles-list) | List bundles | Analytics+ |
+| <span class="http-method get">GET</span> [`/bundle/{bundleNumber}`](#get-bundle) | Get bundle | Analytics+ |
+| <span class="http-method post">POST</span> [`/bundle`](#create-bundle) | Create bundle | Maintenance+ |
+| <span class="http-method post">POST</span> [`/bundle/{bundleNumber}`](#update-bundle) | Update bundle | Maintenance+ |
+| <span class="http-method delete">DELETE</span> [`/bundle/{bundleNumber}`](#delete-bundle) | Delete bundle | Operation+ |
+| <span class="http-method post">POST</span> [`/bundle/{bundleNumber}/obtain`](#obtain-bundle) | Create the bundle's licenses for a licensee | Operation+ |
+
+A role followed by "+" means that role and every higher one, see [Roles](api-conventions#roles).
+
+---
+
+Bundles list
+------------
+
+<span class="http-method get">GET</span> `/bundle`
+
+**Required role:** Analytics+
 
 Return a list of all configured bundles for the current vendor.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/bundle</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td>
-<ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul>
-</li>
-</ul>
-</td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>- None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/BundleService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">BundleService.list</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `filter` | query | string |  | `;`-separated `key=value` pairs, e.g. `page=0;items=50;sortorder=number;sortdirection=DESC`. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/bundle
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/bundle
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
@@ -111,79 +84,37 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-<div>Try it now</div>
-{: .code-example .ml-5 .code-header }
-```bash
-$ curl --header "Accept: application/xml" --insecure --user demo:demo --request GET https://go.netlicensing.io/core/v2/rest/bundle
-```
-{: .ml-5 }
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Bundle/listBundles)
 
-### Get bundle
+---
+
+Get bundle
+----------
+
+<span class="http-method get">GET</span> `/bundle/{bundleNumber}`
+
+**Required role:** Analytics+
 
 Return a bundle by bundleNumber.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/bundle/{bundleNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul>
-</li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>bundleNumber (string) - Bundle number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/BundleService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">BundleService.get</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `bundleNumber` | path | string | yes | Number of the bundle. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/bundle/B004
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/bundle/B004
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -199,77 +130,46 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Create bundle
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Bundle/getBundle)
 
-Creates a new bundle.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/bundle</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>number (string) - Unique number that identifies the bundle. Vendor can assign this number when creating a bundle or let NetLicensing generate one.</p>
-<p>active (boolean) - If set to false, the bundle is disabled. Licensees can not obtain new licenses.</p>
-<p>name (string) - Bundle name. Identifies the bundle for the end customer.</p>
-<p>description (string) - Bundle description. Optional.</p>
-<p>price (double) - Price for the bundle. If &gt;0, it must always be accompanied by the currency specification. Optional.</p>
-<p>currency (enum) - specifies currency for the bundle price. Check data types to discover which currencies are supported. Optional.</p>
-<p>- EUR       - Euro currency for the bundle price</p>
-<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-402 - <span>Not allowed within your pricing plan</span><br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Create bundle
+-------------
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+<span class="http-method post">POST</span> `/bundle`
+
+**Required role:** Maintenance+
+
+Creates a new bundle. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `name` | body | string | yes | Bundle name shown to the end customer. Required. |
+| `price` | body | string |  | Decimal price. A price above 0 needs `currency`. |
+| `currency` | body | string |  | Values: `EUR`, `USD`. |
+| `description` | body | string |  | Bundle description. |
+| `licenseTemplateNumbers` | body | string |  | Comma-separated license template numbers. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/bundle
-number=BQVJQ5F7H&active=false&name=Bundle+6QP3NKHO&price=10&currency=EUR
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "number=BQVJQ5F7H&active=false&name=Bundle+6QP3NKHO&price=10&currency=EUR" \
+  https://go.netlicensing.io/core/v2/rest/bundle
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -283,78 +183,47 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Update bundle
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Bundle/createBundle)
 
-Sets the provided properties to a bundle. Return an updated bundle.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/bundle/{bundleNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>bundleNumber (string) - Unique number that identifies the bundle.</p>
-<p>number (string) - New bundle number (update)</p>
-<p>active (boolean) - If set to false, the bundle is disabled. Licensees can not obtain new licenses.</p>
-<p>name (string) - Bundle name. Identifies the bundle for the end customer.</p>
-<p>description (string) - Bundle description. Optional.</p>
-<p>price (double) - Price for the bundle. If &gt;0, it must always be accompanied by the currency specification. Optional.</p>
-<p>currency (enum) - specifies currency for the bundle price. Check data types to discover which currencies are supported. Optional.</p>
-<p>- EUR       - Euro currency for the bundle price</p>
-<p>licenseTemplatesNumbers (string) - Comma-separated license templates numbers.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-402 - Not allowed within your pricing plan<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Update bundle
+-------------
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+<span class="http-method post">POST</span> `/bundle/{bundleNumber}`
+
+**Required role:** Maintenance+
+
+Sets the provided properties to a bundle. Return an updated bundle. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `bundleNumber` | path | string | yes | Number of the bundle. |
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `name` | body | string |  | Bundle name shown to the end customer. Required. |
+| `price` | body | string |  | Decimal price. A price above 0 needs `currency`. |
+| `currency` | body | string |  | Values: `EUR`, `USD`. |
+| `description` | body | string |  | Bundle description. |
+| `licenseTemplateNumbers` | body | string |  | Comma-separated license template numbers. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/bundle/BJIF898SP
-number=BQVJQ5F7H&active=false&name=Bundle+6QP3NKHO&price=10&currency=EUR
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "number=BQVJQ5F7H&active=false&name=Bundle+6QP3NKHO&price=10&currency=EUR" \
+  https://go.netlicensing.io/core/v2/rest/bundle/BJIF898SP
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -368,136 +237,79 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Delete bundle
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Bundle/updateBundle)
+
+---
+
+Delete bundle
+-------------
+
+<span class="http-method delete">DELETE</span> `/bundle/{bundleNumber}`
+
+**Required role:** Operation+
 
 Delete a bundle by number.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>DELETE /core/v2/rest/bundle/{bundleNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>bundleNumber (string) - Bundle number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>204 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+No `forceCascade` parameter.
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `bundleNumber` | path | string | yes | Number of the bundle. |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-DELETE https://go.netlicensing.io/core/v2/rest/bundle/B001
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --request DELETE \
+  https://go.netlicensing.io/core/v2/rest/bundle/B001
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
-```html
+{: .code-example .code-header }
+```http
 HTTP/1.1 204 No Content
 ```
-{: .ml-5 }
 
-### Obtain bundle
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Bundle/deleteBundle)
 
-Obtain bundle - create licenses based on license templates.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/bundle/{bundleNumber}/obtain</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td>
-<p>bundleNumber (string) - Bundle number.</p>
-<p>licenseeNumber (string) - Licensee number</p>
-</td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-<span>402 - <span>Not allowed within your pricing plan</span></span><br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Obtain bundle
+-------------
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+<span class="http-method post">POST</span> `/bundle/{bundleNumber}/obtain`
+
+**Required role:** Operation+
+
+Obtain bundle - create licenses based on license templates. The body is form encoded (`application/x-www-form-urlencoded`).
+
+Returns one License item for each license created.
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `bundleNumber` | path | string | yes | Number of the bundle. |
+| `licenseeNumber` | body | string | yes | Licensee that receives the licenses. |
+| `transactionNumber` | body | string |  | Optional. Links the created licenses to an existing transaction. |
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/bundle/BJIF898SP
-licenseeNumber=LQVJQ5F7H
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "licenseeNumber=LQVJQ5F7H" \
+  https://go.netlicensing.io/core/v2/rest/bundle/BJIF898SP/obtain
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -541,4 +353,6 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/Bundle/obtainBundle)
+

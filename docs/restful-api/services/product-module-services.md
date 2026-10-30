@@ -7,80 +7,56 @@ grand_parent: NetLicensing REST API Reference
 nav_order: 20
 description: "REST API reference for product modules: list, get, create, update and delete the modules of a product, each licensed by one licensing model."
 permalink: product-module-services
+last_modified_at: 2026-10-30
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/http-methods.css' | relative_url }}">
 
 Product Module Services
 =======================
 
--   [Product modules list](#product-modules-list)
--   [Get product module](#get-product-module)
--   [Create product module](#create-product-module)
--   [Update product module](#update-product-module)
--   [Delete product module](#delete-product-module)
+Product modules are the licensable parts of a product. Each module uses one licensing model.
 
-### Product modules list
+Authentication, formats, error codes, paging and role levels are the same for all endpoints and described on the [Conventions](api-conventions) page. Paths are relative to `https://go.netlicensing.io/core/v2/rest`. Every call can be tried in the [API Test Center](https://netlicensing.io/NetLicensing-API/).
+
+| Endpoint | Purpose | Role |
+|----------|---------|------|
+| <span class="http-method get">GET</span> [`/productmodule`](#product-modules-list) | List product modules | Analytics+ |
+| <span class="http-method get">GET</span> [`/productmodule/{productModuleNumber}`](#get-product-module) | Get product module | Analytics+ |
+| <span class="http-method post">POST</span> [`/productmodule`](#create-product-module) | Create product module | Maintenance+ |
+| <span class="http-method post">POST</span> [`/productmodule/{productModuleNumber}`](#update-product-module) | Update product module | Maintenance+ |
+| <span class="http-method delete">DELETE</span> [`/productmodule/{productModuleNumber}`](#delete-product-module) | Delete product module | Maintenance+ |
+
+A role followed by "+" means that role and every higher one, see [Roles](api-conventions#roles).
+
+---
+
+Product modules list
+--------------------
+
+<span class="http-method get">GET</span> `/productmodule`
+
+**Required role:** Analytics+
 
 Return a list of all product modules for the current vendor.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/productmodule</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p> - None -</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductModuleService.html#list-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">ProductModuleService.list</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `filter` | query | string |  | `;`-separated `key=value` pairs, e.g. `page=0;items=50;sortorder=number;sortdirection=DESC`. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/productmodule
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/productmodule
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -93,71 +69,37 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Get product module
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/ProductModule/listProductModules)
+
+---
+
+Get product module
+------------------
+
+<span class="http-method get">GET</span> `/productmodule/{productModuleNumber}`
+
+**Required role:** Analytics+
 
 Return a product module by productModuleNumber.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>GET /core/v2/rest/productmodule/{productModuleNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-<li>ROLE_APIKEY_OPERATION</li>
-<li>ROLE_APIKEY_ANALYTICS</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>productModuleNumber (string) - Product module number.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductModuleService.html#get-com.labs64.netlicensing.domain.vo.Context-java.lang.String-" class="external-link">ProductModuleService.get</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `productModuleNumber` | path | string | yes | Number of the product module. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-GET https://go.netlicensing.io/core/v2/rest/productmodule/M001
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  https://go.netlicensing.io/core/v2/rest/productmodule/M001
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -170,82 +112,48 @@ Accept: application/xml
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Create product module
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/ProductModule/getProductModule)
 
-Creates a new product module.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/productmodule</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p><span style="color: rgb(0,0,0);">productNumber (string) - </span>Unique number (across all products of a vendor) that identifies the product module. Vendor can assign this number when creating a product module or let NetLicensing generate one. Read-only after creation of the first licensee for the product.</p>
-<p><span style="color: rgb(0,0,0);">active (boolean) - If set to 'false', the product module is disabled. Licensees can not obtain any new licenses for this product module.</span></p>
-<p><span style="color: rgb(0,0,0);">name (string) - </span>Product module name that is visible to the end customers in <a href="netlicensing-shop">NetLicensing Shop</a>.</p>
-<p><span style="color: rgb(0,0,0);">licensingModel (Array[string]) - Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation. </span><span style="color: rgb(0,0,0);">Supported types: "</span><span style="color: rgb(34,34,34);">Subscription</span><span style="color: rgb(0,0,0);">", "</span><span style="color: rgb(34,34,34);">TryAndBuy</span><span style="color: rgb(0,0,0);">", "</span><span style="color: rgb(34,34,34);">Rental</span><span style="color: rgb(0,0,0);">", "</span><span style="color: rgb(34,34,34);">Floating</span><span style="color: rgb(0,0,0);">", "<span style="color: rgb(34,34,34);">MultiFeature</span></span><span style="color: rgb(0,0,0);">", "<span style="color: rgb(34,34,34);">PayPerUse</span>".</span></p>
-<p><span style="color: rgb(0,0,0);"> </span></p>
-<p><span style="color: rgb(0,0,0);">number (string) - Unique number (across all products of a vendor) that identifies the product module. Vendor can assign this number when creating a product module or let NetLicensing generate one. Read-only after creation of the first licensee for the product. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">maxCheckoutValidity (integer) - Maximum checkout validity (days). Mandatory for 'Floating' licensing model.</span></p>
-<p><span style="color: rgb(0,0,0);">yellowThreshold (integer) - Remaining time volume for yellow level. Mandatory for 'Rental' licensing model.</span></p>
-<p><span style="color: rgb(0,0,0);">redThreshold (integer) - Remaining time volume for red level. Mandatory for 'Rental' licensing model.</span></p>
-<p><span style="color: rgb(0,0,0);">licenseTemplate (Array[string]) - License template. Mandatory for 'Try &amp; Buy' licensing model. Supported types: <span style="color: rgb(34,34,34);">"TIMEVOLUME", "FEATURE".</span></span></p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-402 - Quota exceeded<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Create product module
+---------------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductModuleService.html#create-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.ProductModule-" class="external-link">ProductModuleService.create</a>
+<span class="http-method post">POST</span> `/productmodule`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Maintenance+
+
+Creates a new product module. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `productNumber` | body | string | yes | Product the module belongs to. Required on create. |
+| `name` | body | string | yes | Module name shown to end customers in the NetLicensing Shop. Required on create. |
+| `licensingModel` | body | string | yes | Licensing model of the module. It defines which license templates the module can have and how its licenses are validated. Required on create. Values: `TryAndBuy`, `Rental`, `Subscription`, `Floating`, `MultiFeature`, `PayPerUse`, `PricingTable`, `Quota`, `NodeLocked`, `Discount`. |
+| `maxCheckoutValidity` | body | string |  | `Floating` (required): maximum time a session stays checked out, in seconds. Non-negative integer. |
+| `yellowThreshold` | body | string |  | Warning level threshold. `Rental`: remaining time volume, in days, below which the warning level turns yellow. `Floating`, `NodeLocked`, `PayPerUse`, `Subscription`, `PricingTable`: percentage (0-100). |
+| `redThreshold` | body | string |  | `Rental`: remaining time volume, in days, below which the warning level turns red. Non-negative integer. |
+| `nodeSecretMode` | body | string |  | `NodeLocked` (required): `CLIENT` takes the node secret from the validation call. `PREDEFINED` uses secrets set up in advance and is not allowed when the product has `licenseeAutoCreate=true`. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/productmodule
-productNumber=PQVJQ5F7H&number=M0UKRZU3X&active=false&name=Product+Module+JB8KUEW8&licensingModel=LM-E4UWXR75
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "productNumber=PQVJQ5F7H&number=M0UKRZU3X&active=false&name=Product+Module+JB8KUEW8&licensingModel=LM-E4UWXR75" \
+  https://go.netlicensing.io/core/v2/rest/productmodule
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -258,82 +166,49 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Update product module
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/ProductModule/createProductModule)
 
-Sets the provided properties to a product module. Return an updated
-product module.
+---
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>POST /core/v2/rest/productmodule/{productModuleNumber}</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml<br />
-Content-Type: application/x-www-form-urlencoded</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>productModuleNumber (string) - Product module number.</p>
-<p><span style="color: rgb(0,0,0);">number (string) - New product module number (update). Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">active (boolean) - If set to 'false', the product module is disabled. Licensees can not obtain any new licenses for this product module. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">name (string) - </span>Product module name that is visible to the end customers in <a href="netlicensing-shop">NetLicensing Shop</a>. <span style="color: rgb(0,0,0);">Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">licensingModel (Array[string]) - Licensing model applied to this product module. Defines what license templates can be configured for the product module and how licenses for this product module are processed during validation. </span><span style="color: rgb(0,0,0);">Supported types: "</span><span style="color: rgb(34,34,34);">Subscription</span><span style="color: rgb(0,0,0);">", "</span><span style="color: rgb(34,34,34);">TryAndBuy</span><span style="color: rgb(0,0,0);">", "</span><span style="color: rgb(34,34,34);">Rental</span><span style="color: rgb(0,0,0);">", "</span><span style="color: rgb(34,34,34);">Floating</span><span style="color: rgb(0,0,0);">", "<span style="color: rgb(34,34,34);">MultiFeature</span></span><span style="color: rgb(0,0,0);">", "<span style="color: rgb(34,34,34);">PayPerUse</span>".</span> <span style="color: rgb(0,0,0);">Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">maxCheckoutValidity (integer) - Maximum checkout validity (days). Mandatory for 'Floating' licensing model. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">yellowThreshold (integer) - Remaining time volume for yellow level. Mandatory for 'Rental' licensing model. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">redThreshold (integer) - Remaining time volume for red level. Mandatory for 'Rental' licensing model. Optional.</span></p>
-<p><span style="color: rgb(0,0,0);">licenseTemplate (Array[string]) - License template. Mandatory for 'Try &amp; Buy' licensing model. Supported types: <span style="color: rgb(34,34,34);">"TIMEVOLUME", "FEATURE". <span style="color: rgb(0,0,0);">Optional.</span></span></span></p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>200 - Successful request<br />
-400 - Malformed or illegal request<br />
-402 - Quota exceeded<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+Update product module
+---------------------
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductModuleService.html#update-com.labs64.netlicensing.domain.vo.Context-java.lang.String-com.labs64.netlicensing.domain.entity.ProductModule-" class="external-link">ProductModuleService.update</a>
+<span class="http-method post">POST</span> `/productmodule/{productModuleNumber}`
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Required role:** Maintenance+
+
+Sets the provided properties to a product module. Return an updated product module. The body is form encoded (`application/x-www-form-urlencoded`).
+
+**Parameters**
+
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `productModuleNumber` | path | string | yes | Number of the product module. |
+| `number` | body | string |  | Unique number that identifies the entity. Optional on create: when omitted, NetLicensing generates one. On update, a new value renames the entity. |
+| `active` | body | boolean |  | `false` disables the entity. Defaults to `true` when omitted on create. On update, an omitted value leaves the current state unchanged. |
+| `productNumber` | body | string |  | Product the module belongs to. Required on create. |
+| `name` | body | string |  | Module name shown to end customers in the NetLicensing Shop. Required on create. |
+| `licensingModel` | body | string |  | Licensing model of the module. It defines which license templates the module can have and how its licenses are validated. Required on create. Values: `TryAndBuy`, `Rental`, `Subscription`, `Floating`, `MultiFeature`, `PayPerUse`, `PricingTable`, `Quota`, `NodeLocked`, `Discount`. |
+| `maxCheckoutValidity` | body | string |  | `Floating` (required): maximum time a session stays checked out, in seconds. Non-negative integer. |
+| `yellowThreshold` | body | string |  | Warning level threshold. `Rental`: remaining time volume, in days, below which the warning level turns yellow. `Floating`, `NodeLocked`, `PayPerUse`, `Subscription`, `PricingTable`: percentage (0-100). |
+| `redThreshold` | body | string |  | `Rental`: remaining time volume, in days, below which the warning level turns red. Non-negative integer. |
+| `nodeSecretMode` | body | string |  | `NodeLocked` (required): `CLIENT` takes the node secret from the validation call. `PREDEFINED` uses secrets set up in advance and is not allowed when the product has `licenseeAutoCreate=true`. |
+
+Any other body field is stored as a [custom property](custom-properties).
+
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-POST https://go.netlicensing.io/core/v2/rest/productmodule/M001
-number=MNAR74BK9&name=newName
-Accept: application/xml
-Content-Type: application/x-www-form-urlencoded
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --data "number=MNAR74BK9&name=newName" \
+  https://go.netlicensing.io/core/v2/rest/productmodule/M001
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
+{: .code-example .code-header }
 ```xml
 <netlicensing xmlns="http://netlicensing.labs64.com/schema/context">
     <items>
@@ -346,71 +221,42 @@ Content-Type: application/x-www-form-urlencoded
     </items>
 </netlicensing>
 ```
-{: .ml-5 }
 
-### Delete product module
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/ProductModule/updateProductModule)
+
+---
+
+Delete product module
+---------------------
+
+<span class="http-method delete">DELETE</span> `/productmodule/{productModuleNumber}`
+
+**Required role:** Maintenance+
 
 Delete a product module by number.
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><p>HTTP Method / URL</p></td>
-<td><p>DELETE /core/v2/rest/productmodule/{productModuleNumber}?forceCascade</p></td>
-</tr>
-<tr class="even">
-<td>Security</td>
-<td><ul>
-<li>Basic Authentication</li>
-<li><a href="security">API Key Identification</a>
-<ul>
-<li>ROLE_APIKEY_ADMIN</li>
-<li>ROLE_APIKEY_MAINTENANCE</li>
-</ul></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td><p>Request Header</p></td>
-<td><p>Accept: application/json | application/xml</p></td>
-</tr>
-<tr class="even">
-<td><p>Request Parameters</p></td>
-<td><p>productModuleNumber (string) - Product module number.<br />
-forceCascade (boolean) - Force object deletion and all descendants.</p></td>
-</tr>
-<tr class="odd">
-<td><p>HTTP Status Code</p></td>
-<td><p>204 - Successful request<br />
-400 - Malformed or illegal request<br />
-403 - Access is denied<br />
-404 - Resource not found<br />
-500 - Internal service error</p></td>
-</tr>
-</tbody>
-</table>
+**Parameters**
 
-See also
-JavaDoc: <a href="https://go.netlicensing.io/javadoc/v2/com/labs64/netlicensing/service/ProductModuleService.html#delete-com.labs64.netlicensing.domain.vo.Context-java.lang.String-boolean-" class="external-link">ProductModuleService.delete</a>
+| Name | In | Type | Required | Description |
+|------|----|------|----------|-------------|
+| `productModuleNumber` | path | string | yes | Number of the product module. |
+| `forceCascade` | query | string |  | `true` also deletes dependent entities. Any other value, or no value, means `false`. |
 
-<span
-class="expand-control-icon"><img src="assets/images/icons/grey_arrow_down.png" class="expand-control-image" alt="" /></span><span
-class="expand-control-text">Example</span>
+**Example**
 
 <div>Request</div>
-{: .code-example .ml-5 .code-header }
-```http
-DELETE https://go.netlicensing.io/core/v2/rest/productmodule/M001
-Accept: application/xml
+{: .code-example .code-header }
+```bash
+curl --user demo:demo --header "Accept: application/xml" \
+  --request DELETE \
+  https://go.netlicensing.io/core/v2/rest/productmodule/M001
 ```
-{: .ml-5 }
 
 <div>Response</div>
-{: .code-example .ml-5 .code-header }
-```html
+{: .code-example .code-header }
+```http
 HTTP/1.1 204 No Content
 ```
-{: .ml-5 }
+
+[Try it in the API Test Center](https://netlicensing.io/NetLicensing-API/#/ProductModule/deleteProductModule)
+
