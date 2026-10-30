@@ -14,6 +14,32 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Modernized NetLicensing REST API Test Center"
+  description: "The REST API Test Center has been rebuilt. It opens with a ready-signed-in demo account, one-click starter calls, copy-ready curl commands and shareable links, and is backed by a complete OpenAPI 3.1 specification."
+  date: 2026-10-30
+  component: API
+  features:
+    - added: "**Start here** cards for common calls such as validating a license, creating a token, listing and creating licensees, listing licenses and transferring licenses, opened with their input fields ready"
+    - added: Public demo account that is already signed in, so every endpoint can be tried without registration; **Authorize** switches to your own vendor account or API key
+    - added: Copy-ready curl command under every response and a **Copy link** button to share any call
+    - added: "[OpenAPI 3.1 specification](https://netlicensing.io/NetLicensing-API/v2.x/netlicensing.yaml) for import into Postman, Insomnia or code generators"
+    - added: Light and dark themes, English and German page interface, and an `llms.txt` file for AI tools
+    - updated: Rebuilt on the current Swagger UI with self-hosted fonts and assets, replacing the legacy interface and its outdated libraries
+  url: https://netlicensing.io/NetLicensing-API/
+
+- title: "New Guides, FAQs and MCP Docs in the NetLicensing Wiki"
+  description: "The wiki has a new Guides section with language quick starts, offline validation, licensing model comparisons and a build-vs-buy checklist, 35 new FAQs grouped by topic, and an expanded section on the NetLicensing MCP server."
+  date: 2026-10-25
+  component: Docu
+  features:
+    - added: "[Guides](guides): software licensing API architecture, [offline license validation](offline-license-validation), [license lifecycle](license-lifecycle), [SaaS licensing](saas-licensing) and [build vs buy](build-vs-buy-software-licensing)"
+    - added: Quick starts for [Java](java-software-licensing), [C# / .NET](dotnet-software-licensing), [PHP](php-software-licensing), [JavaScript](javascript-software-licensing) and [Python](python-software-licensing)
+    - added: Comparisons of [licensing models](software-licensing-models-compared), [node-locked vs floating](node-locked-vs-floating-licenses), [subscription vs perpetual](subscription-vs-perpetual-licensing) and [usage-based licensing](usage-based-licensing)
+    - added: "[NetLicensing MCP](netlicensing-mcp) client setup, workflows and security pages"
+    - added: 35 new answers in [FAQ & Troubleshooting](faq), now grouped by topic
+    - updated: "[Getting Started](getting-started), [Client Libraries](client-libraries) and the [Glossary](glossary); the REST API page now links the [OpenAPI specification](restful-api#openapi-specification-and-api-test-center)"
+  url: https://netlicensing.io/wiki/guides
+
 - title: "NetLicensingClient-php — Stronger Signature Security and More Reliable Validation"
   description: "This release strengthens the security and reliability of the NetLicensing PHP client. It addresses vulnerabilities in XML signature verification dependencies, improves offline license validation, fixes credential handling and Discount data submission, and adds comprehensive automated security tests. The client has also been tested with PHP 8.2, 8.3, 8.4, and 8.5."
   date: 2026-10-22
@@ -1101,12 +1127,12 @@
   image: https://netlicensing.io/wiki/assets/images/gateway-external-ecommerce-flow.png
   url: https://netlicensing.io/wiki/gateway
 
-- title: "NetLicensing Gateway @ Docker Hub"
+- title: "NetLicensing Gateway @ Docker Hub"
   description: "Use any eCommerce platform, such as FastSpring, MyCommerce, PrestaShop, SendOwl, and many others as a license acquisition frontend. After a successful transaction, all needed licensing configuration (Customers, Licenses and all related data) will be made available in the NetLicensing and can be used for later entitlements validation in NetLicensing."
   date: 2020-12-09
   component: Integrations
   features:
-   - added: Publish NetLicensing Gateway to Docker Hub
+   - added: Publish NetLicensing Gateway to Docker Hub
   image: https://repository-images.githubusercontent.com/73901823/f634b580-38ce-11eb-8e5f-71b6f1e79d3b
   url: https://hub.docker.com/r/labs64/netlicensing-gateway
 
