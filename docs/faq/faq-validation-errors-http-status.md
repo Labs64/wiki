@@ -27,6 +27,7 @@ happened. As a rough guide:
 | 401 / 403 | Wrong user name or password, an invalid API key, or a key whose [role](security#api-key-identification) doesn't allow this call |
 | 402 | Your NetLicensing plan doesn't include the feature, for example the Agent or the Customer Portal |
 | 404 | The entity you asked for doesn't exist |
+| 429 | The system is busy and you are above your plan's API Rate Limit; retry after the `Retry-After` seconds. See [API Rate Limit](faq-api-rate-limit) |
 | 500 | Something went wrong on our side; try again later and contact support if it keeps happening |
 
 Every endpoint in the [services reference](services) lists the status codes it can return. If your client hides

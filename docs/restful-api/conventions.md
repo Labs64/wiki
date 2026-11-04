@@ -74,7 +74,7 @@ Errors use the same envelope, with an `info` entry of type `ERROR` whose `id` na
 | `402` | The operation is not included in your pricing plan. |
 | `403` | The credentials are valid, but the role may not call the operation. |
 | `404` | Unknown endpoint, a feature that is not available, or an unsupported HTTP method. |
-| `429` | Too many requests. Retry after the number of seconds in the `Retry-After` header. |
+| `429` | Too many requests: the system is busy and you are above your plan's [API Rate Limit](faq-api-rate-limit). Retry after the number of seconds in the `Retry-After` header. |
 | `500` | Internal error. |
 
 Paging, sorting and filtering
