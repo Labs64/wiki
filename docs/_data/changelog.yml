@@ -14,6 +14,19 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "Production-Grade Licensing in Every Plan"
+  description: "For twelve years, software vendors have trusted NetLicensing to protect and grow their software revenue. Today it is a mature platform that combines enterprise-grade security, predictable performance and readiness for AI-driven operations. Our updated plans reflect this level of maturity and our long-term commitment to every customer who builds their business on it."
+  date: 2026-11-04
+  component: API, UI, Shop
+  features:
+    - updated: "**Revenue protection.** Licensing and monetization infrastructure that safeguards your recurring revenue from day one, with no in-house license server to build or maintain"
+    - updated: "**Reduced business risk.** Security and compliance are treated as ongoing priorities: continuous hardening, regular security releases and transparent disclosure"
+    - added: "**Predictable performance.** Every plan now includes a guaranteed [API Rate Limit](faq-api-rate-limit), so your products have the throughput they can rely on, even at peak demand"
+    - added: "**Ready for AI.** Native support for AI agents and assistants, so licensing becomes part of automated and agentic workflows"
+    - updated: "**Faster time to market.** Ready-to-use licensing models, client libraries and complete documentation let your teams launch new offerings and pricing strategies in days rather than months"
+    - updated: "**Plans that grow with you.** Community stays free, Basic is €120 / month, Premium is €380 / month (both billed annually), and Select is tailored to your scale and requirements"
+  url: https://netlicensing.io/pricing/
+
 - title: "Modernized NetLicensing REST API Test Center"
   description: "The REST API Test Center has been rebuilt. It opens with a ready-signed-in demo account, one-click starter calls, copy-ready curl commands and shareable links, and is backed by a complete OpenAPI 3.1 specification."
   date: 2026-10-30
