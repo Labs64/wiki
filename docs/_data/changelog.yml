@@ -14,6 +14,20 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing MCP v0.1.11: Safer Path Handling and Correct API Key per Request"
+  description: "This release closes a gap in the path checks added in v0.1.8, so crafted paths can no longer reach files outside the intended folder. It also makes sure each request uses its own API key. Update the MCP server to get both fixes."
+  date: 2026-11-07
+  component: Integrations
+  security: true
+  features:
+    - fixed: "**Safer file path handling.** The server now rejects crafted paths even when they are encoded several times, or use servlet-style path parameters, so requests cannot bypass the token redaction that v0.1.8 introduced (GHSA-cwqx-x2qh-6mrx)"
+    - fixed: "**Each request uses its own API key.** When the server runs over HTTP, it no longer reuses the API key of the first request for later requests"
+    - updated: "**Less sensitive data in debug logs.** Debug logs now hide the identifier in token paths, because for API key tokens that identifier is the API key"
+    - fixed: "**Clearer errors.** Timeouts and unexpected replies from the NetLicensing API now return a clear error message instead of a raw exception, and one workflow hint now names the correct tool"
+    - updated: "**Documentation.** The setup guides now show how to pass the API key in a request header, and no longer describe the unsupported query-parameter form"
+    - updated: Updated Python dependencies, including the MCP SDK, PyJWT, urllib3 and certifi
+  url: https://github.com/Labs64/NetLicensing-MCP/releases/tag/0.1.11
+
 - title: "Production-Grade Licensing in Every Plan"
   description: "For twelve years, software vendors have trusted NetLicensing to protect and grow their software revenue. Today it is a mature platform that combines enterprise-grade security, predictable performance and readiness for AI-driven operations. Our updated plans reflect this level of maturity and our long-term commitment to every customer who builds their business on it."
   date: 2026-11-04
@@ -39,6 +53,16 @@
     - added: Light and dark themes, English and German page interface, and an `llms.txt` file for AI tools
     - updated: Rebuilt on the current Swagger UI with self-hosted fonts and assets, replacing the legacy interface and its outdated libraries
   url: https://netlicensing.io/NetLicensing-API/
+
+- title: "NetLicensingClient-javascript 2.0.7: Patched Node.js Versions for CVE-2026-111497"
+  description: "The JavaScript client and its demo now use patched Node.js versions that address a Node.js Brotli vulnerability. Your own Node.js runtime needs the same update."
+  date: 2026-10-27
+  component: Client Libraries
+  security: true
+  features:
+    - updated: "**Update Node.js on your side too.** The client and the demo now use patched Node.js versions that address *CVE-2026-111497* (Node.js Brotli remote code execution), and your own runtime needs the same update, because updating the client does not patch the Node.js you run it on"
+    - updated: "**Newer npm dependencies.** Development and build dependencies were refreshed, and the build files were regenerated for this release"
+  url: https://github.com/Labs64/NetLicensingClient-javascript/releases/tag/2.0.7
 
 - title: "New Guides, FAQs and MCP Docs in the NetLicensing Wiki"
   description: "The wiki has a new Guides section with language quick starts, offline validation, licensing model comparisons and a build-vs-buy checklist, 35 new FAQs grouped by topic, and an expanded section on the NetLicensing MCP server."
