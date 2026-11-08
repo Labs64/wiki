@@ -23,8 +23,8 @@ licensee and send the customer to the `shopURL` in the response. The shop is whi
 of your product, takes payment through [PayPal](paypal) or [Stripe](stripe), and assigns the licenses. Bundle and
 permanent shop tokens let you preselect what's in the cart, which is handy for a "Buy" button on your pricing page.
 
-Already have an online shop or billing platform? Connect it through [NetLicensing Gateway](gateway) (for example
-[FastSpring](fastspring)), follow one of the [billing platform guides](billing-platforms), or create licenses from your
+Already have an online shop or billing platform? See [Integrations](integrations), follow one of the [billing platform guides](billing-platforms) (for example
+[FastSpring](fastspring-licensing)), or create licenses from your
 back end [with the API](faq-create-license-programmatically).
 
 And for the odd offline invoice, you can always add licenses by hand in the Management Console. Customers can see what

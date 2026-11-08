@@ -3,7 +3,7 @@ layout: post
 title: How to use NetLicensing with subscription management services
 parent: FAQ & Troubleshooting
 nav_order: 10
-description: "NetLicensing Gateway is an open-source component, being used to maintain eCommerce integrations with NetLicensing core services"
+description: "Billing and subscription platforms connect to NetLicensing through webhooks and the REST API; see the integration guides for your platform"
 permalink: faq-3pp-subscription-management
 faq_category: Integrations
 ---
@@ -55,17 +55,16 @@ Available events and their names differ from one system to another, however, not
 | Subscription updated   | Update customer's license                   |
 | Invoice Overdue        | Deactivate customer's license               |
 
-### Digital fulfilment process with NetLicensing Gateway
+### Digital fulfilment process
 
-[NetLicensing Gateway](https://github.com/Labs64/NetLicensing-Gateway){:target="_blank"}{:rel="noopener"} is an open-source component, which is being used to maintain eCommerce integrations with NetLicensing core services.
+Billing and subscription platforms are connected to NetLicensing through their webhooks and the NetLicensing REST API. See [Integrations](integrations) for the full overview, or [Billing and Commerce Platforms](billing-platforms) for step-by-step guides per platform.
 
-<a href="https://netlicensing.io/img/usage-scenarios/netlicensing-integration-ecommerce.png" class="imagelink" data-lightbox="faq-3pp-subscription-management" data-title="Digital fulfilment process with NetLicensing Gateway" data-alt="Digital fulfilment process with NetLicensing Gateway">
+<a href="https://netlicensing.io/img/usage-scenarios/netlicensing-integration-ecommerce.png" class="imagelink" data-lightbox="faq-3pp-subscription-management" data-title="Digital fulfilment process" data-alt="Digital fulfilment process">
   <img alt="E-commerce integration scenario with NetLicensing" src="https://netlicensing.io/img/usage-scenarios/netlicensing-integration-ecommerce.png" />
 </a>
 
-One central instance of the NetLicensing Gateway is hosted and maintained on NetLicensing infrastructure. You can deploy your local instance on your own infrastructure, however.
+For [FastSpring](fastspring-licensing), start with the webhook guide.
 
 ### Contribution
 
-Being an open-source project, NetLicensing Gateway is maintained by our awesome community.
-New integrations can be implemented and approved after verification by NetLicensing team via GitHub Pull Request.
+If your platform is not listed in [Integrations](integrations), [contact us](mailto:info@netlicensing.io) or create licenses from your back end with the [REST API](faq-create-license-programmatically).

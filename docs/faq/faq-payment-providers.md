@@ -22,8 +22,8 @@ NetLicensing Shop takes payments through [PayPal](paypal), including recurring p
 [Stripe](stripe). The money goes straight into your own payment provider account. See
 [Payment Service Providers](payment-service-providers).
 
-You can keep your existing shop, too. [NetLicensing Gateway](gateway) connects [FastSpring](fastspring) and hands license
-keys back to its order fulfilment. For other billing and commerce platforms, such as Paddle, Chargebee, Recurly or
+You can keep your existing shop, too. See [Integrations](integrations) for the overview. [FastSpring](fastspring-licensing) connects through signed webhooks. For other
+billing and commerce platforms, such as Paddle, Chargebee, Recurly or
 Shopify, see [Billing and Commerce Platforms](billing-platforms): their webhooks call the
 [REST API](faq-create-license-programmatically) to create licensees and licenses. If billing runs in your own system,
 use the same API from your back end, or see how to work with

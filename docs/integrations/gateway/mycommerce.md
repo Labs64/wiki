@@ -2,9 +2,8 @@
 layout: default
 title: MyCommerce (retired)
 nav_title: "MyCommerce (retired)"
-parent: NetLicensing Gateway
-grand_parent: Integrations
 nav_order: 90
+nav_exclude: true
 description: "Retired: MyCommerce, the Digital River storefront, is no longer available. This page is kept for reference for vendors who still have the old configuration."
 permalink: mycommerce
 last_modified_at: 2026-11-08
@@ -13,12 +12,16 @@ last_modified_at: 2026-11-08
 {{ page.title }}
 ================
 
-> **Retired integration.** MyCommerce was the storefront of Digital River. According to
-> [news reports](https://tcbmag.com/minnetonka-based-e-commerce-firm-digital-river-to-shut-down/){:target="_blank"}{:rel="noopener nofollow"},
-> Digital River began shutting down on January 28, 2025 and suspended services to the majority of its customers. We found no official
-> statement with a cessation date, and the `mycommerce.com` domain now shows an unrelated website. Do not start a new integration with MyCommerce.
-> To sell through an external platform, see [Billing and Commerce Platforms](billing-platforms) or the
-> [FastSpring connector](fastspring). This page stays for reference only.
+<div class="alert alert-danger" markdown="1">
+**Status: retired. Do not use for new integrations.**
+
+MyCommerce was the storefront of Digital River. According to
+[news reports](https://tcbmag.com/minnetonka-based-e-commerce-firm-digital-river-to-shut-down/){:target="_blank"}{:rel="noopener nofollow"},
+Digital River began shutting down on January 28, 2025 and suspended services to the majority of its customers. We found no official
+statement with a cessation date, and the `mycommerce.com` domain now shows an unrelated website. The NetLicensing Gateway endpoint
+described below is kept for reference only. To sell through an external platform, see
+[Billing and Commerce Platforms](billing-platforms) or the [FastSpring connector](fastspring).
+</div>
 
 [Introduction](#introduction)  
 [Limitations](#limitations)  

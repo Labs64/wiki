@@ -1,16 +1,20 @@
 ---
 layout: default
-title: Zoho CRM
-parent: Integrations
+title: "Zoho CRM Integration"
+parent: CRM and Sales
+grand_parent: Integrations
 nav_order: 10
-description: "Connect NetLicensing customers and Zoho CRM"
+description: "See each customer's NetLicensing licenses inside Zoho CRM: the Labs64 extension from Zoho Marketplace links CRM accounts to NetLicensing customers."
 permalink: zoho-crm
+last_modified_at: 2026-11-08
 ---
 
-NetLicensing Extension for Zoho CRM
+{{ page.title }}
 ================
 
-[Labs64 NetLicensing for Zoho CRM](https://marketplace.zoho.com/crm/labs64-netlicensing-extension-for-zoho-crm){:target="_blank"}{:rel="noopener"} integrates your customers' entitlements in NetLicensing with your CRM system. The extension adds a new "Customer Number" field to the Accounts module which will be used to retrieve all available licenses for a particular vendor.
+In short: the Labs64 NetLicensing extension, listed in Zoho Marketplace, adds a *Customer Number* field to Zoho CRM accounts and shows that customer's NetLicensing licenses in the CRM. It is the one ready-made CRM integration; other CRMs connect through webhooks and the REST API.
+
+[Labs64 NetLicensing for Zoho CRM](https://marketplace.zoho.com/app/crm/labs64-netlicensing-extension-for-zoho-crm){:target="_blank"}{:rel="noopener"} integrates your customers' entitlements in NetLicensing with your CRM system. The extension adds a new "Customer Number" field to the Accounts module which will be used to retrieve all available licenses for a particular vendor.
 
 ### Key Features
 - Use Zoho CRM as one-stop-shop to maintain customers' licensing
@@ -69,3 +73,21 @@ Having this field filled, the licensing data will be retrieved and shown in the 
 ---
 
 <sup>*</sup> this is an affiliate link; we get commissions for purchases made through this link at no extra cost to you.
+
+## Example: the calls
+
+The extension needs no code. To see the same customer data the CRM account shows, or to script around it, use the NetLicensing API with the *Customer Number* you entered in Zoho CRM:
+
+```bash
+NLIC=https://go.netlicensing.io/core/v2/rest
+AUTH="apiKey:$NETLICENSING_API_KEY"   # ROLE_APIKEY_ANALYTICS is enough for reading
+
+# The customer (licensee) behind the Zoho CRM account
+curl --user $AUTH --header "Accept: application/json" $NLIC/licensee/IKWUYQ9GR
+
+# What the customer may use now
+curl --user $AUTH --header "Accept: application/json" --request POST $NLIC/licensee/IKWUYQ9GR/validate
+```
+
+The roles are listed under [API conventions](api-conventions#roles). These calls show the data; they do not describe how the extension itself queries NetLicensing.
+

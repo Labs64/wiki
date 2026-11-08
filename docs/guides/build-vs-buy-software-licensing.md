@@ -85,7 +85,7 @@ Ask these about NetLicensing too:
 | Validation service | [Validate API](licensee-services#validate-licensee) with TTL, a [backup host](restful-api#structure-of-the-restful-uris), [API keys](security) with roles |
 | Tamper resistance | [Signed validation responses](signing-the-response) |
 | Offline support | TTL caching, signed offline validation files, the [NetLicensing Agent](netlicensing-agent) (selected plans); see [Offline License Validation](offline-license-validation) |
-| Commerce | [NetLicensing Shop](netlicensing-shop) with [PayPal](paypal) and [Stripe](stripe), [EU VAT](eu-vat-2015) and [discounts](discount), or your own shop via [NetLicensing Gateway](gateway) (FastSpring, MyCommerce and others) |
+| Commerce | [NetLicensing Shop](netlicensing-shop) with [PayPal](paypal) and [Stripe](stripe), [EU VAT](eu-vat-2015) and [discounts](discount), or your own shop or billing platform via [Integrations](integrations) (FastSpring, Paddle, Stripe Billing and others) |
 | Customer self-service | [Customer Portal](customer-portal) |
 | Operations | Management Console, [REST API](restful-api), [notifications](notifications), [warning levels](warning-level), [reporting](reporting), and an [MCP server](netlicensing-mcp) for AI agents |
 | Compliance | [Privacy Center](privacy-center) and a [Data Processing Agreement](data-processing-agreement-dpa); Labs64 GmbH is based in Munich, Germany |

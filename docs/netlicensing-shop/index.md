@@ -112,6 +112,6 @@ NetLicensing Shop works in the single currency mode. System currency for the ent
 NetLicensing Shop is an optional component.
 Below you will find alternative options on how new licenses can be added to the customer profile.
 
-- *External e-Commerce* - Enable external e-Commerce system using [NetLicensing Gateway](gateway)
+- *External e-Commerce* - Enable external e-Commerce system see [Integrations](integrations) and [Billing and Commerce Platforms](billing-platforms)
 - *RESTful API* - Use [License Services](license-services#create-license) API to create a new License and assign this to the Customer
 - *Management Console* - Add licenses manually via NetLicensing Management Console

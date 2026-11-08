@@ -21,7 +21,7 @@ licensing model that kicks in during validation.
 |-------|--------------------------------|--------------------|
 | Customer created | [Create licensee](licensee-services#create-licensee), or automatically on first validation if the product has licensee auto-create | `LICENSEE_CREATED` |
 | Trial starts | An automatic license template (price 0) is assigned on first validation, for example in [Try & Buy](try-n-buy) or [Subscription](subscription) | |
-| Purchase | [NetLicensing Shop](netlicensing-shop), your own shop via [Gateway](gateway), or [create license](license-services) from your back end | `PAYMENT_TRANSACTION_PROCESSED`, `LICENSE_CREATED` |
+| Purchase | [NetLicensing Shop](netlicensing-shop), your own shop or billing platform via [Integrations](integrations), or [create license](license-services) from your back end | `PAYMENT_TRANSACTION_PROCESSED`, `LICENSE_CREATED` |
 | Activation on a device | The first validation with a new `nodeSecret` in [Node-Locked](node-locked) client mode | |
 | Use | [Validate](licensee-services#validate-licensee), cached until `ttl` | `WARNING_LEVEL_CHANGED` |
 | Expiry gets close | The [warning level](warning-level) turns YELLOW, following the model's rules | `WARNING_LEVEL_CHANGED` |
