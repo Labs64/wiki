@@ -30,4 +30,4 @@ Yes. In the Management Console, go to *Settings / Notifications* and create a [n
 
 NetLicensing sends an HTTP POST with a JSON payload that you can shape yourself. The endpoint has to use HTTPS with a
 public certificate. For popular CRM and automation tools there are ready-made [integrations](integrations), including
-[Zoho CRM](zoho-crm) and Zapier.
+[Zoho CRM](zoho-crm), [Zapier](zapier) and [n8n](n8n).
