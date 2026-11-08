@@ -1,15 +1,24 @@
 ---
 layout: default
-title: MyCommerce
+title: MyCommerce (retired)
+nav_title: "MyCommerce (retired)"
 parent: NetLicensing Gateway
 grand_parent: Integrations
-nav_order: 10
-description: "MyCommerce integration"
+nav_order: 90
+description: "Retired: MyCommerce, the Digital River storefront, is no longer available. This page is kept for reference for vendors who still have the old configuration."
 permalink: mycommerce
+last_modified_at: 2026-11-08
 ---
 
 {{ page.title }}
 ================
+
+> **Retired integration.** MyCommerce was the storefront of Digital River. According to
+> [news reports](https://tcbmag.com/minnetonka-based-e-commerce-firm-digital-river-to-shut-down/){:target="_blank"}{:rel="noopener nofollow"},
+> Digital River began shutting down on January 28, 2025 and suspended services to the majority of its customers. We found no official
+> statement with a cessation date, and the `mycommerce.com` domain now shows an unrelated website. Do not start a new integration with MyCommerce.
+> To sell through an external platform, see [Billing and Commerce Platforms](billing-platforms) or the
+> [FastSpring connector](fastspring). This page stays for reference only.
 
 [Introduction](#introduction)  
 [Limitations](#limitations)  
@@ -20,7 +29,7 @@ permalink: mycommerce
 
 ## Introduction
 
-Integration with [MyCommerce](https://www.mycommerce.com){:target="_blank"}{:rel="noopener nofollow"} uses *Remote Code Generator*. NetLicensing Gateway returns licensee number as license code.
+Integration with MyCommerce used *Remote Code Generator*. NetLicensing Gateway returns licensee number as license code.
 
 **Option 1:** New licensee is created for every MyCommerce purchase. MyCommerce allows to purchase several products at once (in the same shopping cart), in this case, all these MyCommerce products must be mapped to a single NetLicensing product, and all will be associated with the same licensee. Accordingly, MyCommerce will return the same license code several times.
 

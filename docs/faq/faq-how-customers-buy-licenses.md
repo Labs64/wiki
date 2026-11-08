@@ -24,8 +24,8 @@ of your product, takes payment through [PayPal](paypal) or [Stripe](stripe), and
 permanent shop tokens let you preselect what's in the cart, which is handy for a "Buy" button on your pricing page.
 
 Already have an online shop or billing platform? Connect it through [NetLicensing Gateway](gateway) (for example
-[FastSpring](fastspring) or [MyCommerce](mycommerce)), or create licenses from your back end
-[with the API](faq-create-license-programmatically).
+[FastSpring](fastspring)), follow one of the [billing platform guides](billing-platforms), or create licenses from your
+back end [with the API](faq-create-license-programmatically).
 
 And for the odd offline invoice, you can always add licenses by hand in the Management Console. Customers can see what
 they own in the [Customer Portal](customer-portal).
