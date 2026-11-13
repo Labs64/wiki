@@ -14,6 +14,22 @@
 #   image: <IMAGE-PATH>; e.g. assets/images/changelog/netlicensing-pricing-table.gif
 #   url: <LEARN-MORE-URL>; e.g. https://netlicensing.io/wiki/signing-the-response
 
+- title: "NetLicensing MCP v0.1.13: Payment Credentials Hidden, Correct Results from List Tools"
+  description: "Payment method details returned by the MCP server no longer include provider credentials. If you used the payment method tools, rotate those credentials. This release also fixes list tools that returned the whole account instead of the items you asked for."
+  date: 2026-11-13
+  component: Integrations
+  security: true
+  features:
+    - fixed: "**Payment method credentials are masked.** The payment method tools now hide every property except the number and the active flag, including in raw output. Before, Stripe tokens, publishable keys and PayPal e-mail addresses were returned in clear text, so rotate those credentials if you used these tools"
+    - fixed: "**List tools return only the items of the parent you chose.** The list tools for customers, product modules, license templates and licenses used to ignore the parent and return the whole account, which made the customer health report show wrong counts. They now return the right items, and the report reads every page of a customer's licenses"
+    - fixed: "**Bundles keep their license templates.** Creating or updating a bundle now sends its license template numbers. Bundles created with earlier versions have no templates, so run the bundle update again with their template numbers"
+    - fixed: "**Price updates keep the current currency.** Updating a license template, license or bundle without a currency no longer resets the currency"
+    - fixed: "**Fewer false errors.** Transferring licenses reports success instead of a 502 error, and empty success replies are no longer treated as errors"
+    - fixed: "**Clearer checks on shop tokens, deletes and validation.** Creating a shop token now sends either the customer or the product, never both. Delete previews no longer issue a confirmation token for something that does not exist. Validation rejects session, action or node secret values that are sent without a product module, and rejects unknown actions, instead of ignoring them silently"
+    - updated: "**More predictable responses.** List tools and validation always return a list with a count, even for zero or one item. Single-item tools return one object. Masked secrets now show the first 3 and last 4 characters only for values of 16 or more characters, and shorter values become ****"
+    - added: "**Two new utility tools.** You can now list countries and read the server version, API host and demo mode"
+  url: https://github.com/Labs64/NetLicensing-MCP/releases/tag/0.1.13
+
 - title: "NetLicensing MCP v0.1.11: Safer Path Handling and Correct API Key per Request"
   description: "This release closes a gap in the path checks added in v0.1.8, so crafted paths can no longer reach files outside the intended folder. It also makes sure each request uses its own API key. Update the MCP server to get both fixes."
   date: 2026-11-07
